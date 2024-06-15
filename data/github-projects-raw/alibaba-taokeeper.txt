@@ -1,0 +1,75 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.taobao.taokeeper:taokeeper-common:jar:1.1.2
+[WARNING] The expression ${artifactId} is deprecated. Please use ${project.artifactId} instead.
+[WARNING] The expression ${version} is deprecated. Please use ${project.version} instead.
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.taobao.taokeeper:taokeeper-build:jar:1.1.2
+[WARNING] The expression ${artifactId} is deprecated. Please use ${project.artifactId} instead.
+[WARNING] The expression ${version} is deprecated. Please use ${project.version} instead.
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.taobao.taokeeper:taokeeper-reporter:jar:1.1.2
+[WARNING] The expression ${artifactId} is deprecated. Please use ${project.artifactId} instead.
+[WARNING] The expression ${version} is deprecated. Please use ${project.version} instead.
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.taobao.taokeeper:taokeeper-research:jar:1.1.2
+[WARNING] The expression ${artifactId} is deprecated. Please use ${project.artifactId} instead.
+[WARNING] The expression ${version} is deprecated. Please use ${project.version} instead.
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.taobao.taokeeper:taokeeper:pom:1.1.2
+[WARNING] The expression ${artifactId} is deprecated. Please use ${project.artifactId} instead.
+[WARNING] The expression ${version} is deprecated. Please use ${project.version} instead.
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] taokeeper                                                          [pom]
+[INFO] taokeeper-common                                                   [jar]
+[INFO] taokeeper-reporter                                                 [jar]
+[INFO] taokeeper-monitor                                                  [war]
+[INFO] taokeeper-build                                                    [jar]
+[INFO] taokeeper-research                                                 [jar]
+[INFO] 
+[INFO] -------------------< com.taobao.taokeeper:taokeeper >-------------------
+[INFO] Building taokeeper 1.1.2                                           [1/6]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ taokeeper ---
+[INFO] digraph "com.taobao.taokeeper:taokeeper:pom:1.1.2" { 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< com.taobao.taokeeper:taokeeper-common >----------------
+[INFO] Building taokeeper-common 1.1.2                                    [2/6]
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The POM for com.taobao.taokeeper:zkclient:jar:0.2-SNAPSHOT is missing, no dependency information available
+[WARNING] The POM for common.toolkit:common-toolkit:jar:0.0.4-SNAPSHOT is missing, no dependency information available
+[WARNING] The POM for common.toolkit:common-toolkit:jar:sources:0.0.4-SNAPSHOT is missing, no dependency information available
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for taokeeper 1.1.2:
+[INFO] 
+[INFO] taokeeper .......................................... SUCCESS [  5.890 s]
+[INFO] taokeeper-common ................................... FAILURE [  0.372 s]
+[INFO] taokeeper-reporter ................................. SKIPPED
+[INFO] taokeeper-monitor .................................. SKIPPED
+[INFO] taokeeper-build .................................... SKIPPED
+[INFO] taokeeper-research ................................. SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.683 s
+[INFO] Finished at: 2023-12-28T09:02:22+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project taokeeper-common: Could not resolve dependencies for project com.taobao.taokeeper:taokeeper-common:jar:1.1.2: The following artifacts could not be resolved: com.taobao.taokeeper:zkclient:jar:0.2-SNAPSHOT, common.toolkit:common-toolkit:jar:0.0.4-SNAPSHOT, common.toolkit:common-toolkit:jar:sources:0.0.4-SNAPSHOT: Could not find artifact com.taobao.taokeeper:zkclient:jar:0.2-SNAPSHOT -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :taokeeper-common

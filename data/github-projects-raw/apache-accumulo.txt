@@ -1,0 +1,1512 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Apache Accumulo Project                                            [pom]
+[INFO] Apache Accumulo Start                                              [jar]
+[INFO] Apache Accumulo Core                                               [jar]
+[INFO] Apache Accumulo Server Base                                        [jar]
+[INFO] Apache Accumulo Compaction Coordinator                             [jar]
+[INFO] Apache Accumulo Compactor                                          [jar]
+[INFO] Apache Accumulo GC Server                                          [jar]
+[INFO] Apache Accumulo Manager Server                                     [jar]
+[INFO] Apache Accumulo Monitor Server                                     [jar]
+[INFO] Apache Accumulo Tablet Server                                      [jar]
+[INFO] Apache Accumulo MiniCluster                                        [jar]
+[INFO] Apache Accumulo Native Libraries                                   [pom]
+[INFO] Apache Accumulo Shell                                              [jar]
+[INFO] Apache Accumulo Iterator Test Harness                              [jar]
+[INFO] Apache Accumulo Testing                                            [jar]
+[INFO] Apache Accumulo Hadoop MapReduce                                   [jar]
+[INFO] Apache Accumulo                                                    [pom]
+[INFO] 
+[INFO] ----------------< org.apache.accumulo:accumulo-project >----------------
+[INFO] Building Apache Accumulo Project 3.1.0-SNAPSHOT                   [1/17]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ accumulo-project ---
+[INFO] digraph "org.apache.accumulo:accumulo-project:pom:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.accumulo:accumulo-project:pom:3.1.0-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.7.3:compile" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:4.7.3:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.apache.accumulo:accumulo-start >-----------------
+[INFO] Building Apache Accumulo Start 3.1.0-SNAPSHOT                     [2/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ accumulo-start ---
+[INFO] digraph "org.apache.accumulo:accumulo-start:jar:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.accumulo:accumulo-start:jar:3.1.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.7:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-start:jar:3.1.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client-runtime:jar:3.3.6:runtime" ; 
+[INFO] 	"org.apache.accumulo:accumulo-start:jar:3.1.0-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.7.3:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-start:jar:3.1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-1.2-api:jar:2.20.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-start:jar:3.1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client-runtime:jar:3.3.6:runtime" -> "org.apache.hadoop:hadoop-client-api:jar:3.3.6:runtime" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client-runtime:jar:3.3.6:runtime" -> "org.xerial.snappy:snappy-java:jar:1.1.10.4:runtime" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client-runtime:jar:3.3.6:runtime" -> "commons-logging:commons-logging:jar:1.2:runtime" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client-runtime:jar:3.3.6:runtime" -> "com.google.code.findbugs:jsr305:jar:3.0.2:runtime" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-1.2-api:jar:2.20.0:test" -> "org.apache.logging.log4j:log4j-api:jar:2.20.0:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" -> "org.apache.logging.log4j:log4j-core:jar:2.20.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.apache.accumulo:accumulo-core >------------------
+[INFO] Building Apache Accumulo Core 3.1.0-SNAPSHOT                      [3/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/accumulo/accumulo-start/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/snapshots/org/apache/accumulo/accumulo-start/3.1.0-SNAPSHOT/maven-metadata.xml (786 B at 775 B/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ accumulo-core ---
+[INFO] digraph "org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" -> "com.beust:jcommander:jar:1.82:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" -> "com.google.auto.service:auto-service:jar:1.1.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" -> "com.google.guava:guava:jar:32.0.1-jre:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" -> "commons-io:commons-io:jar:2.13.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" -> "io.micrometer:micrometer-core:jar:1.11.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" -> "io.opentelemetry:opentelemetry-api:jar:1.27.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" -> "io.opentelemetry:opentelemetry-context:jar:1.27.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" -> "io.opentelemetry:opentelemetry-semconv:jar:1.27.0-alpha:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-start:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" -> "org.apache.commons:commons-configuration2:jar:2.9.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" -> "org.apache.commons:commons-math3:jar:3.6.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" -> "org.apache.datasketches:datasketches-java:jar:4.1.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client-api:jar:3.3.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-1.2-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" -> "org.apache.thrift:libthrift:jar:0.17.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper:jar:3.8.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper-jute:jar:3.8.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" -> "org.checkerframework:checker-qual:jar:3.35.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.7:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" -> "org.yaml:snakeyaml:jar:2.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client-runtime:jar:3.3.6:runtime" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client-minicluster:jar:3.3.6:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" -> "org.easymock:easymock:jar:5.1.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.7.3:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"com.github.ben-manes.caffeine:caffeine:jar:3.1.6:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.23.0:compile" ; 
+[INFO] 	"com.google.auto.service:auto-service:jar:1.1.1:compile" -> "com.google.auto.service:auto-service-annotations:jar:1.1.1:compile" ; 
+[INFO] 	"com.google.auto.service:auto-service:jar:1.1.1:compile" -> "com.google.auto:auto-common:jar:1.2.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "io.micrometer:micrometer-commons:jar:1.11.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "io.micrometer:micrometer-observation:jar:1.11.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:runtime" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "org.latencyutils:LatencyUtils:jar:2.0.3:runtime" ; 
+[INFO] 	"org.apache.commons:commons-configuration2:jar:2.9.0:compile" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"org.apache.datasketches:datasketches-java:jar:4.1.0:compile" -> "org.apache.datasketches:datasketches-memory:jar:2.2.0:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client-api:jar:3.3.6:compile" -> "org.xerial.snappy:snappy-java:jar:1.1.10.4:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-1.2-api:jar:2.20.0:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "org.apache.yetus:audience-annotations:jar:0.12.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "io.netty:netty-transport-native-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-classes-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client-minicluster:jar:3.3.6:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" -> "org.apache.logging.log4j:log4j-core:jar:2.20.0:test" ; 
+[INFO] 	"org.easymock:easymock:jar:5.1.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< org.apache.accumulo:accumulo-server-base >--------------
+[INFO] Building Apache Accumulo Server Base 3.1.0-SNAPSHOT               [4/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/accumulo/accumulo-core/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/snapshots/org/apache/accumulo/accumulo-core/3.1.0-SNAPSHOT/maven-metadata.xml (785 B at 5.0 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ accumulo-server-base ---
+[INFO] digraph "org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT" -> "com.beust:jcommander:jar:1.82:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT" -> "com.google.auto.service:auto-service:jar:1.1.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT" -> "com.google.guava:guava:jar:32.0.1-jre:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT" -> "commons-codec:commons-codec:jar:1.16.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT" -> "io.micrometer:micrometer-core:jar:1.11.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT" -> "io.opentelemetry:opentelemetry-api:jar:1.27.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT" -> "io.opentelemetry:opentelemetry-context:jar:1.27.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-start:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client-api:jar:3.3.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT" -> "org.apache.thrift:libthrift:jar:0.17.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper:jar:3.8.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper-jute:jar:3.8.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT" -> "org.checkerframework:checker-qual:jar:3.35.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.7:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client-runtime:jar:3.3.6:runtime" ; 
+[INFO] 	"org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT" -> "org.easymock:easymock:jar:5.1.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.7.3:compile" ; 
+[INFO] 	"com.github.ben-manes.caffeine:caffeine:jar:3.1.6:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.23.0:compile" ; 
+[INFO] 	"com.google.auto.service:auto-service:jar:1.1.1:compile" -> "com.google.auto.service:auto-service-annotations:jar:1.1.1:compile" ; 
+[INFO] 	"com.google.auto.service:auto-service:jar:1.1.1:compile" -> "com.google.auto:auto-common:jar:1.2.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "io.micrometer:micrometer-commons:jar:1.11.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "io.micrometer:micrometer-observation:jar:1.11.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:runtime" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "org.latencyutils:LatencyUtils:jar:2.0.3:runtime" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "commons-io:commons-io:jar:2.13.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "io.opentelemetry:opentelemetry-semconv:jar:1.27.0-alpha:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-configuration2:jar:2.9.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-math3:jar:3.6.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.datasketches:datasketches-java:jar:4.1.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.logging.log4j:log4j-1.2-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.yaml:snakeyaml:jar:2.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"org.apache.commons:commons-configuration2:jar:2.9.0:compile" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"org.apache.datasketches:datasketches-java:jar:4.1.0:compile" -> "org.apache.datasketches:datasketches-memory:jar:2.2.0:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client-api:jar:3.3.6:compile" -> "org.xerial.snappy:snappy-java:jar:1.1.10.4:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "org.apache.yetus:audience-annotations:jar:0.12.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "io.netty:netty-transport-native-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-classes-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" -> "org.apache.logging.log4j:log4j-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" -> "org.apache.logging.log4j:log4j-core:jar:2.20.0:test" ; 
+[INFO] 	"org.easymock:easymock:jar:5.1.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------< org.apache.accumulo:accumulo-compaction-coordinator >---------
+[INFO] Building Apache Accumulo Compaction Coordinator 3.1.0-SNAPSHOT    [5/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/accumulo/accumulo-server-base/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/snapshots/org/apache/accumulo/accumulo-server-base/3.1.0-SNAPSHOT/maven-metadata.xml (792 B at 9.3 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ accumulo-compaction-coordinator ---
+[INFO] digraph "org.apache.accumulo:accumulo-compaction-coordinator:jar:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.accumulo:accumulo-compaction-coordinator:jar:3.1.0-SNAPSHOT" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-compaction-coordinator:jar:3.1.0-SNAPSHOT" -> "com.google.auto.service:auto-service:jar:1.1.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-compaction-coordinator:jar:3.1.0-SNAPSHOT" -> "com.google.guava:guava:jar:32.0.1-jre:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-compaction-coordinator:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-compaction-coordinator:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-compaction-coordinator:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-start:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-compaction-coordinator:jar:3.1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-1.2-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-compaction-coordinator:jar:3.1.0-SNAPSHOT" -> "org.apache.thrift:libthrift:jar:0.17.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-compaction-coordinator:jar:3.1.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper:jar:3.8.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-compaction-coordinator:jar:3.1.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.7:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-compaction-coordinator:jar:3.1.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client-runtime:jar:3.3.6:runtime" ; 
+[INFO] 	"org.apache.accumulo:accumulo-compaction-coordinator:jar:3.1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-compaction-coordinator:jar:3.1.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-compaction-coordinator:jar:3.1.0-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.7.3:compile" ; 
+[INFO] 	"com.github.ben-manes.caffeine:caffeine:jar:3.1.6:compile" -> "org.checkerframework:checker-qual:jar:3.35.0:compile" ; 
+[INFO] 	"com.github.ben-manes.caffeine:caffeine:jar:3.1.6:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.23.0:compile" ; 
+[INFO] 	"com.google.auto.service:auto-service:jar:1.1.1:compile" -> "com.google.auto.service:auto-service-annotations:jar:1.1.1:compile" ; 
+[INFO] 	"com.google.auto.service:auto-service:jar:1.1.1:compile" -> "com.google.auto:auto-common:jar:1.2.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.beust:jcommander:jar:1.82:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "commons-io:commons-io:jar:2.13.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "io.micrometer:micrometer-core:jar:1.11.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "io.opentelemetry:opentelemetry-api:jar:1.27.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "io.opentelemetry:opentelemetry-context:jar:1.27.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "io.opentelemetry:opentelemetry-semconv:jar:1.27.0-alpha:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-configuration2:jar:2.9.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-math3:jar:3.6.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.datasketches:datasketches-java:jar:4.1.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.hadoop:hadoop-client-api:jar:3.3.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.zookeeper:zookeeper-jute:jar:3.8.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.yaml:snakeyaml:jar:2.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "io.micrometer:micrometer-commons:jar:1.11.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "io.micrometer:micrometer-observation:jar:1.11.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:runtime" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "org.latencyutils:LatencyUtils:jar:2.0.3:runtime" ; 
+[INFO] 	"org.apache.commons:commons-configuration2:jar:2.9.0:compile" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"org.apache.datasketches:datasketches-java:jar:4.1.0:compile" -> "org.apache.datasketches:datasketches-memory:jar:2.2.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT:compile" -> "commons-codec:commons-codec:jar:1.16.0:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-1.2-api:jar:2.20.0:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "org.apache.yetus:audience-annotations:jar:0.12.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "io.netty:netty-transport-native-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-classes-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client-runtime:jar:3.3.6:runtime" -> "org.xerial.snappy:snappy-java:jar:1.1.10.4:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" -> "org.apache.logging.log4j:log4j-core:jar:2.20.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.apache.accumulo:accumulo-compactor >---------------
+[INFO] Building Apache Accumulo Compactor 3.1.0-SNAPSHOT                 [6/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ accumulo-compactor ---
+[INFO] digraph "org.apache.accumulo:accumulo-compactor:jar:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.accumulo:accumulo-compactor:jar:3.1.0-SNAPSHOT" -> "com.google.auto.service:auto-service:jar:1.1.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-compactor:jar:3.1.0-SNAPSHOT" -> "com.google.guava:guava:jar:32.0.1-jre:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-compactor:jar:3.1.0-SNAPSHOT" -> "io.micrometer:micrometer-core:jar:1.11.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-compactor:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-compactor:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-compactor:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-start:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-compactor:jar:3.1.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client-api:jar:3.3.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-compactor:jar:3.1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-1.2-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-compactor:jar:3.1.0-SNAPSHOT" -> "org.apache.thrift:libthrift:jar:0.17.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-compactor:jar:3.1.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper:jar:3.8.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-compactor:jar:3.1.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.7:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-compactor:jar:3.1.0-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.7.3:compile" ; 
+[INFO] 	"com.google.auto.service:auto-service:jar:1.1.1:compile" -> "com.google.auto.service:auto-service-annotations:jar:1.1.1:compile" ; 
+[INFO] 	"com.google.auto.service:auto-service:jar:1.1.1:compile" -> "com.google.auto:auto-common:jar:1.2.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.35.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.23.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "io.micrometer:micrometer-commons:jar:1.11.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "io.micrometer:micrometer-observation:jar:1.11.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:runtime" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "org.latencyutils:LatencyUtils:jar:2.0.3:runtime" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.beust:jcommander:jar:1.82:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "commons-io:commons-io:jar:2.13.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "io.opentelemetry:opentelemetry-api:jar:1.27.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "io.opentelemetry:opentelemetry-context:jar:1.27.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "io.opentelemetry:opentelemetry-semconv:jar:1.27.0-alpha:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-configuration2:jar:2.9.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-math3:jar:3.6.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.datasketches:datasketches-java:jar:4.1.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.zookeeper:zookeeper-jute:jar:3.8.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.yaml:snakeyaml:jar:2.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.hadoop:hadoop-client-runtime:jar:3.3.6:runtime" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"org.apache.commons:commons-configuration2:jar:2.9.0:compile" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"org.apache.datasketches:datasketches-java:jar:4.1.0:compile" -> "org.apache.datasketches:datasketches-memory:jar:2.2.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT:compile" -> "commons-codec:commons-codec:jar:1.16.0:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client-api:jar:3.3.6:compile" -> "org.xerial.snappy:snappy-java:jar:1.1.10.4:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-1.2-api:jar:2.20.0:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "org.apache.yetus:audience-annotations:jar:0.12.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "io.netty:netty-transport-native-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-classes-epoll:jar:4.1.94.Final:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< org.apache.accumulo:accumulo-gc >-------------------
+[INFO] Building Apache Accumulo GC Server 3.1.0-SNAPSHOT                 [7/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ accumulo-gc ---
+[INFO] digraph "org.apache.accumulo:accumulo-gc:jar:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.accumulo:accumulo-gc:jar:3.1.0-SNAPSHOT" -> "com.google.auto.service:auto-service:jar:1.1.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-gc:jar:3.1.0-SNAPSHOT" -> "com.google.guava:guava:jar:32.0.1-jre:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-gc:jar:3.1.0-SNAPSHOT" -> "io.micrometer:micrometer-core:jar:1.11.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-gc:jar:3.1.0-SNAPSHOT" -> "io.opentelemetry:opentelemetry-api:jar:1.27.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-gc:jar:3.1.0-SNAPSHOT" -> "io.opentelemetry:opentelemetry-context:jar:1.27.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-gc:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-gc:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-gc:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-start:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-gc:jar:3.1.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client-api:jar:3.3.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-gc:jar:3.1.0-SNAPSHOT" -> "org.apache.thrift:libthrift:jar:0.17.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-gc:jar:3.1.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper:jar:3.8.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-gc:jar:3.1.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.7:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-gc:jar:3.1.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client-runtime:jar:3.3.6:runtime" ; 
+[INFO] 	"org.apache.accumulo:accumulo-gc:jar:3.1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-gc:jar:3.1.0-SNAPSHOT" -> "org.easymock:easymock:jar:5.1.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-gc:jar:3.1.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-gc:jar:3.1.0-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.7.3:compile" ; 
+[INFO] 	"com.google.auto.service:auto-service:jar:1.1.1:compile" -> "com.google.auto.service:auto-service-annotations:jar:1.1.1:compile" ; 
+[INFO] 	"com.google.auto.service:auto-service:jar:1.1.1:compile" -> "com.google.auto:auto-common:jar:1.2.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.35.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.23.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "io.micrometer:micrometer-commons:jar:1.11.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "io.micrometer:micrometer-observation:jar:1.11.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:runtime" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "org.latencyutils:LatencyUtils:jar:2.0.3:runtime" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.beust:jcommander:jar:1.82:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "commons-io:commons-io:jar:2.13.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "io.opentelemetry:opentelemetry-semconv:jar:1.27.0-alpha:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-configuration2:jar:2.9.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-math3:jar:3.6.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.datasketches:datasketches-java:jar:4.1.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.logging.log4j:log4j-1.2-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.zookeeper:zookeeper-jute:jar:3.8.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.yaml:snakeyaml:jar:2.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"org.apache.commons:commons-configuration2:jar:2.9.0:compile" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"org.apache.datasketches:datasketches-java:jar:4.1.0:compile" -> "org.apache.datasketches:datasketches-memory:jar:2.2.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT:compile" -> "commons-codec:commons-codec:jar:1.16.0:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client-api:jar:3.3.6:compile" -> "org.xerial.snappy:snappy-java:jar:1.1.10.4:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "org.apache.yetus:audience-annotations:jar:0.12.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "io.netty:netty-transport-native-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-classes-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" -> "org.apache.logging.log4j:log4j-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" -> "org.apache.logging.log4j:log4j-core:jar:2.20.0:test" ; 
+[INFO] 	"org.easymock:easymock:jar:5.1.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< org.apache.accumulo:accumulo-manager >----------------
+[INFO] Building Apache Accumulo Manager Server 3.1.0-SNAPSHOT            [8/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ accumulo-manager ---
+[INFO] digraph "org.apache.accumulo:accumulo-manager:jar:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.accumulo:accumulo-manager:jar:3.1.0-SNAPSHOT" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-manager:jar:3.1.0-SNAPSHOT" -> "com.google.auto.service:auto-service:jar:1.1.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-manager:jar:3.1.0-SNAPSHOT" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-manager:jar:3.1.0-SNAPSHOT" -> "com.google.guava:guava:jar:32.0.1-jre:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-manager:jar:3.1.0-SNAPSHOT" -> "commons-codec:commons-codec:jar:1.16.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-manager:jar:3.1.0-SNAPSHOT" -> "commons-io:commons-io:jar:2.13.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-manager:jar:3.1.0-SNAPSHOT" -> "io.micrometer:micrometer-core:jar:1.11.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-manager:jar:3.1.0-SNAPSHOT" -> "io.opentelemetry:opentelemetry-api:jar:1.27.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-manager:jar:3.1.0-SNAPSHOT" -> "io.opentelemetry:opentelemetry-context:jar:1.27.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-manager:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-manager:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-manager:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-start:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-manager:jar:3.1.0-SNAPSHOT" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-manager:jar:3.1.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client-api:jar:3.3.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-manager:jar:3.1.0-SNAPSHOT" -> "org.apache.thrift:libthrift:jar:0.17.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-manager:jar:3.1.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper:jar:3.8.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-manager:jar:3.1.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper-jute:jar:3.8.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-manager:jar:3.1.0-SNAPSHOT" -> "org.checkerframework:checker-qual:jar:3.35.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-manager:jar:3.1.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.7:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-manager:jar:3.1.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client-runtime:jar:3.3.6:runtime" ; 
+[INFO] 	"org.apache.accumulo:accumulo-manager:jar:3.1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-manager:jar:3.1.0-SNAPSHOT" -> "org.easymock:easymock:jar:5.1.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-manager:jar:3.1.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-manager:jar:3.1.0-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.7.3:compile" ; 
+[INFO] 	"com.github.ben-manes.caffeine:caffeine:jar:3.1.6:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.23.0:compile" ; 
+[INFO] 	"com.google.auto.service:auto-service:jar:1.1.1:compile" -> "com.google.auto.service:auto-service-annotations:jar:1.1.1:compile" ; 
+[INFO] 	"com.google.auto.service:auto-service:jar:1.1.1:compile" -> "com.google.auto:auto-common:jar:1.2.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "io.micrometer:micrometer-commons:jar:1.11.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "io.micrometer:micrometer-observation:jar:1.11.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:runtime" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "org.latencyutils:LatencyUtils:jar:2.0.3:runtime" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.beust:jcommander:jar:1.82:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "io.opentelemetry:opentelemetry-semconv:jar:1.27.0-alpha:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-configuration2:jar:2.9.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-math3:jar:3.6.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.datasketches:datasketches-java:jar:4.1.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.logging.log4j:log4j-1.2-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.yaml:snakeyaml:jar:2.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"org.apache.commons:commons-configuration2:jar:2.9.0:compile" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"org.apache.datasketches:datasketches-java:jar:4.1.0:compile" -> "org.apache.datasketches:datasketches-memory:jar:2.2.0:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client-api:jar:3.3.6:compile" -> "org.xerial.snappy:snappy-java:jar:1.1.10.4:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "org.apache.yetus:audience-annotations:jar:0.12.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "io.netty:netty-transport-native-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-classes-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" -> "org.apache.logging.log4j:log4j-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" -> "org.apache.logging.log4j:log4j-core:jar:2.20.0:test" ; 
+[INFO] 	"org.easymock:easymock:jar:5.1.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< org.apache.accumulo:accumulo-monitor >----------------
+[INFO] Building Apache Accumulo Monitor Server 3.1.0-SNAPSHOT            [9/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ accumulo-monitor ---
+[INFO] digraph "org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "com.google.auto.service:auto-service:jar:1.1.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "com.google.guava:guava:jar:32.0.1-jre:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "jakarta.inject:jakarta.inject-api:jar:2.0.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "jakarta.servlet:jakarta.servlet-api:jar:5.0.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "jakarta.validation:jakarta.validation-api:jar:3.0.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "jakarta.ws.rs:jakarta.ws.rs-api:jar:3.0.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:3.0.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-start:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client-api:jar:3.3.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-core:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-web:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "org.apache.thrift:libthrift:jar:0.17.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper:jar:3.8.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "org.eclipse.jetty:jetty-server:jar:11.0.15:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "org.eclipse.jetty:jetty-servlet:jar:11.0.15:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "org.eclipse.jetty:jetty-util:jar:11.0.15:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "org.glassfish.hk2:hk2-api:jar:3.0.4:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "org.glassfish.jersey.containers:jersey-container-servlet-core:jar:3.0.9:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "org.glassfish.jersey.core:jersey-common:jar:3.0.9:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "org.glassfish.jersey.core:jersey-server:jar:3.0.9:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "org.glassfish.jersey.ext:jersey-mvc:jar:3.0.9:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "org.glassfish.jersey.ext:jersey-mvc-freemarker:jar:3.0.9:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "org.glassfish.jersey.media:jersey-media-json-jackson:jar:3.0.9:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.7:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client-runtime:jar:3.3.6:runtime" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "org.glassfish.jaxb:txw2:jar:4.0.3:runtime" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "org.glassfish.jersey.ext:jersey-bean-validation:jar:3.0.9:runtime" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "org.glassfish.jersey.inject:jersey-hk2:jar:3.0.9:runtime" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "org.easymock:easymock:jar:5.1.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "org.glassfish.jersey.core:jersey-client:jar:3.0.9:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "org.glassfish.jersey.test-framework:jersey-test-framework-core:jar:3.0.9:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-grizzly2:jar:3.0.9:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.7.3:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"com.google.auto.service:auto-service:jar:1.1.1:compile" -> "com.google.auto.service:auto-service-annotations:jar:1.1.1:compile" ; 
+[INFO] 	"com.google.auto.service:auto-service:jar:1.1.1:compile" -> "com.google.auto:auto-common:jar:1.2.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.35.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.23.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:3.0.1:compile" -> "com.sun.activation:jakarta.activation:jar:2.0.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.beust:jcommander:jar:1.82:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "commons-io:commons-io:jar:2.13.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "io.micrometer:micrometer-core:jar:1.11.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "io.opentelemetry:opentelemetry-api:jar:1.27.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "io.opentelemetry:opentelemetry-context:jar:1.27.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "io.opentelemetry:opentelemetry-semconv:jar:1.27.0-alpha:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-configuration2:jar:2.9.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-math3:jar:3.6.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.datasketches:datasketches-java:jar:4.1.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.logging.log4j:log4j-1.2-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.zookeeper:zookeeper-jute:jar:3.8.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.yaml:snakeyaml:jar:2.0:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "io.micrometer:micrometer-commons:jar:1.11.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "io.micrometer:micrometer-observation:jar:1.11.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:runtime" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "org.latencyutils:LatencyUtils:jar:2.0.3:runtime" ; 
+[INFO] 	"org.apache.commons:commons-configuration2:jar:2.9.0:compile" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"org.apache.datasketches:datasketches-java:jar:4.1.0:compile" -> "org.apache.datasketches:datasketches-memory:jar:2.2.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT:compile" -> "commons-codec:commons-codec:jar:1.16.0:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client-api:jar:3.3.6:compile" -> "org.xerial.snappy:snappy-java:jar:1.1.10.4:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "org.apache.yetus:audience-annotations:jar:0.12.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "io.netty:netty-transport-native-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-classes-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:11.0.15:compile" -> "org.eclipse.jetty.toolchain:jetty-jakarta-servlet-api:jar:5.0.2:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:11.0.15:compile" -> "org.eclipse.jetty:jetty-http:jar:11.0.15:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:11.0.15:compile" -> "org.eclipse.jetty:jetty-io:jar:11.0.15:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:11.0.15:compile" -> "org.eclipse.jetty:jetty-security:jar:11.0.15:compile" ; 
+[INFO] 	"org.glassfish.hk2:hk2-api:jar:3.0.4:compile" -> "org.glassfish.hk2:hk2-utils:jar:3.0.4:compile" ; 
+[INFO] 	"org.glassfish.hk2:hk2-api:jar:3.0.4:compile" -> "org.glassfish.hk2.external:aopalliance-repackaged:jar:3.0.4:compile" ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-common:jar:3.0.9:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:2.0.0:compile" ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-common:jar:3.0.9:compile" -> "org.glassfish.hk2:osgi-resource-locator:jar:2.4.0:compile" ; 
+[INFO] 	"org.glassfish.jersey.ext:jersey-mvc-freemarker:jar:3.0.9:compile" -> "org.freemarker:freemarker:jar:2.3.32:compile" ; 
+[INFO] 	"org.glassfish.jersey.media:jersey-media-json-jackson:jar:3.0.9:compile" -> "org.glassfish.jersey.ext:jersey-entity-filtering:jar:3.0.9:compile" ; 
+[INFO] 	"org.glassfish.jersey.media:jersey-media-json-jackson:jar:3.0.9:compile" -> "com.fasterxml.jackson.module:jackson-module-jakarta-xmlbind-annotations:jar:2.15.2:compile" ; 
+[INFO] 	"org.glassfish.jersey.ext:jersey-bean-validation:jar:3.0.9:runtime" -> "org.hibernate.validator:hibernate-validator:jar:8.0.1.Final:runtime" ; 
+[INFO] 	"org.glassfish.jersey.ext:jersey-bean-validation:jar:3.0.9:runtime" -> "org.jboss.logging:jboss-logging:jar:3.5.1.Final:runtime" ; 
+[INFO] 	"org.glassfish.jersey.ext:jersey-bean-validation:jar:3.0.9:runtime" -> "jakarta.el:jakarta.el-api:jar:4.0.0:runtime" ; 
+[INFO] 	"org.glassfish.jersey.ext:jersey-bean-validation:jar:3.0.9:runtime" -> "org.glassfish:jakarta.el:jar:4.0.2:runtime" ; 
+[INFO] 	"org.hibernate.validator:hibernate-validator:jar:8.0.1.Final:runtime" -> "com.fasterxml:classmate:jar:1.5.1:runtime" ; 
+[INFO] 	"org.glassfish.jersey.inject:jersey-hk2:jar:3.0.9:runtime" -> "org.glassfish.hk2:hk2-locator:jar:3.0.4:runtime" ; 
+[INFO] 	"org.glassfish.jersey.inject:jersey-hk2:jar:3.0.9:runtime" -> "org.javassist:javassist:jar:3.29.2-GA:runtime" ; 
+[INFO] 	"org.easymock:easymock:jar:5.1.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.glassfish.jersey.test-framework:jersey-test-framework-core:jar:3.0.9:test" -> "org.glassfish.jersey.media:jersey-media-jaxb:jar:3.0.9:test" ; 
+[INFO] 	"org.glassfish.jersey.test-framework:jersey-test-framework-core:jar:3.0.9:test" -> "org.junit.jupiter:junit-jupiter:jar:5.9.3:test" ; 
+[INFO] 	"org.glassfish.jersey.test-framework:jersey-test-framework-core:jar:3.0.9:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.3:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.3:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.3:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.3:test" ; 
+[INFO] 	"org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-grizzly2:jar:3.0.9:test" -> "org.glassfish.jersey.containers:jersey-container-grizzly2-http:jar:3.0.9:test" ; 
+[INFO] 	"org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-grizzly2:jar:3.0.9:test" -> "org.glassfish.jersey.containers:jersey-container-grizzly2-servlet:jar:3.0.9:test" ; 
+[INFO] 	"org.glassfish.jersey.containers:jersey-container-grizzly2-http:jar:3.0.9:test" -> "org.glassfish.grizzly:grizzly-http-server:jar:3.0.1:test" ; 
+[INFO] 	"org.glassfish.grizzly:grizzly-http-server:jar:3.0.1:test" -> "org.glassfish.grizzly:grizzly-http:jar:3.0.1:test" ; 
+[INFO] 	"org.glassfish.grizzly:grizzly-http:jar:3.0.1:test" -> "org.glassfish.grizzly:grizzly-framework:jar:3.0.1:test" ; 
+[INFO] 	"org.glassfish.jersey.containers:jersey-container-grizzly2-servlet:jar:3.0.9:test" -> "org.glassfish.jersey.containers:jersey-container-servlet:jar:3.0.9:test" ; 
+[INFO] 	"org.glassfish.jersey.containers:jersey-container-grizzly2-servlet:jar:3.0.9:test" -> "org.glassfish.grizzly:grizzly-http-servlet:jar:3.0.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< org.apache.accumulo:accumulo-tserver >----------------
+[INFO] Building Apache Accumulo Tablet Server 3.1.0-SNAPSHOT            [10/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ accumulo-tserver ---
+[INFO] digraph "org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT" -> "com.beust:jcommander:jar:1.82:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT" -> "com.google.auto.service:auto-service:jar:1.1.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT" -> "com.google.guava:guava:jar:32.0.1-jre:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT" -> "commons-codec:commons-codec:jar:1.16.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT" -> "io.micrometer:micrometer-core:jar:1.11.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT" -> "io.opentelemetry:opentelemetry-api:jar:1.27.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT" -> "io.opentelemetry:opentelemetry-context:jar:1.27.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-start:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client-api:jar:3.3.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT" -> "org.apache.thrift:libthrift:jar:0.17.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper:jar:3.8.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT" -> "org.checkerframework:checker-qual:jar:3.35.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.7:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client-runtime:jar:3.3.6:runtime" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT" -> "commons-io:commons-io:jar:2.13.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT" -> "org.easymock:easymock:jar:5.1.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.7.3:compile" ; 
+[INFO] 	"com.github.ben-manes.caffeine:caffeine:jar:3.1.6:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.23.0:compile" ; 
+[INFO] 	"com.google.auto.service:auto-service:jar:1.1.1:compile" -> "com.google.auto.service:auto-service-annotations:jar:1.1.1:compile" ; 
+[INFO] 	"com.google.auto.service:auto-service:jar:1.1.1:compile" -> "com.google.auto:auto-common:jar:1.2.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "io.micrometer:micrometer-commons:jar:1.11.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "io.micrometer:micrometer-observation:jar:1.11.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:runtime" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "org.latencyutils:LatencyUtils:jar:2.0.3:runtime" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "io.opentelemetry:opentelemetry-semconv:jar:1.27.0-alpha:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-configuration2:jar:2.9.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-math3:jar:3.6.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.datasketches:datasketches-java:jar:4.1.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.logging.log4j:log4j-1.2-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.zookeeper:zookeeper-jute:jar:3.8.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.yaml:snakeyaml:jar:2.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"org.apache.commons:commons-configuration2:jar:2.9.0:compile" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"org.apache.datasketches:datasketches-java:jar:4.1.0:compile" -> "org.apache.datasketches:datasketches-memory:jar:2.2.0:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client-api:jar:3.3.6:compile" -> "org.xerial.snappy:snappy-java:jar:1.1.10.4:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "org.apache.yetus:audience-annotations:jar:0.12.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "io.netty:netty-transport-native-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-classes-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" -> "org.apache.logging.log4j:log4j-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" -> "org.apache.logging.log4j:log4j-core:jar:2.20.0:test" ; 
+[INFO] 	"org.easymock:easymock:jar:5.1.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< org.apache.accumulo:accumulo-minicluster >--------------
+[INFO] Building Apache Accumulo MiniCluster 3.1.0-SNAPSHOT              [11/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/accumulo/accumulo-compaction-coordinator/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/snapshots/org/apache/accumulo/accumulo-compaction-coordinator/3.1.0-SNAPSHOT/maven-metadata.xml (803 B at 5.4 kB/s)
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/accumulo/accumulo-compactor/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/snapshots/org/apache/accumulo/accumulo-compactor/3.1.0-SNAPSHOT/maven-metadata.xml (790 B at 9.9 kB/s)
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/accumulo/accumulo-gc/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/snapshots/org/apache/accumulo/accumulo-gc/3.1.0-SNAPSHOT/maven-metadata.xml (783 B at 9.4 kB/s)
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/accumulo/accumulo-manager/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/snapshots/org/apache/accumulo/accumulo-manager/3.1.0-SNAPSHOT/maven-metadata.xml (788 B at 9.1 kB/s)
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/accumulo/accumulo-monitor/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/snapshots/org/apache/accumulo/accumulo-monitor/3.1.0-SNAPSHOT/maven-metadata.xml (788 B at 5.0 kB/s)
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/accumulo/accumulo-tserver/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/snapshots/org/apache/accumulo/accumulo-tserver/3.1.0-SNAPSHOT/maven-metadata.xml (788 B at 8.0 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ accumulo-minicluster ---
+[INFO] digraph "org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT" -> "com.beust:jcommander:jar:1.82:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT" -> "com.google.auto.service:auto-service:jar:1.1.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT" -> "com.google.guava:guava:jar:32.0.1-jre:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT" -> "commons-io:commons-io:jar:2.13.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-compaction-coordinator:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-compactor:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-gc:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-manager:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-start:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client-api:jar:3.3.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client-minicluster:jar:3.3.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT" -> "org.apache.thrift:libthrift:jar:0.17.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper:jar:3.8.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper-jute:jar:3.8.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.7:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client-runtime:jar:3.3.6:runtime" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT" -> "org.apache.commons:commons-configuration2:jar:2.9.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT" -> "org.apache.curator:curator-framework:jar:5.5.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT" -> "org.apache.curator:curator-test:jar:5.5.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-1.2-api:jar:2.20.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT" -> "org.easymock:easymock:jar:5.1.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.7.3:compile" ; 
+[INFO] 	"com.google.auto.service:auto-service:jar:1.1.1:compile" -> "com.google.auto.service:auto-service-annotations:jar:1.1.1:compile" ; 
+[INFO] 	"com.google.auto.service:auto-service:jar:1.1.1:compile" -> "com.google.auto:auto-common:jar:1.2.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.35.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.23.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-compaction-coordinator:jar:3.1.0-SNAPSHOT:compile" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-compactor:jar:3.1.0-SNAPSHOT:compile" -> "io.micrometer:micrometer-core:jar:1.11.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "io.micrometer:micrometer-commons:jar:1.11.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "io.micrometer:micrometer-observation:jar:1.11.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:runtime" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "org.latencyutils:LatencyUtils:jar:2.0.3:runtime" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "io.opentelemetry:opentelemetry-api:jar:1.27.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "io.opentelemetry:opentelemetry-context:jar:1.27.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "io.opentelemetry:opentelemetry-semconv:jar:1.27.0-alpha:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-math3:jar:3.6.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.datasketches:datasketches-java:jar:4.1.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.yaml:snakeyaml:jar:2.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"org.apache.datasketches:datasketches-java:jar:4.1.0:compile" -> "org.apache.datasketches:datasketches-memory:jar:2.2.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-manager:jar:3.1.0-SNAPSHOT:compile" -> "commons-codec:commons-codec:jar:1.16.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "jakarta.inject:jakarta.inject-api:jar:2.0.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "jakarta.servlet:jakarta.servlet-api:jar:5.0.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "jakarta.validation:jakarta.validation-api:jar:3.0.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "jakarta.ws.rs:jakarta.ws.rs-api:jar:3.0.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:3.0.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.logging.log4j:log4j-core:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.logging.log4j:log4j-web:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "org.eclipse.jetty:jetty-server:jar:11.0.15:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "org.eclipse.jetty:jetty-servlet:jar:11.0.15:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "org.eclipse.jetty:jetty-util:jar:11.0.15:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "org.glassfish.hk2:hk2-api:jar:3.0.4:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "org.glassfish.jersey.containers:jersey-container-servlet-core:jar:3.0.9:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "org.glassfish.jersey.core:jersey-common:jar:3.0.9:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "org.glassfish.jersey.core:jersey-server:jar:3.0.9:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "org.glassfish.jersey.ext:jersey-mvc:jar:3.0.9:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "org.glassfish.jersey.ext:jersey-mvc-freemarker:jar:3.0.9:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "org.glassfish.jersey.media:jersey-media-json-jackson:jar:3.0.9:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "org.glassfish.jaxb:txw2:jar:4.0.3:runtime" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "org.glassfish.jersey.ext:jersey-bean-validation:jar:3.0.9:runtime" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "org.glassfish.jersey.inject:jersey-hk2:jar:3.0.9:runtime" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:3.0.1:compile" -> "com.sun.activation:jakarta.activation:jar:2.0.1:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:11.0.15:compile" -> "org.eclipse.jetty.toolchain:jetty-jakarta-servlet-api:jar:5.0.2:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:11.0.15:compile" -> "org.eclipse.jetty:jetty-http:jar:11.0.15:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:11.0.15:compile" -> "org.eclipse.jetty:jetty-io:jar:11.0.15:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:11.0.15:compile" -> "org.eclipse.jetty:jetty-security:jar:11.0.15:compile" ; 
+[INFO] 	"org.glassfish.hk2:hk2-api:jar:3.0.4:compile" -> "org.glassfish.hk2:hk2-utils:jar:3.0.4:compile" ; 
+[INFO] 	"org.glassfish.hk2:hk2-api:jar:3.0.4:compile" -> "org.glassfish.hk2.external:aopalliance-repackaged:jar:3.0.4:compile" ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-common:jar:3.0.9:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:2.0.0:compile" ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-common:jar:3.0.9:compile" -> "org.glassfish.hk2:osgi-resource-locator:jar:2.4.0:compile" ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-server:jar:3.0.9:compile" -> "org.glassfish.jersey.core:jersey-client:jar:3.0.9:compile" ; 
+[INFO] 	"org.glassfish.jersey.ext:jersey-mvc-freemarker:jar:3.0.9:compile" -> "org.freemarker:freemarker:jar:2.3.32:compile" ; 
+[INFO] 	"org.glassfish.jersey.media:jersey-media-json-jackson:jar:3.0.9:compile" -> "org.glassfish.jersey.ext:jersey-entity-filtering:jar:3.0.9:compile" ; 
+[INFO] 	"org.glassfish.jersey.media:jersey-media-json-jackson:jar:3.0.9:compile" -> "com.fasterxml.jackson.module:jackson-module-jakarta-xmlbind-annotations:jar:2.15.2:compile" ; 
+[INFO] 	"org.glassfish.jersey.ext:jersey-bean-validation:jar:3.0.9:runtime" -> "org.hibernate.validator:hibernate-validator:jar:8.0.1.Final:runtime" ; 
+[INFO] 	"org.glassfish.jersey.ext:jersey-bean-validation:jar:3.0.9:runtime" -> "org.jboss.logging:jboss-logging:jar:3.5.1.Final:runtime" ; 
+[INFO] 	"org.glassfish.jersey.ext:jersey-bean-validation:jar:3.0.9:runtime" -> "jakarta.el:jakarta.el-api:jar:4.0.0:runtime" ; 
+[INFO] 	"org.glassfish.jersey.ext:jersey-bean-validation:jar:3.0.9:runtime" -> "org.glassfish:jakarta.el:jar:4.0.2:runtime" ; 
+[INFO] 	"org.hibernate.validator:hibernate-validator:jar:8.0.1.Final:runtime" -> "com.fasterxml:classmate:jar:1.5.1:runtime" ; 
+[INFO] 	"org.glassfish.jersey.inject:jersey-hk2:jar:3.0.9:runtime" -> "org.glassfish.hk2:hk2-locator:jar:3.0.4:runtime" ; 
+[INFO] 	"org.glassfish.jersey.inject:jersey-hk2:jar:3.0.9:runtime" -> "org.javassist:javassist:jar:3.29.2-GA:runtime" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client-api:jar:3.3.6:compile" -> "org.xerial.snappy:snappy-java:jar:1.1.10.4:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client-minicluster:jar:3.3.6:compile" -> "junit:junit:jar:4.13.2:runtime" ; 
+[INFO] 	"junit:junit:jar:4.13.2:runtime" -> "org.hamcrest:hamcrest-core:jar:1.3:runtime" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "org.apache.yetus:audience-annotations:jar:0.12.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "io.netty:netty-transport-native-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-classes-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.commons:commons-configuration2:jar:2.9.0:test" -> "org.apache.commons:commons-text:jar:1.10.0:test" ; 
+[INFO] 	"org.apache.curator:curator-framework:jar:5.5.0:test" -> "org.apache.curator:curator-client:jar:5.5.0:test" ; 
+[INFO] 	"org.apache.curator:curator-test:jar:5.5.0:test" -> "io.dropwizard.metrics:metrics-core:jar:3.2.5:test" ; 
+[INFO] 	"org.easymock:easymock:jar:5.1.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< org.apache.accumulo:accumulo-native >-----------------
+[INFO] Building Apache Accumulo Native Libraries 3.1.0-SNAPSHOT         [12/17]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ accumulo-native ---
+[INFO] digraph "org.apache.accumulo:accumulo-native:pom:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.accumulo:accumulo-native:pom:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-native:pom:3.1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-native:pom:3.1.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.7:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-native:pom:3.1.0-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.7.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT:compile" -> "com.beust:jcommander:jar:1.82:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT:compile" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT:compile" -> "com.google.guava:guava:jar:32.0.1-jre:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT:compile" -> "commons-codec:commons-codec:jar:1.16.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT:compile" -> "io.micrometer:micrometer-core:jar:1.11.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT:compile" -> "io.opentelemetry:opentelemetry-api:jar:1.27.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT:compile" -> "io.opentelemetry:opentelemetry-context:jar:1.27.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.accumulo:accumulo-start:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.hadoop:hadoop-client-api:jar:3.3.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.thrift:libthrift:jar:0.17.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.zookeeper:zookeeper:jar:3.8.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT:compile" -> "org.checkerframework:checker-qual:jar:3.35.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.hadoop:hadoop-client-runtime:jar:3.3.6:runtime" ; 
+[INFO] 	"com.github.ben-manes.caffeine:caffeine:jar:3.1.6:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.23.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "io.micrometer:micrometer-commons:jar:1.11.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "io.micrometer:micrometer-observation:jar:1.11.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:runtime" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "org.latencyutils:LatencyUtils:jar:2.0.3:runtime" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "commons-io:commons-io:jar:2.13.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "io.opentelemetry:opentelemetry-semconv:jar:1.27.0-alpha:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-configuration2:jar:2.9.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-math3:jar:3.6.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.datasketches:datasketches-java:jar:4.1.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.logging.log4j:log4j-1.2-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.zookeeper:zookeeper-jute:jar:3.8.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.yaml:snakeyaml:jar:2.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"org.apache.commons:commons-configuration2:jar:2.9.0:compile" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"org.apache.datasketches:datasketches-java:jar:4.1.0:compile" -> "org.apache.datasketches:datasketches-memory:jar:2.2.0:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client-api:jar:3.3.6:compile" -> "org.xerial.snappy:snappy-java:jar:1.1.10.4:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "org.apache.yetus:audience-annotations:jar:0.12.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "io.netty:netty-transport-native-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-classes-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" -> "org.apache.logging.log4j:log4j-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" -> "org.apache.logging.log4j:log4j-core:jar:2.20.0:test" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:4.7.3:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.apache.accumulo:accumulo-shell >-----------------
+[INFO] Building Apache Accumulo Shell 3.1.0-SNAPSHOT                    [13/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ accumulo-shell ---
+[INFO] digraph "org.apache.accumulo:accumulo-shell:jar:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.accumulo:accumulo-shell:jar:3.1.0-SNAPSHOT" -> "com.beust:jcommander:jar:1.82:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-shell:jar:3.1.0-SNAPSHOT" -> "com.google.auto.service:auto-service:jar:1.1.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-shell:jar:3.1.0-SNAPSHOT" -> "com.google.guava:guava:jar:32.0.1-jre:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-shell:jar:3.1.0-SNAPSHOT" -> "commons-cli:commons-cli:jar:1.5.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-shell:jar:3.1.0-SNAPSHOT" -> "io.opentelemetry:opentelemetry-api:jar:1.27.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-shell:jar:3.1.0-SNAPSHOT" -> "io.opentelemetry:opentelemetry-context:jar:1.27.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-shell:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-shell:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-start:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-shell:jar:3.1.0-SNAPSHOT" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-shell:jar:3.1.0-SNAPSHOT" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-shell:jar:3.1.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client-api:jar:3.3.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-shell:jar:3.1.0-SNAPSHOT" -> "org.apache.thrift:libthrift:jar:0.17.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-shell:jar:3.1.0-SNAPSHOT" -> "org.jline:jline:jar:3.24.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-shell:jar:3.1.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.7:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-shell:jar:3.1.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client-runtime:jar:3.3.6:runtime" ; 
+[INFO] 	"org.apache.accumulo:accumulo-shell:jar:3.1.0-SNAPSHOT" -> "commons-io:commons-io:jar:2.13.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-shell:jar:3.1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-shell:jar:3.1.0-SNAPSHOT" -> "org.easymock:easymock:jar:5.1.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-shell:jar:3.1.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-shell:jar:3.1.0-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.7.3:compile" ; 
+[INFO] 	"com.google.auto.service:auto-service:jar:1.1.1:compile" -> "com.google.auto.service:auto-service-annotations:jar:1.1.1:compile" ; 
+[INFO] 	"com.google.auto.service:auto-service:jar:1.1.1:compile" -> "com.google.auto:auto-common:jar:1.2.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.35.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.23.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "io.micrometer:micrometer-core:jar:1.11.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "io.opentelemetry:opentelemetry-semconv:jar:1.27.0-alpha:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-configuration2:jar:2.9.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-math3:jar:3.6.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.datasketches:datasketches-java:jar:4.1.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.logging.log4j:log4j-1.2-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.zookeeper:zookeeper:jar:3.8.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.zookeeper:zookeeper-jute:jar:3.8.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.yaml:snakeyaml:jar:2.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "io.micrometer:micrometer-commons:jar:1.11.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "io.micrometer:micrometer-observation:jar:1.11.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:runtime" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "org.latencyutils:LatencyUtils:jar:2.0.3:runtime" ; 
+[INFO] 	"org.apache.commons:commons-configuration2:jar:2.9.0:compile" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"org.apache.datasketches:datasketches-java:jar:4.1.0:compile" -> "org.apache.datasketches:datasketches-memory:jar:2.2.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "org.apache.yetus:audience-annotations:jar:0.12.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "io.netty:netty-transport-native-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-classes-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client-api:jar:3.3.6:compile" -> "org.xerial.snappy:snappy-java:jar:1.1.10.4:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" -> "org.apache.logging.log4j:log4j-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" -> "org.apache.logging.log4j:log4j-core:jar:2.20.0:test" ; 
+[INFO] 	"org.easymock:easymock:jar:5.1.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------< org.apache.accumulo:accumulo-iterator-test-harness >---------
+[INFO] Building Apache Accumulo Iterator Test Harness 3.1.0-SNAPSHOT    [14/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ accumulo-iterator-test-harness ---
+[INFO] digraph "org.apache.accumulo:accumulo-iterator-test-harness:jar:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.accumulo:accumulo-iterator-test-harness:jar:3.1.0-SNAPSHOT" -> "com.google.guava:guava:jar:32.0.1-jre:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-iterator-test-harness:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-iterator-test-harness:jar:3.1.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client-api:jar:3.3.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-iterator-test-harness:jar:3.1.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-iterator-test-harness:jar:3.1.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-params:jar:5.9.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-iterator-test-harness:jar:3.1.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.7:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-iterator-test-harness:jar:3.1.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client-runtime:jar:3.3.6:runtime" ; 
+[INFO] 	"org.apache.accumulo:accumulo-iterator-test-harness:jar:3.1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-iterator-test-harness:jar:3.1.0-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.7.3:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.35.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.23.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.beust:jcommander:jar:1.82:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "commons-io:commons-io:jar:2.13.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "io.micrometer:micrometer-core:jar:1.11.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "io.opentelemetry:opentelemetry-api:jar:1.27.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "io.opentelemetry:opentelemetry-context:jar:1.27.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "io.opentelemetry:opentelemetry-semconv:jar:1.27.0-alpha:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.accumulo:accumulo-start:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-configuration2:jar:2.9.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-math3:jar:3.6.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.datasketches:datasketches-java:jar:4.1.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.logging.log4j:log4j-1.2-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.thrift:libthrift:jar:0.17.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.zookeeper:zookeeper:jar:3.8.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.zookeeper:zookeeper-jute:jar:3.8.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.yaml:snakeyaml:jar:2.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "io.micrometer:micrometer-commons:jar:1.11.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "io.micrometer:micrometer-observation:jar:1.11.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:runtime" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "org.latencyutils:LatencyUtils:jar:2.0.3:runtime" ; 
+[INFO] 	"org.apache.commons:commons-configuration2:jar:2.9.0:compile" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"org.apache.datasketches:datasketches-java:jar:4.1.0:compile" -> "org.apache.datasketches:datasketches-memory:jar:2.2.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "org.apache.yetus:audience-annotations:jar:0.12.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "io.netty:netty-transport-native-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-classes-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client-api:jar:3.3.6:compile" -> "org.xerial.snappy:snappy-java:jar:1.1.10.4:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:compile" -> "org.opentest4j:opentest4j:jar:1.2.0:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:compile" -> "org.junit.platform:junit-platform-commons:jar:1.9.3:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:compile" -> "org.apiguardian:apiguardian-api:jar:1.1.2:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" -> "org.apache.logging.log4j:log4j-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" -> "org.apache.logging.log4j:log4j-core:jar:2.20.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.apache.accumulo:accumulo-test >------------------
+[INFO] Building Apache Accumulo Testing 3.1.0-SNAPSHOT                  [15/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/accumulo/accumulo-minicluster/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/snapshots/org/apache/accumulo/accumulo-minicluster/3.1.0-SNAPSHOT/maven-metadata.xml (792 B at 9.5 kB/s)
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/accumulo/accumulo-native/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/snapshots/org/apache/accumulo/accumulo-native/3.1.0-SNAPSHOT/maven-metadata.xml (790 B at 6.8 kB/s)
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/accumulo/accumulo-shell/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/snapshots/org/apache/accumulo/accumulo-shell/3.1.0-SNAPSHOT/maven-metadata.xml (786 B at 8.5 kB/s)
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/accumulo/accumulo-iterator-test-harness/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/snapshots/org/apache/accumulo/accumulo-iterator-test-harness/3.1.0-SNAPSHOT/maven-metadata.xml (802 B at 3.5 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ accumulo-test ---
+[INFO] digraph "org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "com.beust:jcommander:jar:1.82:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "com.google.auto.service:auto-service:jar:1.1.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "com.google.guava:guava:jar:32.0.1-jre:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "commons-cli:commons-cli:jar:1.5.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "commons-io:commons-io:jar:2.13.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "io.micrometer:micrometer-core:jar:1.11.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "io.micrometer:micrometer-registry-statsd:jar:1.11.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "io.opentelemetry:opentelemetry-api:jar:1.27.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "io.opentelemetry:opentelemetry-context:jar:1.27.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-compaction-coordinator:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-compactor:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-gc:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-manager:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-native:tar.gz:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-shell:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-start:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.apache.commons:commons-configuration2:jar:2.9.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.apache.curator:curator-test:jar:5.5.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client-api:jar:3.3.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client-minicluster:jar:3.3.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-distcp:jar:3.3.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-minikdc:jar:3.3.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-1.2-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.apache.thrift:libthrift:jar:0.17.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper:jar:3.8.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper-jute:jar:3.8.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.bouncycastle:bcpkix-jdk18on:jar:1.76:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.bouncycastle:bcprov-jdk18on:jar:1.76:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.easymock:easymock:jar:5.1.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.jline:jline:jar:3.24.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-params:jar:5.9.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.7:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client-runtime:jar:3.3.6:runtime" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-iterator-test-harness:jar:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.7.3:compile" ; 
+[INFO] 	"com.github.ben-manes.caffeine:caffeine:jar:3.1.6:compile" -> "org.checkerframework:checker-qual:jar:3.35.0:compile" ; 
+[INFO] 	"com.github.ben-manes.caffeine:caffeine:jar:3.1.6:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.23.0:compile" ; 
+[INFO] 	"com.google.auto.service:auto-service:jar:1.1.1:compile" -> "com.google.auto.service:auto-service-annotations:jar:1.1.1:compile" ; 
+[INFO] 	"com.google.auto.service:auto-service:jar:1.1.1:compile" -> "com.google.auto:auto-common:jar:1.2.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "io.micrometer:micrometer-commons:jar:1.11.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "io.micrometer:micrometer-observation:jar:1.11.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:runtime" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "org.latencyutils:LatencyUtils:jar:2.0.3:runtime" ; 
+[INFO] 	"io.micrometer:micrometer-registry-statsd:jar:1.11.1:compile" -> "io.netty:netty-transport-native-epoll:jar:linux-aarch_64:4.1.94.Final:runtime" ; 
+[INFO] 	"io.micrometer:micrometer-registry-statsd:jar:1.11.1:compile" -> "io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.94.Final:runtime" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:linux-aarch_64:4.1.94.Final:runtime" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:linux-aarch_64:4.1.94.Final:runtime" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:linux-aarch_64:4.1.94.Final:runtime" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:linux-aarch_64:4.1.94.Final:runtime" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:linux-aarch_64:4.1.94.Final:runtime" -> "io.netty:netty-transport-classes-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "io.opentelemetry:opentelemetry-semconv:jar:1.27.0-alpha:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-math3:jar:3.6.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.datasketches:datasketches-java:jar:4.1.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.yaml:snakeyaml:jar:2.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"org.apache.datasketches:datasketches-java:jar:4.1.0:compile" -> "org.apache.datasketches:datasketches-memory:jar:2.2.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-manager:jar:3.1.0-SNAPSHOT:compile" -> "commons-codec:commons-codec:jar:1.16.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "jakarta.inject:jakarta.inject-api:jar:2.0.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "jakarta.servlet:jakarta.servlet-api:jar:5.0.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "jakarta.validation:jakarta.validation-api:jar:3.0.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "jakarta.ws.rs:jakarta.ws.rs-api:jar:3.0.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:3.0.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.logging.log4j:log4j-core:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.logging.log4j:log4j-web:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "org.eclipse.jetty:jetty-server:jar:11.0.15:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "org.eclipse.jetty:jetty-servlet:jar:11.0.15:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "org.eclipse.jetty:jetty-util:jar:11.0.15:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "org.glassfish.hk2:hk2-api:jar:3.0.4:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "org.glassfish.jersey.containers:jersey-container-servlet-core:jar:3.0.9:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "org.glassfish.jersey.core:jersey-common:jar:3.0.9:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "org.glassfish.jersey.core:jersey-server:jar:3.0.9:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "org.glassfish.jersey.ext:jersey-mvc:jar:3.0.9:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "org.glassfish.jersey.ext:jersey-mvc-freemarker:jar:3.0.9:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "org.glassfish.jersey.media:jersey-media-json-jackson:jar:3.0.9:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "org.glassfish.jaxb:txw2:jar:4.0.3:runtime" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "org.glassfish.jersey.ext:jersey-bean-validation:jar:3.0.9:runtime" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" -> "org.glassfish.jersey.inject:jersey-hk2:jar:3.0.9:runtime" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:3.0.1:compile" -> "com.sun.activation:jakarta.activation:jar:2.0.1:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:11.0.15:compile" -> "org.eclipse.jetty.toolchain:jetty-jakarta-servlet-api:jar:5.0.2:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:11.0.15:compile" -> "org.eclipse.jetty:jetty-http:jar:11.0.15:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:11.0.15:compile" -> "org.eclipse.jetty:jetty-io:jar:11.0.15:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:11.0.15:compile" -> "org.eclipse.jetty:jetty-security:jar:11.0.15:compile" ; 
+[INFO] 	"org.glassfish.hk2:hk2-api:jar:3.0.4:compile" -> "org.glassfish.hk2:hk2-utils:jar:3.0.4:compile" ; 
+[INFO] 	"org.glassfish.hk2:hk2-api:jar:3.0.4:compile" -> "org.glassfish.hk2.external:aopalliance-repackaged:jar:3.0.4:compile" ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-common:jar:3.0.9:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:2.0.0:compile" ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-common:jar:3.0.9:compile" -> "org.glassfish.hk2:osgi-resource-locator:jar:2.4.0:compile" ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-server:jar:3.0.9:compile" -> "org.glassfish.jersey.core:jersey-client:jar:3.0.9:compile" ; 
+[INFO] 	"org.glassfish.jersey.ext:jersey-mvc-freemarker:jar:3.0.9:compile" -> "org.freemarker:freemarker:jar:2.3.32:compile" ; 
+[INFO] 	"org.glassfish.jersey.media:jersey-media-json-jackson:jar:3.0.9:compile" -> "org.glassfish.jersey.ext:jersey-entity-filtering:jar:3.0.9:compile" ; 
+[INFO] 	"org.glassfish.jersey.media:jersey-media-json-jackson:jar:3.0.9:compile" -> "com.fasterxml.jackson.module:jackson-module-jakarta-xmlbind-annotations:jar:2.15.2:compile" ; 
+[INFO] 	"org.glassfish.jersey.ext:jersey-bean-validation:jar:3.0.9:runtime" -> "org.hibernate.validator:hibernate-validator:jar:8.0.1.Final:runtime" ; 
+[INFO] 	"org.glassfish.jersey.ext:jersey-bean-validation:jar:3.0.9:runtime" -> "org.jboss.logging:jboss-logging:jar:3.5.1.Final:runtime" ; 
+[INFO] 	"org.glassfish.jersey.ext:jersey-bean-validation:jar:3.0.9:runtime" -> "jakarta.el:jakarta.el-api:jar:4.0.0:runtime" ; 
+[INFO] 	"org.glassfish.jersey.ext:jersey-bean-validation:jar:3.0.9:runtime" -> "org.glassfish:jakarta.el:jar:4.0.2:runtime" ; 
+[INFO] 	"org.hibernate.validator:hibernate-validator:jar:8.0.1.Final:runtime" -> "com.fasterxml:classmate:jar:1.5.1:runtime" ; 
+[INFO] 	"org.glassfish.jersey.inject:jersey-hk2:jar:3.0.9:runtime" -> "org.glassfish.hk2:hk2-locator:jar:3.0.4:runtime" ; 
+[INFO] 	"org.glassfish.jersey.inject:jersey-hk2:jar:3.0.9:runtime" -> "org.javassist:javassist:jar:3.29.2-GA:runtime" ; 
+[INFO] 	"org.apache.commons:commons-configuration2:jar:2.9.0:compile" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"org.apache.curator:curator-test:jar:5.5.0:compile" -> "io.dropwizard.metrics:metrics-core:jar:3.2.5:compile" ; 
+[INFO] 	"org.apache.curator:curator-test:jar:5.5.0:compile" -> "org.xerial.snappy:snappy-java:jar:1.1.10.4:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client-minicluster:jar:3.3.6:compile" -> "junit:junit:jar:4.13.2:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:compile" -> "org.hamcrest:hamcrest-core:jar:1.3:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-minikdc:jar:3.3.6:compile" -> "org.apache.kerby:kerb-simplekdc:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-simplekdc:jar:1.0.1:compile" -> "org.apache.kerby:kerb-client:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-simplekdc:jar:1.0.1:compile" -> "org.apache.kerby:kerb-admin:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:compile" -> "org.apache.kerby:kerby-config:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:compile" -> "org.apache.kerby:kerb-core:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:compile" -> "org.apache.kerby:kerb-common:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:compile" -> "org.apache.kerby:kerb-util:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:compile" -> "org.apache.kerby:token-provider:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-core:jar:1.0.1:compile" -> "org.apache.kerby:kerby-pkix:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerby-pkix:jar:1.0.1:compile" -> "org.apache.kerby:kerby-asn1:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerby-pkix:jar:1.0.1:compile" -> "org.apache.kerby:kerby-util:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-common:jar:1.0.1:compile" -> "org.apache.kerby:kerb-crypto:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-admin:jar:1.0.1:compile" -> "org.apache.kerby:kerb-server:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-admin:jar:1.0.1:compile" -> "org.apache.kerby:kerby-xdr:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-server:jar:1.0.1:compile" -> "org.apache.kerby:kerb-identity:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "org.apache.yetus:audience-annotations:jar:0.12.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "io.netty:netty-transport-native-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk18on:jar:1.76:compile" -> "org.bouncycastle:bcutil-jdk18on:jar:1.76:compile" ; 
+[INFO] 	"org.easymock:easymock:jar:5.1.0:compile" -> "org.objenesis:objenesis:jar:3.3:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:compile" -> "org.opentest4j:opentest4j:jar:1.2.0:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:compile" -> "org.junit.platform:junit-platform-commons:jar:1.9.3:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:compile" -> "org.apiguardian:apiguardian-api:jar:1.1.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.3:compile" -> "org.junit.platform:junit-platform-engine:jar:1.9.3:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------< org.apache.accumulo:accumulo-hadoop-mapreduce >------------
+[INFO] Building Apache Accumulo Hadoop MapReduce 3.1.0-SNAPSHOT         [16/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/accumulo/accumulo-test/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/snapshots/org/apache/accumulo/accumulo-test/3.1.0-SNAPSHOT/maven-metadata.xml (785 B at 6.2 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ accumulo-hadoop-mapreduce ---
+[INFO] digraph "org.apache.accumulo:accumulo-hadoop-mapreduce:jar:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.accumulo:accumulo-hadoop-mapreduce:jar:3.1.0-SNAPSHOT" -> "com.google.guava:guava:jar:32.0.1-jre:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-hadoop-mapreduce:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-hadoop-mapreduce:jar:3.1.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client-api:jar:3.3.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-hadoop-mapreduce:jar:3.1.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.7:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-hadoop-mapreduce:jar:3.1.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client-runtime:jar:3.3.6:runtime" ; 
+[INFO] 	"org.apache.accumulo:accumulo-hadoop-mapreduce:jar:3.1.0-SNAPSHOT" -> "com.beust:jcommander:jar:1.82:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-hadoop-mapreduce:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-hadoop-mapreduce:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-hadoop-mapreduce:jar:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-hadoop-mapreduce:jar:3.1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-hadoop-mapreduce:jar:3.1.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-hadoop-mapreduce:jar:3.1.0-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.7.3:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.35.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.23.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "commons-io:commons-io:jar:2.13.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "io.micrometer:micrometer-core:jar:1.11.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "io.opentelemetry:opentelemetry-api:jar:1.27.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "io.opentelemetry:opentelemetry-context:jar:1.27.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "io.opentelemetry:opentelemetry-semconv:jar:1.27.0-alpha:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.accumulo:accumulo-start:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-configuration2:jar:2.9.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.commons:commons-math3:jar:3.6.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.datasketches:datasketches-java:jar:4.1.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.logging.log4j:log4j-1.2-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.thrift:libthrift:jar:0.17.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.zookeeper:zookeeper:jar:3.8.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.zookeeper:zookeeper-jute:jar:3.8.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.yaml:snakeyaml:jar:2.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "io.micrometer:micrometer-commons:jar:1.11.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "io.micrometer:micrometer-observation:jar:1.11.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:runtime" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "org.latencyutils:LatencyUtils:jar:2.0.3:runtime" ; 
+[INFO] 	"org.apache.commons:commons-configuration2:jar:2.9.0:compile" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"org.apache.datasketches:datasketches-java:jar:4.1.0:compile" -> "org.apache.datasketches:datasketches-memory:jar:2.2.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "org.apache.yetus:audience-annotations:jar:0.12.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "io.netty:netty-transport-native-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-classes-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client-api:jar:3.3.6:compile" -> "org.xerial.snappy:snappy-java:jar:1.1.10.4:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT:test" -> "org.apache.accumulo:accumulo-compaction-coordinator:jar:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT:test" -> "org.apache.accumulo:accumulo-compactor:jar:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT:test" -> "org.apache.accumulo:accumulo-gc:jar:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT:test" -> "org.apache.accumulo:accumulo-manager:jar:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT:test" -> "org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT:test" -> "org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:test" -> "jakarta.inject:jakarta.inject-api:jar:2.0.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:test" -> "jakarta.servlet:jakarta.servlet-api:jar:5.0.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:test" -> "jakarta.validation:jakarta.validation-api:jar:3.0.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:test" -> "jakarta.ws.rs:jakarta.ws.rs-api:jar:3.0.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:3.0.1:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:test" -> "org.apache.logging.log4j:log4j-web:jar:2.20.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:test" -> "org.eclipse.jetty:jetty-server:jar:11.0.15:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:test" -> "org.eclipse.jetty:jetty-servlet:jar:11.0.15:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:test" -> "org.eclipse.jetty:jetty-util:jar:11.0.15:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:test" -> "org.glassfish.hk2:hk2-api:jar:3.0.4:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:test" -> "org.glassfish.jersey.containers:jersey-container-servlet-core:jar:3.0.9:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:test" -> "org.glassfish.jersey.core:jersey-common:jar:3.0.9:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:test" -> "org.glassfish.jersey.core:jersey-server:jar:3.0.9:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:test" -> "org.glassfish.jersey.ext:jersey-mvc:jar:3.0.9:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:test" -> "org.glassfish.jersey.ext:jersey-mvc-freemarker:jar:3.0.9:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:test" -> "org.glassfish.jersey.media:jersey-media-json-jackson:jar:3.0.9:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:test" -> "org.glassfish.jaxb:txw2:jar:4.0.3:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:test" -> "org.glassfish.jersey.ext:jersey-bean-validation:jar:3.0.9:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:test" -> "org.glassfish.jersey.inject:jersey-hk2:jar:3.0.9:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:3.0.1:test" -> "com.sun.activation:jakarta.activation:jar:2.0.1:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:11.0.15:test" -> "org.eclipse.jetty.toolchain:jetty-jakarta-servlet-api:jar:5.0.2:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:11.0.15:test" -> "org.eclipse.jetty:jetty-http:jar:11.0.15:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:11.0.15:test" -> "org.eclipse.jetty:jetty-io:jar:11.0.15:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:11.0.15:test" -> "org.eclipse.jetty:jetty-security:jar:11.0.15:test" ; 
+[INFO] 	"org.glassfish.hk2:hk2-api:jar:3.0.4:test" -> "org.glassfish.hk2:hk2-utils:jar:3.0.4:test" ; 
+[INFO] 	"org.glassfish.hk2:hk2-api:jar:3.0.4:test" -> "org.glassfish.hk2.external:aopalliance-repackaged:jar:3.0.4:test" ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-common:jar:3.0.9:test" -> "jakarta.annotation:jakarta.annotation-api:jar:2.0.0:test" ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-common:jar:3.0.9:test" -> "org.glassfish.hk2:osgi-resource-locator:jar:2.4.0:test" ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-server:jar:3.0.9:test" -> "org.glassfish.jersey.core:jersey-client:jar:3.0.9:test" ; 
+[INFO] 	"org.glassfish.jersey.ext:jersey-mvc-freemarker:jar:3.0.9:test" -> "org.freemarker:freemarker:jar:2.3.32:test" ; 
+[INFO] 	"org.glassfish.jersey.media:jersey-media-json-jackson:jar:3.0.9:test" -> "org.glassfish.jersey.ext:jersey-entity-filtering:jar:3.0.9:test" ; 
+[INFO] 	"org.glassfish.jersey.media:jersey-media-json-jackson:jar:3.0.9:test" -> "com.fasterxml.jackson.module:jackson-module-jakarta-xmlbind-annotations:jar:2.15.2:test" ; 
+[INFO] 	"org.glassfish.jersey.ext:jersey-bean-validation:jar:3.0.9:test" -> "org.hibernate.validator:hibernate-validator:jar:8.0.1.Final:test" ; 
+[INFO] 	"org.glassfish.jersey.ext:jersey-bean-validation:jar:3.0.9:test" -> "org.jboss.logging:jboss-logging:jar:3.5.1.Final:test" ; 
+[INFO] 	"org.glassfish.jersey.ext:jersey-bean-validation:jar:3.0.9:test" -> "jakarta.el:jakarta.el-api:jar:4.0.0:test" ; 
+[INFO] 	"org.glassfish.jersey.ext:jersey-bean-validation:jar:3.0.9:test" -> "org.glassfish:jakarta.el:jar:4.0.2:test" ; 
+[INFO] 	"org.hibernate.validator:hibernate-validator:jar:8.0.1.Final:test" -> "com.fasterxml:classmate:jar:1.5.1:test" ; 
+[INFO] 	"org.glassfish.jersey.inject:jersey-hk2:jar:3.0.9:test" -> "org.glassfish.hk2:hk2-locator:jar:3.0.4:test" ; 
+[INFO] 	"org.glassfish.jersey.inject:jersey-hk2:jar:3.0.9:test" -> "org.javassist:javassist:jar:3.29.2-GA:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT:test" -> "commons-codec:commons-codec:jar:1.16.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT:test" -> "commons-cli:commons-cli:jar:1.5.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT:test" -> "io.micrometer:micrometer-registry-statsd:jar:1.11.1:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT:test" -> "org.apache.accumulo:accumulo-native:tar.gz:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT:test" -> "org.apache.accumulo:accumulo-shell:jar:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT:test" -> "org.apache.curator:curator-test:jar:5.5.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT:test" -> "org.apache.hadoop:hadoop-client-minicluster:jar:3.3.6:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT:test" -> "org.apache.hadoop:hadoop-distcp:jar:3.3.6:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT:test" -> "org.apache.hadoop:hadoop-minikdc:jar:3.3.6:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT:test" -> "org.bouncycastle:bcpkix-jdk18on:jar:1.76:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT:test" -> "org.bouncycastle:bcprov-jdk18on:jar:1.76:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT:test" -> "org.easymock:easymock:jar:5.1.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT:test" -> "org.jline:jline:jar:3.24.0:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.3:test" ; 
+[INFO] 	"org.apache.accumulo:accumulo-test:jar:3.1.0-SNAPSHOT:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.9.3:test" ; 
+[INFO] 	"io.micrometer:micrometer-registry-statsd:jar:1.11.1:test" -> "io.netty:netty-transport-native-epoll:jar:linux-aarch_64:4.1.94.Final:test" ; 
+[INFO] 	"io.micrometer:micrometer-registry-statsd:jar:1.11.1:test" -> "io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.94.Final:test" ; 
+[INFO] 	"org.apache.curator:curator-test:jar:5.5.0:test" -> "io.dropwizard.metrics:metrics-core:jar:3.2.5:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client-minicluster:jar:3.3.6:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-minikdc:jar:3.3.6:test" -> "org.apache.kerby:kerb-simplekdc:jar:1.0.1:test" ; 
+[INFO] 	"org.apache.kerby:kerb-simplekdc:jar:1.0.1:test" -> "org.apache.kerby:kerb-client:jar:1.0.1:test" ; 
+[INFO] 	"org.apache.kerby:kerb-simplekdc:jar:1.0.1:test" -> "org.apache.kerby:kerb-admin:jar:1.0.1:test" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:test" -> "org.apache.kerby:kerby-config:jar:1.0.1:test" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:test" -> "org.apache.kerby:kerb-core:jar:1.0.1:test" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:test" -> "org.apache.kerby:kerb-common:jar:1.0.1:test" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:test" -> "org.apache.kerby:kerb-util:jar:1.0.1:test" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:test" -> "org.apache.kerby:token-provider:jar:1.0.1:test" ; 
+[INFO] 	"org.apache.kerby:kerb-core:jar:1.0.1:test" -> "org.apache.kerby:kerby-pkix:jar:1.0.1:test" ; 
+[INFO] 	"org.apache.kerby:kerby-pkix:jar:1.0.1:test" -> "org.apache.kerby:kerby-asn1:jar:1.0.1:test" ; 
+[INFO] 	"org.apache.kerby:kerby-pkix:jar:1.0.1:test" -> "org.apache.kerby:kerby-util:jar:1.0.1:test" ; 
+[INFO] 	"org.apache.kerby:kerb-common:jar:1.0.1:test" -> "org.apache.kerby:kerb-crypto:jar:1.0.1:test" ; 
+[INFO] 	"org.apache.kerby:kerb-admin:jar:1.0.1:test" -> "org.apache.kerby:kerb-server:jar:1.0.1:test" ; 
+[INFO] 	"org.apache.kerby:kerb-admin:jar:1.0.1:test" -> "org.apache.kerby:kerby-xdr:jar:1.0.1:test" ; 
+[INFO] 	"org.apache.kerby:kerb-server:jar:1.0.1:test" -> "org.apache.kerby:kerb-identity:jar:1.0.1:test" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk18on:jar:1.76:test" -> "org.bouncycastle:bcutil-jdk18on:jar:1.76:test" ; 
+[INFO] 	"org.easymock:easymock:jar:5.1.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.3:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.3:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" -> "org.apache.logging.log4j:log4j-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:test" -> "org.apache.logging.log4j:log4j-core:jar:2.20.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< org.apache.accumulo:accumulo >--------------------
+[INFO] Building Apache Accumulo 3.1.0-SNAPSHOT                          [17/17]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/accumulo/accumulo-hadoop-mapreduce/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/snapshots/org/apache/accumulo/accumulo-hadoop-mapreduce/3.1.0-SNAPSHOT/maven-metadata.xml (797 B at 5.7 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ accumulo ---
+[INFO] digraph "org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "com.beust:jcommander:jar:1.82:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "com.fasterxml:classmate:jar:1.5.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "com.fasterxml.jackson.jakarta.rs:jackson-jakarta-rs-base:jar:2.15.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "com.fasterxml.jackson.jakarta.rs:jackson-jakarta-rs-json-provider:jar:2.15.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "com.fasterxml.jackson.module:jackson-module-jakarta-xmlbind-annotations:jar:2.15.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "com.google.guava:guava:jar:32.0.1-jre:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "com.lmax:disruptor:jar:3.4.4:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "com.sun.istack:istack-commons-runtime:jar:4.1.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "commons-cli:commons-cli:jar:1.5.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "commons-codec:commons-codec:jar:1.16.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "commons-io:commons-io:jar:2.13.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "io.micrometer:micrometer-commons:jar:1.11.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "io.micrometer:micrometer-core:jar:1.11.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "io.opentelemetry:opentelemetry-api:jar:1.27.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "io.opentelemetry:opentelemetry-context:jar:1.27.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "io.opentelemetry:opentelemetry-semconv:jar:1.27.0-alpha:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "jakarta.activation:jakarta.activation-api:jar:2.0.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "jakarta.annotation:jakarta.annotation-api:jar:2.0.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "jakarta.el:jakarta.el-api:jar:4.0.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "jakarta.inject:jakarta.inject-api:jar:2.0.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "jakarta.servlet:jakarta.servlet-api:jar:5.0.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "jakarta.validation:jakarta.validation-api:jar:3.0.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "jakarta.ws.rs:jakarta.ws.rs-api:jar:3.0.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:3.0.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-compaction-coordinator:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-compactor:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-gc:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-hadoop-mapreduce:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-manager:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-minicluster:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-monitor:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-native:tar.gz:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-server-base:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-shell:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-start:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.apache.accumulo:accumulo-tserver:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.apache.commons:commons-configuration2:jar:2.9.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.apache.commons:commons-math3:jar:3.6.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.apache.datasketches:datasketches-java:jar:4.1.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-1.2-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-core:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-jcl:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-jul:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-web:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.apache.thrift:libthrift:jar:0.17.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.eclipse.jetty:jetty-http:jar:11.0.15:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.eclipse.jetty:jetty-io:jar:11.0.15:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.eclipse.jetty:jetty-security:jar:11.0.15:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.eclipse.jetty:jetty-server:jar:11.0.15:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.eclipse.jetty:jetty-servlet:jar:11.0.15:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.eclipse.jetty:jetty-util:jar:11.0.15:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.freemarker:freemarker:jar:2.3.32:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.glassfish:jakarta.el:jar:4.0.2:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.glassfish.hk2:hk2-api:jar:3.0.4:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.glassfish.hk2:hk2-locator:jar:3.0.4:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.glassfish.hk2:hk2-utils:jar:3.0.4:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.glassfish.jaxb:jaxb-core:jar:4.0.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.glassfish.jaxb:jaxb-runtime:jar:4.0.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.glassfish.jaxb:txw2:jar:4.0.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.glassfish.jersey.containers:jersey-container-jetty-http:jar:3.0.9:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.glassfish.jersey.containers:jersey-container-servlet:jar:3.0.9:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.glassfish.jersey.containers:jersey-container-servlet-core:jar:3.0.9:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.glassfish.jersey.core:jersey-client:jar:3.0.9:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.glassfish.jersey.core:jersey-common:jar:3.0.9:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.glassfish.jersey.core:jersey-server:jar:3.0.9:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.glassfish.jersey.ext:jersey-bean-validation:jar:3.0.9:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.glassfish.jersey.ext:jersey-entity-filtering:jar:3.0.9:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.glassfish.jersey.ext:jersey-mvc:jar:3.0.9:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.glassfish.jersey.ext:jersey-mvc-freemarker:jar:3.0.9:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.glassfish.jersey.inject:jersey-hk2:jar:3.0.9:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.glassfish.jersey.media:jersey-media-jaxb:jar:3.0.9:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.glassfish.jersey.media:jersey-media-json-jackson:jar:3.0.9:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.hibernate.validator:hibernate-validator:jar:8.0.1.Final:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.javassist:javassist:jar:3.29.2-GA:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.jboss.logging:jboss-logging:jar:3.5.1.Final:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.jline:jline:jar:3.24.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.latencyutils:LatencyUtils:jar:2.0.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.7:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "org.yaml:snakeyaml:jar:2.0:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo:pom:3.1.0-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.7.3:compile" ; 
+[INFO] 	"com.github.ben-manes.caffeine:caffeine:jar:3.1.6:compile" -> "org.checkerframework:checker-qual:jar:3.35.0:compile" ; 
+[INFO] 	"com.github.ben-manes.caffeine:caffeine:jar:3.1.6:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.23.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.11.1:compile" -> "io.micrometer:micrometer-observation:jar:1.11.1:compile" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:3.0.1:compile" -> "com.sun.activation:jakarta.activation:jar:2.0.1:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-compaction-coordinator:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.zookeeper:zookeeper:jar:3.8.3:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-compaction-coordinator:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.hadoop:hadoop-client-runtime:jar:3.3.6:runtime" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "org.apache.yetus:audience-annotations:jar:0.12.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:compile" -> "io.netty:netty-transport-native-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-classes-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client-runtime:jar:3.3.6:runtime" -> "org.xerial.snappy:snappy-java:jar:1.1.10.4:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-compactor:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.hadoop:hadoop-client-api:jar:3.3.6:compile" ; 
+[INFO] 	"org.apache.accumulo:accumulo-core:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.zookeeper:zookeeper-jute:jar:3.8.3:compile" ; 
+[INFO] 	"org.apache.datasketches:datasketches-java:jar:4.1.0:compile" -> "org.apache.datasketches:datasketches-memory:jar:2.2.0:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:11.0.15:compile" -> "org.eclipse.jetty.toolchain:jetty-jakarta-servlet-api:jar:5.0.2:compile" ; 
+[INFO] 	"org.glassfish.hk2:hk2-api:jar:3.0.4:compile" -> "org.glassfish.hk2.external:aopalliance-repackaged:jar:3.0.4:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.3:compile" -> "org.eclipse.angus:angus-activation:jar:2.0.1:runtime" ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-common:jar:3.0.9:compile" -> "org.glassfish.hk2:osgi-resource-locator:jar:2.4.0:compile" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Apache Accumulo Project 3.1.0-SNAPSHOT:
+[INFO] 
+[INFO] Apache Accumulo Project ............................ SUCCESS [  4.143 s]
+[INFO] Apache Accumulo Start .............................. SUCCESS [  0.219 s]
+[INFO] Apache Accumulo Core ............................... SUCCESS [  3.488 s]
+[INFO] Apache Accumulo Server Base ........................ SUCCESS [  0.334 s]
+[INFO] Apache Accumulo Compaction Coordinator ............. SUCCESS [  0.318 s]
+[INFO] Apache Accumulo Compactor .......................... SUCCESS [  0.221 s]
+[INFO] Apache Accumulo GC Server .......................... SUCCESS [  0.189 s]
+[INFO] Apache Accumulo Manager Server ..................... SUCCESS [  0.110 s]
+[INFO] Apache Accumulo Monitor Server ..................... SUCCESS [  1.305 s]
+[INFO] Apache Accumulo Tablet Server ...................... SUCCESS [  0.169 s]
+[INFO] Apache Accumulo MiniCluster ........................ SUCCESS [  1.267 s]
+[INFO] Apache Accumulo Native Libraries ................... SUCCESS [  0.168 s]
+[INFO] Apache Accumulo Shell .............................. SUCCESS [  0.282 s]
+[INFO] Apache Accumulo Iterator Test Harness .............. SUCCESS [  0.090 s]
+[INFO] Apache Accumulo Testing ............................ SUCCESS [  1.038 s]
+[INFO] Apache Accumulo Hadoop MapReduce ................... SUCCESS [  0.456 s]
+[INFO] Apache Accumulo .................................... SUCCESS [  0.564 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.246 s
+[INFO] Finished at: 2023-12-28T09:02:29+01:00
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,237 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] SonarSource PHP analyzer                                           [pom]
+[INFO] SonarSource PHP analyzer :: Frontend                               [jar]
+[INFO] SonarSource PHP analyzer :: Checks                                 [jar]
+[INFO] SonarSource PHP analyzer :: Sonar Plugin                  [sonar-plugin]
+[INFO] SonarSource PHP Custom Rules Example                      [sonar-plugin]
+[INFO] 
+[INFO] ----------------------< org.sonarsource.php:php >-----------------------
+[INFO] Building SonarSource PHP analyzer 3.35-SNAPSHOT                    [1/5]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ php ---
+[INFO] digraph "org.sonarsource.php:php:pom:3.35-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< org.sonarsource.php:php-frontend >------------------
+[INFO] Building SonarSource PHP analyzer :: Frontend 3.35-SNAPSHOT        [2/5]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ php-frontend ---
+[INFO] digraph "org.sonarsource.php:php-frontend:jar:3.35-SNAPSHOT" { 
+[INFO] 	"org.sonarsource.php:php-frontend:jar:3.35-SNAPSHOT" -> "org.sonarsource.api.plugin:sonar-plugin-api:jar:10.1.0.809:provided" ; 
+[INFO] 	"org.sonarsource.php:php-frontend:jar:3.35-SNAPSHOT" -> "org.sonarsource.sslr:sslr-core:jar:1.24.0.633:compile" ; 
+[INFO] 	"org.sonarsource.php:php-frontend:jar:3.35-SNAPSHOT" -> "org.sonarsource.sslr:sslr-testing-harness:jar:1.24.0.633:test" ; 
+[INFO] 	"org.sonarsource.php:php-frontend:jar:3.35-SNAPSHOT" -> "org.sonarsource.sonarqube:sonar-testing-harness:jar:10.1.0.73491:test" ; 
+[INFO] 	"org.sonarsource.php:php-frontend:jar:3.35-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.sonarsource.php:php-frontend:jar:3.35-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.11.0:test" ; 
+[INFO] 	"org.sonarsource.php:php-frontend:jar:3.35-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.5.2:test" ; 
+[INFO] 	"org.sonarsource.php:php-frontend:jar:3.35-SNAPSHOT" -> "org.sonarsource.analyzer-commons:sonar-analyzer-test-commons:jar:2.7.0.1482:compile" ; 
+[INFO] 	"org.sonarsource.php:php-frontend:jar:3.35-SNAPSHOT" -> "org.apache.commons:commons-lang3:jar:3.10:compile" ; 
+[INFO] 	"org.sonarsource.php:php-frontend:jar:3.35-SNAPSHOT" -> "org.sonarsource.analyzer-commons:sonar-regex-parsing:jar:2.7.0.1482:compile" ; 
+[INFO] 	"org.sonarsource.php:php-frontend:jar:3.35-SNAPSHOT" -> "org.sonarsource.sonarqube:sonar-plugin-api-impl:jar:10.1.0.73491:test" ; 
+[INFO] 	"org.sonarsource.php:php-frontend:jar:3.35-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.30:provided" ; 
+[INFO] 	"org.sonarsource.php:php-frontend:jar:3.35-SNAPSHOT" -> "org.sonarsource.api.plugin:sonar-plugin-api-test-fixtures:jar:10.1.0.809:test" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-core:jar:1.24.0.633:compile" -> "com.google.code.findbugs:jsr305:jar:1.3.9:compile" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-core:jar:1.24.0.633:compile" -> "org.ow2.asm:asm:jar:9.0:compile" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-testing-harness:jar:1.24.0.633:test" -> "org.sonarsource.sslr:sslr-toolkit:jar:1.24.0.633:test" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-testing-harness:jar:1.24.0.633:test" -> "org.easytesting:fest-assert:jar:1.4:test" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-testing-harness:jar:1.24.0.633:test" -> "org.hamcrest:hamcrest-all:jar:1.3:test" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-testing-harness:jar:1.24.0.633:test" -> "junit:junit:jar:4.13.1:compile" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-toolkit:jar:1.24.0.633:test" -> "org.sonarsource.sslr:sslr-xpath:jar:1.24.0.633:test" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-toolkit:jar:1.24.0.633:test" -> "org.codehaus.sonar:sonar-colorizer:jar:3.7:test" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-xpath:jar:1.24.0.633:test" -> "jaxen:jaxen:jar:1.1.4:test" ; 
+[INFO] 	"org.codehaus.sonar:sonar-colorizer:jar:3.7:test" -> "com.google.guava:guava:jar:10.0.1:test" ; 
+[INFO] 	"org.codehaus.sonar:sonar-colorizer:jar:3.7:test" -> "org.codehaus.sonar:sonar-channel:jar:3.7:test" ; 
+[INFO] 	"org.easytesting:fest-assert:jar:1.4:test" -> "org.easytesting:fest-util:jar:1.1.6:test" ; 
+[INFO] 	"junit:junit:jar:4.13.1:compile" -> "org.hamcrest:hamcrest-core:jar:1.3:compile" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-testing-harness:jar:10.1.0.73491:test" -> "com.google.code.gson:gson:jar:2.10.1:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-testing-harness:jar:10.1.0.73491:test" -> "com.googlecode.json-simple:json-simple:jar:1.1.1:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-testing-harness:jar:10.1.0.73491:test" -> "com.sun.mail:javax.mail:jar:1.6.2:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-testing-harness:jar:10.1.0.73491:test" -> "commons-io:commons-io:jar:2.11.0:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-testing-harness:jar:10.1.0.73491:test" -> "org.jsoup:jsoup:jar:1.15.4:test" ; 
+[INFO] 	"com.sun.mail:javax.mail:jar:1.6.2:test" -> "javax.activation:activation:jar:1.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "net.bytebuddy:byte-buddy:jar:1.12.19:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.19:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-plugin-api-impl:jar:10.1.0.73491:test" -> "commons-codec:commons-codec:jar:1.15:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-plugin-api-impl:jar:10.1.0.73491:test" -> "commons-lang:commons-lang:jar:2.6:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-plugin-api-impl:jar:10.1.0.73491:test" -> "org.apache.commons:commons-csv:jar:1.10.0:test" ; 
+[INFO] 	"org.sonarsource.api.plugin:sonar-plugin-api-test-fixtures:jar:10.1.0.809:test" -> "ch.qos.logback:logback-classic:jar:1.2.9:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.9:test" -> "ch.qos.logback:logback-core:jar:1.2.9:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< org.sonarsource.php:php-checks >-------------------
+[INFO] Building SonarSource PHP analyzer :: Checks 3.35-SNAPSHOT          [3/5]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ php-checks ---
+[INFO] digraph "org.sonarsource.php:php-checks:jar:3.35-SNAPSHOT" { 
+[INFO] 	"org.sonarsource.php:php-checks:jar:3.35-SNAPSHOT" -> "org.sonarsource.php:php-frontend:jar:3.35-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.php:php-checks:jar:3.35-SNAPSHOT" -> "org.sonarsource.api.plugin:sonar-plugin-api:jar:10.1.0.809:provided" ; 
+[INFO] 	"org.sonarsource.php:php-checks:jar:3.35-SNAPSHOT" -> "org.sonarsource.analyzer-commons:sonar-analyzer-commons:jar:2.7.0.1482:compile" ; 
+[INFO] 	"org.sonarsource.php:php-checks:jar:3.35-SNAPSHOT" -> "org.apache.commons:commons-lang3:jar:3.10:compile" ; 
+[INFO] 	"org.sonarsource.php:php-checks:jar:3.35-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.sonarsource.php:php-checks:jar:3.35-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.5.2:test" ; 
+[INFO] 	"org.sonarsource.php:php-checks:jar:3.35-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.11.0:test" ; 
+[INFO] 	"org.sonarsource.php:php-checks:jar:3.35-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.30:provided" ; 
+[INFO] 	"org.sonarsource.php:php-checks:jar:3.35-SNAPSHOT" -> "org.sonarsource.api.plugin:sonar-plugin-api-test-fixtures:jar:10.1.0.809:test" ; 
+[INFO] 	"org.sonarsource.php:php-frontend:jar:3.35-SNAPSHOT:compile" -> "org.sonarsource.sslr:sslr-core:jar:1.24.0.633:compile" ; 
+[INFO] 	"org.sonarsource.php:php-frontend:jar:3.35-SNAPSHOT:compile" -> "org.sonarsource.analyzer-commons:sonar-analyzer-test-commons:jar:2.7.0.1482:compile" ; 
+[INFO] 	"org.sonarsource.php:php-frontend:jar:3.35-SNAPSHOT:compile" -> "org.sonarsource.analyzer-commons:sonar-regex-parsing:jar:2.7.0.1482:compile" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-core:jar:1.24.0.633:compile" -> "com.google.code.findbugs:jsr305:jar:1.3.9:compile" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-core:jar:1.24.0.633:compile" -> "org.ow2.asm:asm:jar:9.0:compile" ; 
+[INFO] 	"org.sonarsource.analyzer-commons:sonar-analyzer-test-commons:jar:2.7.0.1482:compile" -> "junit:junit:jar:4.13.2:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:compile" -> "org.hamcrest:hamcrest-core:jar:1.3:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "net.bytebuddy:byte-buddy:jar:1.12.19:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.19:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.sonarsource.api.plugin:sonar-plugin-api-test-fixtures:jar:10.1.0.809:test" -> "commons-lang:commons-lang:jar:2.6:test" ; 
+[INFO] 	"org.sonarsource.api.plugin:sonar-plugin-api-test-fixtures:jar:10.1.0.809:test" -> "ch.qos.logback:logback-classic:jar:1.2.9:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.9:test" -> "ch.qos.logback:logback-core:jar:1.2.9:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< org.sonarsource.php:sonar-php-plugin >----------------
+[INFO] Building SonarSource PHP analyzer :: Sonar Plugin 3.35-SNAPSHOT    [4/5]
+[INFO] ----------------------------[ sonar-plugin ]----------------------------
+[INFO] Downloading from maven: http://repo1.maven.org/maven2/org/codehaus/woodstox/stax2-api/maven-metadata.xml
+[INFO] Downloading from codehaus: http://repository.codehaus.org/org/codehaus/woodstox/stax2-api/maven-metadata.xml
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/woodstox/stax2-api/maven-metadata.xml
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/woodstox/stax2-api/maven-metadata.xml (887 B at 996 B/s)
+[WARNING] Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to codehaus (http://repository.codehaus.org): Transfer failed for http://repository.codehaus.org/org/codehaus/woodstox/stax2-api/maven-metadata.xml
+[WARNING] Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to maven (http://repo1.maven.org/maven2): Transfer failed for http://repo1.maven.org/maven2/org/codehaus/woodstox/stax2-api/maven-metadata.xml 501 HTTPS Required
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ sonar-php-plugin ---
+[WARNING] Failure to transfer org.codehaus.woodstox:stax2-api/maven-metadata.xml from http://repository.codehaus.org was cached in the local repository, resolution will not be reattempted until the update interval of codehaus has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to codehaus (http://repository.codehaus.org): Transfer failed for http://repository.codehaus.org/org/codehaus/woodstox/stax2-api/maven-metadata.xml
+[WARNING] Failure to transfer org.codehaus.woodstox:stax2-api/maven-metadata.xml from http://repo1.maven.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of maven has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to maven (http://repo1.maven.org/maven2): Transfer failed for http://repo1.maven.org/maven2/org/codehaus/woodstox/stax2-api/maven-metadata.xml 501 HTTPS Required
+[INFO] digraph "org.sonarsource.php:sonar-php-plugin:sonar-plugin:3.35-SNAPSHOT" { 
+[INFO] 	"org.sonarsource.php:sonar-php-plugin:sonar-plugin:3.35-SNAPSHOT" -> "org.sonarsource.php:php-frontend:jar:3.35-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.php:sonar-php-plugin:sonar-plugin:3.35-SNAPSHOT" -> "org.sonarsource.php:php-checks:jar:3.35-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.php:sonar-php-plugin:sonar-plugin:3.35-SNAPSHOT" -> "org.sonarsource.api.plugin:sonar-plugin-api:jar:10.1.0.809:provided" ; 
+[INFO] 	"org.sonarsource.php:sonar-php-plugin:sonar-plugin:3.35-SNAPSHOT" -> "org.sonarsource.php:php-frontend:jar:tests:3.35-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.php:sonar-php-plugin:sonar-plugin:3.35-SNAPSHOT" -> "org.sonarsource.sonarqube:sonar-testing-harness:jar:10.1.0.73491:test" ; 
+[INFO] 	"org.sonarsource.php:sonar-php-plugin:sonar-plugin:3.35-SNAPSHOT" -> "org.sonarsource.sonarqube:sonar-plugin-api-impl:jar:10.1.0.73491:test" ; 
+[INFO] 	"org.sonarsource.php:sonar-php-plugin:sonar-plugin:3.35-SNAPSHOT" -> "org.sonarsource.sslr:sslr-testing-harness:jar:1.24.0.633:test" ; 
+[INFO] 	"org.sonarsource.php:sonar-php-plugin:sonar-plugin:3.35-SNAPSHOT" -> "org.sonarsource.analyzer-commons:sonar-analyzer-commons:jar:2.7.0.1482:compile" ; 
+[INFO] 	"org.sonarsource.php:sonar-php-plugin:sonar-plugin:3.35-SNAPSHOT" -> "org.sonarsource.analyzer-commons:sonar-xml-parsing:jar:2.7.0.1482:compile" ; 
+[INFO] 	"org.sonarsource.php:sonar-php-plugin:sonar-plugin:3.35-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.5.2:test" ; 
+[INFO] 	"org.sonarsource.php:sonar-php-plugin:sonar-plugin:3.35-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.11.0:test" ; 
+[INFO] 	"org.sonarsource.php:sonar-php-plugin:sonar-plugin:3.35-SNAPSHOT" -> "org.mockito:mockito-inline:jar:4.11.0:test" ; 
+[INFO] 	"org.sonarsource.php:sonar-php-plugin:sonar-plugin:3.35-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.sonarsource.php:sonar-php-plugin:sonar-plugin:3.35-SNAPSHOT" -> "org.codehaus.staxmate:staxmate:jar:2.0.1:provided" ; 
+[INFO] 	"org.sonarsource.php:sonar-php-plugin:sonar-plugin:3.35-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.30:provided" ; 
+[INFO] 	"org.sonarsource.php:sonar-php-plugin:sonar-plugin:3.35-SNAPSHOT" -> "org.sonarsource.api.plugin:sonar-plugin-api-test-fixtures:jar:10.1.0.809:test" ; 
+[INFO] 	"org.sonarsource.php:php-frontend:jar:3.35-SNAPSHOT:compile" -> "org.sonarsource.sslr:sslr-core:jar:1.24.0.633:compile" ; 
+[INFO] 	"org.sonarsource.php:php-frontend:jar:3.35-SNAPSHOT:compile" -> "org.sonarsource.analyzer-commons:sonar-analyzer-test-commons:jar:2.7.0.1482:compile" ; 
+[INFO] 	"org.sonarsource.php:php-frontend:jar:3.35-SNAPSHOT:compile" -> "org.apache.commons:commons-lang3:jar:3.10:compile" ; 
+[INFO] 	"org.sonarsource.php:php-frontend:jar:3.35-SNAPSHOT:compile" -> "org.sonarsource.analyzer-commons:sonar-regex-parsing:jar:2.7.0.1482:compile" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-core:jar:1.24.0.633:compile" -> "org.ow2.asm:asm:jar:9.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-testing-harness:jar:10.1.0.73491:test" -> "com.google.code.gson:gson:jar:2.10.1:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-testing-harness:jar:10.1.0.73491:test" -> "com.googlecode.json-simple:json-simple:jar:1.1.1:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-testing-harness:jar:10.1.0.73491:test" -> "com.sun.mail:javax.mail:jar:1.6.2:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-testing-harness:jar:10.1.0.73491:test" -> "commons-io:commons-io:jar:2.11.0:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-testing-harness:jar:10.1.0.73491:test" -> "org.jsoup:jsoup:jar:1.15.4:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-testing-harness:jar:10.1.0.73491:test" -> "com.google.code.findbugs:jsr305:jar:1.3.9:compile" ; 
+[INFO] 	"com.sun.mail:javax.mail:jar:1.6.2:test" -> "javax.activation:activation:jar:1.1:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-plugin-api-impl:jar:10.1.0.73491:test" -> "commons-codec:commons-codec:jar:1.15:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-plugin-api-impl:jar:10.1.0.73491:test" -> "commons-lang:commons-lang:jar:2.6:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-plugin-api-impl:jar:10.1.0.73491:test" -> "org.apache.commons:commons-csv:jar:1.10.0:test" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-testing-harness:jar:1.24.0.633:test" -> "org.sonarsource.sslr:sslr-toolkit:jar:1.24.0.633:test" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-testing-harness:jar:1.24.0.633:test" -> "org.easytesting:fest-assert:jar:1.4:test" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-testing-harness:jar:1.24.0.633:test" -> "org.hamcrest:hamcrest-all:jar:1.3:test" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-toolkit:jar:1.24.0.633:test" -> "org.sonarsource.sslr:sslr-xpath:jar:1.24.0.633:test" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-toolkit:jar:1.24.0.633:test" -> "org.codehaus.sonar:sonar-colorizer:jar:3.7:test" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-xpath:jar:1.24.0.633:test" -> "jaxen:jaxen:jar:1.1.4:test" ; 
+[INFO] 	"org.codehaus.sonar:sonar-colorizer:jar:3.7:test" -> "com.google.guava:guava:jar:10.0.1:test" ; 
+[INFO] 	"org.codehaus.sonar:sonar-colorizer:jar:3.7:test" -> "org.codehaus.sonar:sonar-channel:jar:3.7:test" ; 
+[INFO] 	"org.easytesting:fest-assert:jar:1.4:test" -> "org.easytesting:fest-util:jar:1.1.6:test" ; 
+[INFO] 	"org.sonarsource.analyzer-commons:sonar-xml-parsing:jar:2.7.0.1482:compile" -> "xerces:xercesImpl:jar:2.12.2:compile" ; 
+[INFO] 	"org.sonarsource.analyzer-commons:sonar-xml-parsing:jar:2.7.0.1482:compile" -> "xml-apis:xml-apis:jar:1.4.01:compile" ; 
+[INFO] 	"org.sonarsource.analyzer-commons:sonar-xml-parsing:jar:2.7.0.1482:compile" -> "com.fasterxml.woodstox:woodstox-core:jar:6.4.0:compile" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "net.bytebuddy:byte-buddy:jar:1.12.19:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.19:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.codehaus.staxmate:staxmate:jar:2.0.1:provided" -> "stax:stax-api:jar:1.0.1:provided" ; 
+[INFO] 	"org.codehaus.staxmate:staxmate:jar:2.0.1:provided" -> "org.codehaus.woodstox:stax2-api:jar:3.1.4:compile" ; 
+[INFO] 	"org.sonarsource.api.plugin:sonar-plugin-api-test-fixtures:jar:10.1.0.809:test" -> "ch.qos.logback:logback-classic:jar:1.2.9:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.9:test" -> "ch.qos.logback:logback-core:jar:1.2.9:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< org.sonarsource.php:php-custom-rules >----------------
+[INFO] Building SonarSource PHP Custom Rules Example 3.35-SNAPSHOT        [5/5]
+[INFO] ----------------------------[ sonar-plugin ]----------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ php-custom-rules ---
+[INFO] digraph "org.sonarsource.php:php-custom-rules:sonar-plugin:3.35-SNAPSHOT" { 
+[INFO] 	"org.sonarsource.php:php-custom-rules:sonar-plugin:3.35-SNAPSHOT" -> "org.sonarsource.api.plugin:sonar-plugin-api:jar:10.1.0.809:provided" ; 
+[INFO] 	"org.sonarsource.php:php-custom-rules:sonar-plugin:3.35-SNAPSHOT" -> "org.sonarsource.php:sonar-php-plugin:sonar-plugin:3.35-SNAPSHOT:provided" ; 
+[INFO] 	"org.sonarsource.php:php-custom-rules:sonar-plugin:3.35-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.sonarsource.php:php-custom-rules:sonar-plugin:3.35-SNAPSHOT" -> "org.sonarsource.sonarqube:sonar-plugin-api-impl:jar:10.1.0.73491:test" ; 
+[INFO] 	"org.sonarsource.api.plugin:sonar-plugin-api:jar:10.1.0.809:provided" -> "org.slf4j:slf4j-api:jar:1.7.30:provided" ; 
+[INFO] 	"org.sonarsource.php:sonar-php-plugin:sonar-plugin:3.35-SNAPSHOT:provided" -> "org.sonarsource.php:php-frontend:jar:3.35-SNAPSHOT:provided" ; 
+[INFO] 	"org.sonarsource.php:sonar-php-plugin:sonar-plugin:3.35-SNAPSHOT:provided" -> "org.sonarsource.php:php-checks:jar:3.35-SNAPSHOT:provided" ; 
+[INFO] 	"org.sonarsource.php:sonar-php-plugin:sonar-plugin:3.35-SNAPSHOT:provided" -> "org.sonarsource.php:php-frontend:jar:tests:3.35-SNAPSHOT:provided" ; 
+[INFO] 	"org.sonarsource.php:sonar-php-plugin:sonar-plugin:3.35-SNAPSHOT:provided" -> "org.sonarsource.analyzer-commons:sonar-analyzer-commons:jar:2.7.0.1482:provided" ; 
+[INFO] 	"org.sonarsource.php:sonar-php-plugin:sonar-plugin:3.35-SNAPSHOT:provided" -> "org.sonarsource.analyzer-commons:sonar-xml-parsing:jar:2.7.0.1482:provided" ; 
+[INFO] 	"org.sonarsource.php:php-frontend:jar:3.35-SNAPSHOT:provided" -> "org.sonarsource.sslr:sslr-core:jar:1.24.0.633:provided" ; 
+[INFO] 	"org.sonarsource.php:php-frontend:jar:3.35-SNAPSHOT:provided" -> "org.sonarsource.analyzer-commons:sonar-analyzer-test-commons:jar:2.7.0.1482:provided" ; 
+[INFO] 	"org.sonarsource.php:php-frontend:jar:3.35-SNAPSHOT:provided" -> "org.apache.commons:commons-lang3:jar:3.10:provided" ; 
+[INFO] 	"org.sonarsource.php:php-frontend:jar:3.35-SNAPSHOT:provided" -> "org.sonarsource.analyzer-commons:sonar-regex-parsing:jar:2.7.0.1482:provided" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-core:jar:1.24.0.633:provided" -> "org.ow2.asm:asm:jar:9.0:provided" ; 
+[INFO] 	"org.sonarsource.analyzer-commons:sonar-xml-parsing:jar:2.7.0.1482:provided" -> "xerces:xercesImpl:jar:2.12.2:provided" ; 
+[INFO] 	"org.sonarsource.analyzer-commons:sonar-xml-parsing:jar:2.7.0.1482:provided" -> "xml-apis:xml-apis:jar:1.4.01:provided" ; 
+[INFO] 	"org.sonarsource.analyzer-commons:sonar-xml-parsing:jar:2.7.0.1482:provided" -> "com.fasterxml.woodstox:woodstox-core:jar:6.4.0:provided" ; 
+[INFO] 	"com.fasterxml.woodstox:woodstox-core:jar:6.4.0:provided" -> "org.codehaus.woodstox:stax2-api:jar:4.2.1:provided" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-plugin-api-impl:jar:10.1.0.73491:test" -> "commons-codec:commons-codec:jar:1.15:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-plugin-api-impl:jar:10.1.0.73491:test" -> "commons-io:commons-io:jar:2.11.0:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-plugin-api-impl:jar:10.1.0.73491:test" -> "commons-lang:commons-lang:jar:2.6:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-plugin-api-impl:jar:10.1.0.73491:test" -> "org.apache.commons:commons-csv:jar:1.10.0:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-plugin-api-impl:jar:10.1.0.73491:test" -> "com.google.code.findbugs:jsr305:jar:1.3.9:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-plugin-api-impl:jar:10.1.0.73491:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for SonarSource PHP analyzer 3.35-SNAPSHOT:
+[INFO] 
+[INFO] SonarSource PHP analyzer ........................... SUCCESS [  3.312 s]
+[INFO] SonarSource PHP analyzer :: Frontend ............... SUCCESS [  0.532 s]
+[INFO] SonarSource PHP analyzer :: Checks ................. SUCCESS [  0.106 s]
+[INFO] SonarSource PHP analyzer :: Sonar Plugin ........... SUCCESS [  2.057 s]
+[INFO] SonarSource PHP Custom Rules Example ............... SUCCESS [  0.101 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.405 s
+[INFO] Finished at: 2023-12-28T09:03:24+01:00
+[INFO] ------------------------------------------------------------------------

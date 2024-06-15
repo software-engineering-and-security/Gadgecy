@@ -1,0 +1,474 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Detecting the operating system and CPU architecture
+[INFO] ------------------------------------------------------------------------
+[INFO] os.detected.name: linux
+[INFO] os.detected.arch: x86_64
+[INFO] os.detected.version: 5.10
+[INFO] os.detected.version.major: 5
+[INFO] os.detected.version.minor: 10
+[INFO] os.detected.release: debian
+[INFO] os.detected.release.version: 11
+[INFO] os.detected.release.like.debian: true
+[INFO] os.detected.classifier: linux-x86_64
+[WARNING] The project com.alibaba.nacos:nacos-all:pom:2.3.0 uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Alibaba NACOS 2.3.0                                                [pom]
+[INFO] nacos-api 2.3.0                                                    [jar]
+[INFO] nacos-common 2.3.0                                                 [jar]
+[INFO] nacos-consistency 2.3.0                                            [jar]
+[INFO] nacos-plugin 2.3.0                                                 [pom]
+[INFO] nacos-datasource-plugin 2.3.0                                      [jar]
+[INFO] nacos-custom-environment-plugin 2.3.0                              [jar]
+[INFO] nacos-sys 2.3.0                                                    [jar]
+[INFO] nacos-persistence 2.3.0                                            [jar]
+[INFO] nacos-auth-plugin 2.3.0                                            [jar]
+[INFO] nacos-auth 2.3.0                                                   [jar]
+[INFO] nacos-trace-plugin 2.3.0                                           [jar]
+[INFO] nacos-control-plugin 2.3.0                                         [jar]
+[INFO] nacos-core 2.3.0                                                   [jar]
+[INFO] nacos-encryption-plugin 2.3.0                                      [jar]
+[INFO] nacos-config-plugin 2.3.0                                          [jar]
+[INFO] nacos-config 2.3.0                                                 [jar]
+[INFO] nacos-cmdb 2.3.0                                                   [jar]
+[INFO] nacos-naming 2.3.0                                                 [jar]
+[INFO] nacos-address 2.3.0                                                [jar]
+[INFO] nacos-client 2.3.0                                                 [jar]
+[INFO] nacos-plugin-default-impl 2.3.0                                    [pom]
+[INFO] nacos-default-auth-plugin 2.3.0                                    [jar]
+[INFO] nacos-default-control-plugin 2.3.0                                 [jar]
+[INFO] nacos-default-plugin-all                                           [jar]
+[INFO] nacos-istio 2.3.0                                                  [jar]
+[INFO] nacos-prometheus 2.3.0                                             [jar]
+[INFO] nacos-console 2.3.0                                                [jar]
+[INFO] nacos-test 2.3.0                                                   [pom]
+[INFO] nacos-config-test 2.3.0                                            [jar]
+[INFO] nacos-naming-test 2.3.0                                            [jar]
+[INFO] nacos-core-test 2.3.0                                              [jar]
+[INFO] nacos-example 2.3.0                                                [jar]
+[INFO] nacos-distribution 2.3.0                                           [pom]
+[INFO] 
+[INFO] --------------------< com.alibaba.nacos:nacos-all >---------------------
+[INFO] Building Alibaba NACOS 2.3.0 2.3.0                                [1/34]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ nacos-all ---
+[INFO] digraph "com.alibaba.nacos:nacos-all:pom:2.3.0" { 
+[INFO] 	"com.alibaba.nacos:nacos-all:pom:2.3.0" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.alibaba.nacos:nacos-all:pom:2.3.0" -> "org.mockito:mockito-core:jar:3.8.0:test" ; 
+[INFO] 	"com.alibaba.nacos:nacos-all:pom:2.3.0" -> "org.mockito:mockito-inline:jar:3.8.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.8.0:test" -> "net.bytebuddy:byte-buddy:jar:1.12.23:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.8.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.23:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.8.0:test" -> "org.objenesis:objenesis:jar:3.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< com.alibaba.nacos:nacos-api >---------------------
+[INFO] Building nacos-api 2.3.0 2.3.0                                    [2/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ nacos-api ---
+[INFO] digraph "com.alibaba.nacos:nacos-api:jar:2.3.0" { 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.5:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0" -> "org.springframework:spring-test:jar:5.3.29:test" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0" -> "io.grpc:grpc-netty-shaded:jar:1.57.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0" -> "io.grpc:grpc-protobuf:jar:1.57.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0" -> "io.grpc:grpc-stub:jar:1.57.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0" -> "com.google.api.grpc:proto-google-common-protos:jar:2.17.0:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0" -> "com.google.protobuf:protobuf-java:jar:3.22.3:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0" -> "org.mockito:mockito-core:jar:3.8.0:test" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0" -> "org.mockito:mockito-inline:jar:3.8.0:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.5:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework:spring-test:jar:5.3.29:test" -> "org.springframework:spring-core:jar:5.3.29:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.29:test" -> "org.springframework:spring-jcl:jar:5.3.29:test" ; 
+[INFO] 	"io.grpc:grpc-netty-shaded:jar:1.57.2:compile" -> "com.google.guava:guava:jar:32.0.1-android:compile" ; 
+[INFO] 	"io.grpc:grpc-netty-shaded:jar:1.57.2:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.18.0:compile" ; 
+[INFO] 	"io.grpc:grpc-netty-shaded:jar:1.57.2:compile" -> "io.perfmark:perfmark-api:jar:0.26.0:runtime" ; 
+[INFO] 	"io.grpc:grpc-netty-shaded:jar:1.57.2:compile" -> "io.grpc:grpc-core:jar:1.57.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-android:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-android:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-android:compile" -> "org.checkerframework:checker-qual:jar:3.33.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-android:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.57.2:compile" -> "com.google.code.gson:gson:jar:2.9.0:compile" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.57.2:compile" -> "com.google.android:annotations:jar:4.1.1.4:runtime" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.57.2:compile" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.23:runtime" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.57.2:compile" -> "io.grpc:grpc-context:jar:1.57.2:runtime" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.57.2:compile" -> "io.grpc:grpc-api:jar:1.57.2:compile" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.57.2:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.57.2:compile" -> "io.grpc:grpc-protobuf-lite:jar:1.57.2:compile" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.8.0:test" -> "net.bytebuddy:byte-buddy:jar:1.12.23:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.8.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.23:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.8.0:test" -> "org.objenesis:objenesis:jar:3.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< com.alibaba.nacos:nacos-common >-------------------
+[INFO] Building nacos-common 2.3.0 2.3.0                                 [3/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ nacos-common ---
+[INFO] digraph "com.alibaba.nacos:nacos-common:jar:2.3.0" { 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0" -> "org.slf4j:slf4j-api:jar:1.7.26:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0" -> "commons-io:commons-io:jar:2.7:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0" -> "org.apache.httpcomponents:httpasyncclient:jar:4.1.5:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0" -> "com.alibaba.nacos:nacos-api:jar:2.3.0:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.5:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0" -> "commons-logging:commons-logging:jar:1.2:test" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0" -> "mysql:mysql-connector-java:jar:8.0.28:test" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0" -> "org.mockito:mockito-core:jar:3.8.0:test" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0" -> "org.mockito:mockito-inline:jar:3.8.0:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.5:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.16:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.5:compile" -> "org.apache.httpcomponents:httpcore-nio:jar:4.4.16:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.5:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.14:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.14:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0:compile" -> "io.grpc:grpc-netty-shaded:jar:1.57.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0:compile" -> "io.grpc:grpc-protobuf:jar:1.57.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0:compile" -> "io.grpc:grpc-stub:jar:1.57.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0:compile" -> "com.google.api.grpc:proto-google-common-protos:jar:2.17.0:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0:compile" -> "com.google.protobuf:protobuf-java:jar:3.22.3:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"io.grpc:grpc-netty-shaded:jar:1.57.2:compile" -> "com.google.guava:guava:jar:32.0.1-android:compile" ; 
+[INFO] 	"io.grpc:grpc-netty-shaded:jar:1.57.2:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.18.0:compile" ; 
+[INFO] 	"io.grpc:grpc-netty-shaded:jar:1.57.2:compile" -> "io.perfmark:perfmark-api:jar:0.26.0:runtime" ; 
+[INFO] 	"io.grpc:grpc-netty-shaded:jar:1.57.2:compile" -> "io.grpc:grpc-core:jar:1.57.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-android:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-android:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-android:compile" -> "org.checkerframework:checker-qual:jar:3.33.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-android:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.57.2:compile" -> "com.google.code.gson:gson:jar:2.9.0:compile" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.57.2:compile" -> "com.google.android:annotations:jar:4.1.1.4:runtime" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.57.2:compile" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.23:runtime" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.57.2:compile" -> "io.grpc:grpc-context:jar:1.57.2:runtime" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.57.2:compile" -> "io.grpc:grpc-api:jar:1.57.2:compile" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.57.2:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.57.2:compile" -> "io.grpc:grpc-protobuf-lite:jar:1.57.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.5:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.8.0:test" -> "net.bytebuddy:byte-buddy:jar:1.12.23:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.8.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.23:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.8.0:test" -> "org.objenesis:objenesis:jar:3.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< com.alibaba.nacos:nacos-consistency >-----------------
+[INFO] Building nacos-consistency 2.3.0 2.3.0                            [4/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ nacos-consistency ---
+[INFO] digraph "com.alibaba.nacos:nacos-consistency:jar:2.3.0" { 
+[INFO] 	"com.alibaba.nacos:nacos-consistency:jar:2.3.0" -> "com.alibaba.nacos:nacos-common:jar:2.3.0:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-consistency:jar:2.3.0" -> "org.javatuples:javatuples:jar:1.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-consistency:jar:2.3.0" -> "com.caucho:hessian:jar:4.0.63:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-consistency:jar:2.3.0" -> "com.google.protobuf:protobuf-java:jar:3.22.3:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-consistency:jar:2.3.0" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.alibaba.nacos:nacos-consistency:jar:2.3.0" -> "org.mockito:mockito-core:jar:3.8.0:test" ; 
+[INFO] 	"com.alibaba.nacos:nacos-consistency:jar:2.3.0" -> "org.mockito:mockito-inline:jar:3.8.0:test" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0:compile" -> "org.slf4j:slf4j-api:jar:1.7.26:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0:compile" -> "commons-io:commons-io:jar:2.7:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0:compile" -> "org.apache.httpcomponents:httpasyncclient:jar:4.1.5:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0:compile" -> "com.alibaba.nacos:nacos-api:jar:2.3.0:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.5:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.5:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.16:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.5:compile" -> "org.apache.httpcomponents:httpcore-nio:jar:4.4.16:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.5:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.14:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.14:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0:compile" -> "io.grpc:grpc-netty-shaded:jar:1.57.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0:compile" -> "io.grpc:grpc-protobuf:jar:1.57.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0:compile" -> "io.grpc:grpc-stub:jar:1.57.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0:compile" -> "com.google.api.grpc:proto-google-common-protos:jar:2.17.0:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"io.grpc:grpc-netty-shaded:jar:1.57.2:compile" -> "com.google.guava:guava:jar:32.0.1-android:compile" ; 
+[INFO] 	"io.grpc:grpc-netty-shaded:jar:1.57.2:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.18.0:compile" ; 
+[INFO] 	"io.grpc:grpc-netty-shaded:jar:1.57.2:compile" -> "io.perfmark:perfmark-api:jar:0.26.0:runtime" ; 
+[INFO] 	"io.grpc:grpc-netty-shaded:jar:1.57.2:compile" -> "io.grpc:grpc-core:jar:1.57.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-android:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-android:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-android:compile" -> "org.checkerframework:checker-qual:jar:3.33.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-android:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.57.2:compile" -> "com.google.code.gson:gson:jar:2.9.0:compile" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.57.2:compile" -> "com.google.android:annotations:jar:4.1.1.4:runtime" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.57.2:compile" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.23:runtime" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.57.2:compile" -> "io.grpc:grpc-context:jar:1.57.2:runtime" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.57.2:compile" -> "io.grpc:grpc-api:jar:1.57.2:compile" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.57.2:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.57.2:compile" -> "io.grpc:grpc-protobuf-lite:jar:1.57.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.5:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.8.0:test" -> "net.bytebuddy:byte-buddy:jar:1.12.23:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.8.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.23:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.8.0:test" -> "org.objenesis:objenesis:jar:3.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< com.alibaba.nacos:nacos-plugin >-------------------
+[INFO] Building nacos-plugin 2.3.0 2.3.0                                 [5/34]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ nacos-plugin ---
+[INFO] digraph "com.alibaba.nacos:nacos-plugin:pom:2.3.0" { 
+[INFO] 	"com.alibaba.nacos:nacos-plugin:pom:2.3.0" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.alibaba.nacos:nacos-plugin:pom:2.3.0" -> "org.mockito:mockito-core:jar:3.8.0:test" ; 
+[INFO] 	"com.alibaba.nacos:nacos-plugin:pom:2.3.0" -> "org.mockito:mockito-inline:jar:3.8.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.8.0:test" -> "net.bytebuddy:byte-buddy:jar:1.12.23:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.8.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.23:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.8.0:test" -> "org.objenesis:objenesis:jar:3.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< com.alibaba.nacos:nacos-datasource-plugin >--------------
+[INFO] Building nacos-datasource-plugin 2.3.0 2.3.0                      [6/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ nacos-datasource-plugin ---
+[INFO] digraph "com.alibaba.nacos:nacos-datasource-plugin:jar:2.3.0" { 
+[INFO] 	"com.alibaba.nacos:nacos-datasource-plugin:jar:2.3.0" -> "com.alibaba.nacos:nacos-common:jar:2.3.0:provided" ; 
+[INFO] 	"com.alibaba.nacos:nacos-datasource-plugin:jar:2.3.0" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.alibaba.nacos:nacos-datasource-plugin:jar:2.3.0" -> "org.mockito:mockito-core:jar:3.8.0:test" ; 
+[INFO] 	"com.alibaba.nacos:nacos-datasource-plugin:jar:2.3.0" -> "org.mockito:mockito-inline:jar:3.8.0:test" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0:provided" -> "org.slf4j:slf4j-api:jar:1.7.26:provided" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0:provided" -> "commons-io:commons-io:jar:2.7:provided" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0:provided" -> "org.apache.httpcomponents:httpasyncclient:jar:4.1.5:provided" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0:provided" -> "com.alibaba.nacos:nacos-api:jar:2.3.0:provided" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.5:provided" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:provided" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.5:provided" -> "org.apache.httpcomponents:httpcore:jar:4.4.16:provided" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.5:provided" -> "org.apache.httpcomponents:httpcore-nio:jar:4.4.16:provided" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.5:provided" -> "org.apache.httpcomponents:httpclient:jar:4.5.14:provided" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.14:provided" -> "commons-codec:commons-codec:jar:1.15:provided" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0:provided" -> "io.grpc:grpc-netty-shaded:jar:1.57.2:provided" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0:provided" -> "io.grpc:grpc-protobuf:jar:1.57.2:provided" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0:provided" -> "io.grpc:grpc-stub:jar:1.57.2:provided" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0:provided" -> "com.google.api.grpc:proto-google-common-protos:jar:2.17.0:provided" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0:provided" -> "com.google.protobuf:protobuf-java:jar:3.22.3:provided" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0:provided" -> "javax.annotation:javax.annotation-api:jar:1.3.2:provided" ; 
+[INFO] 	"io.grpc:grpc-netty-shaded:jar:1.57.2:provided" -> "com.google.guava:guava:jar:32.0.1-android:provided" ; 
+[INFO] 	"io.grpc:grpc-netty-shaded:jar:1.57.2:provided" -> "com.google.errorprone:error_prone_annotations:jar:2.18.0:provided" ; 
+[INFO] 	"io.grpc:grpc-netty-shaded:jar:1.57.2:provided" -> "io.perfmark:perfmark-api:jar:0.26.0:provided" ; 
+[INFO] 	"io.grpc:grpc-netty-shaded:jar:1.57.2:provided" -> "io.grpc:grpc-core:jar:1.57.2:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-android:provided" -> "com.google.guava:failureaccess:jar:1.0.1:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-android:provided" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-android:provided" -> "org.checkerframework:checker-qual:jar:3.33.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-android:provided" -> "com.google.j2objc:j2objc-annotations:jar:2.8:provided" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.57.2:provided" -> "com.google.code.gson:gson:jar:2.9.0:compile" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.57.2:provided" -> "com.google.android:annotations:jar:4.1.1.4:provided" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.57.2:provided" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.23:provided" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.57.2:provided" -> "io.grpc:grpc-context:jar:1.57.2:provided" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.57.2:provided" -> "io.grpc:grpc-api:jar:1.57.2:provided" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.57.2:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.57.2:provided" -> "io.grpc:grpc-protobuf-lite:jar:1.57.2:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.5:provided" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.8.0:test" -> "net.bytebuddy:byte-buddy:jar:1.12.23:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.8.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.23:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.8.0:test" -> "org.objenesis:objenesis:jar:3.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------< com.alibaba.nacos:nacos-custom-environment-plugin >----------
+[INFO] Building nacos-custom-environment-plugin 2.3.0 2.3.0              [7/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ nacos-custom-environment-plugin ---
+[INFO] digraph "com.alibaba.nacos:nacos-custom-environment-plugin:jar:2.3.0" { 
+[INFO] 	"com.alibaba.nacos:nacos-custom-environment-plugin:jar:2.3.0" -> "com.alibaba.nacos:nacos-common:jar:2.3.0:provided" ; 
+[INFO] 	"com.alibaba.nacos:nacos-custom-environment-plugin:jar:2.3.0" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.alibaba.nacos:nacos-custom-environment-plugin:jar:2.3.0" -> "org.mockito:mockito-core:jar:3.8.0:test" ; 
+[INFO] 	"com.alibaba.nacos:nacos-custom-environment-plugin:jar:2.3.0" -> "org.mockito:mockito-inline:jar:3.8.0:test" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0:provided" -> "org.slf4j:slf4j-api:jar:1.7.26:provided" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0:provided" -> "commons-io:commons-io:jar:2.7:provided" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0:provided" -> "org.apache.httpcomponents:httpasyncclient:jar:4.1.5:provided" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0:provided" -> "com.alibaba.nacos:nacos-api:jar:2.3.0:provided" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.5:provided" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:provided" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.5:provided" -> "org.apache.httpcomponents:httpcore:jar:4.4.16:provided" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.5:provided" -> "org.apache.httpcomponents:httpcore-nio:jar:4.4.16:provided" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.5:provided" -> "org.apache.httpcomponents:httpclient:jar:4.5.14:provided" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.14:provided" -> "commons-codec:commons-codec:jar:1.15:provided" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0:provided" -> "io.grpc:grpc-netty-shaded:jar:1.57.2:provided" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0:provided" -> "io.grpc:grpc-protobuf:jar:1.57.2:provided" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0:provided" -> "io.grpc:grpc-stub:jar:1.57.2:provided" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0:provided" -> "com.google.api.grpc:proto-google-common-protos:jar:2.17.0:provided" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0:provided" -> "com.google.protobuf:protobuf-java:jar:3.22.3:provided" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0:provided" -> "javax.annotation:javax.annotation-api:jar:1.3.2:provided" ; 
+[INFO] 	"io.grpc:grpc-netty-shaded:jar:1.57.2:provided" -> "com.google.guava:guava:jar:32.0.1-android:provided" ; 
+[INFO] 	"io.grpc:grpc-netty-shaded:jar:1.57.2:provided" -> "com.google.errorprone:error_prone_annotations:jar:2.18.0:provided" ; 
+[INFO] 	"io.grpc:grpc-netty-shaded:jar:1.57.2:provided" -> "io.perfmark:perfmark-api:jar:0.26.0:provided" ; 
+[INFO] 	"io.grpc:grpc-netty-shaded:jar:1.57.2:provided" -> "io.grpc:grpc-core:jar:1.57.2:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-android:provided" -> "com.google.guava:failureaccess:jar:1.0.1:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-android:provided" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-android:provided" -> "org.checkerframework:checker-qual:jar:3.33.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-android:provided" -> "com.google.j2objc:j2objc-annotations:jar:2.8:provided" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.57.2:provided" -> "com.google.code.gson:gson:jar:2.9.0:compile" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.57.2:provided" -> "com.google.android:annotations:jar:4.1.1.4:provided" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.57.2:provided" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.23:provided" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.57.2:provided" -> "io.grpc:grpc-context:jar:1.57.2:provided" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.57.2:provided" -> "io.grpc:grpc-api:jar:1.57.2:provided" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.57.2:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.57.2:provided" -> "io.grpc:grpc-protobuf-lite:jar:1.57.2:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.5:provided" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.8.0:test" -> "net.bytebuddy:byte-buddy:jar:1.12.23:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.8.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.23:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.8.0:test" -> "org.objenesis:objenesis:jar:3.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< com.alibaba.nacos:nacos-sys >---------------------
+[INFO] Building nacos-sys 2.3.0 2.3.0                                    [8/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ nacos-sys ---
+[INFO] digraph "com.alibaba.nacos:nacos-sys:jar:2.3.0" { 
+[INFO] 	"com.alibaba.nacos:nacos-sys:jar:2.3.0" -> "com.alibaba.nacos:nacos-common:jar:2.3.0:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-sys:jar:2.3.0" -> "org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-sys:jar:2.3.0" -> "org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" ; 
+[INFO] 	"com.alibaba.nacos:nacos-sys:jar:2.3.0" -> "org.springframework:spring-test:jar:5.3.29:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-sys:jar:2.3.0" -> "org.springframework.boot:spring-boot-test:jar:2.7.15:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-sys:jar:2.3.0" -> "com.alibaba.nacos:nacos-custom-environment-plugin:jar:2.3.0:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-sys:jar:2.3.0" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.alibaba.nacos:nacos-sys:jar:2.3.0" -> "org.mockito:mockito-core:jar:3.8.0:test" ; 
+[INFO] 	"com.alibaba.nacos:nacos-sys:jar:2.3.0" -> "org.mockito:mockito-inline:jar:3.8.0:test" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0:compile" -> "org.slf4j:slf4j-api:jar:1.7.26:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0:compile" -> "commons-io:commons-io:jar:2.7:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0:compile" -> "org.apache.httpcomponents:httpasyncclient:jar:4.1.5:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0:compile" -> "com.alibaba.nacos:nacos-api:jar:2.3.0:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.5:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:2.3.0:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.5:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.16:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.5:compile" -> "org.apache.httpcomponents:httpcore-nio:jar:4.4.16:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.5:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.14:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.14:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0:compile" -> "io.grpc:grpc-netty-shaded:jar:1.57.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0:compile" -> "io.grpc:grpc-protobuf:jar:1.57.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0:compile" -> "io.grpc:grpc-stub:jar:1.57.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0:compile" -> "com.google.api.grpc:proto-google-common-protos:jar:2.17.0:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0:compile" -> "com.google.protobuf:protobuf-java:jar:3.22.3:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-api:jar:2.3.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"io.grpc:grpc-netty-shaded:jar:1.57.2:compile" -> "com.google.guava:guava:jar:32.0.1-android:compile" ; 
+[INFO] 	"io.grpc:grpc-netty-shaded:jar:1.57.2:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.18.0:compile" ; 
+[INFO] 	"io.grpc:grpc-netty-shaded:jar:1.57.2:compile" -> "io.perfmark:perfmark-api:jar:0.26.0:runtime" ; 
+[INFO] 	"io.grpc:grpc-netty-shaded:jar:1.57.2:compile" -> "io.grpc:grpc-core:jar:1.57.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-android:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-android:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-android:compile" -> "org.checkerframework:checker-qual:jar:3.33.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-android:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.57.2:compile" -> "com.google.code.gson:gson:jar:2.9.0:compile" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.57.2:compile" -> "com.google.android:annotations:jar:4.1.1.4:runtime" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.57.2:compile" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.23:runtime" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.57.2:compile" -> "io.grpc:grpc-context:jar:1.57.2:runtime" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.57.2:compile" -> "io.grpc:grpc-api:jar:1.57.2:compile" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.57.2:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.57.2:compile" -> "io.grpc:grpc-protobuf-lite:jar:1.57.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.springframework:spring-core:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.yaml:snakeyaml:jar:2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.7.15:compile" -> "org.springframework:spring-context:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.29:compile" -> "org.springframework:spring-aop:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.29:compile" -> "org.springframework:spring-beans:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.29:compile" -> "org.springframework:spring-expression:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:compile" -> "ch.qos.logback:logback-classic:jar:1.2.9:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.9:compile" -> "ch.qos.logback:logback-core:jar:1.2.9:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.1:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.29:compile" -> "org.springframework:spring-jcl:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.7.15:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "com.jayway.jsonpath:json-path:jar:2.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "org.assertj:assertj-core:jar:3.22.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "org.junit.jupiter:junit-jupiter:jar:5.8.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "org.mockito:mockito-junit-jupiter:jar:4.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "org.xmlunit:xmlunit-core:jar:2.9.1:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.7.0:test" -> "net.minidev:json-smart:jar:2.4.11:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.11:test" -> "net.minidev:accessors-smart:jar:2.4.11:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.11:test" -> "org.ow2.asm:asm:jar:9.3:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.8.2:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.8.0:test" -> "net.bytebuddy:byte-buddy:jar:1.12.23:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.8.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.23:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.8.0:test" -> "org.objenesis:objenesis:jar:3.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< com.alibaba.nacos:nacos-persistence >-----------------
+[INFO] Building nacos-persistence 2.3.0 2.3.0                            [9/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/alibaba/nacos/nacos-sys/2.3.0/nacos-sys-2.3.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/alibaba/nacos/nacos-consistency/2.3.0/nacos-consistency-2.3.0.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Alibaba NACOS 2.3.0 2.3.0:
+[INFO] 
+[INFO] Alibaba NACOS 2.3.0 ................................ SUCCESS [  3.933 s]
+[INFO] nacos-api 2.3.0 .................................... SUCCESS [  0.855 s]
+[INFO] nacos-common 2.3.0 ................................. SUCCESS [  0.583 s]
+[INFO] nacos-consistency 2.3.0 ............................ SUCCESS [  1.745 s]
+[INFO] nacos-plugin 2.3.0 ................................. SUCCESS [  0.215 s]
+[INFO] nacos-datasource-plugin 2.3.0 ...................... SUCCESS [  0.193 s]
+[INFO] nacos-custom-environment-plugin 2.3.0 .............. SUCCESS [  0.251 s]
+[INFO] nacos-sys 2.3.0 .................................... SUCCESS [  0.768 s]
+[INFO] nacos-persistence 2.3.0 ............................ FAILURE [  3.310 s]
+[INFO] nacos-auth-plugin 2.3.0 ............................ SKIPPED
+[INFO] nacos-auth 2.3.0 ................................... SKIPPED
+[INFO] nacos-trace-plugin 2.3.0 ........................... SKIPPED
+[INFO] nacos-control-plugin 2.3.0 ......................... SKIPPED
+[INFO] nacos-core 2.3.0 ................................... SKIPPED
+[INFO] nacos-encryption-plugin 2.3.0 ...................... SKIPPED
+[INFO] nacos-config-plugin 2.3.0 .......................... SKIPPED
+[INFO] nacos-config 2.3.0 ................................. SKIPPED
+[INFO] nacos-cmdb 2.3.0 ................................... SKIPPED
+[INFO] nacos-naming 2.3.0 ................................. SKIPPED
+[INFO] nacos-address 2.3.0 ................................ SKIPPED
+[INFO] nacos-client 2.3.0 ................................. SKIPPED
+[INFO] nacos-plugin-default-impl 2.3.0 .................... SKIPPED
+[INFO] nacos-default-auth-plugin 2.3.0 .................... SKIPPED
+[INFO] nacos-default-control-plugin 2.3.0 ................. SKIPPED
+[INFO] nacos-default-plugin-all ........................... SKIPPED
+[INFO] nacos-istio 2.3.0 .................................. SKIPPED
+[INFO] nacos-prometheus 2.3.0 ............................. SKIPPED
+[INFO] nacos-console 2.3.0 ................................ SKIPPED
+[INFO] nacos-test 2.3.0 ................................... SKIPPED
+[INFO] nacos-config-test 2.3.0 ............................ SKIPPED
+[INFO] nacos-naming-test 2.3.0 ............................ SKIPPED
+[INFO] nacos-core-test 2.3.0 .............................. SKIPPED
+[INFO] nacos-example 2.3.0 ................................ SKIPPED
+[INFO] nacos-distribution 2.3.0 ........................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  20.093 s
+[INFO] Finished at: 2023-12-28T09:02:34+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project nacos-persistence: Could not resolve dependencies for project com.alibaba.nacos:nacos-persistence:jar:2.3.0: The following artifacts could not be resolved: com.alibaba.nacos:nacos-sys:jar:2.3.0, com.alibaba.nacos:nacos-consistency:jar:2.3.0: Could not find artifact com.alibaba.nacos:nacos-sys:jar:2.3.0 in central (https://repo.maven.apache.org/maven2) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :nacos-persistence

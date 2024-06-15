@@ -1,0 +1,31 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------< com.netflix.curator:curator-x-zkclient-bridge >------------
+[INFO] Building Apache Curator ZKClient Bridge 3.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ curator-x-zkclient-bridge ---
+[INFO] digraph "com.netflix.curator:curator-x-zkclient-bridge:jar:3.0.1-SNAPSHOT" { 
+[INFO] 	"com.netflix.curator:curator-x-zkclient-bridge:jar:3.0.1-SNAPSHOT" -> "org.apache.curator:curator-framework:jar:2.7.1:compile" ; 
+[INFO] 	"com.netflix.curator:curator-x-zkclient-bridge:jar:3.0.1-SNAPSHOT" -> "com.101tec:zkclient:jar:0.4:compile" ; 
+[INFO] 	"com.netflix.curator:curator-x-zkclient-bridge:jar:3.0.1-SNAPSHOT" -> "org.apache.curator:curator-test:jar:2.7.1:test" ; 
+[INFO] 	"com.netflix.curator:curator-x-zkclient-bridge:jar:3.0.1-SNAPSHOT" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"com.netflix.curator:curator-x-zkclient-bridge:jar:3.0.1-SNAPSHOT" -> "org.mockito:mockito-core:jar:1.10.19:test" ; 
+[INFO] 	"org.apache.curator:curator-framework:jar:2.7.1:compile" -> "org.apache.curator:curator-client:jar:2.7.1:compile" ; 
+[INFO] 	"org.apache.curator:curator-framework:jar:2.7.1:compile" -> "org.apache.zookeeper:zookeeper:jar:3.4.6:compile" ; 
+[INFO] 	"org.apache.curator:curator-framework:jar:2.7.1:compile" -> "com.google.guava:guava:jar:16.0.1:compile" ; 
+[INFO] 	"org.apache.curator:curator-client:jar:2.7.1:compile" -> "org.slf4j:slf4j-api:jar:1.7.6:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.6:compile" -> "jline:jline:jar:0.9.94:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.6:compile" -> "io.netty:netty:jar:3.7.0.Final:compile" ; 
+[INFO] 	"com.101tec:zkclient:jar:0.4:compile" -> "log4j:log4j:jar:1.2.14:compile" ; 
+[INFO] 	"org.apache.curator:curator-test:jar:2.7.1:test" -> "org.javassist:javassist:jar:3.18.1-GA:test" ; 
+[INFO] 	"org.apache.curator:curator-test:jar:2.7.1:test" -> "org.apache.commons:commons-math:jar:2.2:test" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:1.10.19:test" -> "org.objenesis:objenesis:jar:2.1:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.371 s
+[INFO] Finished at: 2023-12-28T09:03:14+01:00
+[INFO] ------------------------------------------------------------------------

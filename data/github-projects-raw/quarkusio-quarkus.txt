@@ -1,0 +1,2366 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Detecting the operating system and CPU architecture
+[INFO] ------------------------------------------------------------------------
+[INFO] os.detected.name: linux
+[INFO] os.detected.arch: x86_64
+[INFO] os.detected.bitness: 64
+[INFO] os.detected.version: 5.10
+[INFO] os.detected.version.major: 5
+[INFO] os.detected.version.minor: 10
+[INFO] os.detected.release: debian
+[INFO] os.detected.release.version: 11
+[INFO] os.detected.release.like.debian: true
+[INFO] os.detected.classifier: linux-x86_64
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Quarkus - Parent POM                                               [pom]
+[INFO] Quarkus - IDE/Tools - Config                                       [jar]
+[INFO] Quarkus - Revapi Configuration                                     [jar]
+[INFO] Quarkus - Enforcer Rules                                           [jar]
+[INFO] ArC - Parent pom                                                   [pom]
+[INFO] ArC - Runtime                                                      [jar]
+[INFO] ArC - Processor                                                    [jar]
+[INFO] ArC - Tests                                                        [jar]
+[INFO] ArC - Arquillian Container                                         [jar]
+[INFO] ArC - AtInject TCK Runner                                          [jar]
+[INFO] ArC - CDI TCK Porting Package                                      [jar]
+[INFO] ArC - CDI TCK Runner                                               [jar]
+[INFO] ArC - Lang Model TCK Runner                                        [jar]
+[INFO] Quarkus - Bootstrap - Parent                                       [pom]
+[INFO] Quarkus - Bootstrap - BOM                                          [pom]
+[INFO] Quarkus - Bootstrap - Test BOM                                     [pom]
+[INFO] Quarkus - Bootstrap - App Model                                    [jar]
+[INFO] Quarkus - Bootstrap - Maven Resolver                               [jar]
+[INFO] Quarkus - Bootstrap - Gradle Resolver                              [jar]
+[INFO] Quarkus - Bootstrap - Core                                         [jar]
+[INFO] Quarkus - Bootstrap - Runner                                       [jar]
+[INFO] Qute - Parent                                                      [pom]
+[INFO] Qute - Core                                                        [jar]
+[INFO] Qute - Generator                                                   [jar]
+[INFO] Quarkus - Dev tools - Parent                                       [pom]
+[INFO] Quarkus - Dev tools - Message Writer                               [jar]
+[INFO] Quarkus - Dev tools - Registry Client API                          [jar]
+[INFO] Quarkus - Dev tools - Utilities                                    [jar]
+[INFO] Quarkus - Dev tools - Base Codestarts                              [jar]
+[INFO] Quarkus - Dev tools - Codestarts                                   [jar]
+[INFO] Quarkus - Dev tools - Common                                       [jar]
+[INFO] Quarkus - Dev tools - Testing                                      [jar]
+[INFO] Quarkus - Analytics - Common                                       [jar]
+[INFO] RESTEasy Reactive - Parent pom                                     [pom]
+[INFO] RESTEasy Reactive - Common Parent                                  [pom]
+[INFO] RESTEasy Reactive - Common Types                                   [jar]
+[INFO] RESTEasy Reactive - Common Runtime                                 [jar]
+[INFO] RESTEasy Reactive - Common Processor                               [jar]
+[INFO] RESTEasy Reactive - Build support                                  [jar]
+[INFO] RESTEasy Reactive - Server Parent                                  [pom]
+[INFO] RESTEasy Reactive - Runtime                                        [jar]
+[INFO] RESTEasy Reactive - Processor                                      [jar]
+[INFO] RESTEasy Reactive - Client Parent                                  [pom]
+[INFO] RESTEasy Reactive - Client - Runtime                               [jar]
+[INFO] RESTEasy Reactive - Vert.x Support - Runtime                       [jar]
+[INFO] RESTEasy Reactive - JSONB Support - Runtime                        [jar]
+[INFO] RESTEasy Reactive - Jackson Support - Runtime                      [jar]
+[INFO] RESTEasy Reactive - Client - Processor                             [jar]
+[INFO] Quarkus - Extension Maven plugin                          [maven-plugin]
+[INFO] Quarkus - JUnit 5 Extension - Virtual Threads                      [jar]
+[INFO] Quarkus - Project pom                                              [pom]
+[INFO] Quarkus - BOM                                                      [pom]
+[INFO] Quarkus - BOM - Test                                               [pom]
+[INFO] Quarkus - Build Parent                                             [pom]
+[INFO] Quarkus - Development mode - SPI                                   [jar]
+[INFO] Quarkus - Core - Class Change Agent                                [jar]
+[INFO] Quarkus - IDE Launcher                                             [jar]
+[INFO] Quarkus - Core                                                     [pom]
+[INFO] Quarkus - Core - Extension Processor                               [jar]
+[INFO] Quarkus - Core - Runtime                                           [jar]
+[INFO] Quarkus - Builder                                                  [jar]
+[INFO] Quarkus - Dev tools                                                [pom]
+[INFO] Quarkus - Platform Properties                                      [pom]
+[INFO] Quarkus - Core - Deployment                                        [jar]
+[INFO] Quarkus - JUnit 4 Mock                                             [jar]
+[INFO] Quarkus - Test Framework                                           [pom]
+[INFO] Quarkus - Test Framework - Common                                  [jar]
+[INFO] Quarkus - Test Framework - H2 Database Support                     [jar]
+[INFO] Quarkus - Test Framework - JUnit 5 - Properties                    [jar]
+[INFO] Quarkus - Test Framework - JUnit 5                                 [jar]
+[INFO] Quarkus - Test Framework - gRPC test utils                         [jar]
+[INFO] Quarkus - Test Framework - Derby Database Support                  [jar]
+[INFO] Quarkus - Test Framework - Kubernetes Client Mock Server support   [jar]
+[INFO] Quarkus - Test Framework - OpenShift Client Mock Server support    [jar]
+[INFO] Quarkus - Test Framework - JUnit 5 Internal Test Framework         [jar]
+[INFO] Quarkus - Test framework - JUnit 5 - Mockito Config                [jar]
+[INFO] Quarkus - Extensions - Parent pom                                  [pom]
+[INFO] Quarkus - SmallRye Context Propagation                             [pom]
+[INFO] Quarkus - SmallRye Context Propagation - SPI                       [jar]
+[INFO] Quarkus - Vert.x - HTTP                                            [pom]
+[INFO] Quarkus - Vert.x - HTTP - Dev UI SPI                               [jar]
+[INFO] Quarkus - ArC                                                      [pom]
+[INFO] Quarkus - ArC - Runtime                                            [jar]
+[INFO] Quarkus - ArC - Test Supplement                                    [jar]
+[INFO] Quarkus - ArC - Deployment                                         [jar]
+[INFO] Quarkus - SmallRye Context Propagation - Runtime                   [jar]
+[INFO] Quarkus - Mutiny                                                   [pom]
+[INFO] Quarkus - Mutiny - Runtime                                         [jar]
+[INFO] Quarkus - Test framework - JUnit 5 - Mockito                       [jar]
+[INFO] Quarkus - Test Framework - JUnit 5 Component Test Framework        [jar]
+[INFO] Quarkus - Netty                                                    [pom]
+[INFO] Quarkus - Netty - Runtime                                          [jar]
+[INFO] Quarkus - Virtual Threads                                          [pom]
+[INFO] Quarkus - Virtual Threads - Runtime                                [jar]
+[INFO] Quarkus - Vert.x                                                   [pom]
+[INFO] Quarkus - Vert.x Late Bound MDC Provider                           [jar]
+[INFO] Quarkus - Vert.x - Runtime                                         [jar]
+[INFO] Quarkus - Test framework - Vert.x                                  [jar]
+[INFO] Quarkus - Datasource                                               [pom]
+[INFO] Quarkus - Datasource - Common                                      [jar]
+[INFO] Quarkus - Credentials                                              [pom]
+[INFO] Quarkus - Credentials - Runtime                                    [jar]
+[INFO] Quarkus - Datasource - Runtime                                     [jar]
+[INFO] Quarkus - Transaction Annotations                                  [pom]
+[INFO] Quarkus - Transaction Annotations - Runtime                        [jar]
+[INFO] Quarkus - Narayana JTA                                             [pom]
+[INFO] Quarkus - Narayana JTA - Runtime                                   [jar]
+[INFO] Quarkus - Security                                                 [pom]
+[INFO] Quarkus - Security - Runtime SPI                                   [jar]
+[INFO] Quarkus - Vert.x - HTTP - Runtime                                  [jar]
+[INFO] Quarkus - JSON-P                                                   [pom]
+[INFO] Quarkus - JSON-P - Runtime                                         [jar]
+[INFO] Quarkus - SmallRye Health                                          [pom]
+[INFO] Quarkus - SmallRye Health - Runtime                                [jar]
+[INFO] Quarkus - Agroal                                                   [pom]
+[INFO] Quarkus - Agroal - Runtime                                         [jar]
+[INFO] Quarkus - RESTEasy Classic - Parent - Aggregator                   [pom]
+[INFO] Quarkus - RESTEasy Classic - Common                                [pom]
+[INFO] Quarkus - RESTEasy Classic - Common - Runtime                      [jar]
+[INFO] Quarkus - RESTEasy Classic - Server common                         [pom]
+[INFO] Quarkus - RESTEasy Classic - Server common - Runtime               [jar]
+[INFO] Quarkus - RESTEasy Classic                                         [pom]
+[INFO] Quarkus - RESTEasy Classic - Runtime                               [jar]
+[INFO] Quarkus - RESTEasy Reactive - Parent - Aggregator                  [pom]
+[INFO] Quarkus - RESTEasy Reactive - Common                               [pom]
+[INFO] Quarkus - RESTEasy Reactive - Common - Runtime                     [jar]
+[INFO] Quarkus - RESTEasy Reactive - Kotlin                               [pom]
+[INFO] Quarkus - RESTEasy Reactive - Kotlin - Runtime                     [jar]
+[INFO] Quarkus - RESTEasy Reactive                                        [pom]
+[INFO] Quarkus - RESTEasy Reactive - Runtime                              [jar]
+[INFO] Quarkus - SmallRye Metrics                                         [pom]
+[INFO] Quarkus - SmallRye Metrics - Runtime                               [jar]
+[INFO] Quarkus - Caffeine                                                 [pom]
+[INFO] Quarkus - Caffeine - Runtime                                       [jar]
+[INFO] Quarkus - Jackson                                                  [pom]
+[INFO] Quarkus - Jackson - Runtime                                        [jar]
+[INFO] Quarkus - JSON-B                                                   [pom]
+[INFO] Quarkus - JSON-B - Runtime                                         [jar]
+[INFO] Quarkus - JAXP                                                     [pom]
+[INFO] Quarkus - JAXP - Runtime                                           [jar]
+[INFO] Quarkus - JAXB                                                     [pom]
+[INFO] Quarkus - JAXB - Runtime                                           [jar]
+[INFO] Quarkus - Hibernate ORM                                            [pom]
+[INFO] Quarkus - Hibernate ORM - Runtime                                  [jar]
+[INFO] Quarkus - Reactive Datasource                                      [pom]
+[INFO] Quarkus - Reactive Datasource - Runtime                            [jar]
+[INFO] Quarkus - Hibernate Reactive                                       [pom]
+[INFO] Quarkus - Hibernate Reactive - Runtime                             [jar]
+[INFO] Quarkus - Panache                                                  [pom]
+[INFO] Quarkus - Panache - Common                                         [pom]
+[INFO] Quarkus - Panache - Common - Runtime                               [jar]
+[INFO] Quarkus - Panache - Hibernate - Common                             [pom]
+[INFO] Quarkus - Panache - Hibernate - Common - Runtime                   [jar]
+[INFO] Quarkus - Hibernate Reactive with Panache - Common                 [pom]
+[INFO] Quarkus - Hibernate Reactive with Panache - Common - Runtime       [jar]
+[INFO] Quarkus - Test framework - Hibernate Reactive Panache              [jar]
+[INFO] Quarkus - Amazon Lambda                                            [pom]
+[INFO] Quarkus - Amazon Lambda - Common Runtime                           [jar]
+[INFO] Quarkus - Test Framework - Amazon Lambda                           [jar]
+[INFO] Quarkus - Test Framework - Arquillian Adapter                      [jar]
+[INFO] Quarkus - Test Framework - Dev Mode Test Utils                     [jar]
+[INFO] Quarkus - Vert.x - HTTP - Deployment - SPI                         [jar]
+[INFO] Quarkus - Vert.x - HTTP - Dev UI Tests                             [jar]
+[INFO] Quarkus - Test Framework - Maven Integration                       [jar]
+[INFO] Quarkus - Test framework - embedded LDAP server                    [jar]
+[INFO] Quarkus - Security - Runtime                                       [jar]
+[INFO] Quarkus - Test Framework - Security                                [jar]
+[INFO] Quarkus - Test Framework - Security JWT                            [jar]
+[INFO] Quarkus - SmallRye JWT Token Build                                 [pom]
+[INFO] Quarkus - SmallRye JWT Token Build - Runtime                       [jar]
+[INFO] Quarkus - OpenID Connect Common                                    [pom]
+[INFO] Quarkus - OpenID Connect Common - Runtime                          [jar]
+[INFO] Quarkus - OpenID Connect Adapter                                   [pom]
+[INFO] Quarkus - OpenID Connect Adapter - Runtime                         [jar]
+[INFO] Quarkus - Test Framework - Security OIDC                           [jar]
+[INFO] Quarkus - Security WebAuthn                                        [pom]
+[INFO] Quarkus - Security WebAuthn - Runtime                              [jar]
+[INFO] Quarkus - Test Framework - Security WebAuthn                       [jar]
+[INFO] Quarkus - Test Framework - OIDC Wiremock Server support            [jar]
+[INFO] Quarkus - Test Framework - Keycloak Server support                 [jar]
+[INFO] Quarkus - Jacoco                                                   [pom]
+[INFO] Quarkus - Jacoco - Runtime                                         [jar]
+[INFO] Quarkus - Jacoco - Deployment                                      [jar]
+[INFO] Quarkus - Reactive Streams Operators                               [pom]
+[INFO] Quarkus - SmallRye Mutiny Reactive Streams Operators               [pom]
+[INFO] Quarkus - SmallRye Mutiny Reactive Streams Operators - Runtime     [jar]
+[INFO] Quarkus - Kubernetes Service Binding                               [pom]
+[INFO] Quarkus - Kubernetes Service Binding - Runtime                     [jar]
+[INFO] Quarkus - MongoDB Client                                           [pom]
+[INFO] Quarkus - MongoDB Client - Runtime                                 [jar]
+[INFO] Quarkus - Test Framework - MongoDB Support                         [jar]
+[INFO] Quarkus - Test Framework - Infinispan Client Support               [jar]
+[INFO] Quarkus - Kafka - Client                                           [pom]
+[INFO] Quarkus - Kafka - Client - Runtime                                 [jar]
+[INFO] Quarkus - Test Framework - Kafka Support                           [jar]
+[INFO] Quarkus - Test Framework - Google Cloud Functions                  [jar]
+[INFO] Quarkus - Netty Loom Adaptor                                       [pom]
+[INFO] Quarkus - Netty Loom Adaptor - Runtime                             [jar]
+[INFO] Quarkus - Netty - Deployment                                       [jar]
+[INFO] Quarkus - Netty Loom Adaptor - Deployment                          [jar]
+[INFO] Quarkus - Virtual Threads - Deployment                             [jar]
+[INFO] Quarkus - SmallRye Context Propagation - Deployment                [jar]
+[INFO] Quarkus - Mutiny - Deployment                                      [jar]
+[INFO] Quarkus - Vert.x - Deployment                                      [jar]
+[INFO] Quarkus - Scheduler                                                [pom]
+[INFO] Quarkus - Scheduler - API                                          [jar]
+[INFO] Quarkus - Scheduler - SPI                                          [jar]
+[INFO] Quarkus - Scheduler - Common                                       [jar]
+[INFO] Quarkus - Scheduler - Kotlin                                       [jar]
+[INFO] Quarkus - Scheduler - Runtime                                      [jar]
+[INFO] Quarkus - Kubernetes                                               [pom]
+[INFO] Quarkus - Kubernetes - SPI                                         [jar]
+[INFO] Quarkus - Vert.x - HTTP - Dev UI Resources                         [jar]
+[INFO] Quarkus - Security - SPI                                           [jar]
+[INFO] Quarkus - Security - Test Utilities                                [jar]
+[INFO] Quarkus - Security - Deployment                                    [jar]
+[INFO] Quarkus - Vert.x - HTTP - Deployment                               [jar]
+[INFO] Quarkus - gRPC Common                                              [pom]
+[INFO] Quarkus - gRPC Common - Runtime                                    [jar]
+[INFO] Quarkus - Apache HttpClient - Parent                               [pom]
+[INFO] Quarkus - Apache HttpClient - Runtime                              [jar]
+[INFO] Quarkus - REST Clients Config                                      [pom]
+[INFO] Quarkus - REST Clients Config - Runtime                            [jar]
+[INFO] Quarkus - RESTEasy Classic's REST Client                           [pom]
+[INFO] Quarkus - RESTEasy Classic's REST Client - Runtime                 [jar]
+[INFO] Quarkus - gRPC parent                                              [pom]
+[INFO] Quarkus - gRPC - API                                               [jar]
+[INFO] Quarkus - SmallRye Stork Integration                               [pom]
+[INFO] Quarkus - SmallRye Stork - Runtime                                 [jar]
+[INFO] Quarkus - gRPC - Protoc Plugin                                     [jar]
+[INFO] Quarkus - gRPC - Code Gen                                          [jar]
+[INFO] Quarkus - gRPC - Stubs for health and reflection                   [jar]
+[INFO] Quarkus - gRPC - Runtime                                           [jar]
+[INFO] Quarkus - SmallRye Reactive Messaging                              [pom]
+[INFO] Quarkus - SmallRye Reactive Messaging - Kotlin                     [jar]
+[INFO] Quarkus - SmallRye Reactive Messaging - Runtime                    [jar]
+[INFO] Quarkus - OpenTelemetry                                            [pom]
+[INFO] Quarkus - OpenTelemetry - Runtime                                  [jar]
+[INFO] Quarkus - Undertow                                                 [pom]
+[INFO] Quarkus - Undertow - Runtime                                       [jar]
+[INFO] Quarkus - Redis Client                                             [pom]
+[INFO] Quarkus - Redis Client - Runtime                                   [jar]
+[INFO] Quarkus - Micrometer                                               [pom]
+[INFO] Quarkus - Micrometer - Runtime                                     [jar]
+[INFO] Quarkus - Micrometer Registry - Prometheus - Parent                [pom]
+[INFO] Quarkus - Micrometer Registry - Prometheus Runtime                 [jar]
+[INFO] Quarkus - RESTEasy Classic - Common - SPI                          [jar]
+[INFO] Quarkus - RESTEasy Reactive - SPI                                  [jar]
+[INFO] Quarkus - Undertow - SPI                                           [jar]
+[INFO] Quarkus - Datasource - Deployment                                  [jar]
+[INFO] Quarkus - Agroal - SPI                                             [jar]
+[INFO] Quarkus - gRPC Common - Deployment                                 [jar]
+[INFO] Quarkus - RESTEasy Reactive - Server - SPI - Deployment            [jar]
+[INFO] Quarkus - Jackson - SPI                                            [jar]
+[INFO] Quarkus - Jackson - Deployment                                     [jar]
+[INFO] Quarkus - Reactive Routes                                          [pom]
+[INFO] Quarkus - Reactive Routes - Runtime                                [jar]
+[INFO] Quarkus - Hibernate Validator                                      [pom]
+[INFO] Quarkus - Hibernate Validator - SPI                                [jar]
+[INFO] Quarkus - JSON-P - Deployment                                      [jar]
+[INFO] Quarkus - RESTEasy Classic - Common - Deployment                   [jar]
+[INFO] Quarkus - JAX-RS SPI - Parent                                      [pom]
+[INFO] Quarkus - JAX-RS - SPI - Deployment                                [jar]
+[INFO] Quarkus - RESTEasy Classic - Server common - SPI                   [jar]
+[INFO] Quarkus - RESTEasy Classic - Server common - Deployment            [jar]
+[INFO] Quarkus - Undertow - Deployment                                    [jar]
+[INFO] Quarkus - RESTEasy Classic - Deployment                            [jar]
+[INFO] Quarkus - Elytron Security - Common                                [pom]
+[INFO] Quarkus - Elytron Security - Common - Runtime                      [jar]
+[INFO] Quarkus - Elytron Security - Common - Deployment                   [jar]
+[INFO] Quarkus - Elytron Security                                         [pom]
+[INFO] Quarkus - Elytron Security - Runtime                               [jar]
+[INFO] Quarkus - Elytron Security - Deployment                            [jar]
+[INFO] Quarkus - Elytron Security Properties File                         [pom]
+[INFO] Quarkus - Elytron Security Properties File - Runtime               [jar]
+[INFO] Quarkus - Elytron Security Properties File - Deployment            [jar]
+[INFO] Quarkus - Hibernate Validator - Runtime                            [jar]
+[INFO] Quarkus - RESTEasy Classic - Jackson                               [pom]
+[INFO] Quarkus - RESTEasy Classic - Jackson - Runtime                     [jar]
+[INFO] Quarkus - RESTEasy Classic - Jackson - Deployment                  [jar]
+[INFO] Quarkus - Hibernate Validator - Deployment                         [jar]
+[INFO] Quarkus - Reactive Routes - Deployment                             [jar]
+[INFO] Quarkus - Apache HttpClient - Deployment                           [jar]
+[INFO] Quarkus - REST Clients Config - Deployment                         [jar]
+[INFO] Quarkus - SmallRye Fault Tolerance                                 [pom]
+[INFO] Quarkus - SmallRye Fault Tolerance - Runtime                       [jar]
+[INFO] Quarkus - SmallRye Fault Tolerance - Deployment                    [jar]
+[INFO] Quarkus - RESTEasy Classic's REST Client - Deployment              [jar]
+[INFO] Quarkus - SmallRye Health - SPI                                    [jar]
+[INFO] Quarkus - SmallRye OpenAPI                                         [pom]
+[INFO] Quarkus - SmallRye OpenAPI - SPI                                   [jar]
+[INFO] Quarkus - SmallRye OpenAPI - Common                                [pom]
+[INFO] Quarkus - SmallRye OpenAPI - Common - Deployment                   [jar]
+[INFO] Quarkus - Swagger UI                                               [pom]
+[INFO] Quarkus - Swagger UI - Runtime                                     [jar]
+[INFO] Quarkus - Swagger UI - Deployment                                  [jar]
+[INFO] Quarkus - SmallRye OpenAPI - Runtime                               [jar]
+[INFO] Quarkus - RESTEasy Reactive - Common - Deployment                  [jar]
+[INFO] Quarkus - RESTEasy Reactive - Kotlin - Deployment                  [jar]
+[INFO] Quarkus - Jakarta REST Client Reactive                             [pom]
+[INFO] Quarkus - Jakarta REST Client Reactive - Runtime                   [jar]
+[INFO] Quarkus - Jakarta REST Client Reactive - Deployment                [jar]
+[INFO] Quarkus - RESTEasy Reactive - Deployment                           [jar]
+[INFO] Quarkus - SmallRye OpenAPI - Deployment                            [jar]
+[INFO] Quarkus - SmallRye Health - Deployment                             [jar]
+[INFO] Quarkus - SmallRye Stork - Deployment                              [jar]
+[INFO] Quarkus - gRPC - Deployment                                        [jar]
+[INFO] Quarkus - SmallRye GraphQL                                         [pom]
+[INFO] Quarkus - SmallRye GraphQL - Runtime                               [jar]
+[INFO] Quarkus - JSON-B - SPI                                             [jar]
+[INFO] Quarkus - JSON-B - Deployment                                      [jar]
+[INFO] Quarkus - SmallRye Metrics - SPI                                   [jar]
+[INFO] Quarkus - SmallRye Metrics - Deployment                            [jar]
+[INFO] Quarkus - SmallRye GraphQL - Deployment                            [jar]
+[INFO] Quarkus - Kubernetes Service Binding - SPI                         [jar]
+[INFO] Quarkus - DevServices                                              [pom]
+[INFO] Quarkus - DevServices - Common                                     [jar]
+[INFO] Quarkus - DevServices - Deployment                                 [jar]
+[INFO] Quarkus - Datasource - Deployment                                  [jar]
+[INFO] Quarkus - Narayana JTA - Deployment                                [jar]
+[INFO] Quarkus - Credentials - Deployment                                 [jar]
+[INFO] Quarkus - DevServices - H2                                         [jar]
+[INFO] Quarkus - JDBC                                                     [pom]
+[INFO] Quarkus - JDBC - H2                                                [pom]
+[INFO] Quarkus - JDBC - H2 - Runtime                                      [jar]
+[INFO] Quarkus - JDBC - H2 - Deployment                                   [jar]
+[INFO] Quarkus - Agroal - Deployment                                      [jar]
+[INFO] Quarkus - OpenTelemetry - Deployment                               [jar]
+[INFO] Quarkus - RESTEasy Reactive - Jackson Common Bits                  [pom]
+[INFO] Quarkus - RESTEasy Reactive - Jackson Common Bits - Runtime        [jar]
+[INFO] Quarkus - RESTEasy Reactive - Common Jackson Bits - Deployment     [jar]
+[INFO] Quarkus - RESTEasy Reactive - Jackson                              [pom]
+[INFO] Quarkus - RESTEasy Reactive - Jackson - Runtime                    [jar]
+[INFO] Quarkus - RESTEasy Reactive - Jackson - Deployment                 [jar]
+[INFO] Quarkus - Redis Client - Deployment                                [jar]
+[INFO] Quarkus - RESTEasy Reactive's REST Client                          [pom]
+[INFO] Quarkus - RESTEasy Reactive's REST Client - Runtime                [jar]
+[INFO] Quarkus - RESTEasy Reactive's REST Client - SPI - Deployment       [jar]
+[INFO] Quarkus - RESTEasy Reactive's REST Client - Deployment             [jar]
+[INFO] Quarkus - Micrometer - Deployment                                  [jar]
+[INFO] Quarkus - Micrometer Registry - Prometheus Deployment              [jar]
+[INFO] Quarkus - Scheduler - Deployment                                   [jar]
+[INFO] Quarkus - Quartz                                                   [pom]
+[INFO] Quarkus - Quartz - Runtime                                         [jar]
+[INFO] Quarkus - Quartz - Deployment                                      [jar]
+[INFO] Quarkus - JAXP - Deployment                                        [jar]
+[INFO] Quarkus - Configuration - YAML                                     [pom]
+[INFO] Quarkus - Configuration - YAML - Runtime                           [jar]
+[INFO] Quarkus - Configuration - YAML - Deployment                        [jar]
+[INFO] Quarkus - JAXB - Deployment                                        [jar]
+[INFO] Quarkus - HAL                                                      [pom]
+[INFO] Quarkus - HAL - Runtime                                            [jar]
+[INFO] Quarkus - HAL - Deployment                                         [jar]
+[INFO] Quarkus - Vert.x - HTTP - Dev Console Runtime SPI                  [jar]
+[INFO] Quarkus - Vert.x - HTTP - Dev Console SPI                          [jar]
+[INFO] Quarkus - WebSockets Client                                        [pom]
+[INFO] Quarkus - WebSockets Client - Runtime                              [jar]
+[INFO] Quarkus - WebSockets                                               [pom]
+[INFO] Quarkus - WebSockets - Runtime                                     [jar]
+[INFO] Quarkus - WebSockets Client - Deployment                           [jar]
+[INFO] Quarkus - WebSockets - Deployment                                  [jar]
+[INFO] Quarkus - WebSockets Aggregator                                    [pom]
+[INFO] Quarkus - WebJar Locator                                           [pom]
+[INFO] Quarkus - WebJar Locator - Runtime                                 [jar]
+[INFO] Quarkus - WebJar Locator - Deployment                              [jar]
+[INFO] Quarkus - RESTEasy Reactive - JSON-B Common Bits                   [pom]
+[INFO] Quarkus - RESTEasy Reactive - JSON-B Common Bits - Runtime         [jar]
+[INFO] Quarkus - RESTEasy Reactive - JSON-B Common Bits - Deployment      [jar]
+[INFO] Quarkus - RESTEasy Reactive - JSON-B                               [pom]
+[INFO] Quarkus - RESTEasy Reactive - JSON-B - Runtime                     [jar]
+[INFO] Quarkus - RESTEasy Reactive - JSON-B - Deployment                  [jar]
+[INFO] Quarkus - RESTEasy Reactive - JAXB                                 [pom]
+[INFO] Quarkus - RESTEasy Reactive - JAXB - Runtime                       [jar]
+[INFO] Quarkus - RESTEasy Reactive - JAXB - Deployment                    [jar]
+[INFO] Quarkus - Panache - Common - Deployment                            [jar]
+[INFO] Quarkus - Cache                                                    [pom]
+[INFO] Quarkus - Cache - Runtime SPI                                      [jar]
+[INFO] Quarkus - Cache - Deployment - SPI                                 [jar]
+[INFO] Quarkus - Cache - Runtime                                          [jar]
+[INFO] Quarkus - Qute                                                     [pom]
+[INFO] Quarkus - Qute - Runtime                                           [jar]
+[INFO] Quarkus - Caffeine - Deployment                                    [jar]
+[INFO] Quarkus - Cache - Deployment                                       [jar]
+[INFO] Quarkus - Qute - Deployment                                        [jar]
+[INFO] Quarkus - RESTEasy Reactive - Qute                                 [pom]
+[INFO] Quarkus - RESTEasy Reactive - Qute - Runtime                       [jar]
+[INFO] Quarkus - RESTEasy Reactive - Qute - Deployment                    [jar]
+[INFO] Quarkus - RESTEasy Reactive - Servlet                              [pom]
+[INFO] Quarkus - RESTEasy Reactive Servlet - Runtime                      [jar]
+[INFO] Quarkus - RESTEasy Reactive Servlet - Deployment                   [jar]
+[INFO] Quarkus - RESTEasy Reactive - Kotlin                               [jar]
+[INFO] Quarkus - RESTEasy Reactive's REST Client Jackson                  [pom]
+[INFO] Quarkus - RESTEasy Reactive's REST Client Jackson                  [jar]
+[INFO] Quarkus - RESTEasy Reactive's REST Client Jackson - Deployment     [jar]
+[INFO] Quarkus - RESTEasy Reactive's REST Client JSON-B                   [pom]
+[INFO] Quarkus - RESTEasy Reactive's REST Client JSON-B                   [jar]
+[INFO] Quarkus - RESTEasy Reactive's REST Client JSON-B - Deployment      [jar]
+[INFO] Quarkus - RESTEasy Reactive's REST Client JAXB                     [pom]
+[INFO] Quarkus - RESTEasy Reactive's REST Client JAXB                     [jar]
+[INFO] Quarkus - RESTEasy Reactive's REST Client JAXB - Deployment        [jar]
+[INFO] Quarkus - Kotlin                                                   [pom]
+[INFO] Quarkus - Kotlin - Runtime                                         [jar]
+[INFO] Quarkus - RESTEasy Reactive - Kotlin Serialization Common Parent   [pom]
+[INFO] Quarkus - RESTEasy Reactive - Kotlin Serialization Common          [jar]
+[INFO] Quarkus - RESTEasy Reactive's REST Client Kotlin Serialization Parent [pom]
+[INFO] Quarkus - RESTEasy Reactive's REST Client Kotlin Serialization     [jar]
+[INFO] Quarkus - Kotlin - Deployment                                      [jar]
+[INFO] Quarkus - RESTEasy Reactive - Kotlin Serialization Common Deployment [jar]
+[INFO] Quarkus - RESTEasy Reactive's REST Client Kotlin Serialization - Deployment [jar]
+[INFO] Quarkus - RESTEasy Reactive's REST Client Kotlin Serialization - Tests [jar]
+[INFO] Quarkus - RESTEasy Reactive - Links                                [pom]
+[INFO] Quarkus - RESTEasy Reactive - Links - Runtime                      [jar]
+[INFO] Quarkus - RESTEasy Reactive - Links - Deployment                   [jar]
+[INFO] Quarkus - RESTEasy Reactive - Kotlin Serialization                 [pom]
+[INFO] Quarkus - RESTEasy Reactive - Kotlin Serialization - Runtime       [jar]
+[INFO] Quarkus - RESTEasy Reactive - Kotlin Serialization - Deployment    [jar]
+[INFO] Quarkus - Info                                                     [pom]
+[INFO] Quarkus - Info - Runtime SPI                                       [jar]
+[INFO] Quarkus - Info - SPI                                               [jar]
+[INFO] Quarkus - Info - Runtime                                           [jar]
+[INFO] Quarkus - Info - Deployment                                        [jar]
+[INFO] Quarkus - RESTEasy Classic - JSON-B                                [pom]
+[INFO] Quarkus - RESTEasy Classic - JSON-B - Runtime                      [jar]
+[INFO] Quarkus - RESTEasy Classic - JSON-B - Deployment                   [jar]
+[INFO] Quarkus - RESTEasy Classic - JAXB                                  [pom]
+[INFO] Quarkus - RESTEasy Classic - JAXB - Runtime                        [jar]
+[INFO] Quarkus - RESTEasy Classic - JAXB - Deployment                     [jar]
+[INFO] Quarkus - RESTEasy Classic - Links                                 [pom]
+[INFO] Quarkus - RESTEasy Classic - Links - Runtime                       [jar]
+[INFO] Quarkus - RESTEasy Classic - Links - Deployment                    [jar]
+[INFO] Quarkus - RESTEasy Classic - Mutiny - Common                       [pom]
+[INFO] Quarkus - RESTEasy Classic - Mutiny - Common - Runtime             [jar]
+[INFO] Quarkus - RESTEasy Classic - Mutiny - Common - Deployment          [jar]
+[INFO] Quarkus - RESTEasy Classic - Mutiny                                [pom]
+[INFO] Quarkus - RESTEasy Classic - Mutiny - Runtime                      [jar]
+[INFO] Quarkus - RESTEasy Classic - Mutiny - Deployment                   [jar]
+[INFO] Quarkus - RESTEasy Classic - Qute                                  [pom]
+[INFO] Quarkus - RESTEasy Classic - Qute - Runtime                        [jar]
+[INFO] Quarkus - RESTEasy Classic - Qute - Deployment                     [jar]
+[INFO] Quarkus - RESTEasy Classic - Multipart                             [pom]
+[INFO] Quarkus - RESTEasy Classic - Multipart - Runtime                   [jar]
+[INFO] Quarkus - RESTEasy Classic - Multipart - Deployment                [jar]
+[INFO] Quarkus - RESTEasy Classic's REST Client - Jackson                 [pom]
+[INFO] Quarkus - RESTEasy Classic's REST Client - Jackson - Runtime       [jar]
+[INFO] Quarkus - RESTEasy Classic's REST Client - Jackson - Deployment    [jar]
+[INFO] Quarkus - RESTEasy Classic's REST Client - JSON-B                  [pom]
+[INFO] Quarkus - RESTEasy Classic's REST Client - JSON-B - Runtime        [jar]
+[INFO] Quarkus - RESTEasy Classic's REST Client - JSON-B - Deployment     [jar]
+[INFO] Quarkus - RESTEasy Classic's REST Client - JAXB                    [pom]
+[INFO] Quarkus - RESTEasy Classic's REST Client - JAXB - Runtime          [jar]
+[INFO] Quarkus - RESTEasy Classic's REST Client - JAXB - Deployment       [jar]
+[INFO] Quarkus - RESTEasy Classic's REST Client - Mutiny                  [pom]
+[INFO] Quarkus - RESTEasy Classic's REST Client - Mutiny - Runtime        [jar]
+[INFO] Quarkus - RESTEasy Classic's REST Client - Mutiny - Deployment     [jar]
+[INFO] Quarkus - SmallRye Reactive Streams Operators (deprecated)         [pom]
+[INFO] Quarkus - SmallRye Reactive Streams Operators - Runtime            [jar]
+[INFO] Quarkus - SmallRye Reactive Streams Operators - Deployment         [jar]
+[INFO] Quarkus - SmallRye Reactive Type Converters                        [pom]
+[INFO] Quarkus - SmallRye Reactive Type Converters - Runtime              [jar]
+[INFO] Quarkus - SmallRye Reactive Type Converters - Deployment           [jar]
+[INFO] Quarkus - SmallRye Mutiny Reactive Streams Operators - Deployment  [jar]
+[INFO] Quarkus - SmallRye Reactive Messaging - Deployment                 [jar]
+[INFO] Quarkus - Kafka - Client - Deployment                              [jar]
+[INFO] Quarkus - SmallRye Reactive Messaging - Kafka                      [pom]
+[INFO] Quarkus - SmallRye Reactive Messaging - Kafka - Runtime            [jar]
+[INFO] Quarkus - Hibernate ORM - Deployment - SPI                         [jar]
+[INFO] Quarkus - Panache - Hibernate - Common - Deployment                [jar]
+[INFO] Quarkus - Hibernate ORM - Deployment                               [jar]
+[INFO] Quarkus - Reactive Datasource - Deployment                         [jar]
+[INFO] Quarkus - DevServices - Postgresql                                 [jar]
+[INFO] Quarkus - Reactive PostgreSQL Client                               [pom]
+[INFO] Quarkus - Reactive PostgreSQL Client - Runtime                     [jar]
+[INFO] Quarkus - Reactive PostgreSQL Client - Deployment                  [jar]
+[INFO] Quarkus - Hibernate Reactive - Deployment                          [jar]
+[INFO] Quarkus - Schema Registry Parent                                   [pom]
+[INFO] Quarkus - Schema Registry - DevService                             [pom]
+[INFO] Quarkus - Schema Registry - DevService - Runtime                   [jar]
+[INFO] Quarkus - Apicurio Registry                                        [pom]
+[INFO] Quarkus - Apicurio Registry - Common                               [pom]
+[INFO] Quarkus - Apicurio Registry - Common - Runtime                     [jar]
+[INFO] Quarkus - Avro                                                     [pom]
+[INFO] Quarkus - Avro - Runtime                                           [jar]
+[INFO] Quarkus - Apicurio Registry - Avro                                 [pom]
+[INFO] Quarkus - Apicurio Registry - Avro - Runtime                       [jar]
+[INFO] Quarkus - Schema Registry - DevService - Deployment                [jar]
+[INFO] Quarkus - Apicurio Registry - Common - Deployment                  [jar]
+[INFO] Quarkus - Avro - Deployment                                        [jar]
+[INFO] Quarkus - Apicurio Registry - Avro - Deployment                    [jar]
+[INFO] Quarkus - Confluent Schema Registry                                [pom]
+[INFO] Quarkus - Confluent Schema Registry - Common                       [pom]
+[INFO] Quarkus - Confluent Schema Registry - Common - Runtime             [jar]
+[INFO] Quarkus - Confluent Schema Registry - Avro                         [pom]
+[INFO] Quarkus - Confluent Schema Registry - Avro - Runtime               [jar]
+[INFO] Quarkus - Confluent Schema Registry - Common - Deployment          [jar]
+[INFO] Quarkus - Confluent Schema Registry - Avro - Deployment            [jar]
+[INFO] Quarkus - SmallRye Reactive Messaging - Kafka - Deployment         [jar]
+[INFO] Quarkus - SmallRye Reactive Messaging - AMQP 1.0                   [pom]
+[INFO] Quarkus - SmallRye Reactive Messaging - AMQP 1.0 - Runtime         [jar]
+[INFO] Quarkus - SmallRye Reactive Messaging - AMQP 1.0 - Deployment      [jar]
+[INFO] Quarkus - SmallRye Reactive Messaging - Pulsar                     [pom]
+[INFO] Quarkus - SmallRye Reactive Messaging - Pulsar - Runtime           [jar]
+[INFO] Quarkus - SmallRye Reactive Messaging - Pulsar - Deployment        [jar]
+[INFO] Quarkus - SmallRye Reactive Messaging - MQTT                       [pom]
+[INFO] Quarkus - SmallRye Reactive Messaging - MQTT - Runtime             [jar]
+[INFO] Quarkus - SmallRye Reactive Messaging - MQTT - Deployment          [jar]
+[INFO] Quarkus - SmallRye Reactive Messaging - RabbitMQ 1.0               [pom]
+[INFO] Quarkus - SmallRye Reactive Messaging - RabbitMQ 1.0 - Runtime     [jar]
+[INFO] Quarkus - SmallRye Reactive Messaging - RabbitMQ 1.0 - Deployment  [jar]
+[INFO] Quarkus - DevServices - DB2                                        [jar]
+[INFO] Quarkus - Reactive DB2 Client                                      [pom]
+[INFO] Quarkus - Reactive DB2 Client - Runtime                            [jar]
+[INFO] Quarkus - Reactive DB2 Client - Deployment                         [jar]
+[INFO] Quarkus - Reactive MySQL Client                                    [pom]
+[INFO] Quarkus - Reactive MySQL Client - Runtime                          [jar]
+[INFO] Quarkus - DevServices - MySQL                                      [jar]
+[INFO] Quarkus - DevServices - MariaDB                                    [jar]
+[INFO] Quarkus - Reactive MySQL Client - Deployment                       [jar]
+[INFO] Quarkus - DevServices - MSSQL                                      [jar]
+[INFO] Quarkus - Reactive Microsoft SQL Server Client                     [pom]
+[INFO] Quarkus - Reactive Microsoft SQL Server Client - Runtime           [jar]
+[INFO] Quarkus - Reactive Microsoft SQL Server Client - Deployment        [jar]
+[INFO] Quarkus - JDBC - Oracle                                            [pom]
+[INFO] Quarkus - JDBC - Oracle - Runtime                                  [jar]
+[INFO] Quarkus - DevServices - Oracle                                     [jar]
+[INFO] Quarkus - JDBC - Oracle - Deployment                               [jar]
+[INFO] Quarkus - Reactive Oracle Client                                   [pom]
+[INFO] Quarkus - Reactive Oracle Client - Runtime                         [jar]
+[INFO] Quarkus - Reactive Oracle Client - Deployment                      [jar]
+[INFO] Quarkus - Mailer                                                   [pom]
+[INFO] Quarkus - Mailer - Runtime                                         [jar]
+[INFO] Quarkus - Mailer - Deployment                                      [jar]
+[INFO] Quarkus - gRPC - xDS                                               [jar]
+[INFO] Quarkus - gRPC - InProcess                                         [jar]
+[INFO] Quarkus - Redis Cache                                              [pom]
+[INFO] Quarkus - Redis Cache - Runtime                                    [jar]
+[INFO] Quarkus - Redis Cache - Deployment                                 [jar]
+[INFO] Quarkus - Narayana STM                                             [pom]
+[INFO] Quarkus - Narayana STM - Runtime                                   [jar]
+[INFO] Quarkus - Narayana STM - Deployment                                [jar]
+[INFO] Quarkus - Narayana MicroProfile LRA Participant                    [pom]
+[INFO] Quarkus - Narayana MicroProfile LRA Participant - Runtime          [jar]
+[INFO] Quarkus - Narayana MicroProfile LRA Participant - Deployment       [jar]
+[INFO] Quarkus - JDBC - PostgreSQL                                        [pom]
+[INFO] Quarkus - JDBC - PostgreSQL - Runtime                              [jar]
+[INFO] Quarkus - JDBC - PostgreSQL - Deployment                           [jar]
+[INFO] Quarkus - JDBC - DB2                                               [pom]
+[INFO] Quarkus - JDBC - DB2 - Runtime                                     [jar]
+[INFO] Quarkus - JDBC - DB2 - Deployment                                  [jar]
+[INFO] Quarkus - JDBC - Derby                                             [pom]
+[INFO] Quarkus - JDBC - Derby - Runtime                                   [jar]
+[INFO] Quarkus - DevServices - Derby                                      [jar]
+[INFO] Quarkus - JDBC - Derby - Deployment                                [jar]
+[INFO] Quarkus - JDBC - MariaDB                                           [pom]
+[INFO] Quarkus - JDBC - MariaDB - Runtime                                 [jar]
+[INFO] Quarkus - JDBC - MariaDB - Deployment                              [jar]
+[INFO] Quarkus - JDBC - MSSQL                                             [pom]
+[INFO] Quarkus - JDBC - MSSQL - Runtime                                   [jar]
+[INFO] Quarkus - JDBC - MSSQL - Deployment                                [jar]
+[INFO] Quarkus - JDBC - MySQL                                             [pom]
+[INFO] Quarkus - JDBC - MySQL - Runtime                                   [jar]
+[INFO] Quarkus - JDBC - MySQL - Deployment                                [jar]
+[INFO] Quarkus - Hibernate Envers - Parent                                [pom]
+[INFO] Quarkus - Hibernate Envers - Runtime                               [jar]
+[INFO] Quarkus - Hibernate Envers - Deployment                            [jar]
+[INFO] Quarkus - Panache - Mock                                           [jar]
+[INFO] Quarkus - Hibernate ORM with Panache - Common                      [pom]
+[INFO] Quarkus - Hibernate ORM with Panache - Common - Runtime            [jar]
+[INFO] Quarkus - Hibernate ORM with Panache - Common - Deployment         [jar]
+[INFO] Quarkus - Hibernate ORM with Panache                               [pom]
+[INFO] Quarkus - Hibernate ORM with Panache - Runtime                     [jar]
+[INFO] Quarkus - Hibernate ORM with Panache - Deployment                  [jar]
+[INFO] Quarkus - Hibernate ORM with Panache and Kotlin                    [pom]
+[INFO] Quarkus - Hibernate ORM with Panache and Kotlin - Runtime          [jar]
+[INFO] Quarkus - Hibernate ORM with Panache and Kotlin - Deployment       [jar]
+[INFO] Quarkus - Panache - Query Language                                 [jar]
+[INFO] Quarkus - MongoDB with Panache - Common                            [pom]
+[INFO] Quarkus - MongoDB with Panache - Common Runtime                    [jar]
+[INFO] Quarkus - MongoDB Client - Deployment                              [jar]
+[INFO] Quarkus - MongoDB with Panache - Common Deployment                 [jar]
+[INFO] Quarkus - Hibernate Reactive with Panache - Common - Deployment    [jar]
+[INFO] Quarkus - Hibernate Reactive with Panache - JPA                    [pom]
+[INFO] Quarkus - Hibernate Reactive with Panache - Runtime                [jar]
+[INFO] Quarkus - Hibernate Reactive with Panache - Deployment             [jar]
+[INFO] Quarkus - REST data with Panache - Parent                          [pom]
+[INFO] Quarkus - REST data with Panache - Runtime                         [jar]
+[INFO] Quarkus - REST data with Panache - Deployment                      [jar]
+[INFO] Quarkus - Hibernate Reactive REST data with Panache - Parent       [pom]
+[INFO] Quarkus - Hibernate Reactive REST data with Panache - Runtime      [jar]
+[INFO] Quarkus - Hibernate Reactive REST data with Panache - Deployment   [jar]
+[INFO] Quarkus - Hibernate Reactive with Panache and Kotlin - JPA         [pom]
+[INFO] Quarkus - Hibernate Reactive with Panache and Kotlin - Runtime     [jar]
+[INFO] Quarkus - Hibernate Reactive with Panache and Kotlin - Deployment  [jar]
+[INFO] Quarkus - MongoDB with Panache - Parent                            [pom]
+[INFO] Quarkus - MongoDB with Panache - Runtime                           [jar]
+[INFO] Quarkus - MongoDB with Panache - Deployment                        [jar]
+[INFO] Quarkus - MongoDB with Panache - Kotlin Parent                     [pom]
+[INFO] Quarkus - MongoDB with Panache - Kotlin Runtime                    [jar]
+[INFO] Quarkus - MongoDB with Panache - Kotlin Deployment                 [jar]
+[INFO] Quarkus - Hibernate ORM REST data with Panache - Parent            [pom]
+[INFO] Quarkus - Hibernate ORM REST data with Panache - Runtime           [jar]
+[INFO] Quarkus - Hibernate ORM REST data with Panache - Deployment        [jar]
+[INFO] Quarkus - MongoDB REST data with Panache - Parent                  [pom]
+[INFO] Quarkus - MongoDB REST data with Panache - Runtime                 [jar]
+[INFO] Quarkus - MongoDB REST data with Panache - Deployment              [jar]
+[INFO] Quarkus - Elasticsearch client common                              [pom]
+[INFO] Quarkus - Elasticsearch REST client common - Runtime               [jar]
+[INFO] Quarkus - Elasticsearch REST client common - Deployment            [jar]
+[INFO] Quarkus - Hibernate Search - ORM + Elasticsearch                   [pom]
+[INFO] Quarkus - Hibernate Search - ORM + Elasticsearch - Runtime         [jar]
+[INFO] Quarkus - Hibernate Search - ORM + Elasticsearch - Deployment      [jar]
+[INFO] Quarkus - Hibernate Search - ORM - Outbox Polling                  [pom]
+[INFO] Quarkus - Hibernate Search - ORM - Outbox Polling - Runtime        [jar]
+[INFO] Quarkus - Hibernate Search - ORM - Outbox Polling - Deployment     [jar]
+[INFO] Quarkus - Elasticsearch REST client - Parent                       [pom]
+[INFO] Quarkus - Elasticsearch REST client - Runtime                      [jar]
+[INFO] Quarkus - Elasticsearch REST client - Deployment                   [jar]
+[INFO] Quarkus - Elasticsearch Java client - Parent                       [pom]
+[INFO] Quarkus - Elasticsearch Java client - Runtime                      [jar]
+[INFO] Quarkus - Elasticsearch Java client - Deployment                   [jar]
+[INFO] Quarkus - Kafka Streams                                            [pom]
+[INFO] Quarkus - Kafka Streams - Runtime                                  [jar]
+[INFO] Quarkus - Kafka Streams - Deployment                               [jar]
+[INFO] Quarkus - Spring - DI                                              [pom]
+[INFO] Quarkus - Spring - DI - Runtime                                    [jar]
+[INFO] Quarkus - Spring - DI - Deployment                                 [jar]
+[INFO] Quarkus - Spring Web - Parent - Aggregator                         [pom]
+[INFO] Quarkus - Spring Web                                               [pom]
+[INFO] Quarkus - Spring Web - Common Runtime                              [jar]
+[INFO] Quarkus - Spring Web - RESTEasy Classic - Parent                   [pom]
+[INFO] Quarkus - Spring Web - RESTEasy Classic - Runtime                  [jar]
+[INFO] Quarkus - Spring Web - RESTEasy Reactive - Parent                  [pom]
+[INFO] Quarkus - Spring Web - RESTEasy Reactive - Runtime                 [jar]
+[INFO] Quarkus - Spring Web - Runtime                                     [jar]
+[INFO] Quarkus - Spring Web - RESTEasy Classic - Deployment               [jar]
+[INFO] Quarkus - Spring Web - RESTEasy Reactive - Deployment              [jar]
+[INFO] Quarkus - Spring Web - Deployment                                  [jar]
+[INFO] Quarkus - Spring Web - RESTEasy Classic - Tests                    [jar]
+[INFO] Quarkus - Spring Web - RESTEasy Reactive - Tests                   [jar]
+[INFO] Quarkus - Spring Data JPA                                          [pom]
+[INFO] Quarkus - Spring Data JPA - Runtime                                [jar]
+[INFO] Quarkus - Spring Data JPA - Deployment                             [jar]
+[INFO] Quarkus - Spring Security - Parent                                 [pom]
+[INFO] Quarkus - Spring Security - Runtime                                [jar]
+[INFO] Quarkus - Spring Security - Deployment                             [jar]
+[INFO] Quarkus - Spring Boot - Properties                                 [pom]
+[INFO] Quarkus - Spring Boot - Properties - Runtime                       [jar]
+[INFO] Quarkus - Spring Boot - Properties - Deployment                    [jar]
+[INFO] Quarkus - Spring Cloud Config Client                               [pom]
+[INFO] Quarkus - Spring Cloud Config Client - Runtime                     [jar]
+[INFO] Quarkus - Spring Cloud Config Client - Deployment                  [jar]
+[INFO] Quarkus - Spring - Cache                                           [pom]
+[INFO] Quarkus - Spring - Cache - Runtime                                 [jar]
+[INFO] Quarkus - Spring - Cache - Deployment                              [jar]
+[INFO] Quarkus - Spring - Scheduling                                      [pom]
+[INFO] Quarkus - Spring - Scheduling - Runtime                            [jar]
+[INFO] Quarkus - Spring - Scheduling - Deployment                         [jar]
+[INFO] Quarkus - Spring Data - REST                                       [pom]
+[INFO] Quarkus - Spring Data - REST - Runtime                             [jar]
+[INFO] Quarkus - Spring Data - REST - Deployment                          [jar]
+[INFO] Quarkus - Security Jakarta Persistence - Common                    [pom]
+[INFO] Quarkus - Security Jakarta Persistence - Common - Runtime          [jar]
+[INFO] Quarkus - Security JPA                                             [pom]
+[INFO] Quarkus - Security Jakarta Persistence - Runtime                   [jar]
+[INFO] Quarkus - Security Jakarta Persistence - Common - Deployment       [jar]
+[INFO] Quarkus - Security Jakarta Persistence - Deployment                [jar]
+[INFO] Quarkus - Security Jakarta Persistence - Reactive                  [pom]
+[INFO] Quarkus - Security Jakarta Persistence - Reactive - Runtime        [jar]
+[INFO] Quarkus - Security Jakarta Persistence - Reactive - Deployment     [jar]
+[INFO] Quarkus - Security WebAuthn - Deployment                           [jar]
+[INFO] Quarkus - Elytron Security JDBC                                    [pom]
+[INFO] Quarkus - Elytron Security JDBC - Runtime                          [jar]
+[INFO] Quarkus - Elytron Security JDBC - Deployment                       [jar]
+[INFO] Quarkus - Elytron Security LDAP                                    [pom]
+[INFO] Quarkus - Elytron Security LDAP - Runtime                          [jar]
+[INFO] Quarkus - Elytron Security LDAP - Deployment                       [jar]
+[INFO] Quarkus - Security OAuth2                                          [pom]
+[INFO] Quarkus - Security OAuth2 - Runtime                                [jar]
+[INFO] Quarkus - Security OAuth2 - Deployment                             [jar]
+[INFO] Quarkus - SmallRye JWT Build - Deployment                          [jar]
+[INFO] Quarkus - SmallRye JWT                                             [pom]
+[INFO] Quarkus - SmallRye JWT - Runtime                                   [jar]
+[INFO] Quarkus - SmallRye JWT - Deployment                                [jar]
+[INFO] Quarkus - OpenID Connect Common - Deployment                       [jar]
+[INFO] Quarkus - OpenID Connect Adapter - Deployment                      [jar]
+[INFO] Quarkus - OpenID Connect Client                                    [pom]
+[INFO] Quarkus - OpenID Connect Client - Runtime                          [jar]
+[INFO] Quarkus - OpenID Connect Client - Deployment                       [jar]
+[INFO] Quarkus - OpenID Connect Oidc Client Filter                        [pom]
+[INFO] Quarkus - OpenID Connect Client Filter - Runtime                   [jar]
+[INFO] Quarkus - OpenID Connect Client Filter - Deployment                [jar]
+[INFO] Quarkus - OpenID Connect Oidc Client Reactive Filter               [pom]
+[INFO] Quarkus - OpenID Connect Client Reactive Filter - Runtime          [jar]
+[INFO] Quarkus - OpenID Connect Client Reactive Filter - Deployment       [jar]
+[INFO] Quarkus - SmallRye GraphQL Client                                  [pom]
+[INFO] Quarkus - SmallRye GraphQL Client - Runtime                        [jar]
+[INFO] Quarkus - OpenID Connect Client GraphQL integration                [pom]
+[INFO] Quarkus - OpenID Connect Client GraphQL integration - Runtime      [jar]
+[INFO] Quarkus - SmallRye GraphQL Client - Deployment                     [jar]
+[INFO] Quarkus - OpenID Connect Client GraphQL integration - Deployment   [jar]
+[INFO] Quarkus - OpenID Connect Token Propagation                         [pom]
+[INFO] Quarkus - OpenID Connect Token Propagation - Runtime               [jar]
+[INFO] Quarkus - OpenID Connect Token Propagation - Deployment            [jar]
+[INFO] Quarkus - OpenID Connect Token Propagation Reactive                [pom]
+[INFO] Quarkus - OpenID Connect Token Propagation Reactive - Runtime      [jar]
+[INFO] Quarkus - OpenID Connect Token Propagation Reactive - Deployment   [jar]
+[INFO] Quarkus - OpenID Connect Database Token State Manager - Parent     [pom]
+[INFO] Quarkus - OpenID Connect Database Token State Manager - Runtime    [jar]
+[INFO] Quarkus - OpenID Connect Database Token State Manager - Deployment [jar]
+[INFO] Quarkus - Keycloak Authorization                                   [pom]
+[INFO] Quarkus - Keycloak Authorization - Runtime                         [jar]
+[INFO] Quarkus - Keycloak Admin Client - Common - Parent                  [pom]
+[INFO] Quarkus - Keycloak Admin Client - Common - Runtime                 [jar]
+[INFO] Quarkus - Keycloak Admin Client                                    [pom]
+[INFO] Quarkus - Keycloak Admin Client - Runtime                          [jar]
+[INFO] Quarkus - Keycloak Admin Client - Common - Deployment              [jar]
+[INFO] Quarkus - Keycloak Admin Client - Deployment                       [jar]
+[INFO] Quarkus - Keycloak Authorization - Deployment                      [jar]
+[INFO] Quarkus - Keycloak Admin Client - Reactive                         [pom]
+[INFO] Quarkus - Keycloak Admin Client - Reactive - Runtime               [jar]
+[INFO] Quarkus - Keycloak Admin Client - Reactive - Deployment            [jar]
+[INFO] Quarkus - Cross-Site Request Forgery Prevention Filter Reactive    [pom]
+[INFO] Quarkus - Cross-Site Request Forgery Prevention Filter - Runtime   [jar]
+[INFO] Quarkus - Cross-Site Request Forgery Filter Reactive - Deployment  [jar]
+[INFO] Quarkus - Infinispan - Client                                      [pom]
+[INFO] Quarkus - Infinispan - Client - Runtime                            [jar]
+[INFO] Quarkus - Infinispan - Client - Deployment                         [jar]
+[INFO] Quarkus - Amazon Lambda Event Server                               [jar]
+[INFO] Quarkus - Amazon Lambda - Common Deployment                        [jar]
+[INFO] Quarkus - Amazon Lambda - Runtime                                  [jar]
+[INFO] Quarkus - Amazon Lambda - Deployment                               [jar]
+[INFO] Quarkus - Amazon Lambda - Archetype                    [maven-archetype]
+[INFO] Quarkus - Amazon Lambda X-Ray                                      [pom]
+[INFO] Quarkus - Amazon Lambda X-Ray - Runtime                            [jar]
+[INFO] Quarkus - Amazon Lambda X-Ray - Deployment                         [jar]
+[INFO] Quarkus - Amazon Lambda HTTP                                       [pom]
+[INFO] Quarkus - Amazon Lambda HTTP - Runtime                             [jar]
+[INFO] Quarkus - Amazon Lambda HTTP Event Server                          [jar]
+[INFO] Quarkus - Amazon Lambda HTTP - Deployment                          [jar]
+[INFO] Quarkus - Amazon Lambda HTTP - Archetype               [maven-archetype]
+[INFO] Quarkus - Amazon Lambda AWS Gateway REST API                       [pom]
+[INFO] Quarkus - Amazon Lambda AWS Gateway REST API- Runtime              [jar]
+[INFO] Quarkus - Amazon Lambda REST Event Server                          [jar]
+[INFO] Quarkus - Amazon Lambda AWS Gateway REST API - Deployment          [jar]
+[INFO] Quarkus - Amazon Lambda AWS Gateway REST API - Archetype [maven-archetype]
+[INFO] Quarkus - Azure Functions                                          [pom]
+[INFO] Quarkus - Azure Functions - Runtime                                [jar]
+[INFO] Quarkus - Azure Functions - Deployment                             [jar]
+[INFO] Quarkus - HTTP Azure Functions                                     [pom]
+[INFO] Quarkus - HTTP Azure Functions - Runtime                           [jar]
+[INFO] Quarkus - HTTP Azure Functions - Deployment                        [jar]
+[INFO] Quarkus - Funqy                                                    [pom]
+[INFO] Quarkus - Funqy Server Common Parent                               [pom]
+[INFO] Quarkus - Funqy Server Common - Runtime                            [jar]
+[INFO] Quarkus - Funqy Server Common - Deployment                         [jar]
+[INFO] Quarkus - Funqy HTTP Binding                                       [pom]
+[INFO] Quarkus - Funqy HTTP - Runtime                                     [jar]
+[INFO] Quarkus - Funqy HTTP - Deployment                                  [jar]
+[INFO] Quarkus - Funqy Amazon Lambda Binding                              [pom]
+[INFO] Quarkus - Funqy Amazon Lambda - Runtime                            [jar]
+[INFO] Quarkus - Funqy Amazon Lambda - Deployment                         [jar]
+[INFO] Quarkus - Funqy Amazon Lambda - Archetype              [maven-archetype]
+[INFO] Quarkus - Funqy Knative Events Binding                             [pom]
+[INFO] Quarkus - Funqy Knative Events - Runtime                           [jar]
+[INFO] Quarkus - Funqy Knative Events - Deployment                        [jar]
+[INFO] Quarkus - Funqy Google Cloud Functions Binding                     [pom]
+[INFO] Quarkus - Funqy Google Cloud Functions - Runtime                   [jar]
+[INFO] Quarkus - Funqy Google Cloud Functions - Deployment                [jar]
+[INFO] Quarkus - Scala                                                    [pom]
+[INFO] Quarkus - Scala - Runtime                                          [jar]
+[INFO] Quarkus - Scala - Deployment                                       [jar]
+[INFO] Quarkus - Container Image                                          [pom]
+[INFO] Quarkus - Container Image - Runtime                                [jar]
+[INFO] Quarkus - Container Image - SPI                                    [jar]
+[INFO] Quarkus - Container Image - Util                                   [jar]
+[INFO] Quarkus - Container Image - Deployment                             [jar]
+[INFO] Quarkus - Container Image - Buildpack - Parent                     [pom]
+[INFO] Quarkus - Container Image - Buildpack                              [jar]
+[INFO] Quarkus - Container Image - Buildpack - Deployment                 [jar]
+[INFO] Quarkus - Container Image - Docker - Parent                        [pom]
+[INFO] Quarkus - Container Image - Docker                                 [jar]
+[INFO] Quarkus - Container Image - Docker - Deployment                    [jar]
+[INFO] Quarkus - Container Image - Jib - Parent                           [pom]
+[INFO] Quarkus - Container Image - Jib                                    [jar]
+[INFO] Quarkus - Container Image - Jib - Deployment                       [jar]
+[INFO] Quarkus - Kubernetes Client                                        [pom]
+[INFO] Quarkus - Kubernetes Client - Runtime - Internal                   [jar]
+[INFO] Quarkus - Kubernetes Client - SPI                                  [jar]
+[INFO] Quarkus - Kubernetes Client - Internal - Deployment                [jar]
+[INFO] Quarkus - Container Image - S2I - Parent                           [pom]
+[INFO] Quarkus - Container Image - S2I                                    [jar]
+[INFO] Quarkus - Container Image - S2I - Deployment                       [jar]
+[INFO] Quarkus - Container Image - OpenShift - Parent                     [pom]
+[INFO] Quarkus - Container Image - OpenShift                              [jar]
+[INFO] Quarkus - Container Image - OpenShift - Deployment                 [jar]
+[INFO] Quarkus - Kubernetes - Vanilla                                     [pom]
+[INFO] Quarkus - Kubernetes - Vanilla - Runtime                           [jar]
+[INFO] Quarkus - Kubernetes - Vanilla - Deployment                        [jar]
+[INFO] Quarkus - Kubernetes - Openshift                                   [pom]
+[INFO] Quarkus - Kubernetes - OpenShift - Runtime                         [jar]
+[INFO] Quarkus - Kubernetes - Openshift - Deployment                      [jar]
+[INFO] Quarkus - Kubernetes - Minikube                                    [pom]
+[INFO] Quarkus - Kubernetes - Minikube - Runtime                          [jar]
+[INFO] Quarkus - Kubernetes - Minikube - Deployment                       [jar]
+[INFO] Quarkus - Kubernetes - Kind                                        [pom]
+[INFO] Quarkus - Kubernetes - Kind - Runtime                              [jar]
+[INFO] Quarkus - Kubernetes - Kind - Deployment                           [jar]
+[INFO] Quarkus - Kubernetes Client - Runtime                              [jar]
+[INFO] Quarkus - Kubernetes Client - Deployment                           [jar]
+[INFO] Quarkus - Kubernetes Config                                        [pom]
+[INFO] Quarkus - Kubernetes Config - Runtime                              [jar]
+[INFO] Quarkus - Kubernetes Config - Deployment                           [jar]
+[INFO] Quarkus - OpenShift Client                                         [pom]
+[INFO] Quarkus - OpenShift Client - Runtime                               [jar]
+[INFO] Quarkus - OpenShift Client - Deployment                            [jar]
+[INFO] Quarkus - Kubernetes Service Binding - Deployment                  [jar]
+[INFO] Quarkus - Flyway                                                   [pom]
+[INFO] Quarkus - Flyway - Runtime                                         [jar]
+[INFO] Quarkus - Flyway - Deployment                                      [jar]
+[INFO] Quarkus - Liquibase                                                [pom]
+[INFO] Quarkus - Liquibase - Runtime                                      [jar]
+[INFO] Quarkus - Liquibase - Deployment                                   [jar]
+[INFO] Quarkus - Liquibase MongoDB                                        [pom]
+[INFO] Quarkus - Liquibase MongoDB - Runtime                              [jar]
+[INFO] Quarkus - Liquibase MongoDB - Deployment                           [jar]
+[INFO] Quarkus - Quarkus - Vert.x GraphQL - Parent                        [pom]
+[INFO] Quarkus - Quarkus - Vert.x GraphQL - Runtime                       [jar]
+[INFO] Quarkus - Quarkus - Vert.x GraphQL - Deployment                    [jar]
+[INFO] Quarkus - Logging - JSON                                           [pom]
+[INFO] Quarkus - Logging - JSON - Runtime                                 [jar]
+[INFO] Quarkus - Logging - JSON - Deployment                              [jar]
+[INFO] Quarkus - Logging - GELF                                           [pom]
+[INFO] Quarkus - Logging - GELF - Runtime                                 [jar]
+[INFO] Quarkus - Logging - GELF - Deployment                              [jar]
+[INFO] Quarkus - Picocli                                                  [pom]
+[INFO] Quarkus - Picocli - Runtime                                        [jar]
+[INFO] Quarkus - Picocli - Deployment                                     [jar]
+[INFO] Quarkus - HTTP Google Cloud Functions                              [pom]
+[INFO] Quarkus - HTTP Google Cloud Functions - Runtime                    [jar]
+[INFO] Quarkus - HTTP Google Cloud Functions - Deployment                 [jar]
+[INFO] Quarkus - Google Cloud Functions                                   [pom]
+[INFO] Quarkus - Google Cloud Functions - Runtime                         [jar]
+[INFO] Quarkus - Google Cloud Functions - Deployment                      [jar]
+[INFO] Quarkus - AWT - Parent                                             [pom]
+[INFO] Quarkus - AWT - Runtime                                            [jar]
+[INFO] Quarkus - AWT - Deployment                                         [jar]
+[INFO] Quarkus - JMS SPI - Parent                                         [pom]
+[INFO] Quarkus - JMS - SPI - Deployment                                   [jar]
+[INFO] Quarkus - Dev tools - Project Core Extension Codestarts            [jar]
+[INFO] Quarkus - BOM - Descriptor JSON                                    [pom]
+[INFO] Quarkus - Maven Plugin                                    [maven-plugin]
+[INFO] Quarkus - Gradle Plugin - Parent                                   [pom]
+[INFO] Quarkus - Gradle Model                                             [pom]
+[INFO] Quarkus - Gradle Plugin                                            [pom]
+[INFO] Quarkus - Extension Gradle Plugin                                  [pom]
+[INFO] Quarkus - Command Line Interface                                   [jar]
+[INFO] Quarkus - Integration Tests                                        [pom]
+[INFO] Quarkus - Integration Tests - Avro code generation and reload      [jar]
+[INFO] Quarkus - Integration Tests - AWT                                  [jar]
+[INFO] Quarkus - Integration Tests - No AWT                               [jar]
+[INFO] Quarkus - Integration Tests - Bouncy Castle                        [jar]
+[INFO] Quarkus - Integration Tests - Bouncy Castle FIPS                   [jar]
+[INFO] Quarkus - Integration Tests - Bouncy Castle FIPS JSSE              [jar]
+[INFO] Quarkus - Integration Tests - Bouncy Castle JSSE                   [jar]
+[INFO] Quarkus - Integration Tests - Funqy Amazon Lambda                  [jar]
+[INFO] Quarkus - Integration Tests - Funqy Google Cloud Functions         [jar]
+[INFO] Quarkus - Integration Tests - Class tranformer                     [pom]
+[INFO] Quarkus - Integration Tests - Class tranformer - Runtime           [jar]
+[INFO] Quarkus - Integration Tests - Class tranformer - Deployment        [jar]
+[INFO] Quarkus - Integration Tests - Shared library                       [jar]
+[INFO] Quarkus - Integration Tests - Hibernate Validator                  [jar]
+[INFO] Quarkus - Integration Tests - Hibernate Validator                  [jar]
+[INFO] Quarkus - Integration Tests - Common JPA entities                  [jar]
+[INFO] Quarkus - Integration Tests - Infinispan Client                    [jar]
+[INFO] Quarkus - Integration Tests - Devtools                             [jar]
+[INFO] Quarkus - Integration Tests - DevTools Registry Client             [jar]
+[INFO] Quarkus - Integration Tests - Gradle tooling                       [jar]
+[INFO] Quarkus - Integration Tests - Main                                 [jar]
+[INFO] Quarkus - Integration Tests - Kafka                                [jar]
+[INFO] Quarkus - Integration Tests - Kafka SSL                            [jar]
+[INFO] Quarkus - Integration Tests - Kafka SASL                           [jar]
+[INFO] Quarkus - Integration Tests - Kafka SASL with Elytron              [jar]
+[INFO] Quarkus - Integration Tests - Kafka OAUTH with Keycloak            [jar]
+[INFO] Quarkus - Integration Tests - Kafka with Snappy                    [jar]
+[INFO] Quarkus - Integration Tests - Kafka Avro with Apicurio 2.x         [jar]
+[INFO] Quarkus - Integration Tests - Kafka Streams                        [jar]
+[INFO] Quarkus - Integration Tests - Kafka Dev Services                   [jar]
+[INFO] Quarkus - Integration Tests - JPA                                  [jar]
+[INFO] Quarkus - Integration Tests - JPA - XML mapping                    [pom]
+[INFO] Quarkus - Integration Tests - JPA - XML mapping - Modern Library A [jar]
+[INFO] Quarkus - Integration Tests - JPA - XML mapping - Modern Library B [jar]
+[INFO] Quarkus - Integration Tests - JPA - XML mapping - Modern app       [jar]
+[INFO] Quarkus - Integration Tests - JPA - XML mapping - Legacy Library A [jar]
+[INFO] Quarkus - Integration Tests - JPA - XML mapping - Legacy Library B [jar]
+[INFO] Quarkus - Integration Tests - JPA - XML mapping - Legacy app       [jar]
+[INFO] Quarkus - Integration Tests - JPA - DB2                            [jar]
+[INFO] Quarkus - Integration Tests - JPA - Derby                          [jar]
+[INFO] Quarkus - Integration Tests - JPA - PostgreSQL                     [jar]
+[INFO] Quarkus - Integration Tests - JPA - PostgreSQL with XML            [jar]
+[INFO] Quarkus - Integration Tests - JPA - MariaDB                        [jar]
+[INFO] Quarkus - Integration Tests - JPA - H2                             [jar]
+[INFO] Quarkus - Integration Tests - JPA - H2 Embedded                    [jar]
+[INFO] Quarkus - Integration Tests - JPA - MSSQL                          [jar]
+[INFO] Quarkus - Integration Tests - JPA - MySQL                          [jar]
+[INFO] Quarkus - Integration Tests - JPA - Oracle                         [jar]
+[INFO] Quarkus - Integration Tests - Hibernate ORM - Compatibility with databases meant for ORM 5.6 - MariaDB [jar]
+[INFO] Quarkus - Integration Tests - Hibernate ORM - Compatibility with databases meant for ORM 5.6 - PostgreSQL [jar]
+[INFO] Quarkus - Integration Tests - Hibernate ORM with Panache           [jar]
+[INFO] Quarkus - Integration Tests - Hibernate ORM REST Data with Panache [jar]
+[INFO] Quarkus - Integration Tests - GraphQL and Hibernate ORM with Panache [jar]
+[INFO] Quarkus - Integration Tests - Hibernate ORM with Panache and Kotlin [jar]
+[INFO] Quarkus - Integration Tests - Hibernate Reactive - DB2             [jar]
+[INFO] Quarkus - Integration Tests - Hibernate Reactive - MariaDB         [jar]
+[INFO] Quarkus - Integration Tests - Hibernate Reactive - MySQL           [jar]
+[INFO] Quarkus - Integration Tests - Hibernate Reactive - MySQL - With Agroal and Flyway [jar]
+[INFO] Quarkus - Integration Tests - Hibernate Reactive - PostgreSQL      [jar]
+[INFO] Quarkus - Integration Tests - Hibernate Reactive with Panache      [jar]
+[INFO] Quarkus - Integration Tests - Hibernate Reactive with Panache and Kotlin [jar]
+[INFO] Quarkus - Integration Tests - Hibernate Search ORM + Elasticsearch [jar]
+[INFO] Quarkus - Integration Tests - Hibernate Search ORM + Elasticsearch - Outbox-polling [jar]
+[INFO] Quarkus - Integration Tests - Hibernate Search ORM + OpenSearch    [jar]
+[INFO] Quarkus - Integration Tests - Hibernate Search ORM + Elasticsearch - Tenancy [jar]
+[INFO] Quarkus - Integration Tests - Hibernate ORM - Tenancy              [pom]
+[INFO] Quarkus - Integration Tests - Hibernate - Tenancy - Datasource     [jar]
+[INFO] Quarkus - Integration Tests - Hibernate - Tenancy - Connection     [jar]
+[INFO] Quarkus - Integration Tests - Hibernate - Tenancy - Schema         [jar]
+[INFO] Quarkus - Integration Tests - Hibernate - Tenancy - Discriminator  [jar]
+[INFO] Quarkus - Integration Tests - Hibernate - Tenancy - Connection     [jar]
+[INFO] Quarkus - Integration Tests - Hibernate ORM with Envers            [jar]
+[INFO] Quarkus - Integration Tests - Vert.x HTTP                          [jar]
+[INFO] Quarkus - Integration Tests - Vert.x Web                           [jar]
+[INFO] Quarkus - Integration Tests - Vert.x Web - Jackson                 [jar]
+[INFO] Quarkus - Integration Tests - Vert.x                               [jar]
+[INFO] Quarkus - Integration Tests - WebSockets                           [jar]
+[INFO] Quarkus - Integration Tests - Spring DI                            [jar]
+[INFO] Quarkus - Integration Tests - Spring Web                           [jar]
+[INFO] Quarkus - Integration Tests - Spring Data JPA                      [jar]
+[INFO] Quarkus - Integration Tests - Spring Boot properties               [jar]
+[INFO] Quarkus - Integration Tests - Spring Cloud Config Client           [jar]
+[INFO] Quarkus - Integration Tests - Spring Data REST                     [jar]
+[INFO] Quarkus - Integration Tests - JPA - Infinispan Cache               [jar]
+[INFO] Quarkus - Integration Tests - Elytron Security                     [jar]
+[INFO] Quarkus - Integration Tests - Elytron Security OAuth2              [jar]
+[INFO] Quarkus - Integration Tests - Elytron RESTEasy                     [jar]
+[INFO] Quarkus - Integration Tests - Elytron RESTEasy Reactive            [jar]
+[INFO] Quarkus - Integration Tests - Elytron Undertow                     [jar]
+[INFO] Quarkus - Integration Tests - Security WebAuthn                    [jar]
+[INFO] Quarkus - Integration Tests - Flyway                               [jar]
+[INFO] Quarkus - Integration Tests - Liquibase                            [jar]
+[INFO] Quarkus - Integration Tests - Liquibase MongoDB                    [jar]
+[INFO] Quarkus - Integration Tests - OpenID Connect Adapter               [jar]
+[INFO] Quarkus - Integration Tests - OpenID Connect Client                [jar]
+[INFO] Quarkus - Integration Tests - OpenID Connect Client Reactive       [jar]
+[INFO] Quarkus - Integration Tests - OpenID Connect Client Wiremock       [jar]
+[INFO] Quarkus - Integration Tests - OpenID Connect Token Propagation     [jar]
+[INFO] Quarkus - Integration Tests - OpenID Connect Token Propagation Reactive [jar]
+[INFO] Quarkus - Integration Tests - OpenAPI                              [jar]
+[INFO] Quarkus - Integration Tests - Smallrye JWT OIDC WebApp             [jar]
+[INFO] Quarkus - Integration Tests - Smallrye JWT Token Propagation       [jar]
+[INFO] Quarkus - Integration Tests - OpenID Connect Adapter Code Flow     [jar]
+[INFO] Quarkus - Integration Tests - Multi-Tenant OpenID Connect Adapter  [jar]
+[INFO] Quarkus - Integration Tests - OpenID Connect Adapter WireMock      [jar]
+[INFO] Quarkus - Integration Tests - Keycloak Policy Enforcer             [jar]
+[INFO] Quarkus - Integration Tests - Cross-Site Request Forgery Filter Reactive [jar]
+[INFO] Quarkus - Integration Tests - Reactive DB2 Client                  [jar]
+[INFO] Quarkus - Integration Tests - Reactive Pg Client                   [jar]
+[INFO] Quarkus - Integration Tests - Reactive MySQL Client                [jar]
+[INFO] Quarkus - Integration Tests - Reactive MS SQL Client               [jar]
+[INFO] Quarkus - Integration Tests - Reactive Oracle Client               [jar]
+[INFO] Quarkus - Integration Tests - Test Extension                       [pom]
+[INFO] Quarkus - Integration Tests - Test Extension - Extension           [pom]
+[INFO] Quarkus - Integration Tests - Test Extension - Extension - Runtime [jar]
+[INFO] Quarkus - Integration Tests - Test Extension - Extension - Deployment [jar]
+[INFO] Quarkus - Integration Tests - Test Extension - Extension           [pom]
+[INFO] Quarkus - Integration Tests - Test Extension - Extension - Runtime [jar]
+[INFO] Quarkus - Integration Tests - Test Extension - Extension - Deployment [jar]
+[INFO] Quarkus - Integration Tests - Test Extension - Tests               [jar]
+[INFO] Quarkus - Integration Tests - Amazon Lambda                        [jar]
+[INFO] Quarkus - Integration Tests - Amazon Lambda                        [jar]
+[INFO] Quarkus - Integration Tests - Amazon Lambda Stream Handler         [jar]
+[INFO] Quarkus - Integration Tests - Amazon Lambda HTTP                   [jar]
+[INFO] Quarkus - Integration Tests - Amazon Lambda AWS Gateway REST API   [jar]
+[INFO] Quarkus - Integration Tests - Amazon Lambda HTTP RESTEasy          [jar]
+[INFO] Quarkus - Integration Tests - Amazon Lambda HTTP RESTEasy Reactive [jar]
+[INFO] Quarkus - Integration Tests - Container Image - Parent             [pom]
+[INFO] Quarkus - Integration Tests - Container Image - Invoker            [jar]
+[INFO] Quarkus - Integration Tests - Container Image - Standard           [jar]
+[INFO] Quarkus - Integration Tests - Kubernetes - Parent                  [pom]
+[INFO] Quarkus - Integration Tests - Kubernetes - Invoker                 [jar]
+[INFO] Quarkus - Integration Tests - Kubernetes - Standard                [jar]
+[INFO] Quarkus - Integration Tests - Kubernetes - Standard - Kafka        [jar]
+[INFO] Quarkus - Integration Tests - Kubernetes Client                    [jar]
+[INFO] Quarkus - Integration Tests - Kubernetes Client DevService         [jar]
+[INFO] Quarkus - Integration Tests - Kubernetes Service Binding JDBC      [jar]
+[INFO] Quarkus - Integration Tests - Kubernetes Service Binding Reactive  [jar]
+[INFO] Quarkus - Integration Tests - OpenShift Client                     [jar]
+[INFO] Quarkus - Integration Tests - MongoDB Client                       [jar]
+[INFO] Quarkus - Integration Tests - MongoDB DevServices                  [jar]
+[INFO] Quarkus - Integration Tests - Jackson                              [jar]
+[INFO] Quarkus - Integration Tests - JSON-B                               [jar]
+[INFO] Quarkus - Integration Tests - RESTEasy Jackson                     [jar]
+[INFO] Quarkus - Integration Tests - RESTEasy and Mutiny                  [jar]
+[INFO] Quarkus - Integration Tests - Virtual Http                         [jar]
+[INFO] Quarkus - Integration Tests - Virtual Http Resteasy Standalone     [jar]
+[INFO] Quarkus - Integration Tests - Maven tooling                        [jar]
+[INFO] Quarkus - Integration Tests - Scala                                [jar]
+[INFO] Quarkus - Integration Tests - Kotlin                               [jar]
+[INFO] Quarkus - Integration Tests - Kotlin Serialization                 [jar]
+[INFO] Quarkus - Integration Tests - MongoDB Panache                      [jar]
+[INFO] Quarkus - Integration Tests - MongoDB Panache Kotlin               [jar]
+[INFO] Quarkus - Integration Tests - MongoDB REST Data with Panache       [jar]
+[INFO] Quarkus - Integration Tests - Narayana STM                         [jar]
+[INFO] Quarkus - Integration Tests - Narayana JTA CDI                     [jar]
+[INFO] Quarkus - Integration Tests - Narayana LRA Coordinator and Participant [jar]
+[INFO] Quarkus - Integration Tests - Elytron Security JDBC                [jar]
+[INFO] Quarkus - Integration Tests - Elytron Security LDAP                [jar]
+[INFO] Quarkus - Integration Tests - Vert.x GraphQL                       [jar]
+[INFO] Quarkus - Integration Tests - SmallRye Config                      [jar]
+[INFO] Quarkus - Integration Tests - SmallRye Context Propagation         [jar]
+[INFO] Quarkus - Integration Tests - SmallRye Metrics                     [jar]
+[INFO] Quarkus - Integration Tests - SmallRye GraphQL                     [jar]
+[INFO] Quarkus - Integration Tests - SmallRye GraphQL Client              [jar]
+[INFO] Quarkus - Integration Tests - SmallRye GraphQL Client with Keycloak [jar]
+[INFO] Quarkus - Integration Tests - Smallrye Stork Registration          [jar]
+[INFO] Quarkus - Integration Tests - JPA without entities                 [jar]
+[INFO] Quarkus - Integration Tests - Quartz                               [jar]
+[INFO] Quarkus - Integration Tests - Redis Client                         [jar]
+[INFO] Quarkus - Integration Tests - Redis Cache                          [jar]
+[INFO] Quarkus - Integration Tests - Logging - GELF                       [jar]
+[INFO] Quarkus - Integration Tests - Cache                                [jar]
+[INFO] Quarkus - Integration Tests - Qute                                 [jar]
+[INFO] Quarkus - Integration Tests - InjectMock                           [jar]
+[INFO] Quarkus - Integration Tests - Reactive Messaging - AMQP            [jar]
+[INFO] Quarkus - Integration Tests - Reactive Messaging - Kafka           [jar]
+[INFO] Quarkus - Integration Tests - Reactive Messaging - Pulsar          [jar]
+[INFO] Quarkus - Integration Tests - Reactive Messaging - MQTT            [jar]
+[INFO] Quarkus - Integration Tests - Reactive Messaging - RabbitMQ        [jar]
+[INFO] Quarkus - Integration Tests - Reactive Messaging - RabbitMQ (Dynamic Credentials) [jar]
+[INFO] Quarkus - Integration Tests - Reactive Messaging - Hibernate Reactive [jar]
+[INFO] Quarkus - Integration Tests - Reactive Messaging - Hibernate ORM   [jar]
+[INFO] Quarkus - Integration Tests - REST client                          [jar]
+[INFO] Quarkus - Integration Tests - RESTEasy Reactive Kotlin - Parent    [pom]
+[INFO] Quarkus - Integration Tests - RESTEasy Reactive Kotlin - Standard tests [jar]
+[INFO] Quarkus - Integration Tests - RESTEasy Reactive Kotlin - Prod Mode tests [jar]
+[INFO] Quarkus - Integration Tests - REST Client Reactive                 [jar]
+[INFO] Quarkus - Integration Tests - REST Client Reactive: HTTP/2         [jar]
+[INFO] Quarkus - Integration Tests - REST Client Reactive Kotlin Serialization [jar]
+[INFO] Quarkus - Integration Tests - REST Client Reactive: multipart messages [jar]
+[INFO] Quarkus - Integration Tests - REST Client Reactive with Stork      [jar]
+[INFO] Quarkus - Integration Tests - Packaging                            [jar]
+[INFO] Quarkus - Integration Tests - Simple with space                    [jar]
+[INFO] Quarkus - Integration Tests - Picocli                              [jar]
+[INFO] Quarkus - Integration Tests - Picocli Native                       [jar]
+[INFO] Quarkus - Integration Tests - WebJar Locator                       [jar]
+[INFO] Quarkus - Integration Tests - Dev Mode                             [jar]
+[INFO] Quarkus - Integration Tests - IDE Launcher                         [jar]
+[INFO] Quarkus - Integration Tests - Elasticsearch REST client            [jar]
+[INFO] Quarkus - Integration Tests - Elasticsearch Java client            [jar]
+[INFO] Quarkus - Integration Tests - Micrometer MP Metrics                [jar]
+[INFO] Quarkus - Integration Tests - Micrometer Prometheus                [jar]
+[INFO] Quarkus - Integration Tests - OpenTelemetry                        [jar]
+[INFO] Quarkus - Integration Tests - OpenTelemetry SPI                    [jar]
+[INFO] Quarkus - Integration Tests - OpenTelemetry JDBC instrumentation   [jar]
+[INFO] Quarkus - Integration Tests - OpenTelemetry Quartz                 [jar]
+[INFO] Quarkus - Integration Tests - OpenTelemetry Scheduler              [jar]
+[INFO] Quarkus - Integration Tests - OpenTelemetry Vert.x                 [jar]
+[INFO] Quarkus - Integration Tests - OpenTelemetry Reactive               [jar]
+[INFO] Quarkus - Integration Tests - OpenTelemetry gRPC                   [jar]
+[INFO] Quarkus - Integration Tests - OpenTelemetry Vert.x exporter        [jar]
+[INFO] Quarkus - Integration Tests - OpenTelemetry Reactive Messaging     [jar]
+[INFO] Quarkus - Integration Tests - Logging - JSON                       [jar]
+[INFO] Quarkus - Integration Tests - JAXB                                 [jar]
+[INFO] Quarkus - Integration Tests - JAXP                                 [jar]
+[INFO] Quarkus - Integration Tests - Mailer                               [jar]
+[INFO] Quarkus - Integration Tests - Native Configuration Profile         [jar]
+[INFO] Quarkus - Integration Tests - Logging when minimum level is unset  [jar]
+[INFO] Quarkus - Integration Tests - Logging when minimum level is set    [jar]
+[INFO] Quarkus - Integration Tests - Logging with Panache                 [jar]
+[INFO] Quarkus - Integration Tests - Logging with Panache in Kotlin       [jar]
+[INFO] Quarkus - Integration Tests - Locales                              [jar]
+[INFO] Quarkus - Integration Tests - Redis DevService                     [jar]
+[INFO] Quarkus - Integration Tests - gRPC - Descriptor Sets - Parent      [pom]
+[INFO] Quarkus - Integration Tests - gRPC - Descriptor Sets - Descriptor Set [jar]
+[INFO] Quarkus - Integration Tests - gRPC - Descriptor Sets - Alternate Output [jar]
+[INFO] Quarkus - Integration Tests - gRPC - Descriptor Sets - Alternate Output Dir [jar]
+[INFO] Quarkus - Integration Tests - gRPC - InProcess                     [jar]
+[INFO] Quarkus - Integration Tests - gRPC - Vertx                         [jar]
+[INFO] Quarkus - Integration Tests - gRPC - TLS                           [jar]
+[INFO] Quarkus - Integration Tests - gRPC - Plain Text with gzip compression [jar]
+[INFO] Quarkus - Integration Tests - gRPC - Plain Text with Mutiny        [jar]
+[INFO] Quarkus - Integration Tests - gRPC - TLS with mutual auth          [jar]
+[INFO] Quarkus - Integration Tests - gRPC - Streaming                     [jar]
+[INFO] Quarkus - Integration Tests - gRPC - Interceptors                  [jar]
+[INFO] Quarkus - Integration Tests - gRPC - Proto v2                      [jar]
+[INFO] Quarkus - Integration Tests - gRPC - Health                        [jar]
+[INFO] Quarkus - Integration Tests - gRPC - Hibernate                     [jar]
+[INFO] Quarkus - Integration Tests - gRPC - Hibernate Reactive            [jar]
+[INFO] Quarkus - Integration Tests - Helper project containing packaging a proto file for grpc-external-proto-test [jar]
+[INFO] Quarkus - Integration Tests - gRPC - External proto Test           [jar]
+[INFO] Quarkus - Integration Tests - gRPC with Stork - gathering response times [jar]
+[INFO] Quarkus - Integration Tests - gRPC - Stork - Simple                [jar]
+[INFO] Quarkus - Integration Tests - gRPC - Exceptions                    [jar]
+[INFO] Quarkus - Integration Tests - gRPC - Test Random Port              [jar]
+[INFO] Quarkus - Integration Tests - Google Cloud Functions HTTP          [jar]
+[INFO] Quarkus - Integration Tests - Google Cloud Function                [jar]
+[INFO] Quarkus - Integration Tests - Istio - Parent                       [pom]
+[INFO] Quarkus - Integration Tests - Istio - Invoker                      [jar]
+[INFO] Quarkus - Integration Tests - Management Interface                 [jar]
+[INFO] Quarkus - Integration Tests - Management Interface with authentication [jar]
+[INFO] Quarkus - Integration Tests - Virtual Threads                      [pom]
+[INFO] Quarkus - Integration Tests - Virtual Threads - gRPC               [jar]
+[INFO] Quarkus - Integration Tests - Virtual Threads - RESTEasy Reactive  [jar]
+[INFO] Quarkus - Integration Tests - Virtual Threads - Mailer             [jar]
+[INFO] Quarkus - Integration Tests - Virtual Threads - Redis Client and Cache [jar]
+[INFO] Quarkus - Integration Tests - Virtual Threads - REST Client Reactive [jar]
+[INFO] Quarkus - Integration Tests - Virtual Threads - Kafka              [jar]
+[INFO] Quarkus - Integration Tests - Virtual Threads - AMQP 1.0           [jar]
+[INFO] Quarkus - Integration Tests - Virtual Threads - JMS                [jar]
+[INFO] Quarkus - Integration Tests - Virtual Threads - Vert.x Event Bus   [jar]
+[INFO] Quarkus - Integration Tests - Virtual Threads - Scheduler          [jar]
+[INFO] Quarkus - Integration Tests - Virtual Threads - Quartz Scheduler   [jar]
+[INFO] Quarkus - Integration Tests - Virtual Threads - Disabled           [jar]
+[INFO] Quarkus - Integration Tests - Virtual Threads - Reactive Routes    [jar]
+[INFO] Quarkus - Documentation                                            [jar]
+[INFO] 
+[INFO] ---------------------< io.quarkus:quarkus-parent >----------------------
+[INFO] Building Quarkus - Parent POM 999-SNAPSHOT                      [1/1123]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ quarkus-parent ---
+[INFO] digraph "io.quarkus:quarkus-parent:pom:999-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< io.quarkus:quarkus-ide-config >--------------------
+[INFO] Building Quarkus - IDE/Tools - Config 999-SNAPSHOT              [2/1123]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ quarkus-ide-config ---
+[INFO] digraph "io.quarkus:quarkus-ide-config:jar:999-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< io.quarkus:quarkus-revapi-config >------------------
+[INFO] Building Quarkus - Revapi Configuration 999-SNAPSHOT            [3/1123]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ quarkus-revapi-config ---
+[INFO] digraph "io.quarkus:quarkus-revapi-config:jar:999-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< io.quarkus:quarkus-enforcer-rules >------------------
+[INFO] Building Quarkus - Enforcer Rules 999-SNAPSHOT                  [4/1123]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ quarkus-enforcer-rules ---
+[INFO] digraph "io.quarkus:quarkus-enforcer-rules:jar:999-SNAPSHOT" { 
+[INFO] 	"io.quarkus:quarkus-enforcer-rules:jar:999-SNAPSHOT" -> "org.apache.maven.enforcer:enforcer-api:jar:3.0.0-M3:provided" ; 
+[INFO] 	"io.quarkus:quarkus-enforcer-rules:jar:999-SNAPSHOT" -> "org.apache.maven:maven-core:jar:3.9.6:provided" ; 
+[INFO] 	"org.apache.maven.enforcer:enforcer-api:jar:3.0.0-M3:provided" -> "org.apache.maven:maven-plugin-api:jar:3.0:provided" ; 
+[INFO] 	"org.apache.maven.enforcer:enforcer-api:jar:3.0.0-M3:provided" -> "org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9:provided" ; 
+[INFO] 	"org.apache.maven:maven-plugin-api:jar:3.0:provided" -> "org.apache.maven:maven-model:jar:3.0:provided" ; 
+[INFO] 	"org.apache.maven:maven-plugin-api:jar:3.0:provided" -> "org.apache.maven:maven-artifact:jar:3.0:provided" ; 
+[INFO] 	"org.apache.maven:maven-plugin-api:jar:3.0:provided" -> "org.sonatype.sisu:sisu-inject-plexus:jar:1.4.2:provided" ; 
+[INFO] 	"org.sonatype.sisu:sisu-inject-plexus:jar:1.4.2:provided" -> "org.codehaus.plexus:plexus-component-annotations:jar:1.5.4:provided" ; 
+[INFO] 	"org.sonatype.sisu:sisu-inject-plexus:jar:1.4.2:provided" -> "org.codehaus.plexus:plexus-classworlds:jar:2.2.3:provided" ; 
+[INFO] 	"org.sonatype.sisu:sisu-inject-plexus:jar:1.4.2:provided" -> "org.sonatype.sisu:sisu-inject-bean:jar:1.4.2:provided" ; 
+[INFO] 	"org.sonatype.sisu:sisu-inject-bean:jar:1.4.2:provided" -> "org.sonatype.sisu:sisu-guice:jar:noaop:2.1.7:provided" ; 
+[INFO] 	"org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9:provided" -> "junit:junit:jar:3.8.1:provided" ; 
+[INFO] 	"org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9:provided" -> "org.codehaus.plexus:plexus-utils:jar:1.0.4:provided" ; 
+[INFO] 	"org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9:provided" -> "classworlds:classworlds:jar:1.1-alpha-2:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< io.quarkus.arc:arc-parent >----------------------
+[INFO] Building ArC - Parent pom 999-SNAPSHOT                          [5/1123]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ arc-parent ---
+[INFO] digraph "io.quarkus.arc:arc-parent:pom:999-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------------< io.quarkus.arc:arc >-------------------------
+[INFO] Building ArC - Runtime 999-SNAPSHOT                             [6/1123]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ arc ---
+[INFO] digraph "io.quarkus.arc:arc:jar:999-SNAPSHOT" { 
+[INFO] 	"io.quarkus.arc:arc:jar:999-SNAPSHOT" -> "jakarta.enterprise:jakarta.enterprise.cdi-api:jar:4.0.1:compile" ; 
+[INFO] 	"io.quarkus.arc:arc:jar:999-SNAPSHOT" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile" ; 
+[INFO] 	"io.quarkus.arc:arc:jar:999-SNAPSHOT" -> "jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile" ; 
+[INFO] 	"io.quarkus.arc:arc:jar:999-SNAPSHOT" -> "io.smallrye.reactive:mutiny:jar:2.5.1:compile" ; 
+[INFO] 	"io.quarkus.arc:arc:jar:999-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"io.quarkus.arc:arc:jar:999-SNAPSHOT" -> "org.jboss.logging:jboss-logging:jar:3.5.3.Final:compile" ; 
+[INFO] 	"jakarta.enterprise:jakarta.enterprise.cdi-api:jar:4.0.1:compile" -> "jakarta.enterprise:jakarta.enterprise.lang-model:jar:4.0.1:compile" ; 
+[INFO] 	"jakarta.enterprise:jakarta.enterprise.cdi-api:jar:4.0.1:compile" -> "jakarta.el:jakarta.el-api:jar:5.0.0:compile" ; 
+[INFO] 	"jakarta.enterprise:jakarta.enterprise.cdi-api:jar:4.0.1:compile" -> "jakarta.interceptor:jakarta.interceptor-api:jar:2.1.0:compile" ; 
+[INFO] 	"jakarta.enterprise:jakarta.enterprise.cdi-api:jar:4.0.1:compile" -> "jakarta.inject:jakarta.inject-api:jar:2.0.1:compile" ; 
+[INFO] 	"io.smallrye.reactive:mutiny:jar:2.5.1:compile" -> "io.smallrye.common:smallrye-common-annotation:jar:2.1.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< io.quarkus.arc:arc-processor >--------------------
+[INFO] Building ArC - Processor 999-SNAPSHOT                           [7/1123]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Quarkus - Project pom 999-SNAPSHOT:
+[INFO] 
+[INFO] Quarkus - Parent POM ............................... SUCCESS [  0.286 s]
+[INFO] Quarkus - IDE/Tools - Config ....................... SUCCESS [  0.017 s]
+[INFO] Quarkus - Revapi Configuration ..................... SUCCESS [  0.005 s]
+[INFO] Quarkus - Enforcer Rules ........................... SUCCESS [  0.036 s]
+[INFO] ArC - Parent pom ................................... SUCCESS [  0.005 s]
+[INFO] ArC - Runtime ...................................... SUCCESS [  0.033 s]
+[INFO] ArC - Processor .................................... FAILURE [  0.017 s]
+[INFO] ArC - Tests ........................................ SKIPPED
+[INFO] ArC - Arquillian Container ......................... SKIPPED
+[INFO] ArC - AtInject TCK Runner .......................... SKIPPED
+[INFO] ArC - CDI TCK Porting Package ...................... SKIPPED
+[INFO] ArC - CDI TCK Runner ............................... SKIPPED
+[INFO] ArC - Lang Model TCK Runner ........................ SKIPPED
+[INFO] Quarkus - Bootstrap - Parent ....................... SKIPPED
+[INFO] Quarkus - Bootstrap - BOM .......................... SKIPPED
+[INFO] Quarkus - Bootstrap - Test BOM ..................... SKIPPED
+[INFO] Quarkus - Bootstrap - App Model .................... SKIPPED
+[INFO] Quarkus - Bootstrap - Maven Resolver ............... SKIPPED
+[INFO] Quarkus - Bootstrap - Gradle Resolver .............. SKIPPED
+[INFO] Quarkus - Bootstrap - Core ......................... SKIPPED
+[INFO] Quarkus - Bootstrap - Runner ....................... SKIPPED
+[INFO] Qute - Parent ...................................... SKIPPED
+[INFO] Qute - Core ........................................ SKIPPED
+[INFO] Qute - Generator ................................... SKIPPED
+[INFO] Quarkus - Dev tools - Parent ....................... SKIPPED
+[INFO] Quarkus - Dev tools - Message Writer ............... SKIPPED
+[INFO] Quarkus - Dev tools - Registry Client API .......... SKIPPED
+[INFO] Quarkus - Dev tools - Utilities .................... SKIPPED
+[INFO] Quarkus - Dev tools - Base Codestarts .............. SKIPPED
+[INFO] Quarkus - Dev tools - Codestarts ................... SKIPPED
+[INFO] Quarkus - Dev tools - Common ....................... SKIPPED
+[INFO] Quarkus - Dev tools - Testing ...................... SKIPPED
+[INFO] Quarkus - Analytics - Common ....................... SKIPPED
+[INFO] RESTEasy Reactive - Parent pom ..................... SKIPPED
+[INFO] RESTEasy Reactive - Common Parent .................. SKIPPED
+[INFO] RESTEasy Reactive - Common Types ................... SKIPPED
+[INFO] RESTEasy Reactive - Common Runtime ................. SKIPPED
+[INFO] RESTEasy Reactive - Common Processor ............... SKIPPED
+[INFO] RESTEasy Reactive - Build support .................. SKIPPED
+[INFO] RESTEasy Reactive - Server Parent .................. SKIPPED
+[INFO] RESTEasy Reactive - Runtime ........................ SKIPPED
+[INFO] RESTEasy Reactive - Processor ...................... SKIPPED
+[INFO] RESTEasy Reactive - Client Parent .................. SKIPPED
+[INFO] RESTEasy Reactive - Client - Runtime ............... SKIPPED
+[INFO] RESTEasy Reactive - Vert.x Support - Runtime ....... SKIPPED
+[INFO] RESTEasy Reactive - JSONB Support - Runtime ........ SKIPPED
+[INFO] RESTEasy Reactive - Jackson Support - Runtime ...... SKIPPED
+[INFO] RESTEasy Reactive - Client - Processor ............. SKIPPED
+[INFO] Quarkus - Extension Maven plugin ................... SKIPPED
+[INFO] Quarkus - JUnit 5 Extension - Virtual Threads ...... SKIPPED
+[INFO] Quarkus - Project pom .............................. SKIPPED
+[INFO] Quarkus - BOM ...................................... SKIPPED
+[INFO] Quarkus - BOM - Test ............................... SKIPPED
+[INFO] Quarkus - Build Parent ............................. SKIPPED
+[INFO] Quarkus - Development mode - SPI ................... SKIPPED
+[INFO] Quarkus - Core - Class Change Agent ................ SKIPPED
+[INFO] Quarkus - IDE Launcher ............................. SKIPPED
+[INFO] Quarkus - Core ..................................... SKIPPED
+[INFO] Quarkus - Core - Extension Processor ............... SKIPPED
+[INFO] Quarkus - Core - Runtime ........................... SKIPPED
+[INFO] Quarkus - Builder .................................. SKIPPED
+[INFO] Quarkus - Dev tools ................................ SKIPPED
+[INFO] Quarkus - Platform Properties ...................... SKIPPED
+[INFO] Quarkus - Core - Deployment ........................ SKIPPED
+[INFO] Quarkus - JUnit 4 Mock ............................. SKIPPED
+[INFO] Quarkus - Test Framework ........................... SKIPPED
+[INFO] Quarkus - Test Framework - Common .................. SKIPPED
+[INFO] Quarkus - Test Framework - H2 Database Support ..... SKIPPED
+[INFO] Quarkus - Test Framework - JUnit 5 - Properties .... SKIPPED
+[INFO] Quarkus - Test Framework - JUnit 5 ................. SKIPPED
+[INFO] Quarkus - Test Framework - gRPC test utils ......... SKIPPED
+[INFO] Quarkus - Test Framework - Derby Database Support .. SKIPPED
+[INFO] Quarkus - Test Framework - Kubernetes Client Mock Server support SKIPPED
+[INFO] Quarkus - Test Framework - OpenShift Client Mock Server support SKIPPED
+[INFO] Quarkus - Test Framework - JUnit 5 Internal Test Framework SKIPPED
+[INFO] Quarkus - Test framework - JUnit 5 - Mockito Config  SKIPPED
+[INFO] Quarkus - Extensions - Parent pom .................. SKIPPED
+[INFO] Quarkus - SmallRye Context Propagation ............. SKIPPED
+[INFO] Quarkus - SmallRye Context Propagation - SPI ....... SKIPPED
+[INFO] Quarkus - Vert.x - HTTP ............................ SKIPPED
+[INFO] Quarkus - Vert.x - HTTP - Dev UI SPI ............... SKIPPED
+[INFO] Quarkus - ArC ...................................... SKIPPED
+[INFO] Quarkus - ArC - Runtime ............................ SKIPPED
+[INFO] Quarkus - ArC - Test Supplement .................... SKIPPED
+[INFO] Quarkus - ArC - Deployment ......................... SKIPPED
+[INFO] Quarkus - SmallRye Context Propagation - Runtime ... SKIPPED
+[INFO] Quarkus - Mutiny ................................... SKIPPED
+[INFO] Quarkus - Mutiny - Runtime ......................... SKIPPED
+[INFO] Quarkus - Test framework - JUnit 5 - Mockito ....... SKIPPED
+[INFO] Quarkus - Test Framework - JUnit 5 Component Test Framework SKIPPED
+[INFO] Quarkus - Netty .................................... SKIPPED
+[INFO] Quarkus - Netty - Runtime .......................... SKIPPED
+[INFO] Quarkus - Virtual Threads .......................... SKIPPED
+[INFO] Quarkus - Virtual Threads - Runtime ................ SKIPPED
+[INFO] Quarkus - Vert.x ................................... SKIPPED
+[INFO] Quarkus - Vert.x Late Bound MDC Provider ........... SKIPPED
+[INFO] Quarkus - Vert.x - Runtime ......................... SKIPPED
+[INFO] Quarkus - Test framework - Vert.x .................. SKIPPED
+[INFO] Quarkus - Datasource ............................... SKIPPED
+[INFO] Quarkus - Datasource - Common ...................... SKIPPED
+[INFO] Quarkus - Credentials .............................. SKIPPED
+[INFO] Quarkus - Credentials - Runtime .................... SKIPPED
+[INFO] Quarkus - Datasource - Runtime ..................... SKIPPED
+[INFO] Quarkus - Transaction Annotations .................. SKIPPED
+[INFO] Quarkus - Transaction Annotations - Runtime ........ SKIPPED
+[INFO] Quarkus - Narayana JTA ............................. SKIPPED
+[INFO] Quarkus - Narayana JTA - Runtime ................... SKIPPED
+[INFO] Quarkus - Security ................................. SKIPPED
+[INFO] Quarkus - Security - Runtime SPI ................... SKIPPED
+[INFO] Quarkus - Vert.x - HTTP - Runtime .................. SKIPPED
+[INFO] Quarkus - JSON-P ................................... SKIPPED
+[INFO] Quarkus - JSON-P - Runtime ......................... SKIPPED
+[INFO] Quarkus - SmallRye Health .......................... SKIPPED
+[INFO] Quarkus - SmallRye Health - Runtime ................ SKIPPED
+[INFO] Quarkus - Agroal ................................... SKIPPED
+[INFO] Quarkus - Agroal - Runtime ......................... SKIPPED
+[INFO] Quarkus - RESTEasy Classic - Parent - Aggregator ... SKIPPED
+[INFO] Quarkus - RESTEasy Classic - Common ................ SKIPPED
+[INFO] Quarkus - RESTEasy Classic - Common - Runtime ...... SKIPPED
+[INFO] Quarkus - RESTEasy Classic - Server common ......... SKIPPED
+[INFO] Quarkus - RESTEasy Classic - Server common - Runtime SKIPPED
+[INFO] Quarkus - RESTEasy Classic ......................... SKIPPED
+[INFO] Quarkus - RESTEasy Classic - Runtime ............... SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - Parent - Aggregator .. SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - Common ............... SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - Common - Runtime ..... SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - Kotlin ............... SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - Kotlin - Runtime ..... SKIPPED
+[INFO] Quarkus - RESTEasy Reactive ........................ SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - Runtime .............. SKIPPED
+[INFO] Quarkus - SmallRye Metrics ......................... SKIPPED
+[INFO] Quarkus - SmallRye Metrics - Runtime ............... SKIPPED
+[INFO] Quarkus - Caffeine ................................. SKIPPED
+[INFO] Quarkus - Caffeine - Runtime ....................... SKIPPED
+[INFO] Quarkus - Jackson .................................. SKIPPED
+[INFO] Quarkus - Jackson - Runtime ........................ SKIPPED
+[INFO] Quarkus - JSON-B ................................... SKIPPED
+[INFO] Quarkus - JSON-B - Runtime ......................... SKIPPED
+[INFO] Quarkus - JAXP ..................................... SKIPPED
+[INFO] Quarkus - JAXP - Runtime ........................... SKIPPED
+[INFO] Quarkus - JAXB ..................................... SKIPPED
+[INFO] Quarkus - JAXB - Runtime ........................... SKIPPED
+[INFO] Quarkus - Hibernate ORM ............................ SKIPPED
+[INFO] Quarkus - Hibernate ORM - Runtime .................. SKIPPED
+[INFO] Quarkus - Reactive Datasource ...................... SKIPPED
+[INFO] Quarkus - Reactive Datasource - Runtime ............ SKIPPED
+[INFO] Quarkus - Hibernate Reactive ....................... SKIPPED
+[INFO] Quarkus - Hibernate Reactive - Runtime ............. SKIPPED
+[INFO] Quarkus - Panache .................................. SKIPPED
+[INFO] Quarkus - Panache - Common ......................... SKIPPED
+[INFO] Quarkus - Panache - Common - Runtime ............... SKIPPED
+[INFO] Quarkus - Panache - Hibernate - Common ............. SKIPPED
+[INFO] Quarkus - Panache - Hibernate - Common - Runtime ... SKIPPED
+[INFO] Quarkus - Hibernate Reactive with Panache - Common . SKIPPED
+[INFO] Quarkus - Hibernate Reactive with Panache - Common - Runtime SKIPPED
+[INFO] Quarkus - Test framework - Hibernate Reactive Panache SKIPPED
+[INFO] Quarkus - Amazon Lambda ............................ SKIPPED
+[INFO] Quarkus - Amazon Lambda - Common Runtime ........... SKIPPED
+[INFO] Quarkus - Test Framework - Amazon Lambda ........... SKIPPED
+[INFO] Quarkus - Test Framework - Arquillian Adapter ...... SKIPPED
+[INFO] Quarkus - Test Framework - Dev Mode Test Utils ..... SKIPPED
+[INFO] Quarkus - Vert.x - HTTP - Deployment - SPI ......... SKIPPED
+[INFO] Quarkus - Vert.x - HTTP - Dev UI Tests ............. SKIPPED
+[INFO] Quarkus - Test Framework - Maven Integration ....... SKIPPED
+[INFO] Quarkus - Test framework - embedded LDAP server .... SKIPPED
+[INFO] Quarkus - Security - Runtime ....................... SKIPPED
+[INFO] Quarkus - Test Framework - Security ................ SKIPPED
+[INFO] Quarkus - Test Framework - Security JWT ............ SKIPPED
+[INFO] Quarkus - SmallRye JWT Token Build ................. SKIPPED
+[INFO] Quarkus - SmallRye JWT Token Build - Runtime ....... SKIPPED
+[INFO] Quarkus - OpenID Connect Common .................... SKIPPED
+[INFO] Quarkus - OpenID Connect Common - Runtime .......... SKIPPED
+[INFO] Quarkus - OpenID Connect Adapter ................... SKIPPED
+[INFO] Quarkus - OpenID Connect Adapter - Runtime ......... SKIPPED
+[INFO] Quarkus - Test Framework - Security OIDC ........... SKIPPED
+[INFO] Quarkus - Security WebAuthn ........................ SKIPPED
+[INFO] Quarkus - Security WebAuthn - Runtime .............. SKIPPED
+[INFO] Quarkus - Test Framework - Security WebAuthn ....... SKIPPED
+[INFO] Quarkus - Test Framework - OIDC Wiremock Server support SKIPPED
+[INFO] Quarkus - Test Framework - Keycloak Server support . SKIPPED
+[INFO] Quarkus - Jacoco ................................... SKIPPED
+[INFO] Quarkus - Jacoco - Runtime ......................... SKIPPED
+[INFO] Quarkus - Jacoco - Deployment ...................... SKIPPED
+[INFO] Quarkus - Reactive Streams Operators ............... SKIPPED
+[INFO] Quarkus - SmallRye Mutiny Reactive Streams Operators SKIPPED
+[INFO] Quarkus - SmallRye Mutiny Reactive Streams Operators - Runtime SKIPPED
+[INFO] Quarkus - Kubernetes Service Binding ............... SKIPPED
+[INFO] Quarkus - Kubernetes Service Binding - Runtime ..... SKIPPED
+[INFO] Quarkus - MongoDB Client ........................... SKIPPED
+[INFO] Quarkus - MongoDB Client - Runtime ................. SKIPPED
+[INFO] Quarkus - Test Framework - MongoDB Support ......... SKIPPED
+[INFO] Quarkus - Test Framework - Infinispan Client Support SKIPPED
+[INFO] Quarkus - Kafka - Client ........................... SKIPPED
+[INFO] Quarkus - Kafka - Client - Runtime ................. SKIPPED
+[INFO] Quarkus - Test Framework - Kafka Support ........... SKIPPED
+[INFO] Quarkus - Test Framework - Google Cloud Functions .. SKIPPED
+[INFO] Quarkus - Netty Loom Adaptor ....................... SKIPPED
+[INFO] Quarkus - Netty Loom Adaptor - Runtime ............. SKIPPED
+[INFO] Quarkus - Netty - Deployment ....................... SKIPPED
+[INFO] Quarkus - Netty Loom Adaptor - Deployment .......... SKIPPED
+[INFO] Quarkus - Virtual Threads - Deployment ............. SKIPPED
+[INFO] Quarkus - SmallRye Context Propagation - Deployment  SKIPPED
+[INFO] Quarkus - Mutiny - Deployment ...................... SKIPPED
+[INFO] Quarkus - Vert.x - Deployment ...................... SKIPPED
+[INFO] Quarkus - Scheduler ................................ SKIPPED
+[INFO] Quarkus - Scheduler - API .......................... SKIPPED
+[INFO] Quarkus - Scheduler - SPI .......................... SKIPPED
+[INFO] Quarkus - Scheduler - Common ....................... SKIPPED
+[INFO] Quarkus - Scheduler - Kotlin ....................... SKIPPED
+[INFO] Quarkus - Scheduler - Runtime ...................... SKIPPED
+[INFO] Quarkus - Kubernetes ............................... SKIPPED
+[INFO] Quarkus - Kubernetes - SPI ......................... SKIPPED
+[INFO] Quarkus - Vert.x - HTTP - Dev UI Resources ......... SKIPPED
+[INFO] Quarkus - Security - SPI ........................... SKIPPED
+[INFO] Quarkus - Security - Test Utilities ................ SKIPPED
+[INFO] Quarkus - Security - Deployment .................... SKIPPED
+[INFO] Quarkus - Vert.x - HTTP - Deployment ............... SKIPPED
+[INFO] Quarkus - gRPC Common .............................. SKIPPED
+[INFO] Quarkus - gRPC Common - Runtime .................... SKIPPED
+[INFO] Quarkus - Apache HttpClient - Parent ............... SKIPPED
+[INFO] Quarkus - Apache HttpClient - Runtime .............. SKIPPED
+[INFO] Quarkus - REST Clients Config ...................... SKIPPED
+[INFO] Quarkus - REST Clients Config - Runtime ............ SKIPPED
+[INFO] Quarkus - RESTEasy Classic's REST Client ........... SKIPPED
+[INFO] Quarkus - RESTEasy Classic's REST Client - Runtime . SKIPPED
+[INFO] Quarkus - gRPC parent .............................. SKIPPED
+[INFO] Quarkus - gRPC - API ............................... SKIPPED
+[INFO] Quarkus - SmallRye Stork Integration ............... SKIPPED
+[INFO] Quarkus - SmallRye Stork - Runtime ................. SKIPPED
+[INFO] Quarkus - gRPC - Protoc Plugin ..................... SKIPPED
+[INFO] Quarkus - gRPC - Code Gen .......................... SKIPPED
+[INFO] Quarkus - gRPC - Stubs for health and reflection ... SKIPPED
+[INFO] Quarkus - gRPC - Runtime ........................... SKIPPED
+[INFO] Quarkus - SmallRye Reactive Messaging .............. SKIPPED
+[INFO] Quarkus - SmallRye Reactive Messaging - Kotlin ..... SKIPPED
+[INFO] Quarkus - SmallRye Reactive Messaging - Runtime .... SKIPPED
+[INFO] Quarkus - OpenTelemetry ............................ SKIPPED
+[INFO] Quarkus - OpenTelemetry - Runtime .................. SKIPPED
+[INFO] Quarkus - Undertow ................................. SKIPPED
+[INFO] Quarkus - Undertow - Runtime ....................... SKIPPED
+[INFO] Quarkus - Redis Client ............................. SKIPPED
+[INFO] Quarkus - Redis Client - Runtime ................... SKIPPED
+[INFO] Quarkus - Micrometer ............................... SKIPPED
+[INFO] Quarkus - Micrometer - Runtime ..................... SKIPPED
+[INFO] Quarkus - Micrometer Registry - Prometheus - Parent  SKIPPED
+[INFO] Quarkus - Micrometer Registry - Prometheus Runtime . SKIPPED
+[INFO] Quarkus - RESTEasy Classic - Common - SPI .......... SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - SPI .................. SKIPPED
+[INFO] Quarkus - Undertow - SPI ........................... SKIPPED
+[INFO] Quarkus - Datasource - Deployment .................. SKIPPED
+[INFO] Quarkus - Agroal - SPI ............................. SKIPPED
+[INFO] Quarkus - gRPC Common - Deployment ................. SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - Server - SPI - Deployment SKIPPED
+[INFO] Quarkus - Jackson - SPI ............................ SKIPPED
+[INFO] Quarkus - Jackson - Deployment ..................... SKIPPED
+[INFO] Quarkus - Reactive Routes .......................... SKIPPED
+[INFO] Quarkus - Reactive Routes - Runtime ................ SKIPPED
+[INFO] Quarkus - Hibernate Validator ...................... SKIPPED
+[INFO] Quarkus - Hibernate Validator - SPI ................ SKIPPED
+[INFO] Quarkus - JSON-P - Deployment ...................... SKIPPED
+[INFO] Quarkus - RESTEasy Classic - Common - Deployment ... SKIPPED
+[INFO] Quarkus - JAX-RS SPI - Parent ...................... SKIPPED
+[INFO] Quarkus - JAX-RS - SPI - Deployment ................ SKIPPED
+[INFO] Quarkus - RESTEasy Classic - Server common - SPI ... SKIPPED
+[INFO] Quarkus - RESTEasy Classic - Server common - Deployment SKIPPED
+[INFO] Quarkus - Undertow - Deployment .................... SKIPPED
+[INFO] Quarkus - RESTEasy Classic - Deployment ............ SKIPPED
+[INFO] Quarkus - Elytron Security - Common ................ SKIPPED
+[INFO] Quarkus - Elytron Security - Common - Runtime ...... SKIPPED
+[INFO] Quarkus - Elytron Security - Common - Deployment ... SKIPPED
+[INFO] Quarkus - Elytron Security ......................... SKIPPED
+[INFO] Quarkus - Elytron Security - Runtime ............... SKIPPED
+[INFO] Quarkus - Elytron Security - Deployment ............ SKIPPED
+[INFO] Quarkus - Elytron Security Properties File ......... SKIPPED
+[INFO] Quarkus - Elytron Security Properties File - Runtime SKIPPED
+[INFO] Quarkus - Elytron Security Properties File - Deployment SKIPPED
+[INFO] Quarkus - Hibernate Validator - Runtime ............ SKIPPED
+[INFO] Quarkus - RESTEasy Classic - Jackson ............... SKIPPED
+[INFO] Quarkus - RESTEasy Classic - Jackson - Runtime ..... SKIPPED
+[INFO] Quarkus - RESTEasy Classic - Jackson - Deployment .. SKIPPED
+[INFO] Quarkus - Hibernate Validator - Deployment ......... SKIPPED
+[INFO] Quarkus - Reactive Routes - Deployment ............. SKIPPED
+[INFO] Quarkus - Apache HttpClient - Deployment ........... SKIPPED
+[INFO] Quarkus - REST Clients Config - Deployment ......... SKIPPED
+[INFO] Quarkus - SmallRye Fault Tolerance ................. SKIPPED
+[INFO] Quarkus - SmallRye Fault Tolerance - Runtime ....... SKIPPED
+[INFO] Quarkus - SmallRye Fault Tolerance - Deployment .... SKIPPED
+[INFO] Quarkus - RESTEasy Classic's REST Client - Deployment SKIPPED
+[INFO] Quarkus - SmallRye Health - SPI .................... SKIPPED
+[INFO] Quarkus - SmallRye OpenAPI ......................... SKIPPED
+[INFO] Quarkus - SmallRye OpenAPI - SPI ................... SKIPPED
+[INFO] Quarkus - SmallRye OpenAPI - Common ................ SKIPPED
+[INFO] Quarkus - SmallRye OpenAPI - Common - Deployment ... SKIPPED
+[INFO] Quarkus - Swagger UI ............................... SKIPPED
+[INFO] Quarkus - Swagger UI - Runtime ..................... SKIPPED
+[INFO] Quarkus - Swagger UI - Deployment .................. SKIPPED
+[INFO] Quarkus - SmallRye OpenAPI - Runtime ............... SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - Common - Deployment .. SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - Kotlin - Deployment .. SKIPPED
+[INFO] Quarkus - Jakarta REST Client Reactive ............. SKIPPED
+[INFO] Quarkus - Jakarta REST Client Reactive - Runtime ... SKIPPED
+[INFO] Quarkus - Jakarta REST Client Reactive - Deployment  SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - Deployment ........... SKIPPED
+[INFO] Quarkus - SmallRye OpenAPI - Deployment ............ SKIPPED
+[INFO] Quarkus - SmallRye Health - Deployment ............. SKIPPED
+[INFO] Quarkus - SmallRye Stork - Deployment .............. SKIPPED
+[INFO] Quarkus - gRPC - Deployment ........................ SKIPPED
+[INFO] Quarkus - SmallRye GraphQL ......................... SKIPPED
+[INFO] Quarkus - SmallRye GraphQL - Runtime ............... SKIPPED
+[INFO] Quarkus - JSON-B - SPI ............................. SKIPPED
+[INFO] Quarkus - JSON-B - Deployment ...................... SKIPPED
+[INFO] Quarkus - SmallRye Metrics - SPI ................... SKIPPED
+[INFO] Quarkus - SmallRye Metrics - Deployment ............ SKIPPED
+[INFO] Quarkus - SmallRye GraphQL - Deployment ............ SKIPPED
+[INFO] Quarkus - Kubernetes Service Binding - SPI ......... SKIPPED
+[INFO] Quarkus - DevServices .............................. SKIPPED
+[INFO] Quarkus - DevServices - Common ..................... SKIPPED
+[INFO] Quarkus - DevServices - Deployment ................. SKIPPED
+[INFO] Quarkus - Datasource - Deployment .................. SKIPPED
+[INFO] Quarkus - Narayana JTA - Deployment ................ SKIPPED
+[INFO] Quarkus - Credentials - Deployment ................. SKIPPED
+[INFO] Quarkus - DevServices - H2 ......................... SKIPPED
+[INFO] Quarkus - JDBC ..................................... SKIPPED
+[INFO] Quarkus - JDBC - H2 ................................ SKIPPED
+[INFO] Quarkus - JDBC - H2 - Runtime ...................... SKIPPED
+[INFO] Quarkus - JDBC - H2 - Deployment ................... SKIPPED
+[INFO] Quarkus - Agroal - Deployment ...................... SKIPPED
+[INFO] Quarkus - OpenTelemetry - Deployment ............... SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - Jackson Common Bits .. SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - Jackson Common Bits - Runtime SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - Common Jackson Bits - Deployment SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - Jackson .............. SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - Jackson - Runtime .... SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - Jackson - Deployment . SKIPPED
+[INFO] Quarkus - Redis Client - Deployment ................ SKIPPED
+[INFO] Quarkus - RESTEasy Reactive's REST Client .......... SKIPPED
+[INFO] Quarkus - RESTEasy Reactive's REST Client - Runtime  SKIPPED
+[INFO] Quarkus - RESTEasy Reactive's REST Client - SPI - Deployment SKIPPED
+[INFO] Quarkus - RESTEasy Reactive's REST Client - Deployment SKIPPED
+[INFO] Quarkus - Micrometer - Deployment .................. SKIPPED
+[INFO] Quarkus - Micrometer Registry - Prometheus Deployment SKIPPED
+[INFO] Quarkus - Scheduler - Deployment ................... SKIPPED
+[INFO] Quarkus - Quartz ................................... SKIPPED
+[INFO] Quarkus - Quartz - Runtime ......................... SKIPPED
+[INFO] Quarkus - Quartz - Deployment ...................... SKIPPED
+[INFO] Quarkus - JAXP - Deployment ........................ SKIPPED
+[INFO] Quarkus - Configuration - YAML ..................... SKIPPED
+[INFO] Quarkus - Configuration - YAML - Runtime ........... SKIPPED
+[INFO] Quarkus - Configuration - YAML - Deployment ........ SKIPPED
+[INFO] Quarkus - JAXB - Deployment ........................ SKIPPED
+[INFO] Quarkus - HAL ...................................... SKIPPED
+[INFO] Quarkus - HAL - Runtime ............................ SKIPPED
+[INFO] Quarkus - HAL - Deployment ......................... SKIPPED
+[INFO] Quarkus - Vert.x - HTTP - Dev Console Runtime SPI .. SKIPPED
+[INFO] Quarkus - Vert.x - HTTP - Dev Console SPI .......... SKIPPED
+[INFO] Quarkus - WebSockets Client ........................ SKIPPED
+[INFO] Quarkus - WebSockets Client - Runtime .............. SKIPPED
+[INFO] Quarkus - WebSockets ............................... SKIPPED
+[INFO] Quarkus - WebSockets - Runtime ..................... SKIPPED
+[INFO] Quarkus - WebSockets Client - Deployment ........... SKIPPED
+[INFO] Quarkus - WebSockets - Deployment .................. SKIPPED
+[INFO] Quarkus - WebSockets Aggregator .................... SKIPPED
+[INFO] Quarkus - WebJar Locator ........................... SKIPPED
+[INFO] Quarkus - WebJar Locator - Runtime ................. SKIPPED
+[INFO] Quarkus - WebJar Locator - Deployment .............. SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - JSON-B Common Bits ... SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - JSON-B Common Bits - Runtime SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - JSON-B Common Bits - Deployment SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - JSON-B ............... SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - JSON-B - Runtime ..... SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - JSON-B - Deployment .. SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - JAXB ................. SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - JAXB - Runtime ....... SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - JAXB - Deployment .... SKIPPED
+[INFO] Quarkus - Panache - Common - Deployment ............ SKIPPED
+[INFO] Quarkus - Cache .................................... SKIPPED
+[INFO] Quarkus - Cache - Runtime SPI ...................... SKIPPED
+[INFO] Quarkus - Cache - Deployment - SPI ................. SKIPPED
+[INFO] Quarkus - Cache - Runtime .......................... SKIPPED
+[INFO] Quarkus - Qute ..................................... SKIPPED
+[INFO] Quarkus - Qute - Runtime ........................... SKIPPED
+[INFO] Quarkus - Caffeine - Deployment .................... SKIPPED
+[INFO] Quarkus - Cache - Deployment ....................... SKIPPED
+[INFO] Quarkus - Qute - Deployment ........................ SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - Qute ................. SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - Qute - Runtime ....... SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - Qute - Deployment .... SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - Servlet .............. SKIPPED
+[INFO] Quarkus - RESTEasy Reactive Servlet - Runtime ...... SKIPPED
+[INFO] Quarkus - RESTEasy Reactive Servlet - Deployment ... SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - Kotlin ............... SKIPPED
+[INFO] Quarkus - RESTEasy Reactive's REST Client Jackson .. SKIPPED
+[INFO] Quarkus - RESTEasy Reactive's REST Client Jackson .. SKIPPED
+[INFO] Quarkus - RESTEasy Reactive's REST Client Jackson - Deployment SKIPPED
+[INFO] Quarkus - RESTEasy Reactive's REST Client JSON-B ... SKIPPED
+[INFO] Quarkus - RESTEasy Reactive's REST Client JSON-B ... SKIPPED
+[INFO] Quarkus - RESTEasy Reactive's REST Client JSON-B - Deployment SKIPPED
+[INFO] Quarkus - RESTEasy Reactive's REST Client JAXB ..... SKIPPED
+[INFO] Quarkus - RESTEasy Reactive's REST Client JAXB ..... SKIPPED
+[INFO] Quarkus - RESTEasy Reactive's REST Client JAXB - Deployment SKIPPED
+[INFO] Quarkus - Kotlin ................................... SKIPPED
+[INFO] Quarkus - Kotlin - Runtime ......................... SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - Kotlin Serialization Common Parent SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - Kotlin Serialization Common SKIPPED
+[INFO] Quarkus - RESTEasy Reactive's REST Client Kotlin Serialization Parent SKIPPED
+[INFO] Quarkus - RESTEasy Reactive's REST Client Kotlin Serialization SKIPPED
+[INFO] Quarkus - Kotlin - Deployment ...................... SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - Kotlin Serialization Common Deployment SKIPPED
+[INFO] Quarkus - RESTEasy Reactive's REST Client Kotlin Serialization - Deployment SKIPPED
+[INFO] Quarkus - RESTEasy Reactive's REST Client Kotlin Serialization - Tests SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - Links ................ SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - Links - Runtime ...... SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - Links - Deployment ... SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - Kotlin Serialization . SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - Kotlin Serialization - Runtime SKIPPED
+[INFO] Quarkus - RESTEasy Reactive - Kotlin Serialization - Deployment SKIPPED
+[INFO] Quarkus - Info ..................................... SKIPPED
+[INFO] Quarkus - Info - Runtime SPI ....................... SKIPPED
+[INFO] Quarkus - Info - SPI ............................... SKIPPED
+[INFO] Quarkus - Info - Runtime ........................... SKIPPED
+[INFO] Quarkus - Info - Deployment ........................ SKIPPED
+[INFO] Quarkus - RESTEasy Classic - JSON-B ................ SKIPPED
+[INFO] Quarkus - RESTEasy Classic - JSON-B - Runtime ...... SKIPPED
+[INFO] Quarkus - RESTEasy Classic - JSON-B - Deployment ... SKIPPED
+[INFO] Quarkus - RESTEasy Classic - JAXB .................. SKIPPED
+[INFO] Quarkus - RESTEasy Classic - JAXB - Runtime ........ SKIPPED
+[INFO] Quarkus - RESTEasy Classic - JAXB - Deployment ..... SKIPPED
+[INFO] Quarkus - RESTEasy Classic - Links ................. SKIPPED
+[INFO] Quarkus - RESTEasy Classic - Links - Runtime ....... SKIPPED
+[INFO] Quarkus - RESTEasy Classic - Links - Deployment .... SKIPPED
+[INFO] Quarkus - RESTEasy Classic - Mutiny - Common ....... SKIPPED
+[INFO] Quarkus - RESTEasy Classic - Mutiny - Common - Runtime SKIPPED
+[INFO] Quarkus - RESTEasy Classic - Mutiny - Common - Deployment SKIPPED
+[INFO] Quarkus - RESTEasy Classic - Mutiny ................ SKIPPED
+[INFO] Quarkus - RESTEasy Classic - Mutiny - Runtime ...... SKIPPED
+[INFO] Quarkus - RESTEasy Classic - Mutiny - Deployment ... SKIPPED
+[INFO] Quarkus - RESTEasy Classic - Qute .................. SKIPPED
+[INFO] Quarkus - RESTEasy Classic - Qute - Runtime ........ SKIPPED
+[INFO] Quarkus - RESTEasy Classic - Qute - Deployment ..... SKIPPED
+[INFO] Quarkus - RESTEasy Classic - Multipart ............. SKIPPED
+[INFO] Quarkus - RESTEasy Classic - Multipart - Runtime ... SKIPPED
+[INFO] Quarkus - RESTEasy Classic - Multipart - Deployment  SKIPPED
+[INFO] Quarkus - RESTEasy Classic's REST Client - Jackson . SKIPPED
+[INFO] Quarkus - RESTEasy Classic's REST Client - Jackson - Runtime SKIPPED
+[INFO] Quarkus - RESTEasy Classic's REST Client - Jackson - Deployment SKIPPED
+[INFO] Quarkus - RESTEasy Classic's REST Client - JSON-B .. SKIPPED
+[INFO] Quarkus - RESTEasy Classic's REST Client - JSON-B - Runtime SKIPPED
+[INFO] Quarkus - RESTEasy Classic's REST Client - JSON-B - Deployment SKIPPED
+[INFO] Quarkus - RESTEasy Classic's REST Client - JAXB .... SKIPPED
+[INFO] Quarkus - RESTEasy Classic's REST Client - JAXB - Runtime SKIPPED
+[INFO] Quarkus - RESTEasy Classic's REST Client - JAXB - Deployment SKIPPED
+[INFO] Quarkus - RESTEasy Classic's REST Client - Mutiny .. SKIPPED
+[INFO] Quarkus - RESTEasy Classic's REST Client - Mutiny - Runtime SKIPPED
+[INFO] Quarkus - RESTEasy Classic's REST Client - Mutiny - Deployment SKIPPED
+[INFO] Quarkus - SmallRye Reactive Streams Operators (deprecated) SKIPPED
+[INFO] Quarkus - SmallRye Reactive Streams Operators - Runtime SKIPPED
+[INFO] Quarkus - SmallRye Reactive Streams Operators - Deployment SKIPPED
+[INFO] Quarkus - SmallRye Reactive Type Converters ........ SKIPPED
+[INFO] Quarkus - SmallRye Reactive Type Converters - Runtime SKIPPED
+[INFO] Quarkus - SmallRye Reactive Type Converters - Deployment SKIPPED
+[INFO] Quarkus - SmallRye Mutiny Reactive Streams Operators - Deployment SKIPPED
+[INFO] Quarkus - SmallRye Reactive Messaging - Deployment . SKIPPED
+[INFO] Quarkus - Kafka - Client - Deployment .............. SKIPPED
+[INFO] Quarkus - SmallRye Reactive Messaging - Kafka ...... SKIPPED
+[INFO] Quarkus - SmallRye Reactive Messaging - Kafka - Runtime SKIPPED
+[INFO] Quarkus - Hibernate ORM - Deployment - SPI ......... SKIPPED
+[INFO] Quarkus - Panache - Hibernate - Common - Deployment  SKIPPED
+[INFO] Quarkus - Hibernate ORM - Deployment ............... SKIPPED
+[INFO] Quarkus - Reactive Datasource - Deployment ......... SKIPPED
+[INFO] Quarkus - DevServices - Postgresql ................. SKIPPED
+[INFO] Quarkus - Reactive PostgreSQL Client ............... SKIPPED
+[INFO] Quarkus - Reactive PostgreSQL Client - Runtime ..... SKIPPED
+[INFO] Quarkus - Reactive PostgreSQL Client - Deployment .. SKIPPED
+[INFO] Quarkus - Hibernate Reactive - Deployment .......... SKIPPED
+[INFO] Quarkus - Schema Registry Parent ................... SKIPPED
+[INFO] Quarkus - Schema Registry - DevService ............. SKIPPED
+[INFO] Quarkus - Schema Registry - DevService - Runtime ... SKIPPED
+[INFO] Quarkus - Apicurio Registry ........................ SKIPPED
+[INFO] Quarkus - Apicurio Registry - Common ............... SKIPPED
+[INFO] Quarkus - Apicurio Registry - Common - Runtime ..... SKIPPED
+[INFO] Quarkus - Avro ..................................... SKIPPED
+[INFO] Quarkus - Avro - Runtime ........................... SKIPPED
+[INFO] Quarkus - Apicurio Registry - Avro ................. SKIPPED
+[INFO] Quarkus - Apicurio Registry - Avro - Runtime ....... SKIPPED
+[INFO] Quarkus - Schema Registry - DevService - Deployment  SKIPPED
+[INFO] Quarkus - Apicurio Registry - Common - Deployment .. SKIPPED
+[INFO] Quarkus - Avro - Deployment ........................ SKIPPED
+[INFO] Quarkus - Apicurio Registry - Avro - Deployment .... SKIPPED
+[INFO] Quarkus - Confluent Schema Registry ................ SKIPPED
+[INFO] Quarkus - Confluent Schema Registry - Common ....... SKIPPED
+[INFO] Quarkus - Confluent Schema Registry - Common - Runtime SKIPPED
+[INFO] Quarkus - Confluent Schema Registry - Avro ......... SKIPPED
+[INFO] Quarkus - Confluent Schema Registry - Avro - Runtime SKIPPED
+[INFO] Quarkus - Confluent Schema Registry - Common - Deployment SKIPPED
+[INFO] Quarkus - Confluent Schema Registry - Avro - Deployment SKIPPED
+[INFO] Quarkus - SmallRye Reactive Messaging - Kafka - Deployment SKIPPED
+[INFO] Quarkus - SmallRye Reactive Messaging - AMQP 1.0 ... SKIPPED
+[INFO] Quarkus - SmallRye Reactive Messaging - AMQP 1.0 - Runtime SKIPPED
+[INFO] Quarkus - SmallRye Reactive Messaging - AMQP 1.0 - Deployment SKIPPED
+[INFO] Quarkus - SmallRye Reactive Messaging - Pulsar ..... SKIPPED
+[INFO] Quarkus - SmallRye Reactive Messaging - Pulsar - Runtime SKIPPED
+[INFO] Quarkus - SmallRye Reactive Messaging - Pulsar - Deployment SKIPPED
+[INFO] Quarkus - SmallRye Reactive Messaging - MQTT ....... SKIPPED
+[INFO] Quarkus - SmallRye Reactive Messaging - MQTT - Runtime SKIPPED
+[INFO] Quarkus - SmallRye Reactive Messaging - MQTT - Deployment SKIPPED
+[INFO] Quarkus - SmallRye Reactive Messaging - RabbitMQ 1.0 SKIPPED
+[INFO] Quarkus - SmallRye Reactive Messaging - RabbitMQ 1.0 - Runtime SKIPPED
+[INFO] Quarkus - SmallRye Reactive Messaging - RabbitMQ 1.0 - Deployment SKIPPED
+[INFO] Quarkus - DevServices - DB2 ........................ SKIPPED
+[INFO] Quarkus - Reactive DB2 Client ...................... SKIPPED
+[INFO] Quarkus - Reactive DB2 Client - Runtime ............ SKIPPED
+[INFO] Quarkus - Reactive DB2 Client - Deployment ......... SKIPPED
+[INFO] Quarkus - Reactive MySQL Client .................... SKIPPED
+[INFO] Quarkus - Reactive MySQL Client - Runtime .......... SKIPPED
+[INFO] Quarkus - DevServices - MySQL ...................... SKIPPED
+[INFO] Quarkus - DevServices - MariaDB .................... SKIPPED
+[INFO] Quarkus - Reactive MySQL Client - Deployment ....... SKIPPED
+[INFO] Quarkus - DevServices - MSSQL ...................... SKIPPED
+[INFO] Quarkus - Reactive Microsoft SQL Server Client ..... SKIPPED
+[INFO] Quarkus - Reactive Microsoft SQL Server Client - Runtime SKIPPED
+[INFO] Quarkus - Reactive Microsoft SQL Server Client - Deployment SKIPPED
+[INFO] Quarkus - JDBC - Oracle ............................ SKIPPED
+[INFO] Quarkus - JDBC - Oracle - Runtime .................. SKIPPED
+[INFO] Quarkus - DevServices - Oracle ..................... SKIPPED
+[INFO] Quarkus - JDBC - Oracle - Deployment ............... SKIPPED
+[INFO] Quarkus - Reactive Oracle Client ................... SKIPPED
+[INFO] Quarkus - Reactive Oracle Client - Runtime ......... SKIPPED
+[INFO] Quarkus - Reactive Oracle Client - Deployment ...... SKIPPED
+[INFO] Quarkus - Mailer ................................... SKIPPED
+[INFO] Quarkus - Mailer - Runtime ......................... SKIPPED
+[INFO] Quarkus - Mailer - Deployment ...................... SKIPPED
+[INFO] Quarkus - gRPC - xDS ............................... SKIPPED
+[INFO] Quarkus - gRPC - InProcess ......................... SKIPPED
+[INFO] Quarkus - Redis Cache .............................. SKIPPED
+[INFO] Quarkus - Redis Cache - Runtime .................... SKIPPED
+[INFO] Quarkus - Redis Cache - Deployment ................. SKIPPED
+[INFO] Quarkus - Narayana STM ............................. SKIPPED
+[INFO] Quarkus - Narayana STM - Runtime ................... SKIPPED
+[INFO] Quarkus - Narayana STM - Deployment ................ SKIPPED
+[INFO] Quarkus - Narayana MicroProfile LRA Participant .... SKIPPED
+[INFO] Quarkus - Narayana MicroProfile LRA Participant - Runtime SKIPPED
+[INFO] Quarkus - Narayana MicroProfile LRA Participant - Deployment SKIPPED
+[INFO] Quarkus - JDBC - PostgreSQL ........................ SKIPPED
+[INFO] Quarkus - JDBC - PostgreSQL - Runtime .............. SKIPPED
+[INFO] Quarkus - JDBC - PostgreSQL - Deployment ........... SKIPPED
+[INFO] Quarkus - JDBC - DB2 ............................... SKIPPED
+[INFO] Quarkus - JDBC - DB2 - Runtime ..................... SKIPPED
+[INFO] Quarkus - JDBC - DB2 - Deployment .................. SKIPPED
+[INFO] Quarkus - JDBC - Derby ............................. SKIPPED
+[INFO] Quarkus - JDBC - Derby - Runtime ................... SKIPPED
+[INFO] Quarkus - DevServices - Derby ...................... SKIPPED
+[INFO] Quarkus - JDBC - Derby - Deployment ................ SKIPPED
+[INFO] Quarkus - JDBC - MariaDB ........................... SKIPPED
+[INFO] Quarkus - JDBC - MariaDB - Runtime ................. SKIPPED
+[INFO] Quarkus - JDBC - MariaDB - Deployment .............. SKIPPED
+[INFO] Quarkus - JDBC - MSSQL ............................. SKIPPED
+[INFO] Quarkus - JDBC - MSSQL - Runtime ................... SKIPPED
+[INFO] Quarkus - JDBC - MSSQL - Deployment ................ SKIPPED
+[INFO] Quarkus - JDBC - MySQL ............................. SKIPPED
+[INFO] Quarkus - JDBC - MySQL - Runtime ................... SKIPPED
+[INFO] Quarkus - JDBC - MySQL - Deployment ................ SKIPPED
+[INFO] Quarkus - Hibernate Envers - Parent ................ SKIPPED
+[INFO] Quarkus - Hibernate Envers - Runtime ............... SKIPPED
+[INFO] Quarkus - Hibernate Envers - Deployment ............ SKIPPED
+[INFO] Quarkus - Panache - Mock ........................... SKIPPED
+[INFO] Quarkus - Hibernate ORM with Panache - Common ...... SKIPPED
+[INFO] Quarkus - Hibernate ORM with Panache - Common - Runtime SKIPPED
+[INFO] Quarkus - Hibernate ORM with Panache - Common - Deployment SKIPPED
+[INFO] Quarkus - Hibernate ORM with Panache ............... SKIPPED
+[INFO] Quarkus - Hibernate ORM with Panache - Runtime ..... SKIPPED
+[INFO] Quarkus - Hibernate ORM with Panache - Deployment .. SKIPPED
+[INFO] Quarkus - Hibernate ORM with Panache and Kotlin .... SKIPPED
+[INFO] Quarkus - Hibernate ORM with Panache and Kotlin - Runtime SKIPPED
+[INFO] Quarkus - Hibernate ORM with Panache and Kotlin - Deployment SKIPPED
+[INFO] Quarkus - Panache - Query Language ................. SKIPPED
+[INFO] Quarkus - MongoDB with Panache - Common ............ SKIPPED
+[INFO] Quarkus - MongoDB with Panache - Common Runtime .... SKIPPED
+[INFO] Quarkus - MongoDB Client - Deployment .............. SKIPPED
+[INFO] Quarkus - MongoDB with Panache - Common Deployment . SKIPPED
+[INFO] Quarkus - Hibernate Reactive with Panache - Common - Deployment SKIPPED
+[INFO] Quarkus - Hibernate Reactive with Panache - JPA .... SKIPPED
+[INFO] Quarkus - Hibernate Reactive with Panache - Runtime  SKIPPED
+[INFO] Quarkus - Hibernate Reactive with Panache - Deployment SKIPPED
+[INFO] Quarkus - REST data with Panache - Parent .......... SKIPPED
+[INFO] Quarkus - REST data with Panache - Runtime ......... SKIPPED
+[INFO] Quarkus - REST data with Panache - Deployment ...... SKIPPED
+[INFO] Quarkus - Hibernate Reactive REST data with Panache - Parent SKIPPED
+[INFO] Quarkus - Hibernate Reactive REST data with Panache - Runtime SKIPPED
+[INFO] Quarkus - Hibernate Reactive REST data with Panache - Deployment SKIPPED
+[INFO] Quarkus - Hibernate Reactive with Panache and Kotlin - JPA SKIPPED
+[INFO] Quarkus - Hibernate Reactive with Panache and Kotlin - Runtime SKIPPED
+[INFO] Quarkus - Hibernate Reactive with Panache and Kotlin - Deployment SKIPPED
+[INFO] Quarkus - MongoDB with Panache - Parent ............ SKIPPED
+[INFO] Quarkus - MongoDB with Panache - Runtime ........... SKIPPED
+[INFO] Quarkus - MongoDB with Panache - Deployment ........ SKIPPED
+[INFO] Quarkus - MongoDB with Panache - Kotlin Parent ..... SKIPPED
+[INFO] Quarkus - MongoDB with Panache - Kotlin Runtime .... SKIPPED
+[INFO] Quarkus - MongoDB with Panache - Kotlin Deployment . SKIPPED
+[INFO] Quarkus - Hibernate ORM REST data with Panache - Parent SKIPPED
+[INFO] Quarkus - Hibernate ORM REST data with Panache - Runtime SKIPPED
+[INFO] Quarkus - Hibernate ORM REST data with Panache - Deployment SKIPPED
+[INFO] Quarkus - MongoDB REST data with Panache - Parent .. SKIPPED
+[INFO] Quarkus - MongoDB REST data with Panache - Runtime . SKIPPED
+[INFO] Quarkus - MongoDB REST data with Panache - Deployment SKIPPED
+[INFO] Quarkus - Elasticsearch client common .............. SKIPPED
+[INFO] Quarkus - Elasticsearch REST client common - Runtime SKIPPED
+[INFO] Quarkus - Elasticsearch REST client common - Deployment SKIPPED
+[INFO] Quarkus - Hibernate Search - ORM + Elasticsearch ... SKIPPED
+[INFO] Quarkus - Hibernate Search - ORM + Elasticsearch - Runtime SKIPPED
+[INFO] Quarkus - Hibernate Search - ORM + Elasticsearch - Deployment SKIPPED
+[INFO] Quarkus - Hibernate Search - ORM - Outbox Polling .. SKIPPED
+[INFO] Quarkus - Hibernate Search - ORM - Outbox Polling - Runtime SKIPPED
+[INFO] Quarkus - Hibernate Search - ORM - Outbox Polling - Deployment SKIPPED
+[INFO] Quarkus - Elasticsearch REST client - Parent ....... SKIPPED
+[INFO] Quarkus - Elasticsearch REST client - Runtime ...... SKIPPED
+[INFO] Quarkus - Elasticsearch REST client - Deployment ... SKIPPED
+[INFO] Quarkus - Elasticsearch Java client - Parent ....... SKIPPED
+[INFO] Quarkus - Elasticsearch Java client - Runtime ...... SKIPPED
+[INFO] Quarkus - Elasticsearch Java client - Deployment ... SKIPPED
+[INFO] Quarkus - Kafka Streams ............................ SKIPPED
+[INFO] Quarkus - Kafka Streams - Runtime .................. SKIPPED
+[INFO] Quarkus - Kafka Streams - Deployment ............... SKIPPED
+[INFO] Quarkus - Spring - DI .............................. SKIPPED
+[INFO] Quarkus - Spring - DI - Runtime .................... SKIPPED
+[INFO] Quarkus - Spring - DI - Deployment ................. SKIPPED
+[INFO] Quarkus - Spring Web - Parent - Aggregator ......... SKIPPED
+[INFO] Quarkus - Spring Web ............................... SKIPPED
+[INFO] Quarkus - Spring Web - Common Runtime .............. SKIPPED
+[INFO] Quarkus - Spring Web - RESTEasy Classic - Parent ... SKIPPED
+[INFO] Quarkus - Spring Web - RESTEasy Classic - Runtime .. SKIPPED
+[INFO] Quarkus - Spring Web - RESTEasy Reactive - Parent .. SKIPPED
+[INFO] Quarkus - Spring Web - RESTEasy Reactive - Runtime . SKIPPED
+[INFO] Quarkus - Spring Web - Runtime ..................... SKIPPED
+[INFO] Quarkus - Spring Web - RESTEasy Classic - Deployment SKIPPED
+[INFO] Quarkus - Spring Web - RESTEasy Reactive - Deployment SKIPPED
+[INFO] Quarkus - Spring Web - Deployment .................. SKIPPED
+[INFO] Quarkus - Spring Web - RESTEasy Classic - Tests .... SKIPPED
+[INFO] Quarkus - Spring Web - RESTEasy Reactive - Tests ... SKIPPED
+[INFO] Quarkus - Spring Data JPA .......................... SKIPPED
+[INFO] Quarkus - Spring Data JPA - Runtime ................ SKIPPED
+[INFO] Quarkus - Spring Data JPA - Deployment ............. SKIPPED
+[INFO] Quarkus - Spring Security - Parent ................. SKIPPED
+[INFO] Quarkus - Spring Security - Runtime ................ SKIPPED
+[INFO] Quarkus - Spring Security - Deployment ............. SKIPPED
+[INFO] Quarkus - Spring Boot - Properties ................. SKIPPED
+[INFO] Quarkus - Spring Boot - Properties - Runtime ....... SKIPPED
+[INFO] Quarkus - Spring Boot - Properties - Deployment .... SKIPPED
+[INFO] Quarkus - Spring Cloud Config Client ............... SKIPPED
+[INFO] Quarkus - Spring Cloud Config Client - Runtime ..... SKIPPED
+[INFO] Quarkus - Spring Cloud Config Client - Deployment .. SKIPPED
+[INFO] Quarkus - Spring - Cache ........................... SKIPPED
+[INFO] Quarkus - Spring - Cache - Runtime ................. SKIPPED
+[INFO] Quarkus - Spring - Cache - Deployment .............. SKIPPED
+[INFO] Quarkus - Spring - Scheduling ...................... SKIPPED
+[INFO] Quarkus - Spring - Scheduling - Runtime ............ SKIPPED
+[INFO] Quarkus - Spring - Scheduling - Deployment ......... SKIPPED
+[INFO] Quarkus - Spring Data - REST ....................... SKIPPED
+[INFO] Quarkus - Spring Data - REST - Runtime ............. SKIPPED
+[INFO] Quarkus - Spring Data - REST - Deployment .......... SKIPPED
+[INFO] Quarkus - Security Jakarta Persistence - Common .... SKIPPED
+[INFO] Quarkus - Security Jakarta Persistence - Common - Runtime SKIPPED
+[INFO] Quarkus - Security JPA ............................. SKIPPED
+[INFO] Quarkus - Security Jakarta Persistence - Runtime ... SKIPPED
+[INFO] Quarkus - Security Jakarta Persistence - Common - Deployment SKIPPED
+[INFO] Quarkus - Security Jakarta Persistence - Deployment  SKIPPED
+[INFO] Quarkus - Security Jakarta Persistence - Reactive .. SKIPPED
+[INFO] Quarkus - Security Jakarta Persistence - Reactive - Runtime SKIPPED
+[INFO] Quarkus - Security Jakarta Persistence - Reactive - Deployment SKIPPED
+[INFO] Quarkus - Security WebAuthn - Deployment ........... SKIPPED
+[INFO] Quarkus - Elytron Security JDBC .................... SKIPPED
+[INFO] Quarkus - Elytron Security JDBC - Runtime .......... SKIPPED
+[INFO] Quarkus - Elytron Security JDBC - Deployment ....... SKIPPED
+[INFO] Quarkus - Elytron Security LDAP .................... SKIPPED
+[INFO] Quarkus - Elytron Security LDAP - Runtime .......... SKIPPED
+[INFO] Quarkus - Elytron Security LDAP - Deployment ....... SKIPPED
+[INFO] Quarkus - Security OAuth2 .......................... SKIPPED
+[INFO] Quarkus - Security OAuth2 - Runtime ................ SKIPPED
+[INFO] Quarkus - Security OAuth2 - Deployment ............. SKIPPED
+[INFO] Quarkus - SmallRye JWT Build - Deployment .......... SKIPPED
+[INFO] Quarkus - SmallRye JWT ............................. SKIPPED
+[INFO] Quarkus - SmallRye JWT - Runtime ................... SKIPPED
+[INFO] Quarkus - SmallRye JWT - Deployment ................ SKIPPED
+[INFO] Quarkus - OpenID Connect Common - Deployment ....... SKIPPED
+[INFO] Quarkus - OpenID Connect Adapter - Deployment ...... SKIPPED
+[INFO] Quarkus - OpenID Connect Client .................... SKIPPED
+[INFO] Quarkus - OpenID Connect Client - Runtime .......... SKIPPED
+[INFO] Quarkus - OpenID Connect Client - Deployment ....... SKIPPED
+[INFO] Quarkus - OpenID Connect Oidc Client Filter ........ SKIPPED
+[INFO] Quarkus - OpenID Connect Client Filter - Runtime ... SKIPPED
+[INFO] Quarkus - OpenID Connect Client Filter - Deployment  SKIPPED
+[INFO] Quarkus - OpenID Connect Oidc Client Reactive Filter SKIPPED
+[INFO] Quarkus - OpenID Connect Client Reactive Filter - Runtime SKIPPED
+[INFO] Quarkus - OpenID Connect Client Reactive Filter - Deployment SKIPPED
+[INFO] Quarkus - SmallRye GraphQL Client .................. SKIPPED
+[INFO] Quarkus - SmallRye GraphQL Client - Runtime ........ SKIPPED
+[INFO] Quarkus - OpenID Connect Client GraphQL integration  SKIPPED
+[INFO] Quarkus - OpenID Connect Client GraphQL integration - Runtime SKIPPED
+[INFO] Quarkus - SmallRye GraphQL Client - Deployment ..... SKIPPED
+[INFO] Quarkus - OpenID Connect Client GraphQL integration - Deployment SKIPPED
+[INFO] Quarkus - OpenID Connect Token Propagation ......... SKIPPED
+[INFO] Quarkus - OpenID Connect Token Propagation - Runtime SKIPPED
+[INFO] Quarkus - OpenID Connect Token Propagation - Deployment SKIPPED
+[INFO] Quarkus - OpenID Connect Token Propagation Reactive  SKIPPED
+[INFO] Quarkus - OpenID Connect Token Propagation Reactive - Runtime SKIPPED
+[INFO] Quarkus - OpenID Connect Token Propagation Reactive - Deployment SKIPPED
+[INFO] Quarkus - OpenID Connect Database Token State Manager - Parent SKIPPED
+[INFO] Quarkus - OpenID Connect Database Token State Manager - Runtime SKIPPED
+[INFO] Quarkus - OpenID Connect Database Token State Manager - Deployment SKIPPED
+[INFO] Quarkus - Keycloak Authorization ................... SKIPPED
+[INFO] Quarkus - Keycloak Authorization - Runtime ......... SKIPPED
+[INFO] Quarkus - Keycloak Admin Client - Common - Parent .. SKIPPED
+[INFO] Quarkus - Keycloak Admin Client - Common - Runtime . SKIPPED
+[INFO] Quarkus - Keycloak Admin Client .................... SKIPPED
+[INFO] Quarkus - Keycloak Admin Client - Runtime .......... SKIPPED
+[INFO] Quarkus - Keycloak Admin Client - Common - Deployment SKIPPED
+[INFO] Quarkus - Keycloak Admin Client - Deployment ....... SKIPPED
+[INFO] Quarkus - Keycloak Authorization - Deployment ...... SKIPPED
+[INFO] Quarkus - Keycloak Admin Client - Reactive ......... SKIPPED
+[INFO] Quarkus - Keycloak Admin Client - Reactive - Runtime SKIPPED
+[INFO] Quarkus - Keycloak Admin Client - Reactive - Deployment SKIPPED
+[INFO] Quarkus - Cross-Site Request Forgery Prevention Filter Reactive SKIPPED
+[INFO] Quarkus - Cross-Site Request Forgery Prevention Filter - Runtime SKIPPED
+[INFO] Quarkus - Cross-Site Request Forgery Filter Reactive - Deployment SKIPPED
+[INFO] Quarkus - Infinispan - Client ...................... SKIPPED
+[INFO] Quarkus - Infinispan - Client - Runtime ............ SKIPPED
+[INFO] Quarkus - Infinispan - Client - Deployment ......... SKIPPED
+[INFO] Quarkus - Amazon Lambda Event Server ............... SKIPPED
+[INFO] Quarkus - Amazon Lambda - Common Deployment ........ SKIPPED
+[INFO] Quarkus - Amazon Lambda - Runtime .................. SKIPPED
+[INFO] Quarkus - Amazon Lambda - Deployment ............... SKIPPED
+[INFO] Quarkus - Amazon Lambda - Archetype ................ SKIPPED
+[INFO] Quarkus - Amazon Lambda X-Ray ...................... SKIPPED
+[INFO] Quarkus - Amazon Lambda X-Ray - Runtime ............ SKIPPED
+[INFO] Quarkus - Amazon Lambda X-Ray - Deployment ......... SKIPPED
+[INFO] Quarkus - Amazon Lambda HTTP ....................... SKIPPED
+[INFO] Quarkus - Amazon Lambda HTTP - Runtime ............. SKIPPED
+[INFO] Quarkus - Amazon Lambda HTTP Event Server .......... SKIPPED
+[INFO] Quarkus - Amazon Lambda HTTP - Deployment .......... SKIPPED
+[INFO] Quarkus - Amazon Lambda HTTP - Archetype ........... SKIPPED
+[INFO] Quarkus - Amazon Lambda AWS Gateway REST API ....... SKIPPED
+[INFO] Quarkus - Amazon Lambda AWS Gateway REST API- Runtime SKIPPED
+[INFO] Quarkus - Amazon Lambda REST Event Server .......... SKIPPED
+[INFO] Quarkus - Amazon Lambda AWS Gateway REST API - Deployment SKIPPED
+[INFO] Quarkus - Amazon Lambda AWS Gateway REST API - Archetype SKIPPED
+[INFO] Quarkus - Azure Functions .......................... SKIPPED
+[INFO] Quarkus - Azure Functions - Runtime ................ SKIPPED
+[INFO] Quarkus - Azure Functions - Deployment ............. SKIPPED
+[INFO] Quarkus - HTTP Azure Functions ..................... SKIPPED
+[INFO] Quarkus - HTTP Azure Functions - Runtime ........... SKIPPED
+[INFO] Quarkus - HTTP Azure Functions - Deployment ........ SKIPPED
+[INFO] Quarkus - Funqy .................................... SKIPPED
+[INFO] Quarkus - Funqy Server Common Parent ............... SKIPPED
+[INFO] Quarkus - Funqy Server Common - Runtime ............ SKIPPED
+[INFO] Quarkus - Funqy Server Common - Deployment ......... SKIPPED
+[INFO] Quarkus - Funqy HTTP Binding ....................... SKIPPED
+[INFO] Quarkus - Funqy HTTP - Runtime ..................... SKIPPED
+[INFO] Quarkus - Funqy HTTP - Deployment .................. SKIPPED
+[INFO] Quarkus - Funqy Amazon Lambda Binding .............. SKIPPED
+[INFO] Quarkus - Funqy Amazon Lambda - Runtime ............ SKIPPED
+[INFO] Quarkus - Funqy Amazon Lambda - Deployment ......... SKIPPED
+[INFO] Quarkus - Funqy Amazon Lambda - Archetype .......... SKIPPED
+[INFO] Quarkus - Funqy Knative Events Binding ............. SKIPPED
+[INFO] Quarkus - Funqy Knative Events - Runtime ........... SKIPPED
+[INFO] Quarkus - Funqy Knative Events - Deployment ........ SKIPPED
+[INFO] Quarkus - Funqy Google Cloud Functions Binding ..... SKIPPED
+[INFO] Quarkus - Funqy Google Cloud Functions - Runtime ... SKIPPED
+[INFO] Quarkus - Funqy Google Cloud Functions - Deployment  SKIPPED
+[INFO] Quarkus - Scala .................................... SKIPPED
+[INFO] Quarkus - Scala - Runtime .......................... SKIPPED
+[INFO] Quarkus - Scala - Deployment ....................... SKIPPED
+[INFO] Quarkus - Container Image .......................... SKIPPED
+[INFO] Quarkus - Container Image - Runtime ................ SKIPPED
+[INFO] Quarkus - Container Image - SPI .................... SKIPPED
+[INFO] Quarkus - Container Image - Util ................... SKIPPED
+[INFO] Quarkus - Container Image - Deployment ............. SKIPPED
+[INFO] Quarkus - Container Image - Buildpack - Parent ..... SKIPPED
+[INFO] Quarkus - Container Image - Buildpack .............. SKIPPED
+[INFO] Quarkus - Container Image - Buildpack - Deployment . SKIPPED
+[INFO] Quarkus - Container Image - Docker - Parent ........ SKIPPED
+[INFO] Quarkus - Container Image - Docker ................. SKIPPED
+[INFO] Quarkus - Container Image - Docker - Deployment .... SKIPPED
+[INFO] Quarkus - Container Image - Jib - Parent ........... SKIPPED
+[INFO] Quarkus - Container Image - Jib .................... SKIPPED
+[INFO] Quarkus - Container Image - Jib - Deployment ....... SKIPPED
+[INFO] Quarkus - Kubernetes Client ........................ SKIPPED
+[INFO] Quarkus - Kubernetes Client - Runtime - Internal ... SKIPPED
+[INFO] Quarkus - Kubernetes Client - SPI .................. SKIPPED
+[INFO] Quarkus - Kubernetes Client - Internal - Deployment  SKIPPED
+[INFO] Quarkus - Container Image - S2I - Parent ........... SKIPPED
+[INFO] Quarkus - Container Image - S2I .................... SKIPPED
+[INFO] Quarkus - Container Image - S2I - Deployment ....... SKIPPED
+[INFO] Quarkus - Container Image - OpenShift - Parent ..... SKIPPED
+[INFO] Quarkus - Container Image - OpenShift .............. SKIPPED
+[INFO] Quarkus - Container Image - OpenShift - Deployment . SKIPPED
+[INFO] Quarkus - Kubernetes - Vanilla ..................... SKIPPED
+[INFO] Quarkus - Kubernetes - Vanilla - Runtime ........... SKIPPED
+[INFO] Quarkus - Kubernetes - Vanilla - Deployment ........ SKIPPED
+[INFO] Quarkus - Kubernetes - Openshift ................... SKIPPED
+[INFO] Quarkus - Kubernetes - OpenShift - Runtime ......... SKIPPED
+[INFO] Quarkus - Kubernetes - Openshift - Deployment ...... SKIPPED
+[INFO] Quarkus - Kubernetes - Minikube .................... SKIPPED
+[INFO] Quarkus - Kubernetes - Minikube - Runtime .......... SKIPPED
+[INFO] Quarkus - Kubernetes - Minikube - Deployment ....... SKIPPED
+[INFO] Quarkus - Kubernetes - Kind ........................ SKIPPED
+[INFO] Quarkus - Kubernetes - Kind - Runtime .............. SKIPPED
+[INFO] Quarkus - Kubernetes - Kind - Deployment ........... SKIPPED
+[INFO] Quarkus - Kubernetes Client - Runtime .............. SKIPPED
+[INFO] Quarkus - Kubernetes Client - Deployment ........... SKIPPED
+[INFO] Quarkus - Kubernetes Config ........................ SKIPPED
+[INFO] Quarkus - Kubernetes Config - Runtime .............. SKIPPED
+[INFO] Quarkus - Kubernetes Config - Deployment ........... SKIPPED
+[INFO] Quarkus - OpenShift Client ......................... SKIPPED
+[INFO] Quarkus - OpenShift Client - Runtime ............... SKIPPED
+[INFO] Quarkus - OpenShift Client - Deployment ............ SKIPPED
+[INFO] Quarkus - Kubernetes Service Binding - Deployment .. SKIPPED
+[INFO] Quarkus - Flyway ................................... SKIPPED
+[INFO] Quarkus - Flyway - Runtime ......................... SKIPPED
+[INFO] Quarkus - Flyway - Deployment ...................... SKIPPED
+[INFO] Quarkus - Liquibase ................................ SKIPPED
+[INFO] Quarkus - Liquibase - Runtime ...................... SKIPPED
+[INFO] Quarkus - Liquibase - Deployment ................... SKIPPED
+[INFO] Quarkus - Liquibase MongoDB ........................ SKIPPED
+[INFO] Quarkus - Liquibase MongoDB - Runtime .............. SKIPPED
+[INFO] Quarkus - Liquibase MongoDB - Deployment ........... SKIPPED
+[INFO] Quarkus - Quarkus - Vert.x GraphQL - Parent ........ SKIPPED
+[INFO] Quarkus - Quarkus - Vert.x GraphQL - Runtime ....... SKIPPED
+[INFO] Quarkus - Quarkus - Vert.x GraphQL - Deployment .... SKIPPED
+[INFO] Quarkus - Logging - JSON ........................... SKIPPED
+[INFO] Quarkus - Logging - JSON - Runtime ................. SKIPPED
+[INFO] Quarkus - Logging - JSON - Deployment .............. SKIPPED
+[INFO] Quarkus - Logging - GELF ........................... SKIPPED
+[INFO] Quarkus - Logging - GELF - Runtime ................. SKIPPED
+[INFO] Quarkus - Logging - GELF - Deployment .............. SKIPPED
+[INFO] Quarkus - Picocli .................................. SKIPPED
+[INFO] Quarkus - Picocli - Runtime ........................ SKIPPED
+[INFO] Quarkus - Picocli - Deployment ..................... SKIPPED
+[INFO] Quarkus - HTTP Google Cloud Functions .............. SKIPPED
+[INFO] Quarkus - HTTP Google Cloud Functions - Runtime .... SKIPPED
+[INFO] Quarkus - HTTP Google Cloud Functions - Deployment . SKIPPED
+[INFO] Quarkus - Google Cloud Functions ................... SKIPPED
+[INFO] Quarkus - Google Cloud Functions - Runtime ......... SKIPPED
+[INFO] Quarkus - Google Cloud Functions - Deployment ...... SKIPPED
+[INFO] Quarkus - AWT - Parent ............................. SKIPPED
+[INFO] Quarkus - AWT - Runtime ............................ SKIPPED
+[INFO] Quarkus - AWT - Deployment ......................... SKIPPED
+[INFO] Quarkus - JMS SPI - Parent ......................... SKIPPED
+[INFO] Quarkus - JMS - SPI - Deployment ................... SKIPPED
+[INFO] Quarkus - Dev tools - Project Core Extension Codestarts SKIPPED
+[INFO] Quarkus - BOM - Descriptor JSON .................... SKIPPED
+[INFO] Quarkus - Maven Plugin ............................. SKIPPED
+[INFO] Quarkus - Gradle Plugin - Parent ................... SKIPPED
+[INFO] Quarkus - Gradle Model ............................. SKIPPED
+[INFO] Quarkus - Gradle Plugin ............................ SKIPPED
+[INFO] Quarkus - Extension Gradle Plugin .................. SKIPPED
+[INFO] Quarkus - Command Line Interface ................... SKIPPED
+[INFO] Quarkus - Integration Tests ........................ SKIPPED
+[INFO] Quarkus - Integration Tests - Avro code generation and reload SKIPPED
+[INFO] Quarkus - Integration Tests - AWT .................. SKIPPED
+[INFO] Quarkus - Integration Tests - No AWT ............... SKIPPED
+[INFO] Quarkus - Integration Tests - Bouncy Castle ........ SKIPPED
+[INFO] Quarkus - Integration Tests - Bouncy Castle FIPS ... SKIPPED
+[INFO] Quarkus - Integration Tests - Bouncy Castle FIPS JSSE SKIPPED
+[INFO] Quarkus - Integration Tests - Bouncy Castle JSSE ... SKIPPED
+[INFO] Quarkus - Integration Tests - Funqy Amazon Lambda .. SKIPPED
+[INFO] Quarkus - Integration Tests - Funqy Google Cloud Functions SKIPPED
+[INFO] Quarkus - Integration Tests - Class tranformer ..... SKIPPED
+[INFO] Quarkus - Integration Tests - Class tranformer - Runtime SKIPPED
+[INFO] Quarkus - Integration Tests - Class tranformer - Deployment SKIPPED
+[INFO] Quarkus - Integration Tests - Shared library ....... SKIPPED
+[INFO] Quarkus - Integration Tests - Hibernate Validator .. SKIPPED
+[INFO] Quarkus - Integration Tests - Hibernate Validator .. SKIPPED
+[INFO] Quarkus - Integration Tests - Common JPA entities .. SKIPPED
+[INFO] Quarkus - Integration Tests - Infinispan Client .... SKIPPED
+[INFO] Quarkus - Integration Tests - Devtools ............. SKIPPED
+[INFO] Quarkus - Integration Tests - DevTools Registry Client SKIPPED
+[INFO] Quarkus - Integration Tests - Gradle tooling ....... SKIPPED
+[INFO] Quarkus - Integration Tests - Main ................. SKIPPED
+[INFO] Quarkus - Integration Tests - Kafka ................ SKIPPED
+[INFO] Quarkus - Integration Tests - Kafka SSL ............ SKIPPED
+[INFO] Quarkus - Integration Tests - Kafka SASL ........... SKIPPED
+[INFO] Quarkus - Integration Tests - Kafka SASL with Elytron SKIPPED
+[INFO] Quarkus - Integration Tests - Kafka OAUTH with Keycloak SKIPPED
+[INFO] Quarkus - Integration Tests - Kafka with Snappy .... SKIPPED
+[INFO] Quarkus - Integration Tests - Kafka Avro with Apicurio 2.x SKIPPED
+[INFO] Quarkus - Integration Tests - Kafka Streams ........ SKIPPED
+[INFO] Quarkus - Integration Tests - Kafka Dev Services ... SKIPPED
+[INFO] Quarkus - Integration Tests - JPA .................. SKIPPED
+[INFO] Quarkus - Integration Tests - JPA - XML mapping .... SKIPPED
+[INFO] Quarkus - Integration Tests - JPA - XML mapping - Modern Library A SKIPPED
+[INFO] Quarkus - Integration Tests - JPA - XML mapping - Modern Library B SKIPPED
+[INFO] Quarkus - Integration Tests - JPA - XML mapping - Modern app SKIPPED
+[INFO] Quarkus - Integration Tests - JPA - XML mapping - Legacy Library A SKIPPED
+[INFO] Quarkus - Integration Tests - JPA - XML mapping - Legacy Library B SKIPPED
+[INFO] Quarkus - Integration Tests - JPA - XML mapping - Legacy app SKIPPED
+[INFO] Quarkus - Integration Tests - JPA - DB2 ............ SKIPPED
+[INFO] Quarkus - Integration Tests - JPA - Derby .......... SKIPPED
+[INFO] Quarkus - Integration Tests - JPA - PostgreSQL ..... SKIPPED
+[INFO] Quarkus - Integration Tests - JPA - PostgreSQL with XML SKIPPED
+[INFO] Quarkus - Integration Tests - JPA - MariaDB ........ SKIPPED
+[INFO] Quarkus - Integration Tests - JPA - H2 ............. SKIPPED
+[INFO] Quarkus - Integration Tests - JPA - H2 Embedded .... SKIPPED
+[INFO] Quarkus - Integration Tests - JPA - MSSQL .......... SKIPPED
+[INFO] Quarkus - Integration Tests - JPA - MySQL .......... SKIPPED
+[INFO] Quarkus - Integration Tests - JPA - Oracle ......... SKIPPED
+[INFO] Quarkus - Integration Tests - Hibernate ORM - Compatibility with databases meant for ORM 5.6 - MariaDB SKIPPED
+[INFO] Quarkus - Integration Tests - Hibernate ORM - Compatibility with databases meant for ORM 5.6 - PostgreSQL SKIPPED
+[INFO] Quarkus - Integration Tests - Hibernate ORM with Panache SKIPPED
+[INFO] Quarkus - Integration Tests - Hibernate ORM REST Data with Panache SKIPPED
+[INFO] Quarkus - Integration Tests - GraphQL and Hibernate ORM with Panache SKIPPED
+[INFO] Quarkus - Integration Tests - Hibernate ORM with Panache and Kotlin SKIPPED
+[INFO] Quarkus - Integration Tests - Hibernate Reactive - DB2 SKIPPED
+[INFO] Quarkus - Integration Tests - Hibernate Reactive - MariaDB SKIPPED
+[INFO] Quarkus - Integration Tests - Hibernate Reactive - MySQL SKIPPED
+[INFO] Quarkus - Integration Tests - Hibernate Reactive - MySQL - With Agroal and Flyway SKIPPED
+[INFO] Quarkus - Integration Tests - Hibernate Reactive - PostgreSQL SKIPPED
+[INFO] Quarkus - Integration Tests - Hibernate Reactive with Panache SKIPPED
+[INFO] Quarkus - Integration Tests - Hibernate Reactive with Panache and Kotlin SKIPPED
+[INFO] Quarkus - Integration Tests - Hibernate Search ORM + Elasticsearch SKIPPED
+[INFO] Quarkus - Integration Tests - Hibernate Search ORM + Elasticsearch - Outbox-polling SKIPPED
+[INFO] Quarkus - Integration Tests - Hibernate Search ORM + OpenSearch SKIPPED
+[INFO] Quarkus - Integration Tests - Hibernate Search ORM + Elasticsearch - Tenancy SKIPPED
+[INFO] Quarkus - Integration Tests - Hibernate ORM - Tenancy SKIPPED
+[INFO] Quarkus - Integration Tests - Hibernate - Tenancy - Datasource SKIPPED
+[INFO] Quarkus - Integration Tests - Hibernate - Tenancy - Connection SKIPPED
+[INFO] Quarkus - Integration Tests - Hibernate - Tenancy - Schema SKIPPED
+[INFO] Quarkus - Integration Tests - Hibernate - Tenancy - Discriminator SKIPPED
+[INFO] Quarkus - Integration Tests - Hibernate - Tenancy - Connection SKIPPED
+[INFO] Quarkus - Integration Tests - Hibernate ORM with Envers SKIPPED
+[INFO] Quarkus - Integration Tests - Vert.x HTTP .......... SKIPPED
+[INFO] Quarkus - Integration Tests - Vert.x Web ........... SKIPPED
+[INFO] Quarkus - Integration Tests - Vert.x Web - Jackson . SKIPPED
+[INFO] Quarkus - Integration Tests - Vert.x ............... SKIPPED
+[INFO] Quarkus - Integration Tests - WebSockets ........... SKIPPED
+[INFO] Quarkus - Integration Tests - Spring DI ............ SKIPPED
+[INFO] Quarkus - Integration Tests - Spring Web ........... SKIPPED
+[INFO] Quarkus - Integration Tests - Spring Data JPA ...... SKIPPED
+[INFO] Quarkus - Integration Tests - Spring Boot properties SKIPPED
+[INFO] Quarkus - Integration Tests - Spring Cloud Config Client SKIPPED
+[INFO] Quarkus - Integration Tests - Spring Data REST ..... SKIPPED
+[INFO] Quarkus - Integration Tests - JPA - Infinispan Cache SKIPPED
+[INFO] Quarkus - Integration Tests - Elytron Security ..... SKIPPED
+[INFO] Quarkus - Integration Tests - Elytron Security OAuth2 SKIPPED
+[INFO] Quarkus - Integration Tests - Elytron RESTEasy ..... SKIPPED
+[INFO] Quarkus - Integration Tests - Elytron RESTEasy Reactive SKIPPED
+[INFO] Quarkus - Integration Tests - Elytron Undertow ..... SKIPPED
+[INFO] Quarkus - Integration Tests - Security WebAuthn .... SKIPPED
+[INFO] Quarkus - Integration Tests - Flyway ............... SKIPPED
+[INFO] Quarkus - Integration Tests - Liquibase ............ SKIPPED
+[INFO] Quarkus - Integration Tests - Liquibase MongoDB .... SKIPPED
+[INFO] Quarkus - Integration Tests - OpenID Connect Adapter SKIPPED
+[INFO] Quarkus - Integration Tests - OpenID Connect Client  SKIPPED
+[INFO] Quarkus - Integration Tests - OpenID Connect Client Reactive SKIPPED
+[INFO] Quarkus - Integration Tests - OpenID Connect Client Wiremock SKIPPED
+[INFO] Quarkus - Integration Tests - OpenID Connect Token Propagation SKIPPED
+[INFO] Quarkus - Integration Tests - OpenID Connect Token Propagation Reactive SKIPPED
+[INFO] Quarkus - Integration Tests - OpenAPI .............. SKIPPED
+[INFO] Quarkus - Integration Tests - Smallrye JWT OIDC WebApp SKIPPED
+[INFO] Quarkus - Integration Tests - Smallrye JWT Token Propagation SKIPPED
+[INFO] Quarkus - Integration Tests - OpenID Connect Adapter Code Flow SKIPPED
+[INFO] Quarkus - Integration Tests - Multi-Tenant OpenID Connect Adapter SKIPPED
+[INFO] Quarkus - Integration Tests - OpenID Connect Adapter WireMock SKIPPED
+[INFO] Quarkus - Integration Tests - Keycloak Policy Enforcer SKIPPED
+[INFO] Quarkus - Integration Tests - Cross-Site Request Forgery Filter Reactive SKIPPED
+[INFO] Quarkus - Integration Tests - Reactive DB2 Client .. SKIPPED
+[INFO] Quarkus - Integration Tests - Reactive Pg Client ... SKIPPED
+[INFO] Quarkus - Integration Tests - Reactive MySQL Client  SKIPPED
+[INFO] Quarkus - Integration Tests - Reactive MS SQL Client SKIPPED
+[INFO] Quarkus - Integration Tests - Reactive Oracle Client SKIPPED
+[INFO] Quarkus - Integration Tests - Test Extension ....... SKIPPED
+[INFO] Quarkus - Integration Tests - Test Extension - Extension SKIPPED
+[INFO] Quarkus - Integration Tests - Test Extension - Extension - Runtime SKIPPED
+[INFO] Quarkus - Integration Tests - Test Extension - Extension - Deployment SKIPPED
+[INFO] Quarkus - Integration Tests - Test Extension - Extension SKIPPED
+[INFO] Quarkus - Integration Tests - Test Extension - Extension - Runtime SKIPPED
+[INFO] Quarkus - Integration Tests - Test Extension - Extension - Deployment SKIPPED
+[INFO] Quarkus - Integration Tests - Test Extension - Tests SKIPPED
+[INFO] Quarkus - Integration Tests - Amazon Lambda ........ SKIPPED
+[INFO] Quarkus - Integration Tests - Amazon Lambda ........ SKIPPED
+[INFO] Quarkus - Integration Tests - Amazon Lambda Stream Handler SKIPPED
+[INFO] Quarkus - Integration Tests - Amazon Lambda HTTP ... SKIPPED
+[INFO] Quarkus - Integration Tests - Amazon Lambda AWS Gateway REST API SKIPPED
+[INFO] Quarkus - Integration Tests - Amazon Lambda HTTP RESTEasy SKIPPED
+[INFO] Quarkus - Integration Tests - Amazon Lambda HTTP RESTEasy Reactive SKIPPED
+[INFO] Quarkus - Integration Tests - Container Image - Parent SKIPPED
+[INFO] Quarkus - Integration Tests - Container Image - Invoker SKIPPED
+[INFO] Quarkus - Integration Tests - Container Image - Standard SKIPPED
+[INFO] Quarkus - Integration Tests - Kubernetes - Parent .. SKIPPED
+[INFO] Quarkus - Integration Tests - Kubernetes - Invoker . SKIPPED
+[INFO] Quarkus - Integration Tests - Kubernetes - Standard  SKIPPED
+[INFO] Quarkus - Integration Tests - Kubernetes - Standard - Kafka SKIPPED
+[INFO] Quarkus - Integration Tests - Kubernetes Client .... SKIPPED
+[INFO] Quarkus - Integration Tests - Kubernetes Client DevService SKIPPED
+[INFO] Quarkus - Integration Tests - Kubernetes Service Binding JDBC SKIPPED
+[INFO] Quarkus - Integration Tests - Kubernetes Service Binding Reactive SKIPPED
+[INFO] Quarkus - Integration Tests - OpenShift Client ..... SKIPPED
+[INFO] Quarkus - Integration Tests - MongoDB Client ....... SKIPPED
+[INFO] Quarkus - Integration Tests - MongoDB DevServices .. SKIPPED
+[INFO] Quarkus - Integration Tests - Jackson .............. SKIPPED
+[INFO] Quarkus - Integration Tests - JSON-B ............... SKIPPED
+[INFO] Quarkus - Integration Tests - RESTEasy Jackson ..... SKIPPED
+[INFO] Quarkus - Integration Tests - RESTEasy and Mutiny .. SKIPPED
+[INFO] Quarkus - Integration Tests - Virtual Http ......... SKIPPED
+[INFO] Quarkus - Integration Tests - Virtual Http Resteasy Standalone SKIPPED
+[INFO] Quarkus - Integration Tests - Maven tooling ........ SKIPPED
+[INFO] Quarkus - Integration Tests - Scala ................ SKIPPED
+[INFO] Quarkus - Integration Tests - Kotlin ............... SKIPPED
+[INFO] Quarkus - Integration Tests - Kotlin Serialization . SKIPPED
+[INFO] Quarkus - Integration Tests - MongoDB Panache ...... SKIPPED
+[INFO] Quarkus - Integration Tests - MongoDB Panache Kotlin SKIPPED
+[INFO] Quarkus - Integration Tests - MongoDB REST Data with Panache SKIPPED
+[INFO] Quarkus - Integration Tests - Narayana STM ......... SKIPPED
+[INFO] Quarkus - Integration Tests - Narayana JTA CDI ..... SKIPPED
+[INFO] Quarkus - Integration Tests - Narayana LRA Coordinator and Participant SKIPPED
+[INFO] Quarkus - Integration Tests - Elytron Security JDBC  SKIPPED
+[INFO] Quarkus - Integration Tests - Elytron Security LDAP  SKIPPED
+[INFO] Quarkus - Integration Tests - Vert.x GraphQL ....... SKIPPED
+[INFO] Quarkus - Integration Tests - SmallRye Config ...... SKIPPED
+[INFO] Quarkus - Integration Tests - SmallRye Context Propagation SKIPPED
+[INFO] Quarkus - Integration Tests - SmallRye Metrics ..... SKIPPED
+[INFO] Quarkus - Integration Tests - SmallRye GraphQL ..... SKIPPED
+[INFO] Quarkus - Integration Tests - SmallRye GraphQL Client SKIPPED
+[INFO] Quarkus - Integration Tests - SmallRye GraphQL Client with Keycloak SKIPPED
+[INFO] Quarkus - Integration Tests - Smallrye Stork Registration SKIPPED
+[INFO] Quarkus - Integration Tests - JPA without entities . SKIPPED
+[INFO] Quarkus - Integration Tests - Quartz ............... SKIPPED
+[INFO] Quarkus - Integration Tests - Redis Client ......... SKIPPED
+[INFO] Quarkus - Integration Tests - Redis Cache .......... SKIPPED
+[INFO] Quarkus - Integration Tests - Logging - GELF ....... SKIPPED
+[INFO] Quarkus - Integration Tests - Cache ................ SKIPPED
+[INFO] Quarkus - Integration Tests - Qute ................. SKIPPED
+[INFO] Quarkus - Integration Tests - InjectMock ........... SKIPPED
+[INFO] Quarkus - Integration Tests - Reactive Messaging - AMQP SKIPPED
+[INFO] Quarkus - Integration Tests - Reactive Messaging - Kafka SKIPPED
+[INFO] Quarkus - Integration Tests - Reactive Messaging - Pulsar SKIPPED
+[INFO] Quarkus - Integration Tests - Reactive Messaging - MQTT SKIPPED
+[INFO] Quarkus - Integration Tests - Reactive Messaging - RabbitMQ SKIPPED
+[INFO] Quarkus - Integration Tests - Reactive Messaging - RabbitMQ (Dynamic Credentials) SKIPPED
+[INFO] Quarkus - Integration Tests - Reactive Messaging - Hibernate Reactive SKIPPED
+[INFO] Quarkus - Integration Tests - Reactive Messaging - Hibernate ORM SKIPPED
+[INFO] Quarkus - Integration Tests - REST client .......... SKIPPED
+[INFO] Quarkus - Integration Tests - RESTEasy Reactive Kotlin - Parent SKIPPED
+[INFO] Quarkus - Integration Tests - RESTEasy Reactive Kotlin - Standard tests SKIPPED
+[INFO] Quarkus - Integration Tests - RESTEasy Reactive Kotlin - Prod Mode tests SKIPPED
+[INFO] Quarkus - Integration Tests - REST Client Reactive . SKIPPED
+[INFO] Quarkus - Integration Tests - REST Client Reactive: HTTP/2 SKIPPED
+[INFO] Quarkus - Integration Tests - REST Client Reactive Kotlin Serialization SKIPPED
+[INFO] Quarkus - Integration Tests - REST Client Reactive: multipart messages SKIPPED
+[INFO] Quarkus - Integration Tests - REST Client Reactive with Stork SKIPPED
+[INFO] Quarkus - Integration Tests - Packaging ............ SKIPPED
+[INFO] Quarkus - Integration Tests - Simple with space .... SKIPPED
+[INFO] Quarkus - Integration Tests - Picocli .............. SKIPPED
+[INFO] Quarkus - Integration Tests - Picocli Native ....... SKIPPED
+[INFO] Quarkus - Integration Tests - WebJar Locator ....... SKIPPED
+[INFO] Quarkus - Integration Tests - Dev Mode ............. SKIPPED
+[INFO] Quarkus - Integration Tests - IDE Launcher ......... SKIPPED
+[INFO] Quarkus - Integration Tests - Elasticsearch REST client SKIPPED
+[INFO] Quarkus - Integration Tests - Elasticsearch Java client SKIPPED
+[INFO] Quarkus - Integration Tests - Micrometer MP Metrics  SKIPPED
+[INFO] Quarkus - Integration Tests - Micrometer Prometheus  SKIPPED
+[INFO] Quarkus - Integration Tests - OpenTelemetry ........ SKIPPED
+[INFO] Quarkus - Integration Tests - OpenTelemetry SPI .... SKIPPED
+[INFO] Quarkus - Integration Tests - OpenTelemetry JDBC instrumentation SKIPPED
+[INFO] Quarkus - Integration Tests - OpenTelemetry Quartz . SKIPPED
+[INFO] Quarkus - Integration Tests - OpenTelemetry Scheduler SKIPPED
+[INFO] Quarkus - Integration Tests - OpenTelemetry Vert.x . SKIPPED
+[INFO] Quarkus - Integration Tests - OpenTelemetry Reactive SKIPPED
+[INFO] Quarkus - Integration Tests - OpenTelemetry gRPC ... SKIPPED
+[INFO] Quarkus - Integration Tests - OpenTelemetry Vert.x exporter SKIPPED
+[INFO] Quarkus - Integration Tests - OpenTelemetry Reactive Messaging SKIPPED
+[INFO] Quarkus - Integration Tests - Logging - JSON ....... SKIPPED
+[INFO] Quarkus - Integration Tests - JAXB ................. SKIPPED
+[INFO] Quarkus - Integration Tests - JAXP ................. SKIPPED
+[INFO] Quarkus - Integration Tests - Mailer ............... SKIPPED
+[INFO] Quarkus - Integration Tests - Native Configuration Profile SKIPPED
+[INFO] Quarkus - Integration Tests - Logging when minimum level is unset SKIPPED
+[INFO] Quarkus - Integration Tests - Logging when minimum level is set SKIPPED
+[INFO] Quarkus - Integration Tests - Logging with Panache . SKIPPED
+[INFO] Quarkus - Integration Tests - Logging with Panache in Kotlin SKIPPED
+[INFO] Quarkus - Integration Tests - Locales .............. SKIPPED
+[INFO] Quarkus - Integration Tests - Redis DevService ..... SKIPPED
+[INFO] Quarkus - Integration Tests - gRPC - Descriptor Sets - Parent SKIPPED
+[INFO] Quarkus - Integration Tests - gRPC - Descriptor Sets - Descriptor Set SKIPPED
+[INFO] Quarkus - Integration Tests - gRPC - Descriptor Sets - Alternate Output SKIPPED
+[INFO] Quarkus - Integration Tests - gRPC - Descriptor Sets - Alternate Output Dir SKIPPED
+[INFO] Quarkus - Integration Tests - gRPC - InProcess ..... SKIPPED
+[INFO] Quarkus - Integration Tests - gRPC - Vertx ......... SKIPPED
+[INFO] Quarkus - Integration Tests - gRPC - TLS ........... SKIPPED
+[INFO] Quarkus - Integration Tests - gRPC - Plain Text with gzip compression SKIPPED
+[INFO] Quarkus - Integration Tests - gRPC - Plain Text with Mutiny SKIPPED
+[INFO] Quarkus - Integration Tests - gRPC - TLS with mutual auth SKIPPED
+[INFO] Quarkus - Integration Tests - gRPC - Streaming ..... SKIPPED
+[INFO] Quarkus - Integration Tests - gRPC - Interceptors .. SKIPPED
+[INFO] Quarkus - Integration Tests - gRPC - Proto v2 ...... SKIPPED
+[INFO] Quarkus - Integration Tests - gRPC - Health ........ SKIPPED
+[INFO] Quarkus - Integration Tests - gRPC - Hibernate ..... SKIPPED
+[INFO] Quarkus - Integration Tests - gRPC - Hibernate Reactive SKIPPED
+[INFO] Quarkus - Integration Tests - Helper project containing packaging a proto file for grpc-external-proto-test SKIPPED
+[INFO] Quarkus - Integration Tests - gRPC - External proto Test SKIPPED
+[INFO] Quarkus - Integration Tests - gRPC with Stork - gathering response times SKIPPED
+[INFO] Quarkus - Integration Tests - gRPC - Stork - Simple  SKIPPED
+[INFO] Quarkus - Integration Tests - gRPC - Exceptions .... SKIPPED
+[INFO] Quarkus - Integration Tests - gRPC - Test Random Port SKIPPED
+[INFO] Quarkus - Integration Tests - Google Cloud Functions HTTP SKIPPED
+[INFO] Quarkus - Integration Tests - Google Cloud Function  SKIPPED
+[INFO] Quarkus - Integration Tests - Istio - Parent ....... SKIPPED
+[INFO] Quarkus - Integration Tests - Istio - Invoker ...... SKIPPED
+[INFO] Quarkus - Integration Tests - Management Interface . SKIPPED
+[INFO] Quarkus - Integration Tests - Management Interface with authentication SKIPPED
+[INFO] Quarkus - Integration Tests - Virtual Threads ...... SKIPPED
+[INFO] Quarkus - Integration Tests - Virtual Threads - gRPC SKIPPED
+[INFO] Quarkus - Integration Tests - Virtual Threads - RESTEasy Reactive SKIPPED
+[INFO] Quarkus - Integration Tests - Virtual Threads - Mailer SKIPPED
+[INFO] Quarkus - Integration Tests - Virtual Threads - Redis Client and Cache SKIPPED
+[INFO] Quarkus - Integration Tests - Virtual Threads - REST Client Reactive SKIPPED
+[INFO] Quarkus - Integration Tests - Virtual Threads - Kafka SKIPPED
+[INFO] Quarkus - Integration Tests - Virtual Threads - AMQP 1.0 SKIPPED
+[INFO] Quarkus - Integration Tests - Virtual Threads - JMS  SKIPPED
+[INFO] Quarkus - Integration Tests - Virtual Threads - Vert.x Event Bus SKIPPED
+[INFO] Quarkus - Integration Tests - Virtual Threads - Scheduler SKIPPED
+[INFO] Quarkus - Integration Tests - Virtual Threads - Quartz Scheduler SKIPPED
+[INFO] Quarkus - Integration Tests - Virtual Threads - Disabled SKIPPED
+[INFO] Quarkus - Integration Tests - Virtual Threads - Reactive Routes SKIPPED
+[INFO] Quarkus - Documentation ............................ SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  18.269 s
+[INFO] Finished at: 2023-12-28T09:03:31+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project arc-processor: Could not resolve dependencies for project io.quarkus.arc:arc-processor:jar:999-SNAPSHOT: Could not find artifact io.quarkus.arc:arc:jar:999-SNAPSHOT -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :arc-processor

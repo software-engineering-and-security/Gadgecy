@@ -1,0 +1,24 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] 
+[INFO] ----------------------< org.clojure:data.int-map >----------------------
+[INFO] Building data.int-map 1.2.2-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ data.int-map ---
+[INFO] digraph "org.clojure:data.int-map:jar:1.2.2-SNAPSHOT" { 
+[INFO] 	"org.clojure:data.int-map:jar:1.2.2-SNAPSHOT" -> "org.clojure:clojure:jar:1.7.0:provided" ; 
+[INFO] 	"org.clojure:data.int-map:jar:1.2.2-SNAPSHOT" -> "org.codehaus.jsr166-mirror:jsr166y:jar:1.7.0:provided" ; 
+[INFO] 	"org.clojure:data.int-map:jar:1.2.2-SNAPSHOT" -> "collection-check:collection-check:jar:0.1.6:test" ; 
+[INFO] 	"org.clojure:data.int-map:jar:1.2.2-SNAPSHOT" -> "rhizome:rhizome:jar:0.2.1:test" ; 
+[INFO] 	"org.clojure:data.int-map:jar:1.2.2-SNAPSHOT" -> "criterium:criterium:jar:0.4.3:test" ; 
+[INFO] 	"collection-check:collection-check:jar:0.1.6:test" -> "org.clojure:test.check:jar:0.5.9:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  11.374 s
+[INFO] Finished at: 2023-12-28T09:02:39+01:00
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,176 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] ttl3-parent                                                        [pom]
+[INFO] TransmittableThreadLocal(TTL)                                      [jar]
+[INFO] TransmittableThreadLocal(TTL) Agent                                [jar]
+[INFO] TransmittableThreadLocal(TTL) kotlin support                       [jar]
+[INFO] TransmittableThreadLocal(TTL) v2 compatible                        [jar]
+[INFO] ttl-bom                                                            [pom]
+[INFO] vertx4-ttl-integration                                             [jar]
+[INFO] vertx3-ttl-integration                                             [jar]
+[INFO] sample-ttl-agent-extension-transformlet                            [jar]
+[INFO] 
+[INFO] --------------------< com.alibaba.ttl3:ttl3-parent >--------------------
+[INFO] Building ttl3-parent 3.x-SNAPSHOT                                  [1/9]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ ttl3-parent ---
+[INFO] digraph "com.alibaba.ttl3:ttl3-parent:pom:3.x-SNAPSHOT" { 
+[INFO] 	"com.alibaba.ttl3:ttl3-parent:pom:3.x-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.8.2:compile" ; 
+[INFO] 	"com.alibaba.ttl3:ttl3-parent:pom:3.x-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.alibaba.ttl3:ttl3-parent:pom:3.x-SNAPSHOT" -> "org.jetbrains:annotations:jar:24.1.0:compile" ; 
+[INFO] 	"com.alibaba.ttl3:ttl3-parent:pom:3.x-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:2.0.7:test" ; 
+[INFO] 	"com.alibaba.ttl3:ttl3-parent:pom:3.x-SNAPSHOT" -> "io.github.microutils:kotlin-logging-jvm:jar:3.0.0:test" ; 
+[INFO] 	"com.alibaba.ttl3:ttl3-parent:pom:3.x-SNAPSHOT" -> "io.kotest:kotest-runner-junit4-jvm:jar:5.8.0:test" ; 
+[INFO] 	"com.alibaba.ttl3:ttl3-parent:pom:3.x-SNAPSHOT" -> "io.kotest:kotest-runner-junit5-jvm:jar:5.8.0:test" ; 
+[INFO] 	"com.alibaba.ttl3:ttl3-parent:pom:3.x-SNAPSHOT" -> "io.kotest:kotest-assertions-core-jvm:jar:5.8.0:test" ; 
+[INFO] 	"com.alibaba.ttl3:ttl3-parent:pom:3.x-SNAPSHOT" -> "io.kotest:kotest-property-jvm:jar:5.8.0:test" ; 
+[INFO] 	"com.alibaba.ttl3:ttl3-parent:pom:3.x-SNAPSHOT" -> "io.mockk:mockk-jvm:jar:1.13.7:test" ; 
+[INFO] 	"com.alibaba.ttl3:ttl3-parent:pom:3.x-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"com.alibaba.ttl3:ttl3-parent:pom:3.x-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.slf4j:slf4j-simple:jar:2.0.7:test" -> "org.slf4j:slf4j-api:jar:2.0.7:test" ; 
+[INFO] 	"io.github.microutils:kotlin-logging-jvm:jar:3.0.0:test" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.9.21:test" ; 
+[INFO] 	"io.github.microutils:kotlin-logging-jvm:jar:3.0.0:test" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.9.21:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.9.21:test" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.9.21:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.9.21:test" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.9.21:test" ; 
+[INFO] 	"io.kotest:kotest-runner-junit4-jvm:jar:5.8.0:test" -> "io.kotest:kotest-common-jvm:jar:5.8.0:test" ; 
+[INFO] 	"io.kotest:kotest-runner-junit4-jvm:jar:5.8.0:test" -> "io.kotest:kotest-framework-api-jvm:jar:5.8.0:test" ; 
+[INFO] 	"io.kotest:kotest-runner-junit4-jvm:jar:5.8.0:test" -> "io.kotest:kotest-assertions-shared-jvm:jar:5.8.0:test" ; 
+[INFO] 	"io.kotest:kotest-runner-junit4-jvm:jar:5.8.0:test" -> "io.kotest:kotest-framework-engine-jvm:jar:5.8.0:test" ; 
+[INFO] 	"io.kotest:kotest-runner-junit4-jvm:jar:5.8.0:test" -> "io.kotest:kotest-framework-discovery-jvm:jar:5.8.0:test" ; 
+[INFO] 	"io.kotest:kotest-runner-junit4-jvm:jar:5.8.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"io.kotest:kotest-runner-junit4-jvm:jar:5.8.0:test" -> "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:1.7.3:test" ; 
+[INFO] 	"io.kotest:kotest-framework-api-jvm:jar:5.8.0:test" -> "org.jetbrains.kotlinx:kotlinx-coroutines-test-jvm:jar:1.7.3:test" ; 
+[INFO] 	"io.kotest:kotest-assertions-shared-jvm:jar:5.8.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"io.kotest:kotest-framework-engine-jvm:jar:5.8.0:test" -> "io.github.classgraph:classgraph:jar:4.8.162:test" ; 
+[INFO] 	"io.kotest:kotest-framework-engine-jvm:jar:5.8.0:test" -> "com.github.ajalt:mordant:jar:1.2.1:test" ; 
+[INFO] 	"io.kotest:kotest-framework-engine-jvm:jar:5.8.0:test" -> "org.jetbrains.kotlinx:kotlinx-coroutines-debug:jar:1.7.3:test" ; 
+[INFO] 	"com.github.ajalt:mordant:jar:1.2.1:test" -> "com.github.ajalt:colormath:jar:1.2.0:test" ; 
+[INFO] 	"org.jetbrains.kotlinx:kotlinx-coroutines-debug:jar:1.7.3:test" -> "net.java.dev.jna:jna:jar:5.9.0:test" ; 
+[INFO] 	"org.jetbrains.kotlinx:kotlinx-coroutines-debug:jar:1.7.3:test" -> "net.java.dev.jna:jna-platform:jar:5.9.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"io.kotest:kotest-runner-junit5-jvm:jar:5.8.0:test" -> "io.kotest:kotest-extensions-jvm:jar:5.8.0:test" ; 
+[INFO] 	"io.kotest:kotest-runner-junit5-jvm:jar:5.8.0:test" -> "io.kotest:kotest-framework-concurrency-jvm:jar:5.8.0:test" ; 
+[INFO] 	"io.kotest:kotest-runner-junit5-jvm:jar:5.8.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"io.kotest:kotest-runner-junit5-jvm:jar:5.8.0:test" -> "org.junit.platform:junit-platform-suite-api:jar:1.10.1:test" ; 
+[INFO] 	"io.kotest:kotest-runner-junit5-jvm:jar:5.8.0:test" -> "org.junit.platform:junit-platform-launcher:jar:1.10.1:test" ; 
+[INFO] 	"io.kotest:kotest-runner-junit5-jvm:jar:5.8.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"io.kotest:kotest-runner-junit5-jvm:jar:5.8.0:test" -> "org.jetbrains.kotlin:kotlin-reflect:jar:1.9.21:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"io.kotest:kotest-assertions-core-jvm:jar:5.8.0:test" -> "org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:jar:1.7.3:test" ; 
+[INFO] 	"io.kotest:kotest-assertions-core-jvm:jar:5.8.0:test" -> "io.kotest:kotest-assertions-api-jvm:jar:5.8.0:test" ; 
+[INFO] 	"io.kotest:kotest-property-jvm:jar:5.8.0:test" -> "com.github.curious-odd-man:rgxgen:jar:1.4:test" ; 
+[INFO] 	"io.kotest:kotest-property-jvm:jar:5.8.0:test" -> "io.github.java-diff-utils:java-diff-utils:jar:4.12:test" ; 
+[INFO] 	"io.mockk:mockk-jvm:jar:1.13.7:test" -> "io.mockk:mockk-dsl-jvm:jar:1.13.7:test" ; 
+[INFO] 	"io.mockk:mockk-jvm:jar:1.13.7:test" -> "io.mockk:mockk-agent-jvm:jar:1.13.7:test" ; 
+[INFO] 	"io.mockk:mockk-jvm:jar:1.13.7:test" -> "io.mockk:mockk-agent-api-jvm:jar:1.13.7:test" ; 
+[INFO] 	"io.mockk:mockk-jvm:jar:1.13.7:test" -> "io.mockk:mockk-core-jvm:jar:1.13.7:test" ; 
+[INFO] 	"io.mockk:mockk-jvm:jar:1.13.7:test" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"io.mockk:mockk-jvm:jar:1.13.7:test" -> "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:1.7.3:test" ; 
+[INFO] 	"io.mockk:mockk-agent-jvm:jar:1.13.7:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"io.mockk:mockk-agent-jvm:jar:1.13.7:test" -> "net.bytebuddy:byte-buddy:jar:1.14.10:test" ; 
+[INFO] 	"io.mockk:mockk-agent-jvm:jar:1.13.7:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< com.alibaba.ttl3:ttl-core >----------------------
+[INFO] Building TransmittableThreadLocal(TTL) 3.x-SNAPSHOT                [2/9]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ ttl-core ---
+[INFO] digraph "com.alibaba.ttl3:ttl-core:jar:3.x-SNAPSHOT" { 
+[INFO] 	"com.alibaba.ttl3:ttl-core:jar:3.x-SNAPSHOT" -> "io.reactivex.rxjava2:rxjava:jar:2.2.21:test" ; 
+[INFO] 	"com.alibaba.ttl3:ttl-core:jar:3.x-SNAPSHOT" -> "io.reactivex.rxjava2:rxkotlin:jar:2.4.0:test" ; 
+[INFO] 	"com.alibaba.ttl3:ttl-core:jar:3.x-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.8.2:compile" ; 
+[INFO] 	"com.alibaba.ttl3:ttl-core:jar:3.x-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.alibaba.ttl3:ttl-core:jar:3.x-SNAPSHOT" -> "org.jetbrains:annotations:jar:24.1.0:compile" ; 
+[INFO] 	"com.alibaba.ttl3:ttl-core:jar:3.x-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:2.0.7:test" ; 
+[INFO] 	"com.alibaba.ttl3:ttl-core:jar:3.x-SNAPSHOT" -> "io.github.microutils:kotlin-logging-jvm:jar:3.0.0:test" ; 
+[INFO] 	"com.alibaba.ttl3:ttl-core:jar:3.x-SNAPSHOT" -> "io.kotest:kotest-runner-junit4-jvm:jar:5.8.0:test" ; 
+[INFO] 	"com.alibaba.ttl3:ttl-core:jar:3.x-SNAPSHOT" -> "io.kotest:kotest-runner-junit5-jvm:jar:5.8.0:test" ; 
+[INFO] 	"com.alibaba.ttl3:ttl-core:jar:3.x-SNAPSHOT" -> "io.kotest:kotest-assertions-core-jvm:jar:5.8.0:test" ; 
+[INFO] 	"com.alibaba.ttl3:ttl-core:jar:3.x-SNAPSHOT" -> "io.kotest:kotest-property-jvm:jar:5.8.0:test" ; 
+[INFO] 	"com.alibaba.ttl3:ttl-core:jar:3.x-SNAPSHOT" -> "io.mockk:mockk-jvm:jar:1.13.7:test" ; 
+[INFO] 	"com.alibaba.ttl3:ttl-core:jar:3.x-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"com.alibaba.ttl3:ttl-core:jar:3.x-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.reactivex.rxjava2:rxjava:jar:2.2.21:test" -> "org.reactivestreams:reactive-streams:jar:1.0.3:test" ; 
+[INFO] 	"io.reactivex.rxjava2:rxkotlin:jar:2.4.0:test" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.9.21:test" ; 
+[INFO] 	"org.slf4j:slf4j-simple:jar:2.0.7:test" -> "org.slf4j:slf4j-api:jar:2.0.7:test" ; 
+[INFO] 	"io.github.microutils:kotlin-logging-jvm:jar:3.0.0:test" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.9.21:test" ; 
+[INFO] 	"io.github.microutils:kotlin-logging-jvm:jar:3.0.0:test" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.9.21:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.9.21:test" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.9.21:test" ; 
+[INFO] 	"io.kotest:kotest-runner-junit4-jvm:jar:5.8.0:test" -> "io.kotest:kotest-common-jvm:jar:5.8.0:test" ; 
+[INFO] 	"io.kotest:kotest-runner-junit4-jvm:jar:5.8.0:test" -> "io.kotest:kotest-framework-api-jvm:jar:5.8.0:test" ; 
+[INFO] 	"io.kotest:kotest-runner-junit4-jvm:jar:5.8.0:test" -> "io.kotest:kotest-assertions-shared-jvm:jar:5.8.0:test" ; 
+[INFO] 	"io.kotest:kotest-runner-junit4-jvm:jar:5.8.0:test" -> "io.kotest:kotest-framework-engine-jvm:jar:5.8.0:test" ; 
+[INFO] 	"io.kotest:kotest-runner-junit4-jvm:jar:5.8.0:test" -> "io.kotest:kotest-framework-discovery-jvm:jar:5.8.0:test" ; 
+[INFO] 	"io.kotest:kotest-runner-junit4-jvm:jar:5.8.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"io.kotest:kotest-runner-junit4-jvm:jar:5.8.0:test" -> "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:1.7.3:test" ; 
+[INFO] 	"io.kotest:kotest-framework-api-jvm:jar:5.8.0:test" -> "org.jetbrains.kotlinx:kotlinx-coroutines-test-jvm:jar:1.7.3:test" ; 
+[INFO] 	"io.kotest:kotest-assertions-shared-jvm:jar:5.8.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"io.kotest:kotest-framework-engine-jvm:jar:5.8.0:test" -> "io.github.classgraph:classgraph:jar:4.8.162:test" ; 
+[INFO] 	"io.kotest:kotest-framework-engine-jvm:jar:5.8.0:test" -> "com.github.ajalt:mordant:jar:1.2.1:test" ; 
+[INFO] 	"io.kotest:kotest-framework-engine-jvm:jar:5.8.0:test" -> "org.jetbrains.kotlinx:kotlinx-coroutines-debug:jar:1.7.3:test" ; 
+[INFO] 	"com.github.ajalt:mordant:jar:1.2.1:test" -> "com.github.ajalt:colormath:jar:1.2.0:test" ; 
+[INFO] 	"org.jetbrains.kotlinx:kotlinx-coroutines-debug:jar:1.7.3:test" -> "net.java.dev.jna:jna:jar:5.9.0:test" ; 
+[INFO] 	"org.jetbrains.kotlinx:kotlinx-coroutines-debug:jar:1.7.3:test" -> "net.java.dev.jna:jna-platform:jar:5.9.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"io.kotest:kotest-runner-junit5-jvm:jar:5.8.0:test" -> "io.kotest:kotest-extensions-jvm:jar:5.8.0:test" ; 
+[INFO] 	"io.kotest:kotest-runner-junit5-jvm:jar:5.8.0:test" -> "io.kotest:kotest-framework-concurrency-jvm:jar:5.8.0:test" ; 
+[INFO] 	"io.kotest:kotest-runner-junit5-jvm:jar:5.8.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"io.kotest:kotest-runner-junit5-jvm:jar:5.8.0:test" -> "org.junit.platform:junit-platform-suite-api:jar:1.10.1:test" ; 
+[INFO] 	"io.kotest:kotest-runner-junit5-jvm:jar:5.8.0:test" -> "org.junit.platform:junit-platform-launcher:jar:1.10.1:test" ; 
+[INFO] 	"io.kotest:kotest-runner-junit5-jvm:jar:5.8.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"io.kotest:kotest-runner-junit5-jvm:jar:5.8.0:test" -> "org.jetbrains.kotlin:kotlin-reflect:jar:1.9.21:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"io.kotest:kotest-assertions-core-jvm:jar:5.8.0:test" -> "org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:jar:1.7.3:test" ; 
+[INFO] 	"io.kotest:kotest-assertions-core-jvm:jar:5.8.0:test" -> "io.kotest:kotest-assertions-api-jvm:jar:5.8.0:test" ; 
+[INFO] 	"io.kotest:kotest-property-jvm:jar:5.8.0:test" -> "com.github.curious-odd-man:rgxgen:jar:1.4:test" ; 
+[INFO] 	"io.kotest:kotest-property-jvm:jar:5.8.0:test" -> "io.github.java-diff-utils:java-diff-utils:jar:4.12:test" ; 
+[INFO] 	"io.mockk:mockk-jvm:jar:1.13.7:test" -> "io.mockk:mockk-dsl-jvm:jar:1.13.7:test" ; 
+[INFO] 	"io.mockk:mockk-jvm:jar:1.13.7:test" -> "io.mockk:mockk-agent-jvm:jar:1.13.7:test" ; 
+[INFO] 	"io.mockk:mockk-jvm:jar:1.13.7:test" -> "io.mockk:mockk-agent-api-jvm:jar:1.13.7:test" ; 
+[INFO] 	"io.mockk:mockk-jvm:jar:1.13.7:test" -> "io.mockk:mockk-core-jvm:jar:1.13.7:test" ; 
+[INFO] 	"io.mockk:mockk-jvm:jar:1.13.7:test" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"io.mockk:mockk-jvm:jar:1.13.7:test" -> "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:1.7.3:test" ; 
+[INFO] 	"io.mockk:mockk-agent-jvm:jar:1.13.7:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"io.mockk:mockk-agent-jvm:jar:1.13.7:test" -> "net.bytebuddy:byte-buddy:jar:1.14.10:test" ; 
+[INFO] 	"io.mockk:mockk-agent-jvm:jar:1.13.7:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< com.alibaba.ttl3:ttl-agent >---------------------
+[INFO] Building TransmittableThreadLocal(TTL) Agent 3.x-SNAPSHOT          [3/9]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] ttl3-parent 3.x-SNAPSHOT ........................... SUCCESS [  3.834 s]
+[INFO] TransmittableThreadLocal(TTL) 3.x-SNAPSHOT ......... SUCCESS [  0.373 s]
+[INFO] TransmittableThreadLocal(TTL) Agent 3.x-SNAPSHOT ... FAILURE [  0.109 s]
+[INFO] TransmittableThreadLocal(TTL) kotlin support 3.x-SNAPSHOT SKIPPED
+[INFO] TransmittableThreadLocal(TTL) v2 compatible 3.x-SNAPSHOT SKIPPED
+[INFO] ttl-bom 3.x-SNAPSHOT ............................... SKIPPED
+[INFO] vertx4-ttl-integration 0.1.0-SNAPSHOT .............. SKIPPED
+[INFO] vertx3-ttl-integration 0.1.0-SNAPSHOT .............. SKIPPED
+[INFO] sample-ttl-agent-extension-transformlet 1.0.0-SNAPSHOT SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.000 s
+[INFO] Finished at: 2023-12-28T09:02:18+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project ttl-agent: Could not resolve dependencies for project com.alibaba.ttl3:ttl-agent:jar:3.x-SNAPSHOT: Could not find artifact com.alibaba.ttl3:ttl-core:jar:3.x-SNAPSHOT -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :ttl-agent

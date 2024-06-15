@@ -1,0 +1,42 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.cobar:cobar-client:jar:1.0.6-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 79, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-source-plugin is missing. @ line 88, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-javadoc-plugin is missing. @ line 100, column 12
+[WARNING] 'build.plugins.plugin.version' for com.agilejava.docbkx:docbkx-maven-plugin is missing. @ line 134, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] -------------------< com.alibaba.cobar:cobar-client >-------------------
+[INFO] Building cobar-client 1.0.6-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ cobar-client ---
+[INFO] digraph "com.alibaba.cobar:cobar-client:jar:1.0.6-SNAPSHOT" { 
+[INFO] 	"com.alibaba.cobar:cobar-client:jar:1.0.6-SNAPSHOT" -> "org.springframework:spring:jar:2.5.6.SEC02:compile" ; 
+[INFO] 	"com.alibaba.cobar:cobar-client:jar:1.0.6-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.5.10:compile" ; 
+[INFO] 	"com.alibaba.cobar:cobar-client:jar:1.0.6-SNAPSHOT" -> "org.slf4j:slf4j-jcl:jar:1.5.10:compile" ; 
+[INFO] 	"com.alibaba.cobar:cobar-client:jar:1.0.6-SNAPSHOT" -> "org.apache.ibatis:ibatis-sqlmap:jar:2.3.4.726:compile" ; 
+[INFO] 	"com.alibaba.cobar:cobar-client:jar:1.0.6-SNAPSHOT" -> "commons-lang:commons-lang:jar:2.4:compile" ; 
+[INFO] 	"com.alibaba.cobar:cobar-client:jar:1.0.6-SNAPSHOT" -> "org.mvel:mvel2:jar:2.0.16:compile" ; 
+[INFO] 	"com.alibaba.cobar:cobar-client:jar:1.0.6-SNAPSHOT" -> "c3p0:c3p0:jar:0.9.1.2:test" ; 
+[INFO] 	"com.alibaba.cobar:cobar-client:jar:1.0.6-SNAPSHOT" -> "com.h2database:h2:jar:1.2.130:test" ; 
+[INFO] 	"com.alibaba.cobar:cobar-client:jar:1.0.6-SNAPSHOT" -> "log4j:log4j:jar:1.2.15:compile" ; 
+[INFO] 	"com.alibaba.cobar:cobar-client:jar:1.0.6-SNAPSHOT" -> "com.thoughtworks.xstream:xstream:jar:1.3.1:compile" ; 
+[INFO] 	"com.alibaba.cobar:cobar-client:jar:1.0.6-SNAPSHOT" -> "commons-io:commons-io:jar:1.4:test" ; 
+[INFO] 	"com.alibaba.cobar:cobar-client:jar:1.0.6-SNAPSHOT" -> "mysql:mysql-connector-java:jar:5.1.12:test" ; 
+[INFO] 	"com.alibaba.cobar:cobar-client:jar:1.0.6-SNAPSHOT" -> "org.testng:testng:jar:jdk15:5.11:test" ; 
+[INFO] 	"org.springframework:spring:jar:2.5.6.SEC02:compile" -> "commons-logging:commons-logging:jar:1.1.1:compile" ; 
+[INFO] 	"com.thoughtworks.xstream:xstream:jar:1.3.1:compile" -> "xpp3:xpp3_min:jar:1.1.4c:compile" ; 
+[INFO] 	"org.testng:testng:jar:jdk15:5.11:test" -> "junit:junit:jar:3.8.1:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.353 s
+[INFO] Finished at: 2023-12-28T09:02:22+01:00
+[INFO] ------------------------------------------------------------------------

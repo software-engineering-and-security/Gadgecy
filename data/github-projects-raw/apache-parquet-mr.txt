@@ -1,0 +1,1461 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.parquet:parquet-scala_2.12:jar:1.14.0-SNAPSHOT
+[WARNING] 'artifactId' contains an expression but should be a constant. @ org.apache.parquet:parquet-scala_${scala.binary.version}:1.14.0-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/apache-parquet-mr/parquet-scala/pom.xml, line 29, column 15
+[WARNING] 'build.plugins.plugin.version' for org.scala-tools:maven-scala-plugin is missing. @ org.apache.parquet:parquet-scala_${scala.binary.version}:1.14.0-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/apache-parquet-mr/parquet-scala/pom.xml, line 83, column 15
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Apache Parquet MR                                                  [pom]
+[INFO] Apache Parquet Format Structures                                   [jar]
+[INFO] Apache Parquet Generator                                           [jar]
+[INFO] Apache Parquet Common                                              [jar]
+[INFO] Apache Parquet Encodings                                           [jar]
+[INFO] Apache Parquet Column                                              [jar]
+[INFO] Apache Parquet Arrow                                               [jar]
+[INFO] Apache Parquet Jackson                                             [jar]
+[INFO] Apache Parquet Hadoop                                              [jar]
+[INFO] Apache Parquet Avro                                                [jar]
+[INFO] Apache Parquet Benchmarks                                          [jar]
+[INFO] Apache Parquet Command-line                                        [jar]
+[INFO] Apache Parquet Pig                                                 [jar]
+[INFO] Apache Parquet Pig Bundle                                          [jar]
+[INFO] Apache Parquet Protobuf                                            [jar]
+[INFO] Apache Parquet Scala                                               [jar]
+[INFO] Apache Parquet Thrift                                              [jar]
+[INFO] Apache Parquet Hadoop Bundle                                       [jar]
+[INFO] 
+[INFO] ---------------------< org.apache.parquet:parquet >---------------------
+[INFO] Building Apache Parquet MR 1.14.0-SNAPSHOT                        [1/18]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ parquet ---
+[INFO] digraph "org.apache.parquet:parquet:pom:1.14.0-SNAPSHOT" { 
+[INFO] 	"org.apache.parquet:parquet:pom:1.14.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.apache.parquet:parquet:pom:1.14.0-SNAPSHOT" -> "org.easymock:easymock:jar:5.2.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.easymock:easymock:jar:5.2.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< org.apache.parquet:parquet-format-structures >------------
+[INFO] Building Apache Parquet Format Structures 1.14.0-SNAPSHOT         [2/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ parquet-format-structures ---
+[INFO] digraph "org.apache.parquet:parquet-format-structures:jar:1.14.0-SNAPSHOT" { 
+[INFO] 	"org.apache.parquet:parquet-format-structures:jar:1.14.0-SNAPSHOT" -> "org.apache.thrift:libthrift:jar:0.16.0:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-format-structures:jar:1.14.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.apache.parquet:parquet-format-structures:jar:1.14.0-SNAPSHOT" -> "org.easymock:easymock:jar:5.2.0:test" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "org.slf4j:slf4j-api:jar:1.7.35:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.15:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-codec:commons-codec:jar:1.11:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.easymock:easymock:jar:5.2.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< org.apache.parquet:parquet-generator >----------------
+[INFO] Building Apache Parquet Generator 1.14.0-SNAPSHOT                 [3/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ parquet-generator ---
+[INFO] digraph "org.apache.parquet:parquet-generator:jar:1.14.0-SNAPSHOT" { 
+[INFO] 	"org.apache.parquet:parquet-generator:jar:1.14.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.apache.parquet:parquet-generator:jar:1.14.0-SNAPSHOT" -> "org.easymock:easymock:jar:5.2.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.easymock:easymock:jar:5.2.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.apache.parquet:parquet-common >------------------
+[INFO] Building Apache Parquet Common 1.14.0-SNAPSHOT                    [4/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/parquet/parquet-format-structures/1.14.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from jitpack.io: https://jitpack.io/org/apache/parquet/parquet-format-structures/1.14.0-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ parquet-common ---
+[INFO] digraph "org.apache.parquet:parquet-common:jar:1.14.0-SNAPSHOT" { 
+[INFO] 	"org.apache.parquet:parquet-common:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-format-structures:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-common:jar:1.14.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.33:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-common:jar:1.14.0-SNAPSHOT" -> "org.semver:api:jar:0.9.33:test" ; 
+[INFO] 	"org.apache.parquet:parquet-common:jar:1.14.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.33:test" ; 
+[INFO] 	"org.apache.parquet:parquet-common:jar:1.14.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.apache.parquet:parquet-common:jar:1.14.0-SNAPSHOT" -> "org.easymock:easymock:jar:5.2.0:test" ; 
+[INFO] 	"org.apache.parquet:parquet-format-structures:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.thrift:libthrift:jar:0.16.0:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.15:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-codec:commons-codec:jar:1.11:compile" ; 
+[INFO] 	"org.semver:api:jar:0.9.33:test" -> "com.google.code.findbugs:jsr305:jar:2.0.0:test" ; 
+[INFO] 	"org.semver:api:jar:0.9.33:test" -> "org.ow2.asm:asm:jar:5.0.3:test" ; 
+[INFO] 	"org.semver:api:jar:0.9.33:test" -> "org.ow2.asm:asm-commons:jar:5.0.3:test" ; 
+[INFO] 	"org.semver:api:jar:0.9.33:test" -> "commons-lang:commons-lang:jar:1.0:test" ; 
+[INFO] 	"org.semver:api:jar:0.9.33:test" -> "de.tototec:de.tototec.cmdoption:jar:0.2.0:test" ; 
+[INFO] 	"org.ow2.asm:asm-commons:jar:5.0.3:test" -> "org.ow2.asm:asm-tree:jar:5.0.3:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.easymock:easymock:jar:5.2.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< org.apache.parquet:parquet-encoding >-----------------
+[INFO] Building Apache Parquet Encodings 1.14.0-SNAPSHOT                 [5/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from jitpack.io: https://jitpack.io/org/apache/parquet/parquet-common/1.14.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/parquet/parquet-common/1.14.0-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ parquet-encoding ---
+[INFO] digraph "org.apache.parquet:parquet-encoding:jar:1.14.0-SNAPSHOT" { 
+[INFO] 	"org.apache.parquet:parquet-encoding:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-common:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-encoding:jar:1.14.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.33:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-encoding:jar:1.14.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.33:test" ; 
+[INFO] 	"org.apache.parquet:parquet-encoding:jar:1.14.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.apache.parquet:parquet-encoding:jar:1.14.0-SNAPSHOT" -> "org.easymock:easymock:jar:5.2.0:test" ; 
+[INFO] 	"org.apache.parquet:parquet-common:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.parquet:parquet-format-structures:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-format-structures:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.thrift:libthrift:jar:0.16.0:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.15:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-codec:commons-codec:jar:1.11:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.easymock:easymock:jar:5.2.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.apache.parquet:parquet-column >------------------
+[INFO] Building Apache Parquet Column 1.14.0-SNAPSHOT                    [6/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from jitpack.io: https://jitpack.io/org/apache/parquet/parquet-encoding/1.14.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/parquet/parquet-encoding/1.14.0-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ parquet-column ---
+[INFO] digraph "org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT" { 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-common:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-common:test-jar:tests:1.14.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-encoding:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-encoding:test-jar:tests:1.14.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT" -> "it.unimi.dsi:fastutil:jar:8.5.12:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT" -> "net.openhft:zero-allocation-hashing:jar:0.16:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.33:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT" -> "com.carrotsearch:junit-benchmarks:jar:0.7.2:test" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT" -> "com.h2database:h2:jar:2.2.224:test" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.33:test" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT" -> "org.mockito:mockito-all:jar:1.10.19:test" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT" -> "com.google.guava:guava:jar:32.1.3-jre:test" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT" -> "org.apache.commons:commons-lang3:jar:3.12.0:test" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT" -> "org.easymock:easymock:jar:5.2.0:test" ; 
+[INFO] 	"org.apache.parquet:parquet-common:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.parquet:parquet-format-structures:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-format-structures:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.thrift:libthrift:jar:0.16.0:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.15:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-codec:commons-codec:jar:1.11:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:test" -> "com.google.code.findbugs:jsr305:jar:3.0.2:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:test" -> "org.checkerframework:checker-qual:jar:3.37.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.21.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:2.8:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.easymock:easymock:jar:5.2.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< org.apache.parquet:parquet-arrow >------------------
+[INFO] Building Apache Parquet Arrow 1.14.0-SNAPSHOT                     [7/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from jitpack.io: https://jitpack.io/org/apache/parquet/parquet-column/1.14.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/parquet/parquet-column/1.14.0-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ parquet-arrow ---
+[INFO] digraph "org.apache.parquet:parquet-arrow:jar:1.14.0-SNAPSHOT" { 
+[INFO] 	"org.apache.parquet:parquet-arrow:jar:1.14.0-SNAPSHOT" -> "org.apache.arrow:arrow-vector:jar:14.0.1:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-arrow:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-arrow:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-column:test-jar:tests:1.14.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.parquet:parquet-arrow:jar:1.14.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.33:test" ; 
+[INFO] 	"org.apache.parquet:parquet-arrow:jar:1.14.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.apache.parquet:parquet-arrow:jar:1.14.0-SNAPSHOT" -> "org.easymock:easymock:jar:5.2.0:test" ; 
+[INFO] 	"org.apache.arrow:arrow-vector:jar:14.0.1:compile" -> "org.apache.arrow:arrow-format:jar:14.0.1:compile" ; 
+[INFO] 	"org.apache.arrow:arrow-vector:jar:14.0.1:compile" -> "org.apache.arrow:arrow-memory-core:jar:14.0.1:compile" ; 
+[INFO] 	"org.apache.arrow:arrow-vector:jar:14.0.1:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.1:compile" ; 
+[INFO] 	"org.apache.arrow:arrow-vector:jar:14.0.1:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.1:compile" ; 
+[INFO] 	"org.apache.arrow:arrow-vector:jar:14.0.1:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.1:compile" ; 
+[INFO] 	"org.apache.arrow:arrow-vector:jar:14.0.1:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.15.1:compile" ; 
+[INFO] 	"org.apache.arrow:arrow-vector:jar:14.0.1:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"org.apache.arrow:arrow-vector:jar:14.0.1:compile" -> "io.netty:netty-common:jar:4.1.96.Final:compile" ; 
+[INFO] 	"org.apache.arrow:arrow-vector:jar:14.0.1:compile" -> "com.google.flatbuffers:flatbuffers-java:jar:1.12.0:compile" ; 
+[INFO] 	"org.apache.arrow:arrow-vector:jar:14.0.1:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"org.apache.arrow:arrow-memory-core:jar:14.0.1:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.parquet:parquet-common:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.parquet:parquet-encoding:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" -> "it.unimi.dsi:fastutil:jar:8.5.12:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" -> "net.openhft:zero-allocation-hashing:jar:0.16:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-common:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.parquet:parquet-format-structures:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-format-structures:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.thrift:libthrift:jar:0.16.0:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.15:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.easymock:easymock:jar:5.2.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.apache.parquet:parquet-jackson >-----------------
+[INFO] Building Apache Parquet Jackson 1.14.0-SNAPSHOT                   [8/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ parquet-jackson ---
+[INFO] digraph "org.apache.parquet:parquet-jackson:jar:1.14.0-SNAPSHOT" { 
+[INFO] 	"org.apache.parquet:parquet-jackson:jar:1.14.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-jackson:jar:1.14.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-jackson:jar:1.14.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.apache.parquet:parquet-jackson:jar:1.14.0-SNAPSHOT" -> "org.easymock:easymock:jar:5.2.0:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.easymock:easymock:jar:5.2.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.apache.parquet:parquet-hadoop >------------------
+[INFO] Building Apache Parquet Hadoop 1.14.0-SNAPSHOT                    [9/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from jitpack.io: https://jitpack.io/org/apache/parquet/parquet-jackson/1.14.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/parquet/parquet-jackson/1.14.0-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ parquet-hadoop ---
+[INFO] digraph "org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT" { 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-format-structures:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-common:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-column:test-jar:tests:1.14.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-common:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-annotations:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-jackson:jar:1.14.0-SNAPSHOT:runtime" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT" -> "org.xerial.snappy:snappy-java:jar:1.1.10.5:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT" -> "io.airlift:aircompressor:jar:0.25:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT" -> "commons-pool:commons-pool:jar:1.6:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT" -> "it.unimi.dsi:fastutil:jar:8.5.12:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT" -> "com.github.luben:zstd-jni:jar:1.5.0-1:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT" -> "com.google.guava:guava:jar:32.1.3-jre:test" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT" -> "org.mockito:mockito-all:jar:1.10.19:test" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.33:test" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT" -> "com.squareup.okhttp3:okhttp:jar:4.12.0:test" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.33:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT" -> "commons-io:commons-io:jar:2.7:test" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT" -> "net.openhft:zero-allocation-hashing:jar:0.16:test" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT" -> "org.apache.commons:commons-lang3:jar:3.12.0:test" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT" -> "com.github.rdblue:brotli-codec:jar:0.1.1:runtime" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT" -> "org.easymock:easymock:jar:5.2.0:test" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.parquet:parquet-encoding:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-format-structures:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.thrift:libthrift:jar:0.16.0:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.15:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-hdfs-client:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-yarn-api:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-yarn-client:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-api:jar:3.3.5:provided" -> "javax.xml.bind:jaxb-api:jar:2.2.11:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-client:jar:3.3.5:provided" -> "org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-client:jar:3.3.5:provided" -> "org.jline:jline:jar:3.9.0:provided" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-client:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty.websocket:websocket-common:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-common:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty.websocket:websocket-api:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-mapreduce-client-common:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.hadoop.thirdparty:hadoop-shaded-protobuf_3_7:jar:1.1.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.hadoop.thirdparty:hadoop-shaded-guava:jar:1.1.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-cli:commons-cli:jar:1.2:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.commons:commons-math3:jar:3.1.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-net:commons-net:jar:3.9.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-collections:commons-collections:jar:3.2.2:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "javax.servlet:javax.servlet-api:jar:3.1.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "jakarta.activation:jakarta.activation-api:jar:1.2.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.eclipse.jetty:jetty-server:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.eclipse.jetty:jetty-util:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.eclipse.jetty:jetty-servlet:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.eclipse.jetty:jetty-webapp:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "javax.servlet.jsp:jsp-api:jar:2.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.sun.jersey:jersey-core:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.sun.jersey:jersey-servlet:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.github.pjfanning:jersey-json:jar:1.20:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.sun.jersey:jersey-server:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-logging:commons-logging:jar:1.1.3:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-beanutils:commons-beanutils:jar:1.9.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.commons:commons-configuration2:jar:2.8.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.commons:commons-text:jar:1.10.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.avro:avro:jar:1.7.7:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.google.re2j:re2j:jar:1.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.google.protobuf:protobuf-java:jar:2.5.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.google.code.gson:gson:jar:2.9.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.jcraft:jsch:jar:0.1.55:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.curator:curator-client:jar:4.2.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.curator:curator-recipes:jar:4.2.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.zookeeper:zookeeper:jar:3.5.6:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.commons:commons-compress:jar:1.21:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.kerby:kerb-core:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.codehaus.woodstox:stax2-api:jar:4.2.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.fasterxml.woodstox:woodstox-core:jar:5.4.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "dnsjava:dnsjava:jar:2.1.7:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-http:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-io:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-security:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-util-ajax:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-webapp:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-xml:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"com.sun.jersey:jersey-core:jar:1.19.4:provided" -> "javax.ws.rs:jsr311-api:jar:1.1.1:provided" ; 
+[INFO] 	"com.github.pjfanning:jersey-json:jar:1.20:provided" -> "org.codehaus.jettison:jettison:jar:1.1:provided" ; 
+[INFO] 	"com.github.pjfanning:jersey-json:jar:1.20:provided" -> "com.sun.xml.bind:jaxb-impl:jar:2.2.3-1:provided" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.7.7:provided" -> "org.codehaus.jackson:jackson-core-asl:jar:1.9.13:provided" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.7.7:provided" -> "org.codehaus.jackson:jackson-mapper-asl:jar:1.9.13:provided" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.7.7:provided" -> "com.thoughtworks.paranamer:paranamer:jar:2.3:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" -> "com.nimbusds:nimbus-jose-jwt:jar:9.8.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" -> "net.minidev:json-smart:jar:2.4.7:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" -> "org.apache.curator:curator-framework:jar:4.2.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" -> "org.apache.kerby:kerb-simplekdc:jar:1.0.1:provided" ; 
+[INFO] 	"com.nimbusds:nimbus-jose-jwt:jar:9.8.1:provided" -> "com.github.stephenc.jcip:jcip-annotations:jar:1.0-1:provided" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.7:provided" -> "net.minidev:accessors-smart:jar:2.4.7:provided" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.7:provided" -> "org.ow2.asm:asm:jar:9.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-simplekdc:jar:1.0.1:provided" -> "org.apache.kerby:kerb-client:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-simplekdc:jar:1.0.1:provided" -> "org.apache.kerby:kerb-admin:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:provided" -> "org.apache.kerby:kerby-config:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:provided" -> "org.apache.kerby:kerb-common:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:provided" -> "org.apache.kerby:kerb-util:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:provided" -> "org.apache.kerby:token-provider:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-common:jar:1.0.1:provided" -> "org.apache.kerby:kerb-crypto:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-admin:jar:1.0.1:provided" -> "org.apache.kerby:kerb-server:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-admin:jar:1.0.1:provided" -> "org.apache.kerby:kerby-xdr:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-server:jar:1.0.1:provided" -> "org.apache.kerby:kerb-identity:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.6:provided" -> "org.apache.zookeeper:zookeeper-jute:jar:3.5.6:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.6:provided" -> "org.apache.yetus:audience-annotations:jar:0.5.0:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.6:provided" -> "io.netty:netty-handler:jar:4.1.42.Final:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.6:provided" -> "io.netty:netty-transport-native-epoll:jar:4.1.42.Final:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.6:provided" -> "log4j:log4j:jar:1.2.17:provided" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.42.Final:provided" -> "io.netty:netty-common:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.42.Final:provided" -> "io.netty:netty-buffer:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.42.Final:provided" -> "io.netty:netty-transport:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.42.Final:provided" -> "io.netty:netty-codec:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.42.Final:provided" -> "io.netty:netty-resolver:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:4.1.42.Final:provided" -> "io.netty:netty-transport-native-unix-common:jar:4.1.42.Final:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-core:jar:1.0.1:provided" -> "org.apache.kerby:kerby-pkix:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerby-pkix:jar:1.0.1:provided" -> "org.apache.kerby:kerby-asn1:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerby-pkix:jar:1.0.1:provided" -> "org.apache.kerby:kerby-util:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:provided" -> "com.google.inject.extensions:guice-servlet:jar:4.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:provided" -> "io.netty:netty:jar:3.10.6.Final:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.sun.jersey:jersey-client:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.google.inject:guice:jar:4.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.sun.jersey.contribs:jersey-guice:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.12.7:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.12.7:provided" ; 
+[INFO] 	"com.google.inject:guice:jar:4.0:provided" -> "javax.inject:javax.inject:jar:1:provided" ; 
+[INFO] 	"com.google.inject:guice:jar:4.0:provided" -> "aopalliance:aopalliance:jar:1.0:provided" ; 
+[INFO] 	"com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.12.7:provided" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.2:provided" ; 
+[INFO] 	"com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.12.7:provided" -> "com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:jar:2.12.7:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:test" -> "org.checkerframework:checker-qual:jar:3.37.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.21.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:2.8:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:4.12.0:test" -> "com.squareup.okio:okio:jar:3.6.0:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:4.12.0:test" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:test" ; 
+[INFO] 	"com.squareup.okio:okio:jar:3.6.0:test" -> "com.squareup.okio:okio-jvm:jar:3.6.0:test" ; 
+[INFO] 	"com.squareup.okio:okio-jvm:jar:3.6.0:test" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.9.10:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:test" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.8.21:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:test" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.8.21:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.8.21:test" -> "org.jetbrains:annotations:jar:13.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.easymock:easymock:jar:5.2.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< org.apache.parquet:parquet-avro >-------------------
+[INFO] Building Apache Parquet Avro 1.14.0-SNAPSHOT                     [10/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from jitpack.io: https://jitpack.io/org/apache/parquet/parquet-hadoop/1.14.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/parquet/parquet-hadoop/1.14.0-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ parquet-avro ---
+[INFO] digraph "org.apache.parquet:parquet-avro:jar:1.14.0-SNAPSHOT" { 
+[INFO] 	"org.apache.parquet:parquet-avro:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-avro:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-avro:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-common:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-avro:jar:1.14.0-SNAPSHOT" -> "org.apache.avro:avro:jar:1.11.3:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-avro:jar:1.14.0-SNAPSHOT" -> "it.unimi.dsi:fastutil:jar:8.5.12:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-avro:jar:1.14.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.parquet:parquet-avro:jar:1.14.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.parquet:parquet-avro:jar:1.14.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-common:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.parquet:parquet-avro:jar:1.14.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.33:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-avro:jar:1.14.0-SNAPSHOT" -> "com.google.guava:guava:jar:32.1.3-jre:test" ; 
+[INFO] 	"org.apache.parquet:parquet-avro:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-column:test-jar:tests:1.14.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.parquet:parquet-avro:jar:1.14.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.33:test" ; 
+[INFO] 	"org.apache.parquet:parquet-avro:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-hadoop:test-jar:tests:1.14.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.parquet:parquet-avro:jar:1.14.0-SNAPSHOT" -> "org.mockito:mockito-core:jar:2.23.0:test" ; 
+[INFO] 	"org.apache.parquet:parquet-avro:jar:1.14.0-SNAPSHOT" -> "org.powermock:powermock-module-junit4:jar:2.0.9:test" ; 
+[INFO] 	"org.apache.parquet:parquet-avro:jar:1.14.0-SNAPSHOT" -> "org.powermock:powermock-core:jar:2.0.9:test" ; 
+[INFO] 	"org.apache.parquet:parquet-avro:jar:1.14.0-SNAPSHOT" -> "org.powermock:powermock-api-mockito2:jar:2.0.9:test" ; 
+[INFO] 	"org.apache.parquet:parquet-avro:jar:1.14.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.apache.parquet:parquet-avro:jar:1.14.0-SNAPSHOT" -> "org.easymock:easymock:jar:5.2.0:test" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.parquet:parquet-encoding:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" -> "net.openhft:zero-allocation-hashing:jar:0.16:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.parquet:parquet-format-structures:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.parquet:parquet-jackson:jar:1.14.0-SNAPSHOT:runtime" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "org.xerial.snappy:snappy-java:jar:1.1.10.5:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "io.airlift:aircompressor:jar:0.25:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "commons-pool:commons-pool:jar:1.6:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "com.github.luben:zstd-jni:jar:1.5.0-1:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-format-structures:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.thrift:libthrift:jar:0.16.0:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.11.3:compile" -> "org.apache.commons:commons-compress:jar:1.22:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-hdfs-client:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-yarn-api:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-yarn-client:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-annotations:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-api:jar:3.3.5:provided" -> "javax.xml.bind:jaxb-api:jar:2.2.11:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-client:jar:3.3.5:provided" -> "org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-client:jar:3.3.5:provided" -> "org.jline:jline:jar:3.9.0:provided" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-client:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty.websocket:websocket-common:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-common:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty.websocket:websocket-api:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-mapreduce-client-common:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:provided" -> "com.google.protobuf:protobuf-java:jar:2.5.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:provided" -> "com.google.inject.extensions:guice-servlet:jar:4.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:provided" -> "io.netty:netty:jar:3.10.6.Final:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.sun.jersey:jersey-client:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.google.inject:guice:jar:4.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.sun.jersey.contribs:jersey-guice:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.12.7:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.12.7:provided" ; 
+[INFO] 	"com.google.inject:guice:jar:4.0:provided" -> "javax.inject:javax.inject:jar:1:provided" ; 
+[INFO] 	"com.google.inject:guice:jar:4.0:provided" -> "aopalliance:aopalliance:jar:1.0:provided" ; 
+[INFO] 	"com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.12.7:provided" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.2:provided" ; 
+[INFO] 	"com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.12.7:provided" -> "com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:jar:2.12.7:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.hadoop.thirdparty:hadoop-shaded-protobuf_3_7:jar:1.1.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.hadoop.thirdparty:hadoop-shaded-guava:jar:1.1.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-cli:commons-cli:jar:1.2:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.commons:commons-math3:jar:3.1.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-io:commons-io:jar:2.8.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-net:commons-net:jar:3.9.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-collections:commons-collections:jar:3.2.2:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "javax.servlet:javax.servlet-api:jar:3.1.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "jakarta.activation:jakarta.activation-api:jar:1.2.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.eclipse.jetty:jetty-server:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.eclipse.jetty:jetty-util:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.eclipse.jetty:jetty-servlet:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.eclipse.jetty:jetty-webapp:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "javax.servlet.jsp:jsp-api:jar:2.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.sun.jersey:jersey-core:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.sun.jersey:jersey-servlet:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.github.pjfanning:jersey-json:jar:1.20:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.sun.jersey:jersey-server:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-logging:commons-logging:jar:1.1.3:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-beanutils:commons-beanutils:jar:1.9.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.commons:commons-configuration2:jar:2.8.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.commons:commons-text:jar:1.10.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.google.re2j:re2j:jar:1.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.google.code.gson:gson:jar:2.9.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.jcraft:jsch:jar:0.1.55:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.curator:curator-client:jar:4.2.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.curator:curator-recipes:jar:4.2.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.zookeeper:zookeeper:jar:3.5.6:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.kerby:kerb-core:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.codehaus.woodstox:stax2-api:jar:4.2.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.fasterxml.woodstox:woodstox-core:jar:5.4.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "dnsjava:dnsjava:jar:2.1.7:provided" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.13:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-http:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-io:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-security:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-util-ajax:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-webapp:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-xml:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"com.sun.jersey:jersey-core:jar:1.19.4:provided" -> "javax.ws.rs:jsr311-api:jar:1.1.1:provided" ; 
+[INFO] 	"com.github.pjfanning:jersey-json:jar:1.20:provided" -> "org.codehaus.jettison:jettison:jar:1.1:provided" ; 
+[INFO] 	"com.github.pjfanning:jersey-json:jar:1.20:provided" -> "com.sun.xml.bind:jaxb-impl:jar:2.2.3-1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" -> "com.nimbusds:nimbus-jose-jwt:jar:9.8.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" -> "net.minidev:json-smart:jar:2.4.7:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" -> "org.apache.curator:curator-framework:jar:4.2.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" -> "org.apache.kerby:kerb-simplekdc:jar:1.0.1:provided" ; 
+[INFO] 	"com.nimbusds:nimbus-jose-jwt:jar:9.8.1:provided" -> "com.github.stephenc.jcip:jcip-annotations:jar:1.0-1:provided" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.7:provided" -> "net.minidev:accessors-smart:jar:2.4.7:provided" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.7:provided" -> "org.ow2.asm:asm:jar:9.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-simplekdc:jar:1.0.1:provided" -> "org.apache.kerby:kerb-client:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-simplekdc:jar:1.0.1:provided" -> "org.apache.kerby:kerb-admin:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:provided" -> "org.apache.kerby:kerby-config:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:provided" -> "org.apache.kerby:kerb-common:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:provided" -> "org.apache.kerby:kerb-util:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:provided" -> "org.apache.kerby:token-provider:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-common:jar:1.0.1:provided" -> "org.apache.kerby:kerb-crypto:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-admin:jar:1.0.1:provided" -> "org.apache.kerby:kerb-server:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-admin:jar:1.0.1:provided" -> "org.apache.kerby:kerby-xdr:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-server:jar:1.0.1:provided" -> "org.apache.kerby:kerb-identity:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.6:provided" -> "org.apache.zookeeper:zookeeper-jute:jar:3.5.6:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.6:provided" -> "org.apache.yetus:audience-annotations:jar:0.5.0:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.6:provided" -> "io.netty:netty-handler:jar:4.1.42.Final:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.6:provided" -> "io.netty:netty-transport-native-epoll:jar:4.1.42.Final:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.6:provided" -> "log4j:log4j:jar:1.2.17:provided" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.42.Final:provided" -> "io.netty:netty-common:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.42.Final:provided" -> "io.netty:netty-buffer:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.42.Final:provided" -> "io.netty:netty-transport:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.42.Final:provided" -> "io.netty:netty-codec:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.42.Final:provided" -> "io.netty:netty-resolver:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:4.1.42.Final:provided" -> "io.netty:netty-transport-native-unix-common:jar:4.1.42.Final:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-core:jar:1.0.1:provided" -> "org.apache.kerby:kerby-pkix:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerby-pkix:jar:1.0.1:provided" -> "org.apache.kerby:kerby-asn1:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerby-pkix:jar:1.0.1:provided" -> "org.apache.kerby:kerby-util:jar:1.0.1:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:test" -> "org.checkerframework:checker-qual:jar:3.37.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.21.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:2.8:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.23.0:test" -> "net.bytebuddy:byte-buddy:jar:1.9.0:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.23.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.9.0:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.23.0:test" -> "org.objenesis:objenesis:jar:2.6:test" ; 
+[INFO] 	"org.powermock:powermock-module-junit4:jar:2.0.9:test" -> "org.powermock:powermock-module-junit4-common:jar:2.0.9:test" ; 
+[INFO] 	"org.powermock:powermock-module-junit4:jar:2.0.9:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.powermock:powermock-core:jar:2.0.9:test" -> "org.powermock:powermock-reflect:jar:2.0.9:test" ; 
+[INFO] 	"org.powermock:powermock-core:jar:2.0.9:test" -> "org.javassist:javassist:jar:3.27.0-GA:test" ; 
+[INFO] 	"org.powermock:powermock-api-mockito2:jar:2.0.9:test" -> "org.powermock:powermock-api-support:jar:2.0.9:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.apache.parquet:parquet-benchmarks >----------------
+[INFO] Building Apache Parquet Benchmarks 1.14.0-SNAPSHOT               [11/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ parquet-benchmarks ---
+[INFO] digraph "org.apache.parquet:parquet-benchmarks:jar:1.14.0-SNAPSHOT" { 
+[INFO] 	"org.apache.parquet:parquet-benchmarks:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-benchmarks:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-benchmarks:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-common:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-benchmarks:jar:1.14.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client:jar:3.3.5:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-benchmarks:jar:1.14.0-SNAPSHOT" -> "org.openjdk.jmh:jmh-core:jar:1.37:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-benchmarks:jar:1.14.0-SNAPSHOT" -> "org.openjdk.jmh:jmh-generator-annprocess:jar:1.37:provided" ; 
+[INFO] 	"org.apache.parquet:parquet-benchmarks:jar:1.14.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.33:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-benchmarks:jar:1.14.0-SNAPSHOT" -> "it.unimi.dsi:fastutil:jar:8.5.12:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-benchmarks:jar:1.14.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.33:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-benchmarks:jar:1.14.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.apache.parquet:parquet-benchmarks:jar:1.14.0-SNAPSHOT" -> "org.easymock:easymock:jar:5.2.0:test" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.parquet:parquet-format-structures:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.parquet:parquet-jackson:jar:1.14.0-SNAPSHOT:runtime" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "org.xerial.snappy:snappy-java:jar:1.1.10.5:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "io.airlift:aircompressor:jar:0.25:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "commons-pool:commons-pool:jar:1.6:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "com.github.luben:zstd-jni:jar:1.5.0-1:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-format-structures:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.thrift:libthrift:jar:0.16.0:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.15:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.parquet:parquet-encoding:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" -> "net.openhft:zero-allocation-hashing:jar:0.16:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:compile" -> "org.apache.hadoop:hadoop-common:jar:3.3.5:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:compile" -> "org.apache.hadoop:hadoop-hdfs-client:jar:3.3.5:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:compile" -> "org.apache.hadoop:hadoop-yarn-api:jar:3.3.5:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:compile" -> "org.apache.hadoop:hadoop-yarn-client:jar:3.3.5:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:compile" -> "org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:compile" -> "org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:3.3.5:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:compile" -> "org.apache.hadoop:hadoop-annotations:jar:3.3.5:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "org.apache.hadoop.thirdparty:hadoop-shaded-protobuf_3_7:jar:1.1.1:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "org.apache.hadoop.thirdparty:hadoop-shaded-guava:jar:1.1.1:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "com.google.guava:guava:jar:27.0-jre:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "commons-cli:commons-cli:jar:1.2:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "commons-io:commons-io:jar:2.8.0:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "commons-net:commons-net:jar:3.9.0:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "jakarta.activation:jakarta.activation-api:jar:1.2.1:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "org.eclipse.jetty:jetty-servlet:jar:9.4.48.v20220622:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "org.eclipse.jetty:jetty-webapp:jar:9.4.48.v20220622:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "javax.servlet.jsp:jsp-api:jar:2.1:runtime" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "com.sun.jersey:jersey-servlet:jar:1.19.4:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "commons-logging:commons-logging:jar:1.1.3:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "commons-beanutils:commons-beanutils:jar:1.9.4:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "org.apache.commons:commons-configuration2:jar:2.8.0:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "org.apache.avro:avro:jar:1.7.7:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "com.google.re2j:re2j:jar:1.1:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "com.google.protobuf:protobuf-java:jar:2.5.0:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "com.google.code.gson:gson:jar:2.9.0:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "org.apache.hadoop:hadoop-auth:jar:3.3.5:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "org.apache.curator:curator-client:jar:4.2.0:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "org.apache.curator:curator-recipes:jar:4.2.0:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "org.apache.commons:commons-compress:jar:1.21:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "org.apache.kerby:kerb-core:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "org.codehaus.woodstox:stax2-api:jar:4.2.1:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "com.fasterxml.woodstox:woodstox-core:jar:5.4.0:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "dnsjava:dnsjava:jar:2.1.7:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:27.0-jre:compile" -> "com.google.guava:failureaccess:jar:1.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:27.0-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:27.0-jre:compile" -> "org.checkerframework:checker-qual:jar:2.5.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:27.0-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:27.0-jre:compile" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.17:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.48.v20220622:compile" -> "org.eclipse.jetty:jetty-security:jar:9.4.48.v20220622:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.48.v20220622:compile" -> "org.eclipse.jetty:jetty-util-ajax:jar:9.4.48.v20220622:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-webapp:jar:9.4.48.v20220622:compile" -> "org.eclipse.jetty:jetty-xml:jar:9.4.48.v20220622:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.7.7:compile" -> "org.codehaus.jackson:jackson-core-asl:jar:1.9.13:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.7.7:compile" -> "org.codehaus.jackson:jackson-mapper-asl:jar:1.9.13:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.7.7:compile" -> "com.thoughtworks.paranamer:paranamer:jar:2.3:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:compile" -> "com.nimbusds:nimbus-jose-jwt:jar:9.8.1:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:compile" -> "net.minidev:json-smart:jar:2.4.7:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:compile" -> "org.apache.curator:curator-framework:jar:4.2.0:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:compile" -> "org.apache.kerby:kerb-simplekdc:jar:1.0.1:compile" ; 
+[INFO] 	"com.nimbusds:nimbus-jose-jwt:jar:9.8.1:compile" -> "com.github.stephenc.jcip:jcip-annotations:jar:1.0-1:compile" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.7:compile" -> "net.minidev:accessors-smart:jar:2.4.7:compile" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.7:compile" -> "org.ow2.asm:asm:jar:9.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-simplekdc:jar:1.0.1:compile" -> "org.apache.kerby:kerb-client:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-simplekdc:jar:1.0.1:compile" -> "org.apache.kerby:kerb-admin:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:compile" -> "org.apache.kerby:kerby-config:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:compile" -> "org.apache.kerby:kerb-common:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:compile" -> "org.apache.kerby:kerb-util:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:compile" -> "org.apache.kerby:token-provider:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-common:jar:1.0.1:compile" -> "org.apache.kerby:kerb-crypto:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-admin:jar:1.0.1:compile" -> "org.apache.kerby:kerb-server:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-admin:jar:1.0.1:compile" -> "org.apache.kerby:kerby-xdr:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-server:jar:1.0.1:compile" -> "org.apache.kerby:kerb-identity:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-core:jar:1.0.1:compile" -> "org.apache.kerby:kerby-pkix:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerby-pkix:jar:1.0.1:compile" -> "org.apache.kerby:kerby-asn1:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerby-pkix:jar:1.0.1:compile" -> "org.apache.kerby:kerby-util:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-api:jar:3.3.5:compile" -> "javax.xml.bind:jaxb-api:jar:2.2.11:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-client:jar:3.3.5:compile" -> "org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-client:jar:3.3.5:compile" -> "org.jline:jline:jar:3.9.0:compile" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:compile" -> "org.eclipse.jetty:jetty-client:jar:9.4.48.v20220622:compile" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:compile" -> "org.eclipse.jetty:jetty-util:jar:9.4.48.v20220622:compile" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:compile" -> "org.eclipse.jetty:jetty-io:jar:9.4.48.v20220622:compile" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:compile" -> "org.eclipse.jetty.websocket:websocket-common:jar:9.4.48.v20220622:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-client:jar:9.4.48.v20220622:compile" -> "org.eclipse.jetty:jetty-http:jar:9.4.48.v20220622:compile" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-common:jar:9.4.48.v20220622:compile" -> "org.eclipse.jetty.websocket:websocket-api:jar:9.4.48.v20220622:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:compile" -> "org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:compile" -> "javax.servlet:javax.servlet-api:jar:3.1.0:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:compile" -> "com.sun.jersey:jersey-core:jar:1.19.4:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:compile" -> "com.sun.jersey:jersey-client:jar:1.19.4:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:compile" -> "com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.12.7:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:compile" -> "com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.12.7:compile" ; 
+[INFO] 	"com.sun.jersey:jersey-core:jar:1.19.4:compile" -> "javax.ws.rs:jsr311-api:jar:1.1.1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.12.7:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.12.7:compile" -> "com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:jar:2.12.7:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:3.3.5:compile" -> "org.apache.hadoop:hadoop-mapreduce-client-common:jar:3.3.5:compile" ; 
+[INFO] 	"org.openjdk.jmh:jmh-core:jar:1.37:compile" -> "net.sf.jopt-simple:jopt-simple:jar:5.0.4:compile" ; 
+[INFO] 	"org.openjdk.jmh:jmh-core:jar:1.37:compile" -> "org.apache.commons:commons-math3:jar:3.6.1:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.easymock:easymock:jar:5.2.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< org.apache.parquet:parquet-cli >-------------------
+[INFO] Building Apache Parquet Command-line 1.14.0-SNAPSHOT             [12/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from jitpack.io: https://jitpack.io/org/apache/parquet/parquet-avro/1.14.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/parquet/parquet-avro/1.14.0-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ parquet-cli ---
+[INFO] digraph "org.apache.parquet:parquet-cli:jar:1.14.0-SNAPSHOT" { 
+[INFO] 	"org.apache.parquet:parquet-cli:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-avro:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-cli:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-format-structures:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-cli:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-common:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-cli:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-cli:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-cli:jar:1.14.0-SNAPSHOT" -> "org.apache.avro:avro:jar:1.11.3:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-cli:jar:1.14.0-SNAPSHOT" -> "org.tukaani:xz:jar:1.9:runtime" ; 
+[INFO] 	"org.apache.parquet:parquet-cli:jar:1.14.0-SNAPSHOT" -> "com.github.luben:zstd-jni:jar:1.5.0-1:runtime" ; 
+[INFO] 	"org.apache.parquet:parquet-cli:jar:1.14.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.33:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-cli:jar:1.14.0-SNAPSHOT" -> "net.sf.opencsv:opencsv:jar:2.3:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-cli:jar:1.14.0-SNAPSHOT" -> "org.apache.commons:commons-text:jar:1.8:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-cli:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-jackson:jar:1.14.0-SNAPSHOT:runtime" ; 
+[INFO] 	"org.apache.parquet:parquet-cli:jar:1.14.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-cli:jar:1.14.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-cli:jar:1.14.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-cli:jar:1.14.0-SNAPSHOT" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-cli:jar:1.14.0-SNAPSHOT" -> "com.beust:jcommander:jar:1.82:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-cli:jar:1.14.0-SNAPSHOT" -> "org.slf4j:slf4j-log4j12:jar:1.7.33:provided" ; 
+[INFO] 	"org.apache.parquet:parquet-cli:jar:1.14.0-SNAPSHOT" -> "com.google.guava:guava:jar:32.1.3-jre:provided" ; 
+[INFO] 	"org.apache.parquet:parquet-cli:jar:1.14.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.parquet:parquet-cli:jar:1.14.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-common:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.parquet:parquet-cli:jar:1.14.0-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"org.apache.parquet:parquet-cli:jar:1.14.0-SNAPSHOT" -> "log4j:log4j:jar:1.2.17:provided" ; 
+[INFO] 	"org.apache.parquet:parquet-cli:jar:1.14.0-SNAPSHOT" -> "commons-io:commons-io:jar:2.7:provided" ; 
+[INFO] 	"org.apache.parquet:parquet-cli:jar:1.14.0-SNAPSHOT" -> "commons-logging:commons-logging:jar:1.1.3:provided" ; 
+[INFO] 	"org.apache.parquet:parquet-cli:jar:1.14.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.apache.parquet:parquet-cli:jar:1.14.0-SNAPSHOT" -> "org.easymock:easymock:jar:5.2.0:test" ; 
+[INFO] 	"org.apache.parquet:parquet-avro:jar:1.14.0-SNAPSHOT:compile" -> "it.unimi.dsi:fastutil:jar:8.5.12:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-format-structures:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.thrift:libthrift:jar:0.16.0:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.15:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.parquet:parquet-encoding:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" -> "net.openhft:zero-allocation-hashing:jar:0.16:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "org.xerial.snappy:snappy-java:jar:1.1.10.5:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "io.airlift:aircompressor:jar:0.25:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "commons-pool:commons-pool:jar:1.6:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.11.3:compile" -> "org.apache.commons:commons-compress:jar:1.22:compile" ; 
+[INFO] 	"org.apache.commons:commons-text:jar:1.8:compile" -> "org.apache.commons:commons-lang3:jar:3.9:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:provided" -> "com.google.guava:failureaccess:jar:1.0.1:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:provided" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:provided" -> "org.checkerframework:checker-qual:jar:3.37.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:provided" -> "com.google.errorprone:error_prone_annotations:jar:2.21.1:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:provided" -> "com.google.j2objc:j2objc-annotations:jar:2.8:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-hdfs-client:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-yarn-api:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-yarn-client:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-annotations:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-api:jar:3.3.5:provided" -> "javax.xml.bind:jaxb-api:jar:2.2.11:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-client:jar:3.3.5:provided" -> "org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-client:jar:3.3.5:provided" -> "org.jline:jline:jar:3.9.0:provided" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-client:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty.websocket:websocket-common:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-common:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty.websocket:websocket-api:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.sun.jersey:jersey-client:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.12.7:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.12.7:provided" ; 
+[INFO] 	"com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.12.7:provided" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.2:provided" ; 
+[INFO] 	"com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.12.7:provided" -> "com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:jar:2.12.7:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-mapreduce-client-common:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.hadoop.thirdparty:hadoop-shaded-protobuf_3_7:jar:1.1.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.hadoop.thirdparty:hadoop-shaded-guava:jar:1.1.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-cli:commons-cli:jar:1.2:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.commons:commons-math3:jar:3.1.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-net:commons-net:jar:3.9.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-collections:commons-collections:jar:3.2.2:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "javax.servlet:javax.servlet-api:jar:3.1.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "jakarta.activation:jakarta.activation-api:jar:1.2.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.eclipse.jetty:jetty-server:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.eclipse.jetty:jetty-util:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.eclipse.jetty:jetty-servlet:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.eclipse.jetty:jetty-webapp:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "javax.servlet.jsp:jsp-api:jar:2.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.sun.jersey:jersey-core:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.sun.jersey:jersey-servlet:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.github.pjfanning:jersey-json:jar:1.20:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.sun.jersey:jersey-server:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-beanutils:commons-beanutils:jar:1.9.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.commons:commons-configuration2:jar:2.8.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.google.re2j:re2j:jar:1.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.google.protobuf:protobuf-java:jar:2.5.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.google.code.gson:gson:jar:2.9.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.jcraft:jsch:jar:0.1.55:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.curator:curator-client:jar:4.2.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.curator:curator-recipes:jar:4.2.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.zookeeper:zookeeper:jar:3.5.6:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.kerby:kerb-core:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.codehaus.woodstox:stax2-api:jar:4.2.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.fasterxml.woodstox:woodstox-core:jar:5.4.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "dnsjava:dnsjava:jar:2.1.7:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-http:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-io:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-security:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-util-ajax:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-webapp:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-xml:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"com.sun.jersey:jersey-core:jar:1.19.4:provided" -> "javax.ws.rs:jsr311-api:jar:1.1.1:provided" ; 
+[INFO] 	"com.github.pjfanning:jersey-json:jar:1.20:provided" -> "org.codehaus.jettison:jettison:jar:1.1:provided" ; 
+[INFO] 	"com.github.pjfanning:jersey-json:jar:1.20:provided" -> "com.sun.xml.bind:jaxb-impl:jar:2.2.3-1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" -> "com.nimbusds:nimbus-jose-jwt:jar:9.8.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" -> "net.minidev:json-smart:jar:2.4.7:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" -> "org.apache.curator:curator-framework:jar:4.2.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" -> "org.apache.kerby:kerb-simplekdc:jar:1.0.1:provided" ; 
+[INFO] 	"com.nimbusds:nimbus-jose-jwt:jar:9.8.1:provided" -> "com.github.stephenc.jcip:jcip-annotations:jar:1.0-1:provided" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.7:provided" -> "net.minidev:accessors-smart:jar:2.4.7:provided" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.7:provided" -> "org.ow2.asm:asm:jar:9.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-simplekdc:jar:1.0.1:provided" -> "org.apache.kerby:kerb-client:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-simplekdc:jar:1.0.1:provided" -> "org.apache.kerby:kerb-admin:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:provided" -> "org.apache.kerby:kerby-config:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:provided" -> "org.apache.kerby:kerb-common:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:provided" -> "org.apache.kerby:kerb-util:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:provided" -> "org.apache.kerby:token-provider:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-common:jar:1.0.1:provided" -> "org.apache.kerby:kerb-crypto:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-admin:jar:1.0.1:provided" -> "org.apache.kerby:kerb-server:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-admin:jar:1.0.1:provided" -> "org.apache.kerby:kerby-xdr:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-server:jar:1.0.1:provided" -> "org.apache.kerby:kerb-identity:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.6:provided" -> "org.apache.zookeeper:zookeeper-jute:jar:3.5.6:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.6:provided" -> "org.apache.yetus:audience-annotations:jar:0.5.0:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.6:provided" -> "io.netty:netty-handler:jar:4.1.42.Final:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.6:provided" -> "io.netty:netty-transport-native-epoll:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.42.Final:provided" -> "io.netty:netty-common:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.42.Final:provided" -> "io.netty:netty-buffer:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.42.Final:provided" -> "io.netty:netty-transport:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.42.Final:provided" -> "io.netty:netty-codec:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.42.Final:provided" -> "io.netty:netty-resolver:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:4.1.42.Final:provided" -> "io.netty:netty-transport-native-unix-common:jar:4.1.42.Final:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-core:jar:1.0.1:provided" -> "org.apache.kerby:kerby-pkix:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerby-pkix:jar:1.0.1:provided" -> "org.apache.kerby:kerby-asn1:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerby-pkix:jar:1.0.1:provided" -> "org.apache.kerby:kerby-util:jar:1.0.1:provided" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.easymock:easymock:jar:5.2.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< org.apache.parquet:parquet-pig >-------------------
+[INFO] Building Apache Parquet Pig 1.14.0-SNAPSHOT                      [13/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ parquet-pig ---
+[INFO] digraph "org.apache.parquet:parquet-pig:jar:1.14.0-SNAPSHOT" { 
+[INFO] 	"org.apache.parquet:parquet-pig:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-pig:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-pig:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-common:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-pig:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-jackson:jar:1.14.0-SNAPSHOT:runtime" ; 
+[INFO] 	"org.apache.parquet:parquet-pig:jar:1.14.0-SNAPSHOT" -> "org.apache.pig:pig:jar:h2:0.16.0:provided" ; 
+[INFO] 	"org.apache.parquet:parquet-pig:jar:1.14.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.parquet:parquet-pig:jar:1.14.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.parquet:parquet-pig:jar:1.14.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-common:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.parquet:parquet-pig:jar:1.14.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-pig:jar:1.14.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-pig:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-column:test-jar:tests:1.14.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.parquet:parquet-pig:jar:1.14.0-SNAPSHOT" -> "joda-time:joda-time:jar:2.12.5:test" ; 
+[INFO] 	"org.apache.parquet:parquet-pig:jar:1.14.0-SNAPSHOT" -> "org.antlr:antlr-runtime:jar:3.5.3:test" ; 
+[INFO] 	"org.apache.parquet:parquet-pig:jar:1.14.0-SNAPSHOT" -> "com.google.guava:guava:jar:32.1.3-jre:test" ; 
+[INFO] 	"org.apache.parquet:parquet-pig:jar:1.14.0-SNAPSHOT" -> "org.slf4j:slf4j-log4j12:jar:1.7.33:test" ; 
+[INFO] 	"org.apache.parquet:parquet-pig:jar:1.14.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.33:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-pig:jar:1.14.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.apache.parquet:parquet-pig:jar:1.14.0-SNAPSHOT" -> "org.easymock:easymock:jar:5.2.0:test" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.parquet:parquet-encoding:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" -> "it.unimi.dsi:fastutil:jar:8.5.12:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" -> "net.openhft:zero-allocation-hashing:jar:0.16:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.parquet:parquet-format-structures:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "org.xerial.snappy:snappy-java:jar:1.1.10.5:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "io.airlift:aircompressor:jar:0.25:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "commons-pool:commons-pool:jar:1.6:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "com.github.luben:zstd-jni:jar:1.5.0-1:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-format-structures:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.thrift:libthrift:jar:0.16.0:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "commons-cli:commons-cli:jar:1.2:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "xmlenc:xmlenc:jar:0.52:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "commons-httpclient:commons-httpclient:jar:3.1:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "commons-codec:commons-codec:jar:1.4:compile" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "commons-net:commons-net:jar:1.4.1:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "org.mortbay.jetty:jetty:jar:6.1.26:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "org.mortbay.jetty:jetty-util:jar:6.1.26:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "tomcat:jasper-runtime:jar:5.5.12:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "tomcat:jasper-compiler:jar:5.5.12:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "org.mortbay.jetty:jsp-api-2.1:jar:6.1.14:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "org.mortbay.jetty:jsp-2.1:jar:6.1.14:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "commons-el:commons-el:jar:1.0:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "net.java.dev.jets3t:jets3t:jar:0.7.1:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "org.mortbay.jetty:servlet-api-2.5:jar:6.1.14:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "net.sf.kosmosfs:kfs:jar:0.3:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "hsqldb:hsqldb:jar:1.8.0.10:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "oro:oro:jar:2.0.8:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "jline:jline:jar:1.0:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "org.antlr:ST4:jar:4.0.4:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "dk.brics.automaton:automaton:jar:1.11-8:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "org.codehaus.jackson:jackson-mapper-asl:jar:1.8.8:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "org.codehaus.jackson:jackson-core-asl:jar:1.8.8:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "org.apache.avro:avro:jar:1.7.4:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "org.apache.ivy:ivy:jar:2.2.0:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "org.codehaus.groovy:groovy-all:jar:1.8.6:provided" ; 
+[INFO] 	"org.mortbay.jetty:jetty:jar:6.1.26:provided" -> "org.mortbay.jetty:servlet-api:jar:2.5-20081211:provided" ; 
+[INFO] 	"org.mortbay.jetty:jsp-2.1:jar:6.1.14:provided" -> "org.eclipse.jdt:core:jar:3.1.1:provided" ; 
+[INFO] 	"org.mortbay.jetty:jsp-2.1:jar:6.1.14:provided" -> "ant:ant:jar:1.6.5:provided" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.7.4:provided" -> "com.thoughtworks.paranamer:paranamer:jar:2.3:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-hdfs-client:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-yarn-api:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-yarn-client:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-annotations:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-api:jar:3.3.5:provided" -> "javax.xml.bind:jaxb-api:jar:2.2.11:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-client:jar:3.3.5:provided" -> "org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-client:jar:3.3.5:provided" -> "org.jline:jline:jar:3.9.0:provided" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-client:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty.websocket:websocket-common:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-common:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty.websocket:websocket-api:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-mapreduce-client-common:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:provided" -> "com.google.protobuf:protobuf-java:jar:2.5.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:provided" -> "com.google.inject.extensions:guice-servlet:jar:4.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:provided" -> "io.netty:netty:jar:3.10.6.Final:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.sun.jersey:jersey-client:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.google.inject:guice:jar:4.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.sun.jersey.contribs:jersey-guice:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.12.7:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.12.7:provided" ; 
+[INFO] 	"com.google.inject:guice:jar:4.0:provided" -> "javax.inject:javax.inject:jar:1:provided" ; 
+[INFO] 	"com.google.inject:guice:jar:4.0:provided" -> "aopalliance:aopalliance:jar:1.0:provided" ; 
+[INFO] 	"com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.12.7:provided" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.2:provided" ; 
+[INFO] 	"com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.12.7:provided" -> "com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:jar:2.12.7:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.hadoop.thirdparty:hadoop-shaded-protobuf_3_7:jar:1.1.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.hadoop.thirdparty:hadoop-shaded-guava:jar:1.1.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.commons:commons-math3:jar:3.1.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-io:commons-io:jar:2.8.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-collections:commons-collections:jar:3.2.2:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "javax.servlet:javax.servlet-api:jar:3.1.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "jakarta.activation:jakarta.activation-api:jar:1.2.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.eclipse.jetty:jetty-server:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.eclipse.jetty:jetty-util:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.eclipse.jetty:jetty-servlet:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.eclipse.jetty:jetty-webapp:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "javax.servlet.jsp:jsp-api:jar:2.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.sun.jersey:jersey-core:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.sun.jersey:jersey-servlet:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.github.pjfanning:jersey-json:jar:1.20:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.sun.jersey:jersey-server:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-logging:commons-logging:jar:1.1.3:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-beanutils:commons-beanutils:jar:1.9.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.commons:commons-configuration2:jar:2.8.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.commons:commons-text:jar:1.10.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.google.re2j:re2j:jar:1.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.google.code.gson:gson:jar:2.9.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.jcraft:jsch:jar:0.1.55:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.curator:curator-client:jar:4.2.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.curator:curator-recipes:jar:4.2.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.zookeeper:zookeeper:jar:3.5.6:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.commons:commons-compress:jar:1.21:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.kerby:kerb-core:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.codehaus.woodstox:stax2-api:jar:4.2.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.fasterxml.woodstox:woodstox-core:jar:5.4.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "dnsjava:dnsjava:jar:2.1.7:provided" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.13:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-http:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-io:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-security:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-util-ajax:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-webapp:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-xml:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"com.sun.jersey:jersey-core:jar:1.19.4:provided" -> "javax.ws.rs:jsr311-api:jar:1.1.1:provided" ; 
+[INFO] 	"com.github.pjfanning:jersey-json:jar:1.20:provided" -> "org.codehaus.jettison:jettison:jar:1.1:provided" ; 
+[INFO] 	"com.github.pjfanning:jersey-json:jar:1.20:provided" -> "com.sun.xml.bind:jaxb-impl:jar:2.2.3-1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" -> "com.nimbusds:nimbus-jose-jwt:jar:9.8.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" -> "net.minidev:json-smart:jar:2.4.7:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" -> "org.apache.curator:curator-framework:jar:4.2.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" -> "org.apache.kerby:kerb-simplekdc:jar:1.0.1:provided" ; 
+[INFO] 	"com.nimbusds:nimbus-jose-jwt:jar:9.8.1:provided" -> "com.github.stephenc.jcip:jcip-annotations:jar:1.0-1:provided" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.7:provided" -> "net.minidev:accessors-smart:jar:2.4.7:provided" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.7:provided" -> "org.ow2.asm:asm:jar:9.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-simplekdc:jar:1.0.1:provided" -> "org.apache.kerby:kerb-client:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-simplekdc:jar:1.0.1:provided" -> "org.apache.kerby:kerb-admin:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:provided" -> "org.apache.kerby:kerby-config:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:provided" -> "org.apache.kerby:kerb-common:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:provided" -> "org.apache.kerby:kerb-util:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:provided" -> "org.apache.kerby:token-provider:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-common:jar:1.0.1:provided" -> "org.apache.kerby:kerb-crypto:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-admin:jar:1.0.1:provided" -> "org.apache.kerby:kerb-server:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-admin:jar:1.0.1:provided" -> "org.apache.kerby:kerby-xdr:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-server:jar:1.0.1:provided" -> "org.apache.kerby:kerb-identity:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.6:provided" -> "org.apache.zookeeper:zookeeper-jute:jar:3.5.6:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.6:provided" -> "org.apache.yetus:audience-annotations:jar:0.5.0:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.6:provided" -> "io.netty:netty-handler:jar:4.1.42.Final:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.6:provided" -> "io.netty:netty-transport-native-epoll:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.42.Final:provided" -> "io.netty:netty-common:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.42.Final:provided" -> "io.netty:netty-buffer:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.42.Final:provided" -> "io.netty:netty-transport:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.42.Final:provided" -> "io.netty:netty-codec:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.42.Final:provided" -> "io.netty:netty-resolver:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:4.1.42.Final:provided" -> "io.netty:netty-transport-native-unix-common:jar:4.1.42.Final:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-core:jar:1.0.1:provided" -> "org.apache.kerby:kerby-pkix:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerby-pkix:jar:1.0.1:provided" -> "org.apache.kerby:kerby-asn1:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerby-pkix:jar:1.0.1:provided" -> "org.apache.kerby:kerby-util:jar:1.0.1:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:test" -> "org.checkerframework:checker-qual:jar:3.37.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.21.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:2.8:test" ; 
+[INFO] 	"org.slf4j:slf4j-log4j12:jar:1.7.33:test" -> "log4j:log4j:jar:1.2.17:provided" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.easymock:easymock:jar:5.2.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.apache.parquet:parquet-pig-bundle >----------------
+[INFO] Building Apache Parquet Pig Bundle 1.14.0-SNAPSHOT               [14/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from jitpack.io: https://jitpack.io/org/apache/parquet/parquet-pig/1.14.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/parquet/parquet-pig/1.14.0-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ parquet-pig-bundle ---
+[INFO] digraph "org.apache.parquet:parquet-pig-bundle:jar:1.14.0-SNAPSHOT" { 
+[INFO] 	"org.apache.parquet:parquet-pig-bundle:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-pig:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-pig-bundle:jar:1.14.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.apache.parquet:parquet-pig-bundle:jar:1.14.0-SNAPSHOT" -> "org.easymock:easymock:jar:5.2.0:test" ; 
+[INFO] 	"org.apache.parquet:parquet-pig:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-pig:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-pig:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.parquet:parquet-common:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-pig:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.parquet:parquet-jackson:jar:1.14.0-SNAPSHOT:runtime" ; 
+[INFO] 	"org.apache.parquet:parquet-pig:jar:1.14.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-pig:jar:1.14.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-pig:jar:1.14.0-SNAPSHOT:compile" -> "org.slf4j:slf4j-api:jar:1.7.33:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.parquet:parquet-encoding:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" -> "it.unimi.dsi:fastutil:jar:8.5.12:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" -> "net.openhft:zero-allocation-hashing:jar:0.16:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.parquet:parquet-format-structures:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "org.xerial.snappy:snappy-java:jar:1.1.10.5:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "io.airlift:aircompressor:jar:0.25:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "commons-pool:commons-pool:jar:1.6:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "com.github.luben:zstd-jni:jar:1.5.0-1:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-format-structures:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.thrift:libthrift:jar:0.16.0:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.15:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-codec:commons-codec:jar:1.11:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.easymock:easymock:jar:5.2.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< org.apache.parquet:parquet-protobuf >-----------------
+[INFO] Building Apache Parquet Protobuf 1.14.0-SNAPSHOT                 [15/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ parquet-protobuf ---
+[INFO] digraph "org.apache.parquet:parquet-protobuf:jar:1.14.0-SNAPSHOT" { 
+[INFO] 	"org.apache.parquet:parquet-protobuf:jar:1.14.0-SNAPSHOT" -> "org.mockito:mockito-core:jar:1.10.19:test" ; 
+[INFO] 	"org.apache.parquet:parquet-protobuf:jar:1.14.0-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-protobuf:jar:1.14.0-SNAPSHOT" -> "com.google.truth.extensions:truth-proto-extension:jar:1.1.5:test" ; 
+[INFO] 	"org.apache.parquet:parquet-protobuf:jar:1.14.0-SNAPSHOT" -> "com.google.guava:guava:jar:32.1.3-jre:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-protobuf:jar:1.14.0-SNAPSHOT" -> "com.google.protobuf:protobuf-java:jar:3.25.1:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-protobuf:jar:1.14.0-SNAPSHOT" -> "com.google.protobuf:protobuf-java-util:jar:3.25.1:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-protobuf:jar:1.14.0-SNAPSHOT" -> "com.google.api.grpc:proto-google-common-protos:jar:2.28.0:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-protobuf:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-common:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-protobuf:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-protobuf:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-protobuf:jar:1.14.0-SNAPSHOT" -> "com.twitter.elephantbird:elephant-bird-core:jar:4.4:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-protobuf:jar:1.14.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.parquet:parquet-protobuf:jar:1.14.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.parquet:parquet-protobuf:jar:1.14.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-common:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.parquet:parquet-protobuf:jar:1.14.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.33:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-protobuf:jar:1.14.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.33:test" ; 
+[INFO] 	"org.apache.parquet:parquet-protobuf:jar:1.14.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.apache.parquet:parquet-protobuf:jar:1.14.0-SNAPSHOT" -> "org.easymock:easymock:jar:5.2.0:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:1.10.19:test" -> "org.hamcrest:hamcrest-core:jar:1.1:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:1.10.19:test" -> "org.objenesis:objenesis:jar:2.1:test" ; 
+[INFO] 	"com.google.truth.extensions:truth-proto-extension:jar:1.1.5:test" -> "com.google.truth:truth:jar:1.1.5:test" ; 
+[INFO] 	"com.google.truth.extensions:truth-proto-extension:jar:1.1.5:test" -> "com.google.truth.extensions:truth-liteproto-extension:jar:1.1.5:test" ; 
+[INFO] 	"com.google.truth.extensions:truth-proto-extension:jar:1.1.5:test" -> "org.checkerframework:checker-qual:jar:3.35.0:compile" ; 
+[INFO] 	"com.google.truth.extensions:truth-proto-extension:jar:1.1.5:test" -> "com.google.auto.value:auto-value-annotations:jar:1.10.1:test" ; 
+[INFO] 	"com.google.truth.extensions:truth-proto-extension:jar:1.1.5:test" -> "com.google.errorprone:error_prone_annotations:jar:2.19.1:compile" ; 
+[INFO] 	"com.google.truth:truth:jar:1.1.5:test" -> "org.ow2.asm:asm:jar:9.5:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.25.1:compile" -> "com.google.code.gson:gson:jar:2.8.9:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-common:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.parquet:parquet-format-structures:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.parquet:parquet-encoding:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" -> "it.unimi.dsi:fastutil:jar:8.5.12:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" -> "net.openhft:zero-allocation-hashing:jar:0.16:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.parquet:parquet-jackson:jar:1.14.0-SNAPSHOT:runtime" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "org.xerial.snappy:snappy-java:jar:1.1.10.5:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "io.airlift:aircompressor:jar:0.25:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "commons-pool:commons-pool:jar:1.6:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "com.github.luben:zstd-jni:jar:1.5.0-1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:compile" ; 
+[INFO] 	"com.twitter.elephantbird:elephant-bird-core:jar:4.4:compile" -> "com.twitter.elephantbird:elephant-bird-hadoop-compat:jar:4.4:compile" ; 
+[INFO] 	"com.twitter.elephantbird:elephant-bird-core:jar:4.4:compile" -> "commons-lang:commons-lang:jar:2.4:compile" ; 
+[INFO] 	"com.twitter.elephantbird:elephant-bird-core:jar:4.4:compile" -> "org.apache.thrift:libthrift:jar:0.16.0:compile" ; 
+[INFO] 	"com.twitter.elephantbird:elephant-bird-core:jar:4.4:compile" -> "com.googlecode.json-simple:json-simple:jar:1.1:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.15:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-hdfs-client:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-yarn-api:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-yarn-client:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-annotations:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-api:jar:3.3.5:provided" -> "javax.xml.bind:jaxb-api:jar:2.2.11:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-client:jar:3.3.5:provided" -> "org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-client:jar:3.3.5:provided" -> "org.jline:jline:jar:3.9.0:provided" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-client:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty.websocket:websocket-common:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-common:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty.websocket:websocket-api:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-mapreduce-client-common:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:provided" -> "org.apache.avro:avro:jar:1.7.7:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:provided" -> "com.google.inject.extensions:guice-servlet:jar:4.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:provided" -> "io.netty:netty:jar:3.10.6.Final:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.sun.jersey:jersey-client:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.google.inject:guice:jar:4.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.sun.jersey.contribs:jersey-guice:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.12.7:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.12.7:provided" ; 
+[INFO] 	"com.google.inject:guice:jar:4.0:provided" -> "javax.inject:javax.inject:jar:1:provided" ; 
+[INFO] 	"com.google.inject:guice:jar:4.0:provided" -> "aopalliance:aopalliance:jar:1.0:provided" ; 
+[INFO] 	"com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.12.7:provided" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.2:provided" ; 
+[INFO] 	"com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.12.7:provided" -> "com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:jar:2.12.7:provided" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.7.7:provided" -> "org.codehaus.jackson:jackson-core-asl:jar:1.9.13:provided" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.7.7:provided" -> "org.codehaus.jackson:jackson-mapper-asl:jar:1.9.13:provided" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.7.7:provided" -> "com.thoughtworks.paranamer:paranamer:jar:2.3:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.hadoop.thirdparty:hadoop-shaded-protobuf_3_7:jar:1.1.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.hadoop.thirdparty:hadoop-shaded-guava:jar:1.1.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-cli:commons-cli:jar:1.2:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.commons:commons-math3:jar:3.1.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-io:commons-io:jar:2.8.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-net:commons-net:jar:3.9.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-collections:commons-collections:jar:3.2.2:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "javax.servlet:javax.servlet-api:jar:3.1.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "jakarta.activation:jakarta.activation-api:jar:1.2.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.eclipse.jetty:jetty-server:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.eclipse.jetty:jetty-util:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.eclipse.jetty:jetty-servlet:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.eclipse.jetty:jetty-webapp:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "javax.servlet.jsp:jsp-api:jar:2.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.sun.jersey:jersey-core:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.sun.jersey:jersey-servlet:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.github.pjfanning:jersey-json:jar:1.20:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.sun.jersey:jersey-server:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-logging:commons-logging:jar:1.1.3:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-beanutils:commons-beanutils:jar:1.9.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.commons:commons-configuration2:jar:2.8.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.commons:commons-text:jar:1.10.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.google.re2j:re2j:jar:1.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.jcraft:jsch:jar:0.1.55:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.curator:curator-client:jar:4.2.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.curator:curator-recipes:jar:4.2.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.zookeeper:zookeeper:jar:3.5.6:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.commons:commons-compress:jar:1.21:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.kerby:kerb-core:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.codehaus.woodstox:stax2-api:jar:4.2.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.fasterxml.woodstox:woodstox-core:jar:5.4.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "dnsjava:dnsjava:jar:2.1.7:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-http:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-io:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-security:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-util-ajax:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-webapp:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-xml:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"com.sun.jersey:jersey-core:jar:1.19.4:provided" -> "javax.ws.rs:jsr311-api:jar:1.1.1:provided" ; 
+[INFO] 	"com.github.pjfanning:jersey-json:jar:1.20:provided" -> "org.codehaus.jettison:jettison:jar:1.1:provided" ; 
+[INFO] 	"com.github.pjfanning:jersey-json:jar:1.20:provided" -> "com.sun.xml.bind:jaxb-impl:jar:2.2.3-1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" -> "com.nimbusds:nimbus-jose-jwt:jar:9.8.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" -> "net.minidev:json-smart:jar:2.4.7:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" -> "org.apache.curator:curator-framework:jar:4.2.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" -> "org.apache.kerby:kerb-simplekdc:jar:1.0.1:provided" ; 
+[INFO] 	"com.nimbusds:nimbus-jose-jwt:jar:9.8.1:provided" -> "com.github.stephenc.jcip:jcip-annotations:jar:1.0-1:provided" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.7:provided" -> "net.minidev:accessors-smart:jar:2.4.7:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-simplekdc:jar:1.0.1:provided" -> "org.apache.kerby:kerb-client:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-simplekdc:jar:1.0.1:provided" -> "org.apache.kerby:kerb-admin:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:provided" -> "org.apache.kerby:kerby-config:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:provided" -> "org.apache.kerby:kerb-common:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:provided" -> "org.apache.kerby:kerb-util:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:provided" -> "org.apache.kerby:token-provider:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-common:jar:1.0.1:provided" -> "org.apache.kerby:kerb-crypto:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-admin:jar:1.0.1:provided" -> "org.apache.kerby:kerb-server:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-admin:jar:1.0.1:provided" -> "org.apache.kerby:kerby-xdr:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-server:jar:1.0.1:provided" -> "org.apache.kerby:kerb-identity:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.6:provided" -> "org.apache.zookeeper:zookeeper-jute:jar:3.5.6:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.6:provided" -> "org.apache.yetus:audience-annotations:jar:0.5.0:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.6:provided" -> "io.netty:netty-handler:jar:4.1.42.Final:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.6:provided" -> "io.netty:netty-transport-native-epoll:jar:4.1.42.Final:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.6:provided" -> "log4j:log4j:jar:1.2.17:provided" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.42.Final:provided" -> "io.netty:netty-common:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.42.Final:provided" -> "io.netty:netty-buffer:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.42.Final:provided" -> "io.netty:netty-transport:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.42.Final:provided" -> "io.netty:netty-codec:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.42.Final:provided" -> "io.netty:netty-resolver:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:4.1.42.Final:provided" -> "io.netty:netty-transport-native-unix-common:jar:4.1.42.Final:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-core:jar:1.0.1:provided" -> "org.apache.kerby:kerby-pkix:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerby-pkix:jar:1.0.1:provided" -> "org.apache.kerby:kerby-asn1:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerby-pkix:jar:1.0.1:provided" -> "org.apache.kerby:kerby-util:jar:1.0.1:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.apache.parquet:parquet-scala_2.12 >----------------
+[INFO] Building Apache Parquet Scala 1.14.0-SNAPSHOT                    [16/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from scala-tools.org: https://scala-tools.org/repo-releases/org/scala-tools/maven-scala-plugin/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/scala-tools/maven-scala-plugin/maven-metadata.xml
+[WARNING] Could not transfer metadata org.scala-tools:maven-scala-plugin/maven-metadata.xml from/to scala-tools.org (https://scala-tools.org/repo-releases): Transfer failed for https://scala-tools.org/repo-releases/org/scala-tools/maven-scala-plugin/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ parquet-scala_2.12 ---
+[INFO] digraph "org.apache.parquet:parquet-scala_2.12:jar:1.14.0-SNAPSHOT" { 
+[INFO] 	"org.apache.parquet:parquet-scala_2.12:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-scala_2.12:jar:1.14.0-SNAPSHOT" -> "org.scala-lang:scala-library:jar:2.12.17:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-scala_2.12:jar:1.14.0-SNAPSHOT" -> "org.scalatest:scalatest_2.12:jar:3.0.1:test" ; 
+[INFO] 	"org.apache.parquet:parquet-scala_2.12:jar:1.14.0-SNAPSHOT" -> "org.scalactic:scalactic_2.12:jar:3.0.1:test" ; 
+[INFO] 	"org.apache.parquet:parquet-scala_2.12:jar:1.14.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.33:test" ; 
+[INFO] 	"org.apache.parquet:parquet-scala_2.12:jar:1.14.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.apache.parquet:parquet-scala_2.12:jar:1.14.0-SNAPSHOT" -> "org.easymock:easymock:jar:5.2.0:test" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.parquet:parquet-common:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.parquet:parquet-encoding:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" -> "it.unimi.dsi:fastutil:jar:8.5.12:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" -> "net.openhft:zero-allocation-hashing:jar:0.16:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" -> "org.slf4j:slf4j-api:jar:1.7.33:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-common:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.parquet:parquet-format-structures:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-format-structures:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.thrift:libthrift:jar:0.16.0:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.15:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-codec:commons-codec:jar:1.11:compile" ; 
+[INFO] 	"org.scalatest:scalatest_2.12:jar:3.0.1:test" -> "org.scala-lang:scala-reflect:jar:2.12.0:test" ; 
+[INFO] 	"org.scalatest:scalatest_2.12:jar:3.0.1:test" -> "org.scala-lang.modules:scala-xml_2.12:jar:1.0.5:test" ; 
+[INFO] 	"org.scalatest:scalatest_2.12:jar:3.0.1:test" -> "org.scala-lang.modules:scala-parser-combinators_2.12:jar:1.0.4:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.easymock:easymock:jar:5.2.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.apache.parquet:parquet-thrift >------------------
+[INFO] Building Apache Parquet Thrift 1.14.0-SNAPSHOT                   [17/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ parquet-thrift ---
+[INFO] digraph "org.apache.parquet:parquet-thrift:jar:1.14.0-SNAPSHOT" { 
+[INFO] 	"org.apache.parquet:parquet-thrift:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-thrift:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-thrift:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-common:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-thrift:jar:1.14.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.parquet:parquet-thrift:jar:1.14.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.parquet:parquet-thrift:jar:1.14.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-common:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.parquet:parquet-thrift:jar:1.14.0-SNAPSHOT" -> "com.twitter.elephantbird:elephant-bird-core:jar:4.4:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-thrift:jar:1.14.0-SNAPSHOT" -> "com.twitter.elephantbird:elephant-bird-pig:jar:4.4:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-thrift:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-jackson:jar:1.14.0-SNAPSHOT:runtime" ; 
+[INFO] 	"org.apache.parquet:parquet-thrift:jar:1.14.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-thrift:jar:1.14.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-thrift:jar:1.14.0-SNAPSHOT" -> "com.google.guava:guava:jar:32.1.3-jre:test" ; 
+[INFO] 	"org.apache.parquet:parquet-thrift:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-column:test-jar:tests:1.14.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.parquet:parquet-thrift:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-pig:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-thrift:jar:1.14.0-SNAPSHOT" -> "org.apache.pig:pig:jar:h2:0.16.0:provided" ; 
+[INFO] 	"org.apache.parquet:parquet-thrift:jar:1.14.0-SNAPSHOT" -> "joda-time:joda-time:jar:2.12.5:provided" ; 
+[INFO] 	"org.apache.parquet:parquet-thrift:jar:1.14.0-SNAPSHOT" -> "org.antlr:antlr-runtime:jar:3.5.3:test" ; 
+[INFO] 	"org.apache.parquet:parquet-thrift:jar:1.14.0-SNAPSHOT" -> "org.apache.thrift:libthrift:jar:0.16.0:provided" ; 
+[INFO] 	"org.apache.parquet:parquet-thrift:jar:1.14.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.33:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-thrift:jar:1.14.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.33:test" ; 
+[INFO] 	"org.apache.parquet:parquet-thrift:jar:1.14.0-SNAPSHOT" -> "log4j:log4j:jar:1.2.17:test" ; 
+[INFO] 	"org.apache.parquet:parquet-thrift:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-hadoop:test-jar:tests:1.14.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.parquet:parquet-thrift:jar:1.14.0-SNAPSHOT" -> "com.google.re2j:re2j:jar:1.7:provided" ; 
+[INFO] 	"org.apache.parquet:parquet-thrift:jar:1.14.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.apache.parquet:parquet-thrift:jar:1.14.0-SNAPSHOT" -> "org.easymock:easymock:jar:5.2.0:test" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.parquet:parquet-encoding:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" -> "it.unimi.dsi:fastutil:jar:8.5.12:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" -> "net.openhft:zero-allocation-hashing:jar:0.16:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.parquet:parquet-format-structures:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "org.xerial.snappy:snappy-java:jar:1.1.10.5:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "io.airlift:aircompressor:jar:0.25:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "commons-pool:commons-pool:jar:1.6:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "com.github.luben:zstd-jni:jar:1.5.0-1:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-hdfs-client:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-yarn-api:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-yarn-client:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-annotations:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-api:jar:3.3.5:provided" -> "javax.xml.bind:jaxb-api:jar:2.2.11:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-client:jar:3.3.5:provided" -> "org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-client:jar:3.3.5:provided" -> "org.jline:jline:jar:3.9.0:provided" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-client:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty.websocket:websocket-common:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-common:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty.websocket:websocket-api:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-mapreduce-client-common:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:provided" -> "com.google.protobuf:protobuf-java:jar:2.5.0:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:provided" -> "org.apache.avro:avro:jar:1.7.7:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:provided" -> "com.google.inject.extensions:guice-servlet:jar:4.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:provided" -> "io.netty:netty:jar:3.10.6.Final:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.sun.jersey:jersey-client:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.google.inject:guice:jar:4.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.sun.jersey.contribs:jersey-guice:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.12.7:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.12.7:provided" ; 
+[INFO] 	"com.google.inject:guice:jar:4.0:provided" -> "javax.inject:javax.inject:jar:1:provided" ; 
+[INFO] 	"com.google.inject:guice:jar:4.0:provided" -> "aopalliance:aopalliance:jar:1.0:provided" ; 
+[INFO] 	"com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.12.7:provided" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.2:provided" ; 
+[INFO] 	"com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.12.7:provided" -> "com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:jar:2.12.7:provided" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.7.7:provided" -> "com.thoughtworks.paranamer:paranamer:jar:2.3:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.hadoop.thirdparty:hadoop-shaded-protobuf_3_7:jar:1.1.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.hadoop.thirdparty:hadoop-shaded-guava:jar:1.1.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-cli:commons-cli:jar:1.2:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.commons:commons-math3:jar:3.1.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-codec:commons-codec:jar:1.15:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-io:commons-io:jar:2.8.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-net:commons-net:jar:3.9.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-collections:commons-collections:jar:3.2.2:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "javax.servlet:javax.servlet-api:jar:3.1.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "jakarta.activation:jakarta.activation-api:jar:1.2.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.eclipse.jetty:jetty-server:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.eclipse.jetty:jetty-util:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.eclipse.jetty:jetty-servlet:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.eclipse.jetty:jetty-webapp:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "javax.servlet.jsp:jsp-api:jar:2.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.sun.jersey:jersey-core:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.sun.jersey:jersey-servlet:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.github.pjfanning:jersey-json:jar:1.20:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.sun.jersey:jersey-server:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-logging:commons-logging:jar:1.1.3:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-beanutils:commons-beanutils:jar:1.9.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.commons:commons-configuration2:jar:2.8.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.commons:commons-lang3:jar:3.12.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.commons:commons-text:jar:1.10.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.google.code.gson:gson:jar:2.9.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.jcraft:jsch:jar:0.1.55:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.curator:curator-client:jar:4.2.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.curator:curator-recipes:jar:4.2.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.zookeeper:zookeeper:jar:3.5.6:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.commons:commons-compress:jar:1.21:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.kerby:kerb-core:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.codehaus.woodstox:stax2-api:jar:4.2.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.fasterxml.woodstox:woodstox-core:jar:5.4.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "dnsjava:dnsjava:jar:2.1.7:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-http:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-io:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-security:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-util-ajax:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-webapp:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-xml:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"com.sun.jersey:jersey-core:jar:1.19.4:provided" -> "javax.ws.rs:jsr311-api:jar:1.1.1:provided" ; 
+[INFO] 	"com.github.pjfanning:jersey-json:jar:1.20:provided" -> "org.codehaus.jettison:jettison:jar:1.1:provided" ; 
+[INFO] 	"com.github.pjfanning:jersey-json:jar:1.20:provided" -> "com.sun.xml.bind:jaxb-impl:jar:2.2.3-1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" -> "com.nimbusds:nimbus-jose-jwt:jar:9.8.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" -> "net.minidev:json-smart:jar:2.4.7:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" -> "org.apache.curator:curator-framework:jar:4.2.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" -> "org.apache.kerby:kerb-simplekdc:jar:1.0.1:provided" ; 
+[INFO] 	"com.nimbusds:nimbus-jose-jwt:jar:9.8.1:provided" -> "com.github.stephenc.jcip:jcip-annotations:jar:1.0-1:provided" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.7:provided" -> "net.minidev:accessors-smart:jar:2.4.7:provided" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.7:provided" -> "org.ow2.asm:asm:jar:9.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-simplekdc:jar:1.0.1:provided" -> "org.apache.kerby:kerb-client:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-simplekdc:jar:1.0.1:provided" -> "org.apache.kerby:kerb-admin:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:provided" -> "org.apache.kerby:kerby-config:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:provided" -> "org.apache.kerby:kerb-common:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:provided" -> "org.apache.kerby:kerb-util:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:provided" -> "org.apache.kerby:token-provider:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-common:jar:1.0.1:provided" -> "org.apache.kerby:kerb-crypto:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-admin:jar:1.0.1:provided" -> "org.apache.kerby:kerb-server:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-admin:jar:1.0.1:provided" -> "org.apache.kerby:kerby-xdr:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-server:jar:1.0.1:provided" -> "org.apache.kerby:kerb-identity:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.6:provided" -> "org.apache.zookeeper:zookeeper-jute:jar:3.5.6:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.6:provided" -> "org.apache.yetus:audience-annotations:jar:0.5.0:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.6:provided" -> "io.netty:netty-handler:jar:4.1.42.Final:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.6:provided" -> "io.netty:netty-transport-native-epoll:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.42.Final:provided" -> "io.netty:netty-common:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.42.Final:provided" -> "io.netty:netty-buffer:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.42.Final:provided" -> "io.netty:netty-transport:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.42.Final:provided" -> "io.netty:netty-codec:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.42.Final:provided" -> "io.netty:netty-resolver:jar:4.1.42.Final:provided" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:4.1.42.Final:provided" -> "io.netty:netty-transport-native-unix-common:jar:4.1.42.Final:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-core:jar:1.0.1:provided" -> "org.apache.kerby:kerby-pkix:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerby-pkix:jar:1.0.1:provided" -> "org.apache.kerby:kerby-asn1:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerby-pkix:jar:1.0.1:provided" -> "org.apache.kerby:kerby-util:jar:1.0.1:provided" ; 
+[INFO] 	"com.twitter.elephantbird:elephant-bird-core:jar:4.4:compile" -> "com.twitter.elephantbird:elephant-bird-hadoop-compat:jar:4.4:compile" ; 
+[INFO] 	"com.twitter.elephantbird:elephant-bird-core:jar:4.4:compile" -> "commons-lang:commons-lang:jar:2.4:compile" ; 
+[INFO] 	"com.twitter.elephantbird:elephant-bird-core:jar:4.4:compile" -> "com.googlecode.json-simple:json-simple:jar:1.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:test" -> "org.checkerframework:checker-qual:jar:3.37.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.21.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:2.8:test" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "xmlenc:xmlenc:jar:0.52:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "commons-httpclient:commons-httpclient:jar:3.1:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "org.mortbay.jetty:jetty:jar:6.1.26:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "org.mortbay.jetty:jetty-util:jar:6.1.26:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "tomcat:jasper-runtime:jar:5.5.12:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "tomcat:jasper-compiler:jar:5.5.12:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "org.mortbay.jetty:jsp-api-2.1:jar:6.1.14:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "org.mortbay.jetty:jsp-2.1:jar:6.1.14:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "commons-el:commons-el:jar:1.0:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "net.java.dev.jets3t:jets3t:jar:0.7.1:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "org.mortbay.jetty:servlet-api-2.5:jar:6.1.14:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "net.sf.kosmosfs:kfs:jar:0.3:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "hsqldb:hsqldb:jar:1.8.0.10:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "oro:oro:jar:2.0.8:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "jline:jline:jar:1.0:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "org.antlr:ST4:jar:4.0.4:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "dk.brics.automaton:automaton:jar:1.11-8:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "org.codehaus.jackson:jackson-mapper-asl:jar:1.8.8:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "org.codehaus.jackson:jackson-core-asl:jar:1.8.8:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "org.apache.ivy:ivy:jar:2.2.0:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:h2:0.16.0:provided" -> "org.codehaus.groovy:groovy-all:jar:1.8.6:provided" ; 
+[INFO] 	"org.mortbay.jetty:jetty:jar:6.1.26:provided" -> "org.mortbay.jetty:servlet-api:jar:2.5-20081211:provided" ; 
+[INFO] 	"org.mortbay.jetty:jsp-2.1:jar:6.1.14:provided" -> "org.eclipse.jdt:core:jar:3.1.1:provided" ; 
+[INFO] 	"org.mortbay.jetty:jsp-2.1:jar:6.1.14:provided" -> "ant:ant:jar:1.6.5:provided" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:provided" -> "org.apache.httpcomponents:httpcore:jar:4.4.15:provided" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:provided" -> "javax.annotation:javax.annotation-api:jar:1.3.2:provided" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.easymock:easymock:jar:5.2.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< org.apache.parquet:parquet-hadoop-bundle >--------------
+[INFO] Building Apache Parquet Hadoop Bundle 1.14.0-SNAPSHOT            [18/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ parquet-hadoop-bundle ---
+[INFO] digraph "org.apache.parquet:parquet-hadoop-bundle:jar:1.14.0-SNAPSHOT" { 
+[INFO] 	"org.apache.parquet:parquet-hadoop-bundle:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-common:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop-bundle:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop-bundle:jar:1.14.0-SNAPSHOT" -> "org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop-bundle:jar:1.14.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop-bundle:jar:1.14.0-SNAPSHOT" -> "org.easymock:easymock:jar:5.2.0:test" ; 
+[INFO] 	"org.apache.parquet:parquet-common:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.parquet:parquet-format-structures:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-common:jar:1.14.0-SNAPSHOT:compile" -> "org.slf4j:slf4j-api:jar:1.7.33:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-format-structures:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.thrift:libthrift:jar:0.16.0:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.15:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-codec:commons-codec:jar:1.11:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.parquet:parquet-encoding:jar:1.14.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" -> "it.unimi.dsi:fastutil:jar:8.5.12:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-column:jar:1.14.0-SNAPSHOT:compile" -> "net.openhft:zero-allocation-hashing:jar:0.16:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "org.apache.parquet:parquet-jackson:jar:1.14.0-SNAPSHOT:runtime" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "org.xerial.snappy:snappy-java:jar:1.1.10.5:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "io.airlift:aircompressor:jar:0.25:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "commons-pool:commons-pool:jar:1.6:compile" ; 
+[INFO] 	"org.apache.parquet:parquet-hadoop:jar:1.14.0-SNAPSHOT:compile" -> "com.github.luben:zstd-jni:jar:1.5.0-1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.easymock:easymock:jar:5.2.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Apache Parquet MR 1.14.0-SNAPSHOT:
+[INFO] 
+[INFO] Apache Parquet MR .................................. SUCCESS [  5.090 s]
+[INFO] Apache Parquet Format Structures ................... SUCCESS [  0.270 s]
+[INFO] Apache Parquet Generator ........................... SUCCESS [  0.104 s]
+[INFO] Apache Parquet Common .............................. SUCCESS [  3.440 s]
+[INFO] Apache Parquet Encodings ........................... SUCCESS [  0.358 s]
+[INFO] Apache Parquet Column .............................. SUCCESS [  0.473 s]
+[INFO] Apache Parquet Arrow ............................... SUCCESS [  0.588 s]
+[INFO] Apache Parquet Jackson ............................. SUCCESS [  0.198 s]
+[INFO] Apache Parquet Hadoop .............................. SUCCESS [  2.997 s]
+[INFO] Apache Parquet Avro ................................ SUCCESS [  1.195 s]
+[INFO] Apache Parquet Benchmarks .......................... SUCCESS [  0.608 s]
+[INFO] Apache Parquet Command-line ........................ SUCCESS [  0.774 s]
+[INFO] Apache Parquet Pig ................................. SUCCESS [  0.685 s]
+[INFO] Apache Parquet Pig Bundle .......................... SUCCESS [  0.259 s]
+[INFO] Apache Parquet Protobuf ............................ SUCCESS [  0.342 s]
+[INFO] Apache Parquet Scala ............................... SUCCESS [  2.627 s]
+[INFO] Apache Parquet Thrift .............................. SUCCESS [  0.446 s]
+[INFO] Apache Parquet Hadoop Bundle ....................... SUCCESS [  0.071 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  25.341 s
+[INFO] Finished at: 2023-12-28T09:02:40+01:00
+[INFO] ------------------------------------------------------------------------

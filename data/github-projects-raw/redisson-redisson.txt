@@ -1,0 +1,283 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 52 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 52 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Redisson                                                           [pom]
+[INFO] Redisson                                                           [jar]
+[INFO] Redisson/All-in-One                                                [jar]
+[INFO] Redisson/Tomcat Session Manager                                    [pom]
+[INFO] Redisson/Tomcat-7                                                  [jar]
+[INFO] Redisson/Tomcat-8                                                  [jar]
+[INFO] Redisson/Tomcat-9                                                  [jar]
+[INFO] Redisson/Tomcat-10                                                 [jar]
+[INFO] Redisson/Spring Data Redis integration                             [pom]
+[INFO] Redisson/Spring Data Redis v1.6.x integration                      [jar]
+[INFO] Redisson/Spring Data Redis v1.7.x integration                      [jar]
+[INFO] Redisson/Spring Data Redis v1.8.x integration                      [jar]
+[INFO] Redisson/Spring Data Redis v2.0.x integration                      [jar]
+[INFO] Redisson/Spring Data Redis v2.1.x integration                      [jar]
+[INFO] Redisson/Spring Data Redis v2.2.x integration                      [jar]
+[INFO] Redisson/Spring Data Redis v2.3.x integration                      [jar]
+[INFO] Redisson/Spring Data Redis v2.4.x integration                      [jar]
+[INFO] Redisson/Spring Data Redis v2.5.x integration                      [jar]
+[INFO] Redisson/Spring Data Redis v2.6.x integration                      [jar]
+[INFO] Redisson/Spring Data Redis v2.7.x integration                      [jar]
+[INFO] Redisson/Spring Data Redis v3.0.x integration                      [jar]
+[INFO] Redisson/Spring Data Redis v3.1.x integration                      [jar]
+[INFO] Redisson/Spring Data Redis v3.2.x integration                      [jar]
+[INFO] Redisson/Spring Boot Starter                                       [jar]
+[INFO] Redisson/MyBatis cache                                             [jar]
+[INFO] Redisson/Hibernate cache                                           [pom]
+[INFO] Redisson/Hibernate-4.x                                             [jar]
+[INFO] Redisson/Hibernate-5.0.x-5.1.x                                     [jar]
+[INFO] Redisson/Hibernate-5.2.x                                           [jar]
+[INFO] Redisson/Hibernate-5.3.x+                                          [jar]
+[INFO] Redisson/Hibernate-6.0.2+                                          [jar]
+[INFO] Redisson/Helidon integration                                       [pom]
+[INFO] Redisson/Helidon integration                                       [jar]
+[INFO] Redisson/Helidon integration                                       [jar]
+[INFO] Redisson/Helidon integration                                       [jar]
+[INFO] Redisson/Quarkus integration                                       [pom]
+[INFO] Redisson/Quarkus v1.6.x - 1.13.x integration                       [pom]
+[INFO] Redisson/Quarkus v1.6.x - 1.13.x runtime                           [jar]
+[INFO] Redisson/Quarkus v1.6.x - 1.13.x deployment                        [jar]
+[INFO] Redisson/Quarkus v1.6.x - 1.13.x integration Tests                 [jar]
+[INFO] Redisson/Quarkus v2.x.x integration                                [pom]
+[INFO] Redisson/Quarkus v2.x.x runtime                                    [jar]
+[INFO] Redisson/Quarkus v2.x.x deployment                                 [jar]
+[INFO] Redisson/Quarkus v2.x.x integration Tests                          [jar]
+[INFO] Redisson/Quarkus v3.x.x integration                                [pom]
+[INFO] Redisson/Quarkus v3.x.x runtime                                    [jar]
+[INFO] Redisson/Quarkus v3.x.x deployment                                 [jar]
+[INFO] Redisson/Quarkus v3.x.x integration Tests                          [jar]
+[INFO] Redisson/Micronaut integration                                     [pom]
+[INFO] Redisson/Micronaut v2.x.x integration                              [jar]
+[INFO] Redisson/Micronaut v3.x.x integration                              [jar]
+[INFO] Redisson/Micronaut v4.x.x integration                              [jar]
+[INFO] 
+[INFO] --------------------< org.redisson:redisson-parent >--------------------
+[INFO] Building Redisson 3.25.1-SNAPSHOT                                 [1/52]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ redisson-parent ---
+[INFO] digraph "org.redisson:redisson-parent:pom:3.25.1-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------------< org.redisson:redisson >------------------------
+[INFO] Building Redisson 3.25.1-SNAPSHOT                                 [2/52]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ redisson ---
+[INFO] digraph "org.redisson:redisson:jar:3.25.1-SNAPSHOT" { 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "io.netty:netty-transport-native-kqueue:jar:4.1.101.Final:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "io.netty:netty-transport-native-epoll:jar:4.1.101.Final:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "io.netty.incubator:netty-incubator-transport-native-io_uring:jar:linux-x86_64:0.0.21.Final:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "io.netty:netty-common:jar:4.1.101.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "io.netty:netty-codec:jar:4.1.101.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "io.netty:netty-buffer:jar:4.1.101.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "io.netty:netty-transport:jar:4.1.101.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "io.netty:netty-resolver:jar:4.1.101.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "io.netty:netty-resolver-dns:jar:4.1.101.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "io.netty:netty-handler:jar:4.1.101.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "javax.cache:cache-api:jar:1.1.1:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "io.projectreactor:reactor-core:jar:3.5.11:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "org.reactivestreams:reactive-streams:jar:1.0.4:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "io.reactivex.rxjava3:rxjava:jar:3.1.6:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "org.awaitility:awaitility:jar:4.2.0:test" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "com.github.hazendaz.jmockit:jmockit:jar:1.51.0:test" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "org.jooq:joor-java-8:jar:0.9.14:test" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.3.12:test" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "org.testcontainers:junit-jupiter:jar:1.19.1:test" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.13:test" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "org.apache.tomcat.embed:tomcat-embed-jasper:jar:10.1.2:test" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "org.apache.tomcat:tomcat-jasper:jar:10.1.2:test" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "org.apache.httpcomponents:fluent-hc:jar:4.5.13:test" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "org.springframework:spring-test:jar:6.0.3:test" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "org.springframework:spring-core:jar:6.0.8:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "org.springframework:spring-expression:jar:6.0.3:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "org.springframework:spring-webflux:jar:6.0.3:test" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "org.apache.commons:commons-compress:jar:1.24.0:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "org.lz4:lz4-java:jar:1.8.0:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "org.jboss.marshalling:jboss-marshalling:jar:2.0.11.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "org.jboss.marshalling:jboss-marshalling-river:jar:2.0.11.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "org.msgpack:jackson-dataformat-msgpack:jar:0.9.1:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "org.xerial.snappy:snappy-java:jar:1.1.10.4:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "de.ruedigermoeller:fst:jar:2.57:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "com.esotericsoftware:kryo:jar:5.5.0:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.3:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.15.3:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.3:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.1:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-ion:jar:2.15.3:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:jar:2.15.3:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-smile:jar:2.15.3:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-avro:jar:2.15.3:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.15.3:test" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "net.bytebuddy:byte-buddy:jar:1.14.5:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "org.jodd:jodd-bean:jar:5.1.6:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "org.springframework:spring-context:jar:6.0.3:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "org.springframework:spring-beans:jar:6.0.3:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "org.springframework:spring-context-support:jar:6.0.3:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "org.springframework:spring-web:jar:6.0.3:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "org.springframework:spring-tx:jar:6.0.3:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "org.springframework.session:spring-session-core:jar:3.0.1:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "org.springframework.boot:spring-boot-actuator:jar:3.0.2:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "org.springframework.boot:spring-boot-autoconfigure:jar:3.0.7:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "io.micrometer:micrometer-core:jar:1.10.3:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "io.projectreactor:reactor-test:jar:3.5.3:test" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "io.protostuff:protostuff-core:jar:1.8.0:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "io.protostuff:protostuff-runtime:jar:1.8.0:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "com.google.protobuf:protobuf-java:jar:3.16.3:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "com.google.protobuf:protobuf-java-util:jar:3.16.3:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.25.1-SNAPSHOT" -> "org.apache.tomcat:tomcat-annotations-api:jar:9.0.82:test" ; 
+[INFO] 	"io.netty:netty-transport-native-kqueue:jar:4.1.101.Final:provided" -> "io.netty:netty-transport-native-unix-common:jar:4.1.101.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-kqueue:jar:4.1.101.Final:provided" -> "io.netty:netty-transport-classes-kqueue:jar:4.1.101.Final:provided" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:4.1.101.Final:provided" -> "io.netty:netty-transport-classes-epoll:jar:4.1.101.Final:provided" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-transport-native-io_uring:jar:linux-x86_64:0.0.21.Final:provided" -> "io.netty.incubator:netty-incubator-transport-classes-io_uring:jar:0.0.21.Final:provided" ; 
+[INFO] 	"io.netty:netty-resolver-dns:jar:4.1.101.Final:compile" -> "io.netty:netty-codec-dns:jar:4.1.101.Final:compile" ; 
+[INFO] 	"org.awaitility:awaitility:jar:4.2.0:test" -> "org.hamcrest:hamcrest:jar:2.1:test" ; 
+[INFO] 	"com.github.hazendaz.jmockit:jmockit:jar:1.51.0:test" -> "com.github.spotbugs:spotbugs-annotations:jar:4.7.3:test" ; 
+[INFO] 	"com.github.hazendaz.jmockit:jmockit:jar:1.51.0:test" -> "org.objenesis:objenesis:jar:3.3:compile" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:4.7.3:test" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.3.12:test" -> "ch.qos.logback:logback-core:jar:1.3.12:test" ; 
+[INFO] 	"org.testcontainers:junit-jupiter:jar:1.19.1:test" -> "org.testcontainers:testcontainers:jar:1.19.1:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.1:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.1:test" -> "org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.1:test" -> "com.github.docker-java:docker-java-api:jar:3.3.3:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.1:test" -> "com.github.docker-java:docker-java-transport-zerodep:jar:3.3.3:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" -> "org.jetbrains:annotations:jar:17.0.0:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.3:test" -> "com.github.docker-java:docker-java-transport:jar:3.3.3:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.3:test" -> "net.java.dev.jna:jna:jar:5.12.1:test" ; 
+[INFO] 	"org.apache.tomcat.embed:tomcat-embed-jasper:jar:10.1.2:test" -> "org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.2:test" ; 
+[INFO] 	"org.apache.tomcat.embed:tomcat-embed-jasper:jar:10.1.2:test" -> "org.eclipse.jdt:ecj:jar:3.18.0:test" ; 
+[INFO] 	"org.apache.tomcat:tomcat-jasper:jar:10.1.2:test" -> "org.apache.tomcat:tomcat-servlet-api:jar:10.1.2:test" ; 
+[INFO] 	"org.apache.tomcat:tomcat-jasper:jar:10.1.2:test" -> "org.apache.tomcat:tomcat-juli:jar:10.1.2:test" ; 
+[INFO] 	"org.apache.tomcat:tomcat-jasper:jar:10.1.2:test" -> "org.apache.tomcat:tomcat-jsp-api:jar:10.1.2:test" ; 
+[INFO] 	"org.apache.tomcat:tomcat-jasper:jar:10.1.2:test" -> "org.apache.tomcat:tomcat-el-api:jar:10.1.2:test" ; 
+[INFO] 	"org.apache.tomcat:tomcat-jasper:jar:10.1.2:test" -> "org.apache.tomcat:tomcat-jasper-el:jar:10.1.2:test" ; 
+[INFO] 	"org.apache.tomcat:tomcat-jasper:jar:10.1.2:test" -> "org.apache.tomcat:tomcat-api:jar:10.1.2:test" ; 
+[INFO] 	"org.apache.tomcat:tomcat-jasper:jar:10.1.2:test" -> "org.apache.tomcat:tomcat-util-scan:jar:10.1.2:test" ; 
+[INFO] 	"org.apache.tomcat:tomcat-util-scan:jar:10.1.2:test" -> "org.apache.tomcat:tomcat-util:jar:10.1.2:test" ; 
+[INFO] 	"org.apache.httpcomponents:fluent-hc:jar:4.5.13:test" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:test" ; 
+[INFO] 	"org.apache.httpcomponents:fluent-hc:jar:4.5.13:test" -> "commons-logging:commons-logging:jar:1.2:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:test" -> "org.apache.httpcomponents:httpcore:jar:4.4.13:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:test" -> "commons-codec:commons-codec:jar:1.11:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.0.8:provided" -> "org.springframework:spring-jcl:jar:6.0.8:provided" ; 
+[INFO] 	"org.msgpack:jackson-dataformat-msgpack:jar:0.9.1:provided" -> "org.msgpack:msgpack-core:jar:0.9.1:provided" ; 
+[INFO] 	"de.ruedigermoeller:fst:jar:2.57:provided" -> "org.javassist:javassist:jar:3.21.0-GA:provided" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.5.0:compile" -> "com.esotericsoftware:reflectasm:jar:1.11.9:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.5.0:compile" -> "com.esotericsoftware:minlog:jar:1.3.1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.15.3:compile" -> "org.yaml:snakeyaml:jar:2.1:compile" ; 
+[INFO] 	"com.github.ben-manes.caffeine:caffeine:jar:3.1.1:provided" -> "org.checkerframework:checker-qual:jar:3.22.0:provided" ; 
+[INFO] 	"com.github.ben-manes.caffeine:caffeine:jar:3.1.1:provided" -> "com.google.errorprone:error_prone_annotations:jar:2.14.0:provided" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-ion:jar:2.15.3:provided" -> "com.amazon.ion:ion-java:jar:1.9.5:provided" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-avro:jar:2.15.3:provided" -> "org.apache.avro:avro:jar:1.8.2:provided" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.8.2:provided" -> "org.codehaus.jackson:jackson-core-asl:jar:1.9.13:provided" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.8.2:provided" -> "org.codehaus.jackson:jackson-mapper-asl:jar:1.9.13:provided" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.8.2:provided" -> "com.thoughtworks.paranamer:paranamer:jar:2.7:provided" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.8.2:provided" -> "org.tukaani:xz:jar:1.5:provided" ; 
+[INFO] 	"org.jodd:jodd-bean:jar:5.1.6:compile" -> "org.jodd:jodd-core:jar:5.1.6:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.0.3:provided" -> "org.springframework:spring-aop:jar:6.0.3:provided" ; 
+[INFO] 	"org.springframework:spring-web:jar:6.0.3:provided" -> "io.micrometer:micrometer-observation:jar:1.10.2:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-actuator:jar:3.0.2:provided" -> "org.springframework.boot:spring-boot:jar:3.0.2:provided" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.10.3:provided" -> "io.micrometer:micrometer-commons:jar:1.10.3:provided" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.10.3:provided" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:provided" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.10.3:provided" -> "org.latencyutils:LatencyUtils:jar:2.0.3:provided" ; 
+[INFO] 	"io.protostuff:protostuff-core:jar:1.8.0:compile" -> "io.protostuff:protostuff-api:jar:1.8.0:compile" ; 
+[INFO] 	"io.protostuff:protostuff-runtime:jar:1.8.0:compile" -> "io.protostuff:protostuff-collectionschema:jar:1.8.0:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.16.3:provided" -> "com.google.guava:guava:jar:30.1-android:provided" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.16.3:provided" -> "com.google.code.gson:gson:jar:2.8.6:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1-android:provided" -> "com.google.guava:failureaccess:jar:1.0.1:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1-android:provided" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1-android:provided" -> "org.checkerframework:checker-compat-qual:jar:2.5.5:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1-android:provided" -> "com.google.j2objc:j2objc-annotations:jar:1.3:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< org.redisson:redisson-all >----------------------
+[INFO] Building Redisson/All-in-One 3.25.1-SNAPSHOT                      [3/52]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Redisson 3.25.1-SNAPSHOT:
+[INFO] 
+[INFO] Redisson ........................................... SUCCESS [  1.402 s]
+[INFO] Redisson ........................................... SUCCESS [  1.947 s]
+[INFO] Redisson/All-in-One ................................ FAILURE [  0.070 s]
+[INFO] Redisson/Tomcat Session Manager .................... SKIPPED
+[INFO] Redisson/Tomcat-7 .................................. SKIPPED
+[INFO] Redisson/Tomcat-8 .................................. SKIPPED
+[INFO] Redisson/Tomcat-9 .................................. SKIPPED
+[INFO] Redisson/Tomcat-10 ................................. SKIPPED
+[INFO] Redisson/Spring Data Redis integration ............. SKIPPED
+[INFO] Redisson/Spring Data Redis v1.6.x integration ...... SKIPPED
+[INFO] Redisson/Spring Data Redis v1.7.x integration ...... SKIPPED
+[INFO] Redisson/Spring Data Redis v1.8.x integration ...... SKIPPED
+[INFO] Redisson/Spring Data Redis v2.0.x integration ...... SKIPPED
+[INFO] Redisson/Spring Data Redis v2.1.x integration ...... SKIPPED
+[INFO] Redisson/Spring Data Redis v2.2.x integration ...... SKIPPED
+[INFO] Redisson/Spring Data Redis v2.3.x integration ...... SKIPPED
+[INFO] Redisson/Spring Data Redis v2.4.x integration ...... SKIPPED
+[INFO] Redisson/Spring Data Redis v2.5.x integration ...... SKIPPED
+[INFO] Redisson/Spring Data Redis v2.6.x integration ...... SKIPPED
+[INFO] Redisson/Spring Data Redis v2.7.x integration ...... SKIPPED
+[INFO] Redisson/Spring Data Redis v3.0.x integration ...... SKIPPED
+[INFO] Redisson/Spring Data Redis v3.1.x integration ...... SKIPPED
+[INFO] Redisson/Spring Data Redis v3.2.x integration ...... SKIPPED
+[INFO] Redisson/Spring Boot Starter ....................... SKIPPED
+[INFO] Redisson/MyBatis cache ............................. SKIPPED
+[INFO] Redisson/Hibernate cache ........................... SKIPPED
+[INFO] Redisson/Hibernate-4.x ............................. SKIPPED
+[INFO] Redisson/Hibernate-5.0.x-5.1.x ..................... SKIPPED
+[INFO] Redisson/Hibernate-5.2.x ........................... SKIPPED
+[INFO] Redisson/Hibernate-5.3.x+ .......................... SKIPPED
+[INFO] Redisson/Hibernate-6.0.2+ .......................... SKIPPED
+[INFO] Redisson/Helidon integration ....................... SKIPPED
+[INFO] Redisson/Helidon integration ....................... SKIPPED
+[INFO] Redisson/Helidon integration ....................... SKIPPED
+[INFO] Redisson/Helidon integration ....................... SKIPPED
+[INFO] Redisson/Quarkus integration ....................... SKIPPED
+[INFO] Redisson/Quarkus v1.6.x - 1.13.x integration ....... SKIPPED
+[INFO] Redisson/Quarkus v1.6.x - 1.13.x runtime ........... SKIPPED
+[INFO] Redisson/Quarkus v1.6.x - 1.13.x deployment ........ SKIPPED
+[INFO] Redisson/Quarkus v1.6.x - 1.13.x integration Tests . SKIPPED
+[INFO] Redisson/Quarkus v2.x.x integration ................ SKIPPED
+[INFO] Redisson/Quarkus v2.x.x runtime .................... SKIPPED
+[INFO] Redisson/Quarkus v2.x.x deployment ................. SKIPPED
+[INFO] Redisson/Quarkus v2.x.x integration Tests .......... SKIPPED
+[INFO] Redisson/Quarkus v3.x.x integration ................ SKIPPED
+[INFO] Redisson/Quarkus v3.x.x runtime .................... SKIPPED
+[INFO] Redisson/Quarkus v3.x.x deployment ................. SKIPPED
+[INFO] Redisson/Quarkus v3.x.x integration Tests .......... SKIPPED
+[INFO] Redisson/Micronaut integration ..................... SKIPPED
+[INFO] Redisson/Micronaut v2.x.x integration .............. SKIPPED
+[INFO] Redisson/Micronaut v3.x.x integration .............. SKIPPED
+[INFO] Redisson/Micronaut v4.x.x integration .............. SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  11.601 s
+[INFO] Finished at: 2023-12-28T09:03:24+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project redisson-all: Could not resolve dependencies for project org.redisson:redisson-all:jar:3.25.1-SNAPSHOT: Could not find artifact org.redisson:redisson:jar:3.25.1-SNAPSHOT -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :redisson-all

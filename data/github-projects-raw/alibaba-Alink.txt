@@ -1,0 +1,225 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.alink:alink_test_utils-1.13_2.11:jar:1.6-SNAPSHOT
+[WARNING] 'artifactId' contains an expression but should be a constant. @ com.alibaba.alink:alink_test_utils-${alink.flink.major.version}_${alink.scala.major.version}:1.6-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-Alink/test_utils/pom.xml, line 12, column 17
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.alink:alink_core_flink-1.13_2.11:jar:1.6-SNAPSHOT
+[WARNING] 'artifactId' contains an expression but should be a constant. @ com.alibaba.alink:alink_core_flink-${alink.flink.major.version}_${alink.scala.major.version}:1.6-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-Alink/core/pom.xml, line 12, column 17
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.alink:alink_tf_predictor_flink-1.13_2.11:jar:1.6-SNAPSHOT
+[WARNING] 'artifactId' contains an expression but should be a constant. @ com.alibaba.alink:alink_tf_predictor_flink-${alink.flink.major.version}_${alink.scala.major.version}:1.6-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-Alink/dl_predictors/predictor-tf/pom.xml, line 12, column 17
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.alink:alink_torch_predictor_flink-1.13_2.11:jar:1.6-SNAPSHOT
+[WARNING] 'artifactId' contains an expression but should be a constant. @ com.alibaba.alink:alink_torch_predictor_flink-${alink.flink.major.version}_${alink.scala.major.version}:1.6-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-Alink/dl_predictors/predictor-torch/pom.xml, line 12, column 17
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.alink:alink_onnx_predictor_flink-1.13_2.11:jar:1.6-SNAPSHOT
+[WARNING] 'artifactId' contains an expression but should be a constant. @ com.alibaba.alink:alink_onnx_predictor_flink-${alink.flink.major.version}_${alink.scala.major.version}:1.6-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-Alink/dl_predictors/predictor-onnx/pom.xml, line 12, column 17
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.alink:alink_connector_kafka_flink-1.13_2.11:jar:1.6-SNAPSHOT
+[WARNING] 'artifactId' contains an expression but should be a constant. @ com.alibaba.alink:alink_connector_kafka_flink-${alink.flink.major.version}_${alink.scala.major.version}:1.6-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-Alink/connectors/connector-kafka/pom.xml, line 12, column 17
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.alink:alink_connector_odps_flink-1.13_2.11:jar:1.6-SNAPSHOT
+[WARNING] 'artifactId' contains an expression but should be a constant. @ com.alibaba.alink:alink_connector_odps_flink-${alink.flink.major.version}_${alink.scala.major.version}:1.6-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-Alink/connectors/connector-odps/pom.xml, line 12, column 17
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.alink:alink_connector_jdbc_derby_flink-1.13_2.11:jar:1.6-SNAPSHOT
+[WARNING] 'artifactId' contains an expression but should be a constant. @ com.alibaba.alink:alink_connector_jdbc_derby_flink-${alink.flink.major.version}_${alink.scala.major.version}:1.6-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-Alink/connectors/connector-jdbc/connector-jdbc-derby/pom.xml, line 12, column 17
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.alink:alink_connector_jdbc_sqlite_flink-1.13_2.11:jar:1.6-SNAPSHOT
+[WARNING] 'artifactId' contains an expression but should be a constant. @ com.alibaba.alink:alink_connector_jdbc_sqlite_flink-${alink.flink.major.version}_${alink.scala.major.version}:1.6-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-Alink/connectors/connector-jdbc/connector-jdbc-sqlite/pom.xml, line 12, column 17
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.alink:alink_connector_jdbc_mysql_flink-1.13_2.11:jar:1.6-SNAPSHOT
+[WARNING] 'artifactId' contains an expression but should be a constant. @ com.alibaba.alink:alink_connector_jdbc_mysql_flink-${alink.flink.major.version}_${alink.scala.major.version}:1.6-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-Alink/connectors/connector-jdbc/connector-jdbc-mysql/pom.xml, line 12, column 17
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.alink:alink_hive_bridge_flink-1.13_2.11:jar:1.6-SNAPSHOT
+[WARNING] 'artifactId' contains an expression but should be a constant. @ com.alibaba.alink:alink_hive_bridge_flink-${alink.flink.major.version}_${alink.scala.major.version}:1.6-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-Alink/connectors/connector-hive/hive-bridge/pom.xml, line 12, column 17
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.alink:alink_connector_redis_flink-1.13_2.11:jar:1.6-SNAPSHOT
+[WARNING] 'artifactId' contains an expression but should be a constant. @ com.alibaba.alink:alink_connector_redis_flink-${alink.flink.major.version}_${alink.scala.major.version}:1.6-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-Alink/connectors/connector-redis/pom.xml, line 12, column 17
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.alink:alink_flink_hadoop_fs_service_flink-1.13_2.11:jar:1.6-SNAPSHOT
+[WARNING] 'artifactId' contains an expression but should be a constant. @ com.alibaba.alink:alink_flink_hadoop_fs_service_flink-${alink.flink.major.version}_${alink.scala.major.version}:1.6-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-Alink/connectors/filesystem/hadoop-fs/flink-hadoop-fs-service/pom.xml, line 12, column 17
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.alink:alink_connector_parquet_flink-1.13_2.11:jar:1.6-SNAPSHOT
+[WARNING] 'artifactId' contains an expression but should be a constant. @ com.alibaba.alink:alink_connector_parquet_flink-${alink.flink.major.version}_${alink.scala.major.version}:1.6-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-Alink/connectors/connector-parquet-0.11/pom.xml, line 12, column 17
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.alink:alink_connector_datahub_flink-1.13_2.11:jar:1.6-SNAPSHOT
+[WARNING] 'artifactId' contains an expression but should be a constant. @ com.alibaba.alink:alink_connector_datahub_flink-${alink.flink.major.version}_${alink.scala.major.version}:1.6-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-Alink/connectors/connector-datahub/pom.xml, line 12, column 17
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.alink:alink_connector_hbase_flink-1.13_2.11:jar:1.6-SNAPSHOT
+[WARNING] 'artifactId' contains an expression but should be a constant. @ com.alibaba.alink:alink_connector_hbase_flink-${alink.flink.major.version}_${alink.scala.major.version}:1.6-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-Alink/connectors/connector-hbase/pom.xml, line 12, column 17
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.alink:alink_examples_flink-1.13_2.11:jar:1.6-SNAPSHOT
+[WARNING] 'artifactId' contains an expression but should be a constant. @ com.alibaba.alink:alink_examples_flink-${alink.flink.major.version}_${alink.scala.major.version}:1.6-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-Alink/examples/pom.xml, line 12, column 17
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.alink:alink_python_flink-1.13_2.11:jar:1.6-SNAPSHOT
+[WARNING] 'artifactId' contains an expression but should be a constant. @ com.alibaba.alink:alink_python_flink-${alink.flink.major.version}_${alink.scala.major.version}:1.6-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-Alink/python/pom.xml, line 12, column 17
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-shade-plugin is missing. @ com.alibaba.alink:alink_python_flink-${alink.flink.major.version}_${alink.scala.major.version}:1.6-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-Alink/python/pom.xml, line 177, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.alink:alink_xgboost_bridge_flink-1.13_2.11:jar:1.6-SNAPSHOT
+[WARNING] 'artifactId' contains an expression but should be a constant. @ com.alibaba.alink:alink_xgboost_bridge_flink-${alink.flink.major.version}_${alink.scala.major.version}:1.6-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-Alink/plugins/xgboost-bridge/pom.xml, line 12, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] alink                                                              [pom]
+[INFO] alink_test_utils                                                   [jar]
+[INFO] alink_core                                                         [jar]
+[INFO] alink-dl-predictors                                                [pom]
+[INFO] alink_tf_predictor                                                 [jar]
+[INFO] alink_torch_predictor                                              [jar]
+[INFO] alink_onnx_predictor                                               [jar]
+[INFO] alink_connectors                                                   [pom]
+[INFO] alink-connector-kafka                                              [jar]
+[INFO] alink-connector-odps                                               [jar]
+[INFO] alink-connector-jdbc                                               [pom]
+[INFO] alink-connector-jdbc-derby                                         [jar]
+[INFO] alink-connector-jdbc-sqlite                                        [jar]
+[INFO] alink-connector-jdbc-mysql                                         [jar]
+[INFO] alink-connector-hive                                               [pom]
+[INFO] alink-hive-bridge                                                  [jar]
+[INFO] alink_connector_redis                                              [jar]
+[INFO] alink-filesystem                                                   [pom]
+[INFO] alink-hadoop-fs                                                    [pom]
+[INFO] alink-flink-hadoop-fs-service                                      [jar]
+[INFO] alink_connector_parquet                                            [jar]
+[INFO] alink_connector_datahub                                            [jar]
+[INFO] alink_connector_hbase                                              [jar]
+[INFO] alink_examples                                                     [jar]
+[INFO] alink_python                                                       [jar]
+[INFO] alink_plugins                                                      [pom]
+[INFO] alink-xgboost-bridge                                               [jar]
+[INFO] 
+[INFO] ----------------------< com.alibaba.alink:alink >-----------------------
+[INFO] Building alink 1.6-SNAPSHOT                                       [1/27]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ alink ---
+[INFO] digraph "com.alibaba.alink:alink:pom:1.6-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< com.alibaba.alink:alink_test_utils-1.13_2.11 >------------
+[INFO] Building alink_test_utils 1.6-SNAPSHOT                            [2/27]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ alink_test_utils-1.13_2.11 ---
+[INFO] digraph "com.alibaba.alink:alink_test_utils-1.13_2.11:jar:1.6-SNAPSHOT" { 
+[INFO] 	"com.alibaba.alink:alink_test_utils-1.13_2.11:jar:1.6-SNAPSHOT" -> "org.apache.flink:flink-test-utils_2.11:jar:1.13.0:provided" ; 
+[INFO] 	"com.alibaba.alink:alink_test_utils-1.13_2.11:jar:1.6-SNAPSHOT" -> "junit:junit:jar:4.12:provided" ; 
+[INFO] 	"com.alibaba.alink:alink_test_utils-1.13_2.11:jar:1.6-SNAPSHOT" -> "org.reflections:reflections:jar:0.9.10:provided" ; 
+[INFO] 	"com.alibaba.alink:alink_test_utils-1.13_2.11:jar:1.6-SNAPSHOT" -> "org.apache.flink:flink-table-api-java-bridge_2.11:jar:1.13.0:provided" ; 
+[INFO] 	"org.apache.flink:flink-test-utils_2.11:jar:1.13.0:provided" -> "org.apache.flink:flink-test-utils-junit:jar:1.13.0:provided" ; 
+[INFO] 	"org.apache.flink:flink-test-utils_2.11:jar:1.13.0:provided" -> "org.apache.flink:flink-runtime_2.11:jar:1.13.0:provided" ; 
+[INFO] 	"org.apache.flink:flink-test-utils_2.11:jar:1.13.0:provided" -> "org.apache.flink:flink-runtime_2.11:test-jar:tests:1.13.0:provided" ; 
+[INFO] 	"org.apache.flink:flink-test-utils_2.11:jar:1.13.0:provided" -> "org.apache.flink:flink-clients_2.11:jar:1.13.0:provided" ; 
+[INFO] 	"org.apache.flink:flink-test-utils_2.11:jar:1.13.0:provided" -> "org.apache.flink:flink-streaming-java_2.11:jar:1.13.0:provided" ; 
+[INFO] 	"org.apache.flink:flink-test-utils_2.11:jar:1.13.0:provided" -> "org.apache.curator:curator-test:jar:2.12.0:provided" ; 
+[INFO] 	"org.apache.flink:flink-test-utils_2.11:jar:1.13.0:provided" -> "org.slf4j:slf4j-api:jar:1.7.15:provided" ; 
+[INFO] 	"org.apache.flink:flink-test-utils_2.11:jar:1.13.0:provided" -> "com.google.code.findbugs:jsr305:jar:1.3.9:provided" ; 
+[INFO] 	"org.apache.flink:flink-test-utils_2.11:jar:1.13.0:provided" -> "org.apache.flink:force-shading:jar:1.13.0:provided" ; 
+[INFO] 	"org.apache.flink:flink-test-utils-junit:jar:1.13.0:provided" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:provided" ; 
+[INFO] 	"org.apache.flink:flink-test-utils-junit:jar:1.13.0:provided" -> "org.apache.logging.log4j:log4j-api:jar:2.17.1:provided" ; 
+[INFO] 	"org.apache.flink:flink-test-utils-junit:jar:1.13.0:provided" -> "org.apache.logging.log4j:log4j-core:jar:2.17.1:provided" ; 
+[INFO] 	"org.apache.flink:flink-runtime_2.11:jar:1.13.0:provided" -> "org.apache.flink:flink-core:jar:1.13.0:provided" ; 
+[INFO] 	"org.apache.flink:flink-runtime_2.11:jar:1.13.0:provided" -> "org.apache.flink:flink-queryable-state-client-java:jar:1.13.0:provided" ; 
+[INFO] 	"org.apache.flink:flink-runtime_2.11:jar:1.13.0:provided" -> "org.apache.flink:flink-hadoop-fs:jar:1.13.0:provided" ; 
+[INFO] 	"org.apache.flink:flink-runtime_2.11:jar:1.13.0:provided" -> "commons-io:commons-io:jar:2.7:provided" ; 
+[INFO] 	"org.apache.flink:flink-runtime_2.11:jar:1.13.0:provided" -> "org.apache.flink:flink-shaded-netty:jar:4.1.49.Final-13.0:provided" ; 
+[INFO] 	"org.apache.flink:flink-runtime_2.11:jar:1.13.0:provided" -> "org.apache.flink:flink-shaded-guava:jar:18.0-13.0:provided" ; 
+[INFO] 	"org.apache.flink:flink-runtime_2.11:jar:1.13.0:provided" -> "org.apache.flink:flink-shaded-jackson:jar:2.12.1-13.0:provided" ; 
+[INFO] 	"org.apache.flink:flink-runtime_2.11:jar:1.13.0:provided" -> "org.apache.flink:flink-shaded-zookeeper-3:jar:3.4.14-13.0:provided" ; 
+[INFO] 	"org.apache.flink:flink-runtime_2.11:jar:1.13.0:provided" -> "org.apache.commons:commons-lang3:jar:3.3.2:provided" ; 
+[INFO] 	"org.apache.flink:flink-runtime_2.11:jar:1.13.0:provided" -> "commons-cli:commons-cli:jar:1.3.1:provided" ; 
+[INFO] 	"org.apache.flink:flink-runtime_2.11:jar:1.13.0:provided" -> "org.scala-lang:scala-library:jar:2.11.12:provided" ; 
+[INFO] 	"org.apache.flink:flink-runtime_2.11:jar:1.13.0:provided" -> "com.typesafe.akka:akka-actor_2.11:jar:2.5.21:provided" ; 
+[INFO] 	"org.apache.flink:flink-runtime_2.11:jar:1.13.0:provided" -> "com.typesafe.akka:akka-stream_2.11:jar:2.5.21:provided" ; 
+[INFO] 	"org.apache.flink:flink-runtime_2.11:jar:1.13.0:provided" -> "com.typesafe.akka:akka-protobuf_2.11:jar:2.5.21:provided" ; 
+[INFO] 	"org.apache.flink:flink-runtime_2.11:jar:1.13.0:provided" -> "com.typesafe.akka:akka-slf4j_2.11:jar:2.5.21:provided" ; 
+[INFO] 	"org.apache.flink:flink-runtime_2.11:jar:1.13.0:provided" -> "org.clapper:grizzled-slf4j_2.11:jar:1.3.2:provided" ; 
+[INFO] 	"org.apache.flink:flink-runtime_2.11:jar:1.13.0:provided" -> "com.github.scopt:scopt_2.11:jar:3.5.0:provided" ; 
+[INFO] 	"org.apache.flink:flink-runtime_2.11:jar:1.13.0:provided" -> "org.xerial.snappy:snappy-java:jar:1.1.8.3:provided" ; 
+[INFO] 	"org.apache.flink:flink-runtime_2.11:jar:1.13.0:provided" -> "com.twitter:chill_2.11:jar:0.7.6:provided" ; 
+[INFO] 	"org.apache.flink:flink-runtime_2.11:jar:1.13.0:provided" -> "org.lz4:lz4-java:jar:1.6.0:provided" ; 
+[INFO] 	"org.apache.flink:flink-core:jar:1.13.0:provided" -> "org.apache.flink:flink-annotations:jar:1.13.0:provided" ; 
+[INFO] 	"org.apache.flink:flink-core:jar:1.13.0:provided" -> "org.apache.flink:flink-metrics-core:jar:1.13.0:provided" ; 
+[INFO] 	"org.apache.flink:flink-core:jar:1.13.0:provided" -> "org.apache.flink:flink-shaded-asm-7:jar:7.1-13.0:provided" ; 
+[INFO] 	"org.apache.flink:flink-core:jar:1.13.0:provided" -> "com.esotericsoftware.kryo:kryo:jar:2.24.0:provided" ; 
+[INFO] 	"org.apache.flink:flink-core:jar:1.13.0:provided" -> "commons-collections:commons-collections:jar:3.2.2:provided" ; 
+[INFO] 	"org.apache.flink:flink-core:jar:1.13.0:provided" -> "org.apache.commons:commons-compress:jar:1.20:provided" ; 
+[INFO] 	"com.esotericsoftware.kryo:kryo:jar:2.24.0:provided" -> "com.esotericsoftware.minlog:minlog:jar:1.2:provided" ; 
+[INFO] 	"com.esotericsoftware.kryo:kryo:jar:2.24.0:provided" -> "org.objenesis:objenesis:jar:2.1:provided" ; 
+[INFO] 	"com.typesafe.akka:akka-actor_2.11:jar:2.5.21:provided" -> "com.typesafe:config:jar:1.3.3:provided" ; 
+[INFO] 	"com.typesafe.akka:akka-actor_2.11:jar:2.5.21:provided" -> "org.scala-lang.modules:scala-java8-compat_2.11:jar:0.7.0:provided" ; 
+[INFO] 	"com.typesafe.akka:akka-stream_2.11:jar:2.5.21:provided" -> "org.reactivestreams:reactive-streams:jar:1.0.2:provided" ; 
+[INFO] 	"com.typesafe.akka:akka-stream_2.11:jar:2.5.21:provided" -> "com.typesafe:ssl-config-core_2.11:jar:0.3.7:provided" ; 
+[INFO] 	"com.typesafe:ssl-config-core_2.11:jar:0.3.7:provided" -> "org.scala-lang.modules:scala-parser-combinators_2.11:jar:1.1.1:provided" ; 
+[INFO] 	"com.twitter:chill_2.11:jar:0.7.6:provided" -> "com.twitter:chill-java:jar:0.7.6:provided" ; 
+[INFO] 	"org.apache.flink:flink-clients_2.11:jar:1.13.0:provided" -> "org.apache.flink:flink-optimizer_2.11:jar:1.13.0:provided" ; 
+[INFO] 	"org.apache.flink:flink-streaming-java_2.11:jar:1.13.0:provided" -> "org.apache.flink:flink-file-sink-common:jar:1.13.0:provided" ; 
+[INFO] 	"org.apache.flink:flink-streaming-java_2.11:jar:1.13.0:provided" -> "org.apache.commons:commons-math3:jar:3.5:provided" ; 
+[INFO] 	"org.apache.curator:curator-test:jar:2.12.0:provided" -> "org.apache.zookeeper:zookeeper:jar:3.4.8:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.8:provided" -> "jline:jline:jar:0.9.94:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.8:provided" -> "io.netty:netty:jar:3.7.0.Final:provided" ; 
+[INFO] 	"junit:junit:jar:4.12:provided" -> "org.hamcrest:hamcrest-core:jar:1.3:provided" ; 
+[INFO] 	"org.reflections:reflections:jar:0.9.10:provided" -> "com.google.guava:guava:jar:15.0:provided" ; 
+[INFO] 	"org.reflections:reflections:jar:0.9.10:provided" -> "org.javassist:javassist:jar:3.19.0-GA:provided" ; 
+[INFO] 	"org.reflections:reflections:jar:0.9.10:provided" -> "com.google.code.findbugs:annotations:jar:2.0.1:provided" ; 
+[INFO] 	"org.apache.flink:flink-table-api-java-bridge_2.11:jar:1.13.0:provided" -> "org.apache.flink:flink-table-api-java:jar:1.13.0:provided" ; 
+[INFO] 	"org.apache.flink:flink-table-api-java-bridge_2.11:jar:1.13.0:provided" -> "org.apache.flink:flink-java:jar:1.13.0:provided" ; 
+[INFO] 	"org.apache.flink:flink-table-api-java:jar:1.13.0:provided" -> "org.apache.flink:flink-table-common:jar:1.13.0:provided" ; 
+[INFO] 	"org.apache.flink:flink-table-common:jar:1.13.0:provided" -> "org.apache.flink:flink-connector-files:jar:1.13.0:provided" ; 
+[INFO] 	"org.apache.flink:flink-connector-files:jar:1.13.0:provided" -> "org.apache.flink:flink-connector-base:jar:1.13.0:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< com.alibaba.alink:alink_core_flink-1.13_2.11 >------------
+[INFO] Building alink_core 1.6-SNAPSHOT                                  [3/27]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for alink 1.6-SNAPSHOT:
+[INFO] 
+[INFO] alink .............................................. SUCCESS [  3.698 s]
+[INFO] alink_test_utils ................................... SUCCESS [  1.062 s]
+[INFO] alink_core ......................................... FAILURE [  1.374 s]
+[INFO] alink-dl-predictors ................................ SKIPPED
+[INFO] alink_tf_predictor ................................. SKIPPED
+[INFO] alink_torch_predictor .............................. SKIPPED
+[INFO] alink_onnx_predictor ............................... SKIPPED
+[INFO] alink_connectors ................................... SKIPPED
+[INFO] alink-connector-kafka .............................. SKIPPED
+[INFO] alink-connector-odps ............................... SKIPPED
+[INFO] alink-connector-jdbc ............................... SKIPPED
+[INFO] alink-connector-jdbc-derby ......................... SKIPPED
+[INFO] alink-connector-jdbc-sqlite ........................ SKIPPED
+[INFO] alink-connector-jdbc-mysql ......................... SKIPPED
+[INFO] alink-connector-hive ............................... SKIPPED
+[INFO] alink-hive-bridge .................................. SKIPPED
+[INFO] alink_connector_redis .............................. SKIPPED
+[INFO] alink-filesystem ................................... SKIPPED
+[INFO] alink-hadoop-fs .................................... SKIPPED
+[INFO] alink-flink-hadoop-fs-service ...................... SKIPPED
+[INFO] alink_connector_parquet ............................ SKIPPED
+[INFO] alink_connector_datahub ............................ SKIPPED
+[INFO] alink_connector_hbase .............................. SKIPPED
+[INFO] alink_examples ..................................... SKIPPED
+[INFO] alink_python ....................................... SKIPPED
+[INFO] alink_plugins ...................................... SKIPPED
+[INFO] alink-xgboost-bridge ............................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.277 s
+[INFO] Finished at: 2023-12-28T09:02:22+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project alink_core_flink-1.13_2.11: Could not resolve dependencies for project com.alibaba.alink:alink_core_flink-1.13_2.11:jar:1.6-SNAPSHOT: Could not find artifact com.alibaba.alink:alink_test_utils-1.13_2.11:jar:1.6-SNAPSHOT -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :alink_core_flink-1.13_2.11

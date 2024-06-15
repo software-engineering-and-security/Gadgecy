@@ -1,0 +1,694 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] weblogic-kubernetes-operator                                       [pom]
+[INFO] operator-swagger                                                   [jar]
+[INFO] json-schema                                                        [jar]
+[INFO] common                                                             [jar]
+[INFO] operator-build-maven-plugin                               [maven-plugin]
+[INFO] operator-runtime                                                   [jar]
+[INFO] domain-upgrader                                                    [jar]
+[INFO] integration-tests                                                  [jar]
+[INFO] installation-tests                                                 [jar]
+[INFO] 
+[INFO] -----------------< oracle.kubernetes:operator-parent >------------------
+[INFO] Building weblogic-kubernetes-operator 4.2.0-SNAPSHOT               [1/9]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ operator-parent ---
+[INFO] digraph "oracle.kubernetes:operator-parent:pom:4.2.0-SNAPSHOT" { 
+[INFO] 	"oracle.kubernetes:operator-parent:pom:4.2.0-SNAPSHOT" -> "com.jayway.jsonpath:json-path-assert:jar:2.8.0:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path-assert:jar:2.8.0:test" -> "com.jayway.jsonpath:json-path:jar:2.8.0:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path-assert:jar:2.8.0:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path-assert:jar:2.8.0:test" -> "org.slf4j:slf4j-api:jar:1.7.36:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.8.0:test" -> "net.minidev:json-smart:jar:2.4.10:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.10:test" -> "net.minidev:accessors-smart:jar:2.4.9:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.9:test" -> "org.ow2.asm:asm:jar:9.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< oracle.kubernetes:operator-swagger >-----------------
+[INFO] Building operator-swagger 4.2.0-SNAPSHOT                           [2/9]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ operator-swagger ---
+[INFO] digraph "oracle.kubernetes:operator-swagger:jar:4.2.0-SNAPSHOT" { 
+[INFO] 	"oracle.kubernetes:operator-swagger:jar:4.2.0-SNAPSHOT" -> "io.kubernetes:client-java:jar:19.0.0:compile" ; 
+[INFO] 	"oracle.kubernetes:operator-swagger:jar:4.2.0-SNAPSHOT" -> "com.jayway.jsonpath:json-path-assert:jar:2.8.0:test" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "io.prometheus:simpleclient:jar:0.16.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "io.prometheus:simpleclient_httpserver:jar:0.16.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "io.kubernetes:client-java-api:jar:19.0.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "io.kubernetes:client-java-proto:jar:19.0.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "org.yaml:snakeyaml:jar:2.2:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "commons-codec:commons-codec:jar:1.16.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "org.apache.commons:commons-compress:jar:1.24.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "org.apache.commons:commons-lang3:jar:3.13.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "commons-io:commons-io:jar:2.15.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "org.bouncycastle:bcpkix-jdk18on:jar:1.77:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "com.google.protobuf:protobuf-java:jar:3.24.3:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "org.bitbucket.b_c:jose4j:jar:0.9.3:compile" ; 
+[INFO] 	"io.prometheus:simpleclient:jar:0.16.0:compile" -> "io.prometheus:simpleclient_tracer_otel:jar:0.16.0:compile" ; 
+[INFO] 	"io.prometheus:simpleclient:jar:0.16.0:compile" -> "io.prometheus:simpleclient_tracer_otel_agent:jar:0.16.0:compile" ; 
+[INFO] 	"io.prometheus:simpleclient_tracer_otel:jar:0.16.0:compile" -> "io.prometheus:simpleclient_tracer_common:jar:0.16.0:compile" ; 
+[INFO] 	"io.prometheus:simpleclient_httpserver:jar:0.16.0:compile" -> "io.prometheus:simpleclient_common:jar:0.16.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "io.swagger:swagger-annotations:jar:1.6.11:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "com.squareup.okhttp3:okhttp:jar:4.12.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "com.squareup.okhttp3:logging-interceptor:jar:4.11.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "io.gsonfire:gson-fire:jar:1.8.5:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:4.12.0:compile" -> "com.squareup.okio:okio:jar:3.6.0:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:4.12.0:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:compile" ; 
+[INFO] 	"com.squareup.okio:okio:jar:3.6.0:compile" -> "com.squareup.okio:okio-jvm:jar:3.6.0:compile" ; 
+[INFO] 	"com.squareup.okio:okio-jvm:jar:3.6.0:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.9.21:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:compile" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.9.21:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.8.21:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.9.21:compile" -> "org.jetbrains:annotations:jar:13.0:compile" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk18on:jar:1.77:compile" -> "org.bouncycastle:bcprov-jdk18on:jar:1.77:compile" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk18on:jar:1.77:compile" -> "org.bouncycastle:bcutil-jdk18on:jar:1.77:compile" ; 
+[INFO] 	"com.jayway.jsonpath:json-path-assert:jar:2.8.0:test" -> "com.jayway.jsonpath:json-path:jar:2.8.0:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path-assert:jar:2.8.0:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.8.0:test" -> "net.minidev:json-smart:jar:2.4.10:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.10:test" -> "net.minidev:accessors-smart:jar:2.4.9:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.9:test" -> "org.ow2.asm:asm:jar:9.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< oracle.kubernetes:json-schema >--------------------
+[INFO] Building json-schema 4.2.0-SNAPSHOT                                [3/9]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ json-schema ---
+[INFO] digraph "oracle.kubernetes:json-schema:jar:4.2.0-SNAPSHOT" { 
+[INFO] 	"oracle.kubernetes:json-schema:jar:4.2.0-SNAPSHOT" -> "io.kubernetes:client-java:jar:19.0.0:compile" ; 
+[INFO] 	"oracle.kubernetes:json-schema:jar:4.2.0-SNAPSHOT" -> "org.hamcrest:hamcrest-junit:jar:2.0.0.0:test" ; 
+[INFO] 	"oracle.kubernetes:json-schema:jar:4.2.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"oracle.kubernetes:json-schema:jar:4.2.0-SNAPSHOT" -> "com.jayway.jsonpath:json-path-assert:jar:2.8.0:test" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "io.prometheus:simpleclient:jar:0.16.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "io.prometheus:simpleclient_httpserver:jar:0.16.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "io.kubernetes:client-java-api:jar:19.0.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "io.kubernetes:client-java-proto:jar:19.0.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "org.yaml:snakeyaml:jar:2.2:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "commons-codec:commons-codec:jar:1.16.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "org.apache.commons:commons-compress:jar:1.24.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "org.apache.commons:commons-lang3:jar:3.13.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "commons-io:commons-io:jar:2.15.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "org.bouncycastle:bcpkix-jdk18on:jar:1.77:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "com.google.protobuf:protobuf-java:jar:3.24.3:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "org.bitbucket.b_c:jose4j:jar:0.9.3:compile" ; 
+[INFO] 	"io.prometheus:simpleclient:jar:0.16.0:compile" -> "io.prometheus:simpleclient_tracer_otel:jar:0.16.0:compile" ; 
+[INFO] 	"io.prometheus:simpleclient:jar:0.16.0:compile" -> "io.prometheus:simpleclient_tracer_otel_agent:jar:0.16.0:compile" ; 
+[INFO] 	"io.prometheus:simpleclient_tracer_otel:jar:0.16.0:compile" -> "io.prometheus:simpleclient_tracer_common:jar:0.16.0:compile" ; 
+[INFO] 	"io.prometheus:simpleclient_httpserver:jar:0.16.0:compile" -> "io.prometheus:simpleclient_common:jar:0.16.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "io.swagger:swagger-annotations:jar:1.6.11:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "com.squareup.okhttp3:okhttp:jar:4.12.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "com.squareup.okhttp3:logging-interceptor:jar:4.11.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "io.gsonfire:gson-fire:jar:1.8.5:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:4.12.0:compile" -> "com.squareup.okio:okio:jar:3.6.0:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:4.12.0:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:compile" ; 
+[INFO] 	"com.squareup.okio:okio:jar:3.6.0:compile" -> "com.squareup.okio:okio-jvm:jar:3.6.0:compile" ; 
+[INFO] 	"com.squareup.okio:okio-jvm:jar:3.6.0:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.9.21:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:compile" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.9.21:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.8.21:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.9.21:compile" -> "org.jetbrains:annotations:jar:13.0:compile" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk18on:jar:1.77:compile" -> "org.bouncycastle:bcprov-jdk18on:jar:1.77:compile" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk18on:jar:1.77:compile" -> "org.bouncycastle:bcutil-jdk18on:jar:1.77:compile" ; 
+[INFO] 	"org.hamcrest:hamcrest-junit:jar:2.0.0.0:test" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-junit:jar:2.0.0.0:test" -> "org.hamcrest:java-hamcrest:jar:2.0.0.0:test" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path-assert:jar:2.8.0:test" -> "com.jayway.jsonpath:json-path:jar:2.8.0:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path-assert:jar:2.8.0:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.8.0:test" -> "net.minidev:json-smart:jar:2.4.10:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.10:test" -> "net.minidev:accessors-smart:jar:2.4.9:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.9:test" -> "org.ow2.asm:asm:jar:9.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< oracle.kubernetes:common >----------------------
+[INFO] Building common 4.2.0-SNAPSHOT                                     [4/9]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ common ---
+[INFO] digraph "oracle.kubernetes:common:jar:4.2.0-SNAPSHOT" { 
+[INFO] 	"oracle.kubernetes:common:jar:4.2.0-SNAPSHOT" -> "io.kubernetes:client-java-api:jar:19.0.0:compile" ; 
+[INFO] 	"oracle.kubernetes:common:jar:4.2.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" ; 
+[INFO] 	"oracle.kubernetes:common:jar:4.2.0-SNAPSHOT" -> "com.jayway.jsonpath:json-path:jar:2.8.0:compile" ; 
+[INFO] 	"oracle.kubernetes:common:jar:4.2.0-SNAPSHOT" -> "org.yaml:snakeyaml:jar:2.2:compile" ; 
+[INFO] 	"oracle.kubernetes:common:jar:4.2.0-SNAPSHOT" -> "com.meterware.simplestub:simplestub:jar:1.3.2:test" ; 
+[INFO] 	"oracle.kubernetes:common:jar:4.2.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"oracle.kubernetes:common:jar:4.2.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.9:test" ; 
+[INFO] 	"oracle.kubernetes:common:jar:4.2.0-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.4.11:test" ; 
+[INFO] 	"oracle.kubernetes:common:jar:4.2.0-SNAPSHOT" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.16.0:test" ; 
+[INFO] 	"oracle.kubernetes:common:jar:4.2.0-SNAPSHOT" -> "org.hamcrest:hamcrest-junit:jar:2.0.0.0:test" ; 
+[INFO] 	"oracle.kubernetes:common:jar:4.2.0-SNAPSHOT" -> "com.jayway.jsonpath:json-path-assert:jar:2.8.0:test" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "io.swagger:swagger-annotations:jar:1.6.11:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "com.squareup.okhttp3:okhttp:jar:4.12.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "com.squareup.okhttp3:logging-interceptor:jar:4.11.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "io.gsonfire:gson-fire:jar:1.8.5:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "org.apache.commons:commons-lang3:jar:3.13.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:4.12.0:compile" -> "com.squareup.okio:okio:jar:3.6.0:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:4.12.0:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:compile" ; 
+[INFO] 	"com.squareup.okio:okio:jar:3.6.0:compile" -> "com.squareup.okio:okio-jvm:jar:3.6.0:compile" ; 
+[INFO] 	"com.squareup.okio:okio-jvm:jar:3.6.0:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.9.21:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:compile" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.9.21:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.8.21:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.9.21:compile" -> "org.jetbrains:annotations:jar:13.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:compile" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.8.0:compile" -> "net.minidev:json-smart:jar:2.4.10:runtime" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.10:runtime" -> "net.minidev:accessors-smart:jar:2.4.9:runtime" ; 
+[INFO] 	"com.meterware.simplestub:simplestub:jar:1.3.2:test" -> "org.ow2.asm:asm:jar:7.1:runtime" ; 
+[INFO] 	"com.meterware.simplestub:simplestub:jar:1.3.2:test" -> "org.ow2.asm:asm-commons:jar:7.1:test" ; 
+[INFO] 	"org.ow2.asm:asm-commons:jar:7.1:test" -> "org.ow2.asm:asm-tree:jar:7.1:test" ; 
+[INFO] 	"org.ow2.asm:asm-commons:jar:7.1:test" -> "org.ow2.asm:asm-analysis:jar:7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.11:test" -> "ch.qos.logback:logback-core:jar:1.4.11:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-junit:jar:2.0.0.0:test" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-junit:jar:2.0.0.0:test" -> "org.hamcrest:java-hamcrest:jar:2.0.0.0:test" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path-assert:jar:2.8.0:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------< oracle.kubernetes:operator-build-maven-plugin >------------
+[INFO] Building operator-build-maven-plugin 4.2.0-SNAPSHOT                [5/9]
+[INFO] ----------------------------[ maven-plugin ]----------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ operator-build-maven-plugin ---
+[INFO] digraph "oracle.kubernetes:operator-build-maven-plugin:maven-plugin:4.2.0-SNAPSHOT" { 
+[INFO] 	"oracle.kubernetes:operator-build-maven-plugin:maven-plugin:4.2.0-SNAPSHOT" -> "oracle.kubernetes:json-schema:jar:4.2.0-SNAPSHOT:compile" ; 
+[INFO] 	"oracle.kubernetes:operator-build-maven-plugin:maven-plugin:4.2.0-SNAPSHOT" -> "org.apache.maven:maven-plugin-api:jar:3.9.5:provided" ; 
+[INFO] 	"oracle.kubernetes:operator-build-maven-plugin:maven-plugin:4.2.0-SNAPSHOT" -> "org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.10.2:compile" ; 
+[INFO] 	"oracle.kubernetes:operator-build-maven-plugin:maven-plugin:4.2.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"oracle.kubernetes:operator-build-maven-plugin:maven-plugin:4.2.0-SNAPSHOT" -> "com.meterware.simplestub:simplestub:jar:1.3.2:test" ; 
+[INFO] 	"oracle.kubernetes:operator-build-maven-plugin:maven-plugin:4.2.0-SNAPSHOT" -> "org.ow2.asm:asm:jar:9.6:test" ; 
+[INFO] 	"oracle.kubernetes:operator-build-maven-plugin:maven-plugin:4.2.0-SNAPSHOT" -> "com.jayway.jsonpath:json-path-assert:jar:2.8.0:test" ; 
+[INFO] 	"oracle.kubernetes:json-schema:jar:4.2.0-SNAPSHOT:compile" -> "io.kubernetes:client-java:jar:19.0.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "io.prometheus:simpleclient:jar:0.16.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "io.prometheus:simpleclient_httpserver:jar:0.16.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "io.kubernetes:client-java-api:jar:19.0.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "io.kubernetes:client-java-proto:jar:19.0.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "org.yaml:snakeyaml:jar:2.2:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "commons-codec:commons-codec:jar:1.16.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "org.apache.commons:commons-compress:jar:1.24.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "org.apache.commons:commons-lang3:jar:3.13.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "commons-io:commons-io:jar:2.15.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "org.bouncycastle:bcpkix-jdk18on:jar:1.77:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "com.google.protobuf:protobuf-java:jar:3.24.3:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "org.bitbucket.b_c:jose4j:jar:0.9.3:compile" ; 
+[INFO] 	"io.prometheus:simpleclient:jar:0.16.0:compile" -> "io.prometheus:simpleclient_tracer_otel:jar:0.16.0:compile" ; 
+[INFO] 	"io.prometheus:simpleclient:jar:0.16.0:compile" -> "io.prometheus:simpleclient_tracer_otel_agent:jar:0.16.0:compile" ; 
+[INFO] 	"io.prometheus:simpleclient_tracer_otel:jar:0.16.0:compile" -> "io.prometheus:simpleclient_tracer_common:jar:0.16.0:compile" ; 
+[INFO] 	"io.prometheus:simpleclient_httpserver:jar:0.16.0:compile" -> "io.prometheus:simpleclient_common:jar:0.16.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "io.swagger:swagger-annotations:jar:1.6.11:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "com.squareup.okhttp3:okhttp:jar:4.12.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "com.squareup.okhttp3:logging-interceptor:jar:4.11.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "io.gsonfire:gson-fire:jar:1.8.5:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:4.12.0:compile" -> "com.squareup.okio:okio:jar:3.6.0:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:4.12.0:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:compile" ; 
+[INFO] 	"com.squareup.okio:okio:jar:3.6.0:compile" -> "com.squareup.okio:okio-jvm:jar:3.6.0:compile" ; 
+[INFO] 	"com.squareup.okio:okio-jvm:jar:3.6.0:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.9.21:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:compile" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.9.21:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.8.21:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.9.21:compile" -> "org.jetbrains:annotations:jar:13.0:compile" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk18on:jar:1.77:compile" -> "org.bouncycastle:bcprov-jdk18on:jar:1.77:compile" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk18on:jar:1.77:compile" -> "org.bouncycastle:bcutil-jdk18on:jar:1.77:compile" ; 
+[INFO] 	"org.apache.maven:maven-plugin-api:jar:3.9.5:provided" -> "org.apache.maven:maven-model:jar:3.9.5:provided" ; 
+[INFO] 	"org.apache.maven:maven-plugin-api:jar:3.9.5:provided" -> "org.apache.maven:maven-artifact:jar:3.9.5:provided" ; 
+[INFO] 	"org.apache.maven:maven-plugin-api:jar:3.9.5:provided" -> "org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.3.5:provided" ; 
+[INFO] 	"org.apache.maven:maven-plugin-api:jar:3.9.5:provided" -> "org.codehaus.plexus:plexus-utils:jar:3.5.1:provided" ; 
+[INFO] 	"org.apache.maven:maven-plugin-api:jar:3.9.5:provided" -> "org.codehaus.plexus:plexus-classworlds:jar:2.7.0:provided" ; 
+[INFO] 	"org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.3.5:provided" -> "javax.annotation:javax.annotation-api:jar:1.2:compile" ; 
+[INFO] 	"org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.3.5:provided" -> "org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.3.5:provided" ; 
+[INFO] 	"org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.3.5:provided" -> "org.codehaus.plexus:plexus-component-annotations:jar:1.5.5:provided" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"com.meterware.simplestub:simplestub:jar:1.3.2:test" -> "org.ow2.asm:asm-commons:jar:7.1:test" ; 
+[INFO] 	"org.ow2.asm:asm-commons:jar:7.1:test" -> "org.ow2.asm:asm-tree:jar:7.1:test" ; 
+[INFO] 	"org.ow2.asm:asm-commons:jar:7.1:test" -> "org.ow2.asm:asm-analysis:jar:7.1:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path-assert:jar:2.8.0:test" -> "com.jayway.jsonpath:json-path:jar:2.8.0:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path-assert:jar:2.8.0:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path-assert:jar:2.8.0:test" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.8.0:test" -> "net.minidev:json-smart:jar:2.4.10:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.10:test" -> "net.minidev:accessors-smart:jar:2.4.9:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------< oracle.kubernetes:weblogic-kubernetes-operator >-----------
+[INFO] Building operator-runtime 4.2.0-SNAPSHOT                           [6/9]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ weblogic-kubernetes-operator ---
+[INFO] digraph "oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" { 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "oracle.kubernetes:operator-swagger:jar:4.2.0-SNAPSHOT:compile" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "oracle.kubernetes:json-schema:jar:4.2.0-SNAPSHOT:compile" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "com.kjetland:mbknor-jackson-jsonschema_2.12:jar:1.0.39:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "org.glassfish.jersey.core:jersey-client:jar:3.1.3:compile" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "org.glassfish.jersey.media:jersey-media-json-jackson:jar:3.1.3:compile" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "org.glassfish.jersey.media:jersey-media-json-processing:jar:3.1.3:compile" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "org.eclipse.parsson:parsson:jar:1.1.5:compile" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "org.eclipse.parsson:parsson-media:jar:1.1.5:compile" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "org.glassfish.jersey.containers:jersey-container-grizzly2-http:jar:3.1.3:compile" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "org.glassfish.jersey.inject:jersey-hk2:jar:3.1.3:compile" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "org.glassfish.grizzly:grizzly-http-servlet:jar:4.0.1:compile" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "jakarta.servlet:jakarta.servlet-api:jar:6.0.0:compile" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "io.prometheus:simpleclient_servlet_jakarta:jar:0.16.0:compile" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "io.prometheus:simpleclient_hotspot:jar:0.16.0:compile" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.16.0:compile" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "io.kubernetes:client-java:jar:19.0.0:compile" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "io.kubernetes:client-java-api-fluent:jar:19.0.0:compile" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.9.21:compile" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.9.21:compile" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "com.squareup.okhttp3:okhttp:jar:4.12.0:compile" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "com.appscode.voyager:client-java:jar:0.1.0:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "com.google.code.findbugs:annotations:jar:3.0.1:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "org.hamcrest:hamcrest-junit:jar:2.0.0.0:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "org.apache.commons:commons-exec:jar:1.3:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "org.glassfish.jersey.test-framework:jersey-test-framework-core:jar:3.1.3:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-grizzly2:jar:3.1.3:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-inmemory:jar:3.1.3:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "com.networknt:json-schema-validator:jar:1.0.87:compile" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "org.httpunit:httpunit:jar:1.7.3:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "com.meterware.simplestub:simplestub:jar:1.3.2:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "oracle.kubernetes:common:jar:4.2.0-SNAPSHOT:compile" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "oracle.kubernetes:common:test-jar:tests:4.2.0-SNAPSHOT:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT" -> "com.jayway.jsonpath:json-path-assert:jar:2.8.0:test" ; 
+[INFO] 	"com.kjetland:mbknor-jackson-jsonschema_2.12:jar:1.0.39:test" -> "org.scala-lang:scala-library:jar:2.12.10:test" ; 
+[INFO] 	"com.kjetland:mbknor-jackson-jsonschema_2.12:jar:1.0.39:test" -> "org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable:jar:1.3.50:test" ; 
+[INFO] 	"com.kjetland:mbknor-jackson-jsonschema_2.12:jar:1.0.39:test" -> "javax.validation:validation-api:jar:2.0.1.Final:test" ; 
+[INFO] 	"com.kjetland:mbknor-jackson-jsonschema_2.12:jar:1.0.39:test" -> "org.slf4j:slf4j-api:jar:1.7.26:compile" ; 
+[INFO] 	"com.kjetland:mbknor-jackson-jsonschema_2.12:jar:1.0.39:test" -> "io.github.classgraph:classgraph:jar:4.8.21:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable:jar:1.3.50:test" -> "org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable:jar:1.3.50:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable:jar:1.3.50:test" -> "org.jetbrains.kotlin:kotlin-scripting-common:jar:1.3.50:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable:jar:1.3.50:test" -> "org.jetbrains.kotlin:kotlin-scripting-jvm:jar:1.3.50:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable:jar:1.3.50:test" -> "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:1.1.1:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-scripting-common:jar:1.3.50:test" -> "org.jetbrains.kotlin:kotlin-reflect:jar:1.3.50:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-scripting-jvm:jar:1.3.50:test" -> "org.jetbrains.kotlin:kotlin-script-runtime:jar:1.3.50:test" ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-client:jar:3.1.3:compile" -> "jakarta.ws.rs:jakarta.ws.rs-api:jar:3.1.0:compile" ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-client:jar:3.1.3:compile" -> "org.glassfish.jersey.core:jersey-common:jar:3.1.3:compile" ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-client:jar:3.1.3:compile" -> "jakarta.inject:jakarta.inject-api:jar:2.0.1:compile" ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-common:jar:3.1.3:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile" ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-common:jar:3.1.3:compile" -> "org.glassfish.hk2:osgi-resource-locator:jar:1.0.3:compile" ; 
+[INFO] 	"org.glassfish.jersey.media:jersey-media-json-jackson:jar:3.1.3:compile" -> "org.glassfish.jersey.ext:jersey-entity-filtering:jar:3.1.3:compile" ; 
+[INFO] 	"org.glassfish.jersey.media:jersey-media-json-jackson:jar:3.1.3:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.14.1:compile" ; 
+[INFO] 	"org.glassfish.jersey.media:jersey-media-json-jackson:jar:3.1.3:compile" -> "com.fasterxml.jackson.module:jackson-module-jakarta-xmlbind-annotations:jar:2.14.1:compile" ; 
+[INFO] 	"org.glassfish.jersey.media:jersey-media-json-jackson:jar:3.1.3:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.0:compile" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.0:compile" -> "jakarta.activation:jakarta.activation-api:jar:2.1.0:compile" ; 
+[INFO] 	"org.glassfish.jersey.media:jersey-media-json-processing:jar:3.1.3:compile" -> "jakarta.json:jakarta.json-api:jar:2.1.2:compile" ; 
+[INFO] 	"org.glassfish.jersey.containers:jersey-container-grizzly2-http:jar:3.1.3:compile" -> "org.glassfish.grizzly:grizzly-http-server:jar:4.0.0:compile" ; 
+[INFO] 	"org.glassfish.jersey.containers:jersey-container-grizzly2-http:jar:3.1.3:compile" -> "org.glassfish.jersey.core:jersey-server:jar:3.1.3:compile" ; 
+[INFO] 	"org.glassfish.grizzly:grizzly-http-server:jar:4.0.0:compile" -> "org.glassfish.grizzly:grizzly-http:jar:4.0.0:compile" ; 
+[INFO] 	"org.glassfish.grizzly:grizzly-http:jar:4.0.0:compile" -> "org.glassfish.grizzly:grizzly-framework:jar:4.0.0:compile" ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-server:jar:3.1.3:compile" -> "jakarta.validation:jakarta.validation-api:jar:3.0.2:compile" ; 
+[INFO] 	"org.glassfish.jersey.inject:jersey-hk2:jar:3.1.3:compile" -> "org.glassfish.hk2:hk2-locator:jar:3.0.4:compile" ; 
+[INFO] 	"org.glassfish.jersey.inject:jersey-hk2:jar:3.1.3:compile" -> "org.javassist:javassist:jar:3.29.2-GA:compile" ; 
+[INFO] 	"org.glassfish.hk2:hk2-locator:jar:3.0.4:compile" -> "org.glassfish.hk2.external:aopalliance-repackaged:jar:3.0.4:compile" ; 
+[INFO] 	"org.glassfish.hk2:hk2-locator:jar:3.0.4:compile" -> "org.glassfish.hk2:hk2-api:jar:3.0.4:compile" ; 
+[INFO] 	"org.glassfish.hk2:hk2-locator:jar:3.0.4:compile" -> "org.glassfish.hk2:hk2-utils:jar:3.0.4:compile" ; 
+[INFO] 	"io.prometheus:simpleclient_servlet_jakarta:jar:0.16.0:compile" -> "io.prometheus:simpleclient:jar:0.16.0:compile" ; 
+[INFO] 	"io.prometheus:simpleclient_servlet_jakarta:jar:0.16.0:compile" -> "io.prometheus:simpleclient_common:jar:0.16.0:compile" ; 
+[INFO] 	"io.prometheus:simpleclient_servlet_jakarta:jar:0.16.0:compile" -> "io.prometheus:simpleclient_servlet_common:jar:0.16.0:compile" ; 
+[INFO] 	"io.prometheus:simpleclient:jar:0.16.0:compile" -> "io.prometheus:simpleclient_tracer_otel:jar:0.16.0:compile" ; 
+[INFO] 	"io.prometheus:simpleclient:jar:0.16.0:compile" -> "io.prometheus:simpleclient_tracer_otel_agent:jar:0.16.0:compile" ; 
+[INFO] 	"io.prometheus:simpleclient_tracer_otel:jar:0.16.0:compile" -> "io.prometheus:simpleclient_tracer_common:jar:0.16.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.16.0:compile" -> "org.yaml:snakeyaml:jar:2.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "io.prometheus:simpleclient_httpserver:jar:0.16.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "io.kubernetes:client-java-api:jar:19.0.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "io.kubernetes:client-java-proto:jar:19.0.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "commons-codec:commons-codec:jar:1.16.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "org.apache.commons:commons-compress:jar:1.24.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "org.apache.commons:commons-lang3:jar:3.13.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "commons-io:commons-io:jar:2.15.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "org.bouncycastle:bcpkix-jdk18on:jar:1.77:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "com.google.protobuf:protobuf-java:jar:3.24.3:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:compile" -> "org.bitbucket.b_c:jose4j:jar:0.9.3:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "io.swagger:swagger-annotations:jar:1.6.11:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "com.squareup.okhttp3:logging-interceptor:jar:4.11.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "io.gsonfire:gson-fire:jar:1.8.5:compile" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk18on:jar:1.77:compile" -> "org.bouncycastle:bcprov-jdk18on:jar:1.77:compile" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk18on:jar:1.77:compile" -> "org.bouncycastle:bcutil-jdk18on:jar:1.77:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.9.21:compile" -> "org.jetbrains:annotations:jar:13.0:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:4.12.0:compile" -> "com.squareup.okio:okio:jar:3.6.0:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:4.12.0:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:compile" ; 
+[INFO] 	"com.squareup.okio:okio:jar:3.6.0:compile" -> "com.squareup.okio:okio-jvm:jar:3.6.0:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.8.21:compile" ; 
+[INFO] 	"com.appscode.voyager:client-java:jar:0.1.0:test" -> "com.appscode.voyager:client-java-api:jar:0.1.0:test" ; 
+[INFO] 	"com.appscode.voyager:client-java:jar:0.1.0:test" -> "com.squareup.okhttp:okhttp-ws:jar:2.7.5:test" ; 
+[INFO] 	"com.appscode.voyager:client-java:jar:0.1.0:test" -> "com.google.guava:guava:jar:22.0:test" ; 
+[INFO] 	"com.appscode.voyager:client-java:jar:0.1.0:test" -> "ch.qos.logback:logback-classic:jar:1.2.3:test" ; 
+[INFO] 	"com.appscode.voyager:client-java:jar:0.1.0:test" -> "org.bouncycastle:bcprov-ext-jdk15on:jar:1.59:test" ; 
+[INFO] 	"com.appscode.voyager:client-java:jar:0.1.0:test" -> "org.bouncycastle:bcpkix-jdk15on:jar:1.59:test" ; 
+[INFO] 	"com.appscode.voyager:client-java-api:jar:0.1.0:test" -> "com.squareup.okhttp:okhttp:jar:2.7.5:test" ; 
+[INFO] 	"com.appscode.voyager:client-java-api:jar:0.1.0:test" -> "com.squareup.okhttp:logging-interceptor:jar:2.7.5:test" ; 
+[INFO] 	"com.appscode.voyager:client-java-api:jar:0.1.0:test" -> "joda-time:joda-time:jar:2.9.9:test" ; 
+[INFO] 	"com.google.guava:guava:jar:22.0:test" -> "com.google.errorprone:error_prone_annotations:jar:2.0.18:test" ; 
+[INFO] 	"com.google.guava:guava:jar:22.0:test" -> "com.google.j2objc:j2objc-annotations:jar:1.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:22.0:test" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.14:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "ch.qos.logback:logback-core:jar:1.2.3:test" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk15on:jar:1.59:test" -> "org.bouncycastle:bcprov-jdk15on:jar:1.59:test" ; 
+[INFO] 	"com.google.code.findbugs:annotations:jar:3.0.1:test" -> "net.jcip:jcip-annotations:jar:1.0:test" ; 
+[INFO] 	"com.google.code.findbugs:annotations:jar:3.0.1:test" -> "com.google.code.findbugs:jsr305:jar:3.0.1:compile" ; 
+[INFO] 	"org.hamcrest:hamcrest-junit:jar:2.0.0.0:test" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-junit:jar:2.0.0.0:test" -> "org.hamcrest:java-hamcrest:jar:2.0.0.0:test" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.glassfish.jersey.test-framework:jersey-test-framework-core:jar:3.1.3:test" -> "org.glassfish.jersey.media:jersey-media-jaxb:jar:3.1.3:test" ; 
+[INFO] 	"org.glassfish.jersey.test-framework:jersey-test-framework-core:jar:3.1.3:test" -> "org.glassfish.jersey.containers:jersey-container-servlet-core:jar:3.1.3:test" ; 
+[INFO] 	"org.glassfish.jersey.test-framework:jersey-test-framework-core:jar:3.1.3:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-grizzly2:jar:3.1.3:test" -> "org.glassfish.jersey.containers:jersey-container-grizzly2-servlet:jar:3.1.3:test" ; 
+[INFO] 	"org.glassfish.jersey.containers:jersey-container-grizzly2-servlet:jar:3.1.3:test" -> "org.glassfish.jersey.containers:jersey-container-servlet:jar:3.1.3:test" ; 
+[INFO] 	"com.networknt:json-schema-validator:jar:1.0.87:compile" -> "com.ethlo.time:itu:jar:1.7.0:compile" ; 
+[INFO] 	"org.httpunit:httpunit:jar:1.7.3:test" -> "rhino:js:jar:1.6R5:test" ; 
+[INFO] 	"org.httpunit:httpunit:jar:1.7.3:test" -> "nekohtml:nekohtml:jar:0.9.5:test" ; 
+[INFO] 	"org.httpunit:httpunit:jar:1.7.3:test" -> "javax.servlet:servlet-api:jar:2.4:test" ; 
+[INFO] 	"org.httpunit:httpunit:jar:1.7.3:test" -> "net.sf.jtidy:jtidy:jar:r938:test" ; 
+[INFO] 	"org.httpunit:httpunit:jar:1.7.3:test" -> "xerces:xercesImpl:jar:2.6.1:test" ; 
+[INFO] 	"org.httpunit:httpunit:jar:1.7.3:test" -> "xerces:xmlParserAPIs:jar:2.6.1:test" ; 
+[INFO] 	"com.meterware.simplestub:simplestub:jar:1.3.2:test" -> "org.ow2.asm:asm:jar:7.1:runtime" ; 
+[INFO] 	"com.meterware.simplestub:simplestub:jar:1.3.2:test" -> "org.ow2.asm:asm-commons:jar:7.1:test" ; 
+[INFO] 	"org.ow2.asm:asm-commons:jar:7.1:test" -> "org.ow2.asm:asm-tree:jar:7.1:test" ; 
+[INFO] 	"org.ow2.asm:asm-commons:jar:7.1:test" -> "org.ow2.asm:asm-analysis:jar:7.1:test" ; 
+[INFO] 	"oracle.kubernetes:common:jar:4.2.0-SNAPSHOT:compile" -> "com.jayway.jsonpath:json-path:jar:2.8.0:compile" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.8.0:compile" -> "net.minidev:json-smart:jar:2.4.10:runtime" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.10:runtime" -> "net.minidev:accessors-smart:jar:2.4.9:runtime" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< oracle.kubernetes:domain-upgrader >------------------
+[INFO] Building domain-upgrader 4.2.0-SNAPSHOT                            [7/9]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ domain-upgrader ---
+[INFO] digraph "oracle.kubernetes:domain-upgrader:jar:4.2.0-SNAPSHOT" { 
+[INFO] 	"oracle.kubernetes:domain-upgrader:jar:4.2.0-SNAPSHOT" -> "oracle.kubernetes:common:jar:4.2.0-SNAPSHOT:compile" ; 
+[INFO] 	"oracle.kubernetes:domain-upgrader:jar:4.2.0-SNAPSHOT" -> "oracle.kubernetes:common:test-jar:tests:4.2.0-SNAPSHOT:compile" ; 
+[INFO] 	"oracle.kubernetes:domain-upgrader:jar:4.2.0-SNAPSHOT" -> "commons-cli:commons-cli:jar:1.6.0:compile" ; 
+[INFO] 	"oracle.kubernetes:domain-upgrader:jar:4.2.0-SNAPSHOT" -> "commons-io:commons-io:jar:2.15.0:compile" ; 
+[INFO] 	"oracle.kubernetes:domain-upgrader:jar:4.2.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"oracle.kubernetes:domain-upgrader:jar:4.2.0-SNAPSHOT" -> "com.meterware.simplestub:simplestub:jar:1.3.2:test" ; 
+[INFO] 	"oracle.kubernetes:domain-upgrader:jar:4.2.0-SNAPSHOT" -> "com.jayway.jsonpath:json-path-assert:jar:2.8.0:test" ; 
+[INFO] 	"oracle.kubernetes:common:jar:4.2.0-SNAPSHOT:compile" -> "io.kubernetes:client-java-api:jar:19.0.0:compile" ; 
+[INFO] 	"oracle.kubernetes:common:jar:4.2.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" ; 
+[INFO] 	"oracle.kubernetes:common:jar:4.2.0-SNAPSHOT:compile" -> "com.jayway.jsonpath:json-path:jar:2.8.0:compile" ; 
+[INFO] 	"oracle.kubernetes:common:jar:4.2.0-SNAPSHOT:compile" -> "org.yaml:snakeyaml:jar:2.2:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "io.swagger:swagger-annotations:jar:1.6.11:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "com.squareup.okhttp3:okhttp:jar:4.12.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "com.squareup.okhttp3:logging-interceptor:jar:4.11.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "io.gsonfire:gson-fire:jar:1.8.5:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "org.apache.commons:commons-lang3:jar:3.13.0:compile" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:4.12.0:compile" -> "com.squareup.okio:okio:jar:3.6.0:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:4.12.0:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:compile" ; 
+[INFO] 	"com.squareup.okio:okio:jar:3.6.0:compile" -> "com.squareup.okio:okio-jvm:jar:3.6.0:compile" ; 
+[INFO] 	"com.squareup.okio:okio-jvm:jar:3.6.0:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.9.21:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:compile" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.9.21:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.8.21:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.9.21:compile" -> "org.jetbrains:annotations:jar:13.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:compile" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.8.0:compile" -> "net.minidev:json-smart:jar:2.4.10:runtime" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.10:runtime" -> "net.minidev:accessors-smart:jar:2.4.9:runtime" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"com.meterware.simplestub:simplestub:jar:1.3.2:test" -> "org.ow2.asm:asm:jar:7.1:runtime" ; 
+[INFO] 	"com.meterware.simplestub:simplestub:jar:1.3.2:test" -> "org.ow2.asm:asm-commons:jar:7.1:test" ; 
+[INFO] 	"org.ow2.asm:asm-commons:jar:7.1:test" -> "org.ow2.asm:asm-tree:jar:7.1:test" ; 
+[INFO] 	"org.ow2.asm:asm-commons:jar:7.1:test" -> "org.ow2.asm:asm-analysis:jar:7.1:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path-assert:jar:2.8.0:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path-assert:jar:2.8.0:test" -> "org.slf4j:slf4j-api:jar:1.7.36:runtime" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< oracle.kubernetes:integration-tests >-----------------
+[INFO] Building integration-tests 4.2.0-SNAPSHOT                          [8/9]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ integration-tests ---
+[INFO] digraph "oracle.kubernetes:integration-tests:jar:4.2.0-SNAPSHOT" { 
+[INFO] 	"oracle.kubernetes:integration-tests:jar:4.2.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"oracle.kubernetes:integration-tests:jar:4.2.0-SNAPSHOT" -> "org.awaitility:awaitility:jar:4.2.0:test" ; 
+[INFO] 	"oracle.kubernetes:integration-tests:jar:4.2.0-SNAPSHOT" -> "io.kubernetes:client-java:jar:19.0.0:test" ; 
+[INFO] 	"oracle.kubernetes:integration-tests:jar:4.2.0-SNAPSHOT" -> "io.kubernetes:client-java-extended:jar:19.0.0:test" ; 
+[INFO] 	"oracle.kubernetes:integration-tests:jar:4.2.0-SNAPSHOT" -> "com.google.code.findbugs:annotations:jar:3.0.1:test" ; 
+[INFO] 	"oracle.kubernetes:integration-tests:jar:4.2.0-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"oracle.kubernetes:integration-tests:jar:4.2.0-SNAPSHOT" -> "commons-io:commons-io:jar:2.15.0:test" ; 
+[INFO] 	"oracle.kubernetes:integration-tests:jar:4.2.0-SNAPSHOT" -> "net.sourceforge.htmlunit:htmlunit:jar:2.70.0:test" ; 
+[INFO] 	"oracle.kubernetes:integration-tests:jar:4.2.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:test" ; 
+[INFO] 	"oracle.kubernetes:integration-tests:jar:4.2.0-SNAPSHOT" -> "com.jayway.jsonpath:json-path-assert:jar:2.8.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.awaitility:awaitility:jar:4.2.0:test" -> "org.hamcrest:hamcrest:jar:2.1:test" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:test" -> "io.prometheus:simpleclient:jar:0.16.0:test" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:test" -> "io.prometheus:simpleclient_httpserver:jar:0.16.0:test" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:test" -> "io.kubernetes:client-java-api:jar:19.0.0:test" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:test" -> "io.kubernetes:client-java-proto:jar:19.0.0:test" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:test" -> "org.yaml:snakeyaml:jar:2.2:test" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:test" -> "commons-codec:commons-codec:jar:1.16.0:test" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:test" -> "org.apache.commons:commons-compress:jar:1.24.0:test" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:test" -> "org.apache.commons:commons-lang3:jar:3.13.0:test" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:test" -> "org.slf4j:slf4j-api:jar:2.0.9:test" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:test" -> "org.bouncycastle:bcpkix-jdk18on:jar:1.77:test" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:test" -> "com.google.protobuf:protobuf-java:jar:3.24.3:test" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:test" -> "org.apache.commons:commons-collections4:jar:4.4:test" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:test" -> "org.bitbucket.b_c:jose4j:jar:0.9.3:test" ; 
+[INFO] 	"io.prometheus:simpleclient:jar:0.16.0:test" -> "io.prometheus:simpleclient_tracer_otel:jar:0.16.0:test" ; 
+[INFO] 	"io.prometheus:simpleclient:jar:0.16.0:test" -> "io.prometheus:simpleclient_tracer_otel_agent:jar:0.16.0:test" ; 
+[INFO] 	"io.prometheus:simpleclient_tracer_otel:jar:0.16.0:test" -> "io.prometheus:simpleclient_tracer_common:jar:0.16.0:test" ; 
+[INFO] 	"io.prometheus:simpleclient_httpserver:jar:0.16.0:test" -> "io.prometheus:simpleclient_common:jar:0.16.0:test" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:test" -> "javax.annotation:javax.annotation-api:jar:1.3.2:test" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:test" -> "io.swagger:swagger-annotations:jar:1.6.11:test" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:test" -> "com.squareup.okhttp3:okhttp:jar:4.12.0:test" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:test" -> "com.squareup.okhttp3:logging-interceptor:jar:4.11.0:test" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:test" -> "com.google.code.gson:gson:jar:2.10.1:test" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:test" -> "io.gsonfire:gson-fire:jar:1.8.5:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:4.12.0:test" -> "com.squareup.okio:okio:jar:3.6.0:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:4.12.0:test" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:test" ; 
+[INFO] 	"com.squareup.okio:okio:jar:3.6.0:test" -> "com.squareup.okio:okio-jvm:jar:3.6.0:test" ; 
+[INFO] 	"com.squareup.okio:okio-jvm:jar:3.6.0:test" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.9.21:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:test" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.9.21:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:test" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.8.21:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.9.21:test" -> "org.jetbrains:annotations:jar:13.0:test" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk18on:jar:1.77:test" -> "org.bouncycastle:bcprov-jdk18on:jar:1.77:test" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk18on:jar:1.77:test" -> "org.bouncycastle:bcutil-jdk18on:jar:1.77:test" ; 
+[INFO] 	"io.kubernetes:client-java-extended:jar:19.0.0:test" -> "io.kubernetes:client-java-api-fluent:jar:19.0.0:test" ; 
+[INFO] 	"io.kubernetes:client-java-extended:jar:19.0.0:test" -> "com.github.vladimir-bukhtoyarov:bucket4j-core:jar:7.6.0:test" ; 
+[INFO] 	"io.kubernetes:client-java-extended:jar:19.0.0:test" -> "com.flipkart.zjsonpatch:zjsonpatch:jar:0.4.14:test" ; 
+[INFO] 	"io.kubernetes:client-java-extended:jar:19.0.0:test" -> "com.github.ben-manes.caffeine:caffeine:jar:2.9.3:test" ; 
+[INFO] 	"com.flipkart.zjsonpatch:zjsonpatch:jar:0.4.14:test" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:test" ; 
+[INFO] 	"com.github.ben-manes.caffeine:caffeine:jar:2.9.3:test" -> "org.checkerframework:checker-qual:jar:3.19.0:test" ; 
+[INFO] 	"com.github.ben-manes.caffeine:caffeine:jar:2.9.3:test" -> "com.google.errorprone:error_prone_annotations:jar:2.10.0:test" ; 
+[INFO] 	"com.google.code.findbugs:annotations:jar:3.0.1:test" -> "net.jcip:jcip-annotations:jar:1.0:test" ; 
+[INFO] 	"com.google.code.findbugs:annotations:jar:3.0.1:test" -> "com.google.code.findbugs:jsr305:jar:3.0.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.12.21:test" ; 
+[INFO] 	"net.sourceforge.htmlunit:htmlunit:jar:2.70.0:test" -> "org.apache.httpcomponents:httpmime:jar:4.5.14:test" ; 
+[INFO] 	"net.sourceforge.htmlunit:htmlunit:jar:2.70.0:test" -> "net.sourceforge.htmlunit:htmlunit-core-js:jar:2.70.0:test" ; 
+[INFO] 	"net.sourceforge.htmlunit:htmlunit:jar:2.70.0:test" -> "net.sourceforge.htmlunit:neko-htmlunit:jar:2.70.0:test" ; 
+[INFO] 	"net.sourceforge.htmlunit:htmlunit:jar:2.70.0:test" -> "net.sourceforge.htmlunit:htmlunit-cssparser:jar:1.14.0:test" ; 
+[INFO] 	"net.sourceforge.htmlunit:htmlunit:jar:2.70.0:test" -> "net.sourceforge.htmlunit:htmlunit-xpath:jar:2.70.0:test" ; 
+[INFO] 	"net.sourceforge.htmlunit:htmlunit:jar:2.70.0:test" -> "org.apache.commons:commons-text:jar:1.10.0:test" ; 
+[INFO] 	"net.sourceforge.htmlunit:htmlunit:jar:2.70.0:test" -> "commons-logging:commons-logging:jar:1.2:test" ; 
+[INFO] 	"net.sourceforge.htmlunit:htmlunit:jar:2.70.0:test" -> "commons-net:commons-net:jar:3.9.0:test" ; 
+[INFO] 	"net.sourceforge.htmlunit:htmlunit:jar:2.70.0:test" -> "org.brotli:dec:jar:0.1.2:test" ; 
+[INFO] 	"net.sourceforge.htmlunit:htmlunit:jar:2.70.0:test" -> "com.shapesecurity:salvation2:jar:3.0.1:test" ; 
+[INFO] 	"net.sourceforge.htmlunit:htmlunit:jar:2.70.0:test" -> "org.eclipse.jetty.websocket:websocket-client:jar:9.4.50.v20221201:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpmime:jar:4.5.14:test" -> "org.apache.httpcomponents:httpclient:jar:4.5.14:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.14:test" -> "org.apache.httpcomponents:httpcore:jar:4.4.16:test" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-client:jar:9.4.50.v20221201:test" -> "org.eclipse.jetty:jetty-client:jar:9.4.50.v20221201:test" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-client:jar:9.4.50.v20221201:test" -> "org.eclipse.jetty:jetty-util:jar:9.4.50.v20221201:test" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-client:jar:9.4.50.v20221201:test" -> "org.eclipse.jetty:jetty-io:jar:9.4.50.v20221201:test" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-client:jar:9.4.50.v20221201:test" -> "org.eclipse.jetty.websocket:websocket-common:jar:9.4.50.v20221201:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-client:jar:9.4.50.v20221201:test" -> "org.eclipse.jetty:jetty-http:jar:9.4.50.v20221201:test" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-common:jar:9.4.50.v20221201:test" -> "org.eclipse.jetty.websocket:websocket-api:jar:9.4.50.v20221201:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path-assert:jar:2.8.0:test" -> "com.jayway.jsonpath:json-path:jar:2.8.0:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.8.0:test" -> "net.minidev:json-smart:jar:2.4.10:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.10:test" -> "net.minidev:accessors-smart:jar:2.4.9:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.9:test" -> "org.ow2.asm:asm:jar:9.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< oracle.kubernetes:installation-tests >----------------
+[INFO] Building installation-tests 4.2.0-SNAPSHOT                         [9/9]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ installation-tests ---
+[INFO] digraph "oracle.kubernetes:installation-tests:jar:4.2.0-SNAPSHOT" { 
+[INFO] 	"oracle.kubernetes:installation-tests:jar:4.2.0-SNAPSHOT" -> "oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT:test" ; 
+[INFO] 	"oracle.kubernetes:installation-tests:jar:4.2.0-SNAPSHOT" -> "io.kubernetes:client-java:jar:19.0.0:test" ; 
+[INFO] 	"oracle.kubernetes:installation-tests:jar:4.2.0-SNAPSHOT" -> "com.appscode.voyager:client-java:jar:0.1.0:test" ; 
+[INFO] 	"oracle.kubernetes:installation-tests:jar:4.2.0-SNAPSHOT" -> "org.hamcrest:hamcrest-junit:jar:2.0.0.0:test" ; 
+[INFO] 	"oracle.kubernetes:installation-tests:jar:4.2.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"oracle.kubernetes:installation-tests:jar:4.2.0-SNAPSHOT" -> "com.jayway.jsonpath:json-path-assert:jar:2.8.0:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT:test" -> "oracle.kubernetes:operator-swagger:jar:4.2.0-SNAPSHOT:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT:test" -> "oracle.kubernetes:json-schema:jar:4.2.0-SNAPSHOT:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT:test" -> "org.glassfish.jersey.core:jersey-client:jar:3.1.3:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT:test" -> "org.glassfish.jersey.media:jersey-media-json-jackson:jar:3.1.3:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT:test" -> "org.glassfish.jersey.media:jersey-media-json-processing:jar:3.1.3:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT:test" -> "org.eclipse.parsson:parsson:jar:1.1.5:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT:test" -> "org.eclipse.parsson:parsson-media:jar:1.1.5:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT:test" -> "org.glassfish.jersey.containers:jersey-container-grizzly2-http:jar:3.1.3:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT:test" -> "org.glassfish.jersey.inject:jersey-hk2:jar:3.1.3:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT:test" -> "org.glassfish.grizzly:grizzly-http-servlet:jar:4.0.1:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT:test" -> "jakarta.servlet:jakarta.servlet-api:jar:6.0.0:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT:test" -> "io.prometheus:simpleclient_servlet_jakarta:jar:0.16.0:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT:test" -> "io.prometheus:simpleclient_hotspot:jar:0.16.0:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT:test" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.16.0:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT:test" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT:test" -> "io.kubernetes:client-java-api-fluent:jar:19.0.0:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT:test" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.9.21:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT:test" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.9.21:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT:test" -> "com.squareup.okhttp3:okhttp:jar:4.12.0:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT:test" -> "com.networknt:json-schema-validator:jar:1.0.87:test" ; 
+[INFO] 	"oracle.kubernetes:weblogic-kubernetes-operator:jar:4.2.0-SNAPSHOT:test" -> "oracle.kubernetes:common:jar:4.2.0-SNAPSHOT:test" ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-client:jar:3.1.3:test" -> "jakarta.ws.rs:jakarta.ws.rs-api:jar:3.1.0:test" ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-client:jar:3.1.3:test" -> "org.glassfish.jersey.core:jersey-common:jar:3.1.3:test" ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-client:jar:3.1.3:test" -> "jakarta.inject:jakarta.inject-api:jar:2.0.1:test" ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-common:jar:3.1.3:test" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:test" ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-common:jar:3.1.3:test" -> "org.glassfish.hk2:osgi-resource-locator:jar:1.0.3:test" ; 
+[INFO] 	"org.glassfish.jersey.media:jersey-media-json-jackson:jar:3.1.3:test" -> "org.glassfish.jersey.ext:jersey-entity-filtering:jar:3.1.3:test" ; 
+[INFO] 	"org.glassfish.jersey.media:jersey-media-json-jackson:jar:3.1.3:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.14.1:test" ; 
+[INFO] 	"org.glassfish.jersey.media:jersey-media-json-jackson:jar:3.1.3:test" -> "com.fasterxml.jackson.module:jackson-module-jakarta-xmlbind-annotations:jar:2.14.1:test" ; 
+[INFO] 	"org.glassfish.jersey.media:jersey-media-json-jackson:jar:3.1.3:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.0:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.0:test" -> "jakarta.activation:jakarta.activation-api:jar:2.1.0:test" ; 
+[INFO] 	"org.glassfish.jersey.media:jersey-media-json-processing:jar:3.1.3:test" -> "jakarta.json:jakarta.json-api:jar:2.1.2:test" ; 
+[INFO] 	"org.glassfish.jersey.containers:jersey-container-grizzly2-http:jar:3.1.3:test" -> "org.glassfish.grizzly:grizzly-http-server:jar:4.0.0:test" ; 
+[INFO] 	"org.glassfish.jersey.containers:jersey-container-grizzly2-http:jar:3.1.3:test" -> "org.glassfish.jersey.core:jersey-server:jar:3.1.3:test" ; 
+[INFO] 	"org.glassfish.grizzly:grizzly-http-server:jar:4.0.0:test" -> "org.glassfish.grizzly:grizzly-http:jar:4.0.0:test" ; 
+[INFO] 	"org.glassfish.grizzly:grizzly-http:jar:4.0.0:test" -> "org.glassfish.grizzly:grizzly-framework:jar:4.0.0:test" ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-server:jar:3.1.3:test" -> "jakarta.validation:jakarta.validation-api:jar:3.0.2:test" ; 
+[INFO] 	"org.glassfish.jersey.inject:jersey-hk2:jar:3.1.3:test" -> "org.glassfish.hk2:hk2-locator:jar:3.0.4:test" ; 
+[INFO] 	"org.glassfish.jersey.inject:jersey-hk2:jar:3.1.3:test" -> "org.javassist:javassist:jar:3.29.2-GA:test" ; 
+[INFO] 	"org.glassfish.hk2:hk2-locator:jar:3.0.4:test" -> "org.glassfish.hk2.external:aopalliance-repackaged:jar:3.0.4:test" ; 
+[INFO] 	"org.glassfish.hk2:hk2-locator:jar:3.0.4:test" -> "org.glassfish.hk2:hk2-api:jar:3.0.4:test" ; 
+[INFO] 	"org.glassfish.hk2:hk2-locator:jar:3.0.4:test" -> "org.glassfish.hk2:hk2-utils:jar:3.0.4:test" ; 
+[INFO] 	"io.prometheus:simpleclient_servlet_jakarta:jar:0.16.0:test" -> "io.prometheus:simpleclient_common:jar:0.16.0:test" ; 
+[INFO] 	"io.prometheus:simpleclient_servlet_jakarta:jar:0.16.0:test" -> "io.prometheus:simpleclient_servlet_common:jar:0.16.0:test" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.16.0:test" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.9.21:test" -> "org.jetbrains:annotations:jar:13.0:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:4.12.0:test" -> "com.squareup.okio:okio:jar:3.6.0:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:4.12.0:test" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:test" ; 
+[INFO] 	"com.squareup.okio:okio:jar:3.6.0:test" -> "com.squareup.okio:okio-jvm:jar:3.6.0:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:test" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.8.21:test" ; 
+[INFO] 	"com.networknt:json-schema-validator:jar:1.0.87:test" -> "com.ethlo.time:itu:jar:1.7.0:test" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:test" -> "io.prometheus:simpleclient:jar:0.16.0:test" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:test" -> "io.prometheus:simpleclient_httpserver:jar:0.16.0:test" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:test" -> "io.kubernetes:client-java-api:jar:19.0.0:test" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:test" -> "io.kubernetes:client-java-proto:jar:19.0.0:test" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:test" -> "org.yaml:snakeyaml:jar:2.2:test" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:test" -> "commons-codec:commons-codec:jar:1.16.0:test" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:test" -> "org.apache.commons:commons-compress:jar:1.24.0:test" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:test" -> "org.apache.commons:commons-lang3:jar:3.13.0:test" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:test" -> "commons-io:commons-io:jar:2.15.0:test" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:test" -> "org.slf4j:slf4j-api:jar:2.0.9:test" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:test" -> "org.bouncycastle:bcpkix-jdk18on:jar:1.77:test" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:test" -> "com.google.protobuf:protobuf-java:jar:3.24.3:test" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:test" -> "org.apache.commons:commons-collections4:jar:4.4:test" ; 
+[INFO] 	"io.kubernetes:client-java:jar:19.0.0:test" -> "org.bitbucket.b_c:jose4j:jar:0.9.3:test" ; 
+[INFO] 	"io.prometheus:simpleclient:jar:0.16.0:test" -> "io.prometheus:simpleclient_tracer_otel:jar:0.16.0:test" ; 
+[INFO] 	"io.prometheus:simpleclient:jar:0.16.0:test" -> "io.prometheus:simpleclient_tracer_otel_agent:jar:0.16.0:test" ; 
+[INFO] 	"io.prometheus:simpleclient_tracer_otel:jar:0.16.0:test" -> "io.prometheus:simpleclient_tracer_common:jar:0.16.0:test" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:test" -> "javax.annotation:javax.annotation-api:jar:1.3.2:test" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:test" -> "io.swagger:swagger-annotations:jar:1.6.11:test" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:test" -> "com.squareup.okhttp3:logging-interceptor:jar:4.11.0:test" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:test" -> "com.google.code.gson:gson:jar:2.10.1:test" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:test" -> "io.gsonfire:gson-fire:jar:1.8.5:test" ; 
+[INFO] 	"io.kubernetes:client-java-api:jar:19.0.0:test" -> "com.google.code.findbugs:jsr305:jar:3.0.2:test" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk18on:jar:1.77:test" -> "org.bouncycastle:bcprov-jdk18on:jar:1.77:test" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk18on:jar:1.77:test" -> "org.bouncycastle:bcutil-jdk18on:jar:1.77:test" ; 
+[INFO] 	"com.appscode.voyager:client-java:jar:0.1.0:test" -> "com.appscode.voyager:client-java-api:jar:0.1.0:test" ; 
+[INFO] 	"com.appscode.voyager:client-java:jar:0.1.0:test" -> "com.squareup.okhttp:okhttp-ws:jar:2.7.5:test" ; 
+[INFO] 	"com.appscode.voyager:client-java:jar:0.1.0:test" -> "com.google.guava:guava:jar:22.0:test" ; 
+[INFO] 	"com.appscode.voyager:client-java:jar:0.1.0:test" -> "ch.qos.logback:logback-classic:jar:1.2.3:test" ; 
+[INFO] 	"com.appscode.voyager:client-java:jar:0.1.0:test" -> "org.bouncycastle:bcprov-ext-jdk15on:jar:1.59:test" ; 
+[INFO] 	"com.appscode.voyager:client-java:jar:0.1.0:test" -> "org.bouncycastle:bcpkix-jdk15on:jar:1.59:test" ; 
+[INFO] 	"com.appscode.voyager:client-java-api:jar:0.1.0:test" -> "com.squareup.okhttp:okhttp:jar:2.7.5:test" ; 
+[INFO] 	"com.appscode.voyager:client-java-api:jar:0.1.0:test" -> "com.squareup.okhttp:logging-interceptor:jar:2.7.5:test" ; 
+[INFO] 	"com.appscode.voyager:client-java-api:jar:0.1.0:test" -> "joda-time:joda-time:jar:2.9.9:test" ; 
+[INFO] 	"com.google.guava:guava:jar:22.0:test" -> "com.google.errorprone:error_prone_annotations:jar:2.0.18:test" ; 
+[INFO] 	"com.google.guava:guava:jar:22.0:test" -> "com.google.j2objc:j2objc-annotations:jar:1.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:22.0:test" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.14:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "ch.qos.logback:logback-core:jar:1.2.3:test" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk15on:jar:1.59:test" -> "org.bouncycastle:bcprov-jdk15on:jar:1.59:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-junit:jar:2.0.0.0:test" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-junit:jar:2.0.0.0:test" -> "org.hamcrest:java-hamcrest:jar:2.0.0.0:test" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path-assert:jar:2.8.0:test" -> "com.jayway.jsonpath:json-path:jar:2.8.0:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path-assert:jar:2.8.0:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.8.0:test" -> "net.minidev:json-smart:jar:2.4.10:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.10:test" -> "net.minidev:accessors-smart:jar:2.4.9:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.9:test" -> "org.ow2.asm:asm:jar:9.3:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for weblogic-kubernetes-operator 4.2.0-SNAPSHOT:
+[INFO] 
+[INFO] weblogic-kubernetes-operator ....................... SUCCESS [  4.240 s]
+[INFO] operator-swagger ................................... SUCCESS [  0.442 s]
+[INFO] json-schema ........................................ SUCCESS [  0.176 s]
+[INFO] common ............................................. SUCCESS [  0.251 s]
+[INFO] operator-build-maven-plugin ........................ SUCCESS [  0.320 s]
+[INFO] operator-runtime ................................... SUCCESS [  1.170 s]
+[INFO] domain-upgrader .................................... SUCCESS [  0.121 s]
+[INFO] integration-tests .................................. SUCCESS [  0.366 s]
+[INFO] installation-tests ................................. SUCCESS [  0.266 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.838 s
+[INFO] Finished at: 2023-12-28T09:03:23+01:00
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,594 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Zipkin Reporter BOM                                                [pom]
+[INFO] Zipkin Reporter (Parent)                                           [pom]
+[INFO] Zipkin Reporter: Core                                              [jar]
+[INFO] Zipkin Sender: Kafka 0.11+                                         [jar]
+[INFO] Zipkin Sender: Kafka 0.8                                           [jar]
+[INFO] Zipkin Sender: RabbitMQ AMQP Client 4.x                            [jar]
+[INFO] Zipkin Sender: ActiveMQ Client 5.15.x                              [jar]
+[INFO] Zipkin Sender: URLConnection                                       [jar]
+[INFO] Zipkin Sender: OkHttp 3                                            [jar]
+[INFO] Zipkin Sender: libthrift (Scribe)                                  [jar]
+[INFO] Zipkin Reporter Brave                                              [jar]
+[INFO] Zipkin Reporter Spring Factory Beans                               [jar]
+[INFO] Zipkin Reporter Metrics by Micrometer                              [jar]
+[INFO] Zipkin Reporter: Benchmarks                                        [jar]
+[INFO] 
+[INFO] --------------< io.zipkin.reporter2:zipkin-reporter-bom >---------------
+[INFO] Building Zipkin Reporter BOM 2.16.5-SNAPSHOT                      [1/14]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ zipkin-reporter-bom ---
+[INFO] digraph "io.zipkin.reporter2:zipkin-reporter-bom:pom:2.16.5-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< io.zipkin.reporter2:zipkin-reporter-parent >-------------
+[INFO] Building Zipkin Reporter (Parent) 2.16.5-SNAPSHOT                 [2/14]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ zipkin-reporter-parent ---
+[INFO] digraph "io.zipkin.reporter2:zipkin-reporter-parent:pom:2.16.5-SNAPSHOT" { 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-parent:pom:2.16.5-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-parent:pom:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-parent:pom:2.16.5-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-parent:pom:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-parent:pom:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-parent:pom:2.16.5-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-tests:jar:2.23.2:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-parent:pom:2.16.5-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.18.1:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-parent:pom:2.16.5-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.2.3:test" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.7.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.7.0:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-tests:jar:2.23.2:test" -> "io.zipkin.zipkin2:zipkin:jar:2.23.2:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "ch.qos.logback:logback-core:jar:1.2.3:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "org.slf4j:slf4j-api:jar:1.7.25:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< io.zipkin.reporter2:zipkin-reporter >-----------------
+[INFO] Building Zipkin Reporter: Core 2.16.5-SNAPSHOT                    [3/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ zipkin-reporter ---
+[INFO] digraph "io.zipkin.reporter2:zipkin-reporter:jar:2.16.5-SNAPSHOT" { 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter:jar:2.16.5-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin:jar:2.23.2:compile" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter:jar:2.16.5-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter:jar:2.16.5-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter:jar:2.16.5-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-tests:jar:2.23.2:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter:jar:2.16.5-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.18.1:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter:jar:2.16.5-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.2.3:test" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.7.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.7.0:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "ch.qos.logback:logback-core:jar:1.2.3:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "org.slf4j:slf4j-api:jar:1.7.25:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< io.zipkin.reporter2:zipkin-sender-kafka >---------------
+[INFO] Building Zipkin Sender: Kafka 0.11+ 2.16.5-SNAPSHOT               [4/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ zipkin-sender-kafka ---
+[INFO] digraph "io.zipkin.reporter2:zipkin-sender-kafka:jar:2.16.5-SNAPSHOT" { 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-kafka:jar:2.16.5-SNAPSHOT" -> "io.zipkin.reporter2:zipkin-reporter:jar:2.16.5-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-kafka:jar:2.16.5-SNAPSHOT" -> "org.apache.kafka:kafka-clients:jar:3.4.0:compile" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-kafka:jar:2.16.5-SNAPSHOT" -> "org.testcontainers:testcontainers:jar:1.15.1:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-kafka:jar:2.16.5-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-kafka:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-kafka:jar:2.16.5-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-kafka:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-kafka:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-kafka:jar:2.16.5-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-tests:jar:2.23.2:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-kafka:jar:2.16.5-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.18.1:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-kafka:jar:2.16.5-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.2.3:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter:jar:2.16.5-SNAPSHOT:compile" -> "io.zipkin.zipkin2:zipkin:jar:2.23.2:compile" ; 
+[INFO] 	"org.apache.kafka:kafka-clients:jar:3.4.0:compile" -> "com.github.luben:zstd-jni:jar:1.5.2-1:runtime" ; 
+[INFO] 	"org.apache.kafka:kafka-clients:jar:3.4.0:compile" -> "org.lz4:lz4-java:jar:1.8.0:runtime" ; 
+[INFO] 	"org.apache.kafka:kafka-clients:jar:3.4.0:compile" -> "org.xerial.snappy:snappy-java:jar:1.1.8.4:runtime" ; 
+[INFO] 	"org.apache.kafka:kafka-clients:jar:3.4.0:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:runtime" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.15.1:test" -> "org.apache.commons:commons-compress:jar:1.20:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.15.1:test" -> "org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.15.1:test" -> "org.rnorth.visible-assertions:visible-assertions:jar:2.1.2:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.15.1:test" -> "com.github.docker-java:docker-java-api:jar:3.2.7:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.15.1:test" -> "com.github.docker-java:docker-java-transport-zerodep:jar:3.2.7:test" ; 
+[INFO] 	"org.rnorth.visible-assertions:visible-assertions:jar:2.1.2:test" -> "net.java.dev.jna:jna:jar:5.2.0:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-api:jar:3.2.7:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.10.3:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.2.7:test" -> "com.github.docker-java:docker-java-transport:jar:3.2.7:test" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.7.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.7.0:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "ch.qos.logback:logback-core:jar:1.2.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< io.zipkin.reporter2:zipkin-sender-kafka08 >--------------
+[INFO] Building Zipkin Sender: Kafka 0.8 2.16.5-SNAPSHOT                 [5/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ zipkin-sender-kafka08 ---
+[INFO] digraph "io.zipkin.reporter2:zipkin-sender-kafka08:jar:2.16.5-SNAPSHOT" { 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-kafka08:jar:2.16.5-SNAPSHOT" -> "io.zipkin.reporter2:zipkin-reporter:jar:2.16.5-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-kafka08:jar:2.16.5-SNAPSHOT" -> "org.apache.kafka:kafka-clients:jar:0.8.2.2:compile" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-kafka08:jar:2.16.5-SNAPSHOT" -> "com.github.charithe:kafka-junit:jar:1.7:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-kafka08:jar:2.16.5-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-kafka08:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-kafka08:jar:2.16.5-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-kafka08:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-kafka08:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-kafka08:jar:2.16.5-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-tests:jar:2.23.2:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-kafka08:jar:2.16.5-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.18.1:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-kafka08:jar:2.16.5-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.2.3:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter:jar:2.16.5-SNAPSHOT:compile" -> "io.zipkin.zipkin2:zipkin:jar:2.23.2:compile" ; 
+[INFO] 	"org.apache.kafka:kafka-clients:jar:0.8.2.2:compile" -> "org.slf4j:slf4j-api:jar:1.7.6:compile" ; 
+[INFO] 	"org.apache.kafka:kafka-clients:jar:0.8.2.2:compile" -> "org.xerial.snappy:snappy-java:jar:1.1.1.7:compile" ; 
+[INFO] 	"org.apache.kafka:kafka-clients:jar:0.8.2.2:compile" -> "net.jpountz.lz4:lz4:jar:1.2.0:compile" ; 
+[INFO] 	"com.github.charithe:kafka-junit:jar:1.7:test" -> "org.slf4j:log4j-over-slf4j:jar:1.7.10:test" ; 
+[INFO] 	"com.github.charithe:kafka-junit:jar:1.7:test" -> "org.apache.curator:curator-test:jar:2.7.1:test" ; 
+[INFO] 	"com.github.charithe:kafka-junit:jar:1.7:test" -> "org.apache.kafka:kafka_2.11:jar:0.8.2.2:test" ; 
+[INFO] 	"org.apache.curator:curator-test:jar:2.7.1:test" -> "org.javassist:javassist:jar:3.18.1-GA:test" ; 
+[INFO] 	"org.apache.curator:curator-test:jar:2.7.1:test" -> "org.apache.commons:commons-math:jar:2.2:test" ; 
+[INFO] 	"org.apache.curator:curator-test:jar:2.7.1:test" -> "org.apache.zookeeper:zookeeper:jar:3.4.6:test" ; 
+[INFO] 	"org.apache.curator:curator-test:jar:2.7.1:test" -> "com.google.guava:guava:jar:16.0.1:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.6:test" -> "log4j:log4j:jar:1.2.16:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.6:test" -> "jline:jline:jar:0.9.94:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.6:test" -> "io.netty:netty:jar:3.7.0.Final:test" ; 
+[INFO] 	"org.apache.kafka:kafka_2.11:jar:0.8.2.2:test" -> "org.scala-lang.modules:scala-xml_2.11:jar:1.0.2:test" ; 
+[INFO] 	"org.apache.kafka:kafka_2.11:jar:0.8.2.2:test" -> "com.yammer.metrics:metrics-core:jar:2.2.0:test" ; 
+[INFO] 	"org.apache.kafka:kafka_2.11:jar:0.8.2.2:test" -> "net.sf.jopt-simple:jopt-simple:jar:3.2:test" ; 
+[INFO] 	"org.apache.kafka:kafka_2.11:jar:0.8.2.2:test" -> "org.scala-lang.modules:scala-parser-combinators_2.11:jar:1.0.2:test" ; 
+[INFO] 	"org.apache.kafka:kafka_2.11:jar:0.8.2.2:test" -> "com.101tec:zkclient:jar:0.3:test" ; 
+[INFO] 	"org.apache.kafka:kafka_2.11:jar:0.8.2.2:test" -> "org.scala-lang:scala-library:jar:2.11.5:test" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.7.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.7.0:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "ch.qos.logback:logback-core:jar:1.2.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------< io.zipkin.reporter2:zipkin-sender-amqp-client >------------
+[INFO] Building Zipkin Sender: RabbitMQ AMQP Client 4.x 2.16.5-SNAPSHOT  [6/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ zipkin-sender-amqp-client ---
+[INFO] digraph "io.zipkin.reporter2:zipkin-sender-amqp-client:jar:2.16.5-SNAPSHOT" { 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-amqp-client:jar:2.16.5-SNAPSHOT" -> "io.zipkin.reporter2:zipkin-reporter:jar:2.16.5-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-amqp-client:jar:2.16.5-SNAPSHOT" -> "com.rabbitmq:amqp-client:jar:4.12.0:compile" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-amqp-client:jar:2.16.5-SNAPSHOT" -> "org.testcontainers:testcontainers:jar:1.15.1:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-amqp-client:jar:2.16.5-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-amqp-client:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-amqp-client:jar:2.16.5-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-amqp-client:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-amqp-client:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-amqp-client:jar:2.16.5-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-tests:jar:2.23.2:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-amqp-client:jar:2.16.5-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.18.1:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-amqp-client:jar:2.16.5-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.2.3:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter:jar:2.16.5-SNAPSHOT:compile" -> "io.zipkin.zipkin2:zipkin:jar:2.23.2:compile" ; 
+[INFO] 	"com.rabbitmq:amqp-client:jar:4.12.0:compile" -> "org.slf4j:slf4j-api:jar:1.7.30:compile" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.15.1:test" -> "org.apache.commons:commons-compress:jar:1.20:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.15.1:test" -> "org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.15.1:test" -> "org.rnorth.visible-assertions:visible-assertions:jar:2.1.2:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.15.1:test" -> "com.github.docker-java:docker-java-api:jar:3.2.7:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.15.1:test" -> "com.github.docker-java:docker-java-transport-zerodep:jar:3.2.7:test" ; 
+[INFO] 	"org.rnorth.visible-assertions:visible-assertions:jar:2.1.2:test" -> "net.java.dev.jna:jna:jar:5.2.0:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-api:jar:3.2.7:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.10.3:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.2.7:test" -> "com.github.docker-java:docker-java-transport:jar:3.2.7:test" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.7.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.7.0:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "ch.qos.logback:logback-core:jar:1.2.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------< io.zipkin.reporter2:zipkin-sender-activemq-client >----------
+[INFO] Building Zipkin Sender: ActiveMQ Client 5.15.x 2.16.5-SNAPSHOT    [7/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ zipkin-sender-activemq-client ---
+[INFO] digraph "io.zipkin.reporter2:zipkin-sender-activemq-client:jar:2.16.5-SNAPSHOT" { 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-activemq-client:jar:2.16.5-SNAPSHOT" -> "io.zipkin.reporter2:zipkin-reporter:jar:2.16.5-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-activemq-client:jar:2.16.5-SNAPSHOT" -> "org.apache.activemq:activemq-client:jar:5.16.0:compile" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-activemq-client:jar:2.16.5-SNAPSHOT" -> "org.apache.activemq:activemq-broker:jar:5.16.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-activemq-client:jar:2.16.5-SNAPSHOT" -> "org.apache.activemq.tooling:activemq-junit:jar:5.16.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-activemq-client:jar:2.16.5-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-activemq-client:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-activemq-client:jar:2.16.5-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-activemq-client:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-activemq-client:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-activemq-client:jar:2.16.5-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-tests:jar:2.23.2:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-activemq-client:jar:2.16.5-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.18.1:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-activemq-client:jar:2.16.5-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.2.3:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter:jar:2.16.5-SNAPSHOT:compile" -> "io.zipkin.zipkin2:zipkin:jar:2.23.2:compile" ; 
+[INFO] 	"org.apache.activemq:activemq-client:jar:5.16.0:compile" -> "org.slf4j:slf4j-api:jar:1.7.30:compile" ; 
+[INFO] 	"org.apache.activemq:activemq-client:jar:5.16.0:compile" -> "org.apache.geronimo.specs:geronimo-jms_1.1_spec:jar:1.1.1:compile" ; 
+[INFO] 	"org.apache.activemq:activemq-client:jar:5.16.0:compile" -> "org.fusesource.hawtbuf:hawtbuf:jar:1.11:compile" ; 
+[INFO] 	"org.apache.activemq:activemq-client:jar:5.16.0:compile" -> "org.apache.geronimo.specs:geronimo-j2ee-management_1.1_spec:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.activemq:activemq-broker:jar:5.16.0:test" -> "org.apache.activemq:activemq-openwire-legacy:jar:5.16.0:test" ; 
+[INFO] 	"org.apache.activemq:activemq-broker:jar:5.16.0:test" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.9.10.4:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.9.10.4:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.9.10:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.9.10.4:test" -> "com.fasterxml.jackson.core:jackson-core:jar:2.9.10:test" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.7.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.7.0:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "ch.qos.logback:logback-core:jar:1.2.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------< io.zipkin.reporter2:zipkin-sender-urlconnection >-----------
+[INFO] Building Zipkin Sender: URLConnection 2.16.5-SNAPSHOT             [8/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ zipkin-sender-urlconnection ---
+[INFO] digraph "io.zipkin.reporter2:zipkin-sender-urlconnection:jar:2.16.5-SNAPSHOT" { 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-urlconnection:jar:2.16.5-SNAPSHOT" -> "io.zipkin.reporter2:zipkin-reporter:jar:2.16.5-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-urlconnection:jar:2.16.5-SNAPSHOT" -> "com.squareup.okhttp3:mockwebserver:jar:3.14.9:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-urlconnection:jar:2.16.5-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-urlconnection:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-urlconnection:jar:2.16.5-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-urlconnection:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-urlconnection:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-urlconnection:jar:2.16.5-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-tests:jar:2.23.2:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-urlconnection:jar:2.16.5-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.18.1:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-urlconnection:jar:2.16.5-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.2.3:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter:jar:2.16.5-SNAPSHOT:compile" -> "io.zipkin.zipkin2:zipkin:jar:2.23.2:compile" ; 
+[INFO] 	"com.squareup.okhttp3:mockwebserver:jar:3.14.9:test" -> "com.squareup.okhttp3:okhttp:jar:3.14.9:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.14.9:test" -> "com.squareup.okio:okio:jar:1.17.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.7.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.7.0:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "ch.qos.logback:logback-core:jar:1.2.3:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "org.slf4j:slf4j-api:jar:1.7.25:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< io.zipkin.reporter2:zipkin-sender-okhttp3 >--------------
+[INFO] Building Zipkin Sender: OkHttp 3 2.16.5-SNAPSHOT                  [9/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ zipkin-sender-okhttp3 ---
+[INFO] digraph "io.zipkin.reporter2:zipkin-sender-okhttp3:jar:2.16.5-SNAPSHOT" { 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-okhttp3:jar:2.16.5-SNAPSHOT" -> "org.jvnet:animal-sniffer-annotation:jar:1.0:provided" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-okhttp3:jar:2.16.5-SNAPSHOT" -> "io.zipkin.reporter2:zipkin-reporter:jar:2.16.5-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-okhttp3:jar:2.16.5-SNAPSHOT" -> "com.squareup.okhttp3:okhttp:jar:3.14.9:compile" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-okhttp3:jar:2.16.5-SNAPSHOT" -> "com.squareup.okhttp3:mockwebserver:jar:3.14.9:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-okhttp3:jar:2.16.5-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-okhttp3:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-okhttp3:jar:2.16.5-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-okhttp3:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-okhttp3:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-okhttp3:jar:2.16.5-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-tests:jar:2.23.2:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-okhttp3:jar:2.16.5-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.18.1:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-okhttp3:jar:2.16.5-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.2.3:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter:jar:2.16.5-SNAPSHOT:compile" -> "io.zipkin.zipkin2:zipkin:jar:2.23.2:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.14.9:compile" -> "com.squareup.okio:okio:jar:1.17.2:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.7.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.7.0:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "ch.qos.logback:logback-core:jar:1.2.3:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "org.slf4j:slf4j-api:jar:1.7.25:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< io.zipkin.reporter2:zipkin-sender-libthrift >-------------
+[INFO] Building Zipkin Sender: libthrift (Scribe) 2.16.5-SNAPSHOT       [10/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ zipkin-sender-libthrift ---
+[INFO] digraph "io.zipkin.reporter2:zipkin-sender-libthrift:jar:2.16.5-SNAPSHOT" { 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-libthrift:jar:2.16.5-SNAPSHOT" -> "io.zipkin.reporter2:zipkin-reporter:jar:2.16.5-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-libthrift:jar:2.16.5-SNAPSHOT" -> "org.apache.thrift:libthrift:jar:0.13.0:compile" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-libthrift:jar:2.16.5-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-collector-scribe:jar:2.23.2:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-libthrift:jar:2.16.5-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-libthrift:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-libthrift:jar:2.16.5-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-libthrift:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-libthrift:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-libthrift:jar:2.16.5-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-tests:jar:2.23.2:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-libthrift:jar:2.16.5-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.18.1:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-libthrift:jar:2.16.5-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.2.3:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter:jar:2.16.5-SNAPSHOT:compile" -> "io.zipkin.zipkin2:zipkin:jar:2.23.2:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.13.0:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.13.0:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.6:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.13.0:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.1:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.13.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.6:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.6:compile" -> "commons-codec:commons-codec:jar:1.10:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-scribe:jar:2.23.2:test" -> "io.zipkin.zipkin2:zipkin-collector:jar:2.23.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-scribe:jar:2.23.2:test" -> "com.linecorp.armeria:armeria-thrift0.13:jar:1.3.0:test" ; 
+[INFO] 	"com.linecorp.armeria:armeria-thrift0.13:jar:1.3.0:test" -> "com.linecorp.armeria:armeria:jar:1.3.0:test" ; 
+[INFO] 	"com.linecorp.armeria:armeria-thrift0.13:jar:1.3.0:test" -> "com.google.code.findbugs:jsr305:jar:3.0.2:test" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.3.0:test" -> "com.fasterxml.jackson.core:jackson-core:jar:2.12.0:test" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.3.0:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.12.0:test" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.3.0:test" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.12.0:test" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.3.0:test" -> "io.micrometer:micrometer-core:jar:1.6.1:test" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.3.0:test" -> "io.netty:netty-transport:jar:4.1.54.Final:test" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.3.0:test" -> "io.netty:netty-codec-http2:jar:4.1.54.Final:test" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.3.0:test" -> "io.netty:netty-codec-haproxy:jar:4.1.54.Final:test" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.3.0:test" -> "io.netty:netty-resolver-dns:jar:4.1.54.Final:test" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.3.0:test" -> "org.reactivestreams:reactive-streams:jar:1.0.3:test" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.3.0:test" -> "io.netty:netty-transport-native-unix-common:jar:linux-x86_64:4.1.54.Final:test" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.3.0:test" -> "io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.54.Final:test" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.3.0:test" -> "io.netty:netty-tcnative-boringssl-static:jar:2.0.34.Final:test" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.3.0:test" -> "io.netty:netty-handler-proxy:jar:4.1.54.Final:test" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.3.0:test" -> "io.netty.incubator:netty-incubator-transport-native-io_uring:jar:linux-x86_64:0.0.1.Final:test" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.6.1:test" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:test" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.6.1:test" -> "org.latencyutils:LatencyUtils:jar:2.0.3:test" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.54.Final:test" -> "io.netty:netty-common:jar:4.1.54.Final:test" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.54.Final:test" -> "io.netty:netty-buffer:jar:4.1.54.Final:test" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.54.Final:test" -> "io.netty:netty-resolver:jar:4.1.54.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.54.Final:test" -> "io.netty:netty-codec:jar:4.1.54.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.54.Final:test" -> "io.netty:netty-handler:jar:4.1.54.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.54.Final:test" -> "io.netty:netty-codec-http:jar:4.1.54.Final:test" ; 
+[INFO] 	"io.netty:netty-resolver-dns:jar:4.1.54.Final:test" -> "io.netty:netty-codec-dns:jar:4.1.54.Final:test" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.54.Final:test" -> "io.netty:netty-transport-native-unix-common:jar:4.1.54.Final:test" ; 
+[INFO] 	"io.netty:netty-handler-proxy:jar:4.1.54.Final:test" -> "io.netty:netty-codec-socks:jar:4.1.54.Final:test" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.7.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.7.0:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "ch.qos.logback:logback-core:jar:1.2.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< io.zipkin.reporter2:zipkin-reporter-brave >--------------
+[INFO] Building Zipkin Reporter Brave 2.16.5-SNAPSHOT                   [11/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ zipkin-reporter-brave ---
+[INFO] digraph "io.zipkin.reporter2:zipkin-reporter-brave:jar:2.16.5-SNAPSHOT" { 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-brave:jar:2.16.5-SNAPSHOT" -> "io.zipkin.reporter2:zipkin-reporter:jar:2.16.5-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-brave:jar:2.16.5-SNAPSHOT" -> "io.zipkin.brave:brave:jar:5.13.2:provided" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-brave:jar:2.16.5-SNAPSHOT" -> "io.zipkin.reporter2:zipkin-sender-okhttp3:jar:2.16.5-SNAPSHOT:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-brave:jar:2.16.5-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-junit:jar:2.23.2:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-brave:jar:2.16.5-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-brave:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-brave:jar:2.16.5-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-brave:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-brave:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-brave:jar:2.16.5-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-tests:jar:2.23.2:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-brave:jar:2.16.5-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.18.1:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-brave:jar:2.16.5-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.2.3:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter:jar:2.16.5-SNAPSHOT:compile" -> "io.zipkin.zipkin2:zipkin:jar:2.23.2:compile" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-okhttp3:jar:2.16.5-SNAPSHOT:test" -> "com.squareup.okhttp3:okhttp:jar:3.14.9:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.14.9:test" -> "com.squareup.okio:okio:jar:1.17.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-junit:jar:2.23.2:test" -> "io.zipkin.zipkin2:zipkin-collector:jar:2.23.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-junit:jar:2.23.2:test" -> "com.squareup.okhttp3:mockwebserver:jar:4.9.0:test" ; 
+[INFO] 	"com.squareup.okhttp3:mockwebserver:jar:4.9.0:test" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.4.10:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.4.10:test" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.4.10:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.4.10:test" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.4.10:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.4.10:test" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.4.10:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.4.10:test" -> "org.jetbrains:annotations:jar:13.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.7.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.7.0:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "ch.qos.logback:logback-core:jar:1.2.3:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "org.slf4j:slf4j-api:jar:1.7.25:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------< io.zipkin.reporter2:zipkin-reporter-spring-beans >----------
+[INFO] Building Zipkin Reporter Spring Factory Beans 2.16.5-SNAPSHOT    [12/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ zipkin-reporter-spring-beans ---
+[INFO] digraph "io.zipkin.reporter2:zipkin-reporter-spring-beans:jar:2.16.5-SNAPSHOT" { 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-spring-beans:jar:2.16.5-SNAPSHOT" -> "io.zipkin.reporter2:zipkin-reporter:jar:2.16.5-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-spring-beans:jar:2.16.5-SNAPSHOT" -> "io.zipkin.reporter2:zipkin-sender-libthrift:jar:2.16.5-SNAPSHOT:provided" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-spring-beans:jar:2.16.5-SNAPSHOT" -> "io.zipkin.reporter2:zipkin-sender-okhttp3:jar:2.16.5-SNAPSHOT:provided" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-spring-beans:jar:2.16.5-SNAPSHOT" -> "io.zipkin.reporter2:zipkin-sender-urlconnection:jar:2.16.5-SNAPSHOT:provided" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-spring-beans:jar:2.16.5-SNAPSHOT" -> "io.zipkin.reporter2:zipkin-sender-kafka:jar:2.16.5-SNAPSHOT:provided" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-spring-beans:jar:2.16.5-SNAPSHOT" -> "io.zipkin.reporter2:zipkin-sender-amqp-client:jar:2.16.5-SNAPSHOT:provided" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-spring-beans:jar:2.16.5-SNAPSHOT" -> "io.zipkin.reporter2:zipkin-sender-activemq-client:jar:2.16.5-SNAPSHOT:provided" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-spring-beans:jar:2.16.5-SNAPSHOT" -> "io.zipkin.reporter2:zipkin-reporter-brave:jar:2.16.5-SNAPSHOT:provided" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-spring-beans:jar:2.16.5-SNAPSHOT" -> "io.zipkin.brave:brave:jar:5.13.2:provided" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-spring-beans:jar:2.16.5-SNAPSHOT" -> "org.springframework:spring-beans:jar:2.5.6:provided" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-spring-beans:jar:2.16.5-SNAPSHOT" -> "org.slf4j:jcl-over-slf4j:jar:1.7.30:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-spring-beans:jar:2.16.5-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-spring-beans:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-spring-beans:jar:2.16.5-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-spring-beans:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-spring-beans:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-spring-beans:jar:2.16.5-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-tests:jar:2.23.2:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-spring-beans:jar:2.16.5-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.18.1:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-spring-beans:jar:2.16.5-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.2.3:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter:jar:2.16.5-SNAPSHOT:compile" -> "io.zipkin.zipkin2:zipkin:jar:2.23.2:compile" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-libthrift:jar:2.16.5-SNAPSHOT:provided" -> "org.apache.thrift:libthrift:jar:0.13.0:provided" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.13.0:provided" -> "org.apache.httpcomponents:httpclient:jar:4.5.6:provided" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.13.0:provided" -> "org.apache.httpcomponents:httpcore:jar:4.4.1:provided" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.13.0:provided" -> "javax.annotation:javax.annotation-api:jar:1.3.2:provided" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.6:provided" -> "commons-codec:commons-codec:jar:1.10:provided" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-okhttp3:jar:2.16.5-SNAPSHOT:provided" -> "com.squareup.okhttp3:okhttp:jar:3.14.9:provided" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.14.9:provided" -> "com.squareup.okio:okio:jar:1.17.2:provided" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-kafka:jar:2.16.5-SNAPSHOT:provided" -> "org.apache.kafka:kafka-clients:jar:3.4.0:provided" ; 
+[INFO] 	"org.apache.kafka:kafka-clients:jar:3.4.0:provided" -> "com.github.luben:zstd-jni:jar:1.5.2-1:provided" ; 
+[INFO] 	"org.apache.kafka:kafka-clients:jar:3.4.0:provided" -> "org.lz4:lz4-java:jar:1.8.0:provided" ; 
+[INFO] 	"org.apache.kafka:kafka-clients:jar:3.4.0:provided" -> "org.xerial.snappy:snappy-java:jar:1.1.8.4:provided" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-amqp-client:jar:2.16.5-SNAPSHOT:provided" -> "com.rabbitmq:amqp-client:jar:4.12.0:provided" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-activemq-client:jar:2.16.5-SNAPSHOT:provided" -> "org.apache.activemq:activemq-client:jar:5.16.0:provided" ; 
+[INFO] 	"org.apache.activemq:activemq-client:jar:5.16.0:provided" -> "org.apache.geronimo.specs:geronimo-jms_1.1_spec:jar:1.1.1:provided" ; 
+[INFO] 	"org.apache.activemq:activemq-client:jar:5.16.0:provided" -> "org.fusesource.hawtbuf:hawtbuf:jar:1.11:provided" ; 
+[INFO] 	"org.apache.activemq:activemq-client:jar:5.16.0:provided" -> "org.apache.geronimo.specs:geronimo-j2ee-management_1.1_spec:jar:1.0.1:provided" ; 
+[INFO] 	"org.springframework:spring-beans:jar:2.5.6:provided" -> "commons-logging:commons-logging:jar:1.1.1:provided" ; 
+[INFO] 	"org.springframework:spring-beans:jar:2.5.6:provided" -> "org.springframework:spring-core:jar:2.5.6:provided" ; 
+[INFO] 	"org.slf4j:jcl-over-slf4j:jar:1.7.30:test" -> "org.slf4j:slf4j-api:jar:1.7.30:provided" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.7.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.7.0:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "ch.qos.logback:logback-core:jar:1.2.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------< io.zipkin.reporter2:zipkin-reporter-metrics-micrometer >-------
+[INFO] Building Zipkin Reporter Metrics by Micrometer 2.16.5-SNAPSHOT   [13/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ zipkin-reporter-metrics-micrometer ---
+[INFO] digraph "io.zipkin.reporter2:zipkin-reporter-metrics-micrometer:jar:2.16.5-SNAPSHOT" { 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-metrics-micrometer:jar:2.16.5-SNAPSHOT" -> "io.zipkin.reporter2:zipkin-reporter:jar:2.16.5-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-metrics-micrometer:jar:2.16.5-SNAPSHOT" -> "io.micrometer:micrometer-core:jar:1.6.2:provided" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-metrics-micrometer:jar:2.16.5-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-metrics-micrometer:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-metrics-micrometer:jar:2.16.5-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-metrics-micrometer:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-metrics-micrometer:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-metrics-micrometer:jar:2.16.5-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-tests:jar:2.23.2:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-metrics-micrometer:jar:2.16.5-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.18.1:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-metrics-micrometer:jar:2.16.5-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.2.3:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter:jar:2.16.5-SNAPSHOT:compile" -> "io.zipkin.zipkin2:zipkin:jar:2.23.2:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.6.2:provided" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:provided" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.6.2:provided" -> "org.latencyutils:LatencyUtils:jar:2.0.3:provided" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.7.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.7.0:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "ch.qos.logback:logback-core:jar:1.2.3:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "org.slf4j:slf4j-api:jar:1.7.25:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< io.zipkin.reporter2:benchmarks >-------------------
+[INFO] Building Zipkin Reporter: Benchmarks 2.16.5-SNAPSHOT             [14/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ benchmarks ---
+[INFO] digraph "io.zipkin.reporter2:benchmarks:jar:2.16.5-SNAPSHOT" { 
+[INFO] 	"io.zipkin.reporter2:benchmarks:jar:2.16.5-SNAPSHOT" -> "io.zipkin.reporter2:zipkin-reporter:jar:2.16.5-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.reporter2:benchmarks:jar:2.16.5-SNAPSHOT" -> "io.zipkin.reporter2:zipkin-sender-urlconnection:jar:2.16.5-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.reporter2:benchmarks:jar:2.16.5-SNAPSHOT" -> "io.zipkin.reporter2:zipkin-sender-okhttp3:jar:2.16.5-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.reporter2:benchmarks:jar:2.16.5-SNAPSHOT" -> "io.zipkin.reporter2:zipkin-sender-kafka:jar:2.16.5-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.reporter2:benchmarks:jar:2.16.5-SNAPSHOT" -> "io.zipkin.reporter2:zipkin-sender-amqp-client:jar:2.16.5-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.reporter2:benchmarks:jar:2.16.5-SNAPSHOT" -> "io.zipkin.reporter2:zipkin-reporter-brave:jar:2.16.5-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.reporter2:benchmarks:jar:2.16.5-SNAPSHOT" -> "io.zipkin.brave:brave:jar:5.13.2:compile" ; 
+[INFO] 	"io.zipkin.reporter2:benchmarks:jar:2.16.5-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-tests:jar:2.23.2:compile" ; 
+[INFO] 	"io.zipkin.reporter2:benchmarks:jar:2.16.5-SNAPSHOT" -> "org.openjdk.jmh:jmh-core:jar:1.27:compile" ; 
+[INFO] 	"io.zipkin.reporter2:benchmarks:jar:2.16.5-SNAPSHOT" -> "org.openjdk.jmh:jmh-generator-annprocess:jar:1.27:provided" ; 
+[INFO] 	"io.zipkin.reporter2:benchmarks:jar:2.16.5-SNAPSHOT" -> "com.linecorp.armeria:armeria:jar:1.3.0:compile" ; 
+[INFO] 	"io.zipkin.reporter2:benchmarks:jar:2.16.5-SNAPSHOT" -> "com.github.charithe:kafka-junit:jar:4.1.10:compile" ; 
+[INFO] 	"io.zipkin.reporter2:benchmarks:jar:2.16.5-SNAPSHOT" -> "junit:junit:jar:4.13.1:compile" ; 
+[INFO] 	"io.zipkin.reporter2:benchmarks:jar:2.16.5-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"io.zipkin.reporter2:benchmarks:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:benchmarks:jar:2.16.5-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:benchmarks:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:benchmarks:jar:2.16.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.0:test" ; 
+[INFO] 	"io.zipkin.reporter2:benchmarks:jar:2.16.5-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.18.1:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter:jar:2.16.5-SNAPSHOT:compile" -> "io.zipkin.zipkin2:zipkin:jar:2.23.2:compile" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-okhttp3:jar:2.16.5-SNAPSHOT:compile" -> "com.squareup.okhttp3:okhttp:jar:3.14.9:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.14.9:compile" -> "com.squareup.okio:okio:jar:1.17.2:compile" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-kafka:jar:2.16.5-SNAPSHOT:compile" -> "org.apache.kafka:kafka-clients:jar:3.4.0:compile" ; 
+[INFO] 	"org.apache.kafka:kafka-clients:jar:3.4.0:compile" -> "com.github.luben:zstd-jni:jar:1.5.2-1:runtime" ; 
+[INFO] 	"org.apache.kafka:kafka-clients:jar:3.4.0:compile" -> "org.lz4:lz4-java:jar:1.8.0:runtime" ; 
+[INFO] 	"org.apache.kafka:kafka-clients:jar:3.4.0:compile" -> "org.xerial.snappy:snappy-java:jar:1.1.8.4:runtime" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-amqp-client:jar:2.16.5-SNAPSHOT:compile" -> "com.rabbitmq:amqp-client:jar:4.12.0:compile" ; 
+[INFO] 	"org.openjdk.jmh:jmh-core:jar:1.27:compile" -> "net.sf.jopt-simple:jopt-simple:jar:4.6:compile" ; 
+[INFO] 	"org.openjdk.jmh:jmh-core:jar:1.27:compile" -> "org.apache.commons:commons-math3:jar:3.2:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.3.0:compile" -> "org.slf4j:slf4j-api:jar:1.7.30:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.3.0:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.12.0:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.3.0:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.12.0:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.3.0:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.12.0:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.3.0:compile" -> "io.micrometer:micrometer-core:jar:1.6.1:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.3.0:compile" -> "io.netty:netty-transport:jar:4.1.54.Final:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.3.0:compile" -> "io.netty:netty-codec-http2:jar:4.1.54.Final:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.3.0:compile" -> "io.netty:netty-codec-haproxy:jar:4.1.54.Final:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.3.0:compile" -> "io.netty:netty-resolver-dns:jar:4.1.54.Final:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.3.0:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.3:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.3.0:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.3.0:compile" -> "io.netty:netty-transport-native-unix-common:jar:linux-x86_64:4.1.54.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.3.0:compile" -> "io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.54.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.3.0:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:2.0.34.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.3.0:compile" -> "io.netty:netty-handler-proxy:jar:4.1.54.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.3.0:compile" -> "io.netty.incubator:netty-incubator-transport-native-io_uring:jar:linux-x86_64:0.0.1.Final:runtime" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.6.1:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.6.1:compile" -> "org.latencyutils:LatencyUtils:jar:2.0.3:runtime" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.54.Final:compile" -> "io.netty:netty-common:jar:4.1.54.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.54.Final:compile" -> "io.netty:netty-buffer:jar:4.1.54.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.54.Final:compile" -> "io.netty:netty-resolver:jar:4.1.54.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.54.Final:compile" -> "io.netty:netty-codec:jar:4.1.54.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.54.Final:compile" -> "io.netty:netty-handler:jar:4.1.54.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.54.Final:compile" -> "io.netty:netty-codec-http:jar:4.1.54.Final:compile" ; 
+[INFO] 	"io.netty:netty-resolver-dns:jar:4.1.54.Final:compile" -> "io.netty:netty-codec-dns:jar:4.1.54.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.54.Final:runtime" -> "io.netty:netty-transport-native-unix-common:jar:4.1.54.Final:runtime" ; 
+[INFO] 	"io.netty:netty-handler-proxy:jar:4.1.54.Final:runtime" -> "io.netty:netty-codec-socks:jar:4.1.54.Final:runtime" ; 
+[INFO] 	"com.github.charithe:kafka-junit:jar:4.1.10:compile" -> "org.slf4j:log4j-over-slf4j:jar:1.7.25:compile" ; 
+[INFO] 	"com.github.charithe:kafka-junit:jar:4.1.10:compile" -> "org.apache.curator:curator-test:jar:4.2.0:compile" ; 
+[INFO] 	"com.github.charithe:kafka-junit:jar:4.1.10:compile" -> "org.apache.kafka:kafka_2.12:jar:2.6.0:compile" ; 
+[INFO] 	"com.github.charithe:kafka-junit:jar:4.1.10:compile" -> "com.google.guava:guava:jar:28.2-jre:compile" ; 
+[INFO] 	"org.apache.curator:curator-test:jar:4.2.0:compile" -> "org.apache.zookeeper:zookeeper:jar:3.5.4-beta:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.4-beta:compile" -> "log4j:log4j:jar:1.2.17:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.4-beta:compile" -> "org.apache.yetus:audience-annotations:jar:0.5.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.4-beta:compile" -> "io.netty:netty:jar:3.10.6.Final:compile" ; 
+[INFO] 	"org.apache.kafka:kafka_2.12:jar:2.6.0:compile" -> "com.fasterxml.jackson.module:jackson-module-scala_2.12:jar:2.10.2:compile" ; 
+[INFO] 	"org.apache.kafka:kafka_2.12:jar:2.6.0:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-csv:jar:2.10.2:compile" ; 
+[INFO] 	"org.apache.kafka:kafka_2.12:jar:2.6.0:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.10.2:compile" ; 
+[INFO] 	"org.apache.kafka:kafka_2.12:jar:2.6.0:compile" -> "com.yammer.metrics:metrics-core:jar:2.2.0:compile" ; 
+[INFO] 	"org.apache.kafka:kafka_2.12:jar:2.6.0:compile" -> "org.scala-lang.modules:scala-collection-compat_2.12:jar:2.1.6:compile" ; 
+[INFO] 	"org.apache.kafka:kafka_2.12:jar:2.6.0:compile" -> "org.scala-lang.modules:scala-java8-compat_2.12:jar:0.9.1:compile" ; 
+[INFO] 	"org.apache.kafka:kafka_2.12:jar:2.6.0:compile" -> "org.scala-lang:scala-library:jar:2.12.11:compile" ; 
+[INFO] 	"org.apache.kafka:kafka_2.12:jar:2.6.0:compile" -> "org.scala-lang:scala-reflect:jar:2.12.11:compile" ; 
+[INFO] 	"org.apache.kafka:kafka_2.12:jar:2.6.0:compile" -> "com.typesafe.scala-logging:scala-logging_2.12:jar:3.9.2:compile" ; 
+[INFO] 	"org.apache.kafka:kafka_2.12:jar:2.6.0:compile" -> "commons-cli:commons-cli:jar:1.4:compile" ; 
+[INFO] 	"com.fasterxml.jackson.module:jackson-module-scala_2.12:jar:2.10.2:compile" -> "com.fasterxml.jackson.module:jackson-module-paranamer:jar:2.10.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.module:jackson-module-paranamer:jar:2.10.2:compile" -> "com.thoughtworks.paranamer:paranamer:jar:2.8:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:28.2-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:28.2-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:28.2-jre:compile" -> "org.checkerframework:checker-qual:jar:2.10.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:28.2-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.3.4:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:28.2-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.1:compile" -> "org.hamcrest:hamcrest-core:jar:1.3:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.7.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.7.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.7.0:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Zipkin Reporter (Parent) 2.16.5-SNAPSHOT:
+[INFO] 
+[INFO] Zipkin Reporter BOM ................................ SUCCESS [  4.493 s]
+[INFO] Zipkin Reporter (Parent) ........................... SUCCESS [  2.343 s]
+[INFO] Zipkin Reporter: Core .............................. SUCCESS [  0.077 s]
+[INFO] Zipkin Sender: Kafka 0.11+ ......................... SUCCESS [  0.219 s]
+[INFO] Zipkin Sender: Kafka 0.8 ........................... SUCCESS [  0.251 s]
+[INFO] Zipkin Sender: RabbitMQ AMQP Client 4.x ............ SUCCESS [  0.077 s]
+[INFO] Zipkin Sender: ActiveMQ Client 5.15.x .............. SUCCESS [  0.171 s]
+[INFO] Zipkin Sender: URLConnection ....................... SUCCESS [  0.125 s]
+[INFO] Zipkin Sender: OkHttp 3 ............................ SUCCESS [  0.065 s]
+[INFO] Zipkin Sender: libthrift (Scribe) .................. SUCCESS [  0.451 s]
+[INFO] Zipkin Reporter Brave .............................. SUCCESS [  0.118 s]
+[INFO] Zipkin Reporter Spring Factory Beans ............... SUCCESS [  0.158 s]
+[INFO] Zipkin Reporter Metrics by Micrometer .............. SUCCESS [  0.065 s]
+[INFO] Zipkin Reporter: Benchmarks ........................ SUCCESS [  0.367 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.522 s
+[INFO] Finished at: 2023-12-28T09:03:21+01:00
+[INFO] ------------------------------------------------------------------------

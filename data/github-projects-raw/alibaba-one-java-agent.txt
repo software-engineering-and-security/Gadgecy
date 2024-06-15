@@ -1,0 +1,198 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Detecting the operating system and CPU architecture
+[INFO] ------------------------------------------------------------------------
+[INFO] os.detected.name: linux
+[INFO] os.detected.arch: x86_64
+[INFO] os.detected.version: 5.10
+[INFO] os.detected.version.major: 5
+[INFO] os.detected.version.minor: 10
+[INFO] os.detected.release: debian
+[INFO] os.detected.release.version: 11
+[INFO] os.detected.release.like.debian: true
+[INFO] os.detected.classifier: linux-x86_64
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] one-java-agent-parent                                              [pom]
+[INFO] demo-agent                                                         [jar]
+[INFO] one-java-agent-spy                                                 [jar]
+[INFO] one-java-agent-plugin                                              [jar]
+[INFO] one-agent-service                                                  [jar]
+[INFO] demo-plugin                                                        [jar]
+[INFO] grpc-plugin                                                        [jar]
+[INFO] fastjson-demo-plugin                                               [jar]
+[INFO] bytekit-demo-plugin                                                [jar]
+[INFO] one-java-agent                                                     [jar]
+[INFO] dubbo-test-plugin-common                                           [jar]
+[INFO] dubbo-test-instrument                                              [jar]
+[INFO] dubbo-test-plugin                                                  [jar]
+[INFO] opentelemetry-configuration                                        [jar]
+[INFO] opentelemetry-plugin                                               [jar]
+[INFO] tunnel-plugin                                                      [jar]
+[INFO] profiler-instrument                                                [jar]
+[INFO] profiler-plugin                                                    [jar]
+[INFO] 
+[INFO] -----------------< io.oneagent:one-java-agent-parent >------------------
+[INFO] Building one-java-agent-parent 0.0.2-SNAPSHOT                     [1/18]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ one-java-agent-parent ---
+[INFO] digraph "io.oneagent:one-java-agent-parent:pom:0.0.2-SNAPSHOT" { 
+[INFO] 	"io.oneagent:one-java-agent-parent:pom:0.0.2-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"io.oneagent:one-java-agent-parent:pom:0.0.2-SNAPSHOT" -> "org.assertj:assertj-core:jar:2.9.1:test" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------------< io.oneagent:demo-agent >-----------------------
+[INFO] Building demo-agent 0.0.2-SNAPSHOT                                [2/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ demo-agent ---
+[INFO] digraph "io.oneagent:demo-agent:jar:0.0.2-SNAPSHOT" { 
+[INFO] 	"io.oneagent:demo-agent:jar:0.0.2-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"io.oneagent:demo-agent:jar:0.0.2-SNAPSHOT" -> "org.assertj:assertj-core:jar:2.9.1:test" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< io.oneagent:one-java-agent-spy >-------------------
+[INFO] Building one-java-agent-spy 0.0.2-SNAPSHOT                        [3/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ one-java-agent-spy ---
+[INFO] digraph "io.oneagent:one-java-agent-spy:jar:0.0.2-SNAPSHOT" { 
+[INFO] 	"io.oneagent:one-java-agent-spy:jar:0.0.2-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"io.oneagent:one-java-agent-spy:jar:0.0.2-SNAPSHOT" -> "org.assertj:assertj-core:jar:2.9.1:test" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< io.oneagent:one-java-agent-plugin >------------------
+[INFO] Building one-java-agent-plugin 0.0.2-SNAPSHOT                     [4/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/alibaba/bytekit-instrument-api/0.0.9-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/alibaba/bytekit-instrument-api/0.0.9-SNAPSHOT/maven-metadata.xml (1.2 kB at 669 B/s)
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/alibaba/bytekit-core/0.0.9-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/alibaba/bytekit-core/0.0.9-SNAPSHOT/maven-metadata.xml (1.2 kB at 4.5 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ one-java-agent-plugin ---
+[INFO] digraph "io.oneagent:one-java-agent-plugin:jar:0.0.2-SNAPSHOT" { 
+[INFO] 	"io.oneagent:one-java-agent-plugin:jar:0.0.2-SNAPSHOT" -> "com.alibaba:bytekit-instrument-api:jar:0.0.9-SNAPSHOT:provided" ; 
+[INFO] 	"io.oneagent:one-java-agent-plugin:jar:0.0.2-SNAPSHOT" -> "com.alibaba:bytekit-core:jar:0.0.9-SNAPSHOT:provided" ; 
+[INFO] 	"io.oneagent:one-java-agent-plugin:jar:0.0.2-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.2.9:compile" ; 
+[INFO] 	"io.oneagent:one-java-agent-plugin:jar:0.0.2-SNAPSHOT" -> "net.bytebuddy:byte-buddy-agent:jar:1.10.13:test" ; 
+[INFO] 	"io.oneagent:one-java-agent-plugin:jar:0.0.2-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-test:jar:1.5.9.RELEASE:test" ; 
+[INFO] 	"io.oneagent:one-java-agent-plugin:jar:0.0.2-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"io.oneagent:one-java-agent-plugin:jar:0.0.2-SNAPSHOT" -> "org.assertj:assertj-core:jar:2.9.1:test" ; 
+[INFO] 	"com.alibaba:bytekit-core:jar:0.0.9-SNAPSHOT:provided" -> "com.alibaba:repackage-asm:jar:0.0.13:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.9:compile" -> "ch.qos.logback:logback-core:jar:1.2.9:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.9:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:1.5.9.RELEASE:test" -> "org.springframework.boot:spring-boot-test:jar:1.5.9.RELEASE:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:1.5.9.RELEASE:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:1.5.9.RELEASE:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:1.5.9.RELEASE:test" -> "com.jayway.jsonpath:json-path:jar:2.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:1.5.9.RELEASE:test" -> "org.mockito:mockito-core:jar:1.10.19:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:1.5.9.RELEASE:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:1.5.9.RELEASE:test" -> "org.hamcrest:hamcrest-library:jar:1.3:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:1.5.9.RELEASE:test" -> "org.skyscreamer:jsonassert:jar:1.4.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:1.5.9.RELEASE:test" -> "org.springframework:spring-core:jar:4.3.13.RELEASE:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:1.5.9.RELEASE:test" -> "org.springframework:spring-test:jar:4.3.13.RELEASE:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-test:jar:1.5.9.RELEASE:test" -> "org.springframework.boot:spring-boot:jar:1.5.9.RELEASE:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:1.5.9.RELEASE:test" -> "org.springframework:spring-context:jar:4.3.13.RELEASE:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:4.3.13.RELEASE:test" -> "org.springframework:spring-aop:jar:4.3.13.RELEASE:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:4.3.13.RELEASE:test" -> "org.springframework:spring-beans:jar:4.3.13.RELEASE:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:4.3.13.RELEASE:test" -> "org.springframework:spring-expression:jar:4.3.13.RELEASE:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-test-autoconfigure:jar:1.5.9.RELEASE:test" -> "org.springframework.boot:spring-boot-autoconfigure:jar:1.5.9.RELEASE:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.2.0:test" -> "net.minidev:json-smart:jar:2.2.1:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.2.1:test" -> "net.minidev:accessors-smart:jar:1.1:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:1.1:test" -> "org.ow2.asm:asm:jar:5.0.3:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:1.10.19:test" -> "org.objenesis:objenesis:jar:2.1:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.4.0:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< io.oneagent:one-agent-service >--------------------
+[INFO] Building one-agent-service 0.0.2-SNAPSHOT                         [5/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ one-agent-service ---
+[INFO] digraph "io.oneagent:one-agent-service:jar:0.0.2-SNAPSHOT" { 
+[INFO] 	"io.oneagent:one-agent-service:jar:0.0.2-SNAPSHOT" -> "io.grpc:grpc-netty:jar:1.46.0:provided" ; 
+[INFO] 	"io.oneagent:one-agent-service:jar:0.0.2-SNAPSHOT" -> "io.grpc:grpc-protobuf:jar:1.46.0:provided" ; 
+[INFO] 	"io.oneagent:one-agent-service:jar:0.0.2-SNAPSHOT" -> "io.grpc:grpc-services:jar:1.46.0:provided" ; 
+[INFO] 	"io.oneagent:one-agent-service:jar:0.0.2-SNAPSHOT" -> "io.grpc:grpc-stub:jar:1.46.0:provided" ; 
+[INFO] 	"io.oneagent:one-agent-service:jar:0.0.2-SNAPSHOT" -> "javax.annotation:javax.annotation-api:jar:1.3.2:provided" ; 
+[INFO] 	"io.oneagent:one-agent-service:jar:0.0.2-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"io.oneagent:one-agent-service:jar:0.0.2-SNAPSHOT" -> "org.assertj:assertj-core:jar:2.9.1:test" ; 
+[INFO] 	"io.grpc:grpc-netty:jar:1.46.0:provided" -> "io.grpc:grpc-core:jar:1.46.0:provided" ; 
+[INFO] 	"io.grpc:grpc-netty:jar:1.46.0:provided" -> "io.netty:netty-codec-http2:jar:4.1.72.Final:provided" ; 
+[INFO] 	"io.grpc:grpc-netty:jar:1.46.0:provided" -> "io.netty:netty-handler-proxy:jar:4.1.72.Final:provided" ; 
+[INFO] 	"io.grpc:grpc-netty:jar:1.46.0:provided" -> "com.google.guava:guava:jar:31.0.1-android:provided" ; 
+[INFO] 	"io.grpc:grpc-netty:jar:1.46.0:provided" -> "com.google.errorprone:error_prone_annotations:jar:2.10.0:provided" ; 
+[INFO] 	"io.grpc:grpc-netty:jar:1.46.0:provided" -> "io.perfmark:perfmark-api:jar:0.25.0:provided" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.46.0:provided" -> "com.google.code.gson:gson:jar:2.8.9:provided" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.46.0:provided" -> "com.google.android:annotations:jar:4.1.1.4:provided" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.46.0:provided" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.19:provided" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.72.Final:provided" -> "io.netty:netty-common:jar:4.1.72.Final:provided" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.72.Final:provided" -> "io.netty:netty-buffer:jar:4.1.72.Final:provided" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.72.Final:provided" -> "io.netty:netty-transport:jar:4.1.72.Final:provided" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.72.Final:provided" -> "io.netty:netty-codec:jar:4.1.72.Final:provided" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.72.Final:provided" -> "io.netty:netty-handler:jar:4.1.72.Final:provided" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.72.Final:provided" -> "io.netty:netty-codec-http:jar:4.1.72.Final:provided" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.72.Final:provided" -> "io.netty:netty-resolver:jar:4.1.72.Final:provided" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.72.Final:provided" -> "io.netty:netty-tcnative-classes:jar:2.0.46.Final:provided" ; 
+[INFO] 	"io.netty:netty-handler-proxy:jar:4.1.72.Final:provided" -> "io.netty:netty-codec-socks:jar:4.1.72.Final:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-android:provided" -> "com.google.guava:failureaccess:jar:1.0.1:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-android:provided" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-android:provided" -> "org.checkerframework:checker-qual:jar:3.12.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-android:provided" -> "org.checkerframework:checker-compat-qual:jar:2.5.5:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-android:provided" -> "com.google.j2objc:j2objc-annotations:jar:1.3:provided" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.46.0:provided" -> "io.grpc:grpc-api:jar:1.46.0:provided" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.46.0:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.46.0:provided" -> "com.google.protobuf:protobuf-java:jar:3.19.2:provided" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.46.0:provided" -> "com.google.api.grpc:proto-google-common-protos:jar:2.0.1:provided" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.46.0:provided" -> "io.grpc:grpc-protobuf-lite:jar:1.46.0:provided" ; 
+[INFO] 	"io.grpc:grpc-api:jar:1.46.0:provided" -> "io.grpc:grpc-context:jar:1.46.0:provided" ; 
+[INFO] 	"io.grpc:grpc-services:jar:1.46.0:provided" -> "com.google.protobuf:protobuf-java-util:jar:3.19.2:provided" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< io.oneagent:demo-plugin >-----------------------
+[INFO] Building demo-plugin 0.0.2-SNAPSHOT                               [6/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/io/oneagent/one-java-agent-plugin/0.0.2-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/io/oneagent/one-java-agent-plugin/0.0.2-SNAPSHOT/one-java-agent-plugin-0.0.2-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for one-java-agent-parent 0.0.2-SNAPSHOT:
+[INFO] 
+[INFO] one-java-agent-parent .............................. SUCCESS [  2.429 s]
+[INFO] demo-agent ......................................... SUCCESS [  0.125 s]
+[INFO] one-java-agent-spy ................................. SUCCESS [  0.023 s]
+[INFO] one-java-agent-plugin .............................. SUCCESS [  3.515 s]
+[INFO] one-agent-service .................................. SUCCESS [  1.709 s]
+[INFO] demo-plugin ........................................ FAILURE [  0.620 s]
+[INFO] grpc-plugin ........................................ SKIPPED
+[INFO] fastjson-demo-plugin ............................... SKIPPED
+[INFO] bytekit-demo-plugin ................................ SKIPPED
+[INFO] one-java-agent ..................................... SKIPPED
+[INFO] dubbo-test-plugin-common ........................... SKIPPED
+[INFO] dubbo-test-instrument .............................. SKIPPED
+[INFO] dubbo-test-plugin .................................. SKIPPED
+[INFO] opentelemetry-configuration ........................ SKIPPED
+[INFO] opentelemetry-plugin ............................... SKIPPED
+[INFO] tunnel-plugin ...................................... SKIPPED
+[INFO] profiler-instrument ................................ SKIPPED
+[INFO] profiler-plugin .................................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  11.661 s
+[INFO] Finished at: 2023-12-28T09:02:26+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project demo-plugin: Could not resolve dependencies for project io.oneagent:demo-plugin:jar:0.0.2-SNAPSHOT: Could not find artifact io.oneagent:one-java-agent-plugin:jar:0.0.2-SNAPSHOT in sonatype-nexus-snapshots (https://oss.sonatype.org/content/repositories/snapshots) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :demo-plugin

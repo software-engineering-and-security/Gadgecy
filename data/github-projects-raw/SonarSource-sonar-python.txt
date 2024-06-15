@@ -1,0 +1,441 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Detecting the operating system and CPU architecture
+[INFO] ------------------------------------------------------------------------
+[INFO] os.detected.name: linux
+[INFO] os.detected.arch: x86_64
+[INFO] os.detected.version: 5.10
+[INFO] os.detected.version.major: 5
+[INFO] os.detected.version.minor: 10
+[INFO] os.detected.release: debian
+[INFO] os.detected.release.version: 11
+[INFO] os.detected.release.like.debian: true
+[INFO] os.detected.classifier: linux-x86_64
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Python                                                             [pom]
+[INFO] Python :: Frontend                                                 [jar]
+[INFO] python-checks-testkit                                              [jar]
+[INFO] Python :: Checks                                                   [jar]
+[INFO] Python :: Sonar Plugin                                    [sonar-plugin]
+[INFO] Python :: ITs                                                      [pom]
+[INFO] Python :: ITs :: Plugin                                            [pom]
+[INFO] Python Custom Rules Plugin                                [sonar-plugin]
+[INFO] it-python-plugin-test                                              [jar]
+[INFO] Python :: ITs :: Ruling                                            [jar]
+[INFO] 
+[INFO] -------------------< org.sonarsource.python:python >--------------------
+[INFO] Building Python 4.13-SNAPSHOT                                     [1/10]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ python ---
+[INFO] digraph "org.sonarsource.python:python:pom:4.13-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.sonarsource.python:python-frontend >---------------
+[INFO] Building Python :: Frontend 4.13-SNAPSHOT                         [2/10]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ python-frontend ---
+[INFO] digraph "org.sonarsource.python:python-frontend:jar:4.13-SNAPSHOT" { 
+[INFO] 	"org.sonarsource.python:python-frontend:jar:4.13-SNAPSHOT" -> "org.sonarsource.sslr:sslr-core:jar:1.23:compile" ; 
+[INFO] 	"org.sonarsource.python:python-frontend:jar:4.13-SNAPSHOT" -> "org.sonarsource.api.plugin:sonar-plugin-api:jar:10.1.0.809:provided" ; 
+[INFO] 	"org.sonarsource.python:python-frontend:jar:4.13-SNAPSHOT" -> "org.sonarsource.sslr:sslr-testing-harness:jar:1.23:test" ; 
+[INFO] 	"org.sonarsource.python:python-frontend:jar:4.13-SNAPSHOT" -> "org.sonarsource.api.plugin:sonar-plugin-api-test-fixtures:jar:10.1.0.809:test" ; 
+[INFO] 	"org.sonarsource.python:python-frontend:jar:4.13-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.9.3:test" ; 
+[INFO] 	"org.sonarsource.python:python-frontend:jar:4.13-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" ; 
+[INFO] 	"org.sonarsource.python:python-frontend:jar:4.13-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.23.1:test" ; 
+[INFO] 	"org.sonarsource.python:python-frontend:jar:4.13-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.11.0:test" ; 
+[INFO] 	"org.sonarsource.python:python-frontend:jar:4.13-SNAPSHOT" -> "com.google.guava:guava:jar:32.0.1-jre:compile" ; 
+[INFO] 	"org.sonarsource.python:python-frontend:jar:4.13-SNAPSHOT" -> "com.google.protobuf:protobuf-java:jar:3.21.7:compile" ; 
+[INFO] 	"org.sonarsource.python:python-frontend:jar:4.13-SNAPSHOT" -> "org.sonarsource.analyzer-commons:sonar-regex-parsing:jar:2.7.0.1482:compile" ; 
+[INFO] 	"org.sonarsource.python:python-frontend:jar:4.13-SNAPSHOT" -> "org.sonarsource.analyzer-commons:sonar-analyzer-commons:jar:2.7.0.1482:compile" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-core:jar:1.23:compile" -> "com.google.code.findbugs:jsr305:jar:1.3.9:compile" ; 
+[INFO] 	"org.sonarsource.api.plugin:sonar-plugin-api:jar:10.1.0.809:provided" -> "org.slf4j:slf4j-api:jar:1.7.30:provided" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-testing-harness:jar:1.23:test" -> "org.sonarsource.sslr:sslr-toolkit:jar:1.23:test" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-testing-harness:jar:1.23:test" -> "org.easytesting:fest-assert:jar:1.4:test" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-testing-harness:jar:1.23:test" -> "org.hamcrest:hamcrest-all:jar:1.1:test" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-testing-harness:jar:1.23:test" -> "junit:junit:jar:4.10:test" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-toolkit:jar:1.23:test" -> "org.sonarsource.sslr:sslr-xpath:jar:1.23:test" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-toolkit:jar:1.23:test" -> "org.codehaus.sonar:sonar-colorizer:jar:3.7:test" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-xpath:jar:1.23:test" -> "jaxen:jaxen:jar:1.1.4:test" ; 
+[INFO] 	"org.codehaus.sonar:sonar-colorizer:jar:3.7:test" -> "org.codehaus.sonar:sonar-channel:jar:3.7:test" ; 
+[INFO] 	"org.codehaus.sonar:sonar-channel:jar:3.7:test" -> "commons-io:commons-io:jar:2.8.0:test" ; 
+[INFO] 	"org.easytesting:fest-assert:jar:1.4:test" -> "org.easytesting:fest-util:jar:1.1.6:test" ; 
+[INFO] 	"junit:junit:jar:4.10:test" -> "org.hamcrest:hamcrest-core:jar:1.1:test" ; 
+[INFO] 	"org.sonarsource.api.plugin:sonar-plugin-api-test-fixtures:jar:10.1.0.809:test" -> "commons-lang:commons-lang:jar:2.6:test" ; 
+[INFO] 	"org.sonarsource.api.plugin:sonar-plugin-api-test-fixtures:jar:10.1.0.809:test" -> "ch.qos.logback:logback-classic:jar:1.2.3:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "ch.qos.logback:logback-core:jar:1.2.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.3:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.3:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.3:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.23.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.19:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.33.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.18.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< org.sonarsource.python:python-checks-testkit >------------
+[INFO] Building python-checks-testkit 4.13-SNAPSHOT                      [3/10]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ python-checks-testkit ---
+[INFO] digraph "org.sonarsource.python:python-checks-testkit:jar:4.13-SNAPSHOT" { 
+[INFO] 	"org.sonarsource.python:python-checks-testkit:jar:4.13-SNAPSHOT" -> "org.sonarsource.python:python-frontend:jar:4.13-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.python:python-checks-testkit:jar:4.13-SNAPSHOT" -> "org.sonarsource.api.plugin:sonar-plugin-api:jar:10.1.0.809:provided" ; 
+[INFO] 	"org.sonarsource.python:python-checks-testkit:jar:4.13-SNAPSHOT" -> "org.sonarsource.analyzer-commons:sonar-analyzer-test-commons:jar:2.7.0.1482:compile" ; 
+[INFO] 	"org.sonarsource.python:python-checks-testkit:jar:4.13-SNAPSHOT" -> "com.google.guava:guava:jar:32.0.1-jre:compile" ; 
+[INFO] 	"org.sonarsource.python:python-checks-testkit:jar:4.13-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.9.3:compile" ; 
+[INFO] 	"org.sonarsource.python:python-checks-testkit:jar:4.13-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.3:compile" ; 
+[INFO] 	"org.sonarsource.python:python-checks-testkit:jar:4.13-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.23.1:compile" ; 
+[INFO] 	"org.sonarsource.python:python-frontend:jar:4.13-SNAPSHOT:compile" -> "org.sonarsource.sslr:sslr-core:jar:1.23:compile" ; 
+[INFO] 	"org.sonarsource.python:python-frontend:jar:4.13-SNAPSHOT:compile" -> "com.google.protobuf:protobuf-java:jar:3.21.7:compile" ; 
+[INFO] 	"org.sonarsource.python:python-frontend:jar:4.13-SNAPSHOT:compile" -> "org.sonarsource.analyzer-commons:sonar-regex-parsing:jar:2.7.0.1482:compile" ; 
+[INFO] 	"org.sonarsource.python:python-frontend:jar:4.13-SNAPSHOT:compile" -> "org.sonarsource.analyzer-commons:sonar-analyzer-commons:jar:2.7.0.1482:compile" ; 
+[INFO] 	"org.sonarsource.api.plugin:sonar-plugin-api:jar:10.1.0.809:provided" -> "org.slf4j:slf4j-api:jar:1.7.30:provided" ; 
+[INFO] 	"org.sonarsource.analyzer-commons:sonar-analyzer-test-commons:jar:2.7.0.1482:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"org.sonarsource.analyzer-commons:sonar-analyzer-test-commons:jar:2.7.0.1482:compile" -> "junit:junit:jar:4.13.2:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:compile" -> "org.hamcrest:hamcrest-core:jar:1.3:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.33.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.18.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.3:compile" -> "org.junit.jupiter:junit-jupiter-params:jar:5.9.3:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.3:compile" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.3:runtime" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.3:runtime" -> "org.junit.platform:junit-platform-engine:jar:1.9.3:runtime" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:compile" -> "org.opentest4j:opentest4j:jar:1.2.0:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:compile" -> "org.junit.platform:junit-platform-commons:jar:1.9.3:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:compile" -> "org.apiguardian:apiguardian-api:jar:1.1.2:compile" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.23.1:compile" -> "net.bytebuddy:byte-buddy:jar:1.12.10:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< org.sonarsource.python:python-checks >----------------
+[INFO] Building Python :: Checks 4.13-SNAPSHOT                           [4/10]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ python-checks ---
+[INFO] digraph "org.sonarsource.python:python-checks:jar:4.13-SNAPSHOT" { 
+[INFO] 	"org.sonarsource.python:python-checks:jar:4.13-SNAPSHOT" -> "org.sonarsource.python:python-frontend:jar:4.13-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.python:python-checks:jar:4.13-SNAPSHOT" -> "org.sonarsource.api.plugin:sonar-plugin-api:jar:10.1.0.809:provided" ; 
+[INFO] 	"org.sonarsource.python:python-checks:jar:4.13-SNAPSHOT" -> "commons-io:commons-io:jar:2.8.0:compile" ; 
+[INFO] 	"org.sonarsource.python:python-checks:jar:4.13-SNAPSHOT" -> "com.google.code.gson:gson:jar:2.8.9:compile" ; 
+[INFO] 	"org.sonarsource.python:python-checks:jar:4.13-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.9.3:test" ; 
+[INFO] 	"org.sonarsource.python:python-checks:jar:4.13-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" ; 
+[INFO] 	"org.sonarsource.python:python-checks:jar:4.13-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.23.1:test" ; 
+[INFO] 	"org.sonarsource.python:python-checks:jar:4.13-SNAPSHOT" -> "org.sonarsource.python:python-checks-testkit:jar:4.13-SNAPSHOT:test" ; 
+[INFO] 	"org.sonarsource.python:python-checks:jar:4.13-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.2.3:test" ; 
+[INFO] 	"org.sonarsource.python:python-checks:jar:4.13-SNAPSHOT" -> "com.google.guava:guava:jar:32.0.1-jre:test" ; 
+[INFO] 	"org.sonarsource.python:python-checks:jar:4.13-SNAPSHOT" -> "org.sonarsource.analyzer-commons:sonar-analyzer-commons:jar:2.7.0.1482:compile" ; 
+[INFO] 	"org.sonarsource.python:python-checks:jar:4.13-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.11.0:test" ; 
+[INFO] 	"org.sonarsource.python:python-frontend:jar:4.13-SNAPSHOT:compile" -> "org.sonarsource.sslr:sslr-core:jar:1.23:compile" ; 
+[INFO] 	"org.sonarsource.python:python-frontend:jar:4.13-SNAPSHOT:compile" -> "com.google.protobuf:protobuf-java:jar:3.21.7:compile" ; 
+[INFO] 	"org.sonarsource.python:python-frontend:jar:4.13-SNAPSHOT:compile" -> "org.sonarsource.analyzer-commons:sonar-regex-parsing:jar:2.7.0.1482:compile" ; 
+[INFO] 	"org.sonarsource.api.plugin:sonar-plugin-api:jar:10.1.0.809:provided" -> "org.slf4j:slf4j-api:jar:1.7.30:provided" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.3:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.3:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.3:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.23.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.10:test" ; 
+[INFO] 	"org.sonarsource.python:python-checks-testkit:jar:4.13-SNAPSHOT:test" -> "org.sonarsource.analyzer-commons:sonar-analyzer-test-commons:jar:2.7.0.1482:test" ; 
+[INFO] 	"org.sonarsource.analyzer-commons:sonar-analyzer-test-commons:jar:2.7.0.1482:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "ch.qos.logback:logback-core:jar:1.2.3:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:test" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:test" -> "org.checkerframework:checker-qual:jar:3.33.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.18.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:2.8:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.19:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< org.sonarsource.python:sonar-python-plugin >-------------
+[INFO] Building Python :: Sonar Plugin 4.13-SNAPSHOT                     [5/10]
+[INFO] ----------------------------[ sonar-plugin ]----------------------------
+[INFO] Downloading from codehaus: http://repository.codehaus.org/org/codehaus/woodstox/stax2-api/maven-metadata.xml
+[INFO] Downloading from maven: http://repo1.maven.org/maven2/org/codehaus/woodstox/stax2-api/maven-metadata.xml
+[WARNING] Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to codehaus (http://repository.codehaus.org): Transfer failed for http://repository.codehaus.org/org/codehaus/woodstox/stax2-api/maven-metadata.xml
+[WARNING] Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to maven (http://repo1.maven.org/maven2): Transfer failed for http://repo1.maven.org/maven2/org/codehaus/woodstox/stax2-api/maven-metadata.xml 501 HTTPS Required
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ sonar-python-plugin ---
+[WARNING] Failure to transfer org.codehaus.woodstox:stax2-api/maven-metadata.xml from http://repository.codehaus.org was cached in the local repository, resolution will not be reattempted until the update interval of codehaus has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to codehaus (http://repository.codehaus.org): Transfer failed for http://repository.codehaus.org/org/codehaus/woodstox/stax2-api/maven-metadata.xml
+[WARNING] Failure to transfer org.codehaus.woodstox:stax2-api/maven-metadata.xml from http://repo1.maven.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of maven has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to maven (http://repo1.maven.org/maven2): Transfer failed for http://repo1.maven.org/maven2/org/codehaus/woodstox/stax2-api/maven-metadata.xml 501 HTTPS Required
+[INFO] digraph "org.sonarsource.python:sonar-python-plugin:sonar-plugin:4.13-SNAPSHOT" { 
+[INFO] 	"org.sonarsource.python:sonar-python-plugin:sonar-plugin:4.13-SNAPSHOT" -> "org.sonarsource.api.plugin:sonar-plugin-api:jar:10.1.0.809:provided" ; 
+[INFO] 	"org.sonarsource.python:sonar-python-plugin:sonar-plugin:4.13-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-plugin-api:jar:8.18.0.70939:provided" ; 
+[INFO] 	"org.sonarsource.python:sonar-python-plugin:sonar-plugin:4.13-SNAPSHOT" -> "org.sonarsource.sonarqube:sonar-plugin-api-impl:jar:9.9.1.69595:test" ; 
+[INFO] 	"org.sonarsource.python:sonar-python-plugin:sonar-plugin:4.13-SNAPSHOT" -> "org.sonarsource.python:python-frontend:jar:4.13-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.python:sonar-python-plugin:sonar-plugin:4.13-SNAPSHOT" -> "org.sonarsource.python:python-checks:jar:4.13-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.python:sonar-python-plugin:sonar-plugin:4.13-SNAPSHOT" -> "org.sonarsource.analyzer-commons:sonar-analyzer-commons:jar:2.7.0.1482:compile" ; 
+[INFO] 	"org.sonarsource.python:sonar-python-plugin:sonar-plugin:4.13-SNAPSHOT" -> "org.sonarsource.analyzer-commons:sonar-xml-parsing:jar:2.7.0.1482:compile" ; 
+[INFO] 	"org.sonarsource.python:sonar-python-plugin:sonar-plugin:4.13-SNAPSHOT" -> "org.sonarsource.analyzer-commons:sonar-performance-measure:jar:2.7.0.1482:compile" ; 
+[INFO] 	"org.sonarsource.python:sonar-python-plugin:sonar-plugin:4.13-SNAPSHOT" -> "org.sonarsource.sslr:sslr-testing-harness:jar:1.23:test" ; 
+[INFO] 	"org.sonarsource.python:sonar-python-plugin:sonar-plugin:4.13-SNAPSHOT" -> "commons-lang:commons-lang:jar:2.6:compile" ; 
+[INFO] 	"org.sonarsource.python:sonar-python-plugin:sonar-plugin:4.13-SNAPSHOT" -> "org.codehaus.staxmate:staxmate:jar:2.0.1:compile" ; 
+[INFO] 	"org.sonarsource.python:sonar-python-plugin:sonar-plugin:4.13-SNAPSHOT" -> "org.sonarsource.sonarqube:sonar-testing-harness:jar:9.9.1.69595:test" ; 
+[INFO] 	"org.sonarsource.python:sonar-python-plugin:sonar-plugin:4.13-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.23.1:test" ; 
+[INFO] 	"org.sonarsource.python:sonar-python-plugin:sonar-plugin:4.13-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.11.0:test" ; 
+[INFO] 	"org.sonarsource.python:sonar-python-plugin:sonar-plugin:4.13-SNAPSHOT" -> "org.mockito:mockito-inline:jar:4.11.0:test" ; 
+[INFO] 	"org.sonarsource.python:sonar-python-plugin:sonar-plugin:4.13-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-core:jar:8.18.0.70939:test" ; 
+[INFO] 	"org.sonarsource.python:sonar-python-plugin:sonar-plugin:4.13-SNAPSHOT" -> "org.sonarsource.api.plugin:sonar-plugin-api-test-fixtures:jar:10.1.0.809:test" ; 
+[INFO] 	"org.sonarsource.python:sonar-python-plugin:sonar-plugin:4.13-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.9.3:test" ; 
+[INFO] 	"org.sonarsource.python:sonar-python-plugin:sonar-plugin:4.13-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" ; 
+[INFO] 	"org.sonarsource.api.plugin:sonar-plugin-api:jar:10.1.0.809:provided" -> "org.slf4j:slf4j-api:jar:1.7.30:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-plugin-api-impl:jar:9.9.1.69595:test" -> "commons-codec:commons-codec:jar:1.15:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-plugin-api-impl:jar:9.9.1.69595:test" -> "commons-io:commons-io:jar:2.8.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-plugin-api-impl:jar:9.9.1.69595:test" -> "org.apache.commons:commons-csv:jar:1.9.0:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-plugin-api-impl:jar:9.9.1.69595:test" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-plugin-api-impl:jar:9.9.1.69595:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.sonarsource.python:python-frontend:jar:4.13-SNAPSHOT:compile" -> "org.sonarsource.sslr:sslr-core:jar:1.23:compile" ; 
+[INFO] 	"org.sonarsource.python:python-frontend:jar:4.13-SNAPSHOT:compile" -> "com.google.guava:guava:jar:32.0.1-jre:compile" ; 
+[INFO] 	"org.sonarsource.python:python-frontend:jar:4.13-SNAPSHOT:compile" -> "com.google.protobuf:protobuf-java:jar:3.21.7:compile" ; 
+[INFO] 	"org.sonarsource.python:python-frontend:jar:4.13-SNAPSHOT:compile" -> "org.sonarsource.analyzer-commons:sonar-regex-parsing:jar:2.7.0.1482:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.33.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.18.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"org.sonarsource.python:python-checks:jar:4.13-SNAPSHOT:compile" -> "com.google.code.gson:gson:jar:2.8.9:compile" ; 
+[INFO] 	"org.sonarsource.analyzer-commons:sonar-xml-parsing:jar:2.7.0.1482:compile" -> "xerces:xercesImpl:jar:2.12.2:compile" ; 
+[INFO] 	"org.sonarsource.analyzer-commons:sonar-xml-parsing:jar:2.7.0.1482:compile" -> "xml-apis:xml-apis:jar:1.4.01:compile" ; 
+[INFO] 	"org.sonarsource.analyzer-commons:sonar-xml-parsing:jar:2.7.0.1482:compile" -> "com.fasterxml.woodstox:woodstox-core:jar:6.4.0:compile" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-testing-harness:jar:1.23:test" -> "org.sonarsource.sslr:sslr-toolkit:jar:1.23:test" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-testing-harness:jar:1.23:test" -> "org.easytesting:fest-assert:jar:1.4:test" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-testing-harness:jar:1.23:test" -> "org.hamcrest:hamcrest-all:jar:1.1:test" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-toolkit:jar:1.23:test" -> "org.sonarsource.sslr:sslr-xpath:jar:1.23:test" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-toolkit:jar:1.23:test" -> "org.codehaus.sonar:sonar-colorizer:jar:3.7:test" ; 
+[INFO] 	"org.sonarsource.sslr:sslr-xpath:jar:1.23:test" -> "jaxen:jaxen:jar:1.1.4:test" ; 
+[INFO] 	"org.codehaus.sonar:sonar-colorizer:jar:3.7:test" -> "org.codehaus.sonar:sonar-channel:jar:3.7:test" ; 
+[INFO] 	"org.easytesting:fest-assert:jar:1.4:test" -> "org.easytesting:fest-util:jar:1.1.6:test" ; 
+[INFO] 	"org.codehaus.staxmate:staxmate:jar:2.0.1:compile" -> "stax:stax-api:jar:1.0.1:compile" ; 
+[INFO] 	"org.codehaus.staxmate:staxmate:jar:2.0.1:compile" -> "org.codehaus.woodstox:stax2-api:jar:3.1.4:compile" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-testing-harness:jar:9.9.1.69595:test" -> "com.googlecode.json-simple:json-simple:jar:1.1.1:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-testing-harness:jar:9.9.1.69595:test" -> "com.sun.mail:javax.mail:jar:1.6.2:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-testing-harness:jar:9.9.1.69595:test" -> "org.jsoup:jsoup:jar:1.15.3:test" ; 
+[INFO] 	"com.sun.mail:javax.mail:jar:1.6.2:test" -> "javax.activation:activation:jar:1.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.23.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.19:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.sonarsource.api.plugin:sonar-plugin-api-test-fixtures:jar:10.1.0.809:test" -> "ch.qos.logback:logback-classic:jar:1.2.3:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "ch.qos.logback:logback-core:jar:1.2.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.3:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.3:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.3:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.sonarsource.python:python-its >------------------
+[INFO] Building Python :: ITs 4.13-SNAPSHOT                              [6/10]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ python-its ---
+[INFO] digraph "org.sonarsource.python:python-its:pom:4.13-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< org.sonarsource.python:it-python-plugin >---------------
+[INFO] Building Python :: ITs :: Plugin 4.13-SNAPSHOT                    [7/10]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ it-python-plugin ---
+[INFO] digraph "org.sonarsource.python:it-python-plugin:pom:4.13-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ---------< org.sonarsource.python:python-custom-rules-plugin >----------
+[INFO] Building Python Custom Rules Plugin 4.13-SNAPSHOT                 [8/10]
+[INFO] ----------------------------[ sonar-plugin ]----------------------------
+[WARNING] Failure to transfer org.codehaus.woodstox:stax2-api/maven-metadata.xml from http://repository.codehaus.org was cached in the local repository, resolution will not be reattempted until the update interval of codehaus has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to codehaus (http://repository.codehaus.org): Transfer failed for http://repository.codehaus.org/org/codehaus/woodstox/stax2-api/maven-metadata.xml
+[WARNING] Failure to transfer org.codehaus.woodstox:stax2-api/maven-metadata.xml from http://repo1.maven.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of maven has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to maven (http://repo1.maven.org/maven2): Transfer failed for http://repo1.maven.org/maven2/org/codehaus/woodstox/stax2-api/maven-metadata.xml 501 HTTPS Required
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ python-custom-rules-plugin ---
+[WARNING] Failure to transfer org.codehaus.woodstox:stax2-api/maven-metadata.xml from http://repository.codehaus.org was cached in the local repository, resolution will not be reattempted until the update interval of codehaus has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to codehaus (http://repository.codehaus.org): Transfer failed for http://repository.codehaus.org/org/codehaus/woodstox/stax2-api/maven-metadata.xml
+[WARNING] Failure to transfer org.codehaus.woodstox:stax2-api/maven-metadata.xml from http://repo1.maven.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of maven has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.woodstox:stax2-api/maven-metadata.xml from/to maven (http://repo1.maven.org/maven2): Transfer failed for http://repo1.maven.org/maven2/org/codehaus/woodstox/stax2-api/maven-metadata.xml 501 HTTPS Required
+[INFO] digraph "org.sonarsource.python:python-custom-rules-plugin:sonar-plugin:4.13-SNAPSHOT" { 
+[INFO] 	"org.sonarsource.python:python-custom-rules-plugin:sonar-plugin:4.13-SNAPSHOT" -> "org.sonarsource.api.plugin:sonar-plugin-api:jar:10.1.0.809:provided" ; 
+[INFO] 	"org.sonarsource.python:python-custom-rules-plugin:sonar-plugin:4.13-SNAPSHOT" -> "org.sonarsource.sonarqube:sonar-plugin-api-impl:jar:9.9.1.69595:test" ; 
+[INFO] 	"org.sonarsource.python:python-custom-rules-plugin:sonar-plugin:4.13-SNAPSHOT" -> "org.sonarsource.python:sonar-python-plugin:sonar-plugin:4.13-SNAPSHOT:provided" ; 
+[INFO] 	"org.sonarsource.python:python-custom-rules-plugin:sonar-plugin:4.13-SNAPSHOT" -> "org.sonarsource.python:python-checks-testkit:jar:4.13-SNAPSHOT:test" ; 
+[INFO] 	"org.sonarsource.python:python-custom-rules-plugin:sonar-plugin:4.13-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.9.3:test" ; 
+[INFO] 	"org.sonarsource.python:python-custom-rules-plugin:sonar-plugin:4.13-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" ; 
+[INFO] 	"org.sonarsource.api.plugin:sonar-plugin-api:jar:10.1.0.809:provided" -> "org.slf4j:slf4j-api:jar:1.7.30:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-plugin-api-impl:jar:9.9.1.69595:test" -> "commons-codec:commons-codec:jar:1.15:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-plugin-api-impl:jar:9.9.1.69595:test" -> "commons-io:commons-io:jar:2.8.0:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-plugin-api-impl:jar:9.9.1.69595:test" -> "commons-lang:commons-lang:jar:2.6:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-plugin-api-impl:jar:9.9.1.69595:test" -> "org.apache.commons:commons-csv:jar:1.9.0:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-plugin-api-impl:jar:9.9.1.69595:test" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-plugin-api-impl:jar:9.9.1.69595:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.sonarsource.python:sonar-python-plugin:sonar-plugin:4.13-SNAPSHOT:provided" -> "org.sonarsource.python:python-frontend:jar:4.13-SNAPSHOT:provided" ; 
+[INFO] 	"org.sonarsource.python:sonar-python-plugin:sonar-plugin:4.13-SNAPSHOT:provided" -> "org.sonarsource.python:python-checks:jar:4.13-SNAPSHOT:provided" ; 
+[INFO] 	"org.sonarsource.python:sonar-python-plugin:sonar-plugin:4.13-SNAPSHOT:provided" -> "org.sonarsource.analyzer-commons:sonar-analyzer-commons:jar:2.7.0.1482:provided" ; 
+[INFO] 	"org.sonarsource.python:sonar-python-plugin:sonar-plugin:4.13-SNAPSHOT:provided" -> "org.sonarsource.analyzer-commons:sonar-xml-parsing:jar:2.7.0.1482:provided" ; 
+[INFO] 	"org.sonarsource.python:sonar-python-plugin:sonar-plugin:4.13-SNAPSHOT:provided" -> "org.sonarsource.analyzer-commons:sonar-performance-measure:jar:2.7.0.1482:provided" ; 
+[INFO] 	"org.sonarsource.python:sonar-python-plugin:sonar-plugin:4.13-SNAPSHOT:provided" -> "org.codehaus.staxmate:staxmate:jar:2.0.1:provided" ; 
+[INFO] 	"org.sonarsource.python:python-frontend:jar:4.13-SNAPSHOT:provided" -> "org.sonarsource.sslr:sslr-core:jar:1.23:provided" ; 
+[INFO] 	"org.sonarsource.python:python-frontend:jar:4.13-SNAPSHOT:provided" -> "com.google.protobuf:protobuf-java:jar:3.21.7:provided" ; 
+[INFO] 	"org.sonarsource.python:python-frontend:jar:4.13-SNAPSHOT:provided" -> "org.sonarsource.analyzer-commons:sonar-regex-parsing:jar:2.7.0.1482:provided" ; 
+[INFO] 	"org.sonarsource.python:python-checks:jar:4.13-SNAPSHOT:provided" -> "com.google.code.gson:gson:jar:2.8.9:provided" ; 
+[INFO] 	"org.sonarsource.analyzer-commons:sonar-xml-parsing:jar:2.7.0.1482:provided" -> "xerces:xercesImpl:jar:2.12.2:provided" ; 
+[INFO] 	"org.sonarsource.analyzer-commons:sonar-xml-parsing:jar:2.7.0.1482:provided" -> "xml-apis:xml-apis:jar:1.4.01:provided" ; 
+[INFO] 	"org.sonarsource.analyzer-commons:sonar-xml-parsing:jar:2.7.0.1482:provided" -> "com.fasterxml.woodstox:woodstox-core:jar:6.4.0:provided" ; 
+[INFO] 	"org.codehaus.staxmate:staxmate:jar:2.0.1:provided" -> "stax:stax-api:jar:1.0.1:provided" ; 
+[INFO] 	"org.codehaus.staxmate:staxmate:jar:2.0.1:provided" -> "org.codehaus.woodstox:stax2-api:jar:3.1.4:provided" ; 
+[INFO] 	"org.sonarsource.python:python-checks-testkit:jar:4.13-SNAPSHOT:test" -> "org.sonarsource.analyzer-commons:sonar-analyzer-test-commons:jar:2.7.0.1482:test" ; 
+[INFO] 	"org.sonarsource.python:python-checks-testkit:jar:4.13-SNAPSHOT:test" -> "com.google.guava:guava:jar:32.0.1-jre:provided" ; 
+[INFO] 	"org.sonarsource.python:python-checks-testkit:jar:4.13-SNAPSHOT:test" -> "org.assertj:assertj-core:jar:3.23.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:provided" -> "com.google.guava:failureaccess:jar:1.0.1:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:provided" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:provided" -> "org.checkerframework:checker-qual:jar:3.33.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:provided" -> "com.google.errorprone:error_prone_annotations:jar:2.18.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:provided" -> "com.google.j2objc:j2objc-annotations:jar:2.8:provided" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.23.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.10:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.3:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.3:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.3:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< org.sonarsource.python:it-python-plugin-test >------------
+[INFO] Building it-python-plugin-test 4.13-SNAPSHOT                      [9/10]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ it-python-plugin-test ---
+[INFO] digraph "org.sonarsource.python:it-python-plugin-test:jar:4.13-SNAPSHOT" { 
+[INFO] 	"org.sonarsource.python:it-python-plugin-test:jar:4.13-SNAPSHOT" -> "org.sonarsource.orchestrator:sonar-orchestrator-junit5:jar:4.0.0.404:test" ; 
+[INFO] 	"org.sonarsource.python:it-python-plugin-test:jar:4.13-SNAPSHOT" -> "org.sonarsource.sonarqube:sonar-ws:jar:9.9.1.69595:test" ; 
+[INFO] 	"org.sonarsource.python:it-python-plugin-test:jar:4.13-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.9.3:test" ; 
+[INFO] 	"org.sonarsource.python:it-python-plugin-test:jar:4.13-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" ; 
+[INFO] 	"org.sonarsource.python:it-python-plugin-test:jar:4.13-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-core:jar:8.18.0.70939:test" ; 
+[INFO] 	"org.sonarsource.python:it-python-plugin-test:jar:4.13-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.23.1:test" ; 
+[INFO] 	"org.sonarsource.python:it-python-plugin-test:jar:4.13-SNAPSHOT" -> "com.google.guava:guava:jar:32.0.1-jre:test" ; 
+[INFO] 	"org.sonarsource.orchestrator:sonar-orchestrator-junit5:jar:4.0.0.404:test" -> "org.sonarsource.orchestrator:sonar-orchestrator:jar:4.0.0.404:test" ; 
+[INFO] 	"org.sonarsource.orchestrator:sonar-orchestrator:jar:4.0.0.404:test" -> "commons-codec:commons-codec:jar:1.13:test" ; 
+[INFO] 	"org.sonarsource.orchestrator:sonar-orchestrator:jar:4.0.0.404:test" -> "commons-io:commons-io:jar:2.8.0:test" ; 
+[INFO] 	"org.sonarsource.orchestrator:sonar-orchestrator:jar:4.0.0.404:test" -> "commons-lang:commons-lang:jar:2.6:test" ; 
+[INFO] 	"org.sonarsource.orchestrator:sonar-orchestrator:jar:4.0.0.404:test" -> "org.apache.commons:commons-exec:jar:1.3:test" ; 
+[INFO] 	"org.sonarsource.orchestrator:sonar-orchestrator:jar:4.0.0.404:test" -> "com.eclipsesource.minimal-json:minimal-json:jar:0.9.5:test" ; 
+[INFO] 	"org.sonarsource.orchestrator:sonar-orchestrator:jar:4.0.0.404:test" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:test" ; 
+[INFO] 	"org.sonarsource.orchestrator:sonar-orchestrator:jar:4.0.0.404:test" -> "org.apache.httpcomponents:httpmime:jar:4.5.2:test" ; 
+[INFO] 	"org.sonarsource.orchestrator:sonar-orchestrator:jar:4.0.0.404:test" -> "org.jacoco:org.jacoco.agent:jar:runtime:0.8.10:test" ; 
+[INFO] 	"org.sonarsource.orchestrator:sonar-orchestrator:jar:4.0.0.404:test" -> "com.h2database:h2:jar:2.1.210:test" ; 
+[INFO] 	"org.sonarsource.orchestrator:sonar-orchestrator:jar:4.0.0.404:test" -> "ch.qos.logback:logback-classic:jar:1.2.3:test" ; 
+[INFO] 	"org.sonarsource.orchestrator:sonar-orchestrator:jar:4.0.0.404:test" -> "org.slf4j:slf4j-api:jar:1.7.2:provided" ; 
+[INFO] 	"org.sonarsource.orchestrator:sonar-orchestrator:jar:4.0.0.404:test" -> "org.slf4j:jcl-over-slf4j:jar:1.7.2:test" ; 
+[INFO] 	"org.sonarsource.orchestrator:sonar-orchestrator:jar:4.0.0.404:test" -> "org.slf4j:log4j-over-slf4j:jar:1.7.2:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:test" -> "org.apache.httpcomponents:httpcore:jar:4.4.13:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "ch.qos.logback:logback-core:jar:1.2.3:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-ws:jar:9.9.1.69595:test" -> "com.google.protobuf:protobuf-java:jar:3.21.12:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-ws:jar:9.9.1.69595:test" -> "com.squareup.okhttp3:okhttp:jar:4.10.0:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-ws:jar:9.9.1.69595:test" -> "com.google.code.gson:gson:jar:2.8.9:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-ws:jar:9.9.1.69595:test" -> "org.sonarsource.api.plugin:sonar-plugin-api:jar:10.1.0.809:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-ws:jar:9.9.1.69595:test" -> "com.google.code.findbugs:jsr305:jar:3.0.2:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-ws:jar:9.9.1.69595:test" -> "javax.annotation:javax.annotation-api:jar:1.3.2:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:4.10.0:test" -> "com.squareup.okio:okio-jvm:jar:3.0.0:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:4.10.0:test" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.6.20:test" ; 
+[INFO] 	"com.squareup.okio:okio-jvm:jar:3.0.0:test" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.5.31:test" ; 
+[INFO] 	"com.squareup.okio:okio-jvm:jar:3.0.0:test" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.5.31:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.5.31:test" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.5.31:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.6.20:test" -> "org.jetbrains:annotations:jar:13.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.3:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.3:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.3:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.23.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.10:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:test" -> "org.checkerframework:checker-qual:jar:3.33.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.18.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:2.8:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< org.sonarsource.python:it-python-ruling >---------------
+[INFO] Building Python :: ITs :: Ruling 4.13-SNAPSHOT                   [10/10]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ it-python-ruling ---
+[INFO] digraph "org.sonarsource.python:it-python-ruling:jar:4.13-SNAPSHOT" { 
+[INFO] 	"org.sonarsource.python:it-python-ruling:jar:4.13-SNAPSHOT" -> "org.sonarsource.orchestrator:sonar-orchestrator-junit5:jar:4.0.0.404:test" ; 
+[INFO] 	"org.sonarsource.python:it-python-ruling:jar:4.13-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.9.3:test" ; 
+[INFO] 	"org.sonarsource.python:it-python-ruling:jar:4.13-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" ; 
+[INFO] 	"org.sonarsource.python:it-python-ruling:jar:4.13-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.23.1:test" ; 
+[INFO] 	"org.sonarsource.python:it-python-ruling:jar:4.13-SNAPSHOT" -> "com.google.guava:guava:jar:32.0.1-jre:test" ; 
+[INFO] 	"org.sonarsource.python:it-python-ruling:jar:4.13-SNAPSHOT" -> "org.sonarsource.analyzer-commons:sonar-analyzer-commons:jar:2.7.0.1482:compile" ; 
+[INFO] 	"org.sonarsource.python:it-python-ruling:jar:4.13-SNAPSHOT" -> "org.sonarsource.sonarqube:sonar-ws:jar:9.9.1.69595:test" ; 
+[INFO] 	"org.sonarsource.orchestrator:sonar-orchestrator-junit5:jar:4.0.0.404:test" -> "org.sonarsource.orchestrator:sonar-orchestrator:jar:4.0.0.404:test" ; 
+[INFO] 	"org.sonarsource.orchestrator:sonar-orchestrator:jar:4.0.0.404:test" -> "commons-codec:commons-codec:jar:1.13:test" ; 
+[INFO] 	"org.sonarsource.orchestrator:sonar-orchestrator:jar:4.0.0.404:test" -> "commons-io:commons-io:jar:2.8.0:test" ; 
+[INFO] 	"org.sonarsource.orchestrator:sonar-orchestrator:jar:4.0.0.404:test" -> "commons-lang:commons-lang:jar:2.6:test" ; 
+[INFO] 	"org.sonarsource.orchestrator:sonar-orchestrator:jar:4.0.0.404:test" -> "org.apache.commons:commons-exec:jar:1.3:test" ; 
+[INFO] 	"org.sonarsource.orchestrator:sonar-orchestrator:jar:4.0.0.404:test" -> "com.eclipsesource.minimal-json:minimal-json:jar:0.9.5:test" ; 
+[INFO] 	"org.sonarsource.orchestrator:sonar-orchestrator:jar:4.0.0.404:test" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:test" ; 
+[INFO] 	"org.sonarsource.orchestrator:sonar-orchestrator:jar:4.0.0.404:test" -> "org.apache.httpcomponents:httpmime:jar:4.5.2:test" ; 
+[INFO] 	"org.sonarsource.orchestrator:sonar-orchestrator:jar:4.0.0.404:test" -> "org.jacoco:org.jacoco.agent:jar:runtime:0.8.10:test" ; 
+[INFO] 	"org.sonarsource.orchestrator:sonar-orchestrator:jar:4.0.0.404:test" -> "com.h2database:h2:jar:2.1.210:test" ; 
+[INFO] 	"org.sonarsource.orchestrator:sonar-orchestrator:jar:4.0.0.404:test" -> "ch.qos.logback:logback-classic:jar:1.2.3:test" ; 
+[INFO] 	"org.sonarsource.orchestrator:sonar-orchestrator:jar:4.0.0.404:test" -> "org.slf4j:slf4j-api:jar:1.7.2:provided" ; 
+[INFO] 	"org.sonarsource.orchestrator:sonar-orchestrator:jar:4.0.0.404:test" -> "org.slf4j:jcl-over-slf4j:jar:1.7.2:test" ; 
+[INFO] 	"org.sonarsource.orchestrator:sonar-orchestrator:jar:4.0.0.404:test" -> "org.slf4j:log4j-over-slf4j:jar:1.7.2:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:test" -> "org.apache.httpcomponents:httpcore:jar:4.4.13:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "ch.qos.logback:logback-core:jar:1.2.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.3:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.3:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.3:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.23.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.10:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:test" -> "com.google.code.findbugs:jsr305:jar:3.0.2:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:test" -> "org.checkerframework:checker-qual:jar:3.33.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.18.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:2.8:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-ws:jar:9.9.1.69595:test" -> "com.google.protobuf:protobuf-java:jar:3.21.12:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-ws:jar:9.9.1.69595:test" -> "com.squareup.okhttp3:okhttp:jar:4.10.0:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-ws:jar:9.9.1.69595:test" -> "com.google.code.gson:gson:jar:2.8.9:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-ws:jar:9.9.1.69595:test" -> "org.sonarsource.api.plugin:sonar-plugin-api:jar:10.1.0.809:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-ws:jar:9.9.1.69595:test" -> "javax.annotation:javax.annotation-api:jar:1.3.2:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:4.10.0:test" -> "com.squareup.okio:okio-jvm:jar:3.0.0:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:4.10.0:test" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.6.20:test" ; 
+[INFO] 	"com.squareup.okio:okio-jvm:jar:3.0.0:test" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.5.31:test" ; 
+[INFO] 	"com.squareup.okio:okio-jvm:jar:3.0.0:test" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.5.31:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.5.31:test" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.5.31:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.6.20:test" -> "org.jetbrains:annotations:jar:13.0:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Python 4.13-SNAPSHOT:
+[INFO] 
+[INFO] Python ............................................. SUCCESS [  3.033 s]
+[INFO] Python :: Frontend ................................. SUCCESS [  1.850 s]
+[INFO] python-checks-testkit .............................. SUCCESS [  0.069 s]
+[INFO] Python :: Checks ................................... SUCCESS [  0.078 s]
+[INFO] Python :: Sonar Plugin ............................. SUCCESS [  1.237 s]
+[INFO] Python :: ITs ...................................... SUCCESS [  0.022 s]
+[INFO] Python :: ITs :: Plugin ............................ SUCCESS [  0.039 s]
+[INFO] Python Custom Rules Plugin ......................... SUCCESS [  0.085 s]
+[INFO] it-python-plugin-test .............................. SUCCESS [  0.189 s]
+[INFO] Python :: ITs :: Ruling ............................ SUCCESS [  0.052 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  11.398 s
+[INFO] Finished at: 2023-12-28T09:03:26+01:00
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,247 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Apollo                                                             [pom]
+[INFO] Apollo BuildTools                                                  [jar]
+[INFO] Apollo Audit                                                       [pom]
+[INFO] apollo-audit-annotation                                            [jar]
+[INFO] apollo-audit-api                                                   [jar]
+[INFO] Apollo Common                                                      [jar]
+[INFO] apollo-audit-impl                                                  [jar]
+[INFO] apollo-audit-spring-boot-starter                                   [jar]
+[INFO] Apollo Biz                                                         [jar]
+[INFO] Apollo ConfigService                                               [jar]
+[INFO] Apollo AdminService                                                [jar]
+[INFO] Apollo Portal                                                      [jar]
+[INFO] Apollo Assembly                                                    [jar]
+[INFO] 
+[INFO] -----------------< com.ctrip.framework.apollo:apollo >------------------
+[INFO] Building Apollo 2.2.0-SNAPSHOT                                    [1/13]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ apollo ---
+[INFO] digraph "com.ctrip.framework.apollo:apollo:pom:2.2.0-SNAPSHOT" { 
+[INFO] 	"com.ctrip.framework.apollo:apollo:pom:2.2.0-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" ; 
+[INFO] 	"com.ctrip.framework.apollo:apollo:pom:2.2.0-SNAPSHOT" -> "org.awaitility:awaitility:jar:4.2.0:test" ; 
+[INFO] 	"com.ctrip.framework.apollo:apollo:pom:2.2.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.9.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.springframework.boot:spring-boot-test:jar:2.7.11:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.7.11:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "com.jayway.jsonpath:json-path:jar:2.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.assertj:assertj-core:jar:3.22.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.junit.jupiter:junit-jupiter:jar:5.8.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.mockito:mockito-core:jar:4.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.mockito:mockito-junit-jupiter:jar:4.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.springframework:spring-core:jar:5.3.27:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.springframework:spring-test:jar:5.3.27:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.xmlunit:xmlunit-core:jar:2.9.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-test:jar:2.7.11:test" -> "org.springframework.boot:spring-boot:jar:2.7.11:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.7.11:test" -> "org.springframework:spring-context:jar:5.3.27:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:test" -> "org.springframework:spring-aop:jar:5.3.27:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:test" -> "org.springframework:spring-beans:jar:5.3.27:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:test" -> "org.springframework:spring-expression:jar:5.3.27:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-test-autoconfigure:jar:2.7.11:test" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.7.11:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.7.0:test" -> "net.minidev:json-smart:jar:2.4.10:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.7.0:test" -> "org.slf4j:slf4j-api:jar:1.7.36:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.10:test" -> "net.minidev:accessors-smart:jar:2.4.9:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.9:test" -> "org.ow2.asm:asm:jar:9.3:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.23:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.23:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.27:test" -> "org.springframework:spring-jcl:jar:5.3.27:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.9.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.8.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.9.2:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.9.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.8.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.8.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.8.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< com.ctrip.framework.apollo:apollo-buildtools >------------
+[INFO] Building Apollo BuildTools 2.2.0-SNAPSHOT                         [2/13]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ apollo-buildtools ---
+[INFO] digraph "com.ctrip.framework.apollo:apollo-buildtools:jar:2.2.0-SNAPSHOT" { 
+[INFO] 	"com.ctrip.framework.apollo:apollo-buildtools:jar:2.2.0-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" ; 
+[INFO] 	"com.ctrip.framework.apollo:apollo-buildtools:jar:2.2.0-SNAPSHOT" -> "org.awaitility:awaitility:jar:4.2.0:test" ; 
+[INFO] 	"com.ctrip.framework.apollo:apollo-buildtools:jar:2.2.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.9.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.springframework.boot:spring-boot-test:jar:2.7.11:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.7.11:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "com.jayway.jsonpath:json-path:jar:2.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.assertj:assertj-core:jar:3.22.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.junit.jupiter:junit-jupiter:jar:5.8.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.mockito:mockito-core:jar:4.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.mockito:mockito-junit-jupiter:jar:4.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.springframework:spring-core:jar:5.3.27:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.springframework:spring-test:jar:5.3.27:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.xmlunit:xmlunit-core:jar:2.9.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-test:jar:2.7.11:test" -> "org.springframework.boot:spring-boot:jar:2.7.11:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.7.11:test" -> "org.springframework:spring-context:jar:5.3.27:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:test" -> "org.springframework:spring-aop:jar:5.3.27:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:test" -> "org.springframework:spring-beans:jar:5.3.27:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:test" -> "org.springframework:spring-expression:jar:5.3.27:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-test-autoconfigure:jar:2.7.11:test" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.7.11:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.7.0:test" -> "net.minidev:json-smart:jar:2.4.10:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.7.0:test" -> "org.slf4j:slf4j-api:jar:1.7.36:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.10:test" -> "net.minidev:accessors-smart:jar:2.4.9:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.9:test" -> "org.ow2.asm:asm:jar:9.3:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.23:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.23:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.27:test" -> "org.springframework:spring-jcl:jar:5.3.27:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.9.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.8.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.9.2:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.9.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.8.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.8.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.8.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< com.ctrip.framework.apollo:apollo-audit >---------------
+[INFO] Building Apollo Audit 2.2.0-SNAPSHOT                              [3/13]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ apollo-audit ---
+[INFO] digraph "com.ctrip.framework.apollo:apollo-audit:pom:2.2.0-SNAPSHOT" { 
+[INFO] 	"com.ctrip.framework.apollo:apollo-audit:pom:2.2.0-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" ; 
+[INFO] 	"com.ctrip.framework.apollo:apollo-audit:pom:2.2.0-SNAPSHOT" -> "org.awaitility:awaitility:jar:4.2.0:test" ; 
+[INFO] 	"com.ctrip.framework.apollo:apollo-audit:pom:2.2.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.9.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.springframework.boot:spring-boot-test:jar:2.7.11:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.7.11:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "com.jayway.jsonpath:json-path:jar:2.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.assertj:assertj-core:jar:3.22.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.junit.jupiter:junit-jupiter:jar:5.8.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.mockito:mockito-core:jar:4.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.mockito:mockito-junit-jupiter:jar:4.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.springframework:spring-core:jar:5.3.27:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.springframework:spring-test:jar:5.3.27:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.xmlunit:xmlunit-core:jar:2.9.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-test:jar:2.7.11:test" -> "org.springframework.boot:spring-boot:jar:2.7.11:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.7.11:test" -> "org.springframework:spring-context:jar:5.3.27:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:test" -> "org.springframework:spring-aop:jar:5.3.27:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:test" -> "org.springframework:spring-beans:jar:5.3.27:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:test" -> "org.springframework:spring-expression:jar:5.3.27:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-test-autoconfigure:jar:2.7.11:test" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.7.11:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.7.0:test" -> "net.minidev:json-smart:jar:2.4.10:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.7.0:test" -> "org.slf4j:slf4j-api:jar:1.7.36:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.10:test" -> "net.minidev:accessors-smart:jar:2.4.9:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.9:test" -> "org.ow2.asm:asm:jar:9.3:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.23:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.23:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.27:test" -> "org.springframework:spring-jcl:jar:5.3.27:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.9.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.8.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.9.2:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.9.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.8.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.8.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.8.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------< com.ctrip.framework.apollo:apollo-audit-annotation >---------
+[INFO] Building apollo-audit-annotation 2.2.0-SNAPSHOT                   [4/13]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ apollo-audit-annotation ---
+[INFO] digraph "com.ctrip.framework.apollo:apollo-audit-annotation:jar:2.2.0-SNAPSHOT" { 
+[INFO] 	"com.ctrip.framework.apollo:apollo-audit-annotation:jar:2.2.0-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" ; 
+[INFO] 	"com.ctrip.framework.apollo:apollo-audit-annotation:jar:2.2.0-SNAPSHOT" -> "org.awaitility:awaitility:jar:4.2.0:test" ; 
+[INFO] 	"com.ctrip.framework.apollo:apollo-audit-annotation:jar:2.2.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.9.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.springframework.boot:spring-boot-test:jar:2.7.11:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.7.11:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "com.jayway.jsonpath:json-path:jar:2.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.assertj:assertj-core:jar:3.22.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.junit.jupiter:junit-jupiter:jar:5.8.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.mockito:mockito-core:jar:4.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.mockito:mockito-junit-jupiter:jar:4.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.springframework:spring-core:jar:5.3.27:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.springframework:spring-test:jar:5.3.27:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.11:test" -> "org.xmlunit:xmlunit-core:jar:2.9.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-test:jar:2.7.11:test" -> "org.springframework.boot:spring-boot:jar:2.7.11:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.7.11:test" -> "org.springframework:spring-context:jar:5.3.27:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:test" -> "org.springframework:spring-aop:jar:5.3.27:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:test" -> "org.springframework:spring-beans:jar:5.3.27:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:test" -> "org.springframework:spring-expression:jar:5.3.27:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-test-autoconfigure:jar:2.7.11:test" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.7.11:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.7.0:test" -> "net.minidev:json-smart:jar:2.4.10:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.7.0:test" -> "org.slf4j:slf4j-api:jar:1.7.36:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.10:test" -> "net.minidev:accessors-smart:jar:2.4.9:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.9:test" -> "org.ow2.asm:asm:jar:9.3:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.23:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.23:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.27:test" -> "org.springframework:spring-jcl:jar:5.3.27:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.9.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.8.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.9.2:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.9.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.8.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.8.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.8.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< com.ctrip.framework.apollo:apollo-audit-api >-------------
+[INFO] Building apollo-audit-api 2.2.0-SNAPSHOT                          [5/13]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/ctrip/framework/apollo/apollo-audit-annotation/2.2.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/ctrip/framework/apollo/apollo-audit-annotation/2.2.0-SNAPSHOT/apollo-audit-annotation-2.2.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Apollo 2.2.0-SNAPSHOT:
+[INFO] 
+[INFO] Apollo ............................................. SUCCESS [  4.316 s]
+[INFO] Apollo BuildTools .................................. SUCCESS [  0.300 s]
+[INFO] Apollo Audit ....................................... SUCCESS [  0.368 s]
+[INFO] apollo-audit-annotation ............................ SUCCESS [  0.295 s]
+[INFO] apollo-audit-api ................................... FAILURE [  4.195 s]
+[INFO] Apollo Common ...................................... SKIPPED
+[INFO] apollo-audit-impl .................................. SKIPPED
+[INFO] apollo-audit-spring-boot-starter ................... SKIPPED
+[INFO] Apollo Biz ......................................... SKIPPED
+[INFO] Apollo ConfigService ............................... SKIPPED
+[INFO] Apollo AdminService ................................ SKIPPED
+[INFO] Apollo Portal ...................................... SKIPPED
+[INFO] Apollo Assembly .................................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  14.909 s
+[INFO] Finished at: 2023-12-28T09:02:40+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project apollo-audit-api: Could not resolve dependencies for project com.ctrip.framework.apollo:apollo-audit-api:jar:2.2.0-SNAPSHOT: Could not find artifact com.ctrip.framework.apollo:apollo-audit-annotation:jar:2.2.0-SNAPSHOT in sonatype-nexus-snapshots (https://oss.sonatype.org/content/repositories/snapshots) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :apollo-audit-api

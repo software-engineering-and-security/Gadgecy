@@ -1,0 +1,113 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] GwtMockito (Parent)                                                [pom]
+[INFO] GwtMockito                                                         [jar]
+[INFO] GwtMockito Sample Application                                      [jar]
+[INFO] 
+[INFO] ------------< com.google.gwt.gwtmockito:gwtmockito-parent >-------------
+[INFO] Building GwtMockito (Parent) 1.1.10-SNAPSHOT                       [1/3]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ gwtmockito-parent ---
+[INFO] digraph "com.google.gwt.gwtmockito:gwtmockito-parent:pom:1.1.10-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< com.google.gwt.gwtmockito:gwtmockito >----------------
+[INFO] Building GwtMockito 1.1.10-SNAPSHOT                                [2/3]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ gwtmockito ---
+[INFO] digraph "com.google.gwt.gwtmockito:gwtmockito:jar:1.1.10-SNAPSHOT" { 
+[INFO] 	"com.google.gwt.gwtmockito:gwtmockito:jar:1.1.10-SNAPSHOT" -> "com.google.gwt:gwt-dev:jar:2.8.0:compile" ; 
+[INFO] 	"com.google.gwt.gwtmockito:gwtmockito:jar:1.1.10-SNAPSHOT" -> "com.google.gwt:gwt-user:jar:2.8.0:compile" ; 
+[INFO] 	"com.google.gwt.gwtmockito:gwtmockito:jar:1.1.10-SNAPSHOT" -> "junit:junit:jar:4.13.1:compile" ; 
+[INFO] 	"com.google.gwt.gwtmockito:gwtmockito:jar:1.1.10-SNAPSHOT" -> "org.mockito:mockito-core:jar:1.10.19:compile" ; 
+[INFO] 	"com.google.gwt.gwtmockito:gwtmockito:jar:1.1.10-SNAPSHOT" -> "org.javassist:javassist:jar:3.25.0-GA:compile" ; 
+[INFO] 	"com.google.gwt.gwtmockito:gwtmockito:jar:1.1.10-SNAPSHOT" -> "org.powermock:powermock-api-mockito:jar:1.6.6:test" ; 
+[INFO] 	"com.google.gwt:gwt-dev:jar:2.8.0:compile" -> "com.google.code.gson:gson:jar:2.6.2:compile" ; 
+[INFO] 	"com.google.gwt:gwt-dev:jar:2.8.0:compile" -> "org.ow2.asm:asm:jar:5.0.3:compile" ; 
+[INFO] 	"com.google.gwt:gwt-dev:jar:2.8.0:compile" -> "org.ow2.asm:asm-util:jar:5.0.3:compile" ; 
+[INFO] 	"com.google.gwt:gwt-dev:jar:2.8.0:compile" -> "org.ow2.asm:asm-commons:jar:5.0.3:compile" ; 
+[INFO] 	"com.google.gwt:gwt-dev:jar:2.8.0:compile" -> "colt:colt:jar:1.2.0:compile" ; 
+[INFO] 	"com.google.gwt:gwt-dev:jar:2.8.0:compile" -> "ant:ant:jar:1.6.5:compile" ; 
+[INFO] 	"com.google.gwt:gwt-dev:jar:2.8.0:compile" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"com.google.gwt:gwt-dev:jar:2.8.0:compile" -> "commons-io:commons-io:jar:2.4:compile" ; 
+[INFO] 	"com.google.gwt:gwt-dev:jar:2.8.0:compile" -> "com.ibm.icu:icu4j:jar:50.1.1:compile" ; 
+[INFO] 	"com.google.gwt:gwt-dev:jar:2.8.0:compile" -> "tapestry:tapestry:jar:4.0.2:compile" ; 
+[INFO] 	"com.google.gwt:gwt-dev:jar:2.8.0:compile" -> "net.sourceforge.htmlunit:htmlunit:jar:2.19:compile" ; 
+[INFO] 	"com.google.gwt:gwt-dev:jar:2.8.0:compile" -> "org.eclipse.jetty:jetty-webapp:jar:9.2.14.v20151106:compile" ; 
+[INFO] 	"com.google.gwt:gwt-dev:jar:2.8.0:compile" -> "org.eclipse.jetty:jetty-servlets:jar:9.2.14.v20151106:compile" ; 
+[INFO] 	"com.google.gwt:gwt-dev:jar:2.8.0:compile" -> "org.eclipse.jetty:jetty-annotations:jar:9.2.14.v20151106:compile" ; 
+[INFO] 	"com.google.gwt:gwt-dev:jar:2.8.0:compile" -> "org.eclipse.jetty:apache-jsp:jar:9.2.14.v20151106:compile" ; 
+[INFO] 	"org.ow2.asm:asm-util:jar:5.0.3:compile" -> "org.ow2.asm:asm-tree:jar:5.0.3:compile" ; 
+[INFO] 	"net.sourceforge.htmlunit:htmlunit:jar:2.19:compile" -> "xalan:xalan:jar:2.7.2:compile" ; 
+[INFO] 	"net.sourceforge.htmlunit:htmlunit:jar:2.19:compile" -> "org.apache.commons:commons-lang3:jar:3.4:compile" ; 
+[INFO] 	"net.sourceforge.htmlunit:htmlunit:jar:2.19:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.1:compile" ; 
+[INFO] 	"net.sourceforge.htmlunit:htmlunit:jar:2.19:compile" -> "org.apache.httpcomponents:httpmime:jar:4.5.1:compile" ; 
+[INFO] 	"net.sourceforge.htmlunit:htmlunit:jar:2.19:compile" -> "commons-codec:commons-codec:jar:1.10:compile" ; 
+[INFO] 	"net.sourceforge.htmlunit:htmlunit:jar:2.19:compile" -> "net.sourceforge.htmlunit:htmlunit-core-js:jar:2.17:compile" ; 
+[INFO] 	"net.sourceforge.htmlunit:htmlunit:jar:2.19:compile" -> "xerces:xercesImpl:jar:2.11.0:compile" ; 
+[INFO] 	"net.sourceforge.htmlunit:htmlunit:jar:2.19:compile" -> "net.sourceforge.nekohtml:nekohtml:jar:1.9.22:compile" ; 
+[INFO] 	"net.sourceforge.htmlunit:htmlunit:jar:2.19:compile" -> "net.sourceforge.cssparser:cssparser:jar:0.9.18:compile" ; 
+[INFO] 	"net.sourceforge.htmlunit:htmlunit:jar:2.19:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"net.sourceforge.htmlunit:htmlunit:jar:2.19:compile" -> "org.eclipse.jetty.websocket:websocket-client:jar:9.2.13.v20150730:compile" ; 
+[INFO] 	"xalan:xalan:jar:2.7.2:compile" -> "xalan:serializer:jar:2.7.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.1:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.3:compile" ; 
+[INFO] 	"xerces:xercesImpl:jar:2.11.0:compile" -> "xml-apis:xml-apis:jar:1.4.01:compile" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-client:jar:9.2.13.v20150730:compile" -> "org.eclipse.jetty.websocket:websocket-common:jar:9.2.13.v20150730:compile" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-common:jar:9.2.13.v20150730:compile" -> "org.eclipse.jetty.websocket:websocket-api:jar:9.2.13.v20150730:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-webapp:jar:9.2.14.v20151106:compile" -> "org.eclipse.jetty:jetty-xml:jar:9.2.14.v20151106:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-webapp:jar:9.2.14.v20151106:compile" -> "org.eclipse.jetty:jetty-servlet:jar:9.2.14.v20151106:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.2.14.v20151106:compile" -> "org.eclipse.jetty:jetty-security:jar:9.2.14.v20151106:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:9.2.14.v20151106:compile" -> "org.eclipse.jetty:jetty-continuation:jar:9.2.14.v20151106:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:9.2.14.v20151106:compile" -> "org.eclipse.jetty:jetty-http:jar:9.2.14.v20151106:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:9.2.14.v20151106:compile" -> "org.eclipse.jetty:jetty-util:jar:9.2.14.v20151106:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:9.2.14.v20151106:compile" -> "org.eclipse.jetty:jetty-io:jar:9.2.14.v20151106:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-annotations:jar:9.2.14.v20151106:compile" -> "org.eclipse.jetty:jetty-plus:jar:9.2.14.v20151106:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-annotations:jar:9.2.14.v20151106:compile" -> "javax.annotation:javax.annotation-api:jar:1.2:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-plus:jar:9.2.14.v20151106:compile" -> "org.eclipse.jetty:jetty-jndi:jar:9.2.14.v20151106:compile" ; 
+[INFO] 	"org.eclipse.jetty:apache-jsp:jar:9.2.14.v20151106:compile" -> "org.eclipse.jetty:jetty-server:jar:9.2.14.v20151106:compile" ; 
+[INFO] 	"org.eclipse.jetty:apache-jsp:jar:9.2.14.v20151106:compile" -> "org.eclipse.jetty.toolchain:jetty-schemas:jar:3.1.M0:compile" ; 
+[INFO] 	"org.eclipse.jetty:apache-jsp:jar:9.2.14.v20151106:compile" -> "org.mortbay.jasper:apache-jsp:jar:8.0.9.M3:compile" ; 
+[INFO] 	"org.mortbay.jasper:apache-jsp:jar:8.0.9.M3:compile" -> "org.mortbay.jasper:apache-el:jar:8.0.9.M3:compile" ; 
+[INFO] 	"com.google.gwt:gwt-user:jar:2.8.0:compile" -> "com.google.jsinterop:jsinterop-annotations:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.gwt:gwt-user:jar:2.8.0:compile" -> "com.google.jsinterop:jsinterop-annotations:jar:sources:1.0.1:compile" ; 
+[INFO] 	"com.google.gwt:gwt-user:jar:2.8.0:compile" -> "javax.validation:validation-api:jar:1.0.0.GA:compile" ; 
+[INFO] 	"com.google.gwt:gwt-user:jar:2.8.0:compile" -> "javax.validation:validation-api:jar:sources:1.0.0.GA:compile" ; 
+[INFO] 	"com.google.gwt:gwt-user:jar:2.8.0:compile" -> "javax.servlet:javax.servlet-api:jar:3.1.0:compile" ; 
+[INFO] 	"com.google.gwt:gwt-user:jar:2.8.0:compile" -> "org.w3c.css:sac:jar:1.3:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.1:compile" -> "org.hamcrest:hamcrest-core:jar:1.3:compile" ; 
+[INFO] 	"org.mockito:mockito-core:jar:1.10.19:compile" -> "org.objenesis:objenesis:jar:2.1:runtime" ; 
+[INFO] 	"org.powermock:powermock-api-mockito:jar:1.6.6:test" -> "org.powermock:powermock-api-mockito-common:jar:1.6.6:test" ; 
+[INFO] 	"org.powermock:powermock-api-mockito-common:jar:1.6.6:test" -> "org.powermock:powermock-api-support:jar:1.6.6:test" ; 
+[INFO] 	"org.powermock:powermock-api-support:jar:1.6.6:test" -> "org.powermock:powermock-core:jar:1.6.6:test" ; 
+[INFO] 	"org.powermock:powermock-api-support:jar:1.6.6:test" -> "org.powermock:powermock-reflect:jar:1.6.6:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< com.google.gwt.gwtmockito:gwtmockito-sample >-------------
+[INFO] Building GwtMockito Sample Application 1.1.10-SNAPSHOT             [3/3]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for GwtMockito (Parent) 1.1.10-SNAPSHOT:
+[INFO] 
+[INFO] GwtMockito (Parent) ................................ SUCCESS [  4.197 s]
+[INFO] GwtMockito ......................................... SUCCESS [  1.475 s]
+[INFO] GwtMockito Sample Application ...................... FAILURE [  0.100 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.478 s
+[INFO] Finished at: 2023-12-28T09:02:46+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project gwtmockito-sample: Could not resolve dependencies for project com.google.gwt.gwtmockito:gwtmockito-sample:jar:1.1.10-SNAPSHOT: Could not find artifact com.google.gwt.gwtmockito:gwtmockito:jar:1.1.10-SNAPSHOT -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :gwtmockito-sample

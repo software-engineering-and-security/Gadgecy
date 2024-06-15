@@ -1,0 +1,270 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.datax:datax-core:jar:0.0.1-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 112, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.datax:kingbaseesreader:jar:0.0.1-SNAPSHOT
+[WARNING] 'dependencies.dependency.systemPath' for com.kingbase8:kingbase8:jar should not point at files within the project directory, ${basedir}/src/main/libs/kingbase8-8.2.0.jar will be unresolvable by dependent projects @ line 50, column 25
+[WARNING] 'dependencies.dependency.systemPath' for com.kingbase8:kingbase8:jar refers to a non-existing file /home/brunok/apache-ysoserial-vuln/pom/alibaba-DataX/kingbaseesreader/src/main/libs/kingbase8-8.2.0.jar @ line 50, column 25
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.datax:rdbmsreader:jar:0.0.1-SNAPSHOT
+[WARNING] 'dependencies.dependency.systemPath' for com.sybase:jconn3:jar should not point at files within the project directory, ${basedir}/src/main/libs/jconn3-1.0.0-SNAPSHOT.jar will be unresolvable by dependent projects @ line 40, column 25
+[WARNING] 'dependencies.dependency.systemPath' for ppas:ppas:jar should not point at files within the project directory, ${basedir}/src/main/libs/edb-jdbc16.jar will be unresolvable by dependent projects @ line 48, column 25
+[WARNING] 'dependencies.dependency.systemPath' for com.sybase:jconn3:jar refers to a non-existing file /home/brunok/apache-ysoserial-vuln/pom/alibaba-DataX/rdbmsreader/src/main/libs/jconn3-1.0.0-SNAPSHOT.jar @ line 40, column 25
+[WARNING] 'dependencies.dependency.systemPath' for ppas:ppas:jar refers to a non-existing file /home/brunok/apache-ysoserial-vuln/pom/alibaba-DataX/rdbmsreader/src/main/libs/edb-jdbc16.jar @ line 48, column 25
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.datax:odpsreader:jar:0.0.1-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.mockito:mockito-core:jar -> duplicate declaration of version 1.8.5 @ line 71, column 15
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.powermock:powermock-api-mockito:jar -> duplicate declaration of version 1.4.10 @ line 77, column 15
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.powermock:powermock-module-junit4:jar -> duplicate declaration of version 1.4.10 @ line 84, column 15
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.datax:gdbreader:jar:0.0.1-SNAPSHOT
+[WARNING] 'build.plugins.plugin.(groupId:artifactId)' must be unique but found duplicate declaration of plugin org.apache.maven.plugins:maven-compiler-plugin @ line 115, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.datax:kingbaseeswriter:jar:0.0.1-SNAPSHOT
+[WARNING] 'dependencies.dependency.systemPath' for com.kingbase8:kingbase8:jar should not point at files within the project directory, ${basedir}/src/main/libs/kingbase8-8.2.0.jar will be unresolvable by dependent projects @ line 48, column 16
+[WARNING] 'dependencies.dependency.systemPath' for com.kingbase8:kingbase8:jar refers to a non-existing file /home/brunok/apache-ysoserial-vuln/pom/alibaba-DataX/kingbaseeswriter/src/main/libs/kingbase8-8.2.0.jar @ line 48, column 16
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.datax:oceanbasev10writer:jar:0.0.1-SNAPSHOT
+[WARNING] 'dependencies.dependency.systemPath' for com.alipay.oceanbase:oceanbase-connector-java:jar should not point at files within the project directory, ${basedir}/src/main/libs/oceanbase-connector-java-3.2.0.jar will be unresolvable by dependent projects @ line 59, column 25
+[WARNING] 'dependencies.dependency.systemPath' for com.alipay.oceanbase:oceanbase-connector-java:jar refers to a non-existing file /home/brunok/apache-ysoserial-vuln/pom/alibaba-DataX/oceanbasev10writer/src/main/libs/oceanbase-connector-java-3.2.0.jar @ line 59, column 25
+[WARNING] 'dependencies.dependency.systemPath' for com.oceanbase:shade-ob-partition-calculator:jar refers to a non-existing file /home/brunok/apache-ysoserial-vuln/pom/alibaba-DataX/oceanbasev10writer/src/main/libs/shade-ob-partition-calculator-1.0-SNAPSHOT.jar @ line 72, column 25
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.datax:rdbmswriter:jar:0.0.1-SNAPSHOT
+[WARNING] 'dependencies.dependency.systemPath' for com.sybase:jconn3:jar should not point at files within the project directory, ${basedir}/src/main/libs/jconn3-1.0.0-SNAPSHOT.jar will be unresolvable by dependent projects @ line 40, column 16
+[WARNING] 'dependencies.dependency.systemPath' for ppas:ppas:jar should not point at files within the project directory, ${basedir}/src/main/libs/edb-jdbc16.jar will be unresolvable by dependent projects @ line 48, column 16
+[WARNING] 'dependencies.dependency.systemPath' for com.sybase:jconn3:jar refers to a non-existing file /home/brunok/apache-ysoserial-vuln/pom/alibaba-DataX/rdbmswriter/src/main/libs/jconn3-1.0.0-SNAPSHOT.jar @ line 40, column 16
+[WARNING] 'dependencies.dependency.systemPath' for ppas:ppas:jar refers to a non-existing file /home/brunok/apache-ysoserial-vuln/pom/alibaba-DataX/rdbmswriter/src/main/libs/edb-jdbc16.jar @ line 48, column 16
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.datax:hbase094xwriter:jar:0.0.1-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.alibaba.datax:datax-common:jar -> version ${datax-project-version} vs 0.0.1-SNAPSHOT @ line 75, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] datax-all                                                          [pom]
+[INFO] datax-common                                                       [jar]
+[INFO] datax-transformer                                                  [jar]
+[INFO] datax-core                                                         [jar]
+[INFO] plugin-rdbms-util                                                  [jar]
+[INFO] mysqlreader                                                        [jar]
+[INFO] drdsreader                                                         [jar]
+[INFO] sqlserverreader                                                    [jar]
+[INFO] postgresqlreader                                                   [jar]
+[INFO] kingbaseesreader                                                   [jar]
+[INFO] oraclereader                                                       [jar]
+[INFO] cassandrareader                                                    [jar]
+[INFO] oceanbasev10reader                                                 [jar]
+[INFO] rdbmsreader                                                        [jar]
+[INFO] odpsreader                                                         [jar]
+[INFO] otsreader                                                          [jar]
+[INFO] otsstreamreader                                                    [jar]
+[INFO] hbase11xreader                                                     [jar]
+[INFO] hbase094xreader                                                    [jar]
+[INFO] hbase11xsqlreader                                                  [jar]
+[INFO] hbase20xsqlreader                                                  [jar]
+[INFO] plugin-unstructured-storage-util                                   [jar]
+[INFO] hdfsreader                                                         [jar]
+[INFO] ossreader                                                          [jar]
+[INFO] ftpreader                                                          [jar]
+[INFO] txtfilereader                                                      [jar]
+[INFO] streamreader                                                       [jar]
+[INFO] clickhousereader                                                   [jar]
+[INFO] mongodbreader                                                      [jar]
+[INFO] tdenginewriter                                                     [jar]
+[INFO] tdenginereader                                                     [jar]
+[INFO] gdbreader                                                          [jar]
+[INFO] tsdbreader                                                         [jar]
+[INFO] opentsdbreader                                                     [jar]
+[INFO] loghubreader                                                       [jar]
+[INFO] datahubreader                                                      [jar]
+[INFO] starrocksreader                                                    [jar]
+[INFO] mysqlwriter                                                        [jar]
+[INFO] starrockswriter                                                    [jar]
+[INFO] drdswriter                                                         [jar]
+[INFO] databendwriter                                                     [jar]
+[INFO] oraclewriter                                                       [jar]
+[INFO] sqlserverwriter                                                    [jar]
+[INFO] postgresqlwriter                                                   [jar]
+[INFO] kingbaseeswriter                                                   [jar]
+[INFO] odpswriter                                                         [jar]
+[INFO] adswriter                                                          [jar]
+[INFO] oceanbasev10writer                                                 [jar]
+[INFO] adbpgwriter                                                        [jar]
+[INFO] hologresjdbcwriter                                                 [jar]
+[INFO] rdbmswriter                                                        [jar]
+[INFO] hdfswriter                                                         [jar]
+[INFO] osswriter                                                          [jar]
+[INFO] otswriter                                                          [jar]
+[INFO] hbase11xwriter                                                     [jar]
+[INFO] hbase094xwriter                                                    [jar]
+[INFO] hbase11xsqlwriter                                                  [jar]
+[INFO] hbase20xsqlwriter                                                  [jar]
+[INFO] kuduwriter                                                         [jar]
+[INFO] ftpwriter                                                          [jar]
+[INFO] txtfilewriter                                                      [jar]
+[INFO] streamwriter                                                       [jar]
+[INFO] elasticsearchwriter                                                [jar]
+[INFO] mongodbwriter                                                      [jar]
+[INFO] ocswriter                                                          [jar]
+[INFO] tsdbwriter                                                         [jar]
+[INFO] gdbwriter                                                          [jar]
+[INFO] oscarwriter                                                        [jar]
+[INFO] loghubwriter                                                       [jar]
+[INFO] datahubwriter                                                      [jar]
+[INFO] cassandrawriter                                                    [jar]
+[INFO] clickhousewriter                                                   [jar]
+[INFO] doriswriter                                                        [jar]
+[INFO] selectdbwriter                                                     [jar]
+[INFO] adbmysqlwriter                                                     [jar]
+[INFO] neo4jwriter                                                        [jar]
+[INFO] gaussdbreader                                                      [jar]
+[INFO] gaussdbwriter                                                      [jar]
+[INFO] datax-example                                                      [pom]
+[INFO] datax-example-core                                                 [jar]
+[INFO] datax-example-streamreader                                         [jar]
+[INFO] datax-example-neo4j                                                [jar]
+[INFO] 
+[INFO] --------------------< com.alibaba.datax:datax-all >---------------------
+[INFO] Building datax-all 0.0.1-SNAPSHOT                                 [1/82]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ datax-all ---
+[INFO] digraph "com.alibaba.datax:datax-all:pom:0.0.1-SNAPSHOT" { 
+[INFO] 	"com.alibaba.datax:datax-all:pom:0.0.1-SNAPSHOT" -> "org.hamcrest:hamcrest-core:jar:1.3:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< com.alibaba.datax:datax-common >-------------------
+[INFO] Building datax-common 0.0.1-SNAPSHOT                              [2/82]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ datax-common ---
+[INFO] digraph "com.alibaba.datax:datax-common:jar:0.0.1-SNAPSHOT" { 
+[INFO] 	"com.alibaba.datax:datax-common:jar:0.0.1-SNAPSHOT" -> "org.apache.commons:commons-lang3:jar:3.3.2:compile" ; 
+[INFO] 	"com.alibaba.datax:datax-common:jar:0.0.1-SNAPSHOT" -> "com.alibaba.fastjson2:fastjson2:jar:2.0.23:compile" ; 
+[INFO] 	"com.alibaba.datax:datax-common:jar:0.0.1-SNAPSHOT" -> "commons-io:commons-io:jar:2.4:compile" ; 
+[INFO] 	"com.alibaba.datax:datax-common:jar:0.0.1-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"com.alibaba.datax:datax-common:jar:0.0.1-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.10:compile" ; 
+[INFO] 	"com.alibaba.datax:datax-common:jar:0.0.1-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.0.13:compile" ; 
+[INFO] 	"com.alibaba.datax:datax-common:jar:0.0.1-SNAPSHOT" -> "org.apache.httpcomponents:httpclient:jar:4.4:test" ; 
+[INFO] 	"com.alibaba.datax:datax-common:jar:0.0.1-SNAPSHOT" -> "org.apache.httpcomponents:fluent-hc:jar:4.4:test" ; 
+[INFO] 	"com.alibaba.datax:datax-common:jar:0.0.1-SNAPSHOT" -> "org.apache.commons:commons-math3:jar:3.1.1:compile" ; 
+[INFO] 	"com.alibaba.datax:datax-common:jar:0.0.1-SNAPSHOT" -> "org.hamcrest:hamcrest-core:jar:1.3:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.0.13:compile" -> "ch.qos.logback:logback-core:jar:1.0.13:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.4:test" -> "org.apache.httpcomponents:httpcore:jar:4.4:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.4:test" -> "commons-logging:commons-logging:jar:1.2:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.4:test" -> "commons-codec:commons-codec:jar:1.9:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< com.alibaba.datax:datax-transformer >-----------------
+[INFO] Building datax-transformer 0.0.1-SNAPSHOT                         [3/82]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from central: https://maven.aliyun.com/repository/central/com/alibaba/datax/datax-common/0.0.1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from spring: https://maven.aliyun.com/repository/spring/com/alibaba/datax/datax-common/0.0.1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from central: https://maven.aliyun.com/repository/central/com/alibaba/datax/datax-common/0.0.1-SNAPSHOT/datax-common-0.0.1-SNAPSHOT.jar
+[INFO] Downloading from spring: https://maven.aliyun.com/repository/spring/com/alibaba/datax/datax-common/0.0.1-SNAPSHOT/datax-common-0.0.1-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] datax-all 0.0.1-SNAPSHOT ........................... SUCCESS [  4.523 s]
+[INFO] datax-common 0.0.1-SNAPSHOT ........................ SUCCESS [  0.976 s]
+[INFO] datax-transformer 0.0.1-SNAPSHOT ................... FAILURE [  7.529 s]
+[INFO] datax-core 0.0.1-SNAPSHOT .......................... SKIPPED
+[INFO] plugin-rdbms-util 0.0.1-SNAPSHOT ................... SKIPPED
+[INFO] mysqlreader 0.0.1-SNAPSHOT ......................... SKIPPED
+[INFO] drdsreader 0.0.1-SNAPSHOT .......................... SKIPPED
+[INFO] sqlserverreader 0.0.1-SNAPSHOT ..................... SKIPPED
+[INFO] postgresqlreader 0.0.1-SNAPSHOT .................... SKIPPED
+[INFO] kingbaseesreader 0.0.1-SNAPSHOT .................... SKIPPED
+[INFO] oraclereader 0.0.1-SNAPSHOT ........................ SKIPPED
+[INFO] cassandrareader 0.0.1-SNAPSHOT ..................... SKIPPED
+[INFO] oceanbasev10reader 0.0.1-SNAPSHOT .................. SKIPPED
+[INFO] rdbmsreader 0.0.1-SNAPSHOT ......................... SKIPPED
+[INFO] odpsreader 0.0.1-SNAPSHOT .......................... SKIPPED
+[INFO] otsreader 0.0.1-SNAPSHOT ........................... SKIPPED
+[INFO] otsstreamreader 0.0.1-SNAPSHOT ..................... SKIPPED
+[INFO] hbase11xreader 0.0.1-SNAPSHOT ...................... SKIPPED
+[INFO] hbase094xreader 0.0.1-SNAPSHOT ..................... SKIPPED
+[INFO] hbase11xsqlreader 0.0.1-SNAPSHOT ................... SKIPPED
+[INFO] hbase20xsqlreader 0.0.1-SNAPSHOT ................... SKIPPED
+[INFO] plugin-unstructured-storage-util 0.0.1-SNAPSHOT .... SKIPPED
+[INFO] hdfsreader 0.0.1-SNAPSHOT .......................... SKIPPED
+[INFO] ossreader 0.0.1-SNAPSHOT ........................... SKIPPED
+[INFO] ftpreader 0.0.1-SNAPSHOT ........................... SKIPPED
+[INFO] txtfilereader 0.0.1-SNAPSHOT ....................... SKIPPED
+[INFO] streamreader 0.0.1-SNAPSHOT ........................ SKIPPED
+[INFO] clickhousereader 0.0.1-SNAPSHOT .................... SKIPPED
+[INFO] mongodbreader 0.0.1-SNAPSHOT ....................... SKIPPED
+[INFO] tdenginewriter 0.0.1-SNAPSHOT ...................... SKIPPED
+[INFO] tdenginereader 0.0.1-SNAPSHOT ...................... SKIPPED
+[INFO] gdbreader 0.0.1-SNAPSHOT ........................... SKIPPED
+[INFO] tsdbreader 0.0.1-SNAPSHOT .......................... SKIPPED
+[INFO] opentsdbreader 0.0.1-SNAPSHOT ...................... SKIPPED
+[INFO] loghubreader 0.0.1-SNAPSHOT ........................ SKIPPED
+[INFO] datahubreader 0.0.1-SNAPSHOT ....................... SKIPPED
+[INFO] starrocksreader 0.0.1-SNAPSHOT ..................... SKIPPED
+[INFO] mysqlwriter 0.0.1-SNAPSHOT ......................... SKIPPED
+[INFO] starrockswriter 1.1.0 .............................. SKIPPED
+[INFO] drdswriter 0.0.1-SNAPSHOT .......................... SKIPPED
+[INFO] databendwriter 0.0.1-SNAPSHOT ...................... SKIPPED
+[INFO] oraclewriter 0.0.1-SNAPSHOT ........................ SKIPPED
+[INFO] sqlserverwriter 0.0.1-SNAPSHOT ..................... SKIPPED
+[INFO] postgresqlwriter 0.0.1-SNAPSHOT .................... SKIPPED
+[INFO] kingbaseeswriter 0.0.1-SNAPSHOT .................... SKIPPED
+[INFO] odpswriter 0.0.1-SNAPSHOT .......................... SKIPPED
+[INFO] adswriter 0.0.1-SNAPSHOT ........................... SKIPPED
+[INFO] oceanbasev10writer 0.0.1-SNAPSHOT .................. SKIPPED
+[INFO] adbpgwriter 0.0.1-SNAPSHOT ......................... SKIPPED
+[INFO] hologresjdbcwriter 0.0.1-SNAPSHOT .................. SKIPPED
+[INFO] rdbmswriter 0.0.1-SNAPSHOT ......................... SKIPPED
+[INFO] hdfswriter 0.0.1-SNAPSHOT .......................... SKIPPED
+[INFO] osswriter 0.0.1-SNAPSHOT ........................... SKIPPED
+[INFO] otswriter 0.0.1-SNAPSHOT ........................... SKIPPED
+[INFO] hbase11xwriter 0.0.1-SNAPSHOT ...................... SKIPPED
+[INFO] hbase094xwriter 0.0.1-SNAPSHOT ..................... SKIPPED
+[INFO] hbase11xsqlwriter 0.0.1-SNAPSHOT ................... SKIPPED
+[INFO] hbase20xsqlwriter 0.0.1-SNAPSHOT ................... SKIPPED
+[INFO] kuduwriter 0.0.1-SNAPSHOT .......................... SKIPPED
+[INFO] ftpwriter 0.0.1-SNAPSHOT ........................... SKIPPED
+[INFO] txtfilewriter 0.0.1-SNAPSHOT ....................... SKIPPED
+[INFO] streamwriter 0.0.1-SNAPSHOT ........................ SKIPPED
+[INFO] elasticsearchwriter 0.0.1-SNAPSHOT ................. SKIPPED
+[INFO] mongodbwriter 0.0.1-SNAPSHOT ....................... SKIPPED
+[INFO] ocswriter 0.0.1-SNAPSHOT ........................... SKIPPED
+[INFO] tsdbwriter 0.0.1-SNAPSHOT .......................... SKIPPED
+[INFO] gdbwriter 0.0.1-SNAPSHOT ........................... SKIPPED
+[INFO] oscarwriter 0.0.1-SNAPSHOT ......................... SKIPPED
+[INFO] loghubwriter 0.0.1-SNAPSHOT ........................ SKIPPED
+[INFO] datahubwriter 0.0.1-SNAPSHOT ....................... SKIPPED
+[INFO] cassandrawriter 0.0.1-SNAPSHOT ..................... SKIPPED
+[INFO] clickhousewriter 0.0.1-SNAPSHOT .................... SKIPPED
+[INFO] doriswriter 0.0.1-SNAPSHOT ......................... SKIPPED
+[INFO] selectdbwriter 0.0.1-SNAPSHOT ...................... SKIPPED
+[INFO] adbmysqlwriter 0.0.1-SNAPSHOT ...................... SKIPPED
+[INFO] neo4jwriter 0.0.1-SNAPSHOT ......................... SKIPPED
+[INFO] gaussdbreader 0.0.1-SNAPSHOT ....................... SKIPPED
+[INFO] gaussdbwriter 0.0.1-SNAPSHOT ....................... SKIPPED
+[INFO] datax-example 0.0.1-SNAPSHOT ....................... SKIPPED
+[INFO] datax-example-core 0.0.1-SNAPSHOT .................. SKIPPED
+[INFO] datax-example-streamreader 0.0.1-SNAPSHOT .......... SKIPPED
+[INFO] datax-example-neo4j 0.0.1-SNAPSHOT ................. SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  17.431 s
+[INFO] Finished at: 2023-12-28T09:02:31+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project datax-transformer: Could not resolve dependencies for project com.alibaba.datax:datax-transformer:jar:0.0.1-SNAPSHOT: Could not find artifact com.alibaba.datax:datax-common:jar:0.0.1-SNAPSHOT in central (https://maven.aliyun.com/repository/central) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :datax-transformer

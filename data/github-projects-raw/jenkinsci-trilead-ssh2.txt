@@ -1,0 +1,39 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< org.jenkins-ci:trilead-ssh2 >---------------------
+[INFO] Building Ganymed SSH2 for Java build-217-jenkins-999999-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ trilead-ssh2 ---
+[INFO] digraph "org.jenkins-ci:trilead-ssh2:jar:build-217-jenkins-999999-SNAPSHOT" { 
+[INFO] 	"org.jenkins-ci:trilead-ssh2:jar:build-217-jenkins-999999-SNAPSHOT" -> "commons-io:commons-io:jar:2.15.1:test" ; 
+[INFO] 	"org.jenkins-ci:trilead-ssh2:jar:build-217-jenkins-999999-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.jenkins-ci:trilead-ssh2:jar:build-217-jenkins-999999-SNAPSHOT" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.jenkins-ci:trilead-ssh2:jar:build-217-jenkins-999999-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.6.0:test" ; 
+[INFO] 	"org.jenkins-ci:trilead-ssh2:jar:build-217-jenkins-999999-SNAPSHOT" -> "net.i2p.crypto:eddsa:jar:0.3.0:compile" ; 
+[INFO] 	"org.jenkins-ci:trilead-ssh2:jar:build-217-jenkins-999999-SNAPSHOT" -> "org.connectbot.jbcrypt:jbcrypt:jar:1.0.0:compile" ; 
+[INFO] 	"org.jenkins-ci:trilead-ssh2:jar:build-217-jenkins-999999-SNAPSHOT" -> "com.google.crypto.tink:tink:jar:1.11.0:compile" ; 
+[INFO] 	"org.jenkins-ci:trilead-ssh2:jar:build-217-jenkins-999999-SNAPSHOT" -> "org.testcontainers:testcontainers:jar:1.19.3:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.6.0:test" -> "net.bytebuddy:byte-buddy:jar:1.14.8:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.6.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.8:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.6.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"com.google.crypto.tink:tink:jar:1.11.0:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.crypto.tink:tink:jar:1.11.0:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"com.google.crypto.tink:tink:jar:1.11.0:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.18.0:compile" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "org.slf4j:slf4j-api:jar:1.7.36:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "org.apache.commons:commons-compress:jar:1.24.0:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "com.github.docker-java:docker-java-api:jar:3.3.4:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" ; 
+[INFO] 	"org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" -> "org.jetbrains:annotations:jar:17.0.0:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-api:jar:3.3.4:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.10.3:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" -> "com.github.docker-java:docker-java-transport:jar:3.3.4:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" -> "net.java.dev.jna:jna:jar:5.13.0:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.608 s
+[INFO] Finished at: 2023-12-28T09:03:09+01:00
+[INFO] ------------------------------------------------------------------------

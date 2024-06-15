@@ -1,0 +1,506 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.cerner.bunsen:bunsen-core:jar:0.5.14-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for com.diffplug.spotless:spotless-maven-plugin is missing. @ com.cerner.bunsen:bunsen-parent:0.5.14-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/google-fhir-data-pipes/bunsen/pom.xml, line 172, column 15
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.cerner.bunsen:bunsen-core-r4:jar:0.5.14-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for com.diffplug.spotless:spotless-maven-plugin is missing. @ com.cerner.bunsen:bunsen-parent:0.5.14-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/google-fhir-data-pipes/bunsen/pom.xml, line 172, column 15
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.cerner.bunsen:bunsen-core-stu3:jar:0.5.14-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for com.diffplug.spotless:spotless-maven-plugin is missing. @ com.cerner.bunsen:bunsen-parent:0.5.14-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/google-fhir-data-pipes/bunsen/pom.xml, line 172, column 15
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.cerner.bunsen:bunsen-uscore-resources:jar:0.5.14-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for com.diffplug.spotless:spotless-maven-plugin is missing. @ com.cerner.bunsen:bunsen-parent:0.5.14-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/google-fhir-data-pipes/bunsen/pom.xml, line 172, column 15
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.cerner.bunsen:bunsen-avro:jar:0.5.14-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for com.diffplug.spotless:spotless-maven-plugin is missing. @ com.cerner.bunsen:bunsen-parent:0.5.14-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/google-fhir-data-pipes/bunsen/pom.xml, line 172, column 15
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.cerner.bunsen:bunsen-parent:pom:0.5.14-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for com.diffplug.spotless:spotless-maven-plugin is missing. @ line 172, column 15
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.google.fhir.analytics:batch:jar:0.2.7-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for com.diffplug.spotless:spotless-maven-plugin is missing. @ com.google.fhir.analytics:pipelines:0.2.7-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/google-fhir-data-pipes/pipelines/pom.xml, line 299, column 15
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.google.fhir.analytics:streaming:jar:0.2.7-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for com.diffplug.spotless:spotless-maven-plugin is missing. @ com.google.fhir.analytics:pipelines:0.2.7-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/google-fhir-data-pipes/pipelines/pom.xml, line 299, column 15
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.google.fhir.analytics:common:jar:0.2.7-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for com.diffplug.spotless:spotless-maven-plugin is missing. @ com.google.fhir.analytics:pipelines:0.2.7-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/google-fhir-data-pipes/pipelines/pom.xml, line 299, column 15
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.google.fhir.analytics:controller:jar:0.2.7-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for com.diffplug.spotless:spotless-maven-plugin is missing. @ com.google.fhir.analytics:pipelines:0.2.7-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/google-fhir-data-pipes/pipelines/pom.xml, line 299, column 15
+[WARNING] 'build.plugins.plugin.version' for org.springframework.boot:spring-boot-maven-plugin is missing. @ line 184, column 15
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.google.fhir.analytics:pipelines:pom:0.2.7-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for com.diffplug.spotless:spotless-maven-plugin is missing. @ line 299, column 15
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] root                                                               [pom]
+[INFO] Bunsen Parent                                                      [pom]
+[INFO] Bunsen Core                                                        [jar]
+[INFO] Bunsen Core R4                                                     [jar]
+[INFO] Bunsen Core Stu3                                                   [jar]
+[INFO] Bunsen US Core STU3 and R4 Resources                               [jar]
+[INFO] Bunsen Avro                                                        [jar]
+[INFO] FHIR Analytics                                                     [pom]
+[INFO] common                                                             [jar]
+[INFO] batch                                                              [jar]
+[INFO] streaming                                                          [jar]
+[INFO] controller                                                         [jar]
+[INFO] 
+[INFO] -------------------< com.google.fhir.analytics:root >-------------------
+[INFO] Building root 0.2.7-SNAPSHOT                                      [1/12]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ root ---
+[INFO] digraph "com.google.fhir.analytics:root:pom:0.2.7-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< com.cerner.bunsen:bunsen-parent >-------------------
+[INFO] Building Bunsen Parent 0.5.14-SNAPSHOT                            [2/12]
+[INFO] --------------------------------[ pom ]---------------------------------
+[WARNING] The POM for org.eclipse.m2e:lifecycle-mapping:jar:1.0.0 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.eclipse.m2e:lifecycle-mapping:1.0.0: Plugin org.eclipse.m2e:lifecycle-mapping:1.0.0 or one of its dependencies could not be resolved: Failure to find org.eclipse.m2e:lifecycle-mapping:jar:1.0.0 in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ bunsen-parent ---
+[INFO] digraph "com.cerner.bunsen:bunsen-parent:pom:0.5.14-SNAPSHOT" { 
+[INFO] 	"com.cerner.bunsen:bunsen-parent:pom:0.5.14-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-parent:pom:0.5.14-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.4.12:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.12:test" -> "ch.qos.logback:logback-core:jar:1.4.12:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< com.cerner.bunsen:bunsen-core >--------------------
+[INFO] Building Bunsen Core 0.5.14-SNAPSHOT                              [3/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The POM for org.eclipse.m2e:lifecycle-mapping:jar:1.0.0 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.eclipse.m2e:lifecycle-mapping:1.0.0: Plugin org.eclipse.m2e:lifecycle-mapping:1.0.0 or one of its dependencies could not be resolved: Failure to find org.eclipse.m2e:lifecycle-mapping:jar:1.0.0 in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ bunsen-core ---
+[INFO] digraph "com.cerner.bunsen:bunsen-core:jar:0.5.14-SNAPSHOT" { 
+[INFO] 	"com.cerner.bunsen:bunsen-core:jar:0.5.14-SNAPSHOT" -> "ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-core:jar:0.5.14-SNAPSHOT" -> "ca.uhn.hapi.fhir:hapi-fhir-validation-resources-dstu3:jar:6.6.2:compile" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-core:jar:0.5.14-SNAPSHOT" -> "ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-core:jar:0.5.14-SNAPSHOT" -> "ca.uhn.hapi.fhir:hapi-fhir-structures-dstu3:jar:6.6.2:compile" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-core:jar:0.5.14-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-core:jar:0.5.14-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-core:jar:0.5.14-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.4.12:test" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.15.0:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.0:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "com.google.guava:guava:jar:31.0.1-jre:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "org.slf4j:jcl-over-slf4j:jar:2.0.3:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.15.0:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.15.0:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.12.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.7.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:hapi-fhir-converter:jar:6.6.2:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:hapi-fhir-caching-api:jar:6.6.2:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:hapi-fhir-caching-caffeine:jar:6.6.2:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "org.codelibs:xpp3:jar:1.1.4c.0:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.utilities:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "org.fhir:ucum:jar:1.0.3:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "com.google.code.gson:gson:jar:2.8.9:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:hapi-fhir-structures-r5:jar:6.6.2:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-converter:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.convertors:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.convertors:jar:6.0.1:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.r4b:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.dstu2:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.dstu2016may:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.r4:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.r5:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "net.sf.saxon:Saxon-HE:jar:9.8.0-15:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "xpp3:xpp3_xpath:jar:1.1.4c:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "org.apache.commons:commons-compress:jar:1.21:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE:compile" -> "ognl:ognl:jar:3.1.12:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE:compile" -> "org.attoparser:attoparser:jar:2.0.4.RELEASE:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE:compile" -> "org.unbescape:unbescape:jar:1.1.5.RELEASE:compile" ; 
+[INFO] 	"ognl:ognl:jar:3.1.12:compile" -> "org.javassist:javassist:jar:3.20.0-GA:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.utilities:jar:6.0.1:compile" -> "com.ibm.icu:icu4j:jar:72.1:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.13:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-structures-dstu3:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.dstu3:jar:6.0.1:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.12:test" -> "ch.qos.logback:logback-core:jar:1.4.12:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< com.cerner.bunsen:bunsen-core-r4 >------------------
+[INFO] Building Bunsen Core R4 0.5.14-SNAPSHOT                           [4/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The POM for org.eclipse.m2e:lifecycle-mapping:jar:1.0.0 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.eclipse.m2e:lifecycle-mapping:1.0.0: Plugin org.eclipse.m2e:lifecycle-mapping:1.0.0 or one of its dependencies could not be resolved: Failure to find org.eclipse.m2e:lifecycle-mapping:jar:1.0.0 in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced
+[INFO] Downloading from sonatype: https://oss.sonatype.org/content/groups/public/com/cerner/bunsen/bunsen-core/0.5.14-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ bunsen-core-r4 ---
+[INFO] digraph "com.cerner.bunsen:bunsen-core-r4:jar:0.5.14-SNAPSHOT" { 
+[INFO] 	"com.cerner.bunsen:bunsen-core-r4:jar:0.5.14-SNAPSHOT" -> "com.cerner.bunsen:bunsen-core:jar:0.5.14-SNAPSHOT:compile" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-core-r4:jar:0.5.14-SNAPSHOT" -> "ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-core-r4:jar:0.5.14-SNAPSHOT" -> "ca.uhn.hapi.fhir:hapi-fhir-validation-resources-r4:jar:6.6.2:compile" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-core-r4:jar:0.5.14-SNAPSHOT" -> "ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-core-r4:jar:0.5.14-SNAPSHOT" -> "ca.uhn.hapi.fhir:hapi-fhir-structures-r4:jar:6.6.2:compile" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-core-r4:jar:0.5.14-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-core-r4:jar:0.5.14-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-core-r4:jar:0.5.14-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.4.12:test" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-core:jar:0.5.14-SNAPSHOT:compile" -> "ca.uhn.hapi.fhir:hapi-fhir-validation-resources-dstu3:jar:6.6.2:compile" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-core:jar:0.5.14-SNAPSHOT:compile" -> "ca.uhn.hapi.fhir:hapi-fhir-structures-dstu3:jar:6.6.2:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-structures-dstu3:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.dstu3:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.15.0:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.0:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "com.google.guava:guava:jar:31.0.1-jre:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "org.slf4j:jcl-over-slf4j:jar:2.0.3:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.15.0:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.15.0:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.12.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.7.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:hapi-fhir-converter:jar:6.6.2:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:hapi-fhir-caching-api:jar:6.6.2:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:hapi-fhir-caching-caffeine:jar:6.6.2:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "org.codelibs:xpp3:jar:1.1.4c.0:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.utilities:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "org.fhir:ucum:jar:1.0.3:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "com.google.code.gson:gson:jar:2.8.9:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:hapi-fhir-structures-r5:jar:6.6.2:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-converter:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.convertors:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.convertors:jar:6.0.1:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.r4b:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.dstu2:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.dstu2016may:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.r5:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "net.sf.saxon:Saxon-HE:jar:9.8.0-15:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "xpp3:xpp3_xpath:jar:1.1.4c:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "org.apache.commons:commons-compress:jar:1.21:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE:compile" -> "ognl:ognl:jar:3.1.12:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE:compile" -> "org.attoparser:attoparser:jar:2.0.4.RELEASE:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE:compile" -> "org.unbescape:unbescape:jar:1.1.5.RELEASE:compile" ; 
+[INFO] 	"ognl:ognl:jar:3.1.12:compile" -> "org.javassist:javassist:jar:3.20.0-GA:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.utilities:jar:6.0.1:compile" -> "com.ibm.icu:icu4j:jar:72.1:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.13:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-structures-r4:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.r4:jar:6.0.1:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.12:test" -> "ch.qos.logback:logback-core:jar:1.4.12:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< com.cerner.bunsen:bunsen-core-stu3 >-----------------
+[INFO] Building Bunsen Core Stu3 0.5.14-SNAPSHOT                         [5/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The POM for org.eclipse.m2e:lifecycle-mapping:jar:1.0.0 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.eclipse.m2e:lifecycle-mapping:1.0.0: Plugin org.eclipse.m2e:lifecycle-mapping:1.0.0 or one of its dependencies could not be resolved: Failure to find org.eclipse.m2e:lifecycle-mapping:jar:1.0.0 in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ bunsen-core-stu3 ---
+[INFO] digraph "com.cerner.bunsen:bunsen-core-stu3:jar:0.5.14-SNAPSHOT" { 
+[INFO] 	"com.cerner.bunsen:bunsen-core-stu3:jar:0.5.14-SNAPSHOT" -> "com.cerner.bunsen:bunsen-core:jar:0.5.14-SNAPSHOT:compile" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-core-stu3:jar:0.5.14-SNAPSHOT" -> "ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-core-stu3:jar:0.5.14-SNAPSHOT" -> "ca.uhn.hapi.fhir:hapi-fhir-validation-resources-dstu3:jar:6.6.2:compile" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-core-stu3:jar:0.5.14-SNAPSHOT" -> "ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-core-stu3:jar:0.5.14-SNAPSHOT" -> "ca.uhn.hapi.fhir:hapi-fhir-structures-dstu3:jar:6.6.2:compile" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-core-stu3:jar:0.5.14-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-core-stu3:jar:0.5.14-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-core-stu3:jar:0.5.14-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.4.12:test" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.15.0:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.0:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "com.google.guava:guava:jar:31.0.1-jre:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "org.slf4j:jcl-over-slf4j:jar:2.0.3:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.15.0:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.15.0:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.12.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.7.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:hapi-fhir-converter:jar:6.6.2:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:hapi-fhir-caching-api:jar:6.6.2:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:hapi-fhir-caching-caffeine:jar:6.6.2:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "org.codelibs:xpp3:jar:1.1.4c.0:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.utilities:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "org.fhir:ucum:jar:1.0.3:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "com.google.code.gson:gson:jar:2.8.9:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:hapi-fhir-structures-r5:jar:6.6.2:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-converter:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.convertors:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.convertors:jar:6.0.1:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.r4b:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.dstu2:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.dstu2016may:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.r4:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.r5:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "net.sf.saxon:Saxon-HE:jar:9.8.0-15:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "xpp3:xpp3_xpath:jar:1.1.4c:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "org.apache.commons:commons-compress:jar:1.21:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE:compile" -> "ognl:ognl:jar:3.1.12:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE:compile" -> "org.attoparser:attoparser:jar:2.0.4.RELEASE:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE:compile" -> "org.unbescape:unbescape:jar:1.1.5.RELEASE:compile" ; 
+[INFO] 	"ognl:ognl:jar:3.1.12:compile" -> "org.javassist:javassist:jar:3.20.0-GA:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.utilities:jar:6.0.1:compile" -> "com.ibm.icu:icu4j:jar:72.1:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.13:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-structures-dstu3:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.dstu3:jar:6.0.1:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.12:test" -> "ch.qos.logback:logback-core:jar:1.4.12:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< com.cerner.bunsen:bunsen-uscore-resources >--------------
+[INFO] Building Bunsen US Core STU3 and R4 Resources 0.5.14-SNAPSHOT     [6/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The POM for org.eclipse.m2e:lifecycle-mapping:jar:1.0.0 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.eclipse.m2e:lifecycle-mapping:1.0.0: Plugin org.eclipse.m2e:lifecycle-mapping:1.0.0 or one of its dependencies could not be resolved: Failure to find org.eclipse.m2e:lifecycle-mapping:jar:1.0.0 in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ bunsen-uscore-resources ---
+[INFO] digraph "com.cerner.bunsen:bunsen-uscore-resources:jar:0.5.14-SNAPSHOT" { 
+[INFO] 	"com.cerner.bunsen:bunsen-uscore-resources:jar:0.5.14-SNAPSHOT" -> "com.cerner.bunsen:bunsen-core:jar:0.5.14-SNAPSHOT:compile" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-uscore-resources:jar:0.5.14-SNAPSHOT" -> "ca.uhn.hapi.fhir:hapi-fhir-validation-resources-dstu3:jar:6.6.2:compile" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-uscore-resources:jar:0.5.14-SNAPSHOT" -> "ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-uscore-resources:jar:0.5.14-SNAPSHOT" -> "ca.uhn.hapi.fhir:hapi-fhir-structures-dstu3:jar:6.6.2:compile" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-uscore-resources:jar:0.5.14-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-uscore-resources:jar:0.5.14-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-uscore-resources:jar:0.5.14-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.4.12:test" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-core:jar:0.5.14-SNAPSHOT:compile" -> "ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.15.0:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.0:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "com.google.guava:guava:jar:31.0.1-jre:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "org.slf4j:jcl-over-slf4j:jar:2.0.3:compile" ; 
+[INFO] 	"com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.15.0:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.15.0:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:hapi-fhir-converter:jar:6.6.2:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:hapi-fhir-caching-api:jar:6.6.2:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:hapi-fhir-caching-caffeine:jar:6.6.2:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "org.codelibs:xpp3:jar:1.1.4c.0:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.utilities:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "org.fhir:ucum:jar:1.0.3:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "com.google.code.gson:gson:jar:2.8.9:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:hapi-fhir-structures-r5:jar:6.6.2:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-converter:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.convertors:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.convertors:jar:6.0.1:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.r4b:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.dstu2:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.dstu2016may:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.r4:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.r5:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "net.sf.saxon:Saxon-HE:jar:9.8.0-15:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "xpp3:xpp3_xpath:jar:1.1.4c:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "org.apache.commons:commons-compress:jar:1.21:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE:compile" -> "ognl:ognl:jar:3.1.12:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE:compile" -> "org.attoparser:attoparser:jar:2.0.4.RELEASE:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE:compile" -> "org.unbescape:unbescape:jar:1.1.5.RELEASE:compile" ; 
+[INFO] 	"ognl:ognl:jar:3.1.12:compile" -> "org.javassist:javassist:jar:3.20.0-GA:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.utilities:jar:6.0.1:compile" -> "com.ibm.icu:icu4j:jar:72.1:compile" ; 
+[INFO] 	"com.github.ben-manes.caffeine:caffeine:jar:3.1.1:compile" -> "org.checkerframework:checker-qual:jar:3.22.0:compile" ; 
+[INFO] 	"com.github.ben-manes.caffeine:caffeine:jar:3.1.1:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.14.0:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.13:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-structures-dstu3:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.dstu3:jar:6.0.1:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.12:test" -> "ch.qos.logback:logback-core:jar:1.4.12:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< com.cerner.bunsen:bunsen-avro >--------------------
+[INFO] Building Bunsen Avro 0.5.14-SNAPSHOT                              [7/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The POM for org.eclipse.m2e:lifecycle-mapping:jar:1.0.0 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.eclipse.m2e:lifecycle-mapping:1.0.0: Plugin org.eclipse.m2e:lifecycle-mapping:1.0.0 or one of its dependencies could not be resolved: Failure to find org.eclipse.m2e:lifecycle-mapping:jar:1.0.0 in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced
+[INFO] Downloading from sonatype: https://oss.sonatype.org/content/groups/public/com/cerner/bunsen/bunsen-core-stu3/0.5.14-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from sonatype: https://oss.sonatype.org/content/groups/public/com/cerner/bunsen/bunsen-core-r4/0.5.14-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from sonatype: https://oss.sonatype.org/content/groups/public/com/cerner/bunsen/bunsen-uscore-resources/0.5.14-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ bunsen-avro ---
+[INFO] digraph "com.cerner.bunsen:bunsen-avro:jar:0.5.14-SNAPSHOT" { 
+[INFO] 	"com.cerner.bunsen:bunsen-avro:jar:0.5.14-SNAPSHOT" -> "com.cerner.bunsen:bunsen-core:jar:0.5.14-SNAPSHOT:compile" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-avro:jar:0.5.14-SNAPSHOT" -> "org.apache.avro:avro:jar:1.11.3:compile" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-avro:jar:0.5.14-SNAPSHOT" -> "ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-avro:jar:0.5.14-SNAPSHOT" -> "com.cerner.bunsen:bunsen-core-stu3:jar:0.5.14-SNAPSHOT:test" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-avro:jar:0.5.14-SNAPSHOT" -> "com.cerner.bunsen:bunsen-core-r4:jar:0.5.14-SNAPSHOT:test" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-avro:jar:0.5.14-SNAPSHOT" -> "org.apache.avro:avro-compiler:jar:1.11.3:test" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-avro:jar:0.5.14-SNAPSHOT" -> "com.cerner.bunsen:bunsen-core-stu3:test-jar:tests:0.5.14-SNAPSHOT:test" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-avro:jar:0.5.14-SNAPSHOT" -> "com.cerner.bunsen:bunsen-core-r4:test-jar:tests:0.5.14-SNAPSHOT:test" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-avro:jar:0.5.14-SNAPSHOT" -> "com.cerner.bunsen:bunsen-uscore-resources:jar:0.5.14-SNAPSHOT:test" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-avro:jar:0.5.14-SNAPSHOT" -> "com.cerner.bunsen:bunsen-uscore-resources:test-jar:tests:0.5.14-SNAPSHOT:test" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-avro:jar:0.5.14-SNAPSHOT" -> "ca.uhn.hapi.fhir:hapi-fhir-validation-resources-dstu3:jar:6.6.2:compile" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-avro:jar:0.5.14-SNAPSHOT" -> "ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-avro:jar:0.5.14-SNAPSHOT" -> "ca.uhn.hapi.fhir:hapi-fhir-structures-dstu3:jar:6.6.2:compile" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-avro:jar:0.5.14-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-avro:jar:0.5.14-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-avro:jar:0.5.14-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.4.12:test" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.11.3:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.14.2:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.11.3:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.14.2:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.11.3:compile" -> "org.apache.commons:commons-compress:jar:1.22:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.14.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.14.2:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.15.0:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "com.google.guava:guava:jar:31.0.1-jre:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "org.slf4j:jcl-over-slf4j:jar:2.0.3:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-base:jar:6.6.2:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.12.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.7.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-core-r4:jar:0.5.14-SNAPSHOT:test" -> "ca.uhn.hapi.fhir:hapi-fhir-validation-resources-r4:jar:6.6.2:test" ; 
+[INFO] 	"com.cerner.bunsen:bunsen-core-r4:jar:0.5.14-SNAPSHOT:test" -> "ca.uhn.hapi.fhir:hapi-fhir-structures-r4:jar:6.6.2:test" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-structures-r4:jar:6.6.2:test" -> "ca.uhn.hapi.fhir:org.hl7.fhir.r4:jar:6.0.1:compile" ; 
+[INFO] 	"org.apache.avro:avro-compiler:jar:1.11.3:test" -> "org.apache.velocity:velocity-engine-core:jar:2.3:test" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:hapi-fhir-converter:jar:6.6.2:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:hapi-fhir-caching-api:jar:6.6.2:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:hapi-fhir-caching-caffeine:jar:6.6.2:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "org.codelibs:xpp3:jar:1.1.4c.0:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.utilities:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "org.fhir:ucum:jar:1.0.3:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "com.google.code.gson:gson:jar:2.8.9:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:hapi-fhir-structures-r5:jar:6.6.2:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-validation:jar:6.6.2:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-converter:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.convertors:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.convertors:jar:6.0.1:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.r4b:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.dstu2:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.dstu2016may:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.r5:jar:6.0.1:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "net.sf.saxon:Saxon-HE:jar:9.8.0-15:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "xpp3:xpp3_xpath:jar:1.1.4c:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.validation:jar:6.0.1:compile" -> "org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE:compile" -> "ognl:ognl:jar:3.1.12:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE:compile" -> "org.attoparser:attoparser:jar:2.0.4.RELEASE:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE:compile" -> "org.unbescape:unbescape:jar:1.1.5.RELEASE:compile" ; 
+[INFO] 	"ognl:ognl:jar:3.1.12:compile" -> "org.javassist:javassist:jar:3.20.0-GA:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:org.hl7.fhir.utilities:jar:6.0.1:compile" -> "com.ibm.icu:icu4j:jar:72.1:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.13:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"ca.uhn.hapi.fhir:hapi-fhir-structures-dstu3:jar:6.6.2:compile" -> "ca.uhn.hapi.fhir:org.hl7.fhir.dstu3:jar:6.0.1:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.12:test" -> "ch.qos.logback:logback-core:jar:1.4.12:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< com.google.fhir.analytics:pipelines >-----------------
+[INFO] Building FHIR Analytics 0.2.7-SNAPSHOT                            [8/12]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ pipelines ---
+[INFO] digraph "com.google.fhir.analytics:pipelines:pom:0.2.7-SNAPSHOT" { 
+[INFO] 	"com.google.fhir.analytics:pipelines:pom:0.2.7-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"com.google.fhir.analytics:pipelines:pom:0.2.7-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.4.11:runtime" ; 
+[INFO] 	"com.google.fhir.analytics:pipelines:pom:0.2.7-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.google.fhir.analytics:pipelines:pom:0.2.7-SNAPSHOT" -> "org.projectlombok:lombok:jar:1.18.30:compile" ; 
+[INFO] 	"com.google.fhir.analytics:pipelines:pom:0.2.7-SNAPSHOT" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"com.google.fhir.analytics:pipelines:pom:0.2.7-SNAPSHOT" -> "org.hamcrest:hamcrest-library:jar:2.2:test" ; 
+[INFO] 	"com.google.fhir.analytics:pipelines:pom:0.2.7-SNAPSHOT" -> "org.mockito:mockito-inline:jar:5.2.0:test" ; 
+[INFO] 	"com.google.fhir.analytics:pipelines:pom:0.2.7-SNAPSHOT" -> "com.google.auto.value:auto-value-annotations:jar:1.10.4:compile" ; 
+[INFO] 	"com.google.fhir.analytics:pipelines:pom:0.2.7-SNAPSHOT" -> "com.google.auto.value:auto-value:jar:1.10.4:compile" ; 
+[INFO] 	"com.google.fhir.analytics:pipelines:pom:0.2.7-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.11:runtime" -> "ch.qos.logback:logback-core:jar:1.4.11:runtime" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.mockito:mockito-inline:jar:5.2.0:test" -> "org.mockito:mockito-core:jar:5.2.0:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.2.0:test" -> "net.bytebuddy:byte-buddy:jar:1.14.1:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.2.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.1:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.2.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< com.google.fhir.analytics:common >------------------
+[INFO] Building common 0.2.7-SNAPSHOT                                    [9/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from google-maven-central-copy: https://maven-central.storage-download.googleapis.com/maven2/io/grpc/grpc-api/maven-metadata.xml
+[INFO] Downloading from maven-central: https://repo1.maven.org/maven2/io/grpc/grpc-api/maven-metadata.xml
+[INFO] Downloaded from maven-central: https://repo1.maven.org/maven2/io/grpc/grpc-api/maven-metadata.xml (3.6 kB at 9.7 kB/s)
+[INFO] Downloaded from google-maven-central-copy: https://maven-central.storage-download.googleapis.com/maven2/io/grpc/grpc-api/maven-metadata.xml (3.6 kB at 6.1 kB/s)
+[INFO] Downloading from google-maven-central-copy: https://maven-central.storage-download.googleapis.com/maven2/io/grpc/grpc-core/maven-metadata.xml
+[INFO] Downloading from maven-central: https://repo1.maven.org/maven2/io/grpc/grpc-core/maven-metadata.xml
+[INFO] Downloaded from maven-central: https://repo1.maven.org/maven2/io/grpc/grpc-core/maven-metadata.xml (5.2 kB at 49 kB/s)
+[INFO] Downloaded from google-maven-central-copy: https://maven-central.storage-download.googleapis.com/maven2/io/grpc/grpc-core/maven-metadata.xml (5.2 kB at 20 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/grpc/grpc-alts/maven-metadata.xml
+[INFO] Downloading from google-maven-central-copy: https://maven-central.storage-download.googleapis.com/maven2/io/grpc/grpc-alts/maven-metadata.xml
+[INFO] Downloading from maven-central: https://repo1.maven.org/maven2/io/grpc/grpc-alts/maven-metadata.xml
+[INFO] Downloaded from maven-central: https://repo1.maven.org/maven2/io/grpc/grpc-alts/maven-metadata.xml (4.1 kB at 78 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/grpc/grpc-alts/maven-metadata.xml (4.1 kB at 24 kB/s)
+[INFO] Downloaded from google-maven-central-copy: https://maven-central.storage-download.googleapis.com/maven2/io/grpc/grpc-alts/maven-metadata.xml (4.1 kB at 15 kB/s)
+[INFO] Downloading from google-maven-central-copy: https://maven-central.storage-download.googleapis.com/maven2/io/grpc/grpc-xds/maven-metadata.xml
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/grpc/grpc-xds/maven-metadata.xml
+[INFO] Downloading from maven-central: https://repo1.maven.org/maven2/io/grpc/grpc-xds/maven-metadata.xml
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/grpc/grpc-xds/maven-metadata.xml (3.0 kB at 69 kB/s)
+[INFO] Downloaded from maven-central: https://repo1.maven.org/maven2/io/grpc/grpc-xds/maven-metadata.xml (3.0 kB at 56 kB/s)
+[INFO] Downloaded from google-maven-central-copy: https://maven-central.storage-download.googleapis.com/maven2/io/grpc/grpc-xds/maven-metadata.xml (3.0 kB at 10 kB/s)
+[INFO] Downloading from google-maven-central-copy: https://maven-central.storage-download.googleapis.com/maven2/io/grpc/grpc-netty-shaded/maven-metadata.xml
+[INFO] Downloading from maven-central: https://repo1.maven.org/maven2/io/grpc/grpc-netty-shaded/maven-metadata.xml
+[INFO] Downloaded from maven-central: https://repo1.maven.org/maven2/io/grpc/grpc-netty-shaded/maven-metadata.xml (4.2 kB at 50 kB/s)
+[INFO] Downloaded from google-maven-central-copy: https://maven-central.storage-download.googleapis.com/maven2/io/grpc/grpc-netty-shaded/maven-metadata.xml (4.2 kB at 15 kB/s)
+[INFO] Downloading from sonatype: https://oss.sonatype.org/content/groups/public/com/cerner/bunsen/bunsen-core/0.5.14-SNAPSHOT/bunsen-core-0.5.14-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] root 0.2.7-SNAPSHOT ................................ SUCCESS [  3.329 s]
+[INFO] Bunsen Parent 0.5.14-SNAPSHOT ...................... SUCCESS [  3.883 s]
+[INFO] Bunsen Core 0.5.14-SNAPSHOT ........................ SUCCESS [  0.742 s]
+[INFO] Bunsen Core R4 0.5.14-SNAPSHOT ..................... SUCCESS [  2.717 s]
+[INFO] Bunsen Core Stu3 0.5.14-SNAPSHOT ................... SUCCESS [  0.211 s]
+[INFO] Bunsen US Core STU3 and R4 Resources 0.5.14-SNAPSHOT SUCCESS [  0.279 s]
+[INFO] Bunsen Avro 0.5.14-SNAPSHOT ........................ SUCCESS [  1.619 s]
+[INFO] FHIR Analytics 0.2.7-SNAPSHOT ...................... SUCCESS [  0.432 s]
+[INFO] common 0.2.7-SNAPSHOT .............................. FAILURE [  8.804 s]
+[INFO] batch 0.2.7-SNAPSHOT ............................... SKIPPED
+[INFO] streaming 0.2.7-SNAPSHOT ........................... SKIPPED
+[INFO] controller 0.2.7-SNAPSHOT .......................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  25.569 s
+[INFO] Finished at: 2023-12-28T09:03:01+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project common: Could not resolve dependencies for project com.google.fhir.analytics:common:jar:0.2.7-SNAPSHOT: The following artifacts could not be resolved: com.cerner.bunsen:bunsen-core-stu3:jar:0.5.14-SNAPSHOT, com.cerner.bunsen:bunsen-core:jar:0.5.14-SNAPSHOT, com.cerner.bunsen:bunsen-core-r4:jar:0.5.14-SNAPSHOT, com.cerner.bunsen:bunsen-avro:jar:0.5.14-SNAPSHOT, com.cerner.bunsen:bunsen-uscore-resources:jar:0.5.14-SNAPSHOT: Could not find artifact com.cerner.bunsen:bunsen-core-stu3:jar:0.5.14-SNAPSHOT -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :common

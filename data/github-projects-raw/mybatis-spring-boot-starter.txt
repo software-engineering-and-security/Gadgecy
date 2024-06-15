@@ -1,0 +1,1136 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.mybatis.spring.boot:mybatis-spring-boot:pom:3.0.4-SNAPSHOT
+[WARNING] 'profiles.profile[format].activation.file.exists' Failed to interpolate file location ${project.basedir}/format.xml for profile format: ${project.basedir} expression not supported during profile activation, use ${basedir} instead @ org.mybatis:mybatis-parent:40
+[WARNING] 'profiles.profile[license].activation.file.exists' Failed to interpolate file location ${project.basedir}/LICENSE_HEADER for profile license: ${project.basedir} expression not supported during profile activation, use ${basedir} instead @ org.mybatis:mybatis-parent:40
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] mybatis-spring-boot                                                [pom]
+[INFO] mybatis-spring-boot-autoconfigure                                  [jar]
+[INFO] mybatis-spring-boot-starter                                        [jar]
+[INFO] mybatis-spring-boot-test-autoconfigure                             [jar]
+[INFO] mybatis-spring-boot-starter-test                                   [jar]
+[INFO] mybatis-spring-boot-samples                                        [pom]
+[INFO] mybatis-spring-boot-sample-annotation                              [jar]
+[INFO] mybatis-spring-boot-sample-freemarker                              [jar]
+[INFO] mybatis-spring-boot-sample-freemarker-legacy                       [jar]
+[INFO] mybatis-spring-boot-sample-groovy                                  [jar]
+[INFO] mybatis-spring-boot-sample-kotlin                                  [jar]
+[INFO] mybatis-spring-boot-sample-thymeleaf                               [jar]
+[INFO] mybatis-spring-boot-sample-velocity                                [jar]
+[INFO] mybatis-spring-boot-sample-velocity-legacy                         [jar]
+[INFO] mybatis-spring-boot-sample-war                                     [war]
+[INFO] mybatis-spring-boot-sample-web                                     [jar]
+[INFO] mybatis-spring-boot-sample-xml                                     [jar]
+[INFO] 
+[INFO] ------------< org.mybatis.spring.boot:mybatis-spring-boot >-------------
+[INFO] Building mybatis-spring-boot 3.0.4-SNAPSHOT                       [1/17]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ mybatis-spring-boot ---
+[INFO] digraph "org.mybatis.spring.boot:mybatis-spring-boot:pom:3.0.4-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] -----< org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure >------
+[INFO] Building mybatis-spring-boot-autoconfigure 3.0.4-SNAPSHOT         [2/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ mybatis-spring-boot-autoconfigure ---
+[INFO] digraph "org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:3.0.4-SNAPSHOT" { 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:3.0.4-SNAPSHOT" -> "org.springframework.boot:spring-boot-autoconfigure:jar:3.2.0:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:3.0.4-SNAPSHOT" -> "org.mybatis:mybatis:jar:3.5.14:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:3.0.4-SNAPSHOT" -> "org.mybatis:mybatis-spring:jar:3.0.3:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:3.0.4-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:3.0.4-SNAPSHOT" -> "org.mybatis.scripting:mybatis-freemarker:jar:1.2.4:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:3.0.4-SNAPSHOT" -> "org.mybatis.scripting:mybatis-velocity:jar:2.1.2:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:3.0.4-SNAPSHOT" -> "org.mybatis.scripting:mybatis-thymeleaf:jar:1.0.4:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:3.0.4-SNAPSHOT" -> "org.springframework.boot:spring-boot-autoconfigure-processor:jar:3.2.0:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:3.0.4-SNAPSHOT" -> "org.springframework.boot:spring-boot-configuration-processor:jar:3.2.0:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:3.0.4-SNAPSHOT" -> "com.h2database:h2:jar:2.2.224:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:3.0.4-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:3.0.4-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:3.0.4-SNAPSHOT" -> "org.flywaydb:flyway-core:jar:9.22.3:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:3.0.4-SNAPSHOT" -> "org.liquibase:liquibase-core:jar:4.24.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-autoconfigure:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:3.2.0:compile" -> "org.springframework:spring-context:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "org.springframework:spring-aop:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "org.springframework:spring-expression:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "io.micrometer:micrometer-observation:jar:1.12.0:compile" ; 
+[INFO] 	"io.micrometer:micrometer-observation:jar:1.12.0:compile" -> "io.micrometer:micrometer-commons:jar:1.12.0:compile" ; 
+[INFO] 	"org.mybatis.scripting:mybatis-freemarker:jar:1.2.4:compile" -> "org.freemarker:freemarker:jar:2.3.32:compile" ; 
+[INFO] 	"org.mybatis.scripting:mybatis-freemarker:jar:1.2.4:compile" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"org.mybatis.scripting:mybatis-velocity:jar:2.1.2:compile" -> "org.apache.velocity:velocity-engine-core:jar:2.3:compile" ; 
+[INFO] 	"org.mybatis.scripting:mybatis-thymeleaf:jar:1.0.4:compile" -> "org.thymeleaf:thymeleaf:jar:3.1.2.RELEASE:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.1.2.RELEASE:compile" -> "ognl:ognl:jar:3.3.4:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.1.2.RELEASE:compile" -> "org.attoparser:attoparser:jar:2.0.7.RELEASE:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.1.2.RELEASE:compile" -> "org.unbescape:unbescape:jar:1.1.6.RELEASE:compile" ; 
+[INFO] 	"ognl:ognl:jar:3.3.4:compile" -> "org.javassist:javassist:jar:3.29.0-GA:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:test" -> "org.springframework.boot:spring-boot-starter:jar:3.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:test" -> "com.zaxxer:HikariCP:jar:5.0.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:test" -> "org.springframework:spring-jdbc:jar:6.1.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:test" -> "org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:test" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:test" -> "ch.qos.logback:logback-classic:jar:1.4.11:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:test" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.21.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:test" -> "org.slf4j:jul-to-slf4j:jar:2.0.9:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.11:test" -> "ch.qos.logback:logback-core:jar:1.4.11:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.21.1:test" -> "org.apache.logging.log4j:log4j-api:jar:2.21.1:test" ; 
+[INFO] 	"org.springframework:spring-jdbc:jar:6.1.1:test" -> "org.springframework:spring-beans:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-jdbc:jar:6.1.1:test" -> "org.springframework:spring-tx:jar:6.1.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework.boot:spring-boot-test:jar:3.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:3.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "com.jayway.jsonpath:json-path:jar:2.8.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "net.minidev:json-smart:jar:2.5.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.awaitility:awaitility:jar:4.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.mockito:mockito-core:jar:5.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.mockito:mockito-junit-jupiter:jar:5.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework:spring-core:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework:spring-test:jar:6.1.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.xmlunit:xmlunit-core:jar:2.9.1:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:test" -> "jakarta.activation:jakarta.activation-api:jar:2.1.2:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.5.0:test" -> "net.minidev:accessors-smart:jar:2.5.0:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.5.0:test" -> "org.ow2.asm:asm:jar:9.3:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.14.10:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.1.1:compile" -> "org.springframework:spring-jcl:jar:6.1.1:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:9.22.3:test" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.3:test" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:9.22.3:test" -> "com.google.code.gson:gson:jar:2.10.1:test" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.3:test" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:test" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.3:test" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.3:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.3:test" ; 
+[INFO] 	"org.liquibase:liquibase-core:jar:4.24.0:test" -> "com.opencsv:opencsv:jar:5.8:test" ; 
+[INFO] 	"org.liquibase:liquibase-core:jar:4.24.0:test" -> "org.apache.commons:commons-lang3:jar:3.13.0:compile" ; 
+[INFO] 	"org.liquibase:liquibase-core:jar:4.24.0:test" -> "org.apache.commons:commons-collections4:jar:4.4:test" ; 
+[INFO] 	"org.liquibase:liquibase-core:jar:4.24.0:test" -> "org.yaml:snakeyaml:jar:2.2:test" ; 
+[INFO] 	"org.liquibase:liquibase-core:jar:4.24.0:test" -> "javax.xml.bind:jaxb-api:jar:2.3.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------< org.mybatis.spring.boot:mybatis-spring-boot-starter >---------
+[INFO] Building mybatis-spring-boot-starter 3.0.4-SNAPSHOT               [3/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from sonatype-oss-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/mybatis/spring/boot/mybatis-spring-boot-autoconfigure/3.0.4-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from spring-snapshot: https://repo.spring.io/snapshot/org/mybatis/spring/boot/mybatis-spring-boot-autoconfigure/3.0.4-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from sonatype-oss-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/mybatis/spring/boot/mybatis-spring-boot-autoconfigure/3.0.4-SNAPSHOT/maven-metadata.xml (809 B at 566 B/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ mybatis-spring-boot-starter ---
+[INFO] digraph "org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT" { 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT" -> "org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:3.0.4-SNAPSHOT:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT" -> "org.mybatis:mybatis:jar:3.5.14:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT" -> "org.mybatis:mybatis-spring:jar:3.0.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework:spring-core:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.yaml:snakeyaml:jar:2.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:3.2.0:compile" -> "org.springframework:spring-context:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "org.springframework:spring-aop:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "org.springframework:spring-expression:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "io.micrometer:micrometer-observation:jar:1.12.0:compile" ; 
+[INFO] 	"io.micrometer:micrometer-observation:jar:1.12.0:compile" -> "io.micrometer:micrometer-commons:jar:1.12.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "ch.qos.logback:logback-classic:jar:1.4.11:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.21.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "org.slf4j:jul-to-slf4j:jar:2.0.9:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.11:compile" -> "ch.qos.logback:logback-core:jar:1.4.11:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.21.1:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.21.1:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.1.1:compile" -> "org.springframework:spring-jcl:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" -> "com.zaxxer:HikariCP:jar:5.0.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" -> "org.springframework:spring-jdbc:jar:6.1.1:compile" ; 
+[INFO] 	"com.zaxxer:HikariCP:jar:5.0.1:compile" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"org.springframework:spring-jdbc:jar:6.1.1:compile" -> "org.springframework:spring-beans:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-jdbc:jar:6.1.1:compile" -> "org.springframework:spring-tx:jar:6.1.1:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---< org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure >---
+[INFO] Building mybatis-spring-boot-test-autoconfigure 3.0.4-SNAPSHOT    [4/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from sonatype-oss-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/mybatis/spring/boot/mybatis-spring-boot-starter/3.0.4-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from spring-snapshot: https://repo.spring.io/snapshot/org/mybatis/spring/boot/mybatis-spring-boot-starter/3.0.4-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from sonatype-oss-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/mybatis/spring/boot/mybatis-spring-boot-starter/3.0.4-SNAPSHOT/maven-metadata.xml (803 B at 3.0 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ mybatis-spring-boot-test-autoconfigure ---
+[INFO] digraph "org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT" { 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT" -> "org.springframework.boot:spring-boot-autoconfigure:jar:3.2.0:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:3.2.0:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT" -> "org.springframework.boot:spring-boot-test:jar:3.2.0:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT" -> "org.springframework:spring-test:jar:6.1.1:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT" -> "org.springframework:spring-tx:jar:6.1.1:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT" -> "com.h2database:h2:jar:2.2.224:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT" -> "org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-autoconfigure:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:3.2.0:compile" -> "org.springframework:spring-context:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "org.springframework:spring-aop:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "org.springframework:spring-expression:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "io.micrometer:micrometer-observation:jar:1.12.0:compile" ; 
+[INFO] 	"io.micrometer:micrometer-observation:jar:1.12.0:compile" -> "io.micrometer:micrometer-commons:jar:1.12.0:compile" ; 
+[INFO] 	"org.springframework:spring-test:jar:6.1.1:compile" -> "org.springframework:spring-core:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.1.1:compile" -> "org.springframework:spring-jcl:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-tx:jar:6.1.1:compile" -> "org.springframework:spring-beans:jar:6.1.1:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:compile" -> "org.opentest4j:opentest4j:jar:1.3.0:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:compile" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:compile" -> "org.apiguardian:apiguardian-api:jar:1.1.2:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:test" -> "org.springframework.boot:spring-boot-starter:jar:3.2.0:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:test" -> "org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:test" -> "org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:3.0.4-SNAPSHOT:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:test" -> "org.mybatis:mybatis:jar:3.5.14:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:test" -> "org.mybatis:mybatis-spring:jar:3.0.3:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:test" -> "org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:test" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:test" -> "org.yaml:snakeyaml:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:test" -> "ch.qos.logback:logback-classic:jar:1.4.11:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:test" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.21.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:test" -> "org.slf4j:jul-to-slf4j:jar:2.0.9:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.11:test" -> "ch.qos.logback:logback-core:jar:1.4.11:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.21.1:test" -> "org.apache.logging.log4j:log4j-api:jar:2.21.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:test" -> "com.zaxxer:HikariCP:jar:5.0.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:test" -> "org.springframework:spring-jdbc:jar:6.1.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "com.jayway.jsonpath:json-path:jar:2.8.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "net.minidev:json-smart:jar:2.5.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.awaitility:awaitility:jar:4.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.mockito:mockito-core:jar:5.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.mockito:mockito-junit-jupiter:jar:5.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.xmlunit:xmlunit-core:jar:2.9.1:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.8.0:test" -> "org.slf4j:slf4j-api:jar:2.0.9:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:test" -> "jakarta.activation:jakarta.activation-api:jar:2.1.2:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.5.0:test" -> "net.minidev:accessors-smart:jar:2.5.0:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.5.0:test" -> "org.ow2.asm:asm:jar:9.3:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.14.10:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------< org.mybatis.spring.boot:mybatis-spring-boot-starter-test >------
+[INFO] Building mybatis-spring-boot-starter-test 3.0.4-SNAPSHOT          [5/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from sonatype-oss-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/mybatis/spring/boot/mybatis-spring-boot-test-autoconfigure/3.0.4-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from spring-snapshot: https://repo.spring.io/snapshot/org/mybatis/spring/boot/mybatis-spring-boot-test-autoconfigure/3.0.4-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from sonatype-oss-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/mybatis/spring/boot/mybatis-spring-boot-test-autoconfigure/3.0.4-SNAPSHOT/maven-metadata.xml (814 B at 2.9 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ mybatis-spring-boot-starter-test ---
+[INFO] digraph "org.mybatis.spring.boot:mybatis-spring-boot-starter-test:jar:3.0.4-SNAPSHOT" { 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter-test:jar:3.0.4-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-test:jar:3.2.0:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter-test:jar:3.0.4-SNAPSHOT" -> "org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-test:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:compile" -> "com.jayway.jsonpath:json-path:jar:2.8.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:compile" -> "net.minidev:json-smart:jar:2.5.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:compile" -> "org.assertj:assertj-core:jar:3.24.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:compile" -> "org.awaitility:awaitility:jar:4.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:compile" -> "org.hamcrest:hamcrest:jar:2.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:compile" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:compile" -> "org.mockito:mockito-core:jar:5.7.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:compile" -> "org.mockito:mockito-junit-jupiter:jar:5.7.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:compile" -> "org.skyscreamer:jsonassert:jar:1.5.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:compile" -> "org.springframework:spring-core:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:compile" -> "org.springframework:spring-test:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:compile" -> "org.xmlunit:xmlunit-core:jar:2.9.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.yaml:snakeyaml:jar:2.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:3.2.0:compile" -> "org.springframework:spring-context:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "org.springframework:spring-aop:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "org.springframework:spring-expression:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "io.micrometer:micrometer-observation:jar:1.12.0:compile" ; 
+[INFO] 	"io.micrometer:micrometer-observation:jar:1.12.0:compile" -> "io.micrometer:micrometer-commons:jar:1.12.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "ch.qos.logback:logback-classic:jar:1.4.11:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.21.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "org.slf4j:jul-to-slf4j:jar:2.0.9:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.11:compile" -> "ch.qos.logback:logback-core:jar:1.4.11:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.21.1:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.21.1:compile" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.8.0:compile" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:compile" -> "jakarta.activation:jakarta.activation-api:jar:2.1.2:compile" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.5.0:compile" -> "net.minidev:accessors-smart:jar:2.5.0:compile" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.5.0:compile" -> "org.ow2.asm:asm:jar:9.3:compile" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:compile" -> "net.bytebuddy:byte-buddy:jar:1.14.10:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:compile" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:compile" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:compile" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:runtime" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:compile" -> "org.opentest4j:opentest4j:jar:1.3.0:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:compile" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:compile" -> "org.apiguardian:apiguardian-api:jar:1.1.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:runtime" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:runtime" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:compile" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:compile" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:compile" -> "org.objenesis:objenesis:jar:3.3:runtime" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:compile" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.1.1:compile" -> "org.springframework:spring-jcl:jar:6.1.1:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:3.2.0:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT:compile" -> "org.springframework:spring-tx:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-tx:jar:6.1.1:compile" -> "org.springframework:spring-beans:jar:6.1.1:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------< org.mybatis.spring.boot:mybatis-spring-boot-samples >---------
+[INFO] Building mybatis-spring-boot-samples 3.0.4-SNAPSHOT               [6/17]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ mybatis-spring-boot-samples ---
+[INFO] digraph "org.mybatis.spring.boot:mybatis-spring-boot-samples:pom:3.0.4-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ---< org.mybatis.spring.boot:mybatis-spring-boot-sample-annotation >----
+[INFO] Building mybatis-spring-boot-sample-annotation 3.0.4-SNAPSHOT     [7/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from sonatype-oss-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/mybatis/spring/boot/mybatis-spring-boot-starter-test/3.0.4-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from spring-snapshot: https://repo.spring.io/snapshot/org/mybatis/spring/boot/mybatis-spring-boot-starter-test/3.0.4-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from sonatype-oss-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/mybatis/spring/boot/mybatis-spring-boot-starter-test/3.0.4-SNAPSHOT/maven-metadata.xml (808 B at 3.0 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ mybatis-spring-boot-sample-annotation ---
+[INFO] digraph "org.mybatis.spring.boot:mybatis-spring-boot-sample-annotation:jar:3.0.4-SNAPSHOT" { 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-annotation:jar:3.0.4-SNAPSHOT" -> "org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-annotation:jar:3.0.4-SNAPSHOT" -> "com.h2database:h2:jar:2.2.224:runtime" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-annotation:jar:3.0.4-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-annotation:jar:3.0.4-SNAPSHOT" -> "org.mybatis.spring.boot:mybatis-spring-boot-starter-test:jar:3.0.4-SNAPSHOT:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:3.0.4-SNAPSHOT:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis:mybatis:jar:3.5.14:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis:mybatis-spring:jar:3.0.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.yaml:snakeyaml:jar:2.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:3.2.0:compile" -> "org.springframework:spring-context:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "org.springframework:spring-aop:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "org.springframework:spring-expression:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "io.micrometer:micrometer-observation:jar:1.12.0:compile" ; 
+[INFO] 	"io.micrometer:micrometer-observation:jar:1.12.0:compile" -> "io.micrometer:micrometer-commons:jar:1.12.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "ch.qos.logback:logback-classic:jar:1.4.11:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.21.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "org.slf4j:jul-to-slf4j:jar:2.0.9:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.11:compile" -> "ch.qos.logback:logback-core:jar:1.4.11:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.21.1:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.21.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" -> "com.zaxxer:HikariCP:jar:5.0.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" -> "org.springframework:spring-jdbc:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-jdbc:jar:6.1.1:compile" -> "org.springframework:spring-beans:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework.boot:spring-boot-test:jar:3.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:3.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "com.jayway.jsonpath:json-path:jar:2.8.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "net.minidev:json-smart:jar:2.5.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.awaitility:awaitility:jar:4.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.mockito:mockito-core:jar:5.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.mockito:mockito-junit-jupiter:jar:5.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework:spring-core:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework:spring-test:jar:6.1.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.xmlunit:xmlunit-core:jar:2.9.1:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.8.0:test" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:test" -> "jakarta.activation:jakarta.activation-api:jar:2.1.2:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.5.0:test" -> "net.minidev:accessors-smart:jar:2.5.0:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.5.0:test" -> "org.ow2.asm:asm:jar:9.3:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.14.10:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.1.1:compile" -> "org.springframework:spring-jcl:jar:6.1.1:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter-test:jar:3.0.4-SNAPSHOT:test" -> "org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT:test" -> "org.springframework:spring-tx:jar:6.1.1:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---< org.mybatis.spring.boot:mybatis-spring-boot-sample-freemarker >----
+[INFO] Building mybatis-spring-boot-sample-freemarker 3.0.4-SNAPSHOT     [8/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ mybatis-spring-boot-sample-freemarker ---
+[INFO] digraph "org.mybatis.spring.boot:mybatis-spring-boot-sample-freemarker:jar:3.0.4-SNAPSHOT" { 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-freemarker:jar:3.0.4-SNAPSHOT" -> "org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-freemarker:jar:3.0.4-SNAPSHOT" -> "org.mybatis.scripting:mybatis-freemarker:jar:1.2.4:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-freemarker:jar:3.0.4-SNAPSHOT" -> "com.h2database:h2:jar:2.2.224:runtime" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-freemarker:jar:3.0.4-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-freemarker:jar:3.0.4-SNAPSHOT" -> "org.mybatis.spring.boot:mybatis-spring-boot-starter-test:jar:3.0.4-SNAPSHOT:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:3.0.4-SNAPSHOT:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis:mybatis:jar:3.5.14:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis:mybatis-spring:jar:3.0.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.yaml:snakeyaml:jar:2.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:3.2.0:compile" -> "org.springframework:spring-context:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "org.springframework:spring-aop:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "org.springframework:spring-expression:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "io.micrometer:micrometer-observation:jar:1.12.0:compile" ; 
+[INFO] 	"io.micrometer:micrometer-observation:jar:1.12.0:compile" -> "io.micrometer:micrometer-commons:jar:1.12.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "ch.qos.logback:logback-classic:jar:1.4.11:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.21.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "org.slf4j:jul-to-slf4j:jar:2.0.9:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.11:compile" -> "ch.qos.logback:logback-core:jar:1.4.11:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.21.1:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.21.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" -> "com.zaxxer:HikariCP:jar:5.0.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" -> "org.springframework:spring-jdbc:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-jdbc:jar:6.1.1:compile" -> "org.springframework:spring-beans:jar:6.1.1:compile" ; 
+[INFO] 	"org.mybatis.scripting:mybatis-freemarker:jar:1.2.4:compile" -> "org.freemarker:freemarker:jar:2.3.32:compile" ; 
+[INFO] 	"org.mybatis.scripting:mybatis-freemarker:jar:1.2.4:compile" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"org.apache.commons:commons-text:jar:1.10.0:compile" -> "org.apache.commons:commons-lang3:jar:3.13.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework.boot:spring-boot-test:jar:3.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:3.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "com.jayway.jsonpath:json-path:jar:2.8.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "net.minidev:json-smart:jar:2.5.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.awaitility:awaitility:jar:4.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.mockito:mockito-core:jar:5.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.mockito:mockito-junit-jupiter:jar:5.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework:spring-core:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework:spring-test:jar:6.1.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.xmlunit:xmlunit-core:jar:2.9.1:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.8.0:test" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:test" -> "jakarta.activation:jakarta.activation-api:jar:2.1.2:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.5.0:test" -> "net.minidev:accessors-smart:jar:2.5.0:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.5.0:test" -> "org.ow2.asm:asm:jar:9.3:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.14.10:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.1.1:compile" -> "org.springframework:spring-jcl:jar:6.1.1:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter-test:jar:3.0.4-SNAPSHOT:test" -> "org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT:test" -> "org.springframework:spring-tx:jar:6.1.1:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --< org.mybatis.spring.boot:mybatis-spring-boot-sample-freemarker-legacy >--
+[INFO] Building mybatis-spring-boot-sample-freemarker-legacy 3.0.4-SNAPSHOT [9/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ mybatis-spring-boot-sample-freemarker-legacy ---
+[INFO] digraph "org.mybatis.spring.boot:mybatis-spring-boot-sample-freemarker-legacy:jar:3.0.4-SNAPSHOT" { 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-freemarker-legacy:jar:3.0.4-SNAPSHOT" -> "org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-freemarker-legacy:jar:3.0.4-SNAPSHOT" -> "org.mybatis.scripting:mybatis-freemarker:jar:1.2.4:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-freemarker-legacy:jar:3.0.4-SNAPSHOT" -> "com.h2database:h2:jar:2.2.224:runtime" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-freemarker-legacy:jar:3.0.4-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-freemarker-legacy:jar:3.0.4-SNAPSHOT" -> "org.mybatis.spring.boot:mybatis-spring-boot-starter-test:jar:3.0.4-SNAPSHOT:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:3.0.4-SNAPSHOT:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis:mybatis:jar:3.5.14:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis:mybatis-spring:jar:3.0.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.yaml:snakeyaml:jar:2.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:3.2.0:compile" -> "org.springframework:spring-context:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "org.springframework:spring-aop:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "org.springframework:spring-expression:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "io.micrometer:micrometer-observation:jar:1.12.0:compile" ; 
+[INFO] 	"io.micrometer:micrometer-observation:jar:1.12.0:compile" -> "io.micrometer:micrometer-commons:jar:1.12.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "ch.qos.logback:logback-classic:jar:1.4.11:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.21.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "org.slf4j:jul-to-slf4j:jar:2.0.9:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.11:compile" -> "ch.qos.logback:logback-core:jar:1.4.11:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.21.1:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.21.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" -> "com.zaxxer:HikariCP:jar:5.0.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" -> "org.springframework:spring-jdbc:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-jdbc:jar:6.1.1:compile" -> "org.springframework:spring-beans:jar:6.1.1:compile" ; 
+[INFO] 	"org.mybatis.scripting:mybatis-freemarker:jar:1.2.4:compile" -> "org.freemarker:freemarker:jar:2.3.32:compile" ; 
+[INFO] 	"org.mybatis.scripting:mybatis-freemarker:jar:1.2.4:compile" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"org.apache.commons:commons-text:jar:1.10.0:compile" -> "org.apache.commons:commons-lang3:jar:3.13.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework.boot:spring-boot-test:jar:3.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:3.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "com.jayway.jsonpath:json-path:jar:2.8.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "net.minidev:json-smart:jar:2.5.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.awaitility:awaitility:jar:4.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.mockito:mockito-core:jar:5.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.mockito:mockito-junit-jupiter:jar:5.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework:spring-core:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework:spring-test:jar:6.1.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.xmlunit:xmlunit-core:jar:2.9.1:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.8.0:test" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:test" -> "jakarta.activation:jakarta.activation-api:jar:2.1.2:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.5.0:test" -> "net.minidev:accessors-smart:jar:2.5.0:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.5.0:test" -> "org.ow2.asm:asm:jar:9.3:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.14.10:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.1.1:compile" -> "org.springframework:spring-jcl:jar:6.1.1:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter-test:jar:3.0.4-SNAPSHOT:test" -> "org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT:test" -> "org.springframework:spring-tx:jar:6.1.1:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----< org.mybatis.spring.boot:mybatis-spring-boot-sample-groovy >------
+[INFO] Building mybatis-spring-boot-sample-groovy 3.0.4-SNAPSHOT        [10/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ mybatis-spring-boot-sample-groovy ---
+[INFO] digraph "org.mybatis.spring.boot:mybatis-spring-boot-sample-groovy:jar:3.0.4-SNAPSHOT" { 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-groovy:jar:3.0.4-SNAPSHOT" -> "org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-groovy:jar:3.0.4-SNAPSHOT" -> "com.h2database:h2:jar:2.2.224:runtime" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-groovy:jar:3.0.4-SNAPSHOT" -> "org.apache.groovy:groovy:jar:4.0.16:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-groovy:jar:3.0.4-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-groovy:jar:3.0.4-SNAPSHOT" -> "org.mybatis.spring.boot:mybatis-spring-boot-starter-test:jar:3.0.4-SNAPSHOT:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:3.0.4-SNAPSHOT:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis:mybatis:jar:3.5.14:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis:mybatis-spring:jar:3.0.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.yaml:snakeyaml:jar:2.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:3.2.0:compile" -> "org.springframework:spring-context:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "org.springframework:spring-aop:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "org.springframework:spring-expression:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "io.micrometer:micrometer-observation:jar:1.12.0:compile" ; 
+[INFO] 	"io.micrometer:micrometer-observation:jar:1.12.0:compile" -> "io.micrometer:micrometer-commons:jar:1.12.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "ch.qos.logback:logback-classic:jar:1.4.11:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.21.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "org.slf4j:jul-to-slf4j:jar:2.0.9:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.11:compile" -> "ch.qos.logback:logback-core:jar:1.4.11:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.21.1:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.21.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" -> "com.zaxxer:HikariCP:jar:5.0.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" -> "org.springframework:spring-jdbc:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-jdbc:jar:6.1.1:compile" -> "org.springframework:spring-beans:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework.boot:spring-boot-test:jar:3.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:3.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "com.jayway.jsonpath:json-path:jar:2.8.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "net.minidev:json-smart:jar:2.5.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.awaitility:awaitility:jar:4.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.mockito:mockito-core:jar:5.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.mockito:mockito-junit-jupiter:jar:5.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework:spring-core:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework:spring-test:jar:6.1.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.xmlunit:xmlunit-core:jar:2.9.1:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.8.0:test" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:test" -> "jakarta.activation:jakarta.activation-api:jar:2.1.2:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.5.0:test" -> "net.minidev:accessors-smart:jar:2.5.0:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.5.0:test" -> "org.ow2.asm:asm:jar:9.3:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.14.10:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.1.1:compile" -> "org.springframework:spring-jcl:jar:6.1.1:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter-test:jar:3.0.4-SNAPSHOT:test" -> "org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT:test" -> "org.springframework:spring-tx:jar:6.1.1:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----< org.mybatis.spring.boot:mybatis-spring-boot-sample-kotlin >------
+[INFO] Building mybatis-spring-boot-sample-kotlin 3.0.4-SNAPSHOT        [11/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ mybatis-spring-boot-sample-kotlin ---
+[INFO] digraph "org.mybatis.spring.boot:mybatis-spring-boot-sample-kotlin:jar:3.0.4-SNAPSHOT" { 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-kotlin:jar:3.0.4-SNAPSHOT" -> "org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-kotlin:jar:3.0.4-SNAPSHOT" -> "com.h2database:h2:jar:2.2.224:runtime" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-kotlin:jar:3.0.4-SNAPSHOT" -> "org.jetbrains.kotlin:kotlin-reflect:jar:1.9.20:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-kotlin:jar:3.0.4-SNAPSHOT" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.9.20:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-kotlin:jar:3.0.4-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-kotlin:jar:3.0.4-SNAPSHOT" -> "org.mybatis.spring.boot:mybatis-spring-boot-starter-test:jar:3.0.4-SNAPSHOT:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:3.0.4-SNAPSHOT:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis:mybatis:jar:3.5.14:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis:mybatis-spring:jar:3.0.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.yaml:snakeyaml:jar:2.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:3.2.0:compile" -> "org.springframework:spring-context:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "org.springframework:spring-aop:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "org.springframework:spring-expression:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "io.micrometer:micrometer-observation:jar:1.12.0:compile" ; 
+[INFO] 	"io.micrometer:micrometer-observation:jar:1.12.0:compile" -> "io.micrometer:micrometer-commons:jar:1.12.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "ch.qos.logback:logback-classic:jar:1.4.11:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.21.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "org.slf4j:jul-to-slf4j:jar:2.0.9:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.11:compile" -> "ch.qos.logback:logback-core:jar:1.4.11:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.21.1:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.21.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" -> "com.zaxxer:HikariCP:jar:5.0.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" -> "org.springframework:spring-jdbc:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-jdbc:jar:6.1.1:compile" -> "org.springframework:spring-beans:jar:6.1.1:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-reflect:jar:1.9.20:compile" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.9.20:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.9.20:compile" -> "org.jetbrains:annotations:jar:13.0:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.9.20:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.9.20:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework.boot:spring-boot-test:jar:3.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:3.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "com.jayway.jsonpath:json-path:jar:2.8.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "net.minidev:json-smart:jar:2.5.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.awaitility:awaitility:jar:4.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.mockito:mockito-core:jar:5.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.mockito:mockito-junit-jupiter:jar:5.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework:spring-core:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework:spring-test:jar:6.1.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.xmlunit:xmlunit-core:jar:2.9.1:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.8.0:test" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:test" -> "jakarta.activation:jakarta.activation-api:jar:2.1.2:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.5.0:test" -> "net.minidev:accessors-smart:jar:2.5.0:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.5.0:test" -> "org.ow2.asm:asm:jar:9.3:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.14.10:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.1.1:compile" -> "org.springframework:spring-jcl:jar:6.1.1:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter-test:jar:3.0.4-SNAPSHOT:test" -> "org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT:test" -> "org.springframework:spring-tx:jar:6.1.1:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----< org.mybatis.spring.boot:mybatis-spring-boot-sample-thymeleaf >----
+[INFO] Building mybatis-spring-boot-sample-thymeleaf 3.0.4-SNAPSHOT     [12/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ mybatis-spring-boot-sample-thymeleaf ---
+[INFO] digraph "org.mybatis.spring.boot:mybatis-spring-boot-sample-thymeleaf:jar:3.0.4-SNAPSHOT" { 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-thymeleaf:jar:3.0.4-SNAPSHOT" -> "org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-thymeleaf:jar:3.0.4-SNAPSHOT" -> "org.mybatis.scripting:mybatis-thymeleaf:jar:1.0.4:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-thymeleaf:jar:3.0.4-SNAPSHOT" -> "com.h2database:h2:jar:2.2.224:runtime" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-thymeleaf:jar:3.0.4-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-thymeleaf:jar:3.0.4-SNAPSHOT" -> "org.mybatis.spring.boot:mybatis-spring-boot-starter-test:jar:3.0.4-SNAPSHOT:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:3.0.4-SNAPSHOT:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis:mybatis:jar:3.5.14:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis:mybatis-spring:jar:3.0.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.yaml:snakeyaml:jar:2.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:3.2.0:compile" -> "org.springframework:spring-context:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "org.springframework:spring-aop:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "org.springframework:spring-expression:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "io.micrometer:micrometer-observation:jar:1.12.0:compile" ; 
+[INFO] 	"io.micrometer:micrometer-observation:jar:1.12.0:compile" -> "io.micrometer:micrometer-commons:jar:1.12.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "ch.qos.logback:logback-classic:jar:1.4.11:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.21.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "org.slf4j:jul-to-slf4j:jar:2.0.9:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.11:compile" -> "ch.qos.logback:logback-core:jar:1.4.11:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.21.1:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.21.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" -> "com.zaxxer:HikariCP:jar:5.0.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" -> "org.springframework:spring-jdbc:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-jdbc:jar:6.1.1:compile" -> "org.springframework:spring-beans:jar:6.1.1:compile" ; 
+[INFO] 	"org.mybatis.scripting:mybatis-thymeleaf:jar:1.0.4:compile" -> "org.thymeleaf:thymeleaf:jar:3.1.2.RELEASE:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.1.2.RELEASE:compile" -> "ognl:ognl:jar:3.3.4:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.1.2.RELEASE:compile" -> "org.attoparser:attoparser:jar:2.0.7.RELEASE:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.1.2.RELEASE:compile" -> "org.unbescape:unbescape:jar:1.1.6.RELEASE:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.1.2.RELEASE:compile" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"ognl:ognl:jar:3.3.4:compile" -> "org.javassist:javassist:jar:3.29.0-GA:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework.boot:spring-boot-test:jar:3.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:3.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "com.jayway.jsonpath:json-path:jar:2.8.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "net.minidev:json-smart:jar:2.5.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.awaitility:awaitility:jar:4.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.mockito:mockito-core:jar:5.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.mockito:mockito-junit-jupiter:jar:5.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework:spring-core:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework:spring-test:jar:6.1.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.xmlunit:xmlunit-core:jar:2.9.1:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:test" -> "jakarta.activation:jakarta.activation-api:jar:2.1.2:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.5.0:test" -> "net.minidev:accessors-smart:jar:2.5.0:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.5.0:test" -> "org.ow2.asm:asm:jar:9.3:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.14.10:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.1.1:compile" -> "org.springframework:spring-jcl:jar:6.1.1:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter-test:jar:3.0.4-SNAPSHOT:test" -> "org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT:test" -> "org.springframework:spring-tx:jar:6.1.1:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----< org.mybatis.spring.boot:mybatis-spring-boot-sample-velocity >-----
+[INFO] Building mybatis-spring-boot-sample-velocity 3.0.4-SNAPSHOT      [13/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ mybatis-spring-boot-sample-velocity ---
+[INFO] digraph "org.mybatis.spring.boot:mybatis-spring-boot-sample-velocity:jar:3.0.4-SNAPSHOT" { 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-velocity:jar:3.0.4-SNAPSHOT" -> "org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-velocity:jar:3.0.4-SNAPSHOT" -> "org.mybatis.scripting:mybatis-velocity:jar:2.1.2:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-velocity:jar:3.0.4-SNAPSHOT" -> "com.h2database:h2:jar:2.2.224:runtime" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-velocity:jar:3.0.4-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-velocity:jar:3.0.4-SNAPSHOT" -> "org.mybatis.spring.boot:mybatis-spring-boot-starter-test:jar:3.0.4-SNAPSHOT:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:3.0.4-SNAPSHOT:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis:mybatis:jar:3.5.14:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis:mybatis-spring:jar:3.0.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.yaml:snakeyaml:jar:2.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:3.2.0:compile" -> "org.springframework:spring-context:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "org.springframework:spring-aop:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "org.springframework:spring-expression:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "io.micrometer:micrometer-observation:jar:1.12.0:compile" ; 
+[INFO] 	"io.micrometer:micrometer-observation:jar:1.12.0:compile" -> "io.micrometer:micrometer-commons:jar:1.12.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "ch.qos.logback:logback-classic:jar:1.4.11:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.21.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "org.slf4j:jul-to-slf4j:jar:2.0.9:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.11:compile" -> "ch.qos.logback:logback-core:jar:1.4.11:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.21.1:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.21.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" -> "com.zaxxer:HikariCP:jar:5.0.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" -> "org.springframework:spring-jdbc:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-jdbc:jar:6.1.1:compile" -> "org.springframework:spring-beans:jar:6.1.1:compile" ; 
+[INFO] 	"org.mybatis.scripting:mybatis-velocity:jar:2.1.2:compile" -> "org.apache.velocity:velocity-engine-core:jar:2.3:compile" ; 
+[INFO] 	"org.mybatis.scripting:mybatis-velocity:jar:2.1.2:compile" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"org.apache.velocity:velocity-engine-core:jar:2.3:compile" -> "org.apache.commons:commons-lang3:jar:3.13.0:compile" ; 
+[INFO] 	"org.apache.velocity:velocity-engine-core:jar:2.3:compile" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework.boot:spring-boot-test:jar:3.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:3.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "com.jayway.jsonpath:json-path:jar:2.8.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "net.minidev:json-smart:jar:2.5.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.awaitility:awaitility:jar:4.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.mockito:mockito-core:jar:5.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.mockito:mockito-junit-jupiter:jar:5.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework:spring-core:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework:spring-test:jar:6.1.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.xmlunit:xmlunit-core:jar:2.9.1:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:test" -> "jakarta.activation:jakarta.activation-api:jar:2.1.2:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.5.0:test" -> "net.minidev:accessors-smart:jar:2.5.0:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.5.0:test" -> "org.ow2.asm:asm:jar:9.3:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.14.10:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.1.1:compile" -> "org.springframework:spring-jcl:jar:6.1.1:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter-test:jar:3.0.4-SNAPSHOT:test" -> "org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT:test" -> "org.springframework:spring-tx:jar:6.1.1:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --< org.mybatis.spring.boot:mybatis-spring-boot-sample-velocity-legacy >--
+[INFO] Building mybatis-spring-boot-sample-velocity-legacy 3.0.4-SNAPSHOT [14/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ mybatis-spring-boot-sample-velocity-legacy ---
+[INFO] digraph "org.mybatis.spring.boot:mybatis-spring-boot-sample-velocity-legacy:jar:3.0.4-SNAPSHOT" { 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-velocity-legacy:jar:3.0.4-SNAPSHOT" -> "org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-velocity-legacy:jar:3.0.4-SNAPSHOT" -> "org.mybatis.scripting:mybatis-velocity:jar:2.1.2:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-velocity-legacy:jar:3.0.4-SNAPSHOT" -> "com.h2database:h2:jar:2.2.224:runtime" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-velocity-legacy:jar:3.0.4-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-velocity-legacy:jar:3.0.4-SNAPSHOT" -> "org.mybatis.spring.boot:mybatis-spring-boot-starter-test:jar:3.0.4-SNAPSHOT:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:3.0.4-SNAPSHOT:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis:mybatis:jar:3.5.14:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis:mybatis-spring:jar:3.0.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.yaml:snakeyaml:jar:2.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:3.2.0:compile" -> "org.springframework:spring-context:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "org.springframework:spring-aop:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "org.springframework:spring-expression:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "io.micrometer:micrometer-observation:jar:1.12.0:compile" ; 
+[INFO] 	"io.micrometer:micrometer-observation:jar:1.12.0:compile" -> "io.micrometer:micrometer-commons:jar:1.12.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "ch.qos.logback:logback-classic:jar:1.4.11:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.21.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "org.slf4j:jul-to-slf4j:jar:2.0.9:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.11:compile" -> "ch.qos.logback:logback-core:jar:1.4.11:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.21.1:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.21.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" -> "com.zaxxer:HikariCP:jar:5.0.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" -> "org.springframework:spring-jdbc:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-jdbc:jar:6.1.1:compile" -> "org.springframework:spring-beans:jar:6.1.1:compile" ; 
+[INFO] 	"org.mybatis.scripting:mybatis-velocity:jar:2.1.2:compile" -> "org.apache.velocity:velocity-engine-core:jar:2.3:compile" ; 
+[INFO] 	"org.mybatis.scripting:mybatis-velocity:jar:2.1.2:compile" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"org.apache.velocity:velocity-engine-core:jar:2.3:compile" -> "org.apache.commons:commons-lang3:jar:3.13.0:compile" ; 
+[INFO] 	"org.apache.velocity:velocity-engine-core:jar:2.3:compile" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework.boot:spring-boot-test:jar:3.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:3.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "com.jayway.jsonpath:json-path:jar:2.8.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "net.minidev:json-smart:jar:2.5.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.awaitility:awaitility:jar:4.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.mockito:mockito-core:jar:5.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.mockito:mockito-junit-jupiter:jar:5.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework:spring-core:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework:spring-test:jar:6.1.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.xmlunit:xmlunit-core:jar:2.9.1:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:test" -> "jakarta.activation:jakarta.activation-api:jar:2.1.2:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.5.0:test" -> "net.minidev:accessors-smart:jar:2.5.0:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.5.0:test" -> "org.ow2.asm:asm:jar:9.3:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.14.10:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.1.1:compile" -> "org.springframework:spring-jcl:jar:6.1.1:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter-test:jar:3.0.4-SNAPSHOT:test" -> "org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT:test" -> "org.springframework:spring-tx:jar:6.1.1:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------< org.mybatis.spring.boot:mybatis-spring-boot-sample-war >-------
+[INFO] Building mybatis-spring-boot-sample-war 3.0.4-SNAPSHOT           [15/17]
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ mybatis-spring-boot-sample-war ---
+[INFO] digraph "org.mybatis.spring.boot:mybatis-spring-boot-sample-war:war:3.0.4-SNAPSHOT" { 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-war:war:3.0.4-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-web:jar:3.2.0:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-war:war:3.0.4-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-tomcat:jar:3.2.0:provided" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-war:war:3.0.4-SNAPSHOT" -> "org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-war:war:3.0.4-SNAPSHOT" -> "com.h2database:h2:jar:2.2.224:runtime" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-war:war:3.0.4-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-war:war:3.0.4-SNAPSHOT" -> "org.mybatis.spring.boot:mybatis-spring-boot-starter-test:jar:3.0.4-SNAPSHOT:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-starter-json:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:3.2.0:compile" -> "org.springframework:spring-web:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:3.2.0:compile" -> "org.springframework:spring-webmvc:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.yaml:snakeyaml:jar:2.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "ch.qos.logback:logback-classic:jar:1.4.11:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.21.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "org.slf4j:jul-to-slf4j:jar:2.0.9:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.11:compile" -> "ch.qos.logback:logback-core:jar:1.4.11:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.21.1:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.21.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:3.2.0:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:3.2.0:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.15.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:3.2.0:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.15.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:3.2.0:compile" -> "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.15.3:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.3:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.3:compile" ; 
+[INFO] 	"org.springframework:spring-web:jar:6.1.1:compile" -> "org.springframework:spring-beans:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-web:jar:6.1.1:compile" -> "io.micrometer:micrometer-observation:jar:1.12.0:compile" ; 
+[INFO] 	"io.micrometer:micrometer-observation:jar:1.12.0:compile" -> "io.micrometer:micrometer-commons:jar:1.12.0:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:6.1.1:compile" -> "org.springframework:spring-aop:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:6.1.1:compile" -> "org.springframework:spring-context:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:6.1.1:compile" -> "org.springframework:spring-expression:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:3.2.0:provided" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:3.2.0:provided" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.16:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:3.2.0:provided" -> "org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.16:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:3.2.0:provided" -> "org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.16:provided" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:3.0.4-SNAPSHOT:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis:mybatis:jar:3.5.14:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis:mybatis-spring:jar:3.0.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" -> "com.zaxxer:HikariCP:jar:5.0.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" -> "org.springframework:spring-jdbc:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework.boot:spring-boot-test:jar:3.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:3.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "com.jayway.jsonpath:json-path:jar:2.8.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "net.minidev:json-smart:jar:2.5.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.awaitility:awaitility:jar:4.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.mockito:mockito-core:jar:5.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.mockito:mockito-junit-jupiter:jar:5.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework:spring-core:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework:spring-test:jar:6.1.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.xmlunit:xmlunit-core:jar:2.9.1:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.8.0:test" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:test" -> "jakarta.activation:jakarta.activation-api:jar:2.1.2:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.5.0:test" -> "net.minidev:accessors-smart:jar:2.5.0:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.5.0:test" -> "org.ow2.asm:asm:jar:9.3:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.14.10:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.1.1:compile" -> "org.springframework:spring-jcl:jar:6.1.1:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter-test:jar:3.0.4-SNAPSHOT:test" -> "org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT:test" -> "org.springframework:spring-tx:jar:6.1.1:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------< org.mybatis.spring.boot:mybatis-spring-boot-sample-web >-------
+[INFO] Building mybatis-spring-boot-sample-web 3.0.4-SNAPSHOT           [16/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ mybatis-spring-boot-sample-web ---
+[INFO] digraph "org.mybatis.spring.boot:mybatis-spring-boot-sample-web:jar:3.0.4-SNAPSHOT" { 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-web:jar:3.0.4-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-web:jar:3.2.0:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-web:jar:3.0.4-SNAPSHOT" -> "org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-web:jar:3.0.4-SNAPSHOT" -> "com.h2database:h2:jar:2.2.224:runtime" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-web:jar:3.0.4-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-web:jar:3.0.4-SNAPSHOT" -> "org.mybatis.spring.boot:mybatis-spring-boot-starter-test:jar:3.0.4-SNAPSHOT:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-starter-json:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-starter-tomcat:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:3.2.0:compile" -> "org.springframework:spring-web:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:3.2.0:compile" -> "org.springframework:spring-webmvc:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.yaml:snakeyaml:jar:2.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "ch.qos.logback:logback-classic:jar:1.4.11:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.21.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "org.slf4j:jul-to-slf4j:jar:2.0.9:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.11:compile" -> "ch.qos.logback:logback-core:jar:1.4.11:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.21.1:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.21.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:3.2.0:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:3.2.0:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.15.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:3.2.0:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.15.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:3.2.0:compile" -> "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.15.3:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.3:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:3.2.0:compile" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.16:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:3.2.0:compile" -> "org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.16:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:3.2.0:compile" -> "org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.16:compile" ; 
+[INFO] 	"org.springframework:spring-web:jar:6.1.1:compile" -> "org.springframework:spring-beans:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-web:jar:6.1.1:compile" -> "io.micrometer:micrometer-observation:jar:1.12.0:compile" ; 
+[INFO] 	"io.micrometer:micrometer-observation:jar:1.12.0:compile" -> "io.micrometer:micrometer-commons:jar:1.12.0:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:6.1.1:compile" -> "org.springframework:spring-aop:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:6.1.1:compile" -> "org.springframework:spring-context:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:6.1.1:compile" -> "org.springframework:spring-expression:jar:6.1.1:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:3.0.4-SNAPSHOT:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis:mybatis:jar:3.5.14:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis:mybatis-spring:jar:3.0.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" -> "com.zaxxer:HikariCP:jar:5.0.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" -> "org.springframework:spring-jdbc:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework.boot:spring-boot-test:jar:3.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:3.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "com.jayway.jsonpath:json-path:jar:2.8.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "net.minidev:json-smart:jar:2.5.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.awaitility:awaitility:jar:4.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.mockito:mockito-core:jar:5.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.mockito:mockito-junit-jupiter:jar:5.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework:spring-core:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework:spring-test:jar:6.1.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.xmlunit:xmlunit-core:jar:2.9.1:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.8.0:test" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:test" -> "jakarta.activation:jakarta.activation-api:jar:2.1.2:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.5.0:test" -> "net.minidev:accessors-smart:jar:2.5.0:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.5.0:test" -> "org.ow2.asm:asm:jar:9.3:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.14.10:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.1.1:compile" -> "org.springframework:spring-jcl:jar:6.1.1:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter-test:jar:3.0.4-SNAPSHOT:test" -> "org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT:test" -> "org.springframework:spring-tx:jar:6.1.1:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------< org.mybatis.spring.boot:mybatis-spring-boot-sample-xml >-------
+[INFO] Building mybatis-spring-boot-sample-xml 3.0.4-SNAPSHOT           [17/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ mybatis-spring-boot-sample-xml ---
+[INFO] digraph "org.mybatis.spring.boot:mybatis-spring-boot-sample-xml:jar:3.0.4-SNAPSHOT" { 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-xml:jar:3.0.4-SNAPSHOT" -> "org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-xml:jar:3.0.4-SNAPSHOT" -> "com.h2database:h2:jar:2.2.224:runtime" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-xml:jar:3.0.4-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-sample-xml:jar:3.0.4-SNAPSHOT" -> "org.mybatis.spring.boot:mybatis-spring-boot-starter-test:jar:3.0.4-SNAPSHOT:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:3.0.4-SNAPSHOT:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis:mybatis:jar:3.5.14:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:3.0.4-SNAPSHOT:compile" -> "org.mybatis:mybatis-spring:jar:3.0.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.2.0:compile" -> "org.yaml:snakeyaml:jar:2.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:3.2.0:compile" -> "org.springframework:spring-context:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "org.springframework:spring-aop:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "org.springframework:spring-expression:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.1:compile" -> "io.micrometer:micrometer-observation:jar:1.12.0:compile" ; 
+[INFO] 	"io.micrometer:micrometer-observation:jar:1.12.0:compile" -> "io.micrometer:micrometer-commons:jar:1.12.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "ch.qos.logback:logback-classic:jar:1.4.11:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.21.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile" -> "org.slf4j:jul-to-slf4j:jar:2.0.9:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.11:compile" -> "ch.qos.logback:logback-core:jar:1.4.11:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.21.1:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.21.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" -> "com.zaxxer:HikariCP:jar:5.0.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:3.2.0:compile" -> "org.springframework:spring-jdbc:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework:spring-jdbc:jar:6.1.1:compile" -> "org.springframework:spring-beans:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework.boot:spring-boot-test:jar:3.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:3.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "com.jayway.jsonpath:json-path:jar:2.8.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "net.minidev:json-smart:jar:2.5.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.awaitility:awaitility:jar:4.2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.mockito:mockito-core:jar:5.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.mockito:mockito-junit-jupiter:jar:5.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework:spring-core:jar:6.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.springframework:spring-test:jar:6.1.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test" -> "org.xmlunit:xmlunit-core:jar:2.9.1:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.8.0:test" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:test" -> "jakarta.activation:jakarta.activation-api:jar:2.1.2:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.5.0:test" -> "net.minidev:accessors-smart:jar:2.5.0:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.5.0:test" -> "org.ow2.asm:asm:jar:9.3:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.14.10:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.1.1:compile" -> "org.springframework:spring-jcl:jar:6.1.1:compile" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-starter-test:jar:3.0.4-SNAPSHOT:test" -> "org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT:test" ; 
+[INFO] 	"org.mybatis.spring.boot:mybatis-spring-boot-test-autoconfigure:jar:3.0.4-SNAPSHOT:test" -> "org.springframework:spring-tx:jar:6.1.1:compile" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for mybatis-spring-boot 3.0.4-SNAPSHOT:
+[INFO] 
+[INFO] mybatis-spring-boot ................................ SUCCESS [  3.641 s]
+[INFO] mybatis-spring-boot-autoconfigure .................. SUCCESS [  1.386 s]
+[INFO] mybatis-spring-boot-starter ........................ SUCCESS [  2.866 s]
+[INFO] mybatis-spring-boot-test-autoconfigure ............. SUCCESS [  0.692 s]
+[INFO] mybatis-spring-boot-starter-test ................... SUCCESS [  0.612 s]
+[INFO] mybatis-spring-boot-samples ........................ SUCCESS [  0.024 s]
+[INFO] mybatis-spring-boot-sample-annotation .............. SUCCESS [  0.715 s]
+[INFO] mybatis-spring-boot-sample-freemarker .............. SUCCESS [  0.100 s]
+[INFO] mybatis-spring-boot-sample-freemarker-legacy ....... SUCCESS [  0.092 s]
+[INFO] mybatis-spring-boot-sample-groovy .................. SUCCESS [  0.087 s]
+[INFO] mybatis-spring-boot-sample-kotlin .................. SUCCESS [  0.102 s]
+[INFO] mybatis-spring-boot-sample-thymeleaf ............... SUCCESS [  0.056 s]
+[INFO] mybatis-spring-boot-sample-velocity ................ SUCCESS [  0.109 s]
+[INFO] mybatis-spring-boot-sample-velocity-legacy ......... SUCCESS [  0.138 s]
+[INFO] mybatis-spring-boot-sample-war ..................... SUCCESS [  0.208 s]
+[INFO] mybatis-spring-boot-sample-web ..................... SUCCESS [  0.105 s]
+[INFO] mybatis-spring-boot-sample-xml ..................... SUCCESS [  0.053 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  14.784 s
+[INFO] Finished at: 2023-12-28T09:03:23+01:00
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,83 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Detecting the operating system and CPU architecture
+[INFO] ------------------------------------------------------------------------
+[INFO] os.detected.name: linux
+[INFO] os.detected.arch: x86_64
+[INFO] os.detected.bitness: 64
+[INFO] os.detected.version: 5.10
+[INFO] os.detected.version.major: 5
+[INFO] os.detected.version.minor: 10
+[INFO] os.detected.release: debian
+[INFO] os.detected.release.version: 11
+[INFO] os.detected.release.like.debian: true
+[INFO] os.detected.classifier: linux-x86_64
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Gson Parent                                                        [pom]
+[INFO] Gson                                                               [jar]
+[INFO] graal-native-image-test                                            [jar]
+[INFO] shrinker-test                                                      [jar]
+[INFO] Gson Extras                                                        [jar]
+[INFO] Gson Metrics                                                       [jar]
+[INFO] Gson Protobuf Support                                              [jar]
+[INFO] 
+[INFO] ------------------< com.google.code.gson:gson-parent >------------------
+[INFO] Building Gson Parent 2.10.2-SNAPSHOT                               [1/7]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ gson-parent ---
+[INFO] digraph "com.google.code.gson:gson-parent:pom:2.10.2-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< com.google.code.gson:gson >----------------------
+[INFO] Building Gson 2.10.2-SNAPSHOT                                      [2/7]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ gson ---
+[INFO] digraph "com.google.code.gson:gson:jar:2.10.2-SNAPSHOT" { 
+[INFO] 	"com.google.code.gson:gson:jar:2.10.2-SNAPSHOT" -> "com.google.errorprone:error_prone_annotations:jar:2.23.0:compile" ; 
+[INFO] 	"com.google.code.gson:gson:jar:2.10.2-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.google.code.gson:gson:jar:2.10.2-SNAPSHOT" -> "com.google.truth:truth:jar:1.1.5:test" ; 
+[INFO] 	"com.google.code.gson:gson:jar:2.10.2-SNAPSHOT" -> "com.google.guava:guava-testlib:jar:32.1.3-jre:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.1.5:test" -> "com.google.guava:guava:jar:32.0.1-android:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.1.5:test" -> "org.checkerframework:checker-qual:jar:3.35.0:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.1.5:test" -> "com.google.auto.value:auto-value-annotations:jar:1.10.1:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.1.5:test" -> "org.ow2.asm:asm:jar:9.5:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-android:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-android:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava-testlib:jar:32.1.3-jre:test" -> "com.google.code.findbugs:jsr305:jar:3.0.2:test" ; 
+[INFO] 	"com.google.guava:guava-testlib:jar:32.1.3-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:2.8:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< com.google.code.gson:graal-native-image-test >------------
+[INFO] Building graal-native-image-test 2.10.2-SNAPSHOT                   [3/7]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Gson Parent 2.10.2-SNAPSHOT:
+[INFO] 
+[INFO] Gson Parent ........................................ SUCCESS [  3.615 s]
+[INFO] Gson ............................................... SUCCESS [  0.618 s]
+[INFO] graal-native-image-test ............................ FAILURE [  0.124 s]
+[INFO] shrinker-test ...................................... SKIPPED
+[INFO] Gson Extras ........................................ SKIPPED
+[INFO] Gson Metrics ....................................... SKIPPED
+[INFO] Gson Protobuf Support .............................. SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.164 s
+[INFO] Finished at: 2023-12-28T09:02:45+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project graal-native-image-test: Could not resolve dependencies for project com.google.code.gson:graal-native-image-test:jar:2.10.2-SNAPSHOT: Could not find artifact com.google.code.gson:gson:jar:2.10.2-SNAPSHOT -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :graal-native-image-test

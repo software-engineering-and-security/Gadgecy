@@ -1,0 +1,118 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Neo4j Java Driver Project                                          [pom]
+[INFO] Neo4j Java Driver                                                  [jar]
+[INFO] Neo4j Java Driver (shaded package)                                 [jar]
+[INFO] Neo4j Java Driver Examples                                         [jar]
+[INFO] Neo4j Java Driver Testkit Backend                                  [jar]
+[INFO] Neo4j Java Driver Testkit Tests                                    [jar]
+[INFO] 
+[INFO] -------------< org.neo4j.driver:neo4j-java-driver-parent >--------------
+[INFO] Building Neo4j Java Driver Project 5.15-SNAPSHOT                   [1/6]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ neo4j-java-driver-parent ---
+[INFO] digraph "org.neo4j.driver:neo4j-java-driver-parent:pom:5.15-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.neo4j.driver:neo4j-java-driver >-----------------
+[INFO] Building Neo4j Java Driver 5.15-SNAPSHOT                           [2/6]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ neo4j-java-driver ---
+[INFO] digraph "org.neo4j.driver:neo4j-java-driver:jar:5.15-SNAPSHOT" { 
+[INFO] 	"org.neo4j.driver:neo4j-java-driver:jar:5.15-SNAPSHOT" -> "org.reactivestreams:reactive-streams:jar:1.0.4:compile" ; 
+[INFO] 	"org.neo4j.driver:neo4j-java-driver:jar:5.15-SNAPSHOT" -> "io.netty:netty-handler:jar:4.1.101.Final:compile" ; 
+[INFO] 	"org.neo4j.driver:neo4j-java-driver:jar:5.15-SNAPSHOT" -> "io.netty:netty-tcnative-classes:jar:2.0.61.Final:compile" ; 
+[INFO] 	"org.neo4j.driver:neo4j-java-driver:jar:5.15-SNAPSHOT" -> "io.projectreactor:reactor-core:jar:3.6.0:compile" ; 
+[INFO] 	"org.neo4j.driver:neo4j-java-driver:jar:5.15-SNAPSHOT" -> "io.micrometer:micrometer-core:jar:1.12.0:provided" ; 
+[INFO] 	"org.neo4j.driver:neo4j-java-driver:jar:5.15-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.neo4j.driver:neo4j-java-driver:jar:5.15-SNAPSHOT" -> "org.graalvm.nativeimage:svm:jar:23.1.1:provided" ; 
+[INFO] 	"org.neo4j.driver:neo4j-java-driver:jar:5.15-SNAPSHOT" -> "io.projectreactor.tools:blockhound:jar:1.0.8.RELEASE:provided" ; 
+[INFO] 	"org.neo4j.driver:neo4j-java-driver:jar:5.15-SNAPSHOT" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.neo4j.driver:neo4j-java-driver:jar:5.15-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.7.0:test" ; 
+[INFO] 	"org.neo4j.driver:neo4j-java-driver:jar:5.15-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"org.neo4j.driver:neo4j-java-driver:jar:5.15-SNAPSHOT" -> "org.rauschig:jarchivelib:jar:1.2.0:test" ; 
+[INFO] 	"org.neo4j.driver:neo4j-java-driver:jar:5.15-SNAPSHOT" -> "org.bouncycastle:bcprov-jdk18on:jar:1.77:test" ; 
+[INFO] 	"org.neo4j.driver:neo4j-java-driver:jar:5.15-SNAPSHOT" -> "org.bouncycastle:bcpkix-jdk18on:jar:1.77:test" ; 
+[INFO] 	"org.neo4j.driver:neo4j-java-driver:jar:5.15-SNAPSHOT" -> "io.projectreactor:reactor-test:jar:3.6.0:test" ; 
+[INFO] 	"org.neo4j.driver:neo4j-java-driver:jar:5.15-SNAPSHOT" -> "org.testcontainers:junit-jupiter:jar:1.19.3:test" ; 
+[INFO] 	"org.neo4j.driver:neo4j-java-driver:jar:5.15-SNAPSHOT" -> "org.testcontainers:neo4j:jar:1.19.3:test" ; 
+[INFO] 	"org.neo4j.driver:neo4j-java-driver:jar:5.15-SNAPSHOT" -> "org.reactivestreams:reactive-streams-tck:jar:1.0.4:test" ; 
+[INFO] 	"org.neo4j.driver:neo4j-java-driver:jar:5.15-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.2.12:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.101.Final:compile" -> "io.netty:netty-common:jar:4.1.101.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.101.Final:compile" -> "io.netty:netty-resolver:jar:4.1.101.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.101.Final:compile" -> "io.netty:netty-buffer:jar:4.1.101.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.101.Final:compile" -> "io.netty:netty-transport:jar:4.1.101.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.101.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.101.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.101.Final:compile" -> "io.netty:netty-codec:jar:4.1.101.Final:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.12.0:provided" -> "io.micrometer:micrometer-commons:jar:1.12.0:provided" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.12.0:provided" -> "io.micrometer:micrometer-observation:jar:1.12.0:provided" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.12.0:provided" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:provided" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.12.0:provided" -> "org.latencyutils:LatencyUtils:jar:2.0.3:provided" ; 
+[INFO] 	"org.graalvm.nativeimage:svm:jar:23.1.1:provided" -> "org.graalvm.sdk:nativeimage:jar:23.1.1:provided" ; 
+[INFO] 	"org.graalvm.nativeimage:svm:jar:23.1.1:provided" -> "org.graalvm.nativeimage:objectfile:jar:23.1.1:provided" ; 
+[INFO] 	"org.graalvm.nativeimage:svm:jar:23.1.1:provided" -> "org.graalvm.nativeimage:pointsto:jar:23.1.1:provided" ; 
+[INFO] 	"org.graalvm.nativeimage:svm:jar:23.1.1:provided" -> "org.graalvm.compiler:compiler:jar:23.1.1:provided" ; 
+[INFO] 	"org.graalvm.nativeimage:svm:jar:23.1.1:provided" -> "org.graalvm.nativeimage:native-image-base:jar:23.1.1:provided" ; 
+[INFO] 	"org.graalvm.sdk:nativeimage:jar:23.1.1:provided" -> "org.graalvm.sdk:word:jar:23.1.1:provided" ; 
+[INFO] 	"org.graalvm.compiler:compiler:jar:23.1.1:provided" -> "org.graalvm.sdk:collections:jar:23.1.1:provided" ; 
+[INFO] 	"org.graalvm.compiler:compiler:jar:23.1.1:provided" -> "org.graalvm.truffle:truffle-compiler:jar:23.1.1:provided" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "net.bytebuddy:byte-buddy:jar:1.14.9:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.9:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.rauschig:jarchivelib:jar:1.2.0:test" -> "org.apache.commons:commons-compress:jar:1.21:test" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk18on:jar:1.77:test" -> "org.bouncycastle:bcutil-jdk18on:jar:1.77:test" ; 
+[INFO] 	"org.testcontainers:junit-jupiter:jar:1.19.3:test" -> "org.testcontainers:testcontainers:jar:1.19.3:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "com.github.docker-java:docker-java-api:jar:3.3.4:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" -> "org.jetbrains:annotations:jar:17.0.0:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-api:jar:3.3.4:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.10.3:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" -> "com.github.docker-java:docker-java-transport:jar:3.3.4:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" -> "net.java.dev.jna:jna:jar:5.13.0:test" ; 
+[INFO] 	"org.reactivestreams:reactive-streams-tck:jar:1.0.4:test" -> "org.testng:testng:jar:7.8.0:test" ; 
+[INFO] 	"org.reactivestreams:reactive-streams-tck:jar:1.0.4:test" -> "org.reactivestreams:reactive-streams-examples:jar:1.0.4:test" ; 
+[INFO] 	"org.testng:testng:jar:7.8.0:test" -> "com.beust:jcommander:jar:1.82:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:test" -> "ch.qos.logback:logback-core:jar:1.2.12:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.neo4j.driver:neo4j-java-driver-all >---------------
+[INFO] Building Neo4j Java Driver (shaded package) 5.15-SNAPSHOT          [3/6]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Neo4j Java Driver Project 5.15-SNAPSHOT:
+[INFO] 
+[INFO] Neo4j Java Driver Project .......................... SUCCESS [  1.647 s]
+[INFO] Neo4j Java Driver .................................. SUCCESS [  1.614 s]
+[INFO] Neo4j Java Driver (shaded package) ................. FAILURE [  0.118 s]
+[INFO] Neo4j Java Driver Examples ......................... SKIPPED
+[INFO] Neo4j Java Driver Testkit Backend .................. SKIPPED
+[INFO] Neo4j Java Driver Testkit Tests .................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.155 s
+[INFO] Finished at: 2023-12-28T09:03:18+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project neo4j-java-driver-all: Could not resolve dependencies for project org.neo4j.driver:neo4j-java-driver-all:jar:5.15-SNAPSHOT: Could not find artifact org.neo4j.driver:neo4j-java-driver:jar:5.15-SNAPSHOT -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :neo4j-java-driver-all

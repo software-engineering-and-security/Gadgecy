@@ -1,0 +1,171 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.otter:shared.arbitrate:jar:4.2.19-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 349, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 373, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-source-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 337, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.otter:shared.common:jar:4.2.19-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 349, column 12
+[WARNING] 'build.plugins.plugin.version' for org.codehaus.mojo:exec-maven-plugin is missing. @ line 147, column 14
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 373, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-source-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 337, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.otter:shared.communication:jar:4.2.19-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 349, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 373, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-source-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 337, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.otter:shared.etl:jar:4.2.19-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 349, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 373, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-source-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 337, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.otter:shared.push:jar:4.2.19-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 349, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 373, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-source-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 337, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.otter:shared:pom:4.2.19-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 349, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 373, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-source-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 337, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.otter:manager.biz:jar:4.2.19-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 349, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 373, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-source-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 337, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.otter:manager.web:jar:4.2.19-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 349, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 373, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-source-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 337, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.otter:manager.deployer:jar:4.2.19-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 349, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 38, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-source-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 337, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.otter:manager:pom:4.2.19-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 349, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 373, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-source-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 337, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.otter:node.common:jar:4.2.19-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 349, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 373, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-source-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 337, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.otter:node.etl:jar:4.2.19-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 349, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 373, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-source-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 337, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.otter:node.canal:jar:4.2.19-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 349, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 373, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-source-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 337, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.otter:node.extend:jar:4.2.19-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 349, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 373, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-source-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 337, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.otter:node.deployer:jar:4.2.19-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 349, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 41, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-source-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 337, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.otter:node:pom:4.2.19-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 349, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 373, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-source-plugin is missing. @ com.alibaba.otter:otter:4.2.19-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/alibaba-otter/pom.xml, line 337, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.otter:otter:pom:4.2.19-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 349, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 373, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-source-plugin is missing. @ line 337, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] otter                                                              [pom]
+[INFO] shared module for otter                                            [pom]
+[INFO] common module for otter                                            [jar]
+[INFO] communication module for otter                                     [jar]
+[INFO] arbitrate module for otter                                         [jar]
+[INFO] etl shared module for otter                                        [jar]
+[INFO] common push module for otter                                       [jar]
+[INFO] manager module for otter                                           [pom]
+[INFO] manager biz module for otter                                       [jar]
+[INFO] manager web module for otter                                       [jar]
+[INFO] manager deployer module for otter                                  [jar]
+[INFO] node module for otter                                              [pom]
+[INFO] node common module for otter                                       [jar]
+[INFO] canal extend module for otter                                      [jar]
+[INFO] etl module for otter                                               [jar]
+[INFO] otter extend module for otter                                      [jar]
+[INFO] node deployer for otter                                            [jar]
+[INFO] 
+[INFO] ----------------------< com.alibaba.otter:otter >-----------------------
+[INFO] Building otter 4.2.19-SNAPSHOT                                    [1/17]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ otter ---
+[INFO] digraph "com.alibaba.otter:otter:pom:4.2.19-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< com.alibaba.otter:shared >----------------------
+[INFO] Building shared module for otter 4.2.19-SNAPSHOT                  [2/17]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ shared ---
+[INFO] digraph "com.alibaba.otter:shared:pom:4.2.19-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< com.alibaba.otter:shared.common >-------------------
+[INFO] Building common module for otter 4.2.19-SNAPSHOT                  [3/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from central: https://repo1.maven.org/maven2/org/jtester/jtester/1.1.8/jtester-1.1.8.pom
+[WARNING] The POM for org.jtester:jtester:jar:1.1.8 is missing, no dependency information available
+[INFO] Downloading from central: https://repo1.maven.org/maven2/org/jtester/jtester/1.1.8/jtester-1.1.8.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for otter 4.2.19-SNAPSHOT:
+[INFO] 
+[INFO] otter .............................................. SUCCESS [  4.257 s]
+[INFO] shared module for otter ............................ SUCCESS [  0.088 s]
+[INFO] common module for otter ............................ FAILURE [  4.628 s]
+[INFO] communication module for otter ..................... SKIPPED
+[INFO] arbitrate module for otter ......................... SKIPPED
+[INFO] etl shared module for otter ........................ SKIPPED
+[INFO] common push module for otter ....................... SKIPPED
+[INFO] manager module for otter ........................... SKIPPED
+[INFO] manager biz module for otter ....................... SKIPPED
+[INFO] manager web module for otter ....................... SKIPPED
+[INFO] manager deployer module for otter .................. SKIPPED
+[INFO] node module for otter .............................. SKIPPED
+[INFO] node common module for otter ....................... SKIPPED
+[INFO] canal extend module for otter ...................... SKIPPED
+[INFO] etl module for otter ............................... SKIPPED
+[INFO] otter extend module for otter ...................... SKIPPED
+[INFO] node deployer for otter ............................ SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.292 s
+[INFO] Finished at: 2023-12-28T09:02:26+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project shared.common: Could not resolve dependencies for project com.alibaba.otter:shared.common:jar:4.2.19-SNAPSHOT: Could not find artifact org.jtester:jtester:jar:1.1.8 in central (https://repo1.maven.org/maven2) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :shared.common

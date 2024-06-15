@@ -1,0 +1,27 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.thealgorithms:Java >-----------------------
+[INFO] Building Java 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ Java ---
+[INFO] digraph "com.thealgorithms:Java:jar:1.0-SNAPSHOT" { 
+[INFO] 	"com.thealgorithms:Java:jar:1.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.9.0:test" ; 
+[INFO] 	"com.thealgorithms:Java:jar:1.0-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.23.1:test" ; 
+[INFO] 	"com.thealgorithms:Java:jar:1.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.0:test" ; 
+[INFO] 	"com.thealgorithms:Java:jar:1.0-SNAPSHOT" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"com.thealgorithms:Java:jar:1.0-SNAPSHOT" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.8.2:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.23.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.10:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.0:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.777 s
+[INFO] Finished at: 2023-12-28T09:03:25+01:00
+[INFO] ------------------------------------------------------------------------

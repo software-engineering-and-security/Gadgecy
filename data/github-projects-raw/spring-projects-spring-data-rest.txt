@@ -1,0 +1,316 @@
+[INFO] Scanning for projects...
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/org/springframework/data/build/spring-data-parent/3.3.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from spring-snapshot: https://repo.spring.io/snapshot/org/springframework/data/build/spring-data-parent/3.3.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from spring-snapshot: https://repo.spring.io/snapshot/org/springframework/data/build/spring-data-parent/3.3.0-SNAPSHOT/maven-metadata.xml (0 B at 0 B/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/projectreactor/reactor-bom/2023.0.1/reactor-bom-2023.0.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/projectreactor/reactor-bom/2023.0.1/reactor-bom-2023.0.1.pom (0 B at 0 B/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-bom/1.12.1/micrometer-bom-1.12.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-bom/1.12.1/micrometer-bom-1.12.1.pom (0 B at 0 B/s)
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/io/micrometer/micrometer-tracing-bom/1.2.1/micrometer-tracing-bom-1.2.1.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-tracing-bom/1.2.1/micrometer-tracing-bom-1.2.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-tracing-bom/1.2.1/micrometer-tracing-bom-1.2.1.pom (0 B at 0 B/s)
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/org/springframework/spring-framework-bom/6.1.2/spring-framework-bom-6.1.2.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/6.1.2/spring-framework-bom-6.1.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/6.1.2/spring-framework-bom-6.1.2.pom (0 B at 0 B/s)
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Spring Data REST                                                   [pom]
+[INFO] Spring Data REST - Core                                            [jar]
+[INFO] Spring Data REST - WebMVC                                          [jar]
+[INFO] Spring Data REST - Distribution                                    [pom]
+[INFO] Spring Data REST - HAL Explorer                                    [jar]
+[INFO] 
+[INFO] ----------< org.springframework.data:spring-data-rest-parent >----------
+[INFO] Building Spring Data REST 4.3.0-SNAPSHOT                           [1/5]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/org/springframework/spring-test/6.1.2/spring-test-6.1.2.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-test/6.1.2/spring-test-6.1.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-test/6.1.2/spring-test-6.1.2.pom (2.0 kB at 15 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.5.0:tree (default-cli) @ spring-data-rest-parent ---
+[INFO] digraph "org.springframework.data:spring-data-rest-parent:pom:4.3.0-SNAPSHOT" { 
+[INFO] 	"org.springframework.data:spring-data-rest-parent:pom:4.3.0-SNAPSHOT" -> "jakarta.validation:jakarta.validation-api:jar:3.0.2:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-parent:pom:4.3.0-SNAPSHOT" -> "org.hamcrest:hamcrest-library:jar:1.3:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-parent:pom:4.3.0-SNAPSHOT" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-parent:pom:4.3.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-parent:pom:4.3.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-parent:pom:4.3.0-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.5.0:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-parent:pom:4.3.0-SNAPSHOT" -> "org.mockito:mockito-junit-jupiter:jar:5.5.0:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-parent:pom:4.3.0-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-parent:pom:4.3.0-SNAPSHOT" -> "org.springframework:spring-test:jar:6.1.2:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-parent:pom:4.3.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.2:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-parent:pom:4.3.0-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.4.13:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.5.0:test" -> "net.bytebuddy:byte-buddy:jar:1.14.6:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.5.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.6:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.5.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.springframework:spring-test:jar:6.1.2:test" -> "org.springframework:spring-core:jar:6.1.2:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.1.2:test" -> "org.springframework:spring-jcl:jar:6.1.2:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.13:test" -> "ch.qos.logback:logback-core:jar:1.4.13:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------< org.springframework.data:spring-data-rest-core >-----------
+[INFO] Building Spring Data REST - Core 4.3.0-SNAPSHOT                    [2/5]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.5.0:tree (default-cli) @ spring-data-rest-core ---
+[INFO] digraph "org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT" { 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT" -> "org.springframework:spring-tx:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT" -> "org.springframework.hateoas:spring-hateoas:jar:2.2.0:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT" -> "org.springframework.data:spring-data-commons:jar:3.3.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT" -> "org.springframework.plugin:spring-plugin-core:jar:3.0.0:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT" -> "org.atteo:evo-inflector:jar:1.3:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.3:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.15.3:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT" -> "org.jmolecules:jmolecules-ddd:jar:1.9.0:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT" -> "com.google.guava:guava:jar:31.1-jre:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT" -> "org.springframework.data:spring-data-keyvalue:jar:3.3.0-SNAPSHOT:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT" -> "org.jmolecules.integrations:jmolecules-spring:jar:0.17.0:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT" -> "jakarta.validation:jakarta.validation-api:jar:3.0.2:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT" -> "org.hamcrest:hamcrest-library:jar:1.3:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.5.0:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT" -> "org.mockito:mockito-junit-jupiter:jar:5.5.0:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT" -> "org.springframework:spring-test:jar:6.1.2:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.2:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.4.13:test" ; 
+[INFO] 	"org.springframework:spring-tx:jar:6.1.2:compile" -> "org.springframework:spring-beans:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework:spring-tx:jar:6.1.2:compile" -> "org.springframework:spring-core:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.1.2:compile" -> "org.springframework:spring-jcl:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework.hateoas:spring-hateoas:jar:2.2.0:compile" -> "org.springframework:spring-aop:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework.hateoas:spring-hateoas:jar:2.2.0:compile" -> "org.springframework:spring-context:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework.hateoas:spring-hateoas:jar:2.2.0:compile" -> "org.springframework:spring-web:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework.hateoas:spring-hateoas:jar:2.2.0:compile" -> "com.jayway.jsonpath:json-path:jar:2.8.0:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.2:compile" -> "org.springframework:spring-expression:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.2:compile" -> "io.micrometer:micrometer-observation:jar:1.12.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-observation:jar:1.12.1:compile" -> "io.micrometer:micrometer-commons:jar:1.12.1:compile" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.8.0:compile" -> "net.minidev:json-smart:jar:2.4.10:runtime" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.10:runtime" -> "net.minidev:accessors-smart:jar:2.4.9:runtime" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.9:runtime" -> "org.ow2.asm:asm:jar:9.3:runtime" ; 
+[INFO] 	"com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.15.3:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.3:compile" ; 
+[INFO] 	"com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.15.3:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.12.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.11.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.5.0:test" -> "net.bytebuddy:byte-buddy:jar:1.14.6:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.5.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.6:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.5.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.13:test" -> "ch.qos.logback:logback-core:jar:1.4.13:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------< org.springframework.data:spring-data-rest-webmvc >----------
+[INFO] Building Spring Data REST - WebMVC 4.3.0-SNAPSHOT                  [3/5]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from spring-snapshot: https://repo.spring.io/snapshot/org/springframework/data/spring-data-rest-core/4.3.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/org/springframework/data/spring-data-rest-core/4.3.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from spring-snapshot: https://repo.spring.io/snapshot/org/springframework/data/spring-data-rest-core/4.3.0-SNAPSHOT/maven-metadata.xml (1.2 kB at 4.5 kB/s)
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/org/springframework/spring-webmvc/6.1.2/spring-webmvc-6.1.2.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/6.1.2/spring-webmvc-6.1.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/6.1.2/spring-webmvc-6.1.2.pom (2.9 kB at 82 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-jdbc/6.1.2/spring-jdbc-6.1.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-jdbc/6.1.2/spring-jdbc-6.1.2.pom (0 B at 0 B/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.5.0:tree (default-cli) @ spring-data-rest-webmvc ---
+[INFO] digraph "org.springframework.data:spring-data-rest-webmvc:jar:4.3.0-SNAPSHOT" { 
+[INFO] 	"org.springframework.data:spring-data-rest-webmvc:jar:4.3.0-SNAPSHOT" -> "org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-webmvc:jar:4.3.0-SNAPSHOT" -> "org.springframework:spring-webmvc:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-webmvc:jar:4.3.0-SNAPSHOT" -> "org.jmolecules.integrations:jmolecules-spring:jar:0.17.0:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-webmvc:jar:4.3.0-SNAPSHOT" -> "jakarta.servlet:jakarta.servlet-api:jar:6.0.0:provided" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-webmvc:jar:4.3.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-webmvc:jar:4.3.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.3:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-webmvc:jar:4.3.0-SNAPSHOT" -> "com.fasterxml.jackson.datatype:jackson-datatype-hibernate6:jar:2.15.3:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-webmvc:jar:4.3.0-SNAPSHOT" -> "org.hibernate.orm:hibernate-core:jar:6.1.5.Final:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-webmvc:jar:4.3.0-SNAPSHOT" -> "com.querydsl:querydsl-core:jar:5.0.0:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-webmvc:jar:4.3.0-SNAPSHOT" -> "org.springframework:spring-orm:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-webmvc:jar:4.3.0-SNAPSHOT" -> "jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-webmvc:jar:4.3.0-SNAPSHOT" -> "org.springframework.data:spring-data-keyvalue:jar:3.3.0-SNAPSHOT:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-webmvc:jar:4.3.0-SNAPSHOT" -> "jakarta.validation:jakarta.validation-api:jar:3.0.2:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-webmvc:jar:4.3.0-SNAPSHOT" -> "org.hamcrest:hamcrest-library:jar:1.3:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-webmvc:jar:4.3.0-SNAPSHOT" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-webmvc:jar:4.3.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-webmvc:jar:4.3.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-webmvc:jar:4.3.0-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.5.0:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-webmvc:jar:4.3.0-SNAPSHOT" -> "org.mockito:mockito-junit-jupiter:jar:5.5.0:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-webmvc:jar:4.3.0-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-webmvc:jar:4.3.0-SNAPSHOT" -> "org.springframework:spring-test:jar:6.1.2:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-webmvc:jar:4.3.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.2:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-webmvc:jar:4.3.0-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.4.13:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT:compile" -> "org.springframework:spring-tx:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT:compile" -> "org.springframework.hateoas:spring-hateoas:jar:2.2.0:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT:compile" -> "org.springframework.data:spring-data-commons:jar:3.3.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT:compile" -> "org.springframework.plugin:spring-plugin-core:jar:3.0.0:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT:compile" -> "org.atteo:evo-inflector:jar:1.3:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.15.3:compile" ; 
+[INFO] 	"org.springframework.hateoas:spring-hateoas:jar:2.2.0:compile" -> "com.jayway.jsonpath:json-path:jar:2.8.0:compile" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.8.0:compile" -> "net.minidev:json-smart:jar:2.4.10:runtime" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.10:runtime" -> "net.minidev:accessors-smart:jar:2.4.9:runtime" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.9:runtime" -> "org.ow2.asm:asm:jar:9.3:runtime" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:6.1.2:compile" -> "org.springframework:spring-aop:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:6.1.2:compile" -> "org.springframework:spring-beans:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:6.1.2:compile" -> "org.springframework:spring-context:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:6.1.2:compile" -> "org.springframework:spring-core:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:6.1.2:compile" -> "org.springframework:spring-expression:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:6.1.2:compile" -> "org.springframework:spring-web:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.2:compile" -> "io.micrometer:micrometer-observation:jar:1.12.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-observation:jar:1.12.1:compile" -> "io.micrometer:micrometer-commons:jar:1.12.1:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.1.2:compile" -> "org.springframework:spring-jcl:jar:6.1.2:compile" ; 
+[INFO] 	"org.jmolecules.integrations:jmolecules-spring:jar:0.17.0:compile" -> "org.jmolecules:jmolecules-ddd:jar:1.6.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.3:compile" ; 
+[INFO] 	"com.fasterxml.jackson.datatype:jackson-datatype-hibernate6:jar:2.15.3:compile" -> "jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.1.5.Final:compile" -> "org.jboss.logging:jboss-logging:jar:3.4.3.Final:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.1.5.Final:compile" -> "org.hibernate.common:hibernate-commons-annotations:jar:6.0.2.Final:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.1.5.Final:compile" -> "org.jboss:jandex:jar:2.4.2.Final:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.1.5.Final:compile" -> "com.fasterxml:classmate:jar:1.5.1:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.1.5.Final:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:3.0.1:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.1.5.Final:compile" -> "org.glassfish.jaxb:jaxb-runtime:jar:3.0.2:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.1.5.Final:compile" -> "jakarta.inject:jakarta.inject-api:jar:2.0.0:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.1.5.Final:compile" -> "org.antlr:antlr4-runtime:jar:4.10.1:runtime" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:3.0.1:runtime" -> "com.sun.activation:jakarta.activation:jar:2.0.1:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:3.0.2:runtime" -> "org.glassfish.jaxb:jaxb-core:jar:3.0.2:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:3.0.2:runtime" -> "org.glassfish.jaxb:txw2:jar:3.0.2:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:3.0.2:runtime" -> "com.sun.istack:istack-commons-runtime:jar:4.0.1:runtime" ; 
+[INFO] 	"com.querydsl:querydsl-core:jar:5.0.0:compile" -> "com.mysema.commons:mysema-commons-lang:jar:0.2.4:compile" ; 
+[INFO] 	"org.springframework:spring-orm:jar:6.1.2:compile" -> "org.springframework:spring-jdbc:jar:6.1.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.5.0:test" -> "net.bytebuddy:byte-buddy:jar:1.14.6:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.5.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.6:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.5.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.13:test" -> "ch.qos.logback:logback-core:jar:1.4.13:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------< org.springframework.data:spring-data-rest-distribution >-------
+[INFO] Building Spring Data REST - Distribution 4.3.0-SNAPSHOT            [4/5]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.5.0:tree (default-cli) @ spring-data-rest-distribution ---
+[INFO] digraph "org.springframework.data:spring-data-rest-distribution:pom:4.3.0-SNAPSHOT" { 
+[INFO] 	"org.springframework.data:spring-data-rest-distribution:pom:4.3.0-SNAPSHOT" -> "jakarta.validation:jakarta.validation-api:jar:3.0.2:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-distribution:pom:4.3.0-SNAPSHOT" -> "org.hamcrest:hamcrest-library:jar:1.3:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-distribution:pom:4.3.0-SNAPSHOT" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-distribution:pom:4.3.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-distribution:pom:4.3.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-distribution:pom:4.3.0-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.5.0:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-distribution:pom:4.3.0-SNAPSHOT" -> "org.mockito:mockito-junit-jupiter:jar:5.5.0:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-distribution:pom:4.3.0-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-distribution:pom:4.3.0-SNAPSHOT" -> "org.springframework:spring-test:jar:6.1.2:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-distribution:pom:4.3.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.2:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-distribution:pom:4.3.0-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.4.13:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.5.0:test" -> "net.bytebuddy:byte-buddy:jar:1.14.6:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.5.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.6:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.5.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.springframework:spring-test:jar:6.1.2:test" -> "org.springframework:spring-core:jar:6.1.2:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.1.2:test" -> "org.springframework:spring-jcl:jar:6.1.2:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.13:test" -> "ch.qos.logback:logback-core:jar:1.4.13:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------< org.springframework.data:spring-data-rest-hal-explorer >-------
+[INFO] Building Spring Data REST - HAL Explorer 4.3.0-SNAPSHOT            [5/5]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from spring-snapshot: https://repo.spring.io/snapshot/org/springframework/data/spring-data-rest-webmvc/4.3.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/org/springframework/data/spring-data-rest-webmvc/4.3.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from spring-snapshot: https://repo.spring.io/snapshot/org/springframework/data/spring-data-rest-webmvc/4.3.0-SNAPSHOT/maven-metadata.xml (1.2 kB at 2.4 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.5.0:tree (default-cli) @ spring-data-rest-hal-explorer ---
+[INFO] digraph "org.springframework.data:spring-data-rest-hal-explorer:jar:4.3.0-SNAPSHOT" { 
+[INFO] 	"org.springframework.data:spring-data-rest-hal-explorer:jar:4.3.0-SNAPSHOT" -> "org.springframework.data:spring-data-rest-webmvc:jar:4.3.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-hal-explorer:jar:4.3.0-SNAPSHOT" -> "jakarta.servlet:jakarta.servlet-api:jar:6.0.0:provided" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-hal-explorer:jar:4.3.0-SNAPSHOT" -> "org.webjars:hal-explorer:jar:1.2.1:provided" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-hal-explorer:jar:4.3.0-SNAPSHOT" -> "jakarta.validation:jakarta.validation-api:jar:3.0.2:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-hal-explorer:jar:4.3.0-SNAPSHOT" -> "org.hamcrest:hamcrest-library:jar:1.3:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-hal-explorer:jar:4.3.0-SNAPSHOT" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-hal-explorer:jar:4.3.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-hal-explorer:jar:4.3.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-hal-explorer:jar:4.3.0-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.5.0:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-hal-explorer:jar:4.3.0-SNAPSHOT" -> "org.mockito:mockito-junit-jupiter:jar:5.5.0:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-hal-explorer:jar:4.3.0-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-hal-explorer:jar:4.3.0-SNAPSHOT" -> "org.springframework:spring-test:jar:6.1.2:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-hal-explorer:jar:4.3.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.2:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-hal-explorer:jar:4.3.0-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.4.13:test" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-webmvc:jar:4.3.0-SNAPSHOT:compile" -> "org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-webmvc:jar:4.3.0-SNAPSHOT:compile" -> "org.springframework:spring-webmvc:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-webmvc:jar:4.3.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-webmvc:jar:4.3.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.3:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT:compile" -> "org.springframework:spring-tx:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT:compile" -> "org.springframework.hateoas:spring-hateoas:jar:2.2.0:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT:compile" -> "org.springframework.data:spring-data-commons:jar:3.3.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT:compile" -> "org.springframework.plugin:spring-plugin-core:jar:3.0.0:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT:compile" -> "org.atteo:evo-inflector:jar:1.3:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-rest-core:jar:4.3.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.15.3:compile" ; 
+[INFO] 	"org.springframework.hateoas:spring-hateoas:jar:2.2.0:compile" -> "com.jayway.jsonpath:json-path:jar:2.8.0:compile" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.8.0:compile" -> "net.minidev:json-smart:jar:2.4.10:runtime" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.10:runtime" -> "net.minidev:accessors-smart:jar:2.4.9:runtime" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.9:runtime" -> "org.ow2.asm:asm:jar:9.3:runtime" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:6.1.2:compile" -> "org.springframework:spring-aop:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:6.1.2:compile" -> "org.springframework:spring-beans:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:6.1.2:compile" -> "org.springframework:spring-context:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:6.1.2:compile" -> "org.springframework:spring-expression:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:6.1.2:compile" -> "org.springframework:spring-web:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.2:compile" -> "io.micrometer:micrometer-observation:jar:1.12.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-observation:jar:1.12.1:compile" -> "io.micrometer:micrometer-commons:jar:1.12.1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.3:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.5.0:test" -> "net.bytebuddy:byte-buddy:jar:1.14.6:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.5.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.6:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.5.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.springframework:spring-test:jar:6.1.2:test" -> "org.springframework:spring-core:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.1.2:compile" -> "org.springframework:spring-jcl:jar:6.1.2:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.13:test" -> "ch.qos.logback:logback-core:jar:1.4.13:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Spring Data REST 4.3.0-SNAPSHOT:
+[INFO] 
+[INFO] Spring Data REST ................................... SUCCESS [  3.590 s]
+[INFO] Spring Data REST - Core ............................ SUCCESS [  0.353 s]
+[INFO] Spring Data REST - WebMVC .......................... SUCCESS [  1.150 s]
+[INFO] Spring Data REST - Distribution .................... SUCCESS [  0.059 s]
+[INFO] Spring Data REST - HAL Explorer .................... SUCCESS [  0.579 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.904 s
+[INFO] Finished at: 2023-12-28T09:03:28+01:00
+[INFO] ------------------------------------------------------------------------

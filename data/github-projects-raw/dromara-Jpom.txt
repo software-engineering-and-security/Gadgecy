@@ -1,0 +1,1082 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.dromara.jpom.plugins:docker-cli:jar:2.10.45
+[WARNING] The expression ${pom.version} is deprecated. Please use ${project.version} instead.
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Jpom (Java Project Online Manage)                                  [pom]
+[INFO] Jpom Common                                                        [jar]
+[INFO] Jpom Plugins                                                       [pom]
+[INFO] plugin-webhook                                                     [jar]
+[INFO] plugin-encrypt                                                     [jar]
+[INFO] Jpom Agent                                                         [jar]
+[INFO] plugin-git-clone                                                   [jar]
+[INFO] plugin-ssh-jsch                                                    [jar]
+[INFO] plugin-svn-clone                                                   [jar]
+[INFO] plugin-docker-cli                                                  [jar]
+[INFO] plugin-email                                                       [jar]
+[INFO] Jpom Agent Transport                                               [pom]
+[INFO] agent-transport-common                                             [jar]
+[INFO] agent-transport-http                                               [jar]
+[INFO] Jpom storage module                                                [pom]
+[INFO] storage-module-common                                              [jar]
+[INFO] storage-module-h2                                                  [jar]
+[INFO] storage-module-mysql                                               [jar]
+[INFO] Jpom Server                                                        [jar]
+[INFO] updater                                                            [jar]
+[INFO] 
+[INFO] --------------------< org.dromara.jpom:jpom-parent >--------------------
+[INFO] Building Jpom (Java Project Online Manage) 2.10.45                [1/20]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ jpom-parent ---
+[INFO] digraph "org.dromara.jpom:jpom-parent:pom:2.10.45" { 
+[INFO] 	"org.dromara.jpom:jpom-parent:pom:2.10.45" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.dromara.jpom:jpom-parent:pom:2.10.45" -> "org.databene:contiperf:jar:2.3.4:test" ; 
+[INFO] 	"org.dromara.jpom:jpom-parent:pom:2.10.45" -> "org.projectlombok:lombok:jar:1.18.28:provided" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< org.dromara.jpom:common >-----------------------
+[INFO] Building Jpom Common 2.10.45                                      [2/20]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ common ---
+[INFO] digraph "org.dromara.jpom:common:jar:2.10.45" { 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45" -> "org.springframework.boot:spring-boot-starter-web:jar:2.7.15:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45" -> "com.alibaba.fastjson2:fastjson2:jar:2.0.40:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45" -> "cn.hutool:hutool-core:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45" -> "cn.hutool:hutool-http:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45" -> "cn.hutool:hutool-system:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45" -> "cn.hutool:hutool-extra:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45" -> "cn.hutool:hutool-crypto:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45" -> "cn.hutool:hutool-cron:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45" -> "org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45" -> "org.apache.commons:commons-compress:jar:1.24.0:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45" -> "cn.keepbx.jpom:jpom-core-common:jar:1.0.5:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45" -> "org.databene:contiperf:jar:2.3.4:test" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45" -> "org.projectlombok:lombok:jar:1.18.28:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot-starter-json:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:compile" -> "org.springframework:spring-web:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:compile" -> "org.springframework:spring-webmvc:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.springframework:spring-core:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.yaml:snakeyaml:jar:1.30:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:compile" -> "ch.qos.logback:logback-classic:jar:1.2.12:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:compile" -> "ch.qos.logback:logback-core:jar:1.2.12:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.29:compile" -> "org.springframework:spring-jcl:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.13.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:compile" -> "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.13.5:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.5:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:compile" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.79:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:compile" -> "org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.79:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:compile" -> "org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.79:compile" ; 
+[INFO] 	"org.springframework:spring-web:jar:5.3.29:compile" -> "org.springframework:spring-beans:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.29:compile" -> "org.springframework:spring-context:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.29:compile" -> "org.springframework:spring-expression:jar:5.3.29:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.22:compile" -> "cn.hutool:hutool-setting:jar:5.8.22:compile" ; 
+[INFO] 	"cn.hutool:hutool-setting:jar:5.8.22:compile" -> "cn.hutool:hutool-log:jar:5.8.22:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:compile" -> "org.springframework:spring-aop:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:compile" -> "org.aspectj:aspectjweaver:jar:1.9.7:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< org.dromara.jpom.plugins:jpom-plugins-parent >------------
+[INFO] Building Jpom Plugins 2.10.45                                     [3/20]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ jpom-plugins-parent ---
+[INFO] digraph "org.dromara.jpom.plugins:jpom-plugins-parent:pom:2.10.45" { 
+[INFO] 	"org.dromara.jpom.plugins:jpom-plugins-parent:pom:2.10.45" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.dromara.jpom.plugins:jpom-plugins-parent:pom:2.10.45" -> "org.databene:contiperf:jar:2.3.4:test" ; 
+[INFO] 	"org.dromara.jpom.plugins:jpom-plugins-parent:pom:2.10.45" -> "org.projectlombok:lombok:jar:1.18.28:provided" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< org.dromara.jpom.plugins:webhook >------------------
+[INFO] Building plugin-webhook 2.10.45                                   [4/20]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ webhook ---
+[INFO] digraph "org.dromara.jpom.plugins:webhook:jar:2.10.45" { 
+[INFO] 	"org.dromara.jpom.plugins:webhook:jar:2.10.45" -> "org.dromara.jpom:common:jar:2.10.45:provided" ; 
+[INFO] 	"org.dromara.jpom.plugins:webhook:jar:2.10.45" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.dromara.jpom.plugins:webhook:jar:2.10.45" -> "org.databene:contiperf:jar:2.3.4:test" ; 
+[INFO] 	"org.dromara.jpom.plugins:webhook:jar:2.10.45" -> "org.projectlombok:lombok:jar:1.18.28:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "com.alibaba.fastjson2:fastjson2:jar:2.0.40:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-core:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-http:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-system:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-extra:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-crypto:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-cron:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "org.apache.commons:commons-compress:jar:1.24.0:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.keepbx.jpom:jpom-core-common:jar:1.0.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework:spring-web:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework:spring-webmvc:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework:spring-core:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.yaml:snakeyaml:jar:1.30:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" -> "ch.qos.logback:logback-classic:jar:1.2.12:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:provided" -> "ch.qos.logback:logback-core:jar:1.2.12:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:provided" -> "org.slf4j:slf4j-api:jar:1.7.36:provided" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:provided" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:provided" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.29:provided" -> "org.springframework:spring-jcl:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.13.5:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.5:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.79:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" -> "org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.79:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" -> "org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.79:provided" ; 
+[INFO] 	"org.springframework:spring-web:jar:5.3.29:provided" -> "org.springframework:spring-beans:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.29:provided" -> "org.springframework:spring-context:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.29:provided" -> "org.springframework:spring-expression:jar:5.3.29:provided" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.22:provided" -> "cn.hutool:hutool-setting:jar:5.8.22:provided" ; 
+[INFO] 	"cn.hutool:hutool-setting:jar:5.8.22:provided" -> "cn.hutool:hutool-log:jar:5.8.22:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:provided" -> "org.springframework:spring-aop:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:provided" -> "org.aspectj:aspectjweaver:jar:1.9.7:provided" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< org.dromara.jpom.plugins:encrypt >------------------
+[INFO] Building plugin-encrypt 2.10.45                                   [5/20]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ encrypt ---
+[INFO] digraph "org.dromara.jpom.plugins:encrypt:jar:2.10.45" { 
+[INFO] 	"org.dromara.jpom.plugins:encrypt:jar:2.10.45" -> "cn.hutool:hutool-crypto:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom.plugins:encrypt:jar:2.10.45" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.dromara.jpom.plugins:encrypt:jar:2.10.45" -> "org.databene:contiperf:jar:2.3.4:test" ; 
+[INFO] 	"org.dromara.jpom.plugins:encrypt:jar:2.10.45" -> "org.projectlombok:lombok:jar:1.18.28:provided" ; 
+[INFO] 	"cn.hutool:hutool-crypto:jar:5.8.22:compile" -> "cn.hutool:hutool-core:jar:5.8.22:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------------< org.dromara.jpom:agent >-----------------------
+[INFO] Building Jpom Agent 2.10.45                                       [6/20]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ agent ---
+[INFO] digraph "org.dromara.jpom:agent:jar:2.10.45" { 
+[INFO] 	"org.dromara.jpom:agent:jar:2.10.45" -> "org.dromara.jpom:common:jar:2.10.45:compile" ; 
+[INFO] 	"org.dromara.jpom:agent:jar:2.10.45" -> "com.github.odiszapc:nginxparser:jar:0.9.6:compile" ; 
+[INFO] 	"org.dromara.jpom:agent:jar:2.10.45" -> "org.dromara.jpom.plugins:webhook:jar:2.10.45:compile" ; 
+[INFO] 	"org.dromara.jpom:agent:jar:2.10.45" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.7.15:compile" ; 
+[INFO] 	"org.dromara.jpom:agent:jar:2.10.45" -> "com.github.oshi:oshi-core:jar:6.4.5:compile" ; 
+[INFO] 	"org.dromara.jpom:agent:jar:2.10.45" -> "org.dromara.jpom.plugins:encrypt:jar:2.10.45:compile" ; 
+[INFO] 	"org.dromara.jpom:agent:jar:2.10.45" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.dromara.jpom:agent:jar:2.10.45" -> "org.databene:contiperf:jar:2.3.4:test" ; 
+[INFO] 	"org.dromara.jpom:agent:jar:2.10.45" -> "org.projectlombok:lombok:jar:1.18.28:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:compile" -> "org.springframework.boot:spring-boot-starter-web:jar:2.7.15:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:compile" -> "com.alibaba.fastjson2:fastjson2:jar:2.0.40:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:compile" -> "cn.hutool:hutool-core:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:compile" -> "cn.hutool:hutool-http:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:compile" -> "cn.hutool:hutool-system:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:compile" -> "cn.hutool:hutool-extra:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:compile" -> "cn.hutool:hutool-crypto:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:compile" -> "cn.hutool:hutool-cron:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:compile" -> "org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:compile" -> "org.apache.commons:commons-compress:jar:1.24.0:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:compile" -> "cn.keepbx.jpom:jpom-core-common:jar:1.0.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot-starter-json:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:compile" -> "org.springframework:spring-web:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:compile" -> "org.springframework:spring-webmvc:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.springframework:spring-core:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.yaml:snakeyaml:jar:1.30:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:compile" -> "ch.qos.logback:logback-classic:jar:1.2.12:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:compile" -> "ch.qos.logback:logback-core:jar:1.2.12:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.29:compile" -> "org.springframework:spring-jcl:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.13.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:compile" -> "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.13.5:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.5:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:compile" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.79:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:compile" -> "org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.79:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:compile" -> "org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.79:compile" ; 
+[INFO] 	"org.springframework:spring-web:jar:5.3.29:compile" -> "org.springframework:spring-beans:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.29:compile" -> "org.springframework:spring-context:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.29:compile" -> "org.springframework:spring-expression:jar:5.3.29:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.22:compile" -> "cn.hutool:hutool-setting:jar:5.8.22:compile" ; 
+[INFO] 	"cn.hutool:hutool-setting:jar:5.8.22:compile" -> "cn.hutool:hutool-log:jar:5.8.22:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:compile" -> "org.springframework:spring-aop:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:compile" -> "org.aspectj:aspectjweaver:jar:1.9.7:compile" ; 
+[INFO] 	"com.github.odiszapc:nginxparser:jar:0.9.6:compile" -> "org.antlr:antlr4-runtime:jar:4.5.3:compile" ; 
+[INFO] 	"com.github.oshi:oshi-core:jar:6.4.5:compile" -> "net.java.dev.jna:jna:jar:5.13.0:compile" ; 
+[INFO] 	"com.github.oshi:oshi-core:jar:6.4.5:compile" -> "net.java.dev.jna:jna-platform:jar:5.13.0:compile" ; 
+[INFO] 	"com.github.oshi:oshi-core:jar:6.4.5:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.dromara.jpom.plugins:git-clone >-----------------
+[INFO] Building plugin-git-clone 2.10.45                                 [7/20]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ git-clone ---
+[INFO] digraph "org.dromara.jpom.plugins:git-clone:jar:2.10.45" { 
+[INFO] 	"org.dromara.jpom.plugins:git-clone:jar:2.10.45" -> "org.dromara.jpom:common:jar:2.10.45:provided" ; 
+[INFO] 	"org.dromara.jpom.plugins:git-clone:jar:2.10.45" -> "com.github.mwiede:jsch:jar:0.2.11:compile" ; 
+[INFO] 	"org.dromara.jpom.plugins:git-clone:jar:2.10.45" -> "org.bouncycastle:bcprov-jdk18on:jar:1.75:compile" ; 
+[INFO] 	"org.dromara.jpom.plugins:git-clone:jar:2.10.45" -> "org.eclipse.jgit:org.eclipse.jgit.ssh.jsch:jar:5.13.2.202306221912-r:compile" ; 
+[INFO] 	"org.dromara.jpom.plugins:git-clone:jar:2.10.45" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.dromara.jpom.plugins:git-clone:jar:2.10.45" -> "org.databene:contiperf:jar:2.3.4:test" ; 
+[INFO] 	"org.dromara.jpom.plugins:git-clone:jar:2.10.45" -> "org.projectlombok:lombok:jar:1.18.28:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "com.alibaba.fastjson2:fastjson2:jar:2.0.40:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-core:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-http:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-system:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-extra:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-crypto:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-cron:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "org.apache.commons:commons-compress:jar:1.24.0:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.keepbx.jpom:jpom-core-common:jar:1.0.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework:spring-web:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework:spring-webmvc:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework:spring-core:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.yaml:snakeyaml:jar:1.30:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" -> "ch.qos.logback:logback-classic:jar:1.2.12:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:provided" -> "ch.qos.logback:logback-core:jar:1.2.12:provided" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:provided" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:provided" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.29:provided" -> "org.springframework:spring-jcl:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.13.5:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.5:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.79:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" -> "org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.79:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" -> "org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.79:provided" ; 
+[INFO] 	"org.springframework:spring-web:jar:5.3.29:provided" -> "org.springframework:spring-beans:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.29:provided" -> "org.springframework:spring-context:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.29:provided" -> "org.springframework:spring-expression:jar:5.3.29:provided" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.22:provided" -> "cn.hutool:hutool-setting:jar:5.8.22:provided" ; 
+[INFO] 	"cn.hutool:hutool-setting:jar:5.8.22:provided" -> "cn.hutool:hutool-log:jar:5.8.22:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:provided" -> "org.springframework:spring-aop:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:provided" -> "org.aspectj:aspectjweaver:jar:1.9.7:provided" ; 
+[INFO] 	"org.eclipse.jgit:org.eclipse.jgit.ssh.jsch:jar:5.13.2.202306221912-r:compile" -> "org.eclipse.jgit:org.eclipse.jgit:jar:5.13.2.202306221912-r:compile" ; 
+[INFO] 	"org.eclipse.jgit:org.eclipse.jgit.ssh.jsch:jar:5.13.2.202306221912-r:compile" -> "com.jcraft:jzlib:jar:1.1.1:compile" ; 
+[INFO] 	"org.eclipse.jgit:org.eclipse.jgit.ssh.jsch:jar:5.13.2.202306221912-r:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.eclipse.jgit:org.eclipse.jgit:jar:5.13.2.202306221912-r:compile" -> "com.googlecode.javaewah:JavaEWAH:jar:1.1.13:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.dromara.jpom.plugins:ssh-jsch >------------------
+[INFO] Building plugin-ssh-jsch 2.10.45                                  [8/20]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ ssh-jsch ---
+[INFO] digraph "org.dromara.jpom.plugins:ssh-jsch:jar:2.10.45" { 
+[INFO] 	"org.dromara.jpom.plugins:ssh-jsch:jar:2.10.45" -> "org.dromara.jpom:common:jar:2.10.45:provided" ; 
+[INFO] 	"org.dromara.jpom.plugins:ssh-jsch:jar:2.10.45" -> "org.bouncycastle:bcprov-jdk18on:jar:1.75:compile" ; 
+[INFO] 	"org.dromara.jpom.plugins:ssh-jsch:jar:2.10.45" -> "com.github.mwiede:jsch:jar:0.2.11:compile" ; 
+[INFO] 	"org.dromara.jpom.plugins:ssh-jsch:jar:2.10.45" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.dromara.jpom.plugins:ssh-jsch:jar:2.10.45" -> "org.databene:contiperf:jar:2.3.4:test" ; 
+[INFO] 	"org.dromara.jpom.plugins:ssh-jsch:jar:2.10.45" -> "org.projectlombok:lombok:jar:1.18.28:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "com.alibaba.fastjson2:fastjson2:jar:2.0.40:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-core:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-http:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-system:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-extra:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-crypto:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-cron:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "org.apache.commons:commons-compress:jar:1.24.0:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.keepbx.jpom:jpom-core-common:jar:1.0.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework:spring-web:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework:spring-webmvc:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework:spring-core:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.yaml:snakeyaml:jar:1.30:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" -> "ch.qos.logback:logback-classic:jar:1.2.12:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:provided" -> "ch.qos.logback:logback-core:jar:1.2.12:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:provided" -> "org.slf4j:slf4j-api:jar:1.7.36:provided" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:provided" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:provided" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.29:provided" -> "org.springframework:spring-jcl:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.13.5:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.5:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.79:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" -> "org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.79:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" -> "org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.79:provided" ; 
+[INFO] 	"org.springframework:spring-web:jar:5.3.29:provided" -> "org.springframework:spring-beans:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.29:provided" -> "org.springframework:spring-context:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.29:provided" -> "org.springframework:spring-expression:jar:5.3.29:provided" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.22:provided" -> "cn.hutool:hutool-setting:jar:5.8.22:provided" ; 
+[INFO] 	"cn.hutool:hutool-setting:jar:5.8.22:provided" -> "cn.hutool:hutool-log:jar:5.8.22:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:provided" -> "org.springframework:spring-aop:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:provided" -> "org.aspectj:aspectjweaver:jar:1.9.7:provided" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.dromara.jpom.plugins:svn-clone >-----------------
+[INFO] Building plugin-svn-clone 2.10.45                                 [9/20]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ svn-clone ---
+[INFO] digraph "org.dromara.jpom.plugins:svn-clone:jar:2.10.45" { 
+[INFO] 	"org.dromara.jpom.plugins:svn-clone:jar:2.10.45" -> "org.dromara.jpom:common:jar:2.10.45:provided" ; 
+[INFO] 	"org.dromara.jpom.plugins:svn-clone:jar:2.10.45" -> "org.tmatesoft.svnkit:svnkit:jar:1.10.11:compile" ; 
+[INFO] 	"org.dromara.jpom.plugins:svn-clone:jar:2.10.45" -> "com.trilead:trilead-ssh2:jar:1.0.0-build222:compile" ; 
+[INFO] 	"org.dromara.jpom.plugins:svn-clone:jar:2.10.45" -> "net.java.dev.jna:jna:jar:5.12.1:compile" ; 
+[INFO] 	"org.dromara.jpom.plugins:svn-clone:jar:2.10.45" -> "net.java.dev.jna:jna-platform:jar:5.12.1:compile" ; 
+[INFO] 	"org.dromara.jpom.plugins:svn-clone:jar:2.10.45" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.dromara.jpom.plugins:svn-clone:jar:2.10.45" -> "org.databene:contiperf:jar:2.3.4:test" ; 
+[INFO] 	"org.dromara.jpom.plugins:svn-clone:jar:2.10.45" -> "org.projectlombok:lombok:jar:1.18.28:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "com.alibaba.fastjson2:fastjson2:jar:2.0.40:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-core:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-http:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-system:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-extra:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-crypto:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-cron:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "org.apache.commons:commons-compress:jar:1.24.0:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.keepbx.jpom:jpom-core-common:jar:1.0.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework:spring-web:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework:spring-webmvc:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework:spring-core:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.yaml:snakeyaml:jar:1.30:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" -> "ch.qos.logback:logback-classic:jar:1.2.12:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:provided" -> "ch.qos.logback:logback-core:jar:1.2.12:provided" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:provided" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:provided" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.29:provided" -> "org.springframework:spring-jcl:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.13.5:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.5:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.79:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" -> "org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.79:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" -> "org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.79:provided" ; 
+[INFO] 	"org.springframework:spring-web:jar:5.3.29:provided" -> "org.springframework:spring-beans:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.29:provided" -> "org.springframework:spring-context:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.29:provided" -> "org.springframework:spring-expression:jar:5.3.29:provided" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.22:provided" -> "cn.hutool:hutool-setting:jar:5.8.22:provided" ; 
+[INFO] 	"cn.hutool:hutool-setting:jar:5.8.22:provided" -> "cn.hutool:hutool-log:jar:5.8.22:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:provided" -> "org.springframework:spring-aop:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:provided" -> "org.aspectj:aspectjweaver:jar:1.9.7:provided" ; 
+[INFO] 	"org.tmatesoft.svnkit:svnkit:jar:1.10.11:compile" -> "org.apache.sshd:sshd-core:jar:2.9.2:compile" ; 
+[INFO] 	"org.tmatesoft.svnkit:svnkit:jar:1.10.11:compile" -> "org.apache.sshd:sshd-common:jar:2.9.2:compile" ; 
+[INFO] 	"org.tmatesoft.svnkit:svnkit:jar:1.10.11:compile" -> "net.i2p.crypto:eddsa:jar:0.3.0:compile" ; 
+[INFO] 	"org.tmatesoft.svnkit:svnkit:jar:1.10.11:compile" -> "de.regnis.q.sequence:sequence-library:jar:1.0.4:compile" ; 
+[INFO] 	"org.tmatesoft.svnkit:svnkit:jar:1.10.11:compile" -> "org.tmatesoft.sqljet:sqljet:jar:1.1.15:compile" ; 
+[INFO] 	"org.tmatesoft.svnkit:svnkit:jar:1.10.11:compile" -> "com.jcraft:jsch.agentproxy.connector-factory:jar:0.0.9:compile" ; 
+[INFO] 	"org.tmatesoft.svnkit:svnkit:jar:1.10.11:compile" -> "com.jcraft:jsch.agentproxy.svnkit-trilead-ssh2:jar:0.0.9:compile" ; 
+[INFO] 	"org.tmatesoft.svnkit:svnkit:jar:1.10.11:compile" -> "org.lz4:lz4-java:jar:1.4.1:compile" ; 
+[INFO] 	"org.apache.sshd:sshd-core:jar:2.9.2:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.sshd:sshd-core:jar:2.9.2:compile" -> "org.slf4j:jcl-over-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"org.tmatesoft.sqljet:sqljet:jar:1.1.15:compile" -> "org.antlr:antlr-runtime:jar:3.4:compile" ; 
+[INFO] 	"com.jcraft:jsch.agentproxy.connector-factory:jar:0.0.9:compile" -> "com.jcraft:jsch.agentproxy.core:jar:0.0.9:compile" ; 
+[INFO] 	"com.jcraft:jsch.agentproxy.connector-factory:jar:0.0.9:compile" -> "com.jcraft:jsch.agentproxy.usocket-jna:jar:0.0.9:compile" ; 
+[INFO] 	"com.jcraft:jsch.agentproxy.connector-factory:jar:0.0.9:compile" -> "com.jcraft:jsch.agentproxy.usocket-nc:jar:0.0.9:compile" ; 
+[INFO] 	"com.jcraft:jsch.agentproxy.connector-factory:jar:0.0.9:compile" -> "com.jcraft:jsch.agentproxy.sshagent:jar:0.0.9:compile" ; 
+[INFO] 	"com.jcraft:jsch.agentproxy.connector-factory:jar:0.0.9:compile" -> "com.jcraft:jsch.agentproxy.pageant:jar:0.0.9:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< org.dromara.jpom.plugins:docker-cli >-----------------
+[INFO] Building plugin-docker-cli 2.10.45                               [10/20]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ docker-cli ---
+[INFO] digraph "org.dromara.jpom.plugins:docker-cli:jar:2.10.45" { 
+[INFO] 	"org.dromara.jpom.plugins:docker-cli:jar:2.10.45" -> "org.dromara.jpom:common:jar:2.10.45:provided" ; 
+[INFO] 	"org.dromara.jpom.plugins:docker-cli:jar:2.10.45" -> "com.github.docker-java:docker-java-core:jar:3.3.3:compile" ; 
+[INFO] 	"org.dromara.jpom.plugins:docker-cli:jar:2.10.45" -> "org.bouncycastle:bcpkix-jdk15on:jar:1.70:compile" ; 
+[INFO] 	"org.dromara.jpom.plugins:docker-cli:jar:2.10.45" -> "com.github.docker-java:docker-java-transport-httpclient5:jar:3.3.3:compile" ; 
+[INFO] 	"org.dromara.jpom.plugins:docker-cli:jar:2.10.45" -> "org.dromara.jpom.plugins:ssh-jsch:jar:2.10.45:compile" ; 
+[INFO] 	"org.dromara.jpom.plugins:docker-cli:jar:2.10.45" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.dromara.jpom.plugins:docker-cli:jar:2.10.45" -> "org.databene:contiperf:jar:2.3.4:test" ; 
+[INFO] 	"org.dromara.jpom.plugins:docker-cli:jar:2.10.45" -> "org.projectlombok:lombok:jar:1.18.28:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "com.alibaba.fastjson2:fastjson2:jar:2.0.40:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-core:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-http:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-system:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-extra:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-crypto:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-cron:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "org.apache.commons:commons-compress:jar:1.24.0:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.keepbx.jpom:jpom-core-common:jar:1.0.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework:spring-web:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework:spring-webmvc:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework:spring-core:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.yaml:snakeyaml:jar:1.30:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" -> "ch.qos.logback:logback-classic:jar:1.2.12:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:provided" -> "ch.qos.logback:logback-core:jar:1.2.12:provided" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:provided" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:provided" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.29:provided" -> "org.springframework:spring-jcl:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.79:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" -> "org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.79:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" -> "org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.79:provided" ; 
+[INFO] 	"org.springframework:spring-web:jar:5.3.29:provided" -> "org.springframework:spring-beans:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.29:provided" -> "org.springframework:spring-context:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.29:provided" -> "org.springframework:spring-expression:jar:5.3.29:provided" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.22:provided" -> "cn.hutool:hutool-setting:jar:5.8.22:provided" ; 
+[INFO] 	"cn.hutool:hutool-setting:jar:5.8.22:provided" -> "cn.hutool:hutool-log:jar:5.8.22:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:provided" -> "org.springframework:spring-aop:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:provided" -> "org.aspectj:aspectjweaver:jar:1.9.7:provided" ; 
+[INFO] 	"com.github.docker-java:docker-java-core:jar:3.3.3:compile" -> "com.github.docker-java:docker-java-api:jar:3.3.3:compile" ; 
+[INFO] 	"com.github.docker-java:docker-java-core:jar:3.3.3:compile" -> "com.github.docker-java:docker-java-transport:jar:3.3.3:compile" ; 
+[INFO] 	"com.github.docker-java:docker-java-core:jar:3.3.3:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"com.github.docker-java:docker-java-core:jar:3.3.3:compile" -> "commons-io:commons-io:jar:2.6:compile" ; 
+[INFO] 	"com.github.docker-java:docker-java-core:jar:3.3.3:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"com.github.docker-java:docker-java-core:jar:3.3.3:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile" ; 
+[INFO] 	"com.github.docker-java:docker-java-core:jar:3.3.3:compile" -> "com.google.guava:guava:jar:19.0:compile" ; 
+[INFO] 	"com.github.docker-java:docker-java-core:jar:3.3.3:compile" -> "org.bouncycastle:bcpkix-jdk18on:jar:1.75:compile" ; 
+[INFO] 	"com.github.docker-java:docker-java-api:jar:3.3.3:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.5:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.5:compile" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk18on:jar:1.75:compile" -> "org.bouncycastle:bcutil-jdk18on:jar:1.75:compile" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk15on:jar:1.70:compile" -> "org.bouncycastle:bcprov-jdk15on:jar:1.70:compile" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk15on:jar:1.70:compile" -> "org.bouncycastle:bcutil-jdk15on:jar:1.70:compile" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-httpclient5:jar:3.3.3:compile" -> "org.apache.httpcomponents.client5:httpclient5:jar:5.1.4:compile" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-httpclient5:jar:3.3.3:compile" -> "net.java.dev.jna:jna:jar:5.12.1:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.1.4:compile" -> "org.apache.httpcomponents.core5:httpcore5:jar:5.1.5:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.1.4:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"org.dromara.jpom.plugins:ssh-jsch:jar:2.10.45:compile" -> "org.bouncycastle:bcprov-jdk18on:jar:1.75:compile" ; 
+[INFO] 	"org.dromara.jpom.plugins:ssh-jsch:jar:2.10.45:compile" -> "com.github.mwiede:jsch:jar:0.2.11:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< org.dromara.jpom.plugins:email >-------------------
+[INFO] Building plugin-email 2.10.45                                    [11/20]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ email ---
+[INFO] digraph "org.dromara.jpom.plugins:email:jar:2.10.45" { 
+[INFO] 	"org.dromara.jpom.plugins:email:jar:2.10.45" -> "org.dromara.jpom:common:jar:2.10.45:provided" ; 
+[INFO] 	"org.dromara.jpom.plugins:email:jar:2.10.45" -> "com.sun.mail:javax.mail:jar:1.6.2:compile" ; 
+[INFO] 	"org.dromara.jpom.plugins:email:jar:2.10.45" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.dromara.jpom.plugins:email:jar:2.10.45" -> "org.databene:contiperf:jar:2.3.4:test" ; 
+[INFO] 	"org.dromara.jpom.plugins:email:jar:2.10.45" -> "org.projectlombok:lombok:jar:1.18.28:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "com.alibaba.fastjson2:fastjson2:jar:2.0.40:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-core:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-http:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-system:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-extra:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-crypto:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-cron:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "org.apache.commons:commons-compress:jar:1.24.0:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.keepbx.jpom:jpom-core-common:jar:1.0.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework:spring-web:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework:spring-webmvc:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework:spring-core:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.yaml:snakeyaml:jar:1.30:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" -> "ch.qos.logback:logback-classic:jar:1.2.12:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:provided" -> "ch.qos.logback:logback-core:jar:1.2.12:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:provided" -> "org.slf4j:slf4j-api:jar:1.7.36:provided" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:provided" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:provided" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.29:provided" -> "org.springframework:spring-jcl:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.13.5:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.5:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.79:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" -> "org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.79:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" -> "org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.79:provided" ; 
+[INFO] 	"org.springframework:spring-web:jar:5.3.29:provided" -> "org.springframework:spring-beans:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.29:provided" -> "org.springframework:spring-context:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.29:provided" -> "org.springframework:spring-expression:jar:5.3.29:provided" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.22:provided" -> "cn.hutool:hutool-setting:jar:5.8.22:provided" ; 
+[INFO] 	"cn.hutool:hutool-setting:jar:5.8.22:provided" -> "cn.hutool:hutool-log:jar:5.8.22:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:provided" -> "org.springframework:spring-aop:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:provided" -> "org.aspectj:aspectjweaver:jar:1.9.7:provided" ; 
+[INFO] 	"com.sun.mail:javax.mail:jar:1.6.2:compile" -> "javax.activation:activation:jar:1.1:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----< org.dromara.jpom.agent-transport:jpom-agent-transport-parent >----
+[INFO] Building Jpom Agent Transport 2.10.45                            [12/20]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ jpom-agent-transport-parent ---
+[INFO] digraph "org.dromara.jpom.agent-transport:jpom-agent-transport-parent:pom:2.10.45" { 
+[INFO] 	"org.dromara.jpom.agent-transport:jpom-agent-transport-parent:pom:2.10.45" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.dromara.jpom.agent-transport:jpom-agent-transport-parent:pom:2.10.45" -> "org.databene:contiperf:jar:2.3.4:test" ; 
+[INFO] 	"org.dromara.jpom.agent-transport:jpom-agent-transport-parent:pom:2.10.45" -> "org.projectlombok:lombok:jar:1.18.28:provided" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------< org.dromara.jpom.agent-transport:agent-transport-common >-------
+[INFO] Building agent-transport-common 2.10.45                          [13/20]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ agent-transport-common ---
+[INFO] digraph "org.dromara.jpom.agent-transport:agent-transport-common:jar:2.10.45" { 
+[INFO] 	"org.dromara.jpom.agent-transport:agent-transport-common:jar:2.10.45" -> "cn.hutool:hutool-core:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom.agent-transport:agent-transport-common:jar:2.10.45" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.dromara.jpom.agent-transport:agent-transport-common:jar:2.10.45" -> "com.alibaba.fastjson2:fastjson2:jar:2.0.40:compile" ; 
+[INFO] 	"org.dromara.jpom.agent-transport:agent-transport-common:jar:2.10.45" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.dromara.jpom.agent-transport:agent-transport-common:jar:2.10.45" -> "org.databene:contiperf:jar:2.3.4:test" ; 
+[INFO] 	"org.dromara.jpom.agent-transport:agent-transport-common:jar:2.10.45" -> "org.projectlombok:lombok:jar:1.18.28:provided" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------< org.dromara.jpom.agent-transport:agent-transport-http >--------
+[INFO] Building agent-transport-http 2.10.45                            [14/20]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ agent-transport-http ---
+[INFO] digraph "org.dromara.jpom.agent-transport:agent-transport-http:jar:2.10.45" { 
+[INFO] 	"org.dromara.jpom.agent-transport:agent-transport-http:jar:2.10.45" -> "org.dromara.jpom.plugins:encrypt:jar:2.10.45:compile" ; 
+[INFO] 	"org.dromara.jpom.agent-transport:agent-transport-http:jar:2.10.45" -> "org.dromara.jpom.agent-transport:agent-transport-common:jar:2.10.45:compile" ; 
+[INFO] 	"org.dromara.jpom.agent-transport:agent-transport-http:jar:2.10.45" -> "cn.hutool:hutool-http:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom.agent-transport:agent-transport-http:jar:2.10.45" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.dromara.jpom.agent-transport:agent-transport-http:jar:2.10.45" -> "com.alibaba.fastjson2:fastjson2:jar:2.0.40:compile" ; 
+[INFO] 	"org.dromara.jpom.agent-transport:agent-transport-http:jar:2.10.45" -> "org.springframework.boot:spring-boot-starter-websocket:jar:2.7.15:compile" ; 
+[INFO] 	"org.dromara.jpom.agent-transport:agent-transport-http:jar:2.10.45" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.dromara.jpom.agent-transport:agent-transport-http:jar:2.10.45" -> "org.databene:contiperf:jar:2.3.4:test" ; 
+[INFO] 	"org.dromara.jpom.agent-transport:agent-transport-http:jar:2.10.45" -> "org.projectlombok:lombok:jar:1.18.28:provided" ; 
+[INFO] 	"org.dromara.jpom.plugins:encrypt:jar:2.10.45:compile" -> "cn.hutool:hutool-crypto:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom.agent-transport:agent-transport-common:jar:2.10.45:compile" -> "cn.hutool:hutool-core:jar:5.8.22:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-websocket:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot-starter-web:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-websocket:jar:2.7.15:compile" -> "org.springframework:spring-messaging:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-websocket:jar:2.7.15:compile" -> "org.springframework:spring-websocket:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot-starter-json:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:compile" -> "org.springframework:spring-web:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:compile" -> "org.springframework:spring-webmvc:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.yaml:snakeyaml:jar:1.30:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:compile" -> "ch.qos.logback:logback-classic:jar:1.2.12:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:compile" -> "ch.qos.logback:logback-core:jar:1.2.12:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.13.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:compile" -> "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.13.5:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.5:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:compile" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.79:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:compile" -> "org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.79:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:compile" -> "org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.79:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.29:compile" -> "org.springframework:spring-aop:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.29:compile" -> "org.springframework:spring-expression:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework:spring-messaging:jar:5.3.29:compile" -> "org.springframework:spring-beans:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework:spring-messaging:jar:5.3.29:compile" -> "org.springframework:spring-core:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.29:compile" -> "org.springframework:spring-jcl:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework:spring-websocket:jar:5.3.29:compile" -> "org.springframework:spring-context:jar:5.3.29:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----< org.dromara.jpom.storage-module:jpom-storage-module-parent >-----
+[INFO] Building Jpom storage module 2.10.45                             [15/20]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ jpom-storage-module-parent ---
+[INFO] digraph "org.dromara.jpom.storage-module:jpom-storage-module-parent:pom:2.10.45" { 
+[INFO] 	"org.dromara.jpom.storage-module:jpom-storage-module-parent:pom:2.10.45" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.dromara.jpom.storage-module:jpom-storage-module-parent:pom:2.10.45" -> "org.databene:contiperf:jar:2.3.4:test" ; 
+[INFO] 	"org.dromara.jpom.storage-module:jpom-storage-module-parent:pom:2.10.45" -> "org.projectlombok:lombok:jar:1.18.28:provided" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------< org.dromara.jpom.storage-module:storage-module-common >--------
+[INFO] Building storage-module-common 2.10.45                           [16/20]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ storage-module-common ---
+[INFO] digraph "org.dromara.jpom.storage-module:storage-module-common:jar:2.10.45" { 
+[INFO] 	"org.dromara.jpom.storage-module:storage-module-common:jar:2.10.45" -> "org.dromara.jpom:common:jar:2.10.45:provided" ; 
+[INFO] 	"org.dromara.jpom.storage-module:storage-module-common:jar:2.10.45" -> "cn.hutool:hutool-db:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom.storage-module:storage-module-common:jar:2.10.45" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.7.15:compile" ; 
+[INFO] 	"org.dromara.jpom.storage-module:storage-module-common:jar:2.10.45" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.dromara.jpom.storage-module:storage-module-common:jar:2.10.45" -> "org.databene:contiperf:jar:2.3.4:test" ; 
+[INFO] 	"org.dromara.jpom.storage-module:storage-module-common:jar:2.10.45" -> "org.projectlombok:lombok:jar:1.18.28:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "com.alibaba.fastjson2:fastjson2:jar:2.0.40:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-core:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-http:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-system:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-extra:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-crypto:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-cron:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "org.apache.commons:commons-compress:jar:1.24.0:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.keepbx.jpom:jpom-core-common:jar:1.0.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework:spring-web:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework:spring-webmvc:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework:spring-core:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.yaml:snakeyaml:jar:1.30:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" -> "ch.qos.logback:logback-classic:jar:1.2.12:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:provided" -> "ch.qos.logback:logback-core:jar:1.2.12:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:provided" -> "org.slf4j:slf4j-api:jar:1.7.36:provided" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:provided" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:provided" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.29:provided" -> "org.springframework:spring-jcl:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.13.5:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.5:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.79:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" -> "org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.79:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" -> "org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.79:provided" ; 
+[INFO] 	"org.springframework:spring-web:jar:5.3.29:provided" -> "org.springframework:spring-beans:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.29:provided" -> "org.springframework:spring-context:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.29:provided" -> "org.springframework:spring-expression:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:provided" -> "org.springframework:spring-aop:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:provided" -> "org.aspectj:aspectjweaver:jar:1.9.7:provided" ; 
+[INFO] 	"cn.hutool:hutool-db:jar:5.8.22:compile" -> "cn.hutool:hutool-setting:jar:5.8.22:compile" ; 
+[INFO] 	"cn.hutool:hutool-db:jar:5.8.22:compile" -> "cn.hutool:hutool-log:jar:5.8.22:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------< org.dromara.jpom.storage-module:storage-module-h2 >----------
+[INFO] Building storage-module-h2 2.10.45                               [17/20]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ storage-module-h2 ---
+[INFO] digraph "org.dromara.jpom.storage-module:storage-module-h2:jar:2.10.45" { 
+[INFO] 	"org.dromara.jpom.storage-module:storage-module-h2:jar:2.10.45" -> "org.dromara.jpom.storage-module:storage-module-common:jar:2.10.45:compile" ; 
+[INFO] 	"org.dromara.jpom.storage-module:storage-module-h2:jar:2.10.45" -> "com.h2database:h2:jar:2.2.220:compile" ; 
+[INFO] 	"org.dromara.jpom.storage-module:storage-module-h2:jar:2.10.45" -> "org.dromara.jpom:common:jar:2.10.45:provided" ; 
+[INFO] 	"org.dromara.jpom.storage-module:storage-module-h2:jar:2.10.45" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.dromara.jpom.storage-module:storage-module-h2:jar:2.10.45" -> "org.databene:contiperf:jar:2.3.4:test" ; 
+[INFO] 	"org.dromara.jpom.storage-module:storage-module-h2:jar:2.10.45" -> "org.projectlombok:lombok:jar:1.18.28:provided" ; 
+[INFO] 	"org.dromara.jpom.storage-module:storage-module-common:jar:2.10.45:compile" -> "cn.hutool:hutool-db:jar:5.8.22:compile" ; 
+[INFO] 	"cn.hutool:hutool-db:jar:5.8.22:compile" -> "cn.hutool:hutool-setting:jar:5.8.22:compile" ; 
+[INFO] 	"cn.hutool:hutool-db:jar:5.8.22:compile" -> "cn.hutool:hutool-log:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "com.alibaba.fastjson2:fastjson2:jar:2.0.40:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-core:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-http:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-system:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-extra:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-crypto:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-cron:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "org.apache.commons:commons-compress:jar:1.24.0:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.keepbx.jpom:jpom-core-common:jar:1.0.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework:spring-web:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework:spring-webmvc:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework:spring-core:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.yaml:snakeyaml:jar:1.30:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" -> "ch.qos.logback:logback-classic:jar:1.2.12:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:provided" -> "ch.qos.logback:logback-core:jar:1.2.12:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:provided" -> "org.slf4j:slf4j-api:jar:1.7.36:provided" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:provided" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:provided" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.29:provided" -> "org.springframework:spring-jcl:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.13.5:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.5:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.79:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" -> "org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.79:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" -> "org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.79:provided" ; 
+[INFO] 	"org.springframework:spring-web:jar:5.3.29:provided" -> "org.springframework:spring-beans:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.29:provided" -> "org.springframework:spring-context:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.29:provided" -> "org.springframework:spring-expression:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:provided" -> "org.springframework:spring-aop:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:provided" -> "org.aspectj:aspectjweaver:jar:1.9.7:provided" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------< org.dromara.jpom.storage-module:storage-module-mysql >--------
+[INFO] Building storage-module-mysql 2.10.45                            [18/20]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ storage-module-mysql ---
+[INFO] digraph "org.dromara.jpom.storage-module:storage-module-mysql:jar:2.10.45" { 
+[INFO] 	"org.dromara.jpom.storage-module:storage-module-mysql:jar:2.10.45" -> "org.dromara.jpom.storage-module:storage-module-common:jar:2.10.45:compile" ; 
+[INFO] 	"org.dromara.jpom.storage-module:storage-module-mysql:jar:2.10.45" -> "com.mysql:mysql-connector-j:jar:8.0.33:compile" ; 
+[INFO] 	"org.dromara.jpom.storage-module:storage-module-mysql:jar:2.10.45" -> "org.dromara.jpom:common:jar:2.10.45:provided" ; 
+[INFO] 	"org.dromara.jpom.storage-module:storage-module-mysql:jar:2.10.45" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.dromara.jpom.storage-module:storage-module-mysql:jar:2.10.45" -> "org.databene:contiperf:jar:2.3.4:test" ; 
+[INFO] 	"org.dromara.jpom.storage-module:storage-module-mysql:jar:2.10.45" -> "org.projectlombok:lombok:jar:1.18.28:provided" ; 
+[INFO] 	"org.dromara.jpom.storage-module:storage-module-common:jar:2.10.45:compile" -> "cn.hutool:hutool-db:jar:5.8.22:compile" ; 
+[INFO] 	"cn.hutool:hutool-db:jar:5.8.22:compile" -> "cn.hutool:hutool-setting:jar:5.8.22:compile" ; 
+[INFO] 	"cn.hutool:hutool-db:jar:5.8.22:compile" -> "cn.hutool:hutool-log:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "com.alibaba.fastjson2:fastjson2:jar:2.0.40:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-core:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-http:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-system:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-extra:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-crypto:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.hutool:hutool-cron:jar:5.8.22:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "org.apache.commons:commons-compress:jar:1.24.0:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:provided" -> "cn.keepbx.jpom:jpom-core-common:jar:1.0.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework:spring-web:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:provided" -> "org.springframework:spring-webmvc:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.springframework:spring-core:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:provided" -> "org.yaml:snakeyaml:jar:1.30:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" -> "ch.qos.logback:logback-classic:jar:1.2.12:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:provided" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:provided" -> "ch.qos.logback:logback-core:jar:1.2.12:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:provided" -> "org.slf4j:slf4j-api:jar:1.7.36:provided" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:provided" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:provided" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.29:provided" -> "org.springframework:spring-jcl:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:provided" -> "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.13.5:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.5:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.79:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" -> "org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.79:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:provided" -> "org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.79:provided" ; 
+[INFO] 	"org.springframework:spring-web:jar:5.3.29:provided" -> "org.springframework:spring-beans:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.29:provided" -> "org.springframework:spring-context:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.29:provided" -> "org.springframework:spring-expression:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:provided" -> "org.springframework:spring-aop:jar:5.3.29:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:provided" -> "org.aspectj:aspectjweaver:jar:1.9.7:provided" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< org.dromara.jpom:server >-----------------------
+[INFO] Building Jpom Server 2.10.45                                     [19/20]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ server ---
+[INFO] digraph "org.dromara.jpom:server:jar:2.10.45" { 
+[INFO] 	"org.dromara.jpom:server:jar:2.10.45" -> "org.dromara.jpom:common:jar:2.10.45:compile" ; 
+[INFO] 	"org.dromara.jpom:server:jar:2.10.45" -> "org.dromara.jpom.plugins:webhook:jar:2.10.45:compile" ; 
+[INFO] 	"org.dromara.jpom:server:jar:2.10.45" -> "org.dromara.jpom.plugins:git-clone:jar:2.10.45:compile" ; 
+[INFO] 	"org.dromara.jpom:server:jar:2.10.45" -> "org.dromara.jpom.plugins:ssh-jsch:jar:2.10.45:compile" ; 
+[INFO] 	"org.dromara.jpom:server:jar:2.10.45" -> "org.dromara.jpom.plugins:svn-clone:jar:2.10.45:compile" ; 
+[INFO] 	"org.dromara.jpom:server:jar:2.10.45" -> "org.dromara.jpom.plugins:docker-cli:jar:2.10.45:compile" ; 
+[INFO] 	"org.dromara.jpom:server:jar:2.10.45" -> "org.dromara.jpom.plugins:email:jar:2.10.45:compile" ; 
+[INFO] 	"org.dromara.jpom:server:jar:2.10.45" -> "org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" ; 
+[INFO] 	"org.dromara.jpom:server:jar:2.10.45" -> "cn.hutool:hutool-jwt:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom:server:jar:2.10.45" -> "cn.hutool:hutool-captcha:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom:server:jar:2.10.45" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.7.15:compile" ; 
+[INFO] 	"org.dromara.jpom:server:jar:2.10.45" -> "org.dromara.jpom.agent-transport:agent-transport-http:jar:2.10.45:compile" ; 
+[INFO] 	"org.dromara.jpom:server:jar:2.10.45" -> "org.springframework.boot:spring-boot-starter-websocket:jar:2.7.15:compile" ; 
+[INFO] 	"org.dromara.jpom:server:jar:2.10.45" -> "org.dromara.jpom.storage-module:storage-module-h2:jar:2.10.45:compile" ; 
+[INFO] 	"org.dromara.jpom:server:jar:2.10.45" -> "org.dromara.jpom.storage-module:storage-module-mysql:jar:2.10.45:compile" ; 
+[INFO] 	"org.dromara.jpom:server:jar:2.10.45" -> "me.zhyd.oauth:JustAuth:jar:1.16.5:compile" ; 
+[INFO] 	"org.dromara.jpom:server:jar:2.10.45" -> "com.alibaba:fastjson:jar:2.0.40:compile" ; 
+[INFO] 	"org.dromara.jpom:server:jar:2.10.45" -> "cn.hutool:hutool-cache:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom:server:jar:2.10.45" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.dromara.jpom:server:jar:2.10.45" -> "org.databene:contiperf:jar:2.3.4:test" ; 
+[INFO] 	"org.dromara.jpom:server:jar:2.10.45" -> "org.projectlombok:lombok:jar:1.18.28:provided" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:compile" -> "org.springframework.boot:spring-boot-starter-web:jar:2.7.15:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:compile" -> "com.alibaba.fastjson2:fastjson2:jar:2.0.40:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:compile" -> "cn.hutool:hutool-core:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:compile" -> "cn.hutool:hutool-http:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:compile" -> "cn.hutool:hutool-system:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:compile" -> "cn.hutool:hutool-extra:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:compile" -> "cn.hutool:hutool-crypto:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:compile" -> "cn.hutool:hutool-cron:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:compile" -> "org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:compile" -> "org.apache.commons:commons-compress:jar:1.24.0:compile" ; 
+[INFO] 	"org.dromara.jpom:common:jar:2.10.45:compile" -> "cn.keepbx.jpom:jpom-core-common:jar:1.0.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot-starter-json:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:compile" -> "org.springframework:spring-web:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.15:compile" -> "org.springframework:spring-webmvc:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.13.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.15:compile" -> "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.13.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:compile" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.79:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:compile" -> "org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.79:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.15:compile" -> "org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.79:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.29:compile" -> "org.springframework:spring-expression:jar:5.3.29:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.22:compile" -> "cn.hutool:hutool-setting:jar:5.8.22:compile" ; 
+[INFO] 	"cn.hutool:hutool-setting:jar:5.8.22:compile" -> "cn.hutool:hutool-log:jar:5.8.22:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:compile" -> "org.springframework:spring-aop:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.7.15:compile" -> "org.aspectj:aspectjweaver:jar:1.9.7:compile" ; 
+[INFO] 	"org.dromara.jpom.plugins:git-clone:jar:2.10.45:compile" -> "com.github.mwiede:jsch:jar:0.2.11:compile" ; 
+[INFO] 	"org.dromara.jpom.plugins:git-clone:jar:2.10.45:compile" -> "org.bouncycastle:bcprov-jdk18on:jar:1.75:compile" ; 
+[INFO] 	"org.dromara.jpom.plugins:git-clone:jar:2.10.45:compile" -> "org.eclipse.jgit:org.eclipse.jgit.ssh.jsch:jar:5.13.2.202306221912-r:compile" ; 
+[INFO] 	"org.eclipse.jgit:org.eclipse.jgit.ssh.jsch:jar:5.13.2.202306221912-r:compile" -> "org.eclipse.jgit:org.eclipse.jgit:jar:5.13.2.202306221912-r:compile" ; 
+[INFO] 	"org.eclipse.jgit:org.eclipse.jgit.ssh.jsch:jar:5.13.2.202306221912-r:compile" -> "com.jcraft:jzlib:jar:1.1.1:compile" ; 
+[INFO] 	"org.eclipse.jgit:org.eclipse.jgit.ssh.jsch:jar:5.13.2.202306221912-r:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.eclipse.jgit:org.eclipse.jgit:jar:5.13.2.202306221912-r:compile" -> "com.googlecode.javaewah:JavaEWAH:jar:1.1.13:compile" ; 
+[INFO] 	"org.dromara.jpom.plugins:svn-clone:jar:2.10.45:compile" -> "org.tmatesoft.svnkit:svnkit:jar:1.10.11:compile" ; 
+[INFO] 	"org.dromara.jpom.plugins:svn-clone:jar:2.10.45:compile" -> "com.trilead:trilead-ssh2:jar:1.0.0-build222:compile" ; 
+[INFO] 	"org.dromara.jpom.plugins:svn-clone:jar:2.10.45:compile" -> "net.java.dev.jna:jna:jar:5.12.1:compile" ; 
+[INFO] 	"org.dromara.jpom.plugins:svn-clone:jar:2.10.45:compile" -> "net.java.dev.jna:jna-platform:jar:5.12.1:compile" ; 
+[INFO] 	"org.tmatesoft.svnkit:svnkit:jar:1.10.11:compile" -> "org.apache.sshd:sshd-core:jar:2.9.2:compile" ; 
+[INFO] 	"org.tmatesoft.svnkit:svnkit:jar:1.10.11:compile" -> "org.apache.sshd:sshd-common:jar:2.9.2:compile" ; 
+[INFO] 	"org.tmatesoft.svnkit:svnkit:jar:1.10.11:compile" -> "net.i2p.crypto:eddsa:jar:0.3.0:compile" ; 
+[INFO] 	"org.tmatesoft.svnkit:svnkit:jar:1.10.11:compile" -> "de.regnis.q.sequence:sequence-library:jar:1.0.4:compile" ; 
+[INFO] 	"org.tmatesoft.svnkit:svnkit:jar:1.10.11:compile" -> "org.tmatesoft.sqljet:sqljet:jar:1.1.15:compile" ; 
+[INFO] 	"org.tmatesoft.svnkit:svnkit:jar:1.10.11:compile" -> "com.jcraft:jsch.agentproxy.connector-factory:jar:0.0.9:compile" ; 
+[INFO] 	"org.tmatesoft.svnkit:svnkit:jar:1.10.11:compile" -> "com.jcraft:jsch.agentproxy.svnkit-trilead-ssh2:jar:0.0.9:compile" ; 
+[INFO] 	"org.tmatesoft.svnkit:svnkit:jar:1.10.11:compile" -> "org.lz4:lz4-java:jar:1.4.1:compile" ; 
+[INFO] 	"org.apache.sshd:sshd-core:jar:2.9.2:compile" -> "org.slf4j:jcl-over-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"org.tmatesoft.sqljet:sqljet:jar:1.1.15:compile" -> "org.antlr:antlr-runtime:jar:3.4:compile" ; 
+[INFO] 	"com.jcraft:jsch.agentproxy.connector-factory:jar:0.0.9:compile" -> "com.jcraft:jsch.agentproxy.core:jar:0.0.9:compile" ; 
+[INFO] 	"com.jcraft:jsch.agentproxy.connector-factory:jar:0.0.9:compile" -> "com.jcraft:jsch.agentproxy.usocket-jna:jar:0.0.9:compile" ; 
+[INFO] 	"com.jcraft:jsch.agentproxy.connector-factory:jar:0.0.9:compile" -> "com.jcraft:jsch.agentproxy.usocket-nc:jar:0.0.9:compile" ; 
+[INFO] 	"com.jcraft:jsch.agentproxy.connector-factory:jar:0.0.9:compile" -> "com.jcraft:jsch.agentproxy.sshagent:jar:0.0.9:compile" ; 
+[INFO] 	"com.jcraft:jsch.agentproxy.connector-factory:jar:0.0.9:compile" -> "com.jcraft:jsch.agentproxy.pageant:jar:0.0.9:compile" ; 
+[INFO] 	"org.dromara.jpom.plugins:docker-cli:jar:2.10.45:compile" -> "com.github.docker-java:docker-java-core:jar:3.3.3:compile" ; 
+[INFO] 	"org.dromara.jpom.plugins:docker-cli:jar:2.10.45:compile" -> "org.bouncycastle:bcpkix-jdk15on:jar:1.70:compile" ; 
+[INFO] 	"org.dromara.jpom.plugins:docker-cli:jar:2.10.45:compile" -> "com.github.docker-java:docker-java-transport-httpclient5:jar:3.3.3:compile" ; 
+[INFO] 	"com.github.docker-java:docker-java-core:jar:3.3.3:compile" -> "com.github.docker-java:docker-java-api:jar:3.3.3:compile" ; 
+[INFO] 	"com.github.docker-java:docker-java-core:jar:3.3.3:compile" -> "com.github.docker-java:docker-java-transport:jar:3.3.3:compile" ; 
+[INFO] 	"com.github.docker-java:docker-java-core:jar:3.3.3:compile" -> "commons-io:commons-io:jar:2.6:compile" ; 
+[INFO] 	"com.github.docker-java:docker-java-core:jar:3.3.3:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"com.github.docker-java:docker-java-core:jar:3.3.3:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile" ; 
+[INFO] 	"com.github.docker-java:docker-java-core:jar:3.3.3:compile" -> "com.google.guava:guava:jar:19.0:compile" ; 
+[INFO] 	"com.github.docker-java:docker-java-core:jar:3.3.3:compile" -> "org.bouncycastle:bcpkix-jdk18on:jar:1.75:compile" ; 
+[INFO] 	"com.github.docker-java:docker-java-api:jar:3.3.3:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.5:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.5:compile" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk18on:jar:1.75:compile" -> "org.bouncycastle:bcutil-jdk18on:jar:1.75:compile" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk15on:jar:1.70:compile" -> "org.bouncycastle:bcprov-jdk15on:jar:1.70:compile" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk15on:jar:1.70:compile" -> "org.bouncycastle:bcutil-jdk15on:jar:1.70:compile" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-httpclient5:jar:3.3.3:compile" -> "org.apache.httpcomponents.client5:httpclient5:jar:5.1.4:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.1.4:compile" -> "org.apache.httpcomponents.core5:httpcore5:jar:5.1.5:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.1.4:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"org.dromara.jpom.plugins:email:jar:2.10.45:compile" -> "com.sun.mail:javax.mail:jar:1.6.2:compile" ; 
+[INFO] 	"com.sun.mail:javax.mail:jar:1.6.2:compile" -> "javax.activation:activation:jar:1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "org.springframework.boot:spring-boot-test:jar:2.7.15:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.7.15:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "com.jayway.jsonpath:json-path:jar:2.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "org.assertj:assertj-core:jar:3.22.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "org.junit.jupiter:junit-jupiter:jar:5.8.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "org.mockito:mockito-core:jar:4.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "org.mockito:mockito-junit-jupiter:jar:4.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "org.springframework:spring-core:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "org.springframework:spring-test:jar:5.3.29:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "org.xmlunit:xmlunit-core:jar:2.9.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.yaml:snakeyaml:jar:1.30:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:compile" -> "ch.qos.logback:logback-classic:jar:1.2.12:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:compile" -> "ch.qos.logback:logback-core:jar:1.2.12:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:compile" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.7.0:test" -> "net.minidev:json-smart:jar:2.4.11:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.11:test" -> "net.minidev:accessors-smart:jar:2.4.11:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.11:test" -> "org.ow2.asm:asm:jar:9.3:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.8.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.23:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.23:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.29:compile" -> "org.springframework:spring-jcl:jar:5.3.29:compile" ; 
+[INFO] 	"cn.hutool:hutool-jwt:jar:5.8.22:compile" -> "cn.hutool:hutool-json:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom.agent-transport:agent-transport-http:jar:2.10.45:compile" -> "org.dromara.jpom.plugins:encrypt:jar:2.10.45:compile" ; 
+[INFO] 	"org.dromara.jpom.agent-transport:agent-transport-http:jar:2.10.45:compile" -> "org.dromara.jpom.agent-transport:agent-transport-common:jar:2.10.45:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-websocket:jar:2.7.15:compile" -> "org.springframework:spring-messaging:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-websocket:jar:2.7.15:compile" -> "org.springframework:spring-websocket:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework:spring-messaging:jar:5.3.29:compile" -> "org.springframework:spring-beans:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework:spring-websocket:jar:5.3.29:compile" -> "org.springframework:spring-context:jar:5.3.29:compile" ; 
+[INFO] 	"org.dromara.jpom.storage-module:storage-module-h2:jar:2.10.45:compile" -> "org.dromara.jpom.storage-module:storage-module-common:jar:2.10.45:compile" ; 
+[INFO] 	"org.dromara.jpom.storage-module:storage-module-h2:jar:2.10.45:compile" -> "com.h2database:h2:jar:2.1.214:compile" ; 
+[INFO] 	"org.dromara.jpom.storage-module:storage-module-common:jar:2.10.45:compile" -> "cn.hutool:hutool-db:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom.storage-module:storage-module-mysql:jar:2.10.45:compile" -> "com.mysql:mysql-connector-j:jar:8.0.33:compile" ; 
+[INFO] 	"me.zhyd.oauth:JustAuth:jar:1.16.5:compile" -> "com.xkcoding.http:simple-http:jar:1.0.5:compile" ; 
+[INFO] 	"com.alibaba:fastjson:jar:2.0.40:compile" -> "com.alibaba.fastjson2:fastjson2-extension:jar:2.0.40:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< org.dromara.jpom:updater >----------------------
+[INFO] Building updater 2.10.45                                         [20/20]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ updater ---
+[INFO] digraph "org.dromara.jpom:updater:jar:2.10.45" { 
+[INFO] 	"org.dromara.jpom:updater:jar:2.10.45" -> "org.yaml:snakeyaml:jar:2.0:compile" ; 
+[INFO] 	"org.dromara.jpom:updater:jar:2.10.45" -> "com.alibaba.fastjson2:fastjson2:jar:2.0.40:compile" ; 
+[INFO] 	"org.dromara.jpom:updater:jar:2.10.45" -> "cn.hutool:hutool-core:jar:5.8.22:compile" ; 
+[INFO] 	"org.dromara.jpom:updater:jar:2.10.45" -> "org.freemarker:freemarker:jar:2.3.31:compile" ; 
+[INFO] 	"org.dromara.jpom:updater:jar:2.10.45" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.dromara.jpom:updater:jar:2.10.45" -> "org.databene:contiperf:jar:2.3.4:test" ; 
+[INFO] 	"org.dromara.jpom:updater:jar:2.10.45" -> "org.projectlombok:lombok:jar:1.18.28:provided" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Jpom (Java Project Online Manage) 2.10.45:
+[INFO] 
+[INFO] Jpom (Java Project Online Manage) .................. SUCCESS [  3.204 s]
+[INFO] Jpom Common ........................................ SUCCESS [  0.384 s]
+[INFO] Jpom Plugins ....................................... SUCCESS [  0.039 s]
+[INFO] plugin-webhook ..................................... SUCCESS [  0.134 s]
+[INFO] plugin-encrypt ..................................... SUCCESS [  0.081 s]
+[INFO] Jpom Agent ......................................... SUCCESS [  0.129 s]
+[INFO] plugin-git-clone ................................... SUCCESS [  0.176 s]
+[INFO] plugin-ssh-jsch .................................... SUCCESS [  0.078 s]
+[INFO] plugin-svn-clone ................................... SUCCESS [  0.120 s]
+[INFO] plugin-docker-cli .................................. SUCCESS [  0.126 s]
+[INFO] plugin-email ....................................... SUCCESS [  0.075 s]
+[INFO] Jpom Agent Transport ............................... SUCCESS [  0.020 s]
+[INFO] agent-transport-common ............................. SUCCESS [  0.034 s]
+[INFO] agent-transport-http ............................... SUCCESS [  0.097 s]
+[INFO] Jpom storage module ................................ SUCCESS [  0.048 s]
+[INFO] storage-module-common .............................. SUCCESS [  0.080 s]
+[INFO] storage-module-h2 .................................. SUCCESS [  0.044 s]
+[INFO] storage-module-mysql ............................... SUCCESS [  0.038 s]
+[INFO] Jpom Server ........................................ SUCCESS [  0.185 s]
+[INFO] updater ............................................ SUCCESS [  0.042 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.256 s
+[INFO] Finished at: 2023-12-28T09:02:41+01:00
+[INFO] ------------------------------------------------------------------------

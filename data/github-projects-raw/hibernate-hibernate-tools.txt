@@ -1,0 +1,467 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Hibernate Tools Parent Project                                     [pom]
+[INFO] Hibernate Tools Common Utilities                                   [jar]
+[INFO] Hibernate Tools ORM                                                [jar]
+[INFO] Hibernate Tools ORM - JBoss Tools Adapter                          [jar]
+[INFO] Hibernate Tools Maven Plugin                              [maven-plugin]
+[INFO] Hibernate Tools Integration Tests Parent Project                   [pom]
+[INFO] Hibernate Tools Test Utilities Project                             [jar]
+[INFO] Hibernate Tools Ant Tasks                                          [jar]
+[INFO] Hibernate Tools No Database Tests Project                          [jar]
+[INFO] Hibernate Tools Common Database Tests Project                      [jar]
+[INFO] Hibernate Tools H2 Tests Project                                   [jar]
+[INFO] Hibernate Tools Maven Plugin Tests Project                         [jar]
+[INFO] 
+[INFO] -------------< org.hibernate.tool:hibernate-tools-parent >--------------
+[INFO] Building Hibernate Tools Parent Project 6.4.1-SNAPSHOT            [1/12]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ hibernate-tools-parent ---
+[INFO] digraph "org.hibernate.tool:hibernate-tools-parent:pom:6.4.1-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< org.hibernate.tool:hibernate-tools-utils >--------------
+[INFO] Building Hibernate Tools Common Utilities 6.4.1-SNAPSHOT          [2/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ hibernate-tools-utils ---
+[INFO] digraph "org.hibernate.tool:hibernate-tools-utils:jar:6.4.1-SNAPSHOT" { 
+[INFO] 	"org.hibernate.tool:hibernate-tools-utils:jar:6.4.1-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.hibernate.tool:hibernate-tools-orm >---------------
+[INFO] Building Hibernate Tools ORM 6.4.1-SNAPSHOT                       [3/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from ossrh-snapshots-repository: https://oss.sonatype.org/content/repositories/snapshots/org/hibernate/tool/hibernate-tools-utils/6.4.1-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ hibernate-tools-orm ---
+[INFO] digraph "org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT" { 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT" -> "com.google.googlejavaformat:google-java-format:jar:1.15.0:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT" -> "org.antlr:antlr4-runtime:jar:4.13.1:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT" -> "org.apache.ant:ant:jar:1.10.14:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT" -> "org.freemarker:freemarker:jar:2.3.31:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT" -> "org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT" -> "org.hibernate.orm:hibernate-ant:jar:6.4.0.Final:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT" -> "org.hibernate.common:hibernate-commons-annotations:jar:6.0.5.Final:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT" -> "org.hibernate.tool:hibernate-tools-utils:jar:6.4.1-SNAPSHOT:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT" -> "org.jboss.logging:jboss-logging:jar:3.5.0.Final:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" ; 
+[INFO] 	"com.google.googlejavaformat:google-java-format:jar:1.15.0:compile" -> "com.google.guava:guava:jar:31.0.1-jre:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.12.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.7.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"org.apache.ant:ant:jar:1.10.14:compile" -> "org.apache.ant:ant-launcher:jar:1.10.14:compile" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "io.smallrye:jandex:jar:3.1.2:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "com.fasterxml:classmate:jar:1.5.1:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "net.bytebuddy:byte-buddy:jar:1.14.7:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.0:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "org.glassfish.jaxb:jaxb-runtime:jar:4.0.2:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.0:runtime" -> "jakarta.activation:jakarta.activation-api:jar:2.1.0:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:4.0.2:runtime" -> "org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" -> "org.eclipse.angus:angus-activation:jar:2.0.0:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" -> "org.glassfish.jaxb:txw2:jar:4.0.2:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" -> "com.sun.istack:istack-commons-runtime:jar:4.1.1:runtime" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< org.hibernate.tool:hibernate-tools-orm-jbt >-------------
+[INFO] Building Hibernate Tools ORM - JBoss Tools Adapter 6.4.1-SNAPSHOT [4/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from ossrh-snapshots-repository: https://oss.sonatype.org/content/repositories/snapshots/org/hibernate/tool/hibernate-tools-orm/6.4.1-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ hibernate-tools-orm-jbt ---
+[INFO] digraph "org.hibernate.tool:hibernate-tools-orm-jbt:jar:6.4.1-SNAPSHOT" { 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm-jbt:jar:6.4.1-SNAPSHOT" -> "com.h2database:h2:jar:2.1.214:test" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm-jbt:jar:6.4.1-SNAPSHOT" -> "org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm-jbt:jar:6.4.1-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "com.google.googlejavaformat:google-java-format:jar:1.15.0:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.antlr:antlr4-runtime:jar:4.13.1:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.apache.ant:ant:jar:1.10.14:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.freemarker:freemarker:jar:2.3.31:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.hibernate.orm:hibernate-ant:jar:6.4.0.Final:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.hibernate.common:hibernate-commons-annotations:jar:6.0.5.Final:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.hibernate.tool:hibernate-tools-utils:jar:6.4.1-SNAPSHOT:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.jboss.logging:jboss-logging:jar:3.5.0.Final:compile" ; 
+[INFO] 	"com.google.googlejavaformat:google-java-format:jar:1.15.0:compile" -> "com.google.guava:guava:jar:31.0.1-jre:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.12.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.7.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"org.apache.ant:ant:jar:1.10.14:compile" -> "org.apache.ant:ant-launcher:jar:1.10.14:compile" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "io.smallrye:jandex:jar:3.1.2:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "com.fasterxml:classmate:jar:1.5.1:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "net.bytebuddy:byte-buddy:jar:1.14.7:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.0:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "org.glassfish.jaxb:jaxb-runtime:jar:4.0.2:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.0:runtime" -> "jakarta.activation:jakarta.activation-api:jar:2.1.0:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:4.0.2:runtime" -> "org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" -> "org.eclipse.angus:angus-activation:jar:2.0.0:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" -> "org.glassfish.jaxb:txw2:jar:4.0.2:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" -> "com.sun.istack:istack-commons-runtime:jar:4.1.1:runtime" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< org.hibernate.tool:hibernate-tools-maven >--------------
+[INFO] Building Hibernate Tools Maven Plugin 6.4.1-SNAPSHOT              [5/12]
+[INFO] ----------------------------[ maven-plugin ]----------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ hibernate-tools-maven ---
+[INFO] digraph "org.hibernate.tool:hibernate-tools-maven:maven-plugin:6.4.1-SNAPSHOT" { 
+[INFO] 	"org.hibernate.tool:hibernate-tools-maven:maven-plugin:6.4.1-SNAPSHOT" -> "org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-maven:maven-plugin:6.4.1-SNAPSHOT" -> "org.apache.maven:maven-plugin-api:jar:3.5.2:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-maven:maven-plugin:6.4.1-SNAPSHOT" -> "org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.5:provided" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "com.google.googlejavaformat:google-java-format:jar:1.15.0:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.antlr:antlr4-runtime:jar:4.13.1:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.apache.ant:ant:jar:1.10.14:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.freemarker:freemarker:jar:2.3.31:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.hibernate.orm:hibernate-ant:jar:6.4.0.Final:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.hibernate.common:hibernate-commons-annotations:jar:6.0.5.Final:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.hibernate.tool:hibernate-tools-utils:jar:6.4.1-SNAPSHOT:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.jboss.logging:jboss-logging:jar:3.5.0.Final:compile" ; 
+[INFO] 	"com.google.googlejavaformat:google-java-format:jar:1.15.0:compile" -> "com.google.guava:guava:jar:31.0.1-jre:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.12.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.7.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"org.apache.ant:ant:jar:1.10.14:compile" -> "org.apache.ant:ant-launcher:jar:1.10.14:compile" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "io.smallrye:jandex:jar:3.1.2:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "com.fasterxml:classmate:jar:1.5.1:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "net.bytebuddy:byte-buddy:jar:1.14.7:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.0:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "org.glassfish.jaxb:jaxb-runtime:jar:4.0.2:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.0:runtime" -> "jakarta.activation:jakarta.activation-api:jar:2.1.0:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:4.0.2:runtime" -> "org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" -> "org.eclipse.angus:angus-activation:jar:2.0.0:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" -> "org.glassfish.jaxb:txw2:jar:4.0.2:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" -> "com.sun.istack:istack-commons-runtime:jar:4.1.1:runtime" ; 
+[INFO] 	"org.apache.maven:maven-plugin-api:jar:3.5.2:compile" -> "org.apache.maven:maven-model:jar:3.5.2:compile" ; 
+[INFO] 	"org.apache.maven:maven-plugin-api:jar:3.5.2:compile" -> "org.apache.maven:maven-artifact:jar:3.5.2:compile" ; 
+[INFO] 	"org.apache.maven:maven-plugin-api:jar:3.5.2:compile" -> "org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.3.3:compile" ; 
+[INFO] 	"org.apache.maven:maven-plugin-api:jar:3.5.2:compile" -> "org.codehaus.plexus:plexus-utils:jar:3.1.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-plugin-api:jar:3.5.2:compile" -> "org.codehaus.plexus:plexus-classworlds:jar:2.5.2:compile" ; 
+[INFO] 	"org.apache.maven:maven-model:jar:3.5.2:compile" -> "org.apache.commons:commons-lang3:jar:3.5:compile" ; 
+[INFO] 	"org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.3.3:compile" -> "javax.enterprise:cdi-api:jar:1.0:compile" ; 
+[INFO] 	"org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.3.3:compile" -> "org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.3.3:compile" ; 
+[INFO] 	"org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.3.3:compile" -> "org.codehaus.plexus:plexus-component-annotations:jar:1.5.5:compile" ; 
+[INFO] 	"javax.enterprise:cdi-api:jar:1.0:compile" -> "javax.annotation:jsr250-api:jar:1.0:compile" ; 
+[INFO] 	"javax.enterprise:cdi-api:jar:1.0:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------< org.hibernate.tool:hibernate-tools-tests-parent >-----------
+[INFO] Building Hibernate Tools Integration Tests Parent Project 6.4.1-SNAPSHOT [6/12]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ hibernate-tools-tests-parent ---
+[INFO] digraph "org.hibernate.tool:hibernate-tools-tests-parent:pom:6.4.1-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] -----------< org.hibernate.tool:hibernate-tools-tests-utils >-----------
+[INFO] Building Hibernate Tools Test Utilities Project 6.4.1-SNAPSHOT    [7/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ hibernate-tools-tests-utils ---
+[INFO] digraph "org.hibernate.tool:hibernate-tools-tests-utils:jar:6.4.1-SNAPSHOT" { 
+[INFO] 	"org.hibernate.tool:hibernate-tools-tests-utils:jar:6.4.1-SNAPSHOT" -> "com.h2database:h2:jar:2.1.214:test" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-tests-utils:jar:6.4.1-SNAPSHOT" -> "org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-tests-utils:jar:6.4.1-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "com.google.googlejavaformat:google-java-format:jar:1.15.0:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.antlr:antlr4-runtime:jar:4.13.1:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.apache.ant:ant:jar:1.10.14:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.freemarker:freemarker:jar:2.3.31:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.hibernate.orm:hibernate-ant:jar:6.4.0.Final:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.hibernate.common:hibernate-commons-annotations:jar:6.0.5.Final:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.hibernate.tool:hibernate-tools-utils:jar:6.4.1-SNAPSHOT:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.jboss.logging:jboss-logging:jar:3.5.0.Final:compile" ; 
+[INFO] 	"com.google.googlejavaformat:google-java-format:jar:1.15.0:compile" -> "com.google.guava:guava:jar:31.0.1-jre:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.12.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.7.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"org.apache.ant:ant:jar:1.10.14:compile" -> "org.apache.ant:ant-launcher:jar:1.10.14:compile" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "io.smallrye:jandex:jar:3.1.2:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "com.fasterxml:classmate:jar:1.5.1:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "net.bytebuddy:byte-buddy:jar:1.14.7:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.0:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "org.glassfish.jaxb:jaxb-runtime:jar:4.0.2:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.0:runtime" -> "jakarta.activation:jakarta.activation-api:jar:2.1.0:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:4.0.2:runtime" -> "org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" -> "org.eclipse.angus:angus-activation:jar:2.0.0:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" -> "org.glassfish.jaxb:txw2:jar:4.0.2:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" -> "com.sun.istack:istack-commons-runtime:jar:4.1.1:runtime" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:compile" -> "org.junit.platform:junit-platform-engine:jar:1.9.1:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:compile" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:compile" -> "org.apiguardian:apiguardian-api:jar:1.1.2:compile" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:compile" -> "org.opentest4j:opentest4j:jar:1.2.0:compile" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:compile" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.hibernate.tool:hibernate-tools-ant >---------------
+[INFO] Building Hibernate Tools Ant Tasks 6.4.1-SNAPSHOT                 [8/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from ossrh-snapshots-repository: https://oss.sonatype.org/content/repositories/snapshots/org/hibernate/tool/hibernate-tools-tests-utils/6.4.1-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ hibernate-tools-ant ---
+[INFO] digraph "org.hibernate.tool:hibernate-tools-ant:jar:6.4.1-SNAPSHOT" { 
+[INFO] 	"org.hibernate.tool:hibernate-tools-ant:jar:6.4.1-SNAPSHOT" -> "org.apache.ant:ant:jar:1.10.14:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-ant:jar:6.4.1-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-ant:jar:6.4.1-SNAPSHOT" -> "org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-ant:jar:6.4.1-SNAPSHOT" -> "org.hibernate.tool:hibernate-tools-tests-utils:jar:6.4.1-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ant:ant:jar:1.10.14:compile" -> "org.apache.ant:ant-launcher:jar:1.10.14:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:test" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "com.google.googlejavaformat:google-java-format:jar:1.15.0:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.antlr:antlr4-runtime:jar:4.13.1:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.freemarker:freemarker:jar:2.3.31:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.hibernate.orm:hibernate-ant:jar:6.4.0.Final:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.hibernate.common:hibernate-commons-annotations:jar:6.0.5.Final:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.hibernate.tool:hibernate-tools-utils:jar:6.4.1-SNAPSHOT:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.jboss.logging:jboss-logging:jar:3.5.0.Final:compile" ; 
+[INFO] 	"com.google.googlejavaformat:google-java-format:jar:1.15.0:compile" -> "com.google.guava:guava:jar:31.0.1-jre:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.12.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.7.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "io.smallrye:jandex:jar:3.1.2:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "com.fasterxml:classmate:jar:1.5.1:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "net.bytebuddy:byte-buddy:jar:1.14.7:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.0:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "org.glassfish.jaxb:jaxb-runtime:jar:4.0.2:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.0:runtime" -> "jakarta.activation:jakarta.activation-api:jar:2.1.0:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:4.0.2:runtime" -> "org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" -> "org.eclipse.angus:angus-activation:jar:2.0.0:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" -> "org.glassfish.jaxb:txw2:jar:4.0.2:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" -> "com.sun.istack:istack-commons-runtime:jar:4.1.1:runtime" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------< org.hibernate.tool:hibernate-tools-tests-nodb >------------
+[INFO] Building Hibernate Tools No Database Tests Project 6.4.1-SNAPSHOT [9/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from ossrh-snapshots-repository: https://oss.sonatype.org/content/repositories/snapshots/org/hibernate/tool/hibernate-tools-ant/6.4.1-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ hibernate-tools-tests-nodb ---
+[INFO] digraph "org.hibernate.tool:hibernate-tools-tests-nodb:jar:6.4.1-SNAPSHOT" { 
+[INFO] 	"org.hibernate.tool:hibernate-tools-tests-nodb:jar:6.4.1-SNAPSHOT" -> "javax:javaee-api:jar:8.0.1:test" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-tests-nodb:jar:6.4.1-SNAPSHOT" -> "org.hibernate.tool:hibernate-tools-ant:jar:6.4.1-SNAPSHOT:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-tests-nodb:jar:6.4.1-SNAPSHOT" -> "org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-tests-nodb:jar:6.4.1-SNAPSHOT" -> "org.hibernate.tool:hibernate-tools-tests-utils:jar:6.4.1-SNAPSHOT:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-tests-nodb:jar:6.4.1-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" ; 
+[INFO] 	"javax:javaee-api:jar:8.0.1:test" -> "com.sun.mail:javax.mail:jar:1.6.2:test" ; 
+[INFO] 	"com.sun.mail:javax.mail:jar:1.6.2:test" -> "javax.activation:activation:jar:1.1:test" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-ant:jar:6.4.1-SNAPSHOT:compile" -> "org.apache.ant:ant:jar:1.10.14:compile" ; 
+[INFO] 	"org.apache.ant:ant:jar:1.10.14:compile" -> "org.apache.ant:ant-launcher:jar:1.10.14:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "com.google.googlejavaformat:google-java-format:jar:1.15.0:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.antlr:antlr4-runtime:jar:4.13.1:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.freemarker:freemarker:jar:2.3.31:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.hibernate.orm:hibernate-ant:jar:6.4.0.Final:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.hibernate.common:hibernate-commons-annotations:jar:6.0.5.Final:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.hibernate.tool:hibernate-tools-utils:jar:6.4.1-SNAPSHOT:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.jboss.logging:jboss-logging:jar:3.5.0.Final:compile" ; 
+[INFO] 	"com.google.googlejavaformat:google-java-format:jar:1.15.0:compile" -> "com.google.guava:guava:jar:31.0.1-jre:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.12.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.7.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "io.smallrye:jandex:jar:3.1.2:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "com.fasterxml:classmate:jar:1.5.1:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "net.bytebuddy:byte-buddy:jar:1.14.7:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.0:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "org.glassfish.jaxb:jaxb-runtime:jar:4.0.2:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.0:runtime" -> "jakarta.activation:jakarta.activation-api:jar:2.1.0:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:4.0.2:runtime" -> "org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" -> "org.eclipse.angus:angus-activation:jar:2.0.0:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" -> "org.glassfish.jaxb:txw2:jar:4.0.2:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" -> "com.sun.istack:istack-commons-runtime:jar:4.1.1:runtime" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------< org.hibernate.tool:hibernate-tools-tests-common >-----------
+[INFO] Building Hibernate Tools Common Database Tests Project 6.4.1-SNAPSHOT [10/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ hibernate-tools-tests-common ---
+[INFO] digraph "org.hibernate.tool:hibernate-tools-tests-common:jar:6.4.1-SNAPSHOT" { 
+[INFO] 	"org.hibernate.tool:hibernate-tools-tests-common:jar:6.4.1-SNAPSHOT" -> "org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-tests-common:jar:6.4.1-SNAPSHOT" -> "org.hibernate.tool:hibernate-tools-tests-utils:jar:6.4.1-SNAPSHOT:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-tests-common:jar:6.4.1-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "com.google.googlejavaformat:google-java-format:jar:1.15.0:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.antlr:antlr4-runtime:jar:4.13.1:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.apache.ant:ant:jar:1.10.14:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.freemarker:freemarker:jar:2.3.31:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.hibernate.orm:hibernate-ant:jar:6.4.0.Final:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.hibernate.common:hibernate-commons-annotations:jar:6.0.5.Final:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.hibernate.tool:hibernate-tools-utils:jar:6.4.1-SNAPSHOT:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.jboss.logging:jboss-logging:jar:3.5.0.Final:compile" ; 
+[INFO] 	"com.google.googlejavaformat:google-java-format:jar:1.15.0:compile" -> "com.google.guava:guava:jar:31.0.1-jre:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.12.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.7.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"org.apache.ant:ant:jar:1.10.14:compile" -> "org.apache.ant:ant-launcher:jar:1.10.14:compile" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "io.smallrye:jandex:jar:3.1.2:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "com.fasterxml:classmate:jar:1.5.1:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "net.bytebuddy:byte-buddy:jar:1.14.7:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.0:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "org.glassfish.jaxb:jaxb-runtime:jar:4.0.2:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.0:runtime" -> "jakarta.activation:jakarta.activation-api:jar:2.1.0:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:4.0.2:runtime" -> "org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" -> "org.eclipse.angus:angus-activation:jar:2.0.0:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" -> "org.glassfish.jaxb:txw2:jar:4.0.2:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" -> "com.sun.istack:istack-commons-runtime:jar:4.1.1:runtime" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:compile" -> "org.junit.platform:junit-platform-engine:jar:1.9.1:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:compile" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:compile" -> "org.apiguardian:apiguardian-api:jar:1.1.2:compile" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:compile" -> "org.opentest4j:opentest4j:jar:1.2.0:compile" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:compile" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< org.hibernate.tool:hibernate-tools-tests-h2 >-------------
+[INFO] Building Hibernate Tools H2 Tests Project 6.4.1-SNAPSHOT         [11/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from ossrh-snapshots-repository: https://oss.sonatype.org/content/repositories/snapshots/org/hibernate/tool/hibernate-tools-tests-common/6.4.1-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ hibernate-tools-tests-h2 ---
+[INFO] digraph "org.hibernate.tool:hibernate-tools-tests-h2:jar:6.4.1-SNAPSHOT" { 
+[INFO] 	"org.hibernate.tool:hibernate-tools-tests-h2:jar:6.4.1-SNAPSHOT" -> "com.h2database:h2:jar:2.1.214:test" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-tests-h2:jar:6.4.1-SNAPSHOT" -> "org.hibernate.tool:hibernate-tools-ant:jar:6.4.1-SNAPSHOT:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-tests-h2:jar:6.4.1-SNAPSHOT" -> "org.hibernate.tool:hibernate-tools-tests-common:jar:6.4.1-SNAPSHOT:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-tests-h2:jar:6.4.1-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-ant:jar:6.4.1-SNAPSHOT:compile" -> "org.apache.ant:ant:jar:1.10.14:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-ant:jar:6.4.1-SNAPSHOT:compile" -> "org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ant:ant:jar:1.10.14:compile" -> "org.apache.ant:ant-launcher:jar:1.10.14:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "com.google.googlejavaformat:google-java-format:jar:1.15.0:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.antlr:antlr4-runtime:jar:4.13.1:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.freemarker:freemarker:jar:2.3.31:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.hibernate.orm:hibernate-ant:jar:6.4.0.Final:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.hibernate.common:hibernate-commons-annotations:jar:6.0.5.Final:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.hibernate.tool:hibernate-tools-utils:jar:6.4.1-SNAPSHOT:compile" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-orm:jar:6.4.1-SNAPSHOT:compile" -> "org.jboss.logging:jboss-logging:jar:3.5.0.Final:compile" ; 
+[INFO] 	"com.google.googlejavaformat:google-java-format:jar:1.15.0:compile" -> "com.google.guava:guava:jar:31.0.1-jre:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.12.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.7.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "io.smallrye:jandex:jar:3.1.2:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "com.fasterxml:classmate:jar:1.5.1:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "net.bytebuddy:byte-buddy:jar:1.14.7:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.0:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "org.glassfish.jaxb:jaxb-runtime:jar:4.0.2:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.4.0.Final:compile" -> "jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.0:runtime" -> "jakarta.activation:jakarta.activation-api:jar:2.1.0:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:4.0.2:runtime" -> "org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" -> "org.eclipse.angus:angus-activation:jar:2.0.0:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" -> "org.glassfish.jaxb:txw2:jar:4.0.2:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" -> "com.sun.istack:istack-commons-runtime:jar:4.1.1:runtime" ; 
+[INFO] 	"org.hibernate.tool:hibernate-tools-tests-common:jar:6.4.1-SNAPSHOT:compile" -> "org.hibernate.tool:hibernate-tools-tests-utils:jar:6.4.1-SNAPSHOT:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------< org.hibernate.tool:hibernate-tools-tests-maven >-----------
+[INFO] Building Hibernate Tools Maven Plugin Tests Project 6.4.1-SNAPSHOT [12/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ hibernate-tools-tests-maven ---
+[INFO] digraph "org.hibernate.tool:hibernate-tools-tests-maven:jar:6.4.1-SNAPSHOT" { 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Hibernate Tools Parent Project 6.4.1-SNAPSHOT:
+[INFO] 
+[INFO] Hibernate Tools Parent Project ..................... SUCCESS [  3.793 s]
+[INFO] Hibernate Tools Common Utilities ................... SUCCESS [  0.180 s]
+[INFO] Hibernate Tools ORM ................................ SUCCESS [  4.260 s]
+[INFO] Hibernate Tools ORM - JBoss Tools Adapter .......... SUCCESS [  0.595 s]
+[INFO] Hibernate Tools Maven Plugin ....................... SUCCESS [  0.493 s]
+[INFO] Hibernate Tools Integration Tests Parent Project ... SUCCESS [  0.040 s]
+[INFO] Hibernate Tools Test Utilities Project ............. SUCCESS [  0.135 s]
+[INFO] Hibernate Tools Ant Tasks .......................... SUCCESS [  0.528 s]
+[INFO] Hibernate Tools No Database Tests Project .......... SUCCESS [  0.544 s]
+[INFO] Hibernate Tools Common Database Tests Project ...... SUCCESS [  0.329 s]
+[INFO] Hibernate Tools H2 Tests Project ................... SUCCESS [  0.631 s]
+[INFO] Hibernate Tools Maven Plugin Tests Project ......... SUCCESS [  0.096 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.532 s
+[INFO] Finished at: 2023-12-28T09:02:58+01:00
+[INFO] ------------------------------------------------------------------------

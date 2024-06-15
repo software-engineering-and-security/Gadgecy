@@ -1,0 +1,111 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.pokemon.bulbasaur:bulbasaur-persist:jar:1.1.5-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for com.alibaba.citrus.tool:autoconfig-maven-plugin is missing. @ line 108, column 15
+[WARNING] 'build.plugins.plugin[org.mybatis.generator:mybatis-generator-maven-plugin].dependencies.dependency.systemPath' for com.xxg:mybatis-generator-plugin:jar refers to a non-existing file /home/brunok/apache-ysoserial-vuln/pom/alibaba-bulbasaur/persist/mybatis-gen/mybatis-generator-plugin-1.0.0.jar @ line 138, column 25
+[WARNING] 'build.plugins.plugin[org.mybatis.generator:mybatis-generator-maven-plugin].dependencies.dependency.systemPath' for com.blackcowx:mybatis-generator-auto-comment-plugin:jar refers to a non-existing file /home/brunok/apache-ysoserial-vuln/pom/alibaba-bulbasaur/persist/mybatis-gen/mybatis-generator-auto-comment-plugin-1.0-SNAPSHOT.jar @ line 145, column 25
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] Inspecting build with total of 6 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 6 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Bulbasaur Parent                                                   [pom]
+[INFO] bulbasaur-core v1.1.5-SNAPSHOT                                     [jar]
+[INFO] bulbasaur-persist v1.1.5-SNAPSHOT                                  [jar]
+[INFO] bulbasaur-schedule v1.1.5-SNAPSHOT                                 [jar]
+[INFO] bulbasaur-task v1.1.5-SNAPSHOT                                     [jar]
+[INFO] bulbasaur-test v1.1.5-SNAPSHOT                                     [war]
+[INFO] 
+[INFO] -----------< com.alibaba.pokemon.bulbasaur:bulbasaur-parent >-----------
+[INFO] Building Bulbasaur Parent 1.1.5-SNAPSHOT                           [1/6]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ bulbasaur-parent ---
+[INFO] digraph "com.alibaba.pokemon.bulbasaur:bulbasaur-parent:pom:1.1.5-SNAPSHOT" { 
+[INFO] 	"com.alibaba.pokemon.bulbasaur:bulbasaur-parent:pom:1.1.5-SNAPSHOT" -> "com.google.guava:guava:jar:30.1.1-jre:compile" ; 
+[INFO] 	"com.alibaba.pokemon.bulbasaur:bulbasaur-parent:pom:1.1.5-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.6.1:compile" ; 
+[INFO] 	"com.alibaba.pokemon.bulbasaur:bulbasaur-parent:pom:1.1.5-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.alibaba.pokemon.bulbasaur:bulbasaur-parent:pom:1.1.5-SNAPSHOT" -> "joda-time:joda-time:jar:2.9.5:compile" ; 
+[INFO] 	"com.alibaba.pokemon.bulbasaur:bulbasaur-parent:pom:1.1.5-SNAPSHOT" -> "com.alibaba:transmittable-thread-local:jar:2.1.1:compile" ; 
+[INFO] 	"com.alibaba.pokemon.bulbasaur:bulbasaur-parent:pom:1.1.5-SNAPSHOT" -> "javax.annotation:javax.annotation-api:jar:1.3.2:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.8.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.5.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< com.alibaba.pokemon.bulbasaur:bulbasaur-core >------------
+[INFO] Building bulbasaur-core v1.1.5-SNAPSHOT 1.1.5-SNAPSHOT             [2/6]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ bulbasaur-core ---
+[INFO] digraph "com.alibaba.pokemon.bulbasaur:bulbasaur-core:jar:1.1.5-SNAPSHOT" { 
+[INFO] 	"com.alibaba.pokemon.bulbasaur:bulbasaur-core:jar:1.1.5-SNAPSHOT" -> "commons-logging:commons-logging:jar:1.1.3:compile" ; 
+[INFO] 	"com.alibaba.pokemon.bulbasaur:bulbasaur-core:jar:1.1.5-SNAPSHOT" -> "dom4j:dom4j:jar:1.6.1:compile" ; 
+[INFO] 	"com.alibaba.pokemon.bulbasaur:bulbasaur-core:jar:1.1.5-SNAPSHOT" -> "jaxen:jaxen:jar:1.1.4:compile" ; 
+[INFO] 	"com.alibaba.pokemon.bulbasaur:bulbasaur-core:jar:1.1.5-SNAPSHOT" -> "org.jdom:jdom:jar:1.1.3:compile" ; 
+[INFO] 	"com.alibaba.pokemon.bulbasaur:bulbasaur-core:jar:1.1.5-SNAPSHOT" -> "commons-lang:commons-lang:jar:2.4:compile" ; 
+[INFO] 	"com.alibaba.pokemon.bulbasaur:bulbasaur-core:jar:1.1.5-SNAPSHOT" -> "org.mvel:mvel2:jar:2.0.19:compile" ; 
+[INFO] 	"com.alibaba.pokemon.bulbasaur:bulbasaur-core:jar:1.1.5-SNAPSHOT" -> "org.springframework:spring-orm:jar:4.3.30.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.pokemon.bulbasaur:bulbasaur-core:jar:1.1.5-SNAPSHOT" -> "org.springframework:spring-beans:jar:4.3.30.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.pokemon.bulbasaur:bulbasaur-core:jar:1.1.5-SNAPSHOT" -> "org.springframework:spring-context-support:jar:4.3.30.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.pokemon.bulbasaur:bulbasaur-core:jar:1.1.5-SNAPSHOT" -> "org.springframework:spring-core:jar:4.3.30.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.pokemon.bulbasaur:bulbasaur-core:jar:1.1.5-SNAPSHOT" -> "org.springframework:spring-context:jar:4.3.30.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.pokemon.bulbasaur:bulbasaur-core:jar:1.1.5-SNAPSHOT" -> "org.springframework:spring-jdbc:jar:4.3.30.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.pokemon.bulbasaur:bulbasaur-core:jar:1.1.5-SNAPSHOT" -> "org.springframework:spring-test:jar:4.3.30.RELEASE:test" ; 
+[INFO] 	"com.alibaba.pokemon.bulbasaur:bulbasaur-core:jar:1.1.5-SNAPSHOT" -> "com.google.guava:guava:jar:30.1.1-jre:compile" ; 
+[INFO] 	"com.alibaba.pokemon.bulbasaur:bulbasaur-core:jar:1.1.5-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.6.1:compile" ; 
+[INFO] 	"com.alibaba.pokemon.bulbasaur:bulbasaur-core:jar:1.1.5-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.alibaba.pokemon.bulbasaur:bulbasaur-core:jar:1.1.5-SNAPSHOT" -> "joda-time:joda-time:jar:2.9.5:compile" ; 
+[INFO] 	"com.alibaba.pokemon.bulbasaur:bulbasaur-core:jar:1.1.5-SNAPSHOT" -> "com.alibaba:transmittable-thread-local:jar:2.1.1:compile" ; 
+[INFO] 	"com.alibaba.pokemon.bulbasaur:bulbasaur-core:jar:1.1.5-SNAPSHOT" -> "javax.annotation:javax.annotation-api:jar:1.3.2:provided" ; 
+[INFO] 	"dom4j:dom4j:jar:1.6.1:compile" -> "xml-apis:xml-apis:jar:1.0.b2:compile" ; 
+[INFO] 	"org.springframework:spring-orm:jar:4.3.30.RELEASE:compile" -> "org.springframework:spring-tx:jar:4.3.30.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:4.3.30.RELEASE:compile" -> "org.springframework:spring-aop:jar:4.3.30.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:4.3.30.RELEASE:compile" -> "org.springframework:spring-expression:jar:4.3.30.RELEASE:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.8.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.5.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------< com.alibaba.pokemon.bulbasaur:bulbasaur-persist >-----------
+[INFO] Building bulbasaur-persist v1.1.5-SNAPSHOT 1.1.5-SNAPSHOT          [3/6]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Bulbasaur Parent 1.1.5-SNAPSHOT:
+[INFO] 
+[INFO] Bulbasaur Parent ................................... SUCCESS [  4.400 s]
+[INFO] bulbasaur-core v1.1.5-SNAPSHOT ..................... SUCCESS [  0.389 s]
+[INFO] bulbasaur-persist v1.1.5-SNAPSHOT .................. FAILURE [  0.509 s]
+[INFO] bulbasaur-schedule v1.1.5-SNAPSHOT ................. SKIPPED
+[INFO] bulbasaur-task v1.1.5-SNAPSHOT ..................... SKIPPED
+[INFO] bulbasaur-test v1.1.5-SNAPSHOT ..................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.982 s
+[INFO] Finished at: 2023-12-28T09:02:24+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project bulbasaur-persist: Could not resolve dependencies for project com.alibaba.pokemon.bulbasaur:bulbasaur-persist:jar:1.1.5-SNAPSHOT: Could not find artifact com.alibaba.pokemon.bulbasaur:bulbasaur-core:jar:1.1.5-SNAPSHOT -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :bulbasaur-persist

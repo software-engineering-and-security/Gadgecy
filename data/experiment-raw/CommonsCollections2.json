@@ -1,0 +1,737 @@
+{
+    "jdk1.7.0_01": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-9.0.4": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-9": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_07": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-10.0.2": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.7.0_11": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_24": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk-9.0.4": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.7.0_06": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_04": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk8u382-b05": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.7.0_65": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "ibm-jdk-11.0.19+7": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-11": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk-11.0.15+10": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk-11.0.18+10": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-13": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_23": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.7.0_71": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-9.0.1": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "ibm-jdk-11.0.13+8": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "ibm-jdk8u352-b08": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_26": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "ibm-jdk8u332-b09": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk-11.0.21+9": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-11.0.1": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk-15.0.2": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_18": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_25": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_43": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk-12.0.2": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.7.0_79": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.7.0_67": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.7.0_60": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_27": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk-15": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "ibm-jdk8u345-b01": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_19": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "ibm-jdk8u382-b05": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "ibm-jdk-11.0.14.1+1": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.7.0_02": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "ibm-jdk-11.0.12+7": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-15": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.7.0_72": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.7.0_25": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk8u332-b09": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "ibm-jdk8u302-b08": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk-9.0.1": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.7.0_05": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk-14.0.2": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "ibm-jdk-11.0.16.1+1": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk-11.0.16.1+1": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.7.0_09": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.7.0_15": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk-10.0.2": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-15.0.1": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_12": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk-10.0.1": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk-11.0.19+7": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_29": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_35": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-11.0.2": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk-11.0.14+9": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_45": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.7.0_51": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_16": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "ibm-jdk8u312-b07": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk-13": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-14": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_14": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-14.0.1": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.7.0_04": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk-14": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk-15.0.1": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_32": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "ibm-jdk-11.0.20+8": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk8u352-b08": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "ibm-jdk8u322-b06": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-12": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk-11.0.12+7": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk8u392-b08": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_33": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "ibm-jdk-11.0.14+9": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.7.0_76": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk-13.0.1": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk8u312-b07": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-15.0.2": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.7.0_40": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk8u342-b07": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_38": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_39": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk8u345-b01": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.7.0_45": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk8u322-b06": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_13": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_11": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_06": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_15": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk8u362-b09": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "ibm-jdk-11.0.15+10": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk8u302-b08": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-12.0.1": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_34": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_21": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "ibm-jdk8u362-b09": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk-11.0.20.1+1": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_20": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk-12.0.1": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "ibm-jdk-11.0.18+10": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "ibm-jdk-11.0.20.1+1": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.7.0_13": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.7.0_17": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk-11.0.16+8": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-13.0.1": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "ibm-jdk-11.0.16+8": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-10.0.1": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk-12": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.7.0_07": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_41": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk-11.0.14.1+1": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-13.0.2": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_10": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk-11.0.20+8": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk-9": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_31": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_17": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "ibm-jdk8u372-b07": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.7.0_03": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk-11.0.17+8": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk8u372-b07": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_30": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.7.0_75": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-10": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-14.0.2": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "ibm-jdk-11.0.17+8": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_22": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.7.0_80": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-12.0.2": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.7.0_55": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk-14.0.1": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.7.0_21": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.7.0": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_37": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk-11.0.13+8": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk-13.0.2": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk-10": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk1.6.0_05": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    }
+}

@@ -1,0 +1,1087 @@
+{
+    "ibm-jdk-17.0.5+8": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3",
+            "2.7.3rc1"
+        ]
+    },
+    "ibm-jdk-11.0.14.1+1": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3",
+            "2.7.3rc1"
+        ]
+    },
+    "temurin-jdk8u322-b06": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3b1",
+            "2.7.3"
+        ]
+    },
+    "openjdk-jdk-14.0.2": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3rc1",
+            "2.7.3b1"
+        ]
+    },
+    "temurin-jdk8u342-b07": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3rc1",
+            "2.7.3b1"
+        ]
+    },
+    "ibm-jdk-11.0.12+7": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3b1",
+            "2.7.3"
+        ]
+    },
+    "ibm-jdk-20.0.1+9": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3b1",
+            "2.7.3rc1"
+        ]
+    },
+    "ibm-jdk-11.0.18+10": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3b1",
+            "2.7.3rc1"
+        ]
+    },
+    "temurin-jdk-16.0.2+7": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3",
+            "2.7.3b1"
+        ]
+    },
+    "openjdk-jdk-12.0.1": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3",
+            "2.7.3rc1"
+        ]
+    },
+    "temurin-jdk-19+36": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3rc1",
+            "2.7.3b1"
+        ]
+    },
+    "ibm-jdk-11.0.14+9": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3",
+            "2.7.3rc1"
+        ]
+    },
+    "temurin-jdk-11.0.16.1+1": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3b1",
+            "2.7.3rc1"
+        ]
+    },
+    "ibm-jdk-17.0.1+12": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3",
+            "2.7.3b1"
+        ]
+    },
+    "jdk-18": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3b1",
+            "2.7.3rc1"
+        ]
+    },
+    "temurin-jdk-18.0.2+9": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3b1",
+            "2.7.3"
+        ]
+    },
+    "temurin-jdk8u362-b09": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3",
+            "2.7.3rc1"
+        ]
+    },
+    "temurin-jdk-17.0.7+7": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3b1",
+            "2.7.3"
+        ]
+    },
+    "openjdk-jdk-13": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3rc1",
+            "2.7.3"
+        ]
+    },
+    "temurin-jdk-17.0.8+7": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3",
+            "2.7.3b1"
+        ]
+    },
+    "openjdk-jdk-17.0.1": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3",
+            "2.7.3rc1"
+        ]
+    },
+    "jdk-13": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3rc1",
+            "2.7.3"
+        ]
+    },
+    "temurin-jdk-11.0.14+9": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3b1",
+            "2.7.3rc1"
+        ]
+    },
+    "ibm-jdk-17.0.4+8": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3b1",
+            "2.7.3rc1"
+        ]
+    },
+    "temurin-jdk-18+36": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3rc1",
+            "2.7.3b1"
+        ]
+    },
+    "temurin-jdk-17.0.9+9": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3",
+            "2.7.3rc1"
+        ]
+    },
+    "temurin-jdk-17.0.5+8": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3rc1",
+            "2.7.3"
+        ]
+    },
+    "ibm-jdk8u352-b08": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3rc1",
+            "2.7.3b1"
+        ]
+    },
+    "jdk-14.0.2": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3rc1",
+            "2.7.3b1"
+        ]
+    },
+    "jdk-18.0.2": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3b1",
+            "2.7.3"
+        ]
+    },
+    "temurin-jdk-11.0.12+7": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3rc1",
+            "2.7.3"
+        ]
+    },
+    "temurin-jdk-17.0.2+8": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3rc1",
+            "2.7.3"
+        ]
+    },
+    "temurin-jdk-11.0.16+8": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3",
+            "2.7.3rc1"
+        ]
+    },
+    "jdk-20.0.2": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3rc1",
+            "2.7.3b1"
+        ]
+    },
+    "temurin-jdk-19.0.1+10": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3rc1",
+            "2.7.3"
+        ]
+    },
+    "ibm-jdk-11.0.13+8": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3rc1",
+            "2.7.3"
+        ]
+    },
+    "temurin-jdk-17.0.4.1+1": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3rc1",
+            "2.7.3"
+        ]
+    },
+    "temurin-jdk-11.0.14.1+1": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3rc1",
+            "2.7.3b1"
+        ]
+    },
+    "openjdk-jdk-15.0.2": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3",
+            "2.7.3b1"
+        ]
+    },
+    "temurin-jdk8u312-b07": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3b1",
+            "2.7.3"
+        ]
+    },
+    "jdk-17.0.3": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3",
+            "2.7.3b1"
+        ]
+    },
+    "ibm-jdk-17.0.3+7": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3rc1",
+            "2.7.3b1"
+        ]
+    },
+    "ibm-jdk8u312-b07": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3rc1",
+            "2.7.3b1"
+        ]
+    },
+    "jdk-17.0.1": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3b1",
+            "2.7.3rc1"
+        ]
+    },
+    "jdk-17.0.4": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3rc1",
+            "2.7.3b1"
+        ]
+    },
+    "jdk-17.0.2": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3",
+            "2.7.3rc1"
+        ]
+    },
+    "ibm-jdk-18.0.2+9": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3rc1",
+            "2.7.3"
+        ]
+    },
+    "openjdk-jdk-14": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3rc1",
+            "2.7.3"
+        ]
+    },
+    "temurin-jdk-18.0.2.1+1": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3b1",
+            "2.7.3"
+        ]
+    },
+    "temurin-jdk-11.0.20.1+1": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3",
+            "2.7.3rc1"
+        ]
+    },
+    "temurin-jdk-21.0.1+12": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3",
+            "2.7.3b1"
+        ]
+    },
+    "temurin-jdk-17.0.8.1+1": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3",
+            "2.7.3rc1"
+        ]
+    },
+    "jdk-12.0.1": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3b1",
+            "2.7.3"
+        ]
+    },
+    "ibm-jdk-17.0.4.1+1": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3",
+            "2.7.3rc1"
+        ]
+    },
+    "temurin-jdk8u382-b05": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3rc1",
+            "2.7.3b1"
+        ]
+    },
+    "openjdk-jdk-11.0.2": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3b1",
+            "2.7.3"
+        ]
+    },
+    "openjdk-jdk-18": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3rc1",
+            "2.7.3b1"
+        ]
+    },
+    "temurin-jdk8u372-b07": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3",
+            "2.7.3b1"
+        ]
+    },
+    "ibm-jdk8u332-b09": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3",
+            "2.7.3rc1"
+        ]
+    },
+    "ibm-jdk-17.0.7+7": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3",
+            "2.7.3b1"
+        ]
+    },
+    "openjdk-jdk-16.0.2": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3rc1",
+            "2.7.3b1"
+        ]
+    },
+    "jdk-15": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3",
+            "2.7.3rc1"
+        ]
+    },
+    "jdk-13.0.1": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3",
+            "2.7.3rc1"
+        ]
+    },
+    "openjdk-jdk-20": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3",
+            "2.7.3rc1"
+        ]
+    },
+    "ibm-jdk8u382-b05": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3rc1",
+            "2.7.3"
+        ]
+    },
+    "ibm-jdk-20.0.2+9": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3",
+            "2.7.3rc1"
+        ]
+    },
+    "temurin-jdk-11.0.19+7": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3",
+            "2.7.3b1"
+        ]
+    },
+    "jdk-18.0.2.1": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3b1",
+            "2.7.3"
+        ]
+    },
+    "jdk-21.0.1": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3rc1",
+            "2.7.3b1"
+        ]
+    },
+    "ibm-jdk-18.0.1+10": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3b1",
+            "2.7.3"
+        ]
+    },
+    "jdk-20.0.1": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3rc1",
+            "2.7.3"
+        ]
+    },
+    "jdk-16.0.1": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3",
+            "2.7.3b1"
+        ]
+    },
+    "temurin-jdk-11.0.15+10": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3b1",
+            "2.7.3"
+        ]
+    },
+    "openjdk-jdk-16.0.1": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3rc1",
+            "2.7.3"
+        ]
+    },
+    "openjdk-jdk-17.0.2": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3rc1",
+            "2.7.3b1"
+        ]
+    },
+    "jdk-17.0.5": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3",
+            "2.7.3rc1"
+        ]
+    },
+    "openjdk-jdk-11": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3b1",
+            "2.7.3"
+        ]
+    },
+    "openjdk-jdk-18.0.2": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3b1",
+            "2.7.3"
+        ]
+    },
+    "ibm-jdk-17.0.6+10": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3",
+            "2.7.3b1"
+        ]
+    },
+    "ibm-jdk-11.0.20.1+1": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3b1",
+            "2.7.3rc1"
+        ]
+    },
+    "openjdk-jdk-15.0.1": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3",
+            "2.7.3b1"
+        ]
+    },
+    "openjdk-jdk-15": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3",
+            "2.7.3rc1"
+        ]
+    },
+    "ibm-jdk-11.0.17+8": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3",
+            "2.7.3b1"
+        ]
+    },
+    "ibm-jdk8u345-b01": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3",
+            "2.7.3b1"
+        ]
+    },
+    "temurin-jdk-20.0.1+9": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3rc1",
+            "2.7.3"
+        ]
+    },
+    "ibm-jdk8u322-b06": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3",
+            "2.7.3b1"
+        ]
+    },
+    "ibm-jdk-11.0.16+8": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3b1",
+            "2.7.3"
+        ]
+    },
+    "openjdk-jdk-13.0.2": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3",
+            "2.7.3rc1"
+        ]
+    },
+    "temurin-jdk8u332-b09": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3rc1",
+            "2.7.3b1"
+        ]
+    },
+    "openjdk-jdk-19.0.1": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3rc1",
+            "2.7.3b1"
+        ]
+    },
+    "ibm-jdk-19.0.2+7": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3rc1",
+            "2.7.3"
+        ]
+    },
+    "jdk-12": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3",
+            "2.7.3b1"
+        ]
+    },
+    "jdk-16": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3b1",
+            "2.7.3rc1"
+        ]
+    },
+    "ibm-jdk8u362-b09": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3rc1",
+            "2.7.3b1"
+        ]
+    },
+    "openjdk-jdk-20.0.1": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3b1",
+            "2.7.3"
+        ]
+    },
+    "openjdk-jdk-12": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3rc1",
+            "2.7.3b1"
+        ]
+    },
+    "ibm-jdk-16.0.2+7": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3b1",
+            "2.7.3rc1"
+        ]
+    },
+    "ibm-jdk-17.0.2+8": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3",
+            "2.7.3b1"
+        ]
+    },
+    "jdk-17.0.9": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3",
+            "2.7.3rc1"
+        ]
+    },
+    "openjdk-jdk-16": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3",
+            "2.7.3rc1"
+        ]
+    },
+    "jdk-19.0.2": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3",
+            "2.7.3b1"
+        ]
+    },
+    "temurin-jdk-17+35": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3rc1",
+            "2.7.3b1"
+        ]
+    },
+    "ibm-jdk-11.0.16.1+1": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3",
+            "2.7.3b1"
+        ]
+    },
+    "jdk-18.0.1.1": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3",
+            "2.7.3b1"
+        ]
+    },
+    "jdk-16.0.2": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3",
+            "2.7.3rc1"
+        ]
+    },
+    "openjdk-jdk-21": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3",
+            "2.7.3b1"
+        ]
+    },
+    "openjdk-jdk-14.0.1": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3rc1",
+            "2.7.3b1"
+        ]
+    },
+    "ibm-jdk-11.0.15+10": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3rc1",
+            "2.7.3"
+        ]
+    },
+    "temurin-jdk8u302-b08": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3",
+            "2.7.3rc1"
+        ]
+    },
+    "jdk-17": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3b1",
+            "2.7.3rc1"
+        ]
+    },
+    "jdk-19.0.1": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3b1",
+            "2.7.3rc1"
+        ]
+    },
+    "temurin-jdk-17.0.6+10": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3b1",
+            "2.7.3rc1"
+        ]
+    },
+    "temurin-jdk-21+35": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3",
+            "2.7.3rc1"
+        ]
+    },
+    "jdk-17.0.4.1": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3b1",
+            "2.7.3rc1"
+        ]
+    },
+    "ibm-jdk-11.0.20+8": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3b1",
+            "2.7.3"
+        ]
+    },
+    "ibm-jdk-17.0.8+7": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3b1",
+            "2.7.3rc1"
+        ]
+    },
+    "temurin-jdk-11.0.20+8": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3",
+            "2.7.3b1"
+        ]
+    },
+    "temurin-jdk8u345-b01": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3b1",
+            "2.7.3"
+        ]
+    },
+    "temurin-jdk-17.0.4+8": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3rc1",
+            "2.7.3"
+        ]
+    },
+    "jdk-15.0.1": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3b1",
+            "2.7.3rc1"
+        ]
+    },
+    "openjdk-jdk-18.0.1.1": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3rc1",
+            "2.7.3b1"
+        ]
+    },
+    "jdk-14": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3",
+            "2.7.3b1"
+        ]
+    },
+    "openjdk-jdk-17": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3rc1",
+            "2.7.3"
+        ]
+    },
+    "temurin-jdk-11.0.21+9": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3",
+            "2.7.3b1"
+        ]
+    },
+    "temurin-jdk-17.0.3+7": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3rc1",
+            "2.7.3"
+        ]
+    },
+    "jdk-17.0.7": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3",
+            "2.7.3b1"
+        ]
+    },
+    "ibm-jdk8u372-b07": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3",
+            "2.7.3b1"
+        ]
+    },
+    "temurin-jdk-20.0.2+9": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3rc1",
+            "2.7.3"
+        ]
+    },
+    "jdk-13.0.2": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3b1",
+            "2.7.3rc1"
+        ]
+    },
+    "jdk-17.0.8": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3",
+            "2.7.3b1"
+        ]
+    },
+    "ibm-jdk-17.0.8.1+1": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3rc1",
+            "2.7.3b1"
+        ]
+    },
+    "temurin-jdk-11.0.13+8": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3",
+            "2.7.3rc1"
+        ]
+    },
+    "ibm-jdk-11.0.19+7": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3",
+            "2.7.3b1"
+        ]
+    },
+    "jdk-17.0.3.1": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3b1",
+            "2.7.3"
+        ]
+    },
+    "temurin-jdk-11.0.17+8": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3rc1",
+            "2.7.3b1"
+        ]
+    },
+    "temurin-jdk-18.0.1+10": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3b1",
+            "2.7.3rc1"
+        ]
+    },
+    "jdk-20": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3rc1",
+            "2.7.3b1"
+        ]
+    },
+    "jdk-15.0.2": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3rc1",
+            "2.7.3"
+        ]
+    },
+    "openjdk-jdk-13.0.1": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3rc1",
+            "2.7.3"
+        ]
+    },
+    "jdk-14.0.1": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3b1",
+            "2.7.3rc1"
+        ]
+    },
+    "jdk-18.0.1": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3",
+            "2.7.3rc1"
+        ]
+    },
+    "temurin-jdk-17.0.1+12": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3",
+            "2.7.3b1"
+        ]
+    },
+    "temurin-jdk-19.0.2+7": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3b1",
+            "2.7.3"
+        ]
+    },
+    "ibm-jdk-18.0.1.1+2": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3rc1",
+            "2.7.3"
+        ]
+    },
+    "openjdk-jdk-12.0.2": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3rc1",
+            "2.7.3b1"
+        ]
+    },
+    "temurin-jdk-11.0.18+10": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3",
+            "2.7.3rc1"
+        ]
+    },
+    "jdk-19": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3rc1",
+            "2.7.3b1"
+        ]
+    },
+    "jdk-12.0.2": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3b1",
+            "2.7.3"
+        ]
+    },
+    "openjdk-jdk-11.0.1": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3b1",
+            "2.7.3rc1"
+        ]
+    },
+    "jdk-17.0.6": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3",
+            "2.7.3b1"
+        ]
+    },
+    "temurin-jdk8u352-b08": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3",
+            "2.7.3b1"
+        ]
+    },
+    "temurin-jdk-20+36": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3rc1",
+            "2.7.3b1"
+        ]
+    },
+    "ibm-jdk8u302-b08": {
+        "jython-standalone": [
+            "2.7.3rc1",
+            "2.7.3",
+            "2.7.3b1"
+        ]
+    },
+    "temurin-jdk8u392-b08": {
+        "jython-standalone": [
+            "2.7.3",
+            "2.7.3rc1",
+            "2.7.3b1"
+        ]
+    },
+    "openjdk-jdk-20.0.2": {
+        "jython-standalone": [
+            "2.7.3b1",
+            "2.7.3rc1",
+            "2.7.3"
+        ]
+    }
+}

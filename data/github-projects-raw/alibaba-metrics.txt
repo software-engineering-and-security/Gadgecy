@@ -1,0 +1,104 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.middleware:metrics-core-api:jar:2.1.0-SNAPSHOT
+[WARNING] 'version' contains an expression but should be a constant. @ com.alibaba.middleware:metrics-all:${metrics.version}, /home/brunok/apache-ysoserial-vuln/pom/alibaba-metrics/pom.xml, line 30, column 14
+[WARNING] 'dependencyManagement.dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.glassfish.jersey.core:jersey-client:jar -> duplicate declaration of version ${jersey.version} @ com.alibaba.middleware:metrics-all:${metrics.version}, /home/brunok/apache-ysoserial-vuln/pom/alibaba-metrics/pom.xml, line 159, column 25
+[WARNING] 'dependencyManagement.dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: javax.xml.bind:jaxb-api:jar -> version 2.2.12 vs 2.2.11 @ com.alibaba.middleware:metrics-all:${metrics.version}, /home/brunok/apache-ysoserial-vuln/pom/alibaba-metrics/pom.xml, line 281, column 25
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.middleware:metrics-rest:jar:2.1.0-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: javax.ws.rs:javax.ws.rs-api:jar -> duplicate declaration of version (?) @ com.alibaba.middleware:metrics-rest:${metrics.version}, /home/brunok/apache-ysoserial-vuln/pom/alibaba-metrics/metrics-rest/pom.xml, line 82, column 21
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: javax.xml.bind:jaxb-api:jar -> duplicate declaration of version (?) @ com.alibaba.middleware:metrics-rest:${metrics.version}, /home/brunok/apache-ysoserial-vuln/pom/alibaba-metrics/metrics-rest/pom.xml, line 103, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.middleware:metrics-all:pom:2.1.0-SNAPSHOT
+[WARNING] 'version' contains an expression but should be a constant. @ com.alibaba.middleware:metrics-all:${metrics.version}, /home/brunok/Gadgecy/../apache-ysoserial-vuln/pom/alibaba-metrics/pom.xml, line 30, column 14
+[WARNING] 'dependencyManagement.dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.glassfish.jersey.core:jersey-client:jar -> duplicate declaration of version ${jersey.version} @ com.alibaba.middleware:metrics-all:${metrics.version}, /home/brunok/Gadgecy/../apache-ysoserial-vuln/pom/alibaba-metrics/pom.xml, line 159, column 25
+[WARNING] 'dependencyManagement.dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: javax.xml.bind:jaxb-api:jar -> version 2.2.12 vs 2.2.11 @ com.alibaba.middleware:metrics-all:${metrics.version}, /home/brunok/Gadgecy/../apache-ysoserial-vuln/pom/alibaba-metrics/pom.xml, line 281, column 25
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] metrics-all                                                        [pom]
+[INFO] metrics-core-api                                                   [jar]
+[INFO] metrics-common                                                     [jar]
+[INFO] metrics-core-impl                                                  [jar]
+[INFO] metrics-bin                                                        [jar]
+[INFO] metrics-openjdk                                                    [jar]
+[INFO] metrics-os                                                         [jar]
+[INFO] metrics-nginx                                                      [jar]
+[INFO] metrics-apache-tomcat                                              [jar]
+[INFO] metrics-druid                                                      [jar]
+[INFO] metrics-integration                                                [jar]
+[INFO] metrics-reporter                                                   [jar]
+[INFO] metrics-rest                                                       [jar]
+[INFO] metrics-benchmark                                                  [jar]
+[INFO] metrics-annotation                                                 [jar]
+[INFO] metrics-annotation-springaop                                       [jar]
+[INFO] metrics-demo                                                       [jar]
+[INFO] metrics-threadpool                                                 [jar]
+[INFO] metrics-prometheus                                                 [jar]
+[INFO] 
+[INFO] -----------------< com.alibaba.middleware:metrics-all >-----------------
+[INFO] Building metrics-all 2.1.0-SNAPSHOT                               [1/19]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ metrics-all ---
+[INFO] digraph "com.alibaba.middleware:metrics-all:pom:2.1.0-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< com.alibaba.middleware:metrics-core-api >---------------
+[INFO] Building metrics-core-api 2.1.0-SNAPSHOT                          [2/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ metrics-core-api ---
+[INFO] digraph "com.alibaba.middleware:metrics-core-api:jar:2.1.0-SNAPSHOT" { 
+[INFO] 	"com.alibaba.middleware:metrics-core-api:jar:2.1.0-SNAPSHOT" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"com.alibaba.middleware:metrics-core-api:jar:2.1.0-SNAPSHOT" -> "org.mockito:mockito-all:jar:1.10.19:test" ; 
+[INFO] 	"com.alibaba.middleware:metrics-core-api:jar:2.1.0-SNAPSHOT" -> "org.assertj:assertj-core:jar:1.7.1:test" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< com.alibaba.middleware:metrics-common >----------------
+[INFO] Building metrics-common 2.1.0-SNAPSHOT                            [3/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for metrics-all 2.1.0-SNAPSHOT:
+[INFO] 
+[INFO] metrics-all ........................................ SUCCESS [  4.767 s]
+[INFO] metrics-core-api ................................... SUCCESS [  0.275 s]
+[INFO] metrics-common ..................................... FAILURE [  0.062 s]
+[INFO] metrics-core-impl .................................. SKIPPED
+[INFO] metrics-bin ........................................ SKIPPED
+[INFO] metrics-openjdk .................................... SKIPPED
+[INFO] metrics-os ......................................... SKIPPED
+[INFO] metrics-nginx ...................................... SKIPPED
+[INFO] metrics-apache-tomcat .............................. SKIPPED
+[INFO] metrics-druid ...................................... SKIPPED
+[INFO] metrics-integration ................................ SKIPPED
+[INFO] metrics-reporter ................................... SKIPPED
+[INFO] metrics-rest ....................................... SKIPPED
+[INFO] metrics-benchmark .................................. SKIPPED
+[INFO] metrics-annotation ................................. SKIPPED
+[INFO] metrics-annotation-springaop ....................... SKIPPED
+[INFO] metrics-demo ....................................... SKIPPED
+[INFO] metrics-threadpool ................................. SKIPPED
+[INFO] metrics-prometheus ................................. SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.884 s
+[INFO] Finished at: 2023-12-28T09:02:23+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project metrics-common: Could not resolve dependencies for project com.alibaba.middleware:metrics-common:jar:2.1.0-SNAPSHOT: Could not find artifact com.alibaba.middleware:metrics-core-api:jar:2.1.0-SNAPSHOT -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :metrics-common

@@ -1,0 +1,34 @@
+[INFO] Scanning for projects...
+[WARNING] The POM for org.jenkins-ci.tools:maven-hpi-plugin:jar:2.1 is missing, no dependency information available
+[WARNING] Failed to build parent project for org.jenkins-ci.plugins:selenium:hpi:3.141.60-SNAPSHOT
+[INFO] 
+[INFO] ------------------< org.jenkins-ci.plugins:selenium >-------------------
+[INFO] Building Jenkins Selenium Plugin 3.141.60-SNAPSHOT
+[INFO] --------------------------------[ hpi ]---------------------------------
+[INFO] Downloading from Local repository for selenium standalone server: file:///home/brunok/Gadgecy/../apache-ysoserial-vuln/pom/jenkinsci-selenium-plugin/dist-server-standalone/local_m2/org/seleniumhq/selenium/htmlunit-driver-standalone/2.33.3/htmlunit-driver-standalone-2.33.3.pom
+[INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/seleniumhq/selenium/htmlunit-driver-standalone/2.33.3/htmlunit-driver-standalone-2.33.3.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/htmlunit-driver-standalone/2.33.3/htmlunit-driver-standalone-2.33.3.pom
+[WARNING] The POM for org.seleniumhq.selenium:htmlunit-driver-standalone:jar:2.33.3 is missing, no dependency information available
+[INFO] Downloading from Local repository for selenium standalone server: file:///home/brunok/Gadgecy/../apache-ysoserial-vuln/pom/jenkinsci-selenium-plugin/dist-server-standalone/local_m2/org/seleniumhq/selenium/selenium-server-standalone/3.141.59/selenium-server-standalone-3.141.59.pom
+[INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/seleniumhq/selenium/selenium-server-standalone/3.141.59/selenium-server-standalone-3.141.59.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-server-standalone/3.141.59/selenium-server-standalone-3.141.59.pom
+[WARNING] The POM for org.seleniumhq.selenium:selenium-server-standalone:jar:3.141.59 is missing, no dependency information available
+[INFO] Downloading from Local repository for selenium standalone server: file:///home/brunok/Gadgecy/../apache-ysoserial-vuln/pom/jenkinsci-selenium-plugin/dist-server-standalone/local_m2/org/seleniumhq/selenium/htmlunit-driver-standalone/2.33.3/htmlunit-driver-standalone-2.33.3.jar
+[INFO] Downloading from Local repository for selenium standalone server: file:///home/brunok/Gadgecy/../apache-ysoserial-vuln/pom/jenkinsci-selenium-plugin/dist-server-standalone/local_m2/org/seleniumhq/selenium/selenium-server-standalone/3.141.59/selenium-server-standalone-3.141.59.jar
+[INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/seleniumhq/selenium/htmlunit-driver-standalone/2.33.3/htmlunit-driver-standalone-2.33.3.jar
+[INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/seleniumhq/selenium/selenium-server-standalone/3.141.59/selenium-server-standalone-3.141.59.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/htmlunit-driver-standalone/2.33.3/htmlunit-driver-standalone-2.33.3.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-server-standalone/3.141.59/selenium-server-standalone-3.141.59.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  17.064 s
+[INFO] Finished at: 2023-12-28T09:03:13+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project selenium: Could not resolve dependencies for project org.jenkins-ci.plugins:selenium:hpi:3.141.60-SNAPSHOT: The following artifacts could not be resolved: org.seleniumhq.selenium:htmlunit-driver-standalone:jar:2.33.3, org.seleniumhq.selenium:selenium-server-standalone:jar:3.141.59: Could not find artifact org.seleniumhq.selenium:htmlunit-driver-standalone:jar:2.33.3 in Local repository for selenium standalone server (file:///home/brunok/Gadgecy/../apache-ysoserial-vuln/pom/jenkinsci-selenium-plugin/dist-server-standalone/local_m2) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException

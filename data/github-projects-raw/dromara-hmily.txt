@@ -1,0 +1,257 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] hmily                                                              [pom]
+[INFO] hmily-annotation                                                   [jar]
+[INFO] hmily-common                                                       [jar]
+[INFO] hmily-spi                                                          [jar]
+[INFO] hmily-config                                                       [pom]
+[INFO] hmily-config-api                                                   [jar]
+[INFO] hmily-config-loader                                                [jar]
+[INFO] hmily-config-apollo                                                [jar]
+[INFO] hmily-config-local                                                 [jar]
+[INFO] hmily-config-nacos                                                 [jar]
+[INFO] hmily-config-zookeeper                                             [jar]
+[INFO] hmily-config-etcd                                                  [jar]
+[INFO] hmily-config-consul                                                [jar]
+[INFO] hmily-config-all                                                   [jar]
+[INFO] hmily-serializer                                                   [pom]
+[INFO] hmily-serializer-spi                                               [jar]
+[INFO] hmily-serializer-jdk                                               [jar]
+[INFO] hmily-serializer-hessian                                           [jar]
+[INFO] hmily-serializer-kryo                                              [jar]
+[INFO] hmily-serializer-protobuf                                          [jar]
+[INFO] hmily-serializer-msgpack                                           [jar]
+[INFO] hmily-serializer-all                                               [jar]
+[INFO] hmily-repository                                                   [pom]
+[INFO] hmily-repository-spi                                               [jar]
+[INFO] hmily-repository-database                                          [pom]
+[INFO] hmily-repository-database-manager                                  [jar]
+[INFO] hmily-repository-database-mysql                                    [jar]
+[INFO] hmily-repository-database-oracle                                   [jar]
+[INFO] hmily-repository-database-postgresql                               [jar]
+[INFO] hmily-repository-database-sqlserver                                [jar]
+[INFO] hmily-repository-database-all                                      [jar]
+[INFO] hmily-repository-file                                              [jar]
+[INFO] hmily-repository-mongodb                                           [jar]
+[INFO] hmily-repository-redis                                             [jar]
+[INFO] hmily-repository-zookeeper                                         [jar]
+[INFO] hmily-repository-all                                               [jar]
+[INFO] hmily-metrics                                                      [pom]
+[INFO] hmily-metrics-spi                                                  [jar]
+[INFO] hmily-metrics-prometheus                                           [jar]
+[INFO] hmily-metrics-facade                                               [jar]
+[INFO] hmily-core                                                         [jar]
+[INFO] hmily-spring                                                       [jar]
+[INFO] hmily-spring-boot-starter                                          [pom]
+[INFO] hmily-spring-boot-starter-parent                                   [jar]
+[INFO] hmily-tcc                                                          [jar]
+[INFO] hmily-tac                                                          [pom]
+[INFO] hmily-tac-core                                                     [jar]
+[INFO] hmily-tac-common                                                   [jar]
+[INFO] hmily-tac-sqlparser                                                [pom]
+[INFO] hmily-tac-sqlparser-model                                          [jar]
+[INFO] hmily-tac-sqlparser-spi                                            [jar]
+[INFO] hmily-tac-sqlparser-calcite                                        [jar]
+[INFO] hmily-tac-sqlparser-shardingsphere                                 [jar]
+[INFO] hmily-tac-sqlparser-all                                            [jar]
+[INFO] hmily-tac-sqlrevert                                                [pom]
+[INFO] hmily-tac-sqlrevert-spi                                            [jar]
+[INFO] hmily-tac-sqlrevert-core                                           [jar]
+[INFO] hmily-tac-sqlrevert-all                                            [jar]
+[INFO] hmily-tac-metadata                                                 [jar]
+[INFO] hmily-tac-sqlcompute                                               [jar]
+[INFO] hmily-tac-p6spy                                                    [jar]
+[INFO] hmily-rpc                                                          [pom]
+[INFO] hmily-dubbo                                                        [jar]
+[INFO] hmily-spring-boot-starter-dubbo                                    [jar]
+[INFO] hmily-springcloud                                                  [jar]
+[INFO] hmily-spring-boot-starter-springcloud                              [jar]
+[INFO] hmily-motan                                                        [jar]
+[INFO] hmily-spring-boot-starter-motan                                    [jar]
+[INFO] hmily-apache-dubbo                                                 [jar]
+[INFO] hmily-spring-boot-starter-apache-dubbo                             [jar]
+[INFO] hmily-sofa-rpc                                                     [jar]
+[INFO] hmily-spring-boot-starter-sofa-rpc                                 [jar]
+[INFO] hmily-tars                                                         [jar]
+[INFO] hmily-spring-boot-starter-tars                                     [jar]
+[INFO] hmily-brpc                                                         [jar]
+[INFO] hmily-spring-boot-starter-brpc                                     [jar]
+[INFO] hmily-grpc                                                         [jar]
+[INFO] hmily-spring-boot-starter-grpc                                     [jar]
+[INFO] hmily-repository-etcd                                              [jar]
+[INFO] Hmily bom 2.1.3-SNAPSHOT                                           [pom]
+[INFO] hmily-xa                                                           [pom]
+[INFO] hmily-xa-core                                                      [jar]
+[INFO] hmily-xa-p6spy                                                     [jar]
+[INFO] hmily-xa-rpc                                                       [pom]
+[INFO] hmily-xa-rpc-common                                                [jar]
+[INFO] hmily-xa-rpc-dubbo                                                 [jar]
+[INFO] hmily-xa-rpc-springcloud                                           [jar]
+[INFO] 
+[INFO] -------------------------< org.dromara:hmily >--------------------------
+[INFO] Building hmily 2.1.3-SNAPSHOT                                     [1/87]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ hmily ---
+[INFO] digraph "org.dromara:hmily:pom:2.1.3-SNAPSHOT" { 
+[INFO] 	"org.dromara:hmily:pom:2.1.3-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.7:compile" ; 
+[INFO] 	"org.dromara:hmily:pom:2.1.3-SNAPSHOT" -> "org.slf4j:slf4j-log4j12:jar:1.7.7:test" ; 
+[INFO] 	"org.dromara:hmily:pom:2.1.3-SNAPSHOT" -> "org.slf4j:jcl-over-slf4j:jar:1.7.7:compile" ; 
+[INFO] 	"org.dromara:hmily:pom:2.1.3-SNAPSHOT" -> "log4j:log4j:jar:1.2.17:compile" ; 
+[INFO] 	"org.dromara:hmily:pom:2.1.3-SNAPSHOT" -> "org.projectlombok:lombok:jar:1.18.12:compile" ; 
+[INFO] 	"org.dromara:hmily:pom:2.1.3-SNAPSHOT" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"org.dromara:hmily:pom:2.1.3-SNAPSHOT" -> "org.hamcrest:hamcrest-library:jar:1.3:test" ; 
+[INFO] 	"org.dromara:hmily:pom:2.1.3-SNAPSHOT" -> "org.mockito:mockito-core:jar:2.7.21:test" ; 
+[INFO] 	"org.dromara:hmily:pom:2.1.3-SNAPSHOT" -> "org.mockito:mockito-inline:jar:2.7.21:test" ; 
+[INFO] 	"org.dromara:hmily:pom:2.1.3-SNAPSHOT" -> "org.powermock:powermock-api-mockito2:jar:2.0.7:test" ; 
+[INFO] 	"org.dromara:hmily:pom:2.1.3-SNAPSHOT" -> "org.powermock:powermock-module-junit4:jar:2.0.7:test" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.7.21:test" -> "net.bytebuddy:byte-buddy:jar:1.7.11:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.7.21:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.7.11:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.7.21:test" -> "org.objenesis:objenesis:jar:3.1:test" ; 
+[INFO] 	"org.powermock:powermock-api-mockito2:jar:2.0.7:test" -> "org.powermock:powermock-api-support:jar:2.0.7:test" ; 
+[INFO] 	"org.powermock:powermock-api-support:jar:2.0.7:test" -> "org.powermock:powermock-reflect:jar:2.0.7:test" ; 
+[INFO] 	"org.powermock:powermock-api-support:jar:2.0.7:test" -> "org.powermock:powermock-core:jar:2.0.7:test" ; 
+[INFO] 	"org.powermock:powermock-core:jar:2.0.7:test" -> "org.javassist:javassist:jar:3.27.0-GA:test" ; 
+[INFO] 	"org.powermock:powermock-module-junit4:jar:2.0.7:test" -> "org.powermock:powermock-module-junit4-common:jar:2.0.7:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< org.dromara:hmily-annotation >--------------------
+[INFO] Building hmily-annotation 2.1.3-SNAPSHOT                          [2/87]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ hmily-annotation ---
+[INFO] digraph "org.dromara:hmily-annotation:jar:2.1.3-SNAPSHOT" { 
+[INFO] 	"org.dromara:hmily-annotation:jar:2.1.3-SNAPSHOT" -> "org.projectlombok:lombok:jar:1.18.12:compile" ; 
+[INFO] 	"org.dromara:hmily-annotation:jar:2.1.3-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.7:compile" ; 
+[INFO] 	"org.dromara:hmily-annotation:jar:2.1.3-SNAPSHOT" -> "org.slf4j:slf4j-log4j12:jar:1.7.7:test" ; 
+[INFO] 	"org.dromara:hmily-annotation:jar:2.1.3-SNAPSHOT" -> "org.slf4j:jcl-over-slf4j:jar:1.7.7:compile" ; 
+[INFO] 	"org.dromara:hmily-annotation:jar:2.1.3-SNAPSHOT" -> "log4j:log4j:jar:1.2.17:compile" ; 
+[INFO] 	"org.dromara:hmily-annotation:jar:2.1.3-SNAPSHOT" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"org.dromara:hmily-annotation:jar:2.1.3-SNAPSHOT" -> "org.hamcrest:hamcrest-library:jar:1.3:test" ; 
+[INFO] 	"org.dromara:hmily-annotation:jar:2.1.3-SNAPSHOT" -> "org.mockito:mockito-core:jar:2.7.21:test" ; 
+[INFO] 	"org.dromara:hmily-annotation:jar:2.1.3-SNAPSHOT" -> "org.mockito:mockito-inline:jar:2.7.21:test" ; 
+[INFO] 	"org.dromara:hmily-annotation:jar:2.1.3-SNAPSHOT" -> "org.powermock:powermock-api-mockito2:jar:2.0.7:test" ; 
+[INFO] 	"org.dromara:hmily-annotation:jar:2.1.3-SNAPSHOT" -> "org.powermock:powermock-module-junit4:jar:2.0.7:test" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.7.21:test" -> "net.bytebuddy:byte-buddy:jar:1.7.11:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.7.21:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.7.11:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.7.21:test" -> "org.objenesis:objenesis:jar:3.1:test" ; 
+[INFO] 	"org.powermock:powermock-api-mockito2:jar:2.0.7:test" -> "org.powermock:powermock-api-support:jar:2.0.7:test" ; 
+[INFO] 	"org.powermock:powermock-api-support:jar:2.0.7:test" -> "org.powermock:powermock-reflect:jar:2.0.7:test" ; 
+[INFO] 	"org.powermock:powermock-api-support:jar:2.0.7:test" -> "org.powermock:powermock-core:jar:2.0.7:test" ; 
+[INFO] 	"org.powermock:powermock-core:jar:2.0.7:test" -> "org.javassist:javassist:jar:3.27.0-GA:test" ; 
+[INFO] 	"org.powermock:powermock-module-junit4:jar:2.0.7:test" -> "org.powermock:powermock-module-junit4-common:jar:2.0.7:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< org.dromara:hmily-common >----------------------
+[INFO] Building hmily-common 2.1.3-SNAPSHOT                              [3/87]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for hmily 2.1.3-SNAPSHOT:
+[INFO] 
+[INFO] hmily .............................................. SUCCESS [  2.786 s]
+[INFO] hmily-annotation ................................... SUCCESS [  0.089 s]
+[INFO] hmily-common ....................................... FAILURE [  0.131 s]
+[INFO] hmily-spi .......................................... SKIPPED
+[INFO] hmily-config ....................................... SKIPPED
+[INFO] hmily-config-api ................................... SKIPPED
+[INFO] hmily-config-loader ................................ SKIPPED
+[INFO] hmily-config-apollo ................................ SKIPPED
+[INFO] hmily-config-local ................................. SKIPPED
+[INFO] hmily-config-nacos ................................. SKIPPED
+[INFO] hmily-config-zookeeper ............................. SKIPPED
+[INFO] hmily-config-etcd .................................. SKIPPED
+[INFO] hmily-config-consul ................................ SKIPPED
+[INFO] hmily-config-all ................................... SKIPPED
+[INFO] hmily-serializer ................................... SKIPPED
+[INFO] hmily-serializer-spi ............................... SKIPPED
+[INFO] hmily-serializer-jdk ............................... SKIPPED
+[INFO] hmily-serializer-hessian ........................... SKIPPED
+[INFO] hmily-serializer-kryo .............................. SKIPPED
+[INFO] hmily-serializer-protobuf .......................... SKIPPED
+[INFO] hmily-serializer-msgpack ........................... SKIPPED
+[INFO] hmily-serializer-all ............................... SKIPPED
+[INFO] hmily-repository ................................... SKIPPED
+[INFO] hmily-repository-spi ............................... SKIPPED
+[INFO] hmily-repository-database .......................... SKIPPED
+[INFO] hmily-repository-database-manager .................. SKIPPED
+[INFO] hmily-repository-database-mysql .................... SKIPPED
+[INFO] hmily-repository-database-oracle ................... SKIPPED
+[INFO] hmily-repository-database-postgresql ............... SKIPPED
+[INFO] hmily-repository-database-sqlserver ................ SKIPPED
+[INFO] hmily-repository-database-all ...................... SKIPPED
+[INFO] hmily-repository-file .............................. SKIPPED
+[INFO] hmily-repository-mongodb ........................... SKIPPED
+[INFO] hmily-repository-redis ............................. SKIPPED
+[INFO] hmily-repository-zookeeper ......................... SKIPPED
+[INFO] hmily-repository-all ............................... SKIPPED
+[INFO] hmily-metrics ...................................... SKIPPED
+[INFO] hmily-metrics-spi .................................. SKIPPED
+[INFO] hmily-metrics-prometheus ........................... SKIPPED
+[INFO] hmily-metrics-facade ............................... SKIPPED
+[INFO] hmily-core ......................................... SKIPPED
+[INFO] hmily-spring ....................................... SKIPPED
+[INFO] hmily-spring-boot-starter .......................... SKIPPED
+[INFO] hmily-spring-boot-starter-parent ................... SKIPPED
+[INFO] hmily-tcc .......................................... SKIPPED
+[INFO] hmily-tac .......................................... SKIPPED
+[INFO] hmily-tac-core ..................................... SKIPPED
+[INFO] hmily-tac-common ................................... SKIPPED
+[INFO] hmily-tac-sqlparser ................................ SKIPPED
+[INFO] hmily-tac-sqlparser-model .......................... SKIPPED
+[INFO] hmily-tac-sqlparser-spi ............................ SKIPPED
+[INFO] hmily-tac-sqlparser-calcite ........................ SKIPPED
+[INFO] hmily-tac-sqlparser-shardingsphere ................. SKIPPED
+[INFO] hmily-tac-sqlparser-all ............................ SKIPPED
+[INFO] hmily-tac-sqlrevert ................................ SKIPPED
+[INFO] hmily-tac-sqlrevert-spi ............................ SKIPPED
+[INFO] hmily-tac-sqlrevert-core ........................... SKIPPED
+[INFO] hmily-tac-sqlrevert-all ............................ SKIPPED
+[INFO] hmily-tac-metadata ................................. SKIPPED
+[INFO] hmily-tac-sqlcompute ............................... SKIPPED
+[INFO] hmily-tac-p6spy .................................... SKIPPED
+[INFO] hmily-rpc .......................................... SKIPPED
+[INFO] hmily-dubbo ........................................ SKIPPED
+[INFO] hmily-spring-boot-starter-dubbo .................... SKIPPED
+[INFO] hmily-springcloud .................................. SKIPPED
+[INFO] hmily-spring-boot-starter-springcloud .............. SKIPPED
+[INFO] hmily-motan ........................................ SKIPPED
+[INFO] hmily-spring-boot-starter-motan .................... SKIPPED
+[INFO] hmily-apache-dubbo ................................. SKIPPED
+[INFO] hmily-spring-boot-starter-apache-dubbo ............. SKIPPED
+[INFO] hmily-sofa-rpc ..................................... SKIPPED
+[INFO] hmily-spring-boot-starter-sofa-rpc ................. SKIPPED
+[INFO] hmily-tars ......................................... SKIPPED
+[INFO] hmily-spring-boot-starter-tars ..................... SKIPPED
+[INFO] hmily-brpc ......................................... SKIPPED
+[INFO] hmily-spring-boot-starter-brpc ..................... SKIPPED
+[INFO] hmily-grpc ......................................... SKIPPED
+[INFO] hmily-spring-boot-starter-grpc ..................... SKIPPED
+[INFO] hmily-repository-etcd .............................. SKIPPED
+[INFO] Hmily bom 2.1.3-SNAPSHOT ........................... SKIPPED
+[INFO] hmily-xa ........................................... SKIPPED
+[INFO] hmily-xa-core ...................................... SKIPPED
+[INFO] hmily-xa-p6spy ..................................... SKIPPED
+[INFO] hmily-xa-rpc ....................................... SKIPPED
+[INFO] hmily-xa-rpc-common ................................ SKIPPED
+[INFO] hmily-xa-rpc-dubbo ................................. SKIPPED
+[INFO] hmily-xa-rpc-springcloud ........................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.864 s
+[INFO] Finished at: 2023-12-28T09:02:39+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project hmily-common: Could not resolve dependencies for project org.dromara:hmily-common:jar:2.1.3-SNAPSHOT: Could not find artifact org.dromara:hmily-annotation:jar:2.1.3-SNAPSHOT -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :hmily-common

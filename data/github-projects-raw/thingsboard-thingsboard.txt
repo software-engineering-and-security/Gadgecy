@@ -1,0 +1,310 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Detecting the operating system and CPU architecture
+[INFO] ------------------------------------------------------------------------
+[INFO] os.detected.name: linux
+[INFO] os.detected.arch: x86_64
+[INFO] os.detected.bitness: 64
+[INFO] os.detected.version: 5.10
+[INFO] os.detected.version.major: 5
+[INFO] os.detected.version.minor: 10
+[INFO] os.detected.release: debian
+[INFO] os.detected.release.version: 11
+[INFO] os.detected.release.like.debian: true
+[INFO] os.detected.classifier: linux-x86_64
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Thingsboard                                                        [pom]
+[INFO] Thingsboard Server Commons                                         [pom]
+[INFO] Thingsboard Server Common Data                                     [jar]
+[INFO] Thingsboard Server Common Utils                                    [jar]
+[INFO] Netty MQTT Client                                                  [jar]
+[INFO] Thingsboard Server Common Messages                                 [jar]
+[INFO] Thingsboard Actor system                                           [jar]
+[INFO] Thingsboard Server Stats                                           [jar]
+[INFO] Thingsboard Server Common Protobuf and gRPC structures             [jar]
+[INFO] Thingsboard Server Common Cluster API                              [jar]
+[INFO] Thingsboard Server Queue components                                [jar]
+[INFO] Thingsboard Server Common Cache                                    [jar]
+[INFO] Thingsboard Server Commons                                         [pom]
+[INFO] Thingsboard Server Common Transport components                     [jar]
+[INFO] Thingsboard MQTT Transport Common                                  [jar]
+[INFO] Thingsboard HTTP Transport Common                                  [jar]
+[INFO] Thingsboard CoAP server                                            [jar]
+[INFO] Thingsboard CoAP Transport Common                                  [jar]
+[INFO] Thingsboard LwM2M Transport Common                                 [jar]
+[INFO] Thingsboard SNMP Transport Common                                  [jar]
+[INFO] Thingsboard Server Common DAO API                                  [jar]
+[INFO] Thingsboard Server Remote Edge wrapper                             [jar]
+[INFO] Thingsboard Server Version Control API                             [jar]
+[INFO] Thingsboard Script Invoke Commons                                  [pom]
+[INFO] Thingsboard Server Script invoke API                               [jar]
+[INFO] Thingsboard Extensions                                             [pom]
+[INFO] Thingsboard Rule Engine API                                        [jar]
+[INFO] Thingsboard Server JS Client for remote JS execution               [jar]
+[INFO] Thingsboard Server DAO Layer                                       [jar]
+[INFO] Thingsboard Rule Engine Components                                 [jar]
+[INFO] Thingsboard Server Transport Modules                               [pom]
+[INFO] Thingsboard HTTP Transport Service                                 [jar]
+[INFO] Thingsboard MQTT Transport Service                                 [jar]
+[INFO] Thingsboard CoAP Transport Service                                 [jar]
+[INFO] Thingsboard LwM2m Transport Service                                [jar]
+[INFO] Thingsboard SNMP Transport Service                                 [jar]
+[INFO] ThingsBoard Server UI                                              [jar]
+[INFO] Thingsboard Server Tools                                           [jar]
+[INFO] Thingsboard Rest Client                                            [jar]
+[INFO] ThingsBoard Server Application                                     [jar]
+[INFO] ThingsBoard Microservices                                          [pom]
+[INFO] ThingsBoard Docker Images                                          [pom]
+[INFO] ThingsBoard Web UI Microservice                                    [pom]
+[INFO] ThingsBoard Version Control Executor                               [jar]
+[INFO] ThingsBoard Version Control Executor Microservice                  [pom]
+[INFO] ThingsBoard Node Microservice                                      [pom]
+[INFO] ThingsBoard Transport Microservices                                [pom]
+[INFO] ThingsBoard MQTT Transport Microservice                            [pom]
+[INFO] ThingsBoard HTTP Transport Microservice                            [pom]
+[INFO] ThingsBoard COAP Transport Microservice                            [pom]
+[INFO] ThingsBoard LWM2M Transport Microservice                           [pom]
+[INFO] ThingsBoard SNMP Transport Microservice                            [pom]
+[INFO] ThingsBoard JavaScript Executor Microservice                       [pom]
+[INFO] ThingsBoard Monitoring Service                                     [jar]
+[INFO] ThingsBoard Monitoring Microservice                                [pom]
+[INFO] 
+[INFO] --------------------< org.thingsboard:thingsboard >---------------------
+[INFO] Building Thingsboard 3.6.2-SNAPSHOT                               [1/55]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ thingsboard ---
+[INFO] digraph "org.thingsboard:thingsboard:pom:3.6.2-SNAPSHOT" { 
+[INFO] 	"org.thingsboard:thingsboard:pom:3.6.2-SNAPSHOT" -> "org.projectlombok:lombok:jar:1.18.18:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------------< org.thingsboard:common >-----------------------
+[INFO] Building Thingsboard Server Commons 3.6.2-SNAPSHOT                [2/55]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ common ---
+[INFO] digraph "org.thingsboard:common:pom:3.6.2-SNAPSHOT" { 
+[INFO] 	"org.thingsboard:common:pom:3.6.2-SNAPSHOT" -> "org.projectlombok:lombok:jar:1.18.18:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< org.thingsboard.common:data >---------------------
+[INFO] Building Thingsboard Server Common Data 3.6.2-SNAPSHOT            [3/55]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ data ---
+[INFO] digraph "org.thingsboard.common:data:jar:3.6.2-SNAPSHOT" { 
+[INFO] 	"org.thingsboard.common:data:jar:3.6.2-SNAPSHOT" -> "javax.validation:validation-api:jar:2.0.1.Final:compile" ; 
+[INFO] 	"org.thingsboard.common:data:jar:3.6.2-SNAPSHOT" -> "org.owasp.antisamy:antisamy:jar:1.7.2:compile" ; 
+[INFO] 	"org.thingsboard.common:data:jar:3.6.2-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.32:compile" ; 
+[INFO] 	"org.thingsboard.common:data:jar:3.6.2-SNAPSHOT" -> "org.slf4j:log4j-over-slf4j:jar:1.7.32:compile" ; 
+[INFO] 	"org.thingsboard.common:data:jar:3.6.2-SNAPSHOT" -> "ch.qos.logback:logback-core:jar:1.2.10:compile" ; 
+[INFO] 	"org.thingsboard.common:data:jar:3.6.2-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.2.10:compile" ; 
+[INFO] 	"org.thingsboard.common:data:jar:3.6.2-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile" ; 
+[INFO] 	"org.thingsboard.common:data:jar:3.6.2-SNAPSHOT" -> "org.springframework.data:spring-data-commons:jar:2.7.10:compile" ; 
+[INFO] 	"org.thingsboard.common:data:jar:3.6.2-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-test:jar:2.7.10:test" ; 
+[INFO] 	"org.thingsboard.common:data:jar:3.6.2-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.8.2:test" ; 
+[INFO] 	"org.thingsboard.common:data:jar:3.6.2-SNAPSHOT" -> "org.awaitility:awaitility:jar:4.1.0:test" ; 
+[INFO] 	"org.thingsboard.common:data:jar:3.6.2-SNAPSHOT" -> "com.datastax.oss:java-driver-core:jar:4.15.0:test" ; 
+[INFO] 	"org.thingsboard.common:data:jar:3.6.2-SNAPSHOT" -> "com.squareup.wire:wire-schema:jar:3.4.0:compile" ; 
+[INFO] 	"org.thingsboard.common:data:jar:3.6.2-SNAPSHOT" -> "org.thingsboard:protobuf-dynamic:jar:1.0.4TB:compile" ; 
+[INFO] 	"org.thingsboard.common:data:jar:3.6.2-SNAPSHOT" -> "org.apache.commons:commons-lang3:jar:3.4:compile" ; 
+[INFO] 	"org.thingsboard.common:data:jar:3.6.2-SNAPSHOT" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"org.thingsboard.common:data:jar:3.6.2-SNAPSHOT" -> "io.swagger:swagger-annotations:jar:1.6.3:compile" ; 
+[INFO] 	"org.thingsboard.common:data:jar:3.6.2-SNAPSHOT" -> "de.ruedigermoeller:fst:jar:2.57:compile" ; 
+[INFO] 	"org.thingsboard.common:data:jar:3.6.2-SNAPSHOT" -> "com.google.protobuf:protobuf-java-util:jar:3.21.9:compile" ; 
+[INFO] 	"org.thingsboard.common:data:jar:3.6.2-SNAPSHOT" -> "org.eclipse.leshan:leshan-core:jar:2.0.0-M5:compile" ; 
+[INFO] 	"org.thingsboard.common:data:jar:3.6.2-SNAPSHOT" -> "org.projectlombok:lombok:jar:1.18.18:provided" ; 
+[INFO] 	"org.owasp.antisamy:antisamy:jar:1.7.2:compile" -> "net.sourceforge.htmlunit:neko-htmlunit:jar:2.66.0:compile" ; 
+[INFO] 	"org.owasp.antisamy:antisamy:jar:1.7.2:compile" -> "org.apache.httpcomponents.client5:httpclient5:jar:5.2:compile" ; 
+[INFO] 	"org.owasp.antisamy:antisamy:jar:1.7.2:compile" -> "org.apache.httpcomponents.core5:httpcore5:jar:5.2:compile" ; 
+[INFO] 	"org.owasp.antisamy:antisamy:jar:1.7.2:compile" -> "org.apache.xmlgraphics:batik-css:jar:1.16:compile" ; 
+[INFO] 	"org.owasp.antisamy:antisamy:jar:1.7.2:compile" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"org.owasp.antisamy:antisamy:jar:1.7.2:compile" -> "xerces:xercesImpl:jar:2.12.2:compile" ; 
+[INFO] 	"org.owasp.antisamy:antisamy:jar:1.7.2:compile" -> "xml-apis:xml-apis:jar:1.4.01:compile" ; 
+[INFO] 	"org.owasp.antisamy:antisamy:jar:1.7.2:compile" -> "xml-apis:xml-apis-ext:jar:1.3.04:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2:compile" -> "org.apache.httpcomponents.core5:httpcore5-h2:jar:5.2:compile" ; 
+[INFO] 	"org.apache.xmlgraphics:batik-css:jar:1.16:compile" -> "org.apache.xmlgraphics:batik-shared-resources:jar:1.16:compile" ; 
+[INFO] 	"org.apache.xmlgraphics:batik-css:jar:1.16:compile" -> "org.apache.xmlgraphics:batik-util:jar:1.16:compile" ; 
+[INFO] 	"org.apache.xmlgraphics:batik-css:jar:1.16:compile" -> "org.apache.xmlgraphics:xmlgraphics-commons:jar:2.7:compile" ; 
+[INFO] 	"org.apache.xmlgraphics:batik-util:jar:1.16:compile" -> "org.apache.xmlgraphics:batik-constants:jar:1.16:compile" ; 
+[INFO] 	"org.apache.xmlgraphics:batik-util:jar:1.16:compile" -> "org.apache.xmlgraphics:batik-i18n:jar:1.16:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-commons:jar:2.7.10:compile" -> "org.springframework:spring-core:jar:5.3.26:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-commons:jar:2.7.10:compile" -> "org.springframework:spring-beans:jar:5.3.26:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.26:compile" -> "org.springframework:spring-jcl:jar:5.3.26:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.10:test" -> "org.springframework.boot:spring-boot-starter:jar:2.7.10:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.10:test" -> "org.springframework.boot:spring-boot-test:jar:2.7.10:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.10:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.7.10:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.10:test" -> "com.jayway.jsonpath:json-path:jar:2.6.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.10:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.10:test" -> "org.assertj:assertj-core:jar:3.23.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.10:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.10:test" -> "org.junit.jupiter:junit-jupiter:jar:5.8.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.10:test" -> "org.mockito:mockito-core:jar:4.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.10:test" -> "org.mockito:mockito-junit-jupiter:jar:4.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.10:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.10:test" -> "org.springframework:spring-test:jar:5.3.26:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.10:test" -> "org.xmlunit:xmlunit-core:jar:2.9.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.10:test" -> "org.springframework.boot:spring-boot:jar:2.7.10:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.10:test" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.7.10:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.10:test" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.7.10:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.10:test" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.10:test" -> "org.yaml:snakeyaml:jar:2.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.7.10:test" -> "org.springframework:spring-context:jar:5.3.26:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.26:test" -> "org.springframework:spring-aop:jar:5.3.26:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.26:test" -> "org.springframework:spring-expression:jar:5.3.26:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.10:test" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.10:test" -> "org.slf4j:jul-to-slf4j:jar:1.7.32:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.1:test" -> "org.apache.logging.log4j:log4j-api:jar:2.17.1:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.6.0:test" -> "net.minidev:json-smart:jar:2.4.7:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.7:test" -> "net.minidev:accessors-smart:jar:2.4.7:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.2:test" -> "jakarta.activation:jakarta.activation-api:jar:1.2.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.23.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.10:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.9:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.8.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.8.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.8.2:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.8.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.8.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.8.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.8.2:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.15.0:test" -> "com.datastax.oss:native-protocol:jar:1.5.1:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.15.0:test" -> "io.netty:netty-handler:jar:4.1.91.Final:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.15.0:test" -> "com.datastax.oss:java-driver-shaded-guava:jar:25.1-jre-graal-sub-1:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.15.0:test" -> "com.typesafe:config:jar:1.4.1:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.15.0:test" -> "com.github.jnr:jnr-posix:jar:3.1.15:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.15.0:test" -> "io.dropwizard.metrics:metrics-core:jar:4.1.18:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.15.0:test" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.15.0:test" -> "org.reactivestreams:reactive-streams:jar:1.0.3:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.15.0:test" -> "com.github.stephenc.jcip:jcip-annotations:jar:1.0-1:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.15.0:test" -> "com.github.spotbugs:spotbugs-annotations:jar:3.1.12:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.91.Final:test" -> "io.netty:netty-common:jar:4.1.91.Final:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.91.Final:test" -> "io.netty:netty-resolver:jar:4.1.91.Final:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.91.Final:test" -> "io.netty:netty-buffer:jar:4.1.91.Final:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.91.Final:test" -> "io.netty:netty-transport:jar:4.1.91.Final:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.91.Final:test" -> "io.netty:netty-transport-native-unix-common:jar:4.1.91.Final:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.91.Final:test" -> "io.netty:netty-codec:jar:4.1.91.Final:test" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:test" -> "com.github.jnr:jnr-ffi:jar:2.2.11:test" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:test" -> "com.github.jnr:jnr-constants:jar:0.10.3:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "com.github.jnr:jffi:jar:1.3.9:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "com.github.jnr:jffi:jar:native:1.3.9:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "org.ow2.asm:asm:jar:9.2:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "org.ow2.asm:asm-commons:jar:9.2:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "org.ow2.asm:asm-analysis:jar:9.2:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "org.ow2.asm:asm-tree:jar:9.2:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "org.ow2.asm:asm-util:jar:9.2:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "com.github.jnr:jnr-a64asm:jar:1.0.0:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "com.github.jnr:jnr-x86asm:jar:1.0.2:test" ; 
+[INFO] 	"com.squareup.wire:wire-schema:jar:3.4.0:compile" -> "com.google.guava:guava:jar:31.1-jre:compile" ; 
+[INFO] 	"com.squareup.wire:wire-schema:jar:3.4.0:compile" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.4.10:compile" ; 
+[INFO] 	"com.squareup.wire:wire-schema:jar:3.4.0:compile" -> "com.squareup.wire:wire-runtime:jar:3.4.0:compile" ; 
+[INFO] 	"com.squareup.wire:wire-schema:jar:3.4.0:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.4.10:compile" ; 
+[INFO] 	"com.squareup.wire:wire-schema:jar:3.4.0:compile" -> "com.squareup.okio:okio:jar:2.8.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.12.0:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.4.10:compile" -> "org.jetbrains:annotations:jar:13.0:compile" ; 
+[INFO] 	"com.squareup.wire:wire-runtime:jar:3.4.0:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.4.10:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.4.10:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.4.10:compile" ; 
+[INFO] 	"org.thingsboard:protobuf-dynamic:jar:1.0.4TB:compile" -> "com.google.protobuf:protobuf-java:jar:3.21.9:compile" ; 
+[INFO] 	"de.ruedigermoeller:fst:jar:2.57:compile" -> "org.javassist:javassist:jar:3.21.0-GA:compile" ; 
+[INFO] 	"de.ruedigermoeller:fst:jar:2.57:compile" -> "org.objenesis:objenesis:jar:2.5.1:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.21.9:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.5.1:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.21.9:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.21.9:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.21.9:compile" -> "com.google.code.gson:gson:jar:2.9.0:compile" ; 
+[INFO] 	"org.eclipse.leshan:leshan-core:jar:2.0.0-M5:compile" -> "com.eclipsesource.minimal-json:minimal-json:jar:0.9.5:compile" ; 
+[INFO] 	"org.eclipse.leshan:leshan-core:jar:2.0.0-M5:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:jar:2.13.4:compile" ; 
+[INFO] 	"org.eclipse.leshan:leshan-core:jar:2.0.0-M5:compile" -> "com.upokecenter:cbor:jar:4.4.4:compile" ; 
+[INFO] 	"com.upokecenter:cbor:jar:4.4.4:compile" -> "com.github.peteroupc:numbers:jar:1.8.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< org.thingsboard.common:util >---------------------
+[INFO] Building Thingsboard Server Common Utils 3.6.2-SNAPSHOT           [4/55]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from sonatype: https://oss.sonatype.org/content/groups/public/org/thingsboard/common/data/3.6.2-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from spring-snapshots: https://repo.spring.io/snapshot/org/thingsboard/common/data/3.6.2-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from typesafe: https://repo.typesafe.com/typesafe/releases/org/thingsboard/common/data/3.6.2-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from central: https://repo1.maven.org/maven2/org/thingsboard/common/data/3.6.2-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from central: https://repo1.maven.org/maven2/org/thingsboard/common/data/3.6.2-SNAPSHOT/data-3.6.2-SNAPSHOT.jar
+[INFO] Downloading from spring-snapshots: https://repo.spring.io/snapshot/org/thingsboard/common/data/3.6.2-SNAPSHOT/data-3.6.2-SNAPSHOT.jar
+[INFO] Downloading from typesafe: https://repo.typesafe.com/typesafe/releases/org/thingsboard/common/data/3.6.2-SNAPSHOT/data-3.6.2-SNAPSHOT.jar
+[INFO] Downloading from sonatype: https://oss.sonatype.org/content/groups/public/org/thingsboard/common/data/3.6.2-SNAPSHOT/data-3.6.2-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Thingsboard 3.6.2-SNAPSHOT:
+[INFO] 
+[INFO] Thingsboard ........................................ SUCCESS [  1.284 s]
+[INFO] Thingsboard Server Commons ......................... SUCCESS [  0.019 s]
+[INFO] Thingsboard Server Common Data ..................... SUCCESS [  0.761 s]
+[INFO] Thingsboard Server Common Utils .................... FAILURE [  2.694 s]
+[INFO] Netty MQTT Client .................................. SKIPPED
+[INFO] Thingsboard Server Common Messages ................. SKIPPED
+[INFO] Thingsboard Actor system ........................... SKIPPED
+[INFO] Thingsboard Server Stats ........................... SKIPPED
+[INFO] Thingsboard Server Common Protobuf and gRPC structures SKIPPED
+[INFO] Thingsboard Server Common Cluster API .............. SKIPPED
+[INFO] Thingsboard Server Queue components ................ SKIPPED
+[INFO] Thingsboard Server Common Cache .................... SKIPPED
+[INFO] Thingsboard Server Commons ......................... SKIPPED
+[INFO] Thingsboard Server Common Transport components ..... SKIPPED
+[INFO] Thingsboard MQTT Transport Common .................. SKIPPED
+[INFO] Thingsboard HTTP Transport Common .................. SKIPPED
+[INFO] Thingsboard CoAP server ............................ SKIPPED
+[INFO] Thingsboard CoAP Transport Common .................. SKIPPED
+[INFO] Thingsboard LwM2M Transport Common ................. SKIPPED
+[INFO] Thingsboard SNMP Transport Common .................. SKIPPED
+[INFO] Thingsboard Server Common DAO API .................. SKIPPED
+[INFO] Thingsboard Server Remote Edge wrapper ............. SKIPPED
+[INFO] Thingsboard Server Version Control API ............. SKIPPED
+[INFO] Thingsboard Script Invoke Commons .................. SKIPPED
+[INFO] Thingsboard Server Script invoke API ............... SKIPPED
+[INFO] Thingsboard Extensions ............................. SKIPPED
+[INFO] Thingsboard Rule Engine API ........................ SKIPPED
+[INFO] Thingsboard Server JS Client for remote JS execution SKIPPED
+[INFO] Thingsboard Server DAO Layer ....................... SKIPPED
+[INFO] Thingsboard Rule Engine Components ................. SKIPPED
+[INFO] Thingsboard Server Transport Modules ............... SKIPPED
+[INFO] Thingsboard HTTP Transport Service ................. SKIPPED
+[INFO] Thingsboard MQTT Transport Service ................. SKIPPED
+[INFO] Thingsboard CoAP Transport Service ................. SKIPPED
+[INFO] Thingsboard LwM2m Transport Service ................ SKIPPED
+[INFO] Thingsboard SNMP Transport Service ................. SKIPPED
+[INFO] ThingsBoard Server UI .............................. SKIPPED
+[INFO] Thingsboard Server Tools ........................... SKIPPED
+[INFO] Thingsboard Rest Client ............................ SKIPPED
+[INFO] ThingsBoard Server Application ..................... SKIPPED
+[INFO] ThingsBoard Microservices .......................... SKIPPED
+[INFO] ThingsBoard Docker Images .......................... SKIPPED
+[INFO] ThingsBoard Web UI Microservice .................... SKIPPED
+[INFO] ThingsBoard Version Control Executor ............... SKIPPED
+[INFO] ThingsBoard Version Control Executor Microservice .. SKIPPED
+[INFO] ThingsBoard Node Microservice ...................... SKIPPED
+[INFO] ThingsBoard Transport Microservices ................ SKIPPED
+[INFO] ThingsBoard MQTT Transport Microservice ............ SKIPPED
+[INFO] ThingsBoard HTTP Transport Microservice ............ SKIPPED
+[INFO] ThingsBoard COAP Transport Microservice ............ SKIPPED
+[INFO] ThingsBoard LWM2M Transport Microservice ........... SKIPPED
+[INFO] ThingsBoard SNMP Transport Microservice ............ SKIPPED
+[INFO] ThingsBoard JavaScript Executor Microservice ....... SKIPPED
+[INFO] ThingsBoard Monitoring Service ..................... SKIPPED
+[INFO] ThingsBoard Monitoring Microservice ................ SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.281 s
+[INFO] Finished at: 2023-12-28T09:03:30+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project util: Could not resolve dependencies for project org.thingsboard.common:util:jar:3.6.2-SNAPSHOT: Could not find artifact org.thingsboard.common:data:jar:3.6.2-SNAPSHOT in central (https://repo1.maven.org/maven2/) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :util

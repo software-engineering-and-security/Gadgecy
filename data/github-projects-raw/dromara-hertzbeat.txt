@@ -1,0 +1,239 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] hertzbeat                                                          [pom]
+[INFO] hertzbeat-common                                                   [jar]
+[INFO] hertzbeat-warehouse                                                [jar]
+[INFO] hertzbeat-alerter                                                  [jar]
+[INFO] hertzbeat-remoting                                                 [jar]
+[INFO] hertzbeat-collector                                                [jar]
+[INFO] hertzbeat-push                                                     [jar]
+[INFO] hertzbeat-manager                                                  [jar]
+[INFO] 
+[INFO] ------------------< org.dromara.hertzbeat:hertzbeat >-------------------
+[INFO] Building hertzbeat 1.0                                             [1/8]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ hertzbeat ---
+[INFO] digraph "org.dromara.hertzbeat:hertzbeat:pom:1.0" { 
+[INFO] 	"org.dromara.hertzbeat:hertzbeat:pom:1.0" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.dromara.hertzbeat:hertzbeat:pom:1.0" -> "org.projectlombok:lombok:jar:1.18.20:provided" ; 
+[INFO] 	"org.dromara.hertzbeat:hertzbeat:pom:1.0" -> "org.springframework.boot:spring-boot-starter-test:jar:2.7.4:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.4:test" -> "org.springframework.boot:spring-boot-starter:jar:2.7.4:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.4:test" -> "org.springframework.boot:spring-boot-test:jar:2.7.4:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.4:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.7.4:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.4:test" -> "com.jayway.jsonpath:json-path:jar:2.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.4:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.4:test" -> "org.assertj:assertj-core:jar:3.22.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.4:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.4:test" -> "org.junit.jupiter:junit-jupiter:jar:5.8.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.4:test" -> "org.mockito:mockito-core:jar:4.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.4:test" -> "org.mockito:mockito-junit-jupiter:jar:4.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.4:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.4:test" -> "org.springframework:spring-core:jar:5.3.23:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.4:test" -> "org.springframework:spring-test:jar:5.3.23:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.4:test" -> "org.xmlunit:xmlunit-core:jar:2.9.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.4:test" -> "org.springframework.boot:spring-boot:jar:2.7.4:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.4:test" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.7.4:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.4:test" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.7.4:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.4:test" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.4:test" -> "org.yaml:snakeyaml:jar:1.33:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.7.4:test" -> "org.springframework:spring-context:jar:5.3.23:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.23:test" -> "org.springframework:spring-aop:jar:5.3.23:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.23:test" -> "org.springframework:spring-beans:jar:5.3.23:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.23:test" -> "org.springframework:spring-expression:jar:5.3.23:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.4:test" -> "ch.qos.logback:logback-classic:jar:1.2.11:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.4:test" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.4:test" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.11:test" -> "ch.qos.logback:logback-core:jar:1.2.11:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:test" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.7.0:test" -> "net.minidev:json-smart:jar:2.4.8:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.8:test" -> "net.minidev:accessors-smart:jar:2.4.8:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.8:test" -> "org.ow2.asm:asm:jar:9.1:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.8.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.17:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.17:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.23:test" -> "org.springframework:spring-jcl:jar:5.3.23:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.dromara.hertzbeat:hertzbeat-common >---------------
+[INFO] Building hertzbeat-common 1.0                                      [2/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ hertzbeat-common ---
+[INFO] digraph "org.dromara.hertzbeat:hertzbeat-common:jar:1.0" { 
+[INFO] 	"org.dromara.hertzbeat:hertzbeat-common:jar:1.0" -> "org.springframework.boot:spring-boot-starter-web:jar:2.7.4:provided" ; 
+[INFO] 	"org.dromara.hertzbeat:hertzbeat-common:jar:1.0" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.7.4:compile" ; 
+[INFO] 	"org.dromara.hertzbeat:hertzbeat-common:jar:1.0" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.7.4:compile" ; 
+[INFO] 	"org.dromara.hertzbeat:hertzbeat-common:jar:1.0" -> "org.springframework.boot:spring-boot-starter-data-jpa:jar:2.7.4:provided" ; 
+[INFO] 	"org.dromara.hertzbeat:hertzbeat-common:jar:1.0" -> "org.springframework.boot:spring-boot-starter-validation:jar:2.7.4:provided" ; 
+[INFO] 	"org.dromara.hertzbeat:hertzbeat-common:jar:1.0" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:provided" ; 
+[INFO] 	"org.dromara.hertzbeat:hertzbeat-common:jar:1.0" -> "org.springdoc:springdoc-openapi-ui:jar:1.6.11:provided" ; 
+[INFO] 	"org.dromara.hertzbeat:hertzbeat-common:jar:1.0" -> "com.googlecode.aviator:aviator:jar:5.2.7:compile" ; 
+[INFO] 	"org.dromara.hertzbeat:hertzbeat-common:jar:1.0" -> "com.google.guava:guava:jar:32.0.0-jre:compile" ; 
+[INFO] 	"org.dromara.hertzbeat:hertzbeat-common:jar:1.0" -> "com.google.code.gson:gson:jar:2.8.9:compile" ; 
+[INFO] 	"org.dromara.hertzbeat:hertzbeat-common:jar:1.0" -> "com.google.protobuf:protobuf-java-util:jar:3.19.4:compile" ; 
+[INFO] 	"org.dromara.hertzbeat:hertzbeat-common:jar:1.0" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"org.dromara.hertzbeat:hertzbeat-common:jar:1.0" -> "com.tencentcloudapi:tencentcloud-sdk-java-sms:jar:3.1.648:compile" ; 
+[INFO] 	"org.dromara.hertzbeat:hertzbeat-common:jar:1.0" -> "com.github.ben-manes.caffeine:caffeine:jar:2.9.3:compile" ; 
+[INFO] 	"org.dromara.hertzbeat:hertzbeat-common:jar:1.0" -> "org.apache.kafka:kafka-clients:jar:3.4.0:compile" ; 
+[INFO] 	"org.dromara.hertzbeat:hertzbeat-common:jar:1.0" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"org.dromara.hertzbeat:hertzbeat-common:jar:1.0" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.dromara.hertzbeat:hertzbeat-common:jar:1.0" -> "org.projectlombok:lombok:jar:1.18.20:provided" ; 
+[INFO] 	"org.dromara.hertzbeat:hertzbeat-common:jar:1.0" -> "org.springframework.boot:spring-boot-starter-test:jar:2.7.4:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.4:provided" -> "org.springframework.boot:spring-boot-starter:jar:2.7.4:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.4:provided" -> "org.springframework.boot:spring-boot-starter-json:jar:2.7.4:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.4:provided" -> "org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.4:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.4:provided" -> "org.springframework:spring-web:jar:5.3.23:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.7.4:provided" -> "org.springframework:spring-webmvc:jar:5.3.23:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.4:provided" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.7.4:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.4:provided" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.4:provided" -> "org.yaml:snakeyaml:jar:1.33:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.4:provided" -> "ch.qos.logback:logback-classic:jar:1.2.11:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.4:provided" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.4:provided" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.11:provided" -> "ch.qos.logback:logback-core:jar:1.2.11:provided" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:provided" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.4:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.4:provided" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.13.4:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.4:provided" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.4:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.7.4:provided" -> "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.13.4:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.4:provided" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.65:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.4:provided" -> "org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.65:provided" ; 
+[INFO] 	"org.springframework:spring-web:jar:5.3.23:provided" -> "org.springframework:spring-beans:jar:5.3.23:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.23:provided" -> "org.springframework:spring-aop:jar:5.3.23:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.23:provided" -> "org.springframework:spring-context:jar:5.3.23:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.23:provided" -> "org.springframework:spring-expression:jar:5.3.23:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-autoconfigure:jar:2.7.4:compile" -> "org.springframework.boot:spring-boot:jar:2.7.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.7.4:provided" -> "org.springframework.boot:spring-boot-starter-aop:jar:2.7.4:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.7.4:provided" -> "org.springframework.boot:spring-boot-starter-jdbc:jar:2.7.4:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.7.4:provided" -> "jakarta.transaction:jakarta.transaction-api:jar:1.3.3:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.7.4:provided" -> "jakarta.persistence:jakarta.persistence-api:jar:2.2.3:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.7.4:provided" -> "org.hibernate:hibernate-core:jar:5.6.11.Final:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.7.4:provided" -> "org.springframework.data:spring-data-jpa:jar:2.7.3:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.7.4:provided" -> "org.springframework:spring-aspects:jar:5.3.23:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.7.4:provided" -> "org.aspectj:aspectjweaver:jar:1.9.7:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:2.7.4:provided" -> "com.zaxxer:HikariCP:jar:4.0.3:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:2.7.4:provided" -> "org.springframework:spring-jdbc:jar:5.3.23:provided" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.6.11.Final:provided" -> "org.jboss.logging:jboss-logging:jar:3.4.3.Final:provided" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.6.11.Final:provided" -> "net.bytebuddy:byte-buddy:jar:1.12.17:provided" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.6.11.Final:provided" -> "antlr:antlr:jar:2.7.7:provided" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.6.11.Final:provided" -> "org.jboss:jandex:jar:2.4.2.Final:provided" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.6.11.Final:provided" -> "com.fasterxml:classmate:jar:1.5.1:provided" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.6.11.Final:provided" -> "org.hibernate.common:hibernate-commons-annotations:jar:5.1.2.Final:provided" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.6.11.Final:provided" -> "org.glassfish.jaxb:jaxb-runtime:jar:2.3.6:provided" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.6:provided" -> "org.glassfish.jaxb:txw2:jar:2.3.6:provided" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.6:provided" -> "com.sun.istack:istack-commons-runtime:jar:3.0.12:provided" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.6:provided" -> "com.sun.activation:jakarta.activation:jar:1.2.2:provided" ; 
+[INFO] 	"org.springframework.data:spring-data-jpa:jar:2.7.3:provided" -> "org.springframework.data:spring-data-commons:jar:2.7.3:provided" ; 
+[INFO] 	"org.springframework.data:spring-data-jpa:jar:2.7.3:provided" -> "org.springframework:spring-orm:jar:5.3.23:provided" ; 
+[INFO] 	"org.springframework.data:spring-data-jpa:jar:2.7.3:provided" -> "org.springframework:spring-tx:jar:5.3.23:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-validation:jar:2.7.4:provided" -> "org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.65:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-validation:jar:2.7.4:provided" -> "org.hibernate.validator:hibernate-validator:jar:6.2.5.Final:provided" ; 
+[INFO] 	"org.hibernate.validator:hibernate-validator:jar:6.2.5.Final:provided" -> "jakarta.validation:jakarta.validation-api:jar:2.0.2:provided" ; 
+[INFO] 	"org.springdoc:springdoc-openapi-ui:jar:1.6.11:provided" -> "org.springdoc:springdoc-openapi-webmvc-core:jar:1.6.11:provided" ; 
+[INFO] 	"org.springdoc:springdoc-openapi-ui:jar:1.6.11:provided" -> "org.webjars:swagger-ui:jar:4.14.0:provided" ; 
+[INFO] 	"org.springdoc:springdoc-openapi-ui:jar:1.6.11:provided" -> "org.webjars:webjars-locator-core:jar:0.50:provided" ; 
+[INFO] 	"org.springdoc:springdoc-openapi-ui:jar:1.6.11:provided" -> "io.github.classgraph:classgraph:jar:4.8.149:provided" ; 
+[INFO] 	"org.springdoc:springdoc-openapi-webmvc-core:jar:1.6.11:provided" -> "org.springdoc:springdoc-openapi-common:jar:1.6.11:provided" ; 
+[INFO] 	"org.springdoc:springdoc-openapi-common:jar:1.6.11:provided" -> "io.swagger.core.v3:swagger-core:jar:2.2.2:provided" ; 
+[INFO] 	"io.swagger.core.v3:swagger-core:jar:2.2.2:provided" -> "org.apache.commons:commons-lang3:jar:3.12.0:provided" ; 
+[INFO] 	"io.swagger.core.v3:swagger-core:jar:2.2.2:provided" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.13.4:provided" ; 
+[INFO] 	"io.swagger.core.v3:swagger-core:jar:2.2.2:provided" -> "io.swagger.core.v3:swagger-annotations:jar:2.2.2:provided" ; 
+[INFO] 	"io.swagger.core.v3:swagger-core:jar:2.2.2:provided" -> "io.swagger.core.v3:swagger-models:jar:2.2.2:provided" ; 
+[INFO] 	"org.webjars:webjars-locator-core:jar:0.50:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.0-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.0-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.0-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.0-jre:compile" -> "org.checkerframework:checker-qual:jar:3.19.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.0-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.14.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.0-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.19.4:compile" -> "com.google.protobuf:protobuf-java:jar:3.19.4:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.15:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"com.tencentcloudapi:tencentcloud-sdk-java-sms:jar:3.1.648:compile" -> "com.tencentcloudapi:tencentcloud-sdk-java-common:jar:3.1.648:compile" ; 
+[INFO] 	"com.tencentcloudapi:tencentcloud-sdk-java-common:jar:3.1.648:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"com.tencentcloudapi:tencentcloud-sdk-java-common:jar:3.1.648:compile" -> "com.squareup.okio:okio:jar:2.8.0:compile" ; 
+[INFO] 	"com.tencentcloudapi:tencentcloud-sdk-java-common:jar:3.1.648:compile" -> "com.squareup.okhttp:okhttp:jar:2.7.5:compile" ; 
+[INFO] 	"com.tencentcloudapi:tencentcloud-sdk-java-common:jar:3.1.648:compile" -> "javax.xml.bind:jaxb-api:jar:2.3.0:compile" ; 
+[INFO] 	"com.tencentcloudapi:tencentcloud-sdk-java-common:jar:3.1.648:compile" -> "com.squareup.okhttp:logging-interceptor:jar:2.7.5:compile" ; 
+[INFO] 	"com.tencentcloudapi:tencentcloud-sdk-java-common:jar:3.1.648:compile" -> "org.ini4j:ini4j:jar:0.5.4:compile" ; 
+[INFO] 	"com.squareup.okio:okio:jar:2.8.0:compile" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.6.21:compile" ; 
+[INFO] 	"com.squareup.okio:okio:jar:2.8.0:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.6.21:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.6.21:compile" -> "org.jetbrains:annotations:jar:13.0:compile" ; 
+[INFO] 	"org.apache.kafka:kafka-clients:jar:3.4.0:compile" -> "com.github.luben:zstd-jni:jar:1.5.2-1:runtime" ; 
+[INFO] 	"org.apache.kafka:kafka-clients:jar:3.4.0:compile" -> "org.lz4:lz4-java:jar:1.8.0:runtime" ; 
+[INFO] 	"org.apache.kafka:kafka-clients:jar:3.4.0:compile" -> "org.xerial.snappy:snappy-java:jar:1.1.8.4:runtime" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.4:test" -> "org.springframework.boot:spring-boot-test:jar:2.7.4:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.4:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.7.4:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.4:test" -> "com.jayway.jsonpath:json-path:jar:2.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.4:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.4:test" -> "org.assertj:assertj-core:jar:3.22.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.4:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.4:test" -> "org.junit.jupiter:junit-jupiter:jar:5.8.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.4:test" -> "org.mockito:mockito-core:jar:4.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.4:test" -> "org.mockito:mockito-junit-jupiter:jar:4.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.4:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.4:test" -> "org.springframework:spring-core:jar:5.3.23:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.4:test" -> "org.springframework:spring-test:jar:5.3.23:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.4:test" -> "org.xmlunit:xmlunit-core:jar:2.9.0:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.7.0:test" -> "net.minidev:json-smart:jar:2.4.8:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.8:test" -> "net.minidev:accessors-smart:jar:2.4.8:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.8:test" -> "org.ow2.asm:asm:jar:9.1:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:provided" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:provided" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.8.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.17:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.23:compile" -> "org.springframework:spring-jcl:jar:5.3.23:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< org.dromara.hertzbeat:hertzbeat-warehouse >--------------
+[INFO] Building hertzbeat-warehouse 1.0                                   [3/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from jitpack.io: https://jitpack.io/io/grpc/grpc-core/maven-metadata.xml
+[INFO] Downloading from jitpack.io: https://jitpack.io/io/grpc/grpc-api/maven-metadata.xml
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/dromara/hertzbeat/hertzbeat-common/1.0/hertzbeat-common-1.0.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for hertzbeat 1.0:
+[INFO] 
+[INFO] hertzbeat .......................................... SUCCESS [  3.589 s]
+[INFO] hertzbeat-common ................................... SUCCESS [  1.039 s]
+[INFO] hertzbeat-warehouse ................................ FAILURE [  4.173 s]
+[INFO] hertzbeat-alerter .................................. SKIPPED
+[INFO] hertzbeat-remoting ................................. SKIPPED
+[INFO] hertzbeat-collector ................................ SKIPPED
+[INFO] hertzbeat-push ..................................... SKIPPED
+[INFO] hertzbeat-manager .................................. SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.589 s
+[INFO] Finished at: 2023-12-28T09:02:43+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project hertzbeat-warehouse: Could not resolve dependencies for project org.dromara.hertzbeat:hertzbeat-warehouse:jar:1.0: Could not find artifact org.dromara.hertzbeat:hertzbeat-common:jar:1.0 in central (https://repo.maven.apache.org/maven2) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :hertzbeat-warehouse

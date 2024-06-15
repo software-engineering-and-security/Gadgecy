@@ -1,0 +1,1163 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] sa-token-dependencies                                              [pom]
+[INFO] sa-token-bom                                                       [pom]
+[INFO] sa-token                                                           [pom]
+[INFO] sa-token-core                                                      [jar]
+[INFO] sa-token-starter                                                   [pom]
+[INFO] sa-token-servlet                                                   [jar]
+[INFO] sa-token-jakarta-servlet                                           [jar]
+[INFO] sa-token-plugin                                                    [pom]
+[INFO] sa-token-oauth2                                                    [jar]
+[INFO] sa-token-sso                                                       [jar]
+[INFO] sa-token-spring-boot-autoconfig                                    [jar]
+[INFO] sa-token-spring-boot-starter                                       [jar]
+[INFO] sa-token-spring-boot3-starter                                      [jar]
+[INFO] sa-token-reactor-spring-boot-starter                               [jar]
+[INFO] sa-token-reactor-spring-boot3-starter                              [jar]
+[INFO] sa-token-solon-plugin                                              [jar]
+[INFO] sa-token-jboot-plugin                                              [jar]
+[INFO] sa-token-jfinal-plugin                                             [jar]
+[INFO] sa-token-redis                                                     [jar]
+[INFO] sa-token-redis-jackson                                             [jar]
+[INFO] sa-token-redis-fastjson                                            [jar]
+[INFO] sa-token-redis-fastjson2                                           [jar]
+[INFO] sa-token-redisson-jackson                                          [jar]
+[INFO] sa-token-redisson-jackson2                                         [jar]
+[INFO] sa-token-redisx                                                    [jar]
+[INFO] sa-token-alone-redis                                               [jar]
+[INFO] sa-token-dialect-thymeleaf                                         [jar]
+[INFO] sa-token-quick-login                                               [jar]
+[INFO] sa-token-spring-aop                                                [jar]
+[INFO] sa-token-temp-jwt                                                  [jar]
+[INFO] sa-token-jwt                                                       [jar]
+[INFO] sa-token-dubbo                                                     [jar]
+[INFO] sa-token-dubbo3                                                    [jar]
+[INFO] sa-token-grpc                                                      [jar]
+[INFO] 
+[INFO] -------------------< cn.dev33:sa-token-dependencies >-------------------
+[INFO] Building sa-token-dependencies 1.37.0                             [1/34]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-dependencies ---
+[INFO] digraph "cn.dev33:sa-token-dependencies:pom:1.37.0" { 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------------< cn.dev33:sa-token-bom >------------------------
+[INFO] Building sa-token-bom 1.37.0                                      [2/34]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-bom ---
+[INFO] digraph "cn.dev33:sa-token-bom:pom:1.37.0" { 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< cn.dev33:sa-token-parent >----------------------
+[INFO] Building sa-token 1.37.0                                          [3/34]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-parent ---
+[INFO] digraph "cn.dev33:sa-token-parent:pom:1.37.0" { 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------------< cn.dev33:sa-token-core >-----------------------
+[INFO] Building sa-token-core 1.37.0                                     [4/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-core ---
+[INFO] digraph "cn.dev33:sa-token-core:jar:1.37.0" { 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< cn.dev33:sa-token-starter >----------------------
+[INFO] Building sa-token-starter 1.37.0                                  [5/34]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-starter ---
+[INFO] digraph "cn.dev33:sa-token-starter:pom:1.37.0" { 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< cn.dev33:sa-token-servlet >----------------------
+[INFO] Building sa-token-servlet 1.37.0                                  [6/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-servlet ---
+[INFO] digraph "cn.dev33:sa-token-servlet:jar:1.37.0" { 
+[INFO] 	"cn.dev33:sa-token-servlet:jar:1.37.0" -> "cn.dev33:sa-token-core:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-servlet:jar:1.37.0" -> "javax.servlet:javax.servlet-api:jar:3.1.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< cn.dev33:sa-token-jakarta-servlet >------------------
+[INFO] Building sa-token-jakarta-servlet 1.37.0                          [7/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-jakarta-servlet ---
+[INFO] digraph "cn.dev33:sa-token-jakarta-servlet:jar:1.37.0" { 
+[INFO] 	"cn.dev33:sa-token-jakarta-servlet:jar:1.37.0" -> "cn.dev33:sa-token-core:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-jakarta-servlet:jar:1.37.0" -> "jakarta.servlet:jakarta.servlet-api:jar:6.0.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< cn.dev33:sa-token-plugin >----------------------
+[INFO] Building sa-token-plugin 1.37.0                                   [8/34]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-plugin ---
+[INFO] digraph "cn.dev33:sa-token-plugin:pom:1.37.0" { 
+[INFO] 	"cn.dev33:sa-token-plugin:pom:1.37.0" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.5.15:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< cn.dev33:sa-token-oauth2 >----------------------
+[INFO] Building sa-token-oauth2 1.37.0                                   [9/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-oauth2 ---
+[INFO] digraph "cn.dev33:sa-token-oauth2:jar:1.37.0" { 
+[INFO] 	"cn.dev33:sa-token-oauth2:jar:1.37.0" -> "cn.dev33:sa-token-core:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-oauth2:jar:1.37.0" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.5.15:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------------< cn.dev33:sa-token-sso >------------------------
+[INFO] Building sa-token-sso 1.37.0                                     [10/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-sso ---
+[INFO] digraph "cn.dev33:sa-token-sso:jar:1.37.0" { 
+[INFO] 	"cn.dev33:sa-token-sso:jar:1.37.0" -> "cn.dev33:sa-token-core:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-sso:jar:1.37.0" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.5.15:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< cn.dev33:sa-token-spring-boot-autoconfig >--------------
+[INFO] Building sa-token-spring-boot-autoconfig 1.37.0                  [11/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-spring-boot-autoconfig ---
+[INFO] digraph "cn.dev33:sa-token-spring-boot-autoconfig:jar:1.37.0" { 
+[INFO] 	"cn.dev33:sa-token-spring-boot-autoconfig:jar:1.37.0" -> "org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" ; 
+[INFO] 	"cn.dev33:sa-token-spring-boot-autoconfig:jar:1.37.0" -> "org.springframework:spring-webmvc:jar:5.3.7:compile" ; 
+[INFO] 	"cn.dev33:sa-token-spring-boot-autoconfig:jar:1.37.0" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.1:compile" ; 
+[INFO] 	"cn.dev33:sa-token-spring-boot-autoconfig:jar:1.37.0" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.5.15:compile" ; 
+[INFO] 	"cn.dev33:sa-token-spring-boot-autoconfig:jar:1.37.0" -> "cn.dev33:sa-token-oauth2:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-spring-boot-autoconfig:jar:1.37.0" -> "cn.dev33:sa-token-sso:jar:1.37.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework:spring-core:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.yaml:snakeyaml:jar:1.28:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "ch.qos.logback:logback-classic:jar:1.2.12:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:compile" -> "ch.qos.logback:logback-core:jar:1.2.12:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:compile" -> "org.slf4j:slf4j-api:jar:1.7.32:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.27:compile" -> "org.springframework:spring-jcl:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.7:compile" -> "org.springframework:spring-aop:jar:5.3.7:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.7:compile" -> "org.springframework:spring-beans:jar:5.3.7:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.7:compile" -> "org.springframework:spring-context:jar:5.3.7:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.7:compile" -> "org.springframework:spring-expression:jar:5.3.7:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.7:compile" -> "org.springframework:spring-web:jar:5.3.7:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.1:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.1:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:compile" ; 
+[INFO] 	"cn.dev33:sa-token-oauth2:jar:1.37.0:compile" -> "cn.dev33:sa-token-core:jar:1.37.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< cn.dev33:sa-token-spring-boot-starter >----------------
+[INFO] Building sa-token-spring-boot-starter 1.37.0                     [12/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-spring-boot-starter ---
+[INFO] digraph "cn.dev33:sa-token-spring-boot-starter:jar:1.37.0" { 
+[INFO] 	"cn.dev33:sa-token-spring-boot-starter:jar:1.37.0" -> "org.springframework.boot:spring-boot-starter-web:jar:2.5.15:compile" ; 
+[INFO] 	"cn.dev33:sa-token-spring-boot-starter:jar:1.37.0" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.5.15:compile" ; 
+[INFO] 	"cn.dev33:sa-token-spring-boot-starter:jar:1.37.0" -> "cn.dev33:sa-token-servlet:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-spring-boot-starter:jar:1.37.0" -> "cn.dev33:sa-token-spring-boot-autoconfig:jar:1.37.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-starter-json:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-starter-tomcat:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.5.15:compile" -> "org.springframework:spring-web:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.5.15:compile" -> "org.springframework:spring-webmvc:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework:spring-core:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.yaml:snakeyaml:jar:1.28:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "ch.qos.logback:logback-classic:jar:1.2.12:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:compile" -> "ch.qos.logback:logback-core:jar:1.2.12:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:compile" -> "org.slf4j:slf4j-api:jar:1.7.32:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.27:compile" -> "org.springframework:spring-jcl:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.5.15:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.5.15:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.12.7:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.5.15:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.11.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.5.15:compile" -> "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.12.7:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.1:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.1:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.5.15:compile" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.75:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.5.15:compile" -> "org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.75:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.5.15:compile" -> "org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.75:compile" ; 
+[INFO] 	"org.springframework:spring-web:jar:5.3.27:compile" -> "org.springframework:spring-beans:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.27:compile" -> "org.springframework:spring-aop:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.27:compile" -> "org.springframework:spring-context:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.27:compile" -> "org.springframework:spring-expression:jar:5.3.27:compile" ; 
+[INFO] 	"cn.dev33:sa-token-servlet:jar:1.37.0:compile" -> "cn.dev33:sa-token-core:jar:1.37.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< cn.dev33:sa-token-spring-boot3-starter >---------------
+[INFO] Building sa-token-spring-boot3-starter 1.37.0                    [13/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-spring-boot3-starter ---
+[INFO] digraph "cn.dev33:sa-token-spring-boot3-starter:jar:1.37.0" { 
+[INFO] 	"cn.dev33:sa-token-spring-boot3-starter:jar:1.37.0" -> "org.springframework.boot:spring-boot-starter-web:jar:3.0.1:compile" ; 
+[INFO] 	"cn.dev33:sa-token-spring-boot3-starter:jar:1.37.0" -> "org.springframework.boot:spring-boot-configuration-processor:jar:3.0.1:compile" ; 
+[INFO] 	"cn.dev33:sa-token-spring-boot3-starter:jar:1.37.0" -> "cn.dev33:sa-token-jakarta-servlet:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-spring-boot3-starter:jar:1.37.0" -> "cn.dev33:sa-token-spring-boot-autoconfig:jar:1.37.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:3.0.1:compile" -> "org.springframework.boot:spring-boot-starter:jar:3.0.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:3.0.1:compile" -> "org.springframework.boot:spring-boot-starter-json:jar:3.0.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:3.0.1:compile" -> "org.springframework.boot:spring-boot-starter-tomcat:jar:3.0.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:3.0.1:compile" -> "org.springframework:spring-web:jar:6.0.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:3.0.1:compile" -> "org.springframework:spring-webmvc:jar:6.0.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.0.1:compile" -> "org.springframework.boot:spring-boot:jar:3.0.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.0.1:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:3.0.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.0.1:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:3.0.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.0.1:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.0.1:compile" -> "org.springframework:spring-core:jar:6.0.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.0.1:compile" -> "org.yaml:snakeyaml:jar:1.33:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.0.1:compile" -> "ch.qos.logback:logback-classic:jar:1.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.0.1:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.19.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.0.1:compile" -> "org.slf4j:jul-to-slf4j:jar:2.0.6:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.5:compile" -> "ch.qos.logback:logback-core:jar:1.4.5:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.5:compile" -> "org.slf4j:slf4j-api:jar:2.0.4:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.19.0:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.19.0:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.0.3:compile" -> "org.springframework:spring-jcl:jar:6.0.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:3.0.1:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:3.0.1:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.14.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:3.0.1:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.11.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:3.0.1:compile" -> "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.14.1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.1:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.1:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:3.0.1:compile" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:3.0.1:compile" -> "org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:3.0.1:compile" -> "org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.4:compile" ; 
+[INFO] 	"org.springframework:spring-web:jar:6.0.3:compile" -> "org.springframework:spring-beans:jar:6.0.3:compile" ; 
+[INFO] 	"org.springframework:spring-web:jar:6.0.3:compile" -> "io.micrometer:micrometer-observation:jar:1.10.2:compile" ; 
+[INFO] 	"io.micrometer:micrometer-observation:jar:1.10.2:compile" -> "io.micrometer:micrometer-commons:jar:1.10.2:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:6.0.3:compile" -> "org.springframework:spring-aop:jar:6.0.3:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:6.0.3:compile" -> "org.springframework:spring-context:jar:6.0.3:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:6.0.3:compile" -> "org.springframework:spring-expression:jar:6.0.3:compile" ; 
+[INFO] 	"cn.dev33:sa-token-jakarta-servlet:jar:1.37.0:compile" -> "cn.dev33:sa-token-core:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-jakarta-servlet:jar:1.37.0:compile" -> "jakarta.servlet:jakarta.servlet-api:jar:6.0.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------< cn.dev33:sa-token-reactor-spring-boot-starter >------------
+[INFO] Building sa-token-reactor-spring-boot-starter 1.37.0             [14/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-reactor-spring-boot-starter ---
+[INFO] digraph "cn.dev33:sa-token-reactor-spring-boot-starter:jar:1.37.0" { 
+[INFO] 	"cn.dev33:sa-token-reactor-spring-boot-starter:jar:1.37.0" -> "org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" ; 
+[INFO] 	"cn.dev33:sa-token-reactor-spring-boot-starter:jar:1.37.0" -> "org.springframework:spring-web:jar:5.3.7:compile" ; 
+[INFO] 	"cn.dev33:sa-token-reactor-spring-boot-starter:jar:1.37.0" -> "io.projectreactor:reactor-core:jar:3.1.4.RELEASE:compile" ; 
+[INFO] 	"cn.dev33:sa-token-reactor-spring-boot-starter:jar:1.37.0" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.1:compile" ; 
+[INFO] 	"cn.dev33:sa-token-reactor-spring-boot-starter:jar:1.37.0" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.5.15:compile" ; 
+[INFO] 	"cn.dev33:sa-token-reactor-spring-boot-starter:jar:1.37.0" -> "cn.dev33:sa-token-core:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-reactor-spring-boot-starter:jar:1.37.0" -> "cn.dev33:sa-token-spring-boot-autoconfig:jar:1.37.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework:spring-core:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.yaml:snakeyaml:jar:1.28:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.5.15:compile" -> "org.springframework:spring-context:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-aop:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-expression:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "ch.qos.logback:logback-classic:jar:1.2.12:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:compile" -> "ch.qos.logback:logback-core:jar:1.2.12:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:compile" -> "org.slf4j:slf4j-api:jar:1.7.32:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.27:compile" -> "org.springframework:spring-jcl:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-web:jar:5.3.7:compile" -> "org.springframework:spring-beans:jar:5.3.7:compile" ; 
+[INFO] 	"io.projectreactor:reactor-core:jar:3.1.4.RELEASE:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.1:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.1:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------< cn.dev33:sa-token-reactor-spring-boot3-starter >-----------
+[INFO] Building sa-token-reactor-spring-boot3-starter 1.37.0            [15/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-reactor-spring-boot3-starter ---
+[INFO] digraph "cn.dev33:sa-token-reactor-spring-boot3-starter:jar:1.37.0" { 
+[INFO] 	"cn.dev33:sa-token-reactor-spring-boot3-starter:jar:1.37.0" -> "org.springframework.boot:spring-boot-starter:jar:3.0.1:compile" ; 
+[INFO] 	"cn.dev33:sa-token-reactor-spring-boot3-starter:jar:1.37.0" -> "org.springframework:spring-web:jar:6.0.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-reactor-spring-boot3-starter:jar:1.37.0" -> "io.projectreactor:reactor-core:jar:3.5.1:compile" ; 
+[INFO] 	"cn.dev33:sa-token-reactor-spring-boot3-starter:jar:1.37.0" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.14.1:compile" ; 
+[INFO] 	"cn.dev33:sa-token-reactor-spring-boot3-starter:jar:1.37.0" -> "org.springframework.boot:spring-boot-configuration-processor:jar:3.0.1:compile" ; 
+[INFO] 	"cn.dev33:sa-token-reactor-spring-boot3-starter:jar:1.37.0" -> "cn.dev33:sa-token-core:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-reactor-spring-boot3-starter:jar:1.37.0" -> "cn.dev33:sa-token-spring-boot-autoconfig:jar:1.37.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.0.1:compile" -> "org.springframework.boot:spring-boot:jar:3.0.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.0.1:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:3.0.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.0.1:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:3.0.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.0.1:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.0.1:compile" -> "org.springframework:spring-core:jar:6.0.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.0.1:compile" -> "org.yaml:snakeyaml:jar:1.33:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:3.0.1:compile" -> "org.springframework:spring-context:jar:6.0.3:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.0.3:compile" -> "org.springframework:spring-aop:jar:6.0.3:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.0.3:compile" -> "org.springframework:spring-expression:jar:6.0.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.0.1:compile" -> "ch.qos.logback:logback-classic:jar:1.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.0.1:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.19.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.0.1:compile" -> "org.slf4j:jul-to-slf4j:jar:2.0.6:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.5:compile" -> "ch.qos.logback:logback-core:jar:1.4.5:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.5:compile" -> "org.slf4j:slf4j-api:jar:2.0.4:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.19.0:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.19.0:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.0.3:compile" -> "org.springframework:spring-jcl:jar:6.0.3:compile" ; 
+[INFO] 	"org.springframework:spring-web:jar:6.0.0:compile" -> "org.springframework:spring-beans:jar:6.0.0:compile" ; 
+[INFO] 	"org.springframework:spring-web:jar:6.0.0:compile" -> "io.micrometer:micrometer-observation:jar:1.10.0:compile" ; 
+[INFO] 	"io.micrometer:micrometer-observation:jar:1.10.0:compile" -> "io.micrometer:micrometer-commons:jar:1.10.0:compile" ; 
+[INFO] 	"io.projectreactor:reactor-core:jar:3.5.1:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.4:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.14.1:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.14.1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.14.1:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.14.1:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< cn.dev33:sa-token-solon-plugin >-------------------
+[INFO] Building sa-token-solon-plugin 1.37.0                            [16/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-solon-plugin ---
+[INFO] digraph "cn.dev33:sa-token-solon-plugin:jar:1.37.0" { 
+[INFO] 	"cn.dev33:sa-token-solon-plugin:jar:1.37.0" -> "org.noear:solon:jar:2.5.3:provided" ; 
+[INFO] 	"cn.dev33:sa-token-solon-plugin:jar:1.37.0" -> "cn.dev33:sa-token-core:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-solon-plugin:jar:1.37.0" -> "cn.dev33:sa-token-oauth2:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-solon-plugin:jar:1.37.0" -> "cn.dev33:sa-token-sso:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-solon-plugin:jar:1.37.0" -> "org.noear:redisx:jar:1.6.0:provided" ; 
+[INFO] 	"cn.dev33:sa-token-solon-plugin:jar:1.37.0" -> "org.noear:snack3:jar:3.2.80:provided" ; 
+[INFO] 	"cn.dev33:sa-token-solon-plugin:jar:1.37.0" -> "org.redisson:redisson:jar:3.19.0:provided" ; 
+[INFO] 	"cn.dev33:sa-token-solon-plugin:jar:1.37.0" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.1:provided" ; 
+[INFO] 	"cn.dev33:sa-token-solon-plugin:jar:1.37.0" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.11.2:provided" ; 
+[INFO] 	"org.noear:redisx:jar:1.6.0:provided" -> "redis.clients:jedis:jar:5.0.0:provided" ; 
+[INFO] 	"redis.clients:jedis:jar:5.0.0:provided" -> "org.apache.commons:commons-pool2:jar:2.5.0:provided" ; 
+[INFO] 	"redis.clients:jedis:jar:5.0.0:provided" -> "org.json:json:jar:20230618:provided" ; 
+[INFO] 	"redis.clients:jedis:jar:5.0.0:provided" -> "com.google.code.gson:gson:jar:2.10.1:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:provided" -> "io.netty:netty-common:jar:4.1.86.Final:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:provided" -> "io.netty:netty-codec:jar:4.1.86.Final:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:provided" -> "io.netty:netty-buffer:jar:4.1.86.Final:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:provided" -> "io.netty:netty-transport:jar:4.1.86.Final:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:provided" -> "io.netty:netty-resolver:jar:4.1.86.Final:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:provided" -> "io.netty:netty-resolver-dns:jar:4.1.86.Final:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:provided" -> "io.netty:netty-handler:jar:4.1.86.Final:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:provided" -> "javax.cache:cache-api:jar:1.1.1:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:provided" -> "io.projectreactor:reactor-core:jar:3.1.4.RELEASE:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:provided" -> "org.reactivestreams:reactive-streams:jar:1.0.4:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:provided" -> "io.reactivex.rxjava3:rxjava:jar:3.1.5:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:provided" -> "org.jboss.marshalling:jboss-marshalling:jar:2.0.11.Final:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:provided" -> "org.jboss.marshalling:jboss-marshalling-river:jar:2.0.11.Final:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:provided" -> "com.esotericsoftware:kryo:jar:5.3.0:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:provided" -> "org.slf4j:slf4j-api:jar:1.7.36:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.14.1:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:provided" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.14.1:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.14.1:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:provided" -> "net.bytebuddy:byte-buddy:jar:1.12.18:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:provided" -> "org.yaml:snakeyaml:jar:1.33:provided" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:provided" -> "org.jodd:jodd-bean:jar:5.1.6:provided" ; 
+[INFO] 	"io.netty:netty-resolver-dns:jar:4.1.86.Final:provided" -> "io.netty:netty-codec-dns:jar:4.1.86.Final:provided" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.86.Final:provided" -> "io.netty:netty-transport-native-unix-common:jar:4.1.86.Final:provided" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.3.0:provided" -> "com.esotericsoftware:reflectasm:jar:1.11.9:provided" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.3.0:provided" -> "org.objenesis:objenesis:jar:3.2:provided" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.3.0:provided" -> "com.esotericsoftware:minlog:jar:1.3.1:provided" ; 
+[INFO] 	"org.jodd:jodd-bean:jar:5.1.6:provided" -> "org.jodd:jodd-core:jar:5.1.6:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< cn.dev33:sa-token-jboot-plugin >-------------------
+[INFO] Building sa-token-jboot-plugin 1.37.0                            [17/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-jboot-plugin ---
+[INFO] digraph "cn.dev33:sa-token-jboot-plugin:jar:1.37.0" { 
+[INFO] 	"cn.dev33:sa-token-jboot-plugin:jar:1.37.0" -> "io.jboot:jboot:jar:3.14.4:provided" ; 
+[INFO] 	"cn.dev33:sa-token-jboot-plugin:jar:1.37.0" -> "cn.dev33:sa-token-core:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-jboot-plugin:jar:1.37.0" -> "cn.dev33:sa-token-servlet:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-jboot-plugin:jar:1.37.0" -> "redis.clients:jedis:jar:3.8.0:provided" ; 
+[INFO] 	"io.jboot:jboot:jar:3.14.4:provided" -> "com.jfinal:jfinal:jar:4.9.17:provided" ; 
+[INFO] 	"io.jboot:jboot:jar:3.14.4:provided" -> "com.jfinal:cos:jar:2022.2:provided" ; 
+[INFO] 	"io.jboot:jboot:jar:3.14.4:provided" -> "com.jfinal:jfinal-undertow:jar:2.9:provided" ; 
+[INFO] 	"io.jboot:jboot:jar:3.14.4:provided" -> "cglib:cglib:jar:3.3.0:provided" ; 
+[INFO] 	"io.jboot:jboot:jar:3.14.4:provided" -> "io.undertow:undertow-websockets-jsr:jar:2.2.17.Final:provided" ; 
+[INFO] 	"io.jboot:jboot:jar:3.14.4:provided" -> "com.zaxxer:HikariCP:jar:4.0.3:provided" ; 
+[INFO] 	"io.jboot:jboot:jar:3.14.4:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.2:provided" ; 
+[INFO] 	"io.jboot:jboot:jar:3.14.4:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.2:provided" ; 
+[INFO] 	"io.jboot:jboot:jar:3.14.4:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.1:provided" ; 
+[INFO] 	"io.jboot:jboot:jar:3.14.4:provided" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.13.2:provided" ; 
+[INFO] 	"io.jboot:jboot:jar:3.14.4:provided" -> "mysql:mysql-connector-java:jar:5.1.49:provided" ; 
+[INFO] 	"io.jboot:jboot:jar:3.14.4:provided" -> "de.ruedigermoeller:fst:jar:2.57:provided" ; 
+[INFO] 	"io.jboot:jboot:jar:3.14.4:provided" -> "org.javassist:javassist:jar:3.28.0-GA:provided" ; 
+[INFO] 	"io.jboot:jboot:jar:3.14.4:provided" -> "org.slf4j:slf4j-api:jar:1.7.36:provided" ; 
+[INFO] 	"io.jboot:jboot:jar:3.14.4:provided" -> "com.alibaba:fastjson:jar:1.2.83:provided" ; 
+[INFO] 	"io.jboot:jboot:jar:3.14.4:provided" -> "com.google.guava:guava:jar:31.1-jre:provided" ; 
+[INFO] 	"io.jboot:jboot:jar:3.14.4:provided" -> "it.sauronsoftware.cron4j:cron4j:jar:2.2.5:provided" ; 
+[INFO] 	"io.jboot:jboot:jar:3.14.4:provided" -> "org.jsoup:jsoup:jar:1.14.3:provided" ; 
+[INFO] 	"io.jboot:jboot:jar:3.14.4:provided" -> "com.github.ben-manes.caffeine:caffeine:jar:2.9.3:provided" ; 
+[INFO] 	"io.jboot:jboot:jar:3.14.4:provided" -> "org.apache.commons:commons-lang3:jar:3.12.0:provided" ; 
+[INFO] 	"io.jboot:jboot:jar:3.14.4:provided" -> "commons-io:commons-io:jar:2.11.0:provided" ; 
+[INFO] 	"io.jboot:jboot:jar:3.14.4:provided" -> "javax.validation:validation-api:jar:2.0.1.Final:provided" ; 
+[INFO] 	"io.jboot:jboot:jar:3.14.4:provided" -> "javax.annotation:javax.annotation-api:jar:1.3.2:provided" ; 
+[INFO] 	"io.jboot:jboot:jar:3.14.4:provided" -> "org.hibernate.validator:hibernate-validator:jar:6.0.21.Final:provided" ; 
+[INFO] 	"io.jboot:jboot:jar:3.14.4:provided" -> "org.glassfish:javax.el:jar:3.0.0:provided" ; 
+[INFO] 	"io.jboot:jboot:jar:3.14.4:provided" -> "io.dropwizard.metrics:metrics-core:jar:4.2.9:provided" ; 
+[INFO] 	"io.jboot:jboot:jar:3.14.4:provided" -> "io.dropwizard.metrics:metrics-servlets:jar:4.2.9:provided" ; 
+[INFO] 	"io.jboot:jboot:jar:3.14.4:provided" -> "io.dropwizard.metrics:metrics-healthchecks:jar:4.2.9:provided" ; 
+[INFO] 	"io.jboot:jboot:jar:3.14.4:provided" -> "io.dropwizard.metrics:metrics-jvm:jar:4.2.9:provided" ; 
+[INFO] 	"io.jboot:jboot:jar:3.14.4:provided" -> "io.jsonwebtoken:jjwt:jar:0.9.1:provided" ; 
+[INFO] 	"com.jfinal:jfinal-undertow:jar:2.9:provided" -> "io.undertow:undertow-core:jar:2.2.16.Final:provided" ; 
+[INFO] 	"com.jfinal:jfinal-undertow:jar:2.9:provided" -> "io.undertow:undertow-servlet:jar:2.2.16.Final:provided" ; 
+[INFO] 	"com.jfinal:jfinal-undertow:jar:2.9:provided" -> "javax.servlet:javax.servlet-api:jar:3.1.0:provided" ; 
+[INFO] 	"io.undertow:undertow-core:jar:2.2.16.Final:provided" -> "org.jboss.xnio:xnio-api:jar:3.8.6.Final:provided" ; 
+[INFO] 	"io.undertow:undertow-core:jar:2.2.16.Final:provided" -> "org.jboss.xnio:xnio-nio:jar:3.8.6.Final:provided" ; 
+[INFO] 	"io.undertow:undertow-core:jar:2.2.16.Final:provided" -> "org.jboss.threads:jboss-threads:jar:3.1.0.Final:provided" ; 
+[INFO] 	"org.jboss.xnio:xnio-api:jar:3.8.6.Final:provided" -> "org.wildfly.common:wildfly-common:jar:1.5.4.Final:provided" ; 
+[INFO] 	"org.jboss.xnio:xnio-api:jar:3.8.6.Final:provided" -> "org.wildfly.client:wildfly-client-config:jar:1.0.1.Final:provided" ; 
+[INFO] 	"cglib:cglib:jar:3.3.0:provided" -> "org.ow2.asm:asm:jar:7.1:provided" ; 
+[INFO] 	"io.undertow:undertow-websockets-jsr:jar:2.2.17.Final:provided" -> "org.jboss.spec.javax.websocket:jboss-websocket-api_1.1_spec:jar:2.0.0.Final:provided" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.13.2:provided" -> "org.yaml:snakeyaml:jar:1.30:provided" ; 
+[INFO] 	"de.ruedigermoeller:fst:jar:2.57:provided" -> "org.objenesis:objenesis:jar:2.5.1:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.guava:failureaccess:jar:1.0.1:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "org.checkerframework:checker-qual:jar:3.12.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.errorprone:error_prone_annotations:jar:2.11.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.j2objc:j2objc-annotations:jar:1.3:provided" ; 
+[INFO] 	"org.hibernate.validator:hibernate-validator:jar:6.0.21.Final:provided" -> "org.jboss.logging:jboss-logging:jar:3.3.2.Final:provided" ; 
+[INFO] 	"org.hibernate.validator:hibernate-validator:jar:6.0.21.Final:provided" -> "com.fasterxml:classmate:jar:1.3.4:provided" ; 
+[INFO] 	"io.dropwizard.metrics:metrics-servlets:jar:4.2.9:provided" -> "io.dropwizard.metrics:metrics-json:jar:4.2.9:provided" ; 
+[INFO] 	"io.dropwizard.metrics:metrics-servlets:jar:4.2.9:provided" -> "com.helger:profiler:jar:1.1.1:provided" ; 
+[INFO] 	"redis.clients:jedis:jar:3.8.0:provided" -> "org.apache.commons:commons-pool2:jar:2.5.0:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< cn.dev33:sa-token-jfinal-plugin >-------------------
+[INFO] Building sa-token-jfinal-plugin 1.37.0                           [18/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-jfinal-plugin ---
+[INFO] digraph "cn.dev33:sa-token-jfinal-plugin:jar:1.37.0" { 
+[INFO] 	"cn.dev33:sa-token-jfinal-plugin:jar:1.37.0" -> "org.slf4j:slf4j-api:jar:1.7.24:compile" ; 
+[INFO] 	"cn.dev33:sa-token-jfinal-plugin:jar:1.37.0" -> "com.jfinal:jfinal-undertow:jar:2.8:compile" ; 
+[INFO] 	"cn.dev33:sa-token-jfinal-plugin:jar:1.37.0" -> "com.jfinal:jfinal:jar:4.9.17:provided" ; 
+[INFO] 	"cn.dev33:sa-token-jfinal-plugin:jar:1.37.0" -> "cn.dev33:sa-token-core:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-jfinal-plugin:jar:1.37.0" -> "cn.dev33:sa-token-servlet:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-jfinal-plugin:jar:1.37.0" -> "org.apache.commons:commons-pool2:jar:2.5.0:test" ; 
+[INFO] 	"cn.dev33:sa-token-jfinal-plugin:jar:1.37.0" -> "redis.clients:jedis:jar:3.7.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-jfinal-plugin:jar:1.37.0" -> "de.ruedigermoeller:fst:jar:2.29:test" ; 
+[INFO] 	"com.jfinal:jfinal-undertow:jar:2.8:compile" -> "io.undertow:undertow-core:jar:2.2.12.Final:compile" ; 
+[INFO] 	"com.jfinal:jfinal-undertow:jar:2.8:compile" -> "io.undertow:undertow-servlet:jar:2.2.12.Final:compile" ; 
+[INFO] 	"com.jfinal:jfinal-undertow:jar:2.8:compile" -> "javax.servlet:javax.servlet-api:jar:3.1.0:compile" ; 
+[INFO] 	"io.undertow:undertow-core:jar:2.2.12.Final:compile" -> "org.jboss.logging:jboss-logging:jar:3.4.1.Final:compile" ; 
+[INFO] 	"io.undertow:undertow-core:jar:2.2.12.Final:compile" -> "org.jboss.xnio:xnio-api:jar:3.8.4.Final:compile" ; 
+[INFO] 	"io.undertow:undertow-core:jar:2.2.12.Final:compile" -> "org.jboss.xnio:xnio-nio:jar:3.8.4.Final:runtime" ; 
+[INFO] 	"io.undertow:undertow-core:jar:2.2.12.Final:compile" -> "org.jboss.threads:jboss-threads:jar:3.1.0.Final:compile" ; 
+[INFO] 	"org.jboss.xnio:xnio-api:jar:3.8.4.Final:compile" -> "org.wildfly.common:wildfly-common:jar:1.5.2.Final:compile" ; 
+[INFO] 	"org.jboss.xnio:xnio-api:jar:3.8.4.Final:compile" -> "org.wildfly.client:wildfly-client-config:jar:1.0.1.Final:compile" ; 
+[INFO] 	"de.ruedigermoeller:fst:jar:2.29:test" -> "com.fasterxml.jackson.core:jackson-core:jar:2.5.3:test" ; 
+[INFO] 	"de.ruedigermoeller:fst:jar:2.29:test" -> "org.javassist:javassist:jar:3.19.0-GA:test" ; 
+[INFO] 	"de.ruedigermoeller:fst:jar:2.29:test" -> "org.objenesis:objenesis:jar:2.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< cn.dev33:sa-token-redis >-----------------------
+[INFO] Building sa-token-redis 1.37.0                                   [19/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-redis ---
+[INFO] digraph "cn.dev33:sa-token-redis:jar:1.37.0" { 
+[INFO] 	"cn.dev33:sa-token-redis:jar:1.37.0" -> "cn.dev33:sa-token-core:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-redis:jar:1.37.0" -> "org.springframework.boot:spring-boot-starter-data-redis:jar:2.5.15:compile" ; 
+[INFO] 	"cn.dev33:sa-token-redis:jar:1.37.0" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-redis:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-redis:jar:2.5.15:compile" -> "org.springframework.data:spring-data-redis:jar:2.5.12:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-redis:jar:2.5.15:compile" -> "io.lettuce:lettuce-core:jar:6.1.10.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework:spring-core:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.yaml:snakeyaml:jar:1.28:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.5.15:compile" -> "org.springframework:spring-context:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-expression:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "ch.qos.logback:logback-classic:jar:1.2.12:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:compile" -> "ch.qos.logback:logback-core:jar:1.2.12:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.27:compile" -> "org.springframework:spring-jcl:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.springframework.data:spring-data-keyvalue:jar:2.5.12:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.springframework:spring-tx:jar:5.3.19:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.springframework:spring-oxm:jar:5.3.19:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.springframework:spring-aop:jar:5.3.19:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.springframework:spring-context-support:jar:5.3.19:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.slf4j:slf4j-api:jar:1.7.26:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-keyvalue:jar:2.5.12:compile" -> "org.springframework.data:spring-data-commons:jar:2.5.12:compile" ; 
+[INFO] 	"org.springframework:spring-tx:jar:5.3.19:compile" -> "org.springframework:spring-beans:jar:5.3.19:compile" ; 
+[INFO] 	"io.lettuce:lettuce-core:jar:6.1.10.RELEASE:compile" -> "io.netty:netty-common:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.lettuce:lettuce-core:jar:6.1.10.RELEASE:compile" -> "io.netty:netty-handler:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.lettuce:lettuce-core:jar:6.1.10.RELEASE:compile" -> "io.netty:netty-transport:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.lettuce:lettuce-core:jar:6.1.10.RELEASE:compile" -> "io.projectreactor:reactor-core:jar:3.1.4.RELEASE:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.82.Final:compile" -> "io.netty:netty-resolver:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.82.Final:compile" -> "io.netty:netty-buffer:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.82.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.82.Final:compile" -> "io.netty:netty-codec:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.projectreactor:reactor-core:jar:3.1.4.RELEASE:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< cn.dev33:sa-token-redis-jackson >-------------------
+[INFO] Building sa-token-redis-jackson 1.37.0                           [20/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-redis-jackson ---
+[INFO] digraph "cn.dev33:sa-token-redis-jackson:jar:1.37.0" { 
+[INFO] 	"cn.dev33:sa-token-redis-jackson:jar:1.37.0" -> "cn.dev33:sa-token-core:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-redis-jackson:jar:1.37.0" -> "org.springframework.boot:spring-boot-starter-data-redis:jar:2.5.15:compile" ; 
+[INFO] 	"cn.dev33:sa-token-redis-jackson:jar:1.37.0" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.1:compile" ; 
+[INFO] 	"cn.dev33:sa-token-redis-jackson:jar:1.37.0" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.11.2:compile" ; 
+[INFO] 	"cn.dev33:sa-token-redis-jackson:jar:1.37.0" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-redis:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-redis:jar:2.5.15:compile" -> "org.springframework.data:spring-data-redis:jar:2.5.12:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-redis:jar:2.5.15:compile" -> "io.lettuce:lettuce-core:jar:6.1.10.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework:spring-core:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.yaml:snakeyaml:jar:1.28:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.5.15:compile" -> "org.springframework:spring-context:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-expression:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "ch.qos.logback:logback-classic:jar:1.2.12:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:compile" -> "ch.qos.logback:logback-core:jar:1.2.12:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.27:compile" -> "org.springframework:spring-jcl:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.springframework.data:spring-data-keyvalue:jar:2.5.12:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.springframework:spring-tx:jar:5.3.19:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.springframework:spring-oxm:jar:5.3.19:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.springframework:spring-aop:jar:5.3.19:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.springframework:spring-context-support:jar:5.3.19:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.slf4j:slf4j-api:jar:1.7.26:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-keyvalue:jar:2.5.12:compile" -> "org.springframework.data:spring-data-commons:jar:2.5.12:compile" ; 
+[INFO] 	"org.springframework:spring-tx:jar:5.3.19:compile" -> "org.springframework:spring-beans:jar:5.3.19:compile" ; 
+[INFO] 	"io.lettuce:lettuce-core:jar:6.1.10.RELEASE:compile" -> "io.netty:netty-common:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.lettuce:lettuce-core:jar:6.1.10.RELEASE:compile" -> "io.netty:netty-handler:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.lettuce:lettuce-core:jar:6.1.10.RELEASE:compile" -> "io.netty:netty-transport:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.lettuce:lettuce-core:jar:6.1.10.RELEASE:compile" -> "io.projectreactor:reactor-core:jar:3.1.4.RELEASE:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.82.Final:compile" -> "io.netty:netty-resolver:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.82.Final:compile" -> "io.netty:netty-buffer:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.82.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.82.Final:compile" -> "io.netty:netty-codec:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.projectreactor:reactor-core:jar:3.1.4.RELEASE:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.1:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.1:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< cn.dev33:sa-token-redis-fastjson >------------------
+[INFO] Building sa-token-redis-fastjson 1.37.0                          [21/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-redis-fastjson ---
+[INFO] digraph "cn.dev33:sa-token-redis-fastjson:jar:1.37.0" { 
+[INFO] 	"cn.dev33:sa-token-redis-fastjson:jar:1.37.0" -> "cn.dev33:sa-token-core:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-redis-fastjson:jar:1.37.0" -> "org.springframework.boot:spring-boot-starter-data-redis:jar:2.5.15:compile" ; 
+[INFO] 	"cn.dev33:sa-token-redis-fastjson:jar:1.37.0" -> "com.alibaba:fastjson:jar:1.2.83:compile" ; 
+[INFO] 	"cn.dev33:sa-token-redis-fastjson:jar:1.37.0" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-redis:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-redis:jar:2.5.15:compile" -> "org.springframework.data:spring-data-redis:jar:2.5.12:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-redis:jar:2.5.15:compile" -> "io.lettuce:lettuce-core:jar:6.1.10.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework:spring-core:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.yaml:snakeyaml:jar:1.28:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.5.15:compile" -> "org.springframework:spring-context:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-expression:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "ch.qos.logback:logback-classic:jar:1.2.12:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:compile" -> "ch.qos.logback:logback-core:jar:1.2.12:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.27:compile" -> "org.springframework:spring-jcl:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.springframework.data:spring-data-keyvalue:jar:2.5.12:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.springframework:spring-tx:jar:5.3.19:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.springframework:spring-oxm:jar:5.3.19:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.springframework:spring-aop:jar:5.3.19:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.springframework:spring-context-support:jar:5.3.19:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.slf4j:slf4j-api:jar:1.7.26:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-keyvalue:jar:2.5.12:compile" -> "org.springframework.data:spring-data-commons:jar:2.5.12:compile" ; 
+[INFO] 	"org.springframework:spring-tx:jar:5.3.19:compile" -> "org.springframework:spring-beans:jar:5.3.19:compile" ; 
+[INFO] 	"io.lettuce:lettuce-core:jar:6.1.10.RELEASE:compile" -> "io.netty:netty-common:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.lettuce:lettuce-core:jar:6.1.10.RELEASE:compile" -> "io.netty:netty-handler:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.lettuce:lettuce-core:jar:6.1.10.RELEASE:compile" -> "io.netty:netty-transport:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.lettuce:lettuce-core:jar:6.1.10.RELEASE:compile" -> "io.projectreactor:reactor-core:jar:3.1.4.RELEASE:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.82.Final:compile" -> "io.netty:netty-resolver:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.82.Final:compile" -> "io.netty:netty-buffer:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.82.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.82.Final:compile" -> "io.netty:netty-codec:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.projectreactor:reactor-core:jar:3.1.4.RELEASE:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< cn.dev33:sa-token-redis-fastjson2 >------------------
+[INFO] Building sa-token-redis-fastjson2 1.37.0                         [22/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-redis-fastjson2 ---
+[INFO] digraph "cn.dev33:sa-token-redis-fastjson2:jar:1.37.0" { 
+[INFO] 	"cn.dev33:sa-token-redis-fastjson2:jar:1.37.0" -> "cn.dev33:sa-token-core:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-redis-fastjson2:jar:1.37.0" -> "org.springframework.boot:spring-boot-starter-data-redis:jar:2.5.15:compile" ; 
+[INFO] 	"cn.dev33:sa-token-redis-fastjson2:jar:1.37.0" -> "com.alibaba.fastjson2:fastjson2:jar:2.0.15:compile" ; 
+[INFO] 	"cn.dev33:sa-token-redis-fastjson2:jar:1.37.0" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-redis:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-redis:jar:2.5.15:compile" -> "org.springframework.data:spring-data-redis:jar:2.5.12:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-redis:jar:2.5.15:compile" -> "io.lettuce:lettuce-core:jar:6.1.10.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework:spring-core:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.yaml:snakeyaml:jar:1.28:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.5.15:compile" -> "org.springframework:spring-context:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-expression:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "ch.qos.logback:logback-classic:jar:1.2.12:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:compile" -> "ch.qos.logback:logback-core:jar:1.2.12:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.27:compile" -> "org.springframework:spring-jcl:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.springframework.data:spring-data-keyvalue:jar:2.5.12:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.springframework:spring-tx:jar:5.3.19:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.springframework:spring-oxm:jar:5.3.19:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.springframework:spring-aop:jar:5.3.19:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.springframework:spring-context-support:jar:5.3.19:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.slf4j:slf4j-api:jar:1.7.26:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-keyvalue:jar:2.5.12:compile" -> "org.springframework.data:spring-data-commons:jar:2.5.12:compile" ; 
+[INFO] 	"org.springframework:spring-tx:jar:5.3.19:compile" -> "org.springframework:spring-beans:jar:5.3.19:compile" ; 
+[INFO] 	"io.lettuce:lettuce-core:jar:6.1.10.RELEASE:compile" -> "io.netty:netty-common:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.lettuce:lettuce-core:jar:6.1.10.RELEASE:compile" -> "io.netty:netty-handler:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.lettuce:lettuce-core:jar:6.1.10.RELEASE:compile" -> "io.netty:netty-transport:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.lettuce:lettuce-core:jar:6.1.10.RELEASE:compile" -> "io.projectreactor:reactor-core:jar:3.1.4.RELEASE:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.82.Final:compile" -> "io.netty:netty-resolver:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.82.Final:compile" -> "io.netty:netty-buffer:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.82.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.82.Final:compile" -> "io.netty:netty-codec:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.projectreactor:reactor-core:jar:3.1.4.RELEASE:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< cn.dev33:sa-token-redisson-jackson >-----------------
+[INFO] Building sa-token-redisson-jackson 1.37.0                        [23/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-redisson-jackson ---
+[INFO] digraph "cn.dev33:sa-token-redisson-jackson:jar:1.37.0" { 
+[INFO] 	"cn.dev33:sa-token-redisson-jackson:jar:1.37.0" -> "cn.dev33:sa-token-core:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-redisson-jackson:jar:1.37.0" -> "org.redisson:redisson-spring-boot-starter:jar:3.19.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-redisson-jackson:jar:1.37.0" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.1:compile" ; 
+[INFO] 	"cn.dev33:sa-token-redisson-jackson:jar:1.37.0" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.11.2:compile" ; 
+[INFO] 	"cn.dev33:sa-token-redisson-jackson:jar:1.37.0" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.5.15:compile" ; 
+[INFO] 	"org.redisson:redisson-spring-boot-starter:jar:3.19.0:compile" -> "org.springframework.boot:spring-boot-starter-actuator:jar:2.5.15:compile" ; 
+[INFO] 	"org.redisson:redisson-spring-boot-starter:jar:3.19.0:compile" -> "org.springframework.boot:spring-boot-starter-data-redis:jar:2.5.15:compile" ; 
+[INFO] 	"org.redisson:redisson-spring-boot-starter:jar:3.19.0:compile" -> "org.redisson:redisson:jar:3.19.0:compile" ; 
+[INFO] 	"org.redisson:redisson-spring-boot-starter:jar:3.19.0:compile" -> "org.redisson:redisson-spring-data-30:jar:3.19.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-actuator:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-actuator:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-actuator-autoconfigure:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-actuator:jar:2.5.15:compile" -> "io.micrometer:micrometer-core:jar:1.7.12:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework:spring-core:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.5.15:compile" -> "org.springframework:spring-context:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-expression:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "ch.qos.logback:logback-classic:jar:1.2.12:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:compile" -> "ch.qos.logback:logback-core:jar:1.2.12:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.27:compile" -> "org.springframework:spring-jcl:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-actuator-autoconfigure:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-actuator:jar:2.5.15:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.7.12:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.7.12:compile" -> "org.latencyutils:LatencyUtils:jar:2.0.3:runtime" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-redis:jar:2.5.15:compile" -> "org.springframework.data:spring-data-redis:jar:2.5.12:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.springframework.data:spring-data-keyvalue:jar:2.5.12:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.springframework:spring-tx:jar:5.3.19:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.springframework:spring-oxm:jar:5.3.19:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.springframework:spring-aop:jar:5.3.19:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.springframework:spring-context-support:jar:5.3.19:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-keyvalue:jar:2.5.12:compile" -> "org.springframework.data:spring-data-commons:jar:2.5.12:compile" ; 
+[INFO] 	"org.springframework:spring-tx:jar:5.3.19:compile" -> "org.springframework:spring-beans:jar:5.3.19:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "io.netty:netty-common:jar:4.1.86.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "io.netty:netty-codec:jar:4.1.86.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "io.netty:netty-buffer:jar:4.1.86.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "io.netty:netty-transport:jar:4.1.86.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "io.netty:netty-resolver:jar:4.1.86.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "io.netty:netty-resolver-dns:jar:4.1.86.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "io.netty:netty-handler:jar:4.1.86.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "javax.cache:cache-api:jar:1.1.1:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "io.projectreactor:reactor-core:jar:3.1.4.RELEASE:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.4:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "io.reactivex.rxjava3:rxjava:jar:3.1.5:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "org.jboss.marshalling:jboss-marshalling:jar:2.0.11.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "org.jboss.marshalling:jboss-marshalling-river:jar:2.0.11.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "com.esotericsoftware:kryo:jar:5.3.0:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.14.1:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "net.bytebuddy:byte-buddy:jar:1.12.18:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "org.yaml:snakeyaml:jar:1.33:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "org.jodd:jodd-bean:jar:5.1.6:compile" ; 
+[INFO] 	"io.netty:netty-resolver-dns:jar:4.1.86.Final:compile" -> "io.netty:netty-codec-dns:jar:4.1.86.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.86.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.86.Final:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.3.0:compile" -> "com.esotericsoftware:reflectasm:jar:1.11.9:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.3.0:compile" -> "org.objenesis:objenesis:jar:3.2:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.3.0:compile" -> "com.esotericsoftware:minlog:jar:1.3.1:compile" ; 
+[INFO] 	"org.jodd:jodd-bean:jar:5.1.6:compile" -> "org.jodd:jodd-core:jar:5.1.6:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.1:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.1:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< cn.dev33:sa-token-redisson-jackson2 >-----------------
+[INFO] Building sa-token-redisson-jackson2 1.37.0                       [24/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-redisson-jackson2 ---
+[INFO] digraph "cn.dev33:sa-token-redisson-jackson2:jar:1.37.0" { 
+[INFO] 	"cn.dev33:sa-token-redisson-jackson2:jar:1.37.0" -> "cn.dev33:sa-token-core:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-redisson-jackson2:jar:1.37.0" -> "org.redisson:redisson:jar:3.19.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-redisson-jackson2:jar:1.37.0" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.1:compile" ; 
+[INFO] 	"cn.dev33:sa-token-redisson-jackson2:jar:1.37.0" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.11.2:compile" ; 
+[INFO] 	"cn.dev33:sa-token-redisson-jackson2:jar:1.37.0" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.5.15:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "io.netty:netty-common:jar:4.1.86.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "io.netty:netty-codec:jar:4.1.86.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "io.netty:netty-buffer:jar:4.1.86.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "io.netty:netty-transport:jar:4.1.86.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "io.netty:netty-resolver:jar:4.1.86.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "io.netty:netty-resolver-dns:jar:4.1.86.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "io.netty:netty-handler:jar:4.1.86.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "javax.cache:cache-api:jar:1.1.1:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "io.projectreactor:reactor-core:jar:3.1.4.RELEASE:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.4:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "io.reactivex.rxjava3:rxjava:jar:3.1.5:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "org.jboss.marshalling:jboss-marshalling:jar:2.0.11.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "org.jboss.marshalling:jboss-marshalling-river:jar:2.0.11.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "com.esotericsoftware:kryo:jar:5.3.0:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.14.1:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.14.1:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.14.1:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "net.bytebuddy:byte-buddy:jar:1.12.18:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "org.yaml:snakeyaml:jar:1.33:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.0:compile" -> "org.jodd:jodd-bean:jar:5.1.6:compile" ; 
+[INFO] 	"io.netty:netty-resolver-dns:jar:4.1.86.Final:compile" -> "io.netty:netty-codec-dns:jar:4.1.86.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.86.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.86.Final:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.3.0:compile" -> "com.esotericsoftware:reflectasm:jar:1.11.9:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.3.0:compile" -> "org.objenesis:objenesis:jar:3.2:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.3.0:compile" -> "com.esotericsoftware:minlog:jar:1.3.1:compile" ; 
+[INFO] 	"org.jodd:jodd-bean:jar:5.1.6:compile" -> "org.jodd:jodd-core:jar:5.1.6:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< cn.dev33:sa-token-redisx >----------------------
+[INFO] Building sa-token-redisx 1.37.0                                  [25/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-redisx ---
+[INFO] digraph "cn.dev33:sa-token-redisx:jar:1.37.0" { 
+[INFO] 	"cn.dev33:sa-token-redisx:jar:1.37.0" -> "cn.dev33:sa-token-core:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-redisx:jar:1.37.0" -> "org.noear:redisx:jar:1.6.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-redisx:jar:1.37.0" -> "org.noear:snack3:jar:3.2.80:provided" ; 
+[INFO] 	"cn.dev33:sa-token-redisx:jar:1.37.0" -> "org.noear:solon-test:jar:2.5.3:test" ; 
+[INFO] 	"cn.dev33:sa-token-redisx:jar:1.37.0" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.5.15:compile" ; 
+[INFO] 	"org.noear:redisx:jar:1.6.0:compile" -> "redis.clients:jedis:jar:5.0.0:compile" ; 
+[INFO] 	"redis.clients:jedis:jar:5.0.0:compile" -> "org.apache.commons:commons-pool2:jar:2.5.0:compile" ; 
+[INFO] 	"redis.clients:jedis:jar:5.0.0:compile" -> "org.json:json:jar:20230618:compile" ; 
+[INFO] 	"redis.clients:jedis:jar:5.0.0:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"org.noear:solon-test:jar:2.5.3:test" -> "org.noear:solon-test-junit4:jar:2.5.3:test" ; 
+[INFO] 	"org.noear:solon-test:jar:2.5.3:test" -> "org.noear:solon-test-junit5:jar:2.5.3:test" ; 
+[INFO] 	"org.noear:solon-test-junit4:jar:2.5.3:test" -> "org.noear:solon.test:jar:2.5.3:test" ; 
+[INFO] 	"org.noear:solon-test-junit4:jar:2.5.3:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.noear:solon-test-junit4:jar:2.5.3:test" -> "org.mockito:mockito-core:jar:4.11.0:test" ; 
+[INFO] 	"org.noear:solon.test:jar:2.5.3:test" -> "org.noear:solon:jar:2.5.3:test" ; 
+[INFO] 	"org.noear:solon.test:jar:2.5.3:test" -> "org.noear:solon.data:jar:2.5.3:test" ; 
+[INFO] 	"org.noear:solon.test:jar:2.5.3:test" -> "org.noear:solon.proxy:jar:2.5.3:test" ; 
+[INFO] 	"org.noear:solon.test:jar:2.5.3:test" -> "org.noear:solon.config.yaml:jar:2.5.3:test" ; 
+[INFO] 	"org.noear:solon.test:jar:2.5.3:test" -> "com.squareup.okhttp3:okhttp:jar:3.14.9:test" ; 
+[INFO] 	"org.noear:solon.proxy:jar:2.5.3:test" -> "org.ow2.asm:asm:jar:9.4:test" ; 
+[INFO] 	"org.noear:solon.config.yaml:jar:2.5.3:test" -> "org.yaml:snakeyaml:jar:2.0:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.14.9:test" -> "com.squareup.okio:okio:jar:1.17.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "net.bytebuddy:byte-buddy:jar:1.12.19:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.19:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.noear:solon-test-junit5:jar:2.5.3:test" -> "org.junit.jupiter:junit-jupiter:jar:5.9.1:test" ; 
+[INFO] 	"org.noear:solon-test-junit5:jar:2.5.3:test" -> "org.mockito:mockito-junit-jupiter:jar:4.11.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< cn.dev33:sa-token-alone-redis >--------------------
+[INFO] Building sa-token-alone-redis 1.37.0                             [26/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-alone-redis ---
+[INFO] digraph "cn.dev33:sa-token-alone-redis:jar:1.37.0" { 
+[INFO] 	"cn.dev33:sa-token-alone-redis:jar:1.37.0" -> "cn.dev33:sa-token-redis:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-alone-redis:jar:1.37.0" -> "cn.dev33:sa-token-redis-jackson:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-alone-redis:jar:1.37.0" -> "cn.dev33:sa-token-redis-fastjson:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-alone-redis:jar:1.37.0" -> "cn.dev33:sa-token-redis-fastjson2:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-alone-redis:jar:1.37.0" -> "org.apache.commons:commons-pool2:jar:2.5.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-alone-redis:jar:1.37.0" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.5.15:compile" ; 
+[INFO] 	"cn.dev33:sa-token-redis:jar:1.37.0:compile" -> "cn.dev33:sa-token-core:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-redis:jar:1.37.0:compile" -> "org.springframework.boot:spring-boot-starter-data-redis:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-redis:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-redis:jar:2.5.15:compile" -> "org.springframework.data:spring-data-redis:jar:2.5.12:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-redis:jar:2.5.15:compile" -> "io.lettuce:lettuce-core:jar:6.1.10.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework:spring-core:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.yaml:snakeyaml:jar:1.28:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.5.15:compile" -> "org.springframework:spring-context:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-expression:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "ch.qos.logback:logback-classic:jar:1.2.12:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:compile" -> "ch.qos.logback:logback-core:jar:1.2.12:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.27:compile" -> "org.springframework:spring-jcl:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.springframework.data:spring-data-keyvalue:jar:2.5.12:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.springframework:spring-tx:jar:5.3.19:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.springframework:spring-oxm:jar:5.3.19:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.springframework:spring-aop:jar:5.3.19:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.springframework:spring-context-support:jar:5.3.19:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.5.12:compile" -> "org.slf4j:slf4j-api:jar:1.7.26:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-keyvalue:jar:2.5.12:compile" -> "org.springframework.data:spring-data-commons:jar:2.5.12:compile" ; 
+[INFO] 	"org.springframework:spring-tx:jar:5.3.19:compile" -> "org.springframework:spring-beans:jar:5.3.19:compile" ; 
+[INFO] 	"io.lettuce:lettuce-core:jar:6.1.10.RELEASE:compile" -> "io.netty:netty-common:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.lettuce:lettuce-core:jar:6.1.10.RELEASE:compile" -> "io.netty:netty-handler:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.lettuce:lettuce-core:jar:6.1.10.RELEASE:compile" -> "io.netty:netty-transport:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.lettuce:lettuce-core:jar:6.1.10.RELEASE:compile" -> "io.projectreactor:reactor-core:jar:3.1.4.RELEASE:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.82.Final:compile" -> "io.netty:netty-resolver:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.82.Final:compile" -> "io.netty:netty-buffer:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.82.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.82.Final:compile" -> "io.netty:netty-codec:jar:4.1.82.Final:compile" ; 
+[INFO] 	"io.projectreactor:reactor-core:jar:3.1.4.RELEASE:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.2:compile" ; 
+[INFO] 	"cn.dev33:sa-token-redis-fastjson:jar:1.37.0:compile" -> "com.alibaba:fastjson:jar:1.2.83:compile" ; 
+[INFO] 	"cn.dev33:sa-token-redis-fastjson2:jar:1.37.0:compile" -> "com.alibaba.fastjson2:fastjson2:jar:2.0.15:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< cn.dev33:sa-token-dialect-thymeleaf >-----------------
+[INFO] Building sa-token-dialect-thymeleaf 1.37.0                       [27/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-dialect-thymeleaf ---
+[INFO] digraph "cn.dev33:sa-token-dialect-thymeleaf:jar:1.37.0" { 
+[INFO] 	"cn.dev33:sa-token-dialect-thymeleaf:jar:1.37.0" -> "cn.dev33:sa-token-core:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-dialect-thymeleaf:jar:1.37.0" -> "org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE:compile" ; 
+[INFO] 	"cn.dev33:sa-token-dialect-thymeleaf:jar:1.37.0" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.5.15:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE:compile" -> "ognl:ognl:jar:3.1.12:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE:compile" -> "org.attoparser:attoparser:jar:2.0.4.RELEASE:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE:compile" -> "org.unbescape:unbescape:jar:1.1.5.RELEASE:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"ognl:ognl:jar:3.1.12:compile" -> "org.javassist:javassist:jar:3.20.0-GA:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< cn.dev33:sa-token-quick-login >--------------------
+[INFO] Building sa-token-quick-login 1.37.0                             [28/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-quick-login ---
+[INFO] digraph "cn.dev33:sa-token-quick-login:jar:1.37.0" { 
+[INFO] 	"cn.dev33:sa-token-quick-login:jar:1.37.0" -> "cn.dev33:sa-token-spring-boot-starter:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-quick-login:jar:1.37.0" -> "org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.5.15:compile" ; 
+[INFO] 	"cn.dev33:sa-token-quick-login:jar:1.37.0" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.5.15:compile" ; 
+[INFO] 	"cn.dev33:sa-token-spring-boot-starter:jar:1.37.0:compile" -> "org.springframework.boot:spring-boot-starter-web:jar:2.5.15:compile" ; 
+[INFO] 	"cn.dev33:sa-token-spring-boot-starter:jar:1.37.0:compile" -> "cn.dev33:sa-token-servlet:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-spring-boot-starter:jar:1.37.0:compile" -> "cn.dev33:sa-token-spring-boot-autoconfig:jar:1.37.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-starter-json:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-starter-tomcat:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.5.15:compile" -> "org.springframework:spring-web:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.5.15:compile" -> "org.springframework:spring-webmvc:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.5.15:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.5.15:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.12.7:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.5.15:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.11.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.5.15:compile" -> "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.12.7:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.1:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.1:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.5.15:compile" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.75:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.5.15:compile" -> "org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.75:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.5.15:compile" -> "org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.75:compile" ; 
+[INFO] 	"org.springframework:spring-web:jar:5.3.27:compile" -> "org.springframework:spring-beans:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.27:compile" -> "org.springframework:spring-aop:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.27:compile" -> "org.springframework:spring-context:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.27:compile" -> "org.springframework:spring-expression:jar:5.3.27:compile" ; 
+[INFO] 	"cn.dev33:sa-token-servlet:jar:1.37.0:compile" -> "cn.dev33:sa-token-core:jar:1.37.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.5.15:compile" -> "org.thymeleaf:thymeleaf-spring5:jar:3.0.15.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.5.15:compile" -> "org.thymeleaf.extras:thymeleaf-extras-java8time:jar:3.0.4.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework:spring-core:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.yaml:snakeyaml:jar:1.28:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "ch.qos.logback:logback-classic:jar:1.2.12:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:compile" -> "ch.qos.logback:logback-core:jar:1.2.12:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.27:compile" -> "org.springframework:spring-jcl:jar:5.3.27:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf-spring5:jar:3.0.15.RELEASE:compile" -> "org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf-spring5:jar:3.0.15.RELEASE:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE:compile" -> "org.attoparser:attoparser:jar:2.0.4.RELEASE:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE:compile" -> "org.unbescape:unbescape:jar:1.1.5.RELEASE:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< cn.dev33:sa-token-spring-aop >--------------------
+[INFO] Building sa-token-spring-aop 1.37.0                              [29/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-spring-aop ---
+[INFO] digraph "cn.dev33:sa-token-spring-aop:jar:1.37.0" { 
+[INFO] 	"cn.dev33:sa-token-spring-aop:jar:1.37.0" -> "cn.dev33:sa-token-core:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-spring-aop:jar:1.37.0" -> "org.springframework.boot:spring-boot-starter-aop:jar:2.5.15:compile" ; 
+[INFO] 	"cn.dev33:sa-token-spring-aop:jar:1.37.0" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.5.15:compile" -> "org.springframework:spring-aop:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.5.15:compile" -> "org.aspectj:aspectjweaver:jar:1.9.7:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework:spring-core:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.yaml:snakeyaml:jar:1.28:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.5.15:compile" -> "org.springframework:spring-context:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-expression:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "ch.qos.logback:logback-classic:jar:1.2.12:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:compile" -> "ch.qos.logback:logback-core:jar:1.2.12:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:compile" -> "org.slf4j:slf4j-api:jar:1.7.32:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.27:compile" -> "org.springframework:spring-jcl:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-aop:jar:5.3.27:compile" -> "org.springframework:spring-beans:jar:5.3.27:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< cn.dev33:sa-token-temp-jwt >---------------------
+[INFO] Building sa-token-temp-jwt 1.37.0                                [30/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-temp-jwt ---
+[INFO] digraph "cn.dev33:sa-token-temp-jwt:jar:1.37.0" { 
+[INFO] 	"cn.dev33:sa-token-temp-jwt:jar:1.37.0" -> "cn.dev33:sa-token-core:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-temp-jwt:jar:1.37.0" -> "io.jsonwebtoken:jjwt:jar:0.9.1:compile" ; 
+[INFO] 	"cn.dev33:sa-token-temp-jwt:jar:1.37.0" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.5.15:compile" ; 
+[INFO] 	"io.jsonwebtoken:jjwt:jar:0.9.1:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.1:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.1:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------------< cn.dev33:sa-token-jwt >------------------------
+[INFO] Building sa-token-jwt 1.37.0                                     [31/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-jwt ---
+[INFO] digraph "cn.dev33:sa-token-jwt:jar:1.37.0" { 
+[INFO] 	"cn.dev33:sa-token-jwt:jar:1.37.0" -> "cn.dev33:sa-token-core:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-jwt:jar:1.37.0" -> "cn.hutool:hutool-jwt:jar:5.8.20:compile" ; 
+[INFO] 	"cn.dev33:sa-token-jwt:jar:1.37.0" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.5.15:compile" ; 
+[INFO] 	"cn.hutool:hutool-jwt:jar:5.8.20:compile" -> "cn.hutool:hutool-json:jar:5.8.20:compile" ; 
+[INFO] 	"cn.hutool:hutool-jwt:jar:5.8.20:compile" -> "cn.hutool:hutool-crypto:jar:5.8.20:compile" ; 
+[INFO] 	"cn.hutool:hutool-json:jar:5.8.20:compile" -> "cn.hutool:hutool-core:jar:5.8.20:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< cn.dev33:sa-token-dubbo >-----------------------
+[INFO] Building sa-token-dubbo 1.37.0                                   [32/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-dubbo ---
+[INFO] digraph "cn.dev33:sa-token-dubbo:jar:1.37.0" { 
+[INFO] 	"cn.dev33:sa-token-dubbo:jar:1.37.0" -> "cn.dev33:sa-token-core:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-dubbo:jar:1.37.0" -> "org.apache.dubbo:dubbo:jar:2.7.21:compile" ; 
+[INFO] 	"cn.dev33:sa-token-dubbo:jar:1.37.0" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.5.15:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.21:compile" -> "org.springframework:spring-context:jar:5.2.8.RELEASE:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.21:compile" -> "com.alibaba.spring:spring-context-support:jar:1.0.11:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.21:compile" -> "org.javassist:javassist:jar:3.23.1-GA:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.21:compile" -> "io.netty:netty-all:jar:4.1.66.Final:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.21:compile" -> "com.google.code.gson:gson:jar:2.8.5:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.21:compile" -> "org.yaml:snakeyaml:jar:1.20:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.21:compile" -> "com.alibaba:fastjson:jar:1.2.83:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.2.8.RELEASE:compile" -> "org.springframework:spring-aop:jar:5.2.8.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.2.8.RELEASE:compile" -> "org.springframework:spring-beans:jar:5.2.8.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.2.8.RELEASE:compile" -> "org.springframework:spring-core:jar:5.2.8.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.2.8.RELEASE:compile" -> "org.springframework:spring-expression:jar:5.2.8.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.2.8.RELEASE:compile" -> "org.springframework:spring-jcl:jar:5.2.8.RELEASE:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< cn.dev33:sa-token-dubbo3 >----------------------
+[INFO] Building sa-token-dubbo3 1.37.0                                  [33/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-dubbo3 ---
+[INFO] digraph "cn.dev33:sa-token-dubbo3:jar:1.37.0" { 
+[INFO] 	"cn.dev33:sa-token-dubbo3:jar:1.37.0" -> "cn.dev33:sa-token-core:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-dubbo3:jar:1.37.0" -> "org.apache.dubbo:dubbo:jar:3.2.2:compile" ; 
+[INFO] 	"cn.dev33:sa-token-dubbo3:jar:1.37.0" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.5.15:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:3.2.2:compile" -> "org.springframework:spring-context:jar:5.3.25:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:3.2.2:compile" -> "com.alibaba.spring:spring-context-support:jar:1.0.11:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:3.2.2:compile" -> "org.javassist:javassist:jar:3.29.2-GA:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:3.2.2:compile" -> "io.netty:netty-all:jar:4.1.92.Final:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:3.2.2:compile" -> "org.yaml:snakeyaml:jar:1.33:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:3.2.2:compile" -> "com.alibaba:hessian-lite:jar:3.2.13:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:3.2.2:compile" -> "com.alibaba.fastjson2:fastjson2:jar:2.0.15:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.25:compile" -> "org.springframework:spring-aop:jar:5.3.25:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.25:compile" -> "org.springframework:spring-beans:jar:5.3.25:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.25:compile" -> "org.springframework:spring-core:jar:5.3.25:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.25:compile" -> "org.springframework:spring-expression:jar:5.3.25:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.25:compile" -> "org.springframework:spring-jcl:jar:5.3.25:compile" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-buffer:jar:4.1.92.Final:compile" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-codec:jar:4.1.92.Final:compile" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-codec-dns:jar:4.1.92.Final:compile" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-codec-haproxy:jar:4.1.92.Final:compile" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-codec-http:jar:4.1.92.Final:compile" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-codec-http2:jar:4.1.92.Final:compile" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-codec-memcache:jar:4.1.92.Final:compile" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-codec-mqtt:jar:4.1.92.Final:compile" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-codec-redis:jar:4.1.92.Final:compile" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-codec-smtp:jar:4.1.92.Final:compile" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-codec-socks:jar:4.1.92.Final:compile" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-codec-stomp:jar:4.1.92.Final:compile" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-codec-xml:jar:4.1.92.Final:compile" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-common:jar:4.1.92.Final:compile" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-handler:jar:4.1.92.Final:compile" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.92.Final:compile" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-handler-proxy:jar:4.1.92.Final:compile" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-handler-ssl-ocsp:jar:4.1.92.Final:compile" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-resolver:jar:4.1.92.Final:compile" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-resolver-dns:jar:4.1.92.Final:compile" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-transport:jar:4.1.92.Final:compile" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-transport-rxtx:jar:4.1.92.Final:compile" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-transport-sctp:jar:4.1.92.Final:compile" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-transport-udt:jar:4.1.92.Final:compile" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-transport-classes-epoll:jar:4.1.92.Final:compile" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-transport-classes-kqueue:jar:4.1.92.Final:compile" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-resolver-dns-classes-macos:jar:4.1.92.Final:compile" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.92.Final:runtime" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-transport-native-epoll:jar:linux-aarch_64:4.1.92.Final:runtime" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-transport-native-kqueue:jar:osx-x86_64:4.1.92.Final:runtime" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-transport-native-kqueue:jar:osx-aarch_64:4.1.92.Final:runtime" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-resolver-dns-native-macos:jar:osx-x86_64:4.1.92.Final:runtime" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.92.Final:compile" -> "io.netty:netty-resolver-dns-native-macos:jar:osx-aarch_64:4.1.92.Final:runtime" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------------< cn.dev33:sa-token-grpc >-----------------------
+[INFO] Building sa-token-grpc 1.37.0                                    [34/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/io/grpc/grpc-api/maven-metadata.xml
+[INFO] Downloaded from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/io/grpc/grpc-api/maven-metadata.xml (600 B at 463 B/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sa-token-grpc ---
+[INFO] digraph "cn.dev33:sa-token-grpc:jar:1.37.0" { 
+[INFO] 	"cn.dev33:sa-token-grpc:jar:1.37.0" -> "net.devh:grpc-spring-boot-starter:jar:2.10.1.RELEASE:compile" ; 
+[INFO] 	"cn.dev33:sa-token-grpc:jar:1.37.0" -> "cn.dev33:sa-token-core:jar:1.37.0:compile" ; 
+[INFO] 	"cn.dev33:sa-token-grpc:jar:1.37.0" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.5.15:compile" ; 
+[INFO] 	"net.devh:grpc-spring-boot-starter:jar:2.10.1.RELEASE:compile" -> "net.devh:grpc-server-spring-boot-starter:jar:2.10.1.RELEASE:compile" ; 
+[INFO] 	"net.devh:grpc-spring-boot-starter:jar:2.10.1.RELEASE:compile" -> "net.devh:grpc-client-spring-boot-starter:jar:2.10.1.RELEASE:compile" ; 
+[INFO] 	"net.devh:grpc-server-spring-boot-starter:jar:2.10.1.RELEASE:compile" -> "net.devh:grpc-server-spring-boot-autoconfigure:jar:2.10.1.RELEASE:compile" ; 
+[INFO] 	"net.devh:grpc-server-spring-boot-autoconfigure:jar:2.10.1.RELEASE:compile" -> "net.devh:grpc-common-spring-boot:jar:2.10.1.RELEASE:compile" ; 
+[INFO] 	"net.devh:grpc-server-spring-boot-autoconfigure:jar:2.10.1.RELEASE:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" ; 
+[INFO] 	"net.devh:grpc-server-spring-boot-autoconfigure:jar:2.10.1.RELEASE:compile" -> "io.grpc:grpc-netty-shaded:jar:1.31.1:compile" ; 
+[INFO] 	"net.devh:grpc-server-spring-boot-autoconfigure:jar:2.10.1.RELEASE:compile" -> "io.grpc:grpc-protobuf:jar:1.31.1:compile" ; 
+[INFO] 	"net.devh:grpc-server-spring-boot-autoconfigure:jar:2.10.1.RELEASE:compile" -> "io.grpc:grpc-stub:jar:1.31.1:compile" ; 
+[INFO] 	"net.devh:grpc-server-spring-boot-autoconfigure:jar:2.10.1.RELEASE:compile" -> "io.grpc:grpc-services:jar:1.31.1:compile" ; 
+[INFO] 	"net.devh:grpc-server-spring-boot-autoconfigure:jar:2.10.1.RELEASE:compile" -> "io.grpc:grpc-api:jar:1.31.1:compile" ; 
+[INFO] 	"net.devh:grpc-common-spring-boot:jar:2.10.1.RELEASE:compile" -> "io.grpc:grpc-core:jar:1.31.1:compile" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.31.1:compile" -> "com.google.code.gson:gson:jar:2.8.6:runtime" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.31.1:compile" -> "com.google.android:annotations:jar:4.1.1.4:runtime" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.31.1:compile" -> "io.perfmark:perfmark-api:jar:0.19.0:runtime" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.springframework:spring-core:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.15:compile" -> "org.yaml:snakeyaml:jar:1.28:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.5.15:compile" -> "org.springframework:spring-context:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-aop:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-beans:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-expression:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "ch.qos.logback:logback-classic:jar:1.2.12:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.15:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:compile" -> "ch.qos.logback:logback-core:jar:1.2.12:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:compile" -> "org.slf4j:slf4j-api:jar:1.7.32:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.27:compile" -> "org.springframework:spring-jcl:jar:5.3.27:compile" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.31.1:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.31.1:compile" -> "com.google.protobuf:protobuf-java:jar:3.12.0:compile" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.31.1:compile" -> "com.google.api.grpc:proto-google-common-protos:jar:1.17.0:compile" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.31.1:compile" -> "io.grpc:grpc-protobuf-lite:jar:1.31.1:compile" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.31.1:compile" -> "com.google.guava:guava:jar:29.0-android:compile" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.31.1:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.3.4:compile" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.31.1:compile" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.18:runtime" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-android:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-android:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-android:compile" -> "org.checkerframework:checker-compat-qual:jar:2.5.5:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-android:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"io.grpc:grpc-services:jar:1.31.1:compile" -> "com.google.protobuf:protobuf-java-util:jar:3.12.0:runtime" ; 
+[INFO] 	"io.grpc:grpc-api:jar:1.31.1:compile" -> "io.grpc:grpc-context:jar:1.31.1:compile" ; 
+[INFO] 	"net.devh:grpc-client-spring-boot-starter:jar:2.10.1.RELEASE:compile" -> "net.devh:grpc-client-spring-boot-autoconfigure:jar:2.10.1.RELEASE:compile" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for sa-token 1.37.0:
+[INFO] 
+[INFO] sa-token-dependencies .............................. SUCCESS [  3.879 s]
+[INFO] sa-token-bom ....................................... SUCCESS [  0.021 s]
+[INFO] sa-token ........................................... SUCCESS [  0.242 s]
+[INFO] sa-token-core ...................................... SUCCESS [  0.084 s]
+[INFO] sa-token-starter ................................... SUCCESS [  0.018 s]
+[INFO] sa-token-servlet ................................... SUCCESS [  0.096 s]
+[INFO] sa-token-jakarta-servlet ........................... SUCCESS [  0.073 s]
+[INFO] sa-token-plugin .................................... SUCCESS [  0.036 s]
+[INFO] sa-token-oauth2 .................................... SUCCESS [  0.069 s]
+[INFO] sa-token-sso ....................................... SUCCESS [  0.045 s]
+[INFO] sa-token-spring-boot-autoconfig .................... SUCCESS [  0.314 s]
+[INFO] sa-token-spring-boot-starter ....................... SUCCESS [  0.165 s]
+[INFO] sa-token-spring-boot3-starter ...................... SUCCESS [  0.222 s]
+[INFO] sa-token-reactor-spring-boot-starter ............... SUCCESS [  0.122 s]
+[INFO] sa-token-reactor-spring-boot3-starter .............. SUCCESS [  0.172 s]
+[INFO] sa-token-solon-plugin .............................. SUCCESS [  0.444 s]
+[INFO] sa-token-jboot-plugin .............................. SUCCESS [  0.717 s]
+[INFO] sa-token-jfinal-plugin ............................. SUCCESS [  0.114 s]
+[INFO] sa-token-redis ..................................... SUCCESS [  0.268 s]
+[INFO] sa-token-redis-jackson ............................. SUCCESS [  0.066 s]
+[INFO] sa-token-redis-fastjson ............................ SUCCESS [  0.032 s]
+[INFO] sa-token-redis-fastjson2 ........................... SUCCESS [  0.109 s]
+[INFO] sa-token-redisson-jackson .......................... SUCCESS [  0.268 s]
+[INFO] sa-token-redisson-jackson2 ......................... SUCCESS [  0.075 s]
+[INFO] sa-token-redisx .................................... SUCCESS [  0.162 s]
+[INFO] sa-token-alone-redis ............................... SUCCESS [  0.113 s]
+[INFO] sa-token-dialect-thymeleaf ......................... SUCCESS [  0.021 s]
+[INFO] sa-token-quick-login ............................... SUCCESS [  0.134 s]
+[INFO] sa-token-spring-aop ................................ SUCCESS [  0.037 s]
+[INFO] sa-token-temp-jwt .................................. SUCCESS [  0.022 s]
+[INFO] sa-token-jwt ....................................... SUCCESS [  0.033 s]
+[INFO] sa-token-dubbo ..................................... SUCCESS [  0.117 s]
+[INFO] sa-token-dubbo3 .................................... SUCCESS [  0.186 s]
+[INFO] sa-token-grpc ...................................... SUCCESS [  2.612 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.400 s
+[INFO] Finished at: 2023-12-28T09:02:48+01:00
+[INFO] ------------------------------------------------------------------------

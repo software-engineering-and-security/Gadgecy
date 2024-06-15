@@ -1,0 +1,843 @@
+{
+  "projectReports" : [ {
+    "name" : "amazon-dynamodb-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/amazon-dynamodb-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "amazon-dynamodb-quickstart"
+  }, {
+    "name" : "amazon-kms-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/amazon-kms-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "amazon-kms-quickstart"
+  }, {
+    "name" : "amazon-s3-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/amazon-s3-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "amazon-s3-quickstart"
+  }, {
+    "name" : "amazon-ses-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/amazon-ses-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "amazon-ses-quickstart"
+  }, {
+    "name" : "amazon-sns-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/amazon-sns-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "amazon-sns-quickstart"
+  }, {
+    "name" : "amazon-sqs-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/amazon-sqs-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "amazon-sqs-quickstart"
+  }, {
+    "name" : "amazon-ssm-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/amazon-ssm-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "amazon-ssm-quickstart"
+  }, {
+    "name" : "amqp-quickstart-producer",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/amqp-quickstart/amqp-quickstart-producer",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "amqp-quickstart-producer"
+  }, {
+    "name" : "amqp-quickstart-processor",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/amqp-quickstart/amqp-quickstart-processor",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "amqp-quickstart-processor"
+  }, {
+    "name" : "amqp-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/amqp-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "amqp-quickstart"
+  }, {
+    "name" : "awt-graphics-rest-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/awt-graphics-rest-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "awt-graphics-rest-quickstart"
+  }, {
+    "name" : "cache-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/cache-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "cache-quickstart"
+  }, {
+    "name" : "config-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/config-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "config-quickstart"
+  }, {
+    "name" : "context-propagation-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/context-propagation-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "context-propagation-quickstart"
+  }, {
+    "name" : "elasticsearch-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/elasticsearch-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "elasticsearch-quickstart"
+  }, {
+    "name" : "funqy-http-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/funqy-quickstarts/funqy-http-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "funqy-http-quickstart"
+  }, {
+    "name" : "funqy-amazon-lambda-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/funqy-quickstarts/funqy-amazon-lambda-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "funqy-amazon-lambda-quickstart"
+  }, {
+    "name" : "funqy-amazon-lambda-http-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/funqy-quickstarts/funqy-amazon-lambda-http-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "funqy-amazon-lambda-http-quickstart"
+  }, {
+    "name" : "funqy-knative-events-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/funqy-quickstarts/funqy-knative-events-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "funqy-knative-events-quickstart"
+  }, {
+    "name" : "funqy-google-cloud-functions-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/funqy-quickstarts/funqy-google-cloud-functions-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "funqy-google-cloud-functions-quickstart"
+  }, {
+    "name" : "funqy-google-cloud-functions-http-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/funqy-quickstarts/funqy-google-cloud-functions-http-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "funqy-google-cloud-functions-http-quickstart"
+  }, {
+    "name" : "funqy-quickstart-projects",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/funqy-quickstarts",
+    "error" : null,
+    "groupId" : "io.quarkus.quickstarts",
+    "artifactId" : "funqy-quickstart-projects"
+  }, {
+    "name" : "getting-started",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/getting-started",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "getting-started"
+  }, {
+    "name" : "getting-started-async",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/getting-started-async",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "getting-started-async"
+  }, {
+    "name" : "getting-started-reactive",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/getting-started-reactive",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "getting-started-reactive"
+  }, {
+    "name" : "getting-started-reactive-rest",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/getting-started-reactive-crud",
+    "error" : null,
+    "groupId" : "io.quarkus.quickstarts",
+    "artifactId" : "getting-started-reactive-rest"
+  }, {
+    "name" : "getting-started-knative",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/getting-started-knative",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "getting-started-knative"
+  }, {
+    "name" : "getting-started-testing",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/getting-started-testing",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "getting-started-testing"
+  }, {
+    "name" : "getting-started-command-mode",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/getting-started-command-mode",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "getting-started-command-mode"
+  }, {
+    "name" : "code-with-quarkus",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/getting-started-dev-services",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "code-with-quarkus"
+  }, {
+    "name" : "google-cloud-functions-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/google-cloud-functions-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "google-cloud-functions-quickstart"
+  }, {
+    "name" : "google-cloud-functions-http-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/google-cloud-functions-http-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "google-cloud-functions-http-quickstart"
+  }, {
+    "name" : "hibernate-orm-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/hibernate-orm-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "hibernate-orm-quickstart"
+  }, {
+    "name" : "hibernate-reactive-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/hibernate-reactive-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "hibernate-reactive-quickstart"
+  }, {
+    "name" : "hibernate-reactive-stateless-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/hibernate-reactive-stateless-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "hibernate-reactive-stateless-quickstart"
+  }, {
+    "name" : "hibernate-reactive-routes-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/hibernate-reactive-routes-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "hibernate-reactive-routes-quickstart"
+  }, {
+    "name" : "grpc-plain-text-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/grpc-plain-text-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "grpc-plain-text-quickstart"
+  }, {
+    "name" : "grpc-tls-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/grpc-tls-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "grpc-tls-quickstart"
+  }, {
+    "name" : "hibernate-orm-panache-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/hibernate-orm-panache-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "hibernate-orm-panache-quickstart"
+  }, {
+    "name" : "hibernate-orm-panache-kotlin-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/hibernate-orm-panache-kotlin-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "hibernate-orm-panache-kotlin-quickstart"
+  }, {
+    "name" : "hibernate-reactive-panache-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/hibernate-reactive-panache-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "hibernate-reactive-panache-quickstart"
+  }, {
+    "name" : "hibernate-orm-multi-tenancy-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/hibernate-orm-multi-tenancy-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "hibernate-orm-multi-tenancy-quickstart"
+  }, {
+    "name" : "hibernate-search-orm-elasticsearch-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/hibernate-search-orm-elasticsearch-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "hibernate-search-orm-elasticsearch-quickstart"
+  }, {
+    "name" : "hibernate-orm-rest-data-panache-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/hibernate-orm-rest-data-panache-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "hibernate-orm-rest-data-panache-quickstart"
+  }, {
+    "name" : "infinispan-client-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/infinispan-client-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "infinispan-client-quickstart"
+  }, {
+    "name" : "jms-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/jms-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "jms-quickstart"
+  }, {
+    "name" : "kafka-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/kafka-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "kafka-quickstart"
+  }, {
+    "name" : "kafka-quickstart-producer",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/kafka-quickstart/producer",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "kafka-quickstart-producer"
+  }, {
+    "name" : "kafka-quickstart-processor",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/kafka-quickstart/processor",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "kafka-quickstart-processor"
+  }, {
+    "name" : "kafka-avro-schema-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/kafka-avro-schema-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "kafka-avro-schema-quickstart"
+  }, {
+    "name" : "kafka-bare-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/kafka-bare-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "kafka-bare-quickstart"
+  }, {
+    "name" : "kafka-streams-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/kafka-streams-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "kafka-streams-quickstart"
+  }, {
+    "name" : "kafka-streams-quickstart-producer",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/kafka-streams-quickstart/producer",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "kafka-streams-quickstart-producer"
+  }, {
+    "name" : "kafka-streams-quickstart-aggregator",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/kafka-streams-quickstart/aggregator",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "kafka-streams-quickstart-aggregator"
+  }, {
+    "name" : "optaplanner-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/optaplanner-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "optaplanner-quickstart"
+  }, {
+    "name" : "lifecycle-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/lifecycle-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "lifecycle-quickstart"
+  }, {
+    "name" : "micrometer-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/micrometer-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "micrometer-quickstart"
+  }, {
+    "name" : "microprofile-fault-tolerance-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/microprofile-fault-tolerance-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "microprofile-fault-tolerance-quickstart"
+  }, {
+    "name" : "microprofile-graphql-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/microprofile-graphql-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "microprofile-graphql-quickstart"
+  }, {
+    "name" : "microprofile-graphql-client-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/microprofile-graphql-client-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "microprofile-graphql-client-quickstart"
+  }, {
+    "name" : "microprofile-health-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/microprofile-health-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "microprofile-health-quickstart"
+  }, {
+    "name" : "microprofile-metrics-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/microprofile-metrics-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "microprofile-metrics-quickstart"
+  }, {
+    "name" : "mongodb-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/mongodb-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "mongodb-quickstart"
+  }, {
+    "name" : "mongodb-panache-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/mongodb-panache-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "mongodb-panache-quickstart"
+  }, {
+    "name" : "mqtt-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/mqtt-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "mqtt-quickstart"
+  }, {
+    "name" : "openapi-swaggerui-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/openapi-swaggerui-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "openapi-swaggerui-quickstart"
+  }, {
+    "name" : "opentracing-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/opentracing-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "opentracing-quickstart"
+  }, {
+    "name" : "opentelemetry-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/opentelemetry-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "opentelemetry-quickstart"
+  }, {
+    "name" : "pulsar-quickstart-producer",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/pulsar-quickstart/pulsar-quickstart-producer",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "pulsar-quickstart-producer"
+  }, {
+    "name" : "pulsar-quickstart-processor",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/pulsar-quickstart/pulsar-quickstart-processor",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "pulsar-quickstart-processor"
+  }, {
+    "name" : "pulsar-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/pulsar-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "pulsar-quickstart"
+  }, {
+    "name" : "quartz-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/quartz-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "quartz-quickstart"
+  }, {
+    "name" : "qute-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/qute-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "qute-quickstart"
+  }, {
+    "name" : "rabbitmq-quickstart-producer",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/rabbitmq-quickstart/rabbitmq-quickstart-producer",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "rabbitmq-quickstart-producer"
+  }, {
+    "name" : "rabbitmq-quickstart-processor",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/rabbitmq-quickstart/rabbitmq-quickstart-processor",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "rabbitmq-quickstart-processor"
+  }, {
+    "name" : "rabbitmq-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/rabbitmq-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "rabbitmq-quickstart"
+  }, {
+    "name" : "rest-client-reactive-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/rest-client-reactive-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "rest-client-reactive-quickstart"
+  }, {
+    "name" : "reactive-routes-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/reactive-routes-quickstart",
+    "error" : null,
+    "groupId" : "io.quarkus.quickstarts",
+    "artifactId" : "reactive-routes-quickstart"
+  }, {
+    "name" : "quickstart-projects",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts",
+    "error" : null,
+    "groupId" : "io.quarkus.quickstarts",
+    "artifactId" : "quickstart-projects"
+  }, {
+    "name" : "reactive-messaging-http-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/reactive-messaging-http-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "reactive-messaging-http-quickstart"
+  }, {
+    "name" : "reactive-messaging-websockets-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/reactive-messaging-websockets-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "reactive-messaging-websockets-quickstart"
+  }, {
+    "name" : "redis-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/redis-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "redis-quickstart"
+  }, {
+    "name" : "rest-client-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/rest-client-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "rest-client-quickstart"
+  }, {
+    "name" : "rest-client-multipart-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/rest-client-multipart-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "rest-client-multipart-quickstart"
+  }, {
+    "name" : "rest-json-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/rest-json-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "rest-json-quickstart"
+  }, {
+    "name" : "scheduler-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/scheduler-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "scheduler-quickstart"
+  }, {
+    "name" : "security-jdbc-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/security-jdbc-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "security-jdbc-quickstart"
+  }, {
+    "name" : "security-jpa-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/security-jpa-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "security-jpa-quickstart"
+  }, {
+    "name" : "security-jpa-reactive-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/security-jpa-reactive-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "security-jpa-reactive-quickstart"
+  }, {
+    "name" : "security-jwt-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/security-jwt-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "security-jwt-quickstart"
+  }, {
+    "name" : "security-keycloak-authorization-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/security-keycloak-authorization-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "security-keycloak-authorization-quickstart"
+  }, {
+    "name" : "security-ldap-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/security-ldap-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "security-ldap-quickstart"
+  }, {
+    "name" : "security-oauth2-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/security-oauth2-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "security-oauth2-quickstart"
+  }, {
+    "name" : "security-openid-connect-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/security-openid-connect-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "security-openid-connect-quickstart"
+  }, {
+    "name" : "security-openid-connect-client-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/security-openid-connect-client-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "security-openid-connect-client-quickstart"
+  }, {
+    "name" : "security-openid-connect-web-authentication-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/security-openid-connect-web-authentication-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "security-openid-connect-web-authentication-quickstart"
+  }, {
+    "name" : "security-openid-connect-multi-tenancy-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/security-openid-connect-multi-tenancy-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "security-openid-connect-multi-tenancy-quickstart"
+  }, {
+    "name" : "security-webauthn-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/security-webauthn-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "security-webauthn-quickstart"
+  }, {
+    "name" : "software-transactional-memory-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/software-transactional-memory-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "software-transactional-memory-quickstart"
+  }, {
+    "name" : "spring-di-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/spring-di-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "spring-di-quickstart"
+  }, {
+    "name" : "spring-web-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/spring-web-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "spring-web-quickstart"
+  }, {
+    "name" : "spring-data-jpa-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/spring-data-jpa-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "spring-data-jpa-quickstart"
+  }, {
+    "name" : "spring-security-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/spring-security-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "spring-security-quickstart"
+  }, {
+    "name" : "spring-scheduled-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/spring-scheduled-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "spring-scheduled-quickstart"
+  }, {
+    "name" : "spring-boot-properties-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/spring-boot-properties-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "spring-boot-properties-quickstart"
+  }, {
+    "name" : "spring-data-rest-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/spring-data-rest-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "spring-data-rest-quickstart"
+  }, {
+    "name" : "stork-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/stork-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "stork-quickstart"
+  }, {
+    "name" : "stork-kubernetes-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/stork-kubernetes-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "stork-kubernetes-quickstart"
+  }, {
+    "name" : "stork-dns-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/stork-dns-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "stork-dns-quickstart"
+  }, {
+    "name" : "tests-with-coverage-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/tests-with-coverage-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "tests-with-coverage-quickstart"
+  }, {
+    "name" : "tika-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/tika-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "tika-quickstart"
+  }, {
+    "name" : "validation-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/validation-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "validation-quickstart"
+  }, {
+    "name" : "vertx-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/vertx-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "vertx-quickstart"
+  }, {
+    "name" : "websockets-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/websockets-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "websockets-quickstart"
+  }, {
+    "name" : "liquibase-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/liquibase-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "liquibase-quickstart"
+  }, {
+    "name" : "liquibase-mongodb-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/liquibase-mongodb-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "liquibase-mongodb-quickstart"
+  }, {
+    "name" : "mailer-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/mailer-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "mailer-quickstart"
+  }, {
+    "name" : "kafka-panache-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/kafka-panache-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "kafka-panache-quickstart"
+  }, {
+    "name" : "kafka-panache-reactive-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/kafka-panache-reactive-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "kafka-panache-reactive-quickstart"
+  }, {
+    "name" : "jta-quickstart",
+    "status" : "SUCCESS",
+    "basedir" : "../apache-ysoserial-vuln/pom/quarkusio-quarkus-quickstarts/jta-quickstart",
+    "error" : null,
+    "groupId" : "org.acme",
+    "artifactId" : "jta-quickstart"
+  } ]
+}

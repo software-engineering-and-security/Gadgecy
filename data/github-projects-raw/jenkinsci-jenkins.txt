@@ -1,0 +1,655 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.jenkins-ci.main:jenkins-bom:pom:2.436-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.codehaus.mojo:flatten-maven-plugin is missing. @ org.jenkins-ci.main:jenkins-bom:${revision}${changelist}, /home/brunok/apache-ysoserial-vuln/pom/jenkinsci-jenkins/bom/pom.xml, line 378, column 15
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Jenkins main module                                                [pom]
+[INFO] Jenkins BOM                                                        [pom]
+[INFO] Internal SPI for WebSocket                                         [jar]
+[INFO] Jetty 10 implementation for WebSocket                              [jar]
+[INFO] Jenkins cli                                                        [jar]
+[INFO] Jenkins core                                                       [jar]
+[INFO] Jenkins war                                                        [war]
+[INFO] Tests for Jenkins core                                             [jar]
+[INFO] Jenkins coverage                                                   [pom]
+[INFO] 
+[INFO] -----------------< org.jenkins-ci.main:jenkins-parent >-----------------
+[INFO] Building Jenkins main module 2.436-SNAPSHOT                        [1/9]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ jenkins-parent ---
+[INFO] digraph "org.jenkins-ci.main:jenkins-parent:pom:2.436-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< org.jenkins-ci.main:jenkins-bom >-------------------
+[INFO] Building Jenkins BOM 2.436-SNAPSHOT                                [2/9]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/codehaus/mojo/flatten-maven-plugin/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ jenkins-bom ---
+[INFO] digraph "org.jenkins-ci.main:jenkins-bom:pom:2.436-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.jenkins-ci.main:websocket-spi >------------------
+[INFO] Building Internal SPI for WebSocket 2.436-SNAPSHOT                 [3/9]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ websocket-spi ---
+[INFO] digraph "org.jenkins-ci.main:websocket-spi:jar:2.436-SNAPSHOT" { 
+[INFO] 	"org.jenkins-ci.main:websocket-spi:jar:2.436-SNAPSHOT" -> "jakarta.servlet:jakarta.servlet-api:jar:4.0.4:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.jenkins-ci.main:websocket-jetty10 >----------------
+[INFO] Building Jetty 10 implementation for WebSocket 2.436-SNAPSHOT      [4/9]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/jenkins-ci/main/websocket-spi/2.436-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ websocket-jetty10 ---
+[INFO] digraph "org.jenkins-ci.main:websocket-jetty10:jar:2.436-SNAPSHOT" { 
+[INFO] 	"org.jenkins-ci.main:websocket-jetty10:jar:2.436-SNAPSHOT" -> "org.jenkins-ci:winstone:jar:6.16:compile" ; 
+[INFO] 	"org.jenkins-ci.main:websocket-jetty10:jar:2.436-SNAPSHOT" -> "org.jenkins-ci.main:websocket-spi:jar:2.436-SNAPSHOT:compile" ; 
+[INFO] 	"org.jenkins-ci.main:websocket-jetty10:jar:2.436-SNAPSHOT" -> "org.kohsuke:access-modifier-annotation:jar:1.33:compile" ; 
+[INFO] 	"org.jenkins-ci.main:websocket-jetty10:jar:2.436-SNAPSHOT" -> "org.kohsuke.metainf-services:metainf-services:jar:1.11:compile" ; 
+[INFO] 	"org.jenkins-ci.main:websocket-spi:jar:2.436-SNAPSHOT:compile" -> "jakarta.servlet:jakarta.servlet-api:jar:4.0.4:compile" ; 
+[INFO] 	"org.kohsuke:access-modifier-annotation:jar:1.33:compile" -> "org.jenkins-ci:annotation-indexer:jar:1.17:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< org.jenkins-ci.main:cli >-----------------------
+[INFO] Building Jenkins cli 2.436-SNAPSHOT                                [5/9]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ cli ---
+[INFO] digraph "org.jenkins-ci.main:cli:jar:2.436-SNAPSHOT" { 
+[INFO] 	"org.jenkins-ci.main:cli:jar:2.436-SNAPSHOT" -> "commons-io:commons-io:jar:2.15.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:cli:jar:2.436-SNAPSHOT" -> "commons-lang:commons-lang:jar:2.6:compile" ; 
+[INFO] 	"org.jenkins-ci.main:cli:jar:2.436-SNAPSHOT" -> "net.i2p.crypto:eddsa:jar:0.3.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:cli:jar:2.436-SNAPSHOT" -> "org.apache.sshd:sshd-common:jar:2.11.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:cli:jar:2.436-SNAPSHOT" -> "org.apache.sshd:sshd-core:jar:2.11.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:cli:jar:2.436-SNAPSHOT" -> "org.glassfish.tyrus.bundles:tyrus-standalone-client-jdk:jar:2.1.4:compile" ; 
+[INFO] 	"org.jenkins-ci.main:cli:jar:2.436-SNAPSHOT" -> "org.jenkins-ci:annotation-indexer:jar:1.17:compile" ; 
+[INFO] 	"org.jenkins-ci.main:cli:jar:2.436-SNAPSHOT" -> "org.jvnet.localizer:localizer:jar:1.31:compile" ; 
+[INFO] 	"org.jenkins-ci.main:cli:jar:2.436-SNAPSHOT" -> "org.slf4j:slf4j-jdk14:jar:2.0.9:compile" ; 
+[INFO] 	"org.jenkins-ci.main:cli:jar:2.436-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.8.0:provided" ; 
+[INFO] 	"org.jenkins-ci.main:cli:jar:2.436-SNAPSHOT" -> "org.kohsuke:access-modifier-annotation:jar:1.33:provided" ; 
+[INFO] 	"org.jenkins-ci.main:cli:jar:2.436-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.sshd:sshd-common:jar:2.11.0:compile" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"org.apache.sshd:sshd-common:jar:2.11.0:compile" -> "org.slf4j:jcl-over-slf4j:jar:2.0.9:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< org.jenkins-ci.main:jenkins-core >------------------
+[INFO] Building Jenkins core 2.436-SNAPSHOT                               [6/9]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/jenkins-ci/main/cli/2.436-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ jenkins-core ---
+[INFO] digraph "org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" { 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.jenkins-ci.main:cli:jar:2.436-SNAPSHOT:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.jenkins-ci.main:remoting:jar:3192.v713e3b_039fb_e:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "args4j:args4j:jar:2.33:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.8.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "com.google.guava:guava:jar:32.1.3-jre:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "com.google.inject:guice:jar:6.0.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "com.infradna.tool:bridge-method-annotation:jar:1.29:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "com.jcraft:jzlib:jar:1.1.3-kohsuke-1:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "com.sun.solaris:embedded_su4j:jar:1.1:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "com.sun.xml.txw2:txw2:jar:20110809:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "com.thoughtworks.xstream:xstream:jar:1.4.20:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "commons-beanutils:commons-beanutils:jar:1.9.4:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "commons-codec:commons-codec:jar:1.16.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "commons-fileupload:commons-fileupload:jar:1.5:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "commons-io:commons-io:jar:2.15.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "commons-jelly:commons-jelly-tags-fmt:jar:1.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "commons-jelly:commons-jelly-tags-xml:jar:1.1:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "commons-lang:commons-lang:jar:2.6:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "io.jenkins.stapler:jenkins-stapler-support:jar:1.1:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:jar:1.2.7:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "jaxen:jaxen:jar:2.0.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "jline:jline:jar:2.14.6:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "net.java.dev.jna:jna:jar:5.13.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "net.java.sezpoz:sezpoz:jar:1.13:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "net.jcip:jcip-annotations:jar:1.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.antlr:antlr4-runtime:jar:4.13.1:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.apache.ant:ant:jar:1.10.14:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.apache.commons:commons-compress:jar:1.25.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.codehaus.groovy:groovy-all:jar:2.4.21:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.connectbot.jbcrypt:jbcrypt:jar:1.0.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.fusesource.jansi:jansi:jar:1.11:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.jenkins-ci:annotation-indexer:jar:1.17:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.jenkins-ci:commons-jexl:jar:1.1-jenkins-20111212:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.jenkins-ci:crypto-util:jar:1.9:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.jenkins-ci:memory-monitor:jar:1.12:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.jenkins-ci:symbol-annotation:jar:1.24:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.jenkins-ci:task-reactor:jar:1.8:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.jenkins-ci:version-number:jar:1.11:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.jenkins-ci.main:websocket-spi:jar:2.436-SNAPSHOT:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.jfree:jfreechart:jar:1.0.19:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.jvnet.hudson:commons-jelly-tags-define:jar:1.1-jenkins-20230713:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.jvnet.localizer:localizer:jar:1.31:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.jvnet.robust-http-client:robust-http-client:jar:1.2:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.jvnet.winp:winp:jar:1.30:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.kohsuke:access-modifier-annotation:jar:1.33:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.kohsuke:windows-package-checker:jar:1.2:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.kohsuke.jinterop:j-interop:jar:2.0.8-kohsuke-1:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.kohsuke.metainf-services:metainf-services:jar:1.11:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.kohsuke.stapler:json-lib:jar:2.4-jenkins-3:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.kohsuke.stapler:stapler:jar:1822.v120278426e1c:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.kohsuke.stapler:stapler-adjunct-codemirror:jar:1.3:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.kohsuke.stapler:stapler-groovy:jar:1822.v120278426e1c:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.ow2.asm:asm:jar:9.6:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.ow2.asm:asm-analysis:jar:9.6:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.ow2.asm:asm-commons:jar:9.6:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.ow2.asm:asm-tree:jar:9.6:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.ow2.asm:asm-util:jar:9.6:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.slf4j:jcl-over-slf4j:jar:2.0.9:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.slf4j:log4j-over-slf4j:jar:2.0.9:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.springframework.security:spring-security-web:jar:5.8.8:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "xpp3:xpp3:jar:1.1.4c:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "jakarta.servlet:jakarta.servlet-api:jar:4.0.4:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.jenkins-ci:core-annotation-processors:jar:13.v2dcfc22a_a_b_29:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.jenkins-ci:test-annotations:jar:1.4:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.6.0:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.slf4j:slf4j-jdk14:jar:2.0.9:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.xmlunit:xmlunit-core:jar:2.9.1:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT" -> "org.xmlunit:xmlunit-matchers:jar:2.9.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.1:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:6.0.0:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:6.0.0:compile" -> "jakarta.inject:jakarta.inject-api:jar:2.0.1:compile" ; 
+[INFO] 	"com.sun.xml.txw2:txw2:jar:20110809:compile" -> "relaxngDatatype:relaxngDatatype:jar:20020414:compile" ; 
+[INFO] 	"com.thoughtworks.xstream:xstream:jar:1.4.20:compile" -> "io.github.x-stream:mxparser:jar:1.2.2:compile" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:compile" -> "commons-logging:commons-logging:jar:1.2:provided" ; 
+[INFO] 	"org.apache.ant:ant:jar:1.10.14:compile" -> "org.apache.ant:ant-launcher:jar:1.10.14:compile" ; 
+[INFO] 	"org.jfree:jfreechart:jar:1.0.19:compile" -> "org.jfree:jcommon:jar:1.0.23:compile" ; 
+[INFO] 	"org.kohsuke.jinterop:j-interop:jar:2.0.8-kohsuke-1:compile" -> "org.kohsuke.jinterop:j-interopdeps:jar:2.0.8-kohsuke-1:compile" ; 
+[INFO] 	"org.kohsuke.jinterop:j-interopdeps:jar:2.0.8-kohsuke-1:compile" -> "org.samba.jcifs:jcifs:jar:1.3.18-kohsuke-1:compile" ; 
+[INFO] 	"org.kohsuke.stapler:json-lib:jar:2.4-jenkins-3:compile" -> "net.sf.ezmorph:ezmorph:jar:1.0.6:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:1822.v120278426e1c:compile" -> "commons-discovery:commons-discovery:jar:0.5:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:1822.v120278426e1c:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:1822.v120278426e1c:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:1822.v120278426e1c:compile" -> "org.jvnet:tiger-types:jar:2.2:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-groovy:jar:1822.v120278426e1c:compile" -> "org.kohsuke.stapler:stapler-jelly:jar:1822.v120278426e1c:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jelly:jar:1822.v120278426e1c:compile" -> "org.dom4j:dom4j:jar:2.1.4:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jelly:jar:1822.v120278426e1c:compile" -> "org.jenkins-ci:commons-jelly:jar:1.1-jenkins-20230713:compile" ; 
+[INFO] 	"org.slf4j:jcl-over-slf4j:jar:2.0.9:compile" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.8:compile" -> "org.springframework.security:spring-security-core:jar:5.8.8:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.8:compile" -> "org.springframework:spring-core:jar:5.3.31:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.8:compile" -> "org.springframework:spring-aop:jar:5.3.31:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.8:compile" -> "org.springframework:spring-beans:jar:5.3.31:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.8:compile" -> "org.springframework:spring-context:jar:5.3.31:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.8:compile" -> "org.springframework:spring-expression:jar:5.3.31:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.8:compile" -> "org.springframework:spring-web:jar:5.3.31:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-core:jar:5.8.8:compile" -> "org.springframework.security:spring-security-crypto:jar:5.8.8:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.6.0:test" -> "net.bytebuddy:byte-buddy:jar:1.14.8:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.6.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.8:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.6.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.xmlunit:xmlunit-core:jar:2.9.1:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:test" ; 
+[INFO] 	"org.xmlunit:xmlunit-matchers:jar:2.9.1:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< org.jenkins-ci.main:jenkins-war >-------------------
+[INFO] Building Jenkins war 2.436-SNAPSHOT                                [7/9]
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/jenkins-ci/main/jenkins-core/2.436-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/jenkins-ci/main/websocket-jetty10/2.436-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ jenkins-war ---
+[INFO] digraph "org.jenkins-ci.main:jenkins-war:war:2.436-SNAPSHOT" { 
+[INFO] 	"org.jenkins-ci.main:jenkins-war:war:2.436-SNAPSHOT" -> "org.jenkins-ci.main:cli:jar:2.436-SNAPSHOT:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-war:war:2.436-SNAPSHOT" -> "org.jenkins-ci.main:remoting:jar:3192.v713e3b_039fb_e:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-war:war:2.436-SNAPSHOT" -> "org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-war:war:2.436-SNAPSHOT" -> "org.jenkins-ci.main:websocket-jetty10:jar:2.436-SNAPSHOT:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-war:war:2.436-SNAPSHOT" -> "org.slf4j:slf4j-jdk14:jar:2.0.9:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-war:war:2.436-SNAPSHOT" -> "org.jenkins-ci:winstone:jar:6.16:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-war:war:2.436-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "args4j:args4j:jar:2.33:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "com.github.spotbugs:spotbugs-annotations:jar:4.8.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "com.google.guava:guava:jar:32.1.3-jre:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "com.google.inject:guice:jar:6.0.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "com.infradna.tool:bridge-method-annotation:jar:1.29:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "com.jcraft:jzlib:jar:1.1.3-kohsuke-1:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "com.sun.solaris:embedded_su4j:jar:1.1:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "com.sun.xml.txw2:txw2:jar:20110809:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "com.thoughtworks.xstream:xstream:jar:1.4.20:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "commons-beanutils:commons-beanutils:jar:1.9.4:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "commons-codec:commons-codec:jar:1.16.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "commons-fileupload:commons-fileupload:jar:1.5:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "commons-io:commons-io:jar:2.15.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "commons-jelly:commons-jelly-tags-fmt:jar:1.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "commons-jelly:commons-jelly-tags-xml:jar:1.1:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "commons-lang:commons-lang:jar:2.6:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "io.jenkins.stapler:jenkins-stapler-support:jar:1.1:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:jar:1.2.7:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "jaxen:jaxen:jar:2.0.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "jline:jline:jar:2.14.6:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "net.java.dev.jna:jna:jar:5.13.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "net.java.sezpoz:sezpoz:jar:1.13:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "net.jcip:jcip-annotations:jar:1.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.antlr:antlr4-runtime:jar:4.13.1:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.apache.ant:ant:jar:1.10.14:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.apache.commons:commons-compress:jar:1.25.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.codehaus.groovy:groovy-all:jar:2.4.21:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.connectbot.jbcrypt:jbcrypt:jar:1.0.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.fusesource.jansi:jansi:jar:1.11:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.jenkins-ci:annotation-indexer:jar:1.17:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.jenkins-ci:commons-jexl:jar:1.1-jenkins-20111212:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.jenkins-ci:crypto-util:jar:1.9:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.jenkins-ci:memory-monitor:jar:1.12:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.jenkins-ci:symbol-annotation:jar:1.24:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.jenkins-ci:task-reactor:jar:1.8:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.jenkins-ci:version-number:jar:1.11:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.jenkins-ci.main:websocket-spi:jar:2.436-SNAPSHOT:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.jfree:jfreechart:jar:1.0.19:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.jvnet.hudson:commons-jelly-tags-define:jar:1.1-jenkins-20230713:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.jvnet.localizer:localizer:jar:1.31:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.jvnet.robust-http-client:robust-http-client:jar:1.2:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.jvnet.winp:winp:jar:1.30:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.kohsuke:access-modifier-annotation:jar:1.33:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.kohsuke:windows-package-checker:jar:1.2:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.kohsuke.jinterop:j-interop:jar:2.0.8-kohsuke-1:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.kohsuke.stapler:json-lib:jar:2.4-jenkins-3:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.kohsuke.stapler:stapler:jar:1822.v120278426e1c:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.kohsuke.stapler:stapler-adjunct-codemirror:jar:1.3:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.kohsuke.stapler:stapler-groovy:jar:1822.v120278426e1c:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.ow2.asm:asm:jar:9.6:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.ow2.asm:asm-analysis:jar:9.6:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.ow2.asm:asm-commons:jar:9.6:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.ow2.asm:asm-tree:jar:9.6:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.ow2.asm:asm-util:jar:9.6:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.slf4j:jcl-over-slf4j:jar:2.0.9:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.slf4j:log4j-over-slf4j:jar:2.0.9:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.springframework.security:spring-security-web:jar:5.8.8:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "xpp3:xpp3:jar:1.1.4c:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:6.0.0:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:6.0.0:compile" -> "jakarta.inject:jakarta.inject-api:jar:2.0.1:compile" ; 
+[INFO] 	"com.sun.xml.txw2:txw2:jar:20110809:compile" -> "relaxngDatatype:relaxngDatatype:jar:20020414:compile" ; 
+[INFO] 	"com.thoughtworks.xstream:xstream:jar:1.4.20:compile" -> "io.github.x-stream:mxparser:jar:1.2.2:compile" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:compile" -> "commons-logging:commons-logging:jar:1.2:provided" ; 
+[INFO] 	"org.apache.ant:ant:jar:1.10.14:compile" -> "org.apache.ant:ant-launcher:jar:1.10.14:compile" ; 
+[INFO] 	"org.jfree:jfreechart:jar:1.0.19:compile" -> "org.jfree:jcommon:jar:1.0.23:compile" ; 
+[INFO] 	"org.kohsuke.jinterop:j-interop:jar:2.0.8-kohsuke-1:compile" -> "org.kohsuke.jinterop:j-interopdeps:jar:2.0.8-kohsuke-1:compile" ; 
+[INFO] 	"org.kohsuke.jinterop:j-interopdeps:jar:2.0.8-kohsuke-1:compile" -> "org.samba.jcifs:jcifs:jar:1.3.18-kohsuke-1:compile" ; 
+[INFO] 	"org.kohsuke.stapler:json-lib:jar:2.4-jenkins-3:compile" -> "net.sf.ezmorph:ezmorph:jar:1.0.6:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:1822.v120278426e1c:compile" -> "commons-discovery:commons-discovery:jar:0.5:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:1822.v120278426e1c:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:1822.v120278426e1c:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:1822.v120278426e1c:compile" -> "org.jvnet:tiger-types:jar:2.2:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-groovy:jar:1822.v120278426e1c:compile" -> "org.kohsuke.stapler:stapler-jelly:jar:1822.v120278426e1c:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jelly:jar:1822.v120278426e1c:compile" -> "org.dom4j:dom4j:jar:2.1.4:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jelly:jar:1822.v120278426e1c:compile" -> "org.jenkins-ci:commons-jelly:jar:1.1-jenkins-20230713:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.8:compile" -> "org.springframework.security:spring-security-core:jar:5.8.8:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.8:compile" -> "org.springframework:spring-core:jar:5.3.31:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.8:compile" -> "org.springframework:spring-aop:jar:5.3.31:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.8:compile" -> "org.springframework:spring-beans:jar:5.3.31:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.8:compile" -> "org.springframework:spring-context:jar:5.3.31:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.8:compile" -> "org.springframework:spring-expression:jar:5.3.31:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.8:compile" -> "org.springframework:spring-web:jar:5.3.31:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-core:jar:5.8.8:compile" -> "org.springframework.security:spring-security-crypto:jar:5.8.8:compile" ; 
+[INFO] 	"org.slf4j:slf4j-jdk14:jar:2.0.9:compile" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< org.jenkins-ci.main:jenkins-test >------------------
+[INFO] Building Tests for Jenkins core 2.436-SNAPSHOT                     [8/9]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/jenkins-ci/main/jenkins-war/2.436-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ jenkins-test ---
+[INFO] digraph "org.jenkins-ci.main:jenkins-test:jar:2.436-SNAPSHOT" { 
+[INFO] 	"org.jenkins-ci.main:jenkins-test:jar:2.436-SNAPSHOT" -> "org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test:jar:2.436-SNAPSHOT" -> "org.jenkins-ci.main:jenkins-test-harness:jar:2118.v03a_2d036b_6c9:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test:jar:2.436-SNAPSHOT" -> "org.jenkins-ci.main:jenkins-test-harness-tools:jar:2.2:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test:jar:2.436-SNAPSHOT" -> "org.jenkins-ci.main:jenkins-war:executable-war:2.436-SNAPSHOT:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test:jar:2.436-SNAPSHOT" -> "io.jenkins.plugins:javax-mail-api:jar:1.6.2-9:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test:jar:2.436-SNAPSHOT" -> "org.awaitility:awaitility:jar:4.2.0:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test:jar:2.436-SNAPSHOT" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test:jar:2.436-SNAPSHOT" -> "org.jenkins-ci:test-annotations:jar:1.4:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test:jar:2.436-SNAPSHOT" -> "org.jenkins-ci.modules:instance-identity:jar:185.v303dc7c645f9:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test:jar:2.436-SNAPSHOT" -> "org.jenkins-ci.plugins:antisamy-markup-formatter:jar:162.v0e6ec0fcfcf6:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test:jar:2.436-SNAPSHOT" -> "org.jenkins-ci.plugins:cloudbees-folder:jar:6.858.v898218f3609d:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test:jar:2.436-SNAPSHOT" -> "org.jenkins-ci.plugins:credentials:jar:1309.v8835d63eb_d8a_:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test:jar:2.436-SNAPSHOT" -> "org.jenkins-ci.plugins:junit:jar:1240.vf9529b_881428:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test:jar:2.436-SNAPSHOT" -> "org.jenkins-ci.plugins:mailer:jar:463.vedf8358e006b_:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test:jar:2.436-SNAPSHOT" -> "org.jenkins-ci.plugins:matrix-auth:jar:3.2.1:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test:jar:2.436-SNAPSHOT" -> "org.jenkins-ci.plugins:matrix-project:jar:818.v7eb_e657db_924:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test:jar:2.436-SNAPSHOT" -> "org.jenkins-ci.plugins:structs:jar:325.vcb_307d2a_2782:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test:jar:2.436-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test:jar:2.436-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test:jar:2.436-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.6.0:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.jenkins-ci.main:cli:jar:2.436-SNAPSHOT:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.jenkins-ci.main:remoting:jar:3192.v713e3b_039fb_e:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "args4j:args4j:jar:2.33:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "com.github.spotbugs:spotbugs-annotations:jar:4.8.0:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "com.google.guava:guava:jar:32.1.3-jre:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "com.google.inject:guice:jar:6.0.0:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "com.infradna.tool:bridge-method-annotation:jar:1.29:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "com.jcraft:jzlib:jar:1.1.3-kohsuke-1:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "com.sun.solaris:embedded_su4j:jar:1.1:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "com.sun.xml.txw2:txw2:jar:20110809:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "com.thoughtworks.xstream:xstream:jar:1.4.20:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "commons-beanutils:commons-beanutils:jar:1.9.4:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "commons-codec:commons-codec:jar:1.16.0:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "commons-collections:commons-collections:jar:3.2.2:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "commons-fileupload:commons-fileupload:jar:1.5:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "commons-io:commons-io:jar:2.15.0:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "commons-jelly:commons-jelly-tags-fmt:jar:1.0:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "commons-jelly:commons-jelly-tags-xml:jar:1.1:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "commons-lang:commons-lang:jar:2.6:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "io.jenkins.stapler:jenkins-stapler-support:jar:1.1:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:jar:1.2.7:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "jaxen:jaxen:jar:2.0.0:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "jline:jline:jar:2.14.6:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "net.java.dev.jna:jna:jar:5.13.0:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "net.java.sezpoz:sezpoz:jar:1.13:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "net.jcip:jcip-annotations:jar:1.0:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.antlr:antlr4-runtime:jar:4.13.1:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.apache.ant:ant:jar:1.10.14:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.apache.commons:commons-compress:jar:1.25.0:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.codehaus.groovy:groovy-all:jar:2.4.21:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.connectbot.jbcrypt:jbcrypt:jar:1.0.0:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.fusesource.jansi:jansi:jar:1.11:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.jenkins-ci:annotation-indexer:jar:1.17:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.jenkins-ci:commons-jexl:jar:1.1-jenkins-20111212:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.jenkins-ci:crypto-util:jar:1.9:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.jenkins-ci:memory-monitor:jar:1.12:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.jenkins-ci:symbol-annotation:jar:1.24:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.jenkins-ci:task-reactor:jar:1.8:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.jenkins-ci:version-number:jar:1.11:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.jenkins-ci.main:websocket-spi:jar:2.436-SNAPSHOT:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.jfree:jfreechart:jar:1.0.19:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.jvnet.hudson:commons-jelly-tags-define:jar:1.1-jenkins-20230713:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.jvnet.localizer:localizer:jar:1.31:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.jvnet.robust-http-client:robust-http-client:jar:1.2:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.jvnet.winp:winp:jar:1.30:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.kohsuke:access-modifier-annotation:jar:1.33:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.kohsuke:windows-package-checker:jar:1.2:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.kohsuke.jinterop:j-interop:jar:2.0.8-kohsuke-1:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.kohsuke.stapler:json-lib:jar:2.4-jenkins-3:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.kohsuke.stapler:stapler:jar:1822.v120278426e1c:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.kohsuke.stapler:stapler-adjunct-codemirror:jar:1.3:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.kohsuke.stapler:stapler-groovy:jar:1822.v120278426e1c:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.ow2.asm:asm:jar:9.6:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.ow2.asm:asm-analysis:jar:9.6:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.ow2.asm:asm-commons:jar:9.6:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.ow2.asm:asm-tree:jar:9.6:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.ow2.asm:asm-util:jar:9.6:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.slf4j:jcl-over-slf4j:jar:2.0.9:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.slf4j:log4j-over-slf4j:jar:2.0.9:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "org.springframework.security:spring-security-web:jar:5.8.8:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:provided" -> "xpp3:xpp3:jar:1.1.4c:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:provided" -> "com.google.guava:failureaccess:jar:1.0.1:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:provided" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.1:provided" ; 
+[INFO] 	"com.google.inject:guice:jar:6.0.0:provided" -> "javax.inject:javax.inject:jar:1:provided" ; 
+[INFO] 	"com.google.inject:guice:jar:6.0.0:provided" -> "jakarta.inject:jakarta.inject-api:jar:2.0.1:provided" ; 
+[INFO] 	"com.sun.xml.txw2:txw2:jar:20110809:provided" -> "relaxngDatatype:relaxngDatatype:jar:20020414:provided" ; 
+[INFO] 	"com.thoughtworks.xstream:xstream:jar:1.4.20:provided" -> "io.github.x-stream:mxparser:jar:1.2.2:provided" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:provided" -> "commons-logging:commons-logging:jar:1.2:provided" ; 
+[INFO] 	"org.apache.ant:ant:jar:1.10.14:provided" -> "org.apache.ant:ant-launcher:jar:1.10.14:provided" ; 
+[INFO] 	"org.jfree:jfreechart:jar:1.0.19:provided" -> "org.jfree:jcommon:jar:1.0.23:provided" ; 
+[INFO] 	"org.kohsuke.jinterop:j-interop:jar:2.0.8-kohsuke-1:provided" -> "org.kohsuke.jinterop:j-interopdeps:jar:2.0.8-kohsuke-1:provided" ; 
+[INFO] 	"org.kohsuke.jinterop:j-interopdeps:jar:2.0.8-kohsuke-1:provided" -> "org.samba.jcifs:jcifs:jar:1.3.18-kohsuke-1:provided" ; 
+[INFO] 	"org.kohsuke.stapler:json-lib:jar:2.4-jenkins-3:provided" -> "net.sf.ezmorph:ezmorph:jar:1.0.6:provided" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:1822.v120278426e1c:provided" -> "commons-discovery:commons-discovery:jar:0.5:provided" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:1822.v120278426e1c:provided" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:provided" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:1822.v120278426e1c:provided" -> "javax.annotation:javax.annotation-api:jar:1.3.2:provided" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:1822.v120278426e1c:provided" -> "org.jvnet:tiger-types:jar:2.2:provided" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-groovy:jar:1822.v120278426e1c:provided" -> "org.kohsuke.stapler:stapler-jelly:jar:1822.v120278426e1c:provided" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jelly:jar:1822.v120278426e1c:provided" -> "org.dom4j:dom4j:jar:2.1.4:provided" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jelly:jar:1822.v120278426e1c:provided" -> "org.jenkins-ci:commons-jelly:jar:1.1-jenkins-20230713:provided" ; 
+[INFO] 	"org.slf4j:jcl-over-slf4j:jar:2.0.9:provided" -> "org.slf4j:slf4j-api:jar:2.0.9:provided" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.8:provided" -> "org.springframework.security:spring-security-core:jar:5.8.8:provided" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.8:provided" -> "org.springframework:spring-core:jar:5.3.31:provided" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.8:provided" -> "org.springframework:spring-aop:jar:5.3.31:provided" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.8:provided" -> "org.springframework:spring-beans:jar:5.3.31:provided" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.8:provided" -> "org.springframework:spring-context:jar:5.3.31:provided" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.8:provided" -> "org.springframework:spring-expression:jar:5.3.31:provided" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.8:provided" -> "org.springframework:spring-web:jar:5.3.31:provided" ; 
+[INFO] 	"org.springframework.security:spring-security-core:jar:5.8.8:provided" -> "org.springframework.security:spring-security-crypto:jar:5.8.8:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test-harness:jar:2118.v03a_2d036b_6c9:test" -> "io.jenkins.lib:support-log-formatter:jar:1.2:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test-harness:jar:2118.v03a_2d036b_6c9:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test-harness:jar:2118.v03a_2d036b_6c9:test" -> "org.eclipse.jetty:jetty-security:jar:10.0.18:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test-harness:jar:2118.v03a_2d036b_6c9:test" -> "org.eclipse.jetty:jetty-webapp:jar:10.0.18:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test-harness:jar:2118.v03a_2d036b_6c9:test" -> "org.eclipse.jetty.websocket:websocket-jetty-server:jar:10.0.18:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test-harness:jar:2118.v03a_2d036b_6c9:test" -> "org.jenkins-ci.main:jenkins-test-harness-htmlunit:jar:164.v87e5a_1809c10:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test-harness:jar:2118.v03a_2d036b_6c9:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test-harness:jar:2118.v03a_2d036b_6c9:test" -> "org.netbeans.modules:org-netbeans-insane:jar:RELEASE200:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test-harness:jar:2118.v03a_2d036b_6c9:test" -> "org.openjdk.jmh:jmh-core:jar:1.37:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test-harness:jar:2118.v03a_2d036b_6c9:test" -> "org.openjdk.jmh:jmh-generator-annprocess:jar:1.37:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-security:jar:10.0.18:test" -> "org.eclipse.jetty:jetty-server:jar:10.0.18:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:10.0.18:test" -> "org.eclipse.jetty:jetty-http:jar:10.0.18:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:10.0.18:test" -> "org.eclipse.jetty:jetty-io:jar:10.0.18:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-webapp:jar:10.0.18:test" -> "org.eclipse.jetty:jetty-servlet:jar:10.0.18:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-webapp:jar:10.0.18:test" -> "org.eclipse.jetty:jetty-xml:jar:10.0.18:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-xml:jar:10.0.18:test" -> "org.eclipse.jetty:jetty-util:jar:10.0.18:test" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-jetty-server:jar:10.0.18:test" -> "org.eclipse.jetty.websocket:websocket-jetty-api:jar:10.0.18:test" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-jetty-server:jar:10.0.18:test" -> "org.eclipse.jetty.websocket:websocket-jetty-common:jar:10.0.18:test" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-jetty-server:jar:10.0.18:test" -> "org.eclipse.jetty.websocket:websocket-servlet:jar:10.0.18:test" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-jetty-server:jar:10.0.18:test" -> "org.eclipse.jetty.toolchain:jetty-servlet-api:jar:4.0.6:test" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-jetty-common:jar:10.0.18:test" -> "org.eclipse.jetty.websocket:websocket-core-common:jar:10.0.18:test" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-servlet:jar:10.0.18:test" -> "org.eclipse.jetty.websocket:websocket-core-server:jar:10.0.18:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"org.openjdk.jmh:jmh-core:jar:1.37:test" -> "net.sf.jopt-simple:jopt-simple:jar:5.0.4:test" ; 
+[INFO] 	"org.openjdk.jmh:jmh-core:jar:1.37:test" -> "org.apache.commons:commons-math3:jar:3.6.1:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test-harness-tools:jar:2.2:test" -> "org.jenkins-ci.plugins:ant:jar:497.v94e7d9fffa_b_9:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test-harness-tools:jar:2.2:test" -> "org.jenkins-ci.plugins:gradle:jar:1.24:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:gradle:jar:1.24:test" -> "org.jenkins-ci.lib:dry-run-lib:jar:0.1:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-war:executable-war:2.436-SNAPSHOT:test" -> "org.jenkins-ci.main:websocket-jetty10:jar:2.436-SNAPSHOT:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-war:executable-war:2.436-SNAPSHOT:test" -> "org.slf4j:slf4j-jdk14:jar:2.0.9:test" ; 
+[INFO] 	"io.jenkins.plugins:javax-mail-api:jar:1.6.2-9:test" -> "com.sun.mail:javax.mail:jar:1.6.2:test" ; 
+[INFO] 	"io.jenkins.plugins:javax-mail-api:jar:1.6.2-9:test" -> "io.jenkins.plugins:javax-activation-api:jar:1.2.0-6:test" ; 
+[INFO] 	"io.jenkins.plugins:javax-activation-api:jar:1.2.0-6:test" -> "com.sun.activation:javax.activation:jar:1.2.0:test" ; 
+[INFO] 	"org.jenkins-ci.modules:instance-identity:jar:185.v303dc7c645f9:test" -> "org.jenkins-ci.plugins:bouncycastle-api:jar:2.27:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:bouncycastle-api:jar:2.27:test" -> "org.bouncycastle:bcpkix-jdk18on:jar:1.72:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:bouncycastle-api:jar:2.27:test" -> "org.bouncycastle:bcprov-jdk18on:jar:1.72:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:bouncycastle-api:jar:2.27:test" -> "org.bouncycastle:bcutil-jdk18on:jar:1.72:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:antisamy-markup-formatter:jar:162.v0e6ec0fcfcf6:test" -> "com.googlecode.owasp-java-html-sanitizer:owasp-java-html-sanitizer:jar:20220608.1:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:cloudbees-folder:jar:6.858.v898218f3609d:test" -> "io.jenkins.plugins:ionicons-api:jar:56.v1b_1c8c49374e:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:junit:jar:1240.vf9529b_881428:test" -> "io.jenkins.plugins:echarts-api:jar:5.4.0-5:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:junit:jar:1240.vf9529b_881428:test" -> "io.jenkins.plugins:checks-api:jar:2.0.0:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:junit:jar:1240.vf9529b_881428:test" -> "io.jenkins.plugins:plugin-util-api:jar:3.3.0:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:junit:jar:1240.vf9529b_881428:test" -> "org.jenkins-ci.plugins:display-url-api:jar:2.200.vb_9327d658781:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:junit:jar:1240.vf9529b_881428:test" -> "io.jenkins.plugins:bootstrap5-api:jar:5.3.0-1:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:junit:jar:1240.vf9529b_881428:test" -> "org.jenkins-ci.plugins.workflow:workflow-step-api:jar:639.v6eca_cd8c04a_a_:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:junit:jar:1240.vf9529b_881428:test" -> "org.jenkins-ci.plugins.workflow:workflow-api:jar:1281.vca_5fddb_3fceb_:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:junit:jar:1240.vf9529b_881428:test" -> "org.jenkins-ci.plugins:script-security:jar:1294.v99333c047434:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:junit:jar:1240.vf9529b_881428:test" -> "org.jenkins-ci.plugins:jackson2-api:jar:2.15.2-350.v0c2f3f8fc595:test" ; 
+[INFO] 	"io.jenkins.plugins:echarts-api:jar:5.4.0-5:test" -> "io.jenkins.plugins:font-awesome-api:jar:6.4.2-1:test" ; 
+[INFO] 	"io.jenkins.plugins:echarts-api:jar:5.4.0-5:test" -> "io.jenkins.plugins:jquery3-api:jar:3.7.0-1:test" ; 
+[INFO] 	"io.jenkins.plugins:checks-api:jar:2.0.0:test" -> "org.jenkins-ci.plugins.workflow:workflow-support:jar:865.v43e78cc44e0d:test" ; 
+[INFO] 	"io.jenkins.plugins:checks-api:jar:2.0.0:test" -> "io.jenkins.plugins:commons-lang3-api:jar:3.13.0-62.v7d18e55f51e2:test" ; 
+[INFO] 	"io.jenkins.plugins:checks-api:jar:2.0.0:test" -> "io.jenkins.plugins:commons-text-api:jar:1.11.0-94.v3e1f4a_926e49:test" ; 
+[INFO] 	"org.jenkins-ci.plugins.workflow:workflow-support:jar:865.v43e78cc44e0d:test" -> "org.jboss.marshalling:jboss-marshalling-river:jar:2.1.2.Final:test" ; 
+[INFO] 	"org.jboss.marshalling:jboss-marshalling-river:jar:2.1.2.Final:test" -> "org.jboss.marshalling:jboss-marshalling:jar:2.1.2.Final:test" ; 
+[INFO] 	"io.jenkins.plugins:commons-lang3-api:jar:3.13.0-62.v7d18e55f51e2:test" -> "org.apache.commons:commons-lang3:jar:3.13.0:test" ; 
+[INFO] 	"io.jenkins.plugins:commons-text-api:jar:1.11.0-94.v3e1f4a_926e49:test" -> "org.apache.commons:commons-text:jar:1.11.0:test" ; 
+[INFO] 	"org.jenkins-ci.plugins.workflow:workflow-api:jar:1281.vca_5fddb_3fceb_:test" -> "org.jenkins-ci.plugins:scm-api:jar:672.v64378a_b_20c60:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:script-security:jar:1294.v99333c047434:test" -> "org.kohsuke:groovy-sandbox:jar:1.33:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:script-security:jar:1294.v99333c047434:test" -> "io.jenkins.plugins:caffeine-api:jar:3.1.8-133.v17b_1ff2e0599:test" ; 
+[INFO] 	"io.jenkins.plugins:caffeine-api:jar:3.1.8-133.v17b_1ff2e0599:test" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.8:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:jackson2-api:jar:2.15.2-350.v0c2f3f8fc595:test" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:jackson2-api:jar:2.15.2-350.v0c2f3f8fc595:test" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.15.2:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:jackson2-api:jar:2.15.2-350.v0c2f3f8fc595:test" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.15.2:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:jackson2-api:jar:2.15.2-350.v0c2f3f8fc595:test" -> "com.fasterxml.jackson.datatype:jackson-datatype-json-org:jar:2.15.2:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:jackson2-api:jar:2.15.2-350.v0c2f3f8fc595:test" -> "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.15.2:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:jackson2-api:jar:2.15.2-350.v0c2f3f8fc595:test" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:jackson2-api:jar:2.15.2-350.v0c2f3f8fc595:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:jackson2-api:jar:2.15.2-350.v0c2f3f8fc595:test" -> "com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.15.2:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:jackson2-api:jar:2.15.2-350.v0c2f3f8fc595:test" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:jar:2.15.2:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:jackson2-api:jar:2.15.2-350.v0c2f3f8fc595:test" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-xml:jar:2.15.2:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:jackson2-api:jar:2.15.2-350.v0c2f3f8fc595:test" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.15.2:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:jackson2-api:jar:2.15.2-350.v0c2f3f8fc595:test" -> "io.jenkins.plugins:jaxb:jar:2.3.8-1:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:jackson2-api:jar:2.15.2-350.v0c2f3f8fc595:test" -> "io.jenkins.plugins:snakeyaml-api:jar:1.33-95.va_b_a_e3e47b_fa_4:test" ; 
+[INFO] 	"com.fasterxml.jackson.datatype:jackson-datatype-json-org:jar:2.15.2:test" -> "org.json:json:jar:20230227:test" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-xml:jar:2.15.2:test" -> "org.codehaus.woodstox:stax2-api:jar:4.2.1:test" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-xml:jar:2.15.2:test" -> "com.fasterxml.woodstox:woodstox-core:jar:6.5.1:test" ; 
+[INFO] 	"io.jenkins.plugins:jaxb:jar:2.3.8-1:test" -> "com.sun.xml.bind:jaxb-impl:jar:2.3.8:test" ; 
+[INFO] 	"io.jenkins.plugins:jaxb:jar:2.3.8-1:test" -> "javax.xml.bind:jaxb-api:jar:2.3.1:test" ; 
+[INFO] 	"io.jenkins.plugins:snakeyaml-api:jar:1.33-95.va_b_a_e3e47b_fa_4:test" -> "org.yaml:snakeyaml:jar:1.33:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:mailer:jar:463.vedf8358e006b_:test" -> "io.jenkins.plugins:jakarta-mail-api:jar:2.0.1-3:test" ; 
+[INFO] 	"io.jenkins.plugins:jakarta-mail-api:jar:2.0.1-3:test" -> "com.sun.mail:jakarta.mail:jar:2.0.1:test" ; 
+[INFO] 	"io.jenkins.plugins:jakarta-mail-api:jar:2.0.1-3:test" -> "io.jenkins.plugins:jakarta-activation-api:jar:2.0.1-3:test" ; 
+[INFO] 	"io.jenkins.plugins:jakarta-activation-api:jar:2.0.1-3:test" -> "com.sun.activation:jakarta.activation:jar:2.0.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.6.0:test" -> "net.bytebuddy:byte-buddy:jar:1.14.8:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.6.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.8:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.6.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< org.jenkins-ci.main:jenkins-coverage >----------------
+[INFO] Building Jenkins coverage 2.436-SNAPSHOT                           [9/9]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/jenkins-ci/main/jenkins-test/2.436-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ jenkins-coverage ---
+[INFO] digraph "org.jenkins-ci.main:jenkins-coverage:pom:2.436-SNAPSHOT" { 
+[INFO] 	"org.jenkins-ci.main:jenkins-coverage:pom:2.436-SNAPSHOT" -> "org.jenkins-ci.main:cli:jar:2.436-SNAPSHOT:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-coverage:pom:2.436-SNAPSHOT" -> "org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-coverage:pom:2.436-SNAPSHOT" -> "org.jenkins-ci.main:jenkins-test:jar:2.436-SNAPSHOT:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.jenkins-ci.main:remoting:jar:3192.v713e3b_039fb_e:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "args4j:args4j:jar:2.33:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "com.github.spotbugs:spotbugs-annotations:jar:4.8.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "com.google.guava:guava:jar:32.1.3-jre:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "com.google.inject:guice:jar:6.0.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "com.infradna.tool:bridge-method-annotation:jar:1.29:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "com.jcraft:jzlib:jar:1.1.3-kohsuke-1:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "com.sun.solaris:embedded_su4j:jar:1.1:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "com.sun.xml.txw2:txw2:jar:20110809:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "com.thoughtworks.xstream:xstream:jar:1.4.20:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "commons-beanutils:commons-beanutils:jar:1.9.4:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "commons-codec:commons-codec:jar:1.16.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "commons-fileupload:commons-fileupload:jar:1.5:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "commons-io:commons-io:jar:2.15.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "commons-jelly:commons-jelly-tags-fmt:jar:1.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "commons-jelly:commons-jelly-tags-xml:jar:1.1:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "commons-lang:commons-lang:jar:2.6:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "io.jenkins.stapler:jenkins-stapler-support:jar:1.1:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:jar:1.2.7:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "jaxen:jaxen:jar:2.0.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "jline:jline:jar:2.14.6:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "net.java.dev.jna:jna:jar:5.13.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "net.java.sezpoz:sezpoz:jar:1.13:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "net.jcip:jcip-annotations:jar:1.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.antlr:antlr4-runtime:jar:4.13.1:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.apache.ant:ant:jar:1.10.14:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.apache.commons:commons-compress:jar:1.25.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.codehaus.groovy:groovy-all:jar:2.4.21:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.connectbot.jbcrypt:jbcrypt:jar:1.0.0:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.fusesource.jansi:jansi:jar:1.11:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.jenkins-ci:annotation-indexer:jar:1.17:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.jenkins-ci:commons-jexl:jar:1.1-jenkins-20111212:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.jenkins-ci:crypto-util:jar:1.9:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.jenkins-ci:memory-monitor:jar:1.12:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.jenkins-ci:symbol-annotation:jar:1.24:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.jenkins-ci:task-reactor:jar:1.8:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.jenkins-ci:version-number:jar:1.11:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.jenkins-ci.main:websocket-spi:jar:2.436-SNAPSHOT:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.jfree:jfreechart:jar:1.0.19:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.jvnet.hudson:commons-jelly-tags-define:jar:1.1-jenkins-20230713:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.jvnet.localizer:localizer:jar:1.31:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.jvnet.robust-http-client:robust-http-client:jar:1.2:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.jvnet.winp:winp:jar:1.30:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.kohsuke:access-modifier-annotation:jar:1.33:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.kohsuke:windows-package-checker:jar:1.2:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.kohsuke.jinterop:j-interop:jar:2.0.8-kohsuke-1:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.kohsuke.stapler:json-lib:jar:2.4-jenkins-3:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.kohsuke.stapler:stapler:jar:1822.v120278426e1c:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.kohsuke.stapler:stapler-adjunct-codemirror:jar:1.3:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.kohsuke.stapler:stapler-groovy:jar:1822.v120278426e1c:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.ow2.asm:asm:jar:9.6:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.ow2.asm:asm-analysis:jar:9.6:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.ow2.asm:asm-commons:jar:9.6:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.ow2.asm:asm-tree:jar:9.6:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.ow2.asm:asm-util:jar:9.6:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.slf4j:jcl-over-slf4j:jar:2.0.9:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.slf4j:log4j-over-slf4j:jar:2.0.9:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "org.springframework.security:spring-security-web:jar:5.8.8:compile" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.436-SNAPSHOT:compile" -> "xpp3:xpp3:jar:1.1.4c:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:6.0.0:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:6.0.0:compile" -> "jakarta.inject:jakarta.inject-api:jar:2.0.1:compile" ; 
+[INFO] 	"com.sun.xml.txw2:txw2:jar:20110809:compile" -> "relaxngDatatype:relaxngDatatype:jar:20020414:compile" ; 
+[INFO] 	"com.thoughtworks.xstream:xstream:jar:1.4.20:compile" -> "io.github.x-stream:mxparser:jar:1.2.2:compile" ; 
+[INFO] 	"org.apache.ant:ant:jar:1.10.14:compile" -> "org.apache.ant:ant-launcher:jar:1.10.14:compile" ; 
+[INFO] 	"org.jfree:jfreechart:jar:1.0.19:compile" -> "org.jfree:jcommon:jar:1.0.23:compile" ; 
+[INFO] 	"org.kohsuke.jinterop:j-interop:jar:2.0.8-kohsuke-1:compile" -> "org.kohsuke.jinterop:j-interopdeps:jar:2.0.8-kohsuke-1:compile" ; 
+[INFO] 	"org.kohsuke.jinterop:j-interopdeps:jar:2.0.8-kohsuke-1:compile" -> "org.samba.jcifs:jcifs:jar:1.2.19:compile" ; 
+[INFO] 	"org.kohsuke.stapler:json-lib:jar:2.4-jenkins-3:compile" -> "net.sf.ezmorph:ezmorph:jar:1.0.6:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:1822.v120278426e1c:compile" -> "commons-discovery:commons-discovery:jar:0.5:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:1822.v120278426e1c:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:1822.v120278426e1c:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:1822.v120278426e1c:compile" -> "org.jvnet:tiger-types:jar:2.2:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-groovy:jar:1822.v120278426e1c:compile" -> "org.kohsuke.stapler:stapler-jelly:jar:1822.v120278426e1c:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jelly:jar:1822.v120278426e1c:compile" -> "org.dom4j:dom4j:jar:2.1.4:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jelly:jar:1822.v120278426e1c:compile" -> "org.jenkins-ci:commons-jelly:jar:1.1-jenkins-20230713:compile" ; 
+[INFO] 	"org.slf4j:jcl-over-slf4j:jar:2.0.9:compile" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.8:compile" -> "org.springframework.security:spring-security-core:jar:5.8.8:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.8:compile" -> "org.springframework:spring-core:jar:5.3.30:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.8:compile" -> "org.springframework:spring-aop:jar:5.3.30:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.8:compile" -> "org.springframework:spring-beans:jar:5.3.30:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.8:compile" -> "org.springframework:spring-context:jar:5.3.30:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.8:compile" -> "org.springframework:spring-expression:jar:5.3.30:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.8:compile" -> "org.springframework:spring-web:jar:5.3.30:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-core:jar:5.8.8:compile" -> "org.springframework.security:spring-security-crypto:jar:5.8.8:compile" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Jenkins main module 2.436-SNAPSHOT:
+[INFO] 
+[INFO] Jenkins main module ................................ SUCCESS [  3.095 s]
+[INFO] Jenkins BOM ........................................ SUCCESS [  3.503 s]
+[INFO] Internal SPI for WebSocket ......................... SUCCESS [  0.243 s]
+[INFO] Jetty 10 implementation for WebSocket .............. SUCCESS [  0.795 s]
+[INFO] Jenkins cli ........................................ SUCCESS [  0.285 s]
+[INFO] Jenkins core ....................................... SUCCESS [  1.392 s]
+[INFO] Jenkins war ........................................ SUCCESS [  2.123 s]
+[INFO] Tests for Jenkins core ............................. SUCCESS [  4.311 s]
+[INFO] Jenkins coverage ................................... SUCCESS [  1.065 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  26.521 s
+[INFO] Finished at: 2023-12-28T09:03:18+01:00
+[INFO] ------------------------------------------------------------------------

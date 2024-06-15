@@ -1,0 +1,159 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Apache HttpComponents Client Parent                                [pom]
+[INFO] Apache HttpClient                                                  [jar]
+[INFO] Apache HttpClient Fluent                                           [jar]
+[INFO] Apache HttpClient Cache                                            [jar]
+[INFO] Apache HttpClient Integration Tests                                [jar]
+[INFO] 
+[INFO] --------< org.apache.httpcomponents.client5:httpclient5-parent >--------
+[INFO] Building Apache HttpComponents Client Parent 5.3-alpha2-SNAPSHOT   [1/5]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ httpclient5-parent ---
+[INFO] digraph "org.apache.httpcomponents.client5:httpclient5-parent:pom:5.3-alpha2-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] -----------< org.apache.httpcomponents.client5:httpclient5 >------------
+[INFO] Building Apache HttpClient 5.3-alpha2-SNAPSHOT                     [2/5]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ httpclient5 ---
+[INFO] digraph "org.apache.httpcomponents.client5:httpclient5:jar:5.3-alpha2-SNAPSHOT" { 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.3-alpha2-SNAPSHOT" -> "org.apache.httpcomponents.core5:httpcore5:jar:5.2.4:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.3-alpha2-SNAPSHOT" -> "org.apache.httpcomponents.core5:httpcore5-h2:jar:5.2.4:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.3-alpha2-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.3-alpha2-SNAPSHOT" -> "org.conscrypt:conscrypt-openjdk-uber:jar:2.5.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.3-alpha2-SNAPSHOT" -> "org.apache.httpcomponents.core5:httpcore5-reactive:jar:5.2.4:test" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.3-alpha2-SNAPSHOT" -> "io.reactivex.rxjava2:rxjava:jar:2.2.21:test" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.3-alpha2-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.20.0:test" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.3-alpha2-SNAPSHOT" -> "org.apache.logging.log4j:log4j-core:jar:2.20.0:test" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.3-alpha2-SNAPSHOT" -> "org.brotli:dec:jar:0.1.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.3-alpha2-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.3-alpha2-SNAPSHOT" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.3-alpha2-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.11.0:test" ; 
+[INFO] 	"org.apache.httpcomponents.core5:httpcore5-reactive:jar:5.2.4:test" -> "org.reactivestreams:reactive-streams:jar:1.0.4:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.20.0:test" -> "org.apache.logging.log4j:log4j-api:jar:2.20.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "net.bytebuddy:byte-buddy:jar:1.12.19:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.19:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------< org.apache.httpcomponents.client5:httpclient5-fluent >--------
+[INFO] Building Apache HttpClient Fluent 5.3-alpha2-SNAPSHOT              [3/5]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/httpcomponents/client5/httpclient5/5.3-alpha2-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ httpclient5-fluent ---
+[INFO] digraph "org.apache.httpcomponents.client5:httpclient5-fluent:jar:5.3-alpha2-SNAPSHOT" { 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5-fluent:jar:5.3-alpha2-SNAPSHOT" -> "org.apache.httpcomponents.client5:httpclient5:jar:5.3-alpha2-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5-fluent:jar:5.3-alpha2-SNAPSHOT" -> "org.apache.httpcomponents.client5:httpclient5:jar:tests:5.3-alpha2-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5-fluent:jar:5.3-alpha2-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5-fluent:jar:5.3-alpha2-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.20.0:test" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5-fluent:jar:5.3-alpha2-SNAPSHOT" -> "org.apache.logging.log4j:log4j-core:jar:2.20.0:test" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5-fluent:jar:5.3-alpha2-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5-fluent:jar:5.3-alpha2-SNAPSHOT" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5-fluent:jar:5.3-alpha2-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.11.0:test" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.3-alpha2-SNAPSHOT:compile" -> "org.apache.httpcomponents.core5:httpcore5:jar:5.2.4:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.3-alpha2-SNAPSHOT:compile" -> "org.apache.httpcomponents.core5:httpcore5-h2:jar:5.2.4:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.20.0:test" -> "org.apache.logging.log4j:log4j-api:jar:2.20.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "net.bytebuddy:byte-buddy:jar:1.12.19:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.19:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------< org.apache.httpcomponents.client5:httpclient5-cache >---------
+[INFO] Building Apache HttpClient Cache 5.3-alpha2-SNAPSHOT               [4/5]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ httpclient5-cache ---
+[INFO] digraph "org.apache.httpcomponents.client5:httpclient5-cache:jar:5.3-alpha2-SNAPSHOT" { 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5-cache:jar:5.3-alpha2-SNAPSHOT" -> "org.apache.httpcomponents.client5:httpclient5:jar:5.3-alpha2-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5-cache:jar:5.3-alpha2-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5-cache:jar:5.3-alpha2-SNAPSHOT" -> "org.ehcache.modules:ehcache-api:jar:3.10.8:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5-cache:jar:5.3-alpha2-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5-cache:jar:5.3-alpha2-SNAPSHOT" -> "org.apache.logging.log4j:log4j-core:jar:2.20.0:test" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5-cache:jar:5.3-alpha2-SNAPSHOT" -> "net.spy:spymemcached:jar:2.12.3:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5-cache:jar:5.3-alpha2-SNAPSHOT" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5-cache:jar:5.3-alpha2-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.11.0:test" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5-cache:jar:5.3-alpha2-SNAPSHOT" -> "org.apache.httpcomponents.client5:httpclient5:test-jar:tests:5.3-alpha2-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5-cache:jar:5.3-alpha2-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.3-alpha2-SNAPSHOT:compile" -> "org.apache.httpcomponents.core5:httpcore5:jar:5.2.4:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.3-alpha2-SNAPSHOT:compile" -> "org.apache.httpcomponents.core5:httpcore5-h2:jar:5.2.4:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.20.0:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "net.bytebuddy:byte-buddy:jar:1.12.19:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.19:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------< org.apache.httpcomponents.client5:httpclient5-testing >--------
+[INFO] Building Apache HttpClient Integration Tests 5.3-alpha2-SNAPSHOT   [5/5]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/httpcomponents/client5/httpclient5-cache/5.3-alpha2-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/httpcomponents/client5/httpclient5-fluent/5.3-alpha2-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ httpclient5-testing ---
+[INFO] digraph "org.apache.httpcomponents.client5:httpclient5-testing:jar:5.3-alpha2-SNAPSHOT" { 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5-testing:jar:5.3-alpha2-SNAPSHOT" -> "org.apache.httpcomponents.core5:httpcore5-testing:jar:5.2.4:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5-testing:jar:5.3-alpha2-SNAPSHOT" -> "org.apache.httpcomponents.core5:httpcore5-reactive:jar:5.2.4:test" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5-testing:jar:5.3-alpha2-SNAPSHOT" -> "org.apache.httpcomponents.client5:httpclient5:jar:5.3-alpha2-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5-testing:jar:5.3-alpha2-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:test" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5-testing:jar:5.3-alpha2-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5-testing:jar:5.3-alpha2-SNAPSHOT" -> "org.apache.logging.log4j:log4j-core:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5-testing:jar:5.3-alpha2-SNAPSHOT" -> "org.apache.httpcomponents.client5:httpclient5-cache:jar:5.3-alpha2-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5-testing:jar:5.3-alpha2-SNAPSHOT" -> "org.apache.httpcomponents.client5:httpclient5-fluent:jar:5.3-alpha2-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5-testing:jar:5.3-alpha2-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5-testing:jar:5.3-alpha2-SNAPSHOT" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5-testing:jar:5.3-alpha2-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.11.0:test" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5-testing:jar:5.3-alpha2-SNAPSHOT" -> "io.reactivex.rxjava2:rxjava:jar:2.2.21:test" ; 
+[INFO] 	"org.apache.httpcomponents.core5:httpcore5-testing:jar:5.2.4:compile" -> "org.apache.httpcomponents.core5:httpcore5:jar:5.2.4:compile" ; 
+[INFO] 	"org.apache.httpcomponents.core5:httpcore5-testing:jar:5.2.4:compile" -> "org.apache.httpcomponents.core5:httpcore5-h2:jar:5.2.4:compile" ; 
+[INFO] 	"org.apache.httpcomponents.core5:httpcore5-testing:jar:5.2.4:compile" -> "commons-cli:commons-cli:jar:1.5.0:compile" ; 
+[INFO] 	"org.apache.httpcomponents.core5:httpcore5-testing:jar:5.2.4:compile" -> "io.reactivex.rxjava3:rxjava:jar:3.1.6:compile" ; 
+[INFO] 	"org.apache.httpcomponents.core5:httpcore5-reactive:jar:5.2.4:test" -> "org.reactivestreams:reactive-streams:jar:1.0.4:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.20.0:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "net.bytebuddy:byte-buddy:jar:1.12.19:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.19:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Apache HttpComponents Client Parent 5.3-alpha2-SNAPSHOT:
+[INFO] 
+[INFO] Apache HttpComponents Client Parent ................ SUCCESS [  6.437 s]
+[INFO] Apache HttpClient .................................. SUCCESS [  0.772 s]
+[INFO] Apache HttpClient Fluent ........................... SUCCESS [  3.719 s]
+[INFO] Apache HttpClient Cache ............................ SUCCESS [  0.047 s]
+[INFO] Apache HttpClient Integration Tests ................ SUCCESS [  0.588 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.307 s
+[INFO] Finished at: 2023-12-28T09:02:31+01:00
+[INFO] ------------------------------------------------------------------------

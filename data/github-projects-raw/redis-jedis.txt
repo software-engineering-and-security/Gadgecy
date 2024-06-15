@@ -1,0 +1,50 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] 
+[INFO] ------------------------< redis.clients:jedis >-------------------------
+[INFO] Building Jedis 5.2.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ jedis ---
+[INFO] digraph "redis.clients:jedis:jar:5.2.0-SNAPSHOT" { 
+[INFO] 	"redis.clients:jedis:jar:5.2.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"redis.clients:jedis:jar:5.2.0-SNAPSHOT" -> "org.apache.commons:commons-pool2:jar:2.12.0:compile" ; 
+[INFO] 	"redis.clients:jedis:jar:5.2.0-SNAPSHOT" -> "org.json:json:jar:20231013:compile" ; 
+[INFO] 	"redis.clients:jedis:jar:5.2.0-SNAPSHOT" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"redis.clients:jedis:jar:5.2.0-SNAPSHOT" -> "com.kohlschutter.junixsocket:junixsocket-core:pom:2.8.1:test" ; 
+[INFO] 	"redis.clients:jedis:jar:5.2.0-SNAPSHOT" -> "org.locationtech.jts:jts-core:jar:1.19.0:test" ; 
+[INFO] 	"redis.clients:jedis:jar:5.2.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"redis.clients:jedis:jar:5.2.0-SNAPSHOT" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"redis.clients:jedis:jar:5.2.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"redis.clients:jedis:jar:5.2.0-SNAPSHOT" -> "org.mockito:mockito-inline:jar:4.11.0:test" ; 
+[INFO] 	"redis.clients:jedis:jar:5.2.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.14.2:test" ; 
+[INFO] 	"redis.clients:jedis:jar:5.2.0-SNAPSHOT" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.14.2:test" ; 
+[INFO] 	"redis.clients:jedis:jar:5.2.0-SNAPSHOT" -> "io.github.resilience4j:resilience4j-all:jar:1.7.1:compile" ; 
+[INFO] 	"redis.clients:jedis:jar:5.2.0-SNAPSHOT" -> "io.github.resilience4j:resilience4j-circuitbreaker:jar:1.7.1:compile" ; 
+[INFO] 	"redis.clients:jedis:jar:5.2.0-SNAPSHOT" -> "io.github.resilience4j:resilience4j-retry:jar:1.7.1:compile" ; 
+[INFO] 	"com.kohlschutter.junixsocket:junixsocket-core:pom:2.8.1:test" -> "com.kohlschutter.junixsocket:junixsocket-native-common:jar:2.8.1:test" ; 
+[INFO] 	"com.kohlschutter.junixsocket:junixsocket-core:pom:2.8.1:test" -> "com.kohlschutter.junixsocket:junixsocket-common:jar:2.8.1:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.mockito:mockito-inline:jar:4.11.0:test" -> "org.mockito:mockito-core:jar:4.11.0:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "net.bytebuddy:byte-buddy:jar:1.12.19:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.19:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.14.2:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.14.2:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.14.2:test" -> "com.fasterxml.jackson.core:jackson-core:jar:2.14.2:test" ; 
+[INFO] 	"io.github.resilience4j:resilience4j-all:jar:1.7.1:compile" -> "io.vavr:vavr:jar:0.10.2:compile" ; 
+[INFO] 	"io.github.resilience4j:resilience4j-all:jar:1.7.1:compile" -> "io.github.resilience4j:resilience4j-ratelimiter:jar:1.7.1:runtime" ; 
+[INFO] 	"io.github.resilience4j:resilience4j-all:jar:1.7.1:compile" -> "io.github.resilience4j:resilience4j-bulkhead:jar:1.7.1:runtime" ; 
+[INFO] 	"io.github.resilience4j:resilience4j-all:jar:1.7.1:compile" -> "io.github.resilience4j:resilience4j-cache:jar:1.7.1:runtime" ; 
+[INFO] 	"io.github.resilience4j:resilience4j-all:jar:1.7.1:compile" -> "io.github.resilience4j:resilience4j-timelimiter:jar:1.7.1:runtime" ; 
+[INFO] 	"io.vavr:vavr:jar:0.10.2:compile" -> "io.vavr:vavr-match:jar:0.10.2:compile" ; 
+[INFO] 	"io.github.resilience4j:resilience4j-cache:jar:1.7.1:runtime" -> "javax.cache:cache-api:jar:1.1.0:runtime" ; 
+[INFO] 	"io.github.resilience4j:resilience4j-circuitbreaker:jar:1.7.1:compile" -> "io.github.resilience4j:resilience4j-core:jar:1.7.1:compile" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.274 s
+[INFO] Finished at: 2023-12-28T09:03:21+01:00
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,9 @@
+{
+    "<jdk-version>":{
+        "<dependency>" : ["<version>", "<version>"] 
+    },
+    "<jdk-version2>":{
+        "<dependency>" : ["<version>", "<version>"] 
+    }
+} 
+

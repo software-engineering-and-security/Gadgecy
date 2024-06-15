@@ -1,0 +1,367 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Apache Kylin 5                                                     [pom]
+[INFO] Kylin - Core Common                                                [jar]
+[INFO] Kylin - Core Metadata                                              [jar]
+[INFO] Kylin - Core Metrics                                               [jar]
+[INFO] Kylin - Core Job                                                   [jar]
+[INFO] Kylin - Core Storage                                               [jar]
+[INFO] Kylin - Query Common                                               [jar]
+[INFO] Kylin - Local Data Cache                                           [jar]
+[INFO] Kylin - Spark Common                                               [jar]
+[INFO] Kylin - Query Engine Spark                                         [jar]
+[INFO] Kylin - Hive Source                                                [jar]
+[INFO] Kylin - Build Engine SDK                                           [jar]
+[INFO] Kylin - Distributed Lock Extension                                 [jar]
+[INFO] Kylin - Build Engine Spark                                         [jar]
+[INFO] Kylin - Query                                                      [jar]
+[INFO] Kylin - Streaming SDK                                              [jar]
+[INFO] Kylin - Streaming                                                  [jar]
+[INFO] Kylin - Tool                                                       [jar]
+[INFO] Kylin - Common Service                                             [jar]
+[INFO] Kylin - Datasource Service                                         [jar]
+[INFO] Kylin - Modeling Service                                           [jar]
+[INFO] Kylin - Data Loading Service                                       [jar]
+[INFO] Kylin - Query Service                                              [jar]
+[INFO] Kylin - Common Server                                              [jar]
+[INFO] Kylin - Job Service                                                [jar]
+[INFO] Kylin - Streaming Service                                          [jar]
+[INFO] Kylin - Data Loading Server                                        [jar]
+[INFO] Kylin - Query Server                                               [jar]
+[INFO] Kylin - Metadata Server                                            [jar]
+[INFO] Kylin - REST Server                                                [jar]
+[INFO] Kylin - Datasource SDK                                             [jar]
+[INFO] Kylin - JDBC Source                                                [jar]
+[INFO] Kylin - Integration Test                                           [jar]
+[INFO] Kylin - Integration Test Spark                                     [jar]
+[INFO] Kylin - Source Assembly                                            [jar]
+[INFO] Kylin - Integration Test Server                                    [jar]
+[INFO] Kylin - Data loading Booter                                        [jar]
+[INFO] Kylin - Query Booter                                               [jar]
+[INFO] Kylin - Common Booter                                              [jar]
+[INFO] Kylin - JDBC Driver                                                [jar]
+[INFO] 
+[INFO] -----------------------< org.apache.kylin:kylin >-----------------------
+[INFO] Building Apache Kylin 5 5.0.0-SNAPSHOT                            [1/40]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:tree (default-cli) @ kylin ---
+[INFO] digraph "org.apache.kylin:kylin:pom:5.0.0-SNAPSHOT" { 
+[INFO] 	"org.apache.kylin:kylin:pom:5.0.0-SNAPSHOT" -> "org.scala-lang:scala-library:jar:2.12.13:provided" ; 
+[INFO] 	"org.apache.kylin:kylin:pom:5.0.0-SNAPSHOT" -> "org.scala-lang:scala-compiler:jar:2.12.13:provided" ; 
+[INFO] 	"org.apache.kylin:kylin:pom:5.0.0-SNAPSHOT" -> "org.projectlombok:lombok:jar:1.18.2:provided" ; 
+[INFO] 	"org.scala-lang:scala-compiler:jar:2.12.13:provided" -> "org.scala-lang:scala-reflect:jar:2.12.13:provided" ; 
+[INFO] 	"org.scala-lang:scala-compiler:jar:2.12.13:provided" -> "org.scala-lang.modules:scala-xml_2.12:jar:1.0.6:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.apache.kylin:kylin-core-common >-----------------
+[INFO] Building Kylin - Core Common 5.0.0-SNAPSHOT                       [2/40]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:tree (default-cli) @ kylin-core-common ---
+[INFO] digraph "org.apache.kylin:kylin-core-common:jar:5.0.0-SNAPSHOT" { 
+[INFO] 	"org.apache.kylin:kylin-core-common:jar:5.0.0-SNAPSHOT" -> "org.freemarker:freemarker:jar:2.3.31:compile" ; 
+[INFO] 	"org.apache.kylin:kylin-core-common:jar:5.0.0-SNAPSHOT" -> "org.apache.kylin:kylin-external-guava30:jar:5.0.0:compile" ; 
+[INFO] 	"org.apache.kylin:kylin-core-common:jar:5.0.0-SNAPSHOT" -> "io.kyligence:kyligence-config-external:jar:1.0.0:compile" ; 
+[INFO] 	"org.apache.kylin:kylin-core-common:jar:5.0.0-SNAPSHOT" -> "org.apache.commons:commons-email:jar:1.5:compile" ; 
+[INFO] 	"org.apache.kylin:kylin-core-common:jar:5.0.0-SNAPSHOT" -> "org.projectlombok:lombok:jar:1.18.2:provided" ; 
+[INFO] 	"org.apache.kylin:kylin-core-common:jar:5.0.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-api:jar:2.18.0:compile" ; 
+[INFO] 	"org.apache.kylin:kylin-core-common:jar:5.0.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-web:jar:2.18.0:compile" ; 
+[INFO] 	"org.apache.kylin:kylin-core-common:jar:5.0.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-core:jar:2.18.0:compile" ; 
+[INFO] 	"org.apache.kylin:kylin-core-common:jar:5.0.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-1.2-api:jar:2.18.0:compile" ; 
+[INFO] 	"org.apache.kylin:kylin-core-common:jar:5.0.0-SNAPSHOT" -> "javax.validation:validation-api:jar:2.0.1.Final:compile" ; 
+[INFO] 	"org.apache.kylin:kylin-core-common:jar:5.0.0-SNAPSHOT" -> "com.alibaba:transmittable-thread-local:jar:2.12.0:compile" ; 
+[INFO] 	"org.apache.kylin:kylin-core-common:jar:5.0.0-SNAPSHOT" -> "org.springframework:spring-jdbc:jar:5.3.27:compile" ; 
+[INFO] 	"org.apache.kylin:kylin-core-common:jar:5.0.0-SNAPSHOT" -> "org.springframework.security:spring-security-core:jar:5.7.8:provided" ; 
+[INFO] 	"org.apache.kylin:kylin-core-common:jar:5.0.0-SNAPSHOT" -> "org.apache.commons:commons-dbcp2:jar:2.9.0:provided" ; 
+[INFO] 	"org.apache.kylin:kylin-core-common:jar:5.0.0-SNAPSHOT" -> "joda-time:joda-time:jar:2.10.2:test" ; 
+[INFO] 	"org.apache.kylin:kylin-core-common:jar:5.0.0-SNAPSHOT" -> "com.github.sakserv:hadoop-mini-clusters-hdfs:jar:0.1.16:test" ; 
+[INFO] 	"org.apache.kylin:kylin-core-common:jar:5.0.0-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.11.1:test" ; 
+[INFO] 	"org.apache.kylin:kylin-core-common:jar:5.0.0-SNAPSHOT" -> "org.springframework:spring-test:jar:5.3.27:test" ; 
+[INFO] 	"org.apache.kylin:kylin-core-common:jar:5.0.0-SNAPSHOT" -> "org.awaitility:awaitility:jar:3.0.0:test" ; 
+[INFO] 	"org.apache.kylin:kylin-core-common:jar:5.0.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" ; 
+[INFO] 	"org.apache.kylin:kylin-core-common:jar:5.0.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.8.2:test" ; 
+[INFO] 	"org.apache.kylin:kylin-core-common:jar:5.0.0-SNAPSHOT" -> "org.junit-pioneer:junit-pioneer:jar:1.5.0:test" ; 
+[INFO] 	"org.apache.kylin:kylin-core-common:jar:5.0.0-SNAPSHOT" -> "org.mockito:mockito-core:jar:3.12.4:test" ; 
+[INFO] 	"org.apache.kylin:kylin-core-common:jar:5.0.0-SNAPSHOT" -> "org.mockito:mockito-inline:jar:3.12.4:test" ; 
+[INFO] 	"org.apache.kylin:kylin-core-common:jar:5.0.0-SNAPSHOT" -> "org.powermock:powermock-api-mockito2:jar:2.0.9:test" ; 
+[INFO] 	"org.apache.kylin:kylin-core-common:jar:5.0.0-SNAPSHOT" -> "com.h2database:h2:jar:1.4.197:test" ; 
+[INFO] 	"org.apache.kylin:kylin-core-common:jar:5.0.0-SNAPSHOT" -> "org.slf4j:jcl-over-slf4j:jar:1.7.30:test" ; 
+[INFO] 	"org.apache.kylin:kylin-core-common:jar:5.0.0-SNAPSHOT" -> "org.scala-lang:scala-library:jar:2.12.13:provided" ; 
+[INFO] 	"org.apache.kylin:kylin-core-common:jar:5.0.0-SNAPSHOT" -> "org.scala-lang:scala-compiler:jar:2.12.13:provided" ; 
+[INFO] 	"io.kyligence:kyligence-config-external:jar:1.0.0:compile" -> "io.kyligence:kyligence-config-core:jar:1.0.0:compile" ; 
+[INFO] 	"io.kyligence:kyligence-config-external:jar:1.0.0:compile" -> "com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config:jar:2021.0.1.0:compile" ; 
+[INFO] 	"io.kyligence:kyligence-config-external:jar:1.0.0:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.7.12:compile" ; 
+[INFO] 	"com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config:jar:2021.0.1.0:compile" -> "com.alibaba.spring:spring-context-support:jar:1.0.11:compile" ; 
+[INFO] 	"com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config:jar:2021.0.1.0:compile" -> "com.alibaba.nacos:nacos-client:jar:1.4.2:compile" ; 
+[INFO] 	"com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config:jar:2021.0.1.0:compile" -> "org.springframework.cloud:spring-cloud-commons:jar:3.1.6:compile" ; 
+[INFO] 	"com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config:jar:2021.0.1.0:compile" -> "org.springframework.cloud:spring-cloud-context:jar:3.1.6:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:1.4.2:compile" -> "com.alibaba.nacos:nacos-common:jar:1.4.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:1.4.2:compile" -> "com.alibaba.nacos:nacos-api:jar:1.4.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:1.4.2:compile" -> "com.google.guava:guava:jar:14.0:provided" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:1.4.2:compile" -> "commons-codec:commons-codec:jar:1.10:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:1.4.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.5:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:1.4.2:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:1.4.2:compile" -> "io.prometheus:simpleclient:jar:0.15.0:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-common:jar:1.4.2:compile" -> "org.apache.httpcomponents:httpasyncclient:jar:4.1.5:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.5:compile" -> "org.apache.httpcomponents:httpcore-nio:jar:4.4.16:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.5:compile" ; 
+[INFO] 	"io.prometheus:simpleclient:jar:0.15.0:compile" -> "io.prometheus:simpleclient_tracer_otel:jar:0.15.0:compile" ; 
+[INFO] 	"io.prometheus:simpleclient:jar:0.15.0:compile" -> "io.prometheus:simpleclient_tracer_otel_agent:jar:0.15.0:compile" ; 
+[INFO] 	"io.prometheus:simpleclient_tracer_otel:jar:0.15.0:compile" -> "io.prometheus:simpleclient_tracer_common:jar:0.15.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.12:compile" -> "org.springframework.boot:spring-boot:jar:2.7.12:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.12:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.7.12:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.12:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.7.12:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.12:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.12:compile" -> "org.yaml:snakeyaml:jar:1.32:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.12:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.commons:commons-email:jar:1.5:compile" -> "com.sun.mail:javax.mail:jar:1.5.6:compile" ; 
+[INFO] 	"com.sun.mail:javax.mail:jar:1.5.6:compile" -> "javax.activation:activation:jar:1.1:compile" ; 
+[INFO] 	"org.springframework:spring-jdbc:jar:5.3.27:compile" -> "org.springframework:spring-beans:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-jdbc:jar:5.3.27:compile" -> "org.springframework:spring-core:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-jdbc:jar:5.3.27:compile" -> "org.springframework:spring-tx:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-core:jar:5.7.8:provided" -> "org.springframework.security:spring-security-crypto:jar:5.7.8:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-core:jar:5.7.8:provided" -> "org.springframework:spring-aop:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-core:jar:5.7.8:provided" -> "org.springframework:spring-context:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-core:jar:5.7.8:provided" -> "org.springframework:spring-expression:jar:5.3.27:compile" ; 
+[INFO] 	"org.apache.commons:commons-dbcp2:jar:2.9.0:provided" -> "org.apache.commons:commons-pool2:jar:2.11.1:provided" ; 
+[INFO] 	"org.apache.commons:commons-dbcp2:jar:2.9.0:provided" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"com.github.sakserv:hadoop-mini-clusters-hdfs:jar:0.1.16:test" -> "org.apache.hadoop:hadoop-client:jar:2.7.3.2.6.5.0-292:test" ; 
+[INFO] 	"com.github.sakserv:hadoop-mini-clusters-hdfs:jar:0.1.16:test" -> "org.apache.hadoop:hadoop-minicluster:jar:2.10.1:test" ; 
+[INFO] 	"com.github.sakserv:hadoop-mini-clusters-hdfs:jar:0.1.16:test" -> "com.github.sakserv:hadoop-mini-clusters-common:jar:0.1.16:test" ; 
+[INFO] 	"com.github.sakserv:hadoop-mini-clusters-hdfs:jar:0.1.16:test" -> "org.slf4j:slf4j-api:jar:1.7.30:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:2.7.3.2.6.5.0-292:test" -> "org.apache.hadoop:hadoop-common:jar:2.10.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:2.7.3.2.6.5.0-292:test" -> "org.apache.hadoop:hadoop-hdfs:jar:2.10.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:2.7.3.2.6.5.0-292:test" -> "org.apache.hadoop:hadoop-mapreduce-client-app:jar:2.10.1:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:2.7.3.2.6.5.0-292:test" -> "org.apache.hadoop:hadoop-yarn-api:jar:2.10.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:2.7.3.2.6.5.0-292:test" -> "org.apache.hadoop:hadoop-mapreduce-client-core:jar:2.10.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:2.7.3.2.6.5.0-292:test" -> "org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:2.10.1:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:2.7.3.2.6.5.0-292:test" -> "org.apache.hadoop:hadoop-annotations:jar:2.10.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:2.10.1:provided" -> "commons-cli:commons-cli:jar:1.2:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:2.10.1:provided" -> "org.apache.commons:commons-math3:jar:3.4.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:2.10.1:provided" -> "xmlenc:xmlenc:jar:0.52:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:2.10.1:provided" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:2.10.1:provided" -> "commons-io:commons-io:jar:2.7:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:2.10.1:provided" -> "commons-net:commons-net:jar:3.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:2.10.1:provided" -> "commons-collections:commons-collections:jar:3.2.2:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:2.10.1:provided" -> "commons-lang:commons-lang:jar:2.6:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:2.10.1:provided" -> "commons-configuration:commons-configuration:jar:1.6:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:2.10.1:provided" -> "commons-digester:commons-digester:jar:1.8:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:2.10.1:provided" -> "commons-beanutils:commons-beanutils:jar:1.9.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:2.10.1:provided" -> "org.apache.commons:commons-lang3:jar:3.10:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:2.10.1:provided" -> "org.codehaus.jackson:jackson-core-asl:jar:1.9.13:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:2.10.1:provided" -> "org.apache.avro:avro:jar:1.7.7:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:2.10.1:provided" -> "com.google.code.gson:gson:jar:2.8.9:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:2.10.1:provided" -> "org.apache.hadoop:hadoop-auth:jar:2.10.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:2.10.1:provided" -> "org.apache.curator:curator-client:jar:2.12.0-kylin-r5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:2.10.1:provided" -> "org.apache.curator:curator-recipes:jar:2.12.0-kylin-r5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:2.10.1:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:2.10.1:provided" -> "org.apache.htrace:htrace-core4:jar:4.1.0-incubating:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:2.10.1:provided" -> "org.apache.zookeeper:zookeeper:jar:3.4.14:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:2.10.1:provided" -> "org.apache.commons:commons-compress:jar:1.21:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:2.10.1:provided" -> "org.codehaus.woodstox:stax2-api:jar:3.1.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:2.10.1:provided" -> "com.fasterxml.woodstox:woodstox-core:jar:5.4.0:provided" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.16:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.7.7:provided" -> "com.thoughtworks.paranamer:paranamer:jar:2.8:runtime" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.7.7:provided" -> "org.xerial.snappy:snappy-java:jar:1.0.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:2.10.1:provided" -> "com.nimbusds:nimbus-jose-jwt:jar:9.23:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:2.10.1:provided" -> "org.apache.directory.server:apacheds-kerberos-codec:jar:2.0.0-M15:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:2.10.1:provided" -> "org.apache.curator:curator-framework:jar:2.12.0-kylin-r5:provided" ; 
+[INFO] 	"com.nimbusds:nimbus-jose-jwt:jar:9.23:provided" -> "com.github.stephenc.jcip:jcip-annotations:jar:1.0-1:provided" ; 
+[INFO] 	"org.apache.directory.server:apacheds-kerberos-codec:jar:2.0.0-M15:provided" -> "org.apache.directory.server:apacheds-i18n:jar:2.0.0-M15:provided" ; 
+[INFO] 	"org.apache.directory.server:apacheds-kerberos-codec:jar:2.0.0-M15:provided" -> "org.apache.directory.api:api-asn1-api:jar:1.0.3:provided" ; 
+[INFO] 	"org.apache.directory.server:apacheds-kerberos-codec:jar:2.0.0-M15:provided" -> "org.apache.directory.api:api-util:jar:1.0.2:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:provided" -> "com.github.spotbugs:spotbugs-annotations:jar:3.1.9:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:provided" -> "org.apache.yetus:audience-annotations:jar:0.5.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-hdfs:jar:2.10.1:provided" -> "org.apache.hadoop:hadoop-hdfs-client:jar:2.10.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-hdfs:jar:2.10.1:provided" -> "org.mortbay.jetty:jetty-util:jar:6.1.26:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-hdfs:jar:2.10.1:provided" -> "io.netty:netty:jar:3.10.6.Final:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-hdfs:jar:2.10.1:provided" -> "io.netty:netty-all:jar:4.1.89.Final:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-hdfs:jar:2.10.1:provided" -> "xerces:xercesImpl:jar:2.12.2:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-hdfs:jar:2.10.1:provided" -> "org.fusesource.leveldbjni:leveldbjni-all:jar:1.8:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-hdfs-client:jar:2.10.1:provided" -> "com.squareup.okhttp:okhttp:jar:2.7.5:provided" ; 
+[INFO] 	"com.squareup.okhttp:okhttp:jar:2.7.5:provided" -> "com.squareup.okio:okio:jar:1.6.0:provided" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.89.Final:provided" -> "io.netty:netty-buffer:jar:4.1.92.Final:provided" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.89.Final:provided" -> "io.netty:netty-codec:jar:4.1.92.Final:provided" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.89.Final:provided" -> "io.netty:netty-codec-dns:jar:4.1.92.Final:provided" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.89.Final:provided" -> "io.netty:netty-codec-http:jar:4.1.92.Final:provided" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.89.Final:provided" -> "io.netty:netty-codec-http2:jar:4.1.92.Final:provided" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.89.Final:provided" -> "io.netty:netty-codec-memcache:jar:4.1.92.Final:provided" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.89.Final:provided" -> "io.netty:netty-codec-mqtt:jar:4.1.92.Final:provided" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.89.Final:provided" -> "io.netty:netty-codec-redis:jar:4.1.92.Final:provided" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.89.Final:provided" -> "io.netty:netty-codec-smtp:jar:4.1.92.Final:provided" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.89.Final:provided" -> "io.netty:netty-codec-socks:jar:4.1.92.Final:provided" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.89.Final:provided" -> "io.netty:netty-codec-stomp:jar:4.1.92.Final:provided" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.89.Final:provided" -> "io.netty:netty-codec-xml:jar:4.1.92.Final:provided" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.89.Final:provided" -> "io.netty:netty-common:jar:4.1.92.Final:provided" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.89.Final:provided" -> "io.netty:netty-handler:jar:4.1.92.Final:provided" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.89.Final:provided" -> "io.netty:netty-transport-native-unix-common:jar:4.1.92.Final:provided" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.89.Final:provided" -> "io.netty:netty-handler-proxy:jar:4.1.92.Final:provided" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.89.Final:provided" -> "io.netty:netty-handler-ssl-ocsp:jar:4.1.92.Final:provided" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.89.Final:provided" -> "io.netty:netty-resolver:jar:4.1.92.Final:provided" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.89.Final:provided" -> "io.netty:netty-resolver-dns:jar:4.1.92.Final:provided" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.89.Final:provided" -> "io.netty:netty-transport:jar:4.1.92.Final:provided" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.89.Final:provided" -> "io.netty:netty-transport-rxtx:jar:4.1.92.Final:provided" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.89.Final:provided" -> "io.netty:netty-transport-sctp:jar:4.1.92.Final:provided" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.89.Final:provided" -> "io.netty:netty-transport-udt:jar:4.1.92.Final:provided" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.89.Final:provided" -> "io.netty:netty-transport-classes-epoll:jar:4.1.92.Final:provided" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.89.Final:provided" -> "io.netty:netty-transport-classes-kqueue:jar:4.1.92.Final:provided" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.89.Final:provided" -> "io.netty:netty-resolver-dns-classes-macos:jar:4.1.92.Final:provided" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.89.Final:provided" -> "io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.92.Final:provided" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.89.Final:provided" -> "io.netty:netty-transport-native-epoll:jar:linux-aarch_64:4.1.92.Final:provided" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.89.Final:provided" -> "io.netty:netty-transport-native-kqueue:jar:osx-x86_64:4.1.92.Final:provided" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.89.Final:provided" -> "io.netty:netty-transport-native-kqueue:jar:osx-aarch_64:4.1.92.Final:provided" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.89.Final:provided" -> "io.netty:netty-resolver-dns-native-macos:jar:osx-x86_64:4.1.92.Final:provided" ; 
+[INFO] 	"io.netty:netty-all:jar:4.1.89.Final:provided" -> "io.netty:netty-resolver-dns-native-macos:jar:osx-aarch_64:4.1.92.Final:provided" ; 
+[INFO] 	"xerces:xercesImpl:jar:2.12.2:provided" -> "xml-apis:xml-apis:jar:1.4.01:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-app:jar:2.10.1:test" -> "org.apache.hadoop:hadoop-mapreduce-client-common:jar:2.10.1:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-app:jar:2.10.1:test" -> "org.apache.hadoop:hadoop-mapreduce-client-shuffle:jar:2.10.1:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-app:jar:2.10.1:test" -> "org.slf4j:slf4j-reload4j:jar:1.7.36:test" ; 
+[INFO] 	"org.slf4j:slf4j-reload4j:jar:1.7.36:test" -> "ch.qos.reload4j:reload4j:jar:1.2.19:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-api:jar:2.10.1:provided" -> "javax.xml.bind:jaxb-api:jar:2.3.1:provided" ; 
+[INFO] 	"javax.xml.bind:jaxb-api:jar:2.3.1:provided" -> "javax.activation:javax.activation-api:jar:1.2.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-core:jar:2.10.1:provided" -> "org.apache.hadoop:hadoop-yarn-client:jar:2.10.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-core:jar:2.10.1:provided" -> "org.apache.hadoop:hadoop-yarn-common:jar:2.10.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:2.10.1:provided" -> "org.codehaus.jackson:jackson-jaxrs:jar:1.9.13:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:2.10.1:provided" -> "org.codehaus.jackson:jackson-xc:jar:1.9.13:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-minicluster:jar:2.10.1:test" -> "org.apache.hadoop:hadoop-common:test-jar:tests:2.10.1:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-minicluster:jar:2.10.1:test" -> "org.apache.hadoop:hadoop-hdfs:test-jar:tests:2.10.1:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-minicluster:jar:2.10.1:test" -> "org.apache.hadoop:hadoop-yarn-server-tests:test-jar:tests:2.10.1:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-minicluster:jar:2.10.1:test" -> "org.apache.hadoop:hadoop-mapreduce-client-jobclient:test-jar:tests:2.10.1:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-minicluster:jar:2.10.1:test" -> "org.apache.hadoop:hadoop-mapreduce-client-hs:jar:2.10.1:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:test-jar:tests:2.10.1:test" -> "javax.servlet:servlet-api:jar:2.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:test-jar:tests:2.10.1:test" -> "org.mortbay.jetty:jetty-sslengine:jar:6.1.26:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:test-jar:tests:2.10.1:test" -> "javax.servlet.jsp:jsp-api:jar:2.1:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:test-jar:tests:2.10.1:test" -> "net.java.dev.jets3t:jets3t:jar:0.9.0:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:test-jar:tests:2.10.1:test" -> "com.jcraft:jsch:jar:0.1.54:provided" ; 
+[INFO] 	"net.java.dev.jets3t:jets3t:jar:0.9.0:test" -> "com.jamesmurty.utils:java-xmlbuilder:jar:0.4:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-hdfs:test-jar:tests:2.10.1:test" -> "commons-daemon:commons-daemon:jar:1.0.13:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-server-tests:test-jar:tests:2.10.1:test" -> "org.apache.hadoop:hadoop-yarn-server-common:jar:2.10.1:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-server-tests:test-jar:tests:2.10.1:test" -> "org.apache.hadoop:hadoop-yarn-server-nodemanager:jar:2.10.1:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-server-tests:test-jar:tests:2.10.1:test" -> "org.apache.hadoop:hadoop-yarn-server-resourcemanager:jar:2.10.2:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-server-tests:test-jar:tests:2.10.1:test" -> "org.apache.hadoop:hadoop-yarn-server-timelineservice:jar:2.10.1:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-server-common:jar:2.10.1:test" -> "org.apache.hadoop:hadoop-yarn-registry:jar:2.10.1:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-server-common:jar:2.10.1:test" -> "org.apache.geronimo.specs:geronimo-jcache_1.0_spec:jar:1.0-alpha-1:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-server-common:jar:2.10.1:test" -> "org.ehcache:ehcache:jar:3.10.8:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-server-common:jar:2.10.1:test" -> "com.zaxxer:HikariCP-java7:jar:2.4.12:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-server-common:jar:2.10.1:test" -> "com.microsoft.sqlserver:mssql-jdbc:jar:6.1.0.jre7:test" ; 
+[INFO] 	"org.ehcache:ehcache:jar:3.10.8:test" -> "javax.cache:cache-api:jar:1.1.1:test" ; 
+[INFO] 	"org.ehcache:ehcache:jar:3.10.8:test" -> "org.glassfish.jaxb:jaxb-runtime:jar:2.3.8:test" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.8:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.8:test" -> "org.glassfish.jaxb:txw2:jar:2.3.8:test" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.8:test" -> "com.sun.istack:istack-commons-runtime:jar:3.0.12:test" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.8:test" -> "com.sun.activation:jakarta.activation:jar:1.2.2:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-server-nodemanager:jar:2.10.1:test" -> "org.codehaus.jettison:jettison:jar:1.5.2:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-server-nodemanager:jar:2.10.1:test" -> "com.codahale.metrics:metrics-core:jar:3.0.1:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-server-nodemanager:jar:2.10.1:test" -> "com.google.inject:guice:jar:3.0:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-server-nodemanager:jar:2.10.1:test" -> "com.sun.jersey.contribs:jersey-guice:jar:1.9:test" ; 
+[INFO] 	"com.google.inject:guice:jar:3.0:test" -> "javax.inject:javax.inject:jar:1:test" ; 
+[INFO] 	"com.google.inject:guice:jar:3.0:test" -> "aopalliance:aopalliance:jar:1.0:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-server-resourcemanager:jar:2.10.2:test" -> "org.apache.hadoop:hadoop-yarn-server-applicationhistoryservice:jar:2.10.2:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-server-resourcemanager:jar:2.10.2:test" -> "org.apache.hadoop:hadoop-yarn-server-web-proxy:jar:2.10.2:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-server-applicationhistoryservice:jar:2.10.2:test" -> "de.ruedigermoeller:fst:jar:2.50:test" ; 
+[INFO] 	"de.ruedigermoeller:fst:jar:2.50:test" -> "com.cedarsoftware:java-util:jar:1.9.0:test" ; 
+[INFO] 	"com.cedarsoftware:java-util:jar:1.9.0:test" -> "com.cedarsoftware:json-io:jar:2.5.1:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-server-timelineservice:jar:2.10.1:test" -> "org.apache.commons:commons-csv:jar:1.0:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-server-timelineservice:jar:2.10.1:test" -> "javax.ws.rs:jsr311-api:jar:1.1.1:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-jobclient:test-jar:tests:2.10.1:test" -> "com.google.inject.extensions:guice-servlet:jar:3.0:test" ; 
+[INFO] 	"org.awaitility:awaitility:jar:3.0.0:test" -> "org.hamcrest:hamcrest-library:jar:2.2:test" ; 
+[INFO] 	"org.awaitility:awaitility:jar:3.0.0:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.awaitility:awaitility:jar:3.0.0:test" -> "org.objenesis:objenesis:jar:2.5.1:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.8.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.8.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.8.2:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit-pioneer:junit-pioneer:jar:1.5.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test" ; 
+[INFO] 	"org.junit-pioneer:junit-pioneer:jar:1.5.0:test" -> "org.junit.platform:junit-platform-launcher:jar:1.8.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.12.4:test" -> "net.bytebuddy:byte-buddy:jar:1.12.23:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.12.4:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.23:test" ; 
+[INFO] 	"org.powermock:powermock-api-mockito2:jar:2.0.9:test" -> "org.powermock:powermock-api-support:jar:2.0.9:test" ; 
+[INFO] 	"org.powermock:powermock-api-support:jar:2.0.9:test" -> "org.powermock:powermock-reflect:jar:2.0.9:test" ; 
+[INFO] 	"org.powermock:powermock-api-support:jar:2.0.9:test" -> "org.powermock:powermock-core:jar:2.0.9:test" ; 
+[INFO] 	"org.powermock:powermock-core:jar:2.0.9:test" -> "org.javassist:javassist:jar:3.20.0-GA:test" ; 
+[INFO] 	"org.scala-lang:scala-compiler:jar:2.12.13:provided" -> "org.scala-lang:scala-reflect:jar:2.12.13:provided" ; 
+[INFO] 	"org.scala-lang:scala-compiler:jar:2.12.13:provided" -> "org.scala-lang.modules:scala-xml_2.12:jar:1.0.6:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< org.apache.kylin:kylin-core-metadata >----------------
+[INFO] Building Kylin - Core Metadata 5.0.0-SNAPSHOT                     [3/40]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from cloudera: https://repository.cloudera.com/artifactory/cloudera-repos/org/apache/kylin/kylin-core-common/5.0.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from jcenter-snapshots: https://jcenter.bintray.com/org/apache/kylin/kylin-core-common/5.0.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from Sonatype: https://repo1.maven.org/maven2/org/scalastyle/scalastyle-maven-plugin/org/apache/kylin/kylin-core-common/5.0.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from nexus: https://repository.kyligence.io/repository/maven-public/org/apache/kylin/kylin-core-common/5.0.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/kylin/kylin-core-common/5.0.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from nexus: https://repository.kyligence.io/repository/maven-public/org/apache/kylin/kylin-core-common/5.0.0-SNAPSHOT/kylin-core-common-5.0.0-SNAPSHOT.jar
+[INFO] Downloading from nexus: https://repository.kyligence.io/repository/maven-public/org/apache/kylin/kylin-core-common/5.0.0-SNAPSHOT/kylin-core-common-5.0.0-SNAPSHOT-tests.jar
+[INFO] Downloading from cloudera: https://repository.cloudera.com/artifactory/cloudera-repos/org/apache/kylin/kylin-core-common/5.0.0-SNAPSHOT/kylin-core-common-5.0.0-SNAPSHOT.jar
+[INFO] Downloading from cloudera: https://repository.cloudera.com/artifactory/cloudera-repos/org/apache/kylin/kylin-core-common/5.0.0-SNAPSHOT/kylin-core-common-5.0.0-SNAPSHOT-tests.jar
+[INFO] Downloading from Sonatype: https://repo1.maven.org/maven2/org/scalastyle/scalastyle-maven-plugin/org/apache/kylin/kylin-core-common/5.0.0-SNAPSHOT/kylin-core-common-5.0.0-SNAPSHOT.jar
+[INFO] Downloading from Sonatype: https://repo1.maven.org/maven2/org/scalastyle/scalastyle-maven-plugin/org/apache/kylin/kylin-core-common/5.0.0-SNAPSHOT/kylin-core-common-5.0.0-SNAPSHOT-tests.jar
+[INFO] Downloading from jcenter-snapshots: https://jcenter.bintray.com/org/apache/kylin/kylin-core-common/5.0.0-SNAPSHOT/kylin-core-common-5.0.0-SNAPSHOT.jar
+[INFO] Downloading from jcenter-snapshots: https://jcenter.bintray.com/org/apache/kylin/kylin-core-common/5.0.0-SNAPSHOT/kylin-core-common-5.0.0-SNAPSHOT-tests.jar
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/kylin/kylin-core-common/5.0.0-SNAPSHOT/kylin-core-common-5.0.0-SNAPSHOT.jar
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/kylin/kylin-core-common/5.0.0-SNAPSHOT/kylin-core-common-5.0.0-SNAPSHOT-tests.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Apache Kylin 5 5.0.0-SNAPSHOT:
+[INFO] 
+[INFO] Apache Kylin 5 ..................................... SUCCESS [  4.563 s]
+[INFO] Kylin - Core Common ................................ SUCCESS [  6.148 s]
+[INFO] Kylin - Core Metadata .............................. FAILURE [  6.906 s]
+[INFO] Kylin - Core Metrics ............................... SKIPPED
+[INFO] Kylin - Core Job ................................... SKIPPED
+[INFO] Kylin - Core Storage ............................... SKIPPED
+[INFO] Kylin - Query Common ............................... SKIPPED
+[INFO] Kylin - Local Data Cache ........................... SKIPPED
+[INFO] Kylin - Spark Common ............................... SKIPPED
+[INFO] Kylin - Query Engine Spark ......................... SKIPPED
+[INFO] Kylin - Hive Source ................................ SKIPPED
+[INFO] Kylin - Build Engine SDK ........................... SKIPPED
+[INFO] Kylin - Distributed Lock Extension ................. SKIPPED
+[INFO] Kylin - Build Engine Spark ......................... SKIPPED
+[INFO] Kylin - Query ...................................... SKIPPED
+[INFO] Kylin - Streaming SDK .............................. SKIPPED
+[INFO] Kylin - Streaming .................................. SKIPPED
+[INFO] Kylin - Tool ....................................... SKIPPED
+[INFO] Kylin - Common Service ............................. SKIPPED
+[INFO] Kylin - Datasource Service ......................... SKIPPED
+[INFO] Kylin - Modeling Service ........................... SKIPPED
+[INFO] Kylin - Data Loading Service ....................... SKIPPED
+[INFO] Kylin - Query Service .............................. SKIPPED
+[INFO] Kylin - Common Server .............................. SKIPPED
+[INFO] Kylin - Job Service ................................ SKIPPED
+[INFO] Kylin - Streaming Service .......................... SKIPPED
+[INFO] Kylin - Data Loading Server ........................ SKIPPED
+[INFO] Kylin - Query Server ............................... SKIPPED
+[INFO] Kylin - Metadata Server ............................ SKIPPED
+[INFO] Kylin - REST Server ................................ SKIPPED
+[INFO] Kylin - Datasource SDK ............................. SKIPPED
+[INFO] Kylin - JDBC Source ................................ SKIPPED
+[INFO] Kylin - Integration Test ........................... SKIPPED
+[INFO] Kylin - Integration Test Spark ..................... SKIPPED
+[INFO] Kylin - Source Assembly ............................ SKIPPED
+[INFO] Kylin - Integration Test Server .................... SKIPPED
+[INFO] Kylin - Data loading Booter ........................ SKIPPED
+[INFO] Kylin - Query Booter ............................... SKIPPED
+[INFO] Kylin - Common Booter .............................. SKIPPED
+[INFO] Kylin - JDBC Driver ................................ SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  23.443 s
+[INFO] Finished at: 2023-12-28T09:02:38+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project kylin-core-metadata: Could not resolve dependencies for project org.apache.kylin:kylin-core-metadata:jar:5.0.0-SNAPSHOT: The following artifacts could not be resolved: org.apache.kylin:kylin-core-common:jar:5.0.0-SNAPSHOT, org.apache.kylin:kylin-core-common:jar:tests:5.0.0-SNAPSHOT: Could not find artifact org.apache.kylin:kylin-core-common:jar:5.0.0-SNAPSHOT in nexus (https://repository.kyligence.io/repository/maven-public/) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :kylin-core-metadata

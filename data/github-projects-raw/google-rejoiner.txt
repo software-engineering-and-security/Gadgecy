@@ -1,0 +1,626 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.google.api.graphql:rejoiner-grpc:jar:0.4.0-SNAPSHOT
+[WARNING] 'version' contains an expression but should be a constant. @ com.google.api.graphql:rejoiner-grpc:${rejoiner.version}, /home/brunok/apache-ysoserial-vuln/pom/google-rejoiner/rejoiner-grpc/pom.xml, line 33, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Rejoiner Parent Project                                            [pom]
+[INFO] Rejoiner                                                           [jar]
+[INFO] Rejoiner Guice                                                     [jar]
+[INFO] Rejoiner gRPC                                                      [jar]
+[INFO] Schema Parent                                                      [pom]
+[INFO] Schema Common                                                      [jar]
+[INFO] Schema Firestore                                                   [jar]
+[INFO] Schema Common                                                      [jar]
+[INFO] Example - Parent                                                   [pom]
+[INFO] Example - Schema                                                   [war]
+[INFO] 
+[INFO] ---------------< com.google.api.graphql:rejoiner-parent >---------------
+[INFO] Building Rejoiner Parent Project 0.4.0-SNAPSHOT                   [1/10]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ rejoiner-parent ---
+[INFO] digraph "com.google.api.graphql:rejoiner-parent:pom:0.4.0-SNAPSHOT" { 
+[INFO] 	"com.google.api.graphql:rejoiner-parent:pom:0.4.0-SNAPSHOT" -> "com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-parent:pom:0.4.0-SNAPSHOT" -> "com.google.guava:guava:jar:29.0-jre:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-parent:pom:0.4.0-SNAPSHOT" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-parent:pom:0.4.0-SNAPSHOT" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-parent:pom:0.4.0-SNAPSHOT" -> "com.google.auto.value:auto-value-annotations:jar:1.7.3:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-parent:pom:0.4.0-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-parent:pom:0.4.0-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-parent:pom:0.4.0-SNAPSHOT" -> "com.google.truth:truth:jar:1.0:test" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-parent:pom:0.4.0-SNAPSHOT" -> "com.google.truth.extensions:truth-proto-extension:jar:1.0:test" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "org.antlr:antlr4-runtime:jar:4.7.2:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "com.graphql-java:java-dataloader:jar:2.2.3:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "org.checkerframework:checker-qual:jar:2.11.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.3.4:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.0:test" -> "org.checkerframework:checker-compat-qual:jar:2.5.5:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.0:test" -> "com.googlecode.java-diff-utils:diffutils:jar:1.3.0:test" ; 
+[INFO] 	"com.google.truth.extensions:truth-proto-extension:jar:1.0:test" -> "com.google.truth.extensions:truth-liteproto-extension:jar:1.0:test" ; 
+[INFO] 	"com.google.truth.extensions:truth-proto-extension:jar:1.0:test" -> "com.google.protobuf:protobuf-java:jar:3.6.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< com.google.api.graphql:rejoiner >-------------------
+[INFO] Building Rejoiner 0.4.0-SNAPSHOT                                  [2/10]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ rejoiner ---
+[INFO] digraph "com.google.api.graphql:rejoiner:jar:0.4.0-SNAPSHOT" { 
+[INFO] 	"com.google.api.graphql:rejoiner:jar:0.4.0-SNAPSHOT" -> "com.google.protobuf:protobuf-java-util:jar:3.11.1:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner:jar:0.4.0-SNAPSHOT" -> "com.google.protobuf:protobuf-java:jar:3.16.1:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner:jar:0.4.0-SNAPSHOT" -> "com.google.api.grpc:proto-google-common-protos:jar:1.17.0:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner:jar:0.4.0-SNAPSHOT" -> "com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner:jar:0.4.0-SNAPSHOT" -> "com.google.guava:guava:jar:29.0-jre:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner:jar:0.4.0-SNAPSHOT" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner:jar:0.4.0-SNAPSHOT" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner:jar:0.4.0-SNAPSHOT" -> "com.google.auto.value:auto-value-annotations:jar:1.7.3:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner:jar:0.4.0-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner:jar:0.4.0-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"com.google.api.graphql:rejoiner:jar:0.4.0-SNAPSHOT" -> "com.google.truth:truth:jar:1.0:test" ; 
+[INFO] 	"com.google.api.graphql:rejoiner:jar:0.4.0-SNAPSHOT" -> "com.google.truth.extensions:truth-proto-extension:jar:1.0:test" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.11.1:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.3.3:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.11.1:compile" -> "com.google.code.gson:gson:jar:2.8.6:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "org.antlr:antlr4-runtime:jar:4.7.2:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "com.graphql-java:java-dataloader:jar:2.2.3:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "org.checkerframework:checker-qual:jar:2.11.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.0:test" -> "org.checkerframework:checker-compat-qual:jar:2.5.5:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.0:test" -> "com.googlecode.java-diff-utils:diffutils:jar:1.3.0:test" ; 
+[INFO] 	"com.google.truth.extensions:truth-proto-extension:jar:1.0:test" -> "com.google.truth.extensions:truth-liteproto-extension:jar:1.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< com.google.api.graphql:rejoiner-guice >----------------
+[INFO] Building Rejoiner Guice 0.4.0-SNAPSHOT                            [3/10]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/google/api/graphql/rejoiner/0.4.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/google/api/graphql/rejoiner/0.4.0-SNAPSHOT/maven-metadata.xml (1.2 kB at 672 B/s)
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/io/grpc/grpc-netty-shaded/maven-metadata.xml
+[INFO] Downloaded from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/io/grpc/grpc-netty-shaded/maven-metadata.xml (609 B at 2.3 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ rejoiner-guice ---
+[INFO] digraph "com.google.api.graphql:rejoiner-guice:jar:0.4.0-SNAPSHOT" { 
+[INFO] 	"com.google.api.graphql:rejoiner-guice:jar:0.4.0-SNAPSHOT" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-guice:jar:0.4.0-SNAPSHOT" -> "com.google.inject.extensions:guice-multibindings:jar:4.2.2:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-guice:jar:0.4.0-SNAPSHOT" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-guice:jar:0.4.0-SNAPSHOT" -> "com.google.protobuf:protobuf-java:jar:3.16.3:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-guice:jar:0.4.0-SNAPSHOT" -> "com.google.api.grpc:proto-google-common-protos:jar:1.17.0:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-guice:jar:0.4.0-SNAPSHOT" -> "com.google.api.graphql:rejoiner:jar:0.4.0-SNAPSHOT:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-guice:jar:0.4.0-SNAPSHOT" -> "com.google.cloud:google-cloud-firestore:jar:1.32.1:test" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-guice:jar:0.4.0-SNAPSHOT" -> "com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-guice:jar:0.4.0-SNAPSHOT" -> "com.google.guava:guava:jar:29.0-jre:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-guice:jar:0.4.0-SNAPSHOT" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-guice:jar:0.4.0-SNAPSHOT" -> "com.google.auto.value:auto-value-annotations:jar:1.7.3:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-guice:jar:0.4.0-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-guice:jar:0.4.0-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-guice:jar:0.4.0-SNAPSHOT" -> "com.google.truth:truth:jar:1.0:test" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-guice:jar:0.4.0-SNAPSHOT" -> "com.google.truth.extensions:truth-proto-extension:jar:1.0:test" ; 
+[INFO] 	"com.google.inject.extensions:guice-multibindings:jar:4.2.2:compile" -> "com.google.inject:guice:jar:4.2.2:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner:jar:0.4.0-SNAPSHOT:compile" -> "com.google.protobuf:protobuf-java-util:jar:3.11.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:test" -> "com.google.cloud:google-cloud-core-grpc:jar:1.92.0:test" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:test" -> "com.google.api.grpc:proto-google-cloud-firestore-admin-v1:jar:1.32.1:test" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:test" -> "com.google.api.grpc:proto-google-cloud-firestore-v1:jar:1.32.1:test" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:test" -> "com.google.api.grpc:proto-google-cloud-firestore-v1beta1:jar:0.85.1:test" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:test" -> "io.opencensus:opencensus-contrib-grpc-util:jar:0.24.0:test" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:test" -> "com.google.api:api-common:jar:1.8.1:test" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:test" -> "io.grpc:grpc-protobuf:jar:1.26.0:test" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:test" -> "io.grpc:grpc-context:jar:1.26.0:test" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:test" -> "com.google.api:gax:jar:1.52.0:test" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:test" -> "com.google.api:gax-grpc:jar:1.52.0:test" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:test" -> "org.threeten:threetenbp:jar:1.4.0:test" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:test" -> "io.grpc:grpc-stub:jar:1.26.0:test" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:test" -> "io.opencensus:opencensus-api:jar:0.24.0:test" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:test" -> "com.google.auth:google-auth-library-credentials:jar:0.19.0:test" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:test" -> "com.google.cloud:google-cloud-core:jar:1.92.0:test" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:test" -> "com.google.code.gson:gson:jar:2.8.6:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:test" -> "com.fasterxml.jackson.core:jackson-core:jar:2.10.1:test" ; 
+[INFO] 	"com.google.cloud:google-cloud-core-grpc:jar:1.92.0:test" -> "io.grpc:grpc-api:jar:1.25.0:test" ; 
+[INFO] 	"com.google.cloud:google-cloud-core-grpc:jar:1.92.0:test" -> "io.grpc:grpc-core:jar:1.25.0:test" ; 
+[INFO] 	"com.google.cloud:google-cloud-core-grpc:jar:1.92.0:test" -> "com.google.http-client:google-http-client:jar:1.33.0:test" ; 
+[INFO] 	"io.grpc:grpc-api:jar:1.25.0:test" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.17:test" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.25.0:test" -> "com.google.android:annotations:jar:4.1.1.4:test" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.25.0:test" -> "io.perfmark:perfmark-api:jar:0.19.0:test" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.25.0:test" -> "io.opencensus:opencensus-contrib-grpc-metrics:jar:0.21.0:test" ; 
+[INFO] 	"com.google.http-client:google-http-client:jar:1.33.0:test" -> "org.apache.httpcomponents:httpclient:jar:4.5.10:test" ; 
+[INFO] 	"com.google.http-client:google-http-client:jar:1.33.0:test" -> "org.apache.httpcomponents:httpcore:jar:4.4.12:test" ; 
+[INFO] 	"com.google.http-client:google-http-client:jar:1.33.0:test" -> "io.opencensus:opencensus-contrib-http-util:jar:0.24.0:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.10:test" -> "commons-logging:commons-logging:jar:1.2:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.10:test" -> "commons-codec:commons-codec:jar:1.11:test" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.26.0:test" -> "io.grpc:grpc-protobuf-lite:jar:1.26.0:test" ; 
+[INFO] 	"com.google.api:gax:jar:1.52.0:test" -> "com.google.auth:google-auth-library-oauth2-http:jar:0.19.0:test" ; 
+[INFO] 	"com.google.api:gax-grpc:jar:1.52.0:test" -> "io.grpc:grpc-auth:jar:1.25.0:test" ; 
+[INFO] 	"com.google.api:gax-grpc:jar:1.52.0:test" -> "io.grpc:grpc-netty-shaded:jar:1.25.0:test" ; 
+[INFO] 	"com.google.api:gax-grpc:jar:1.52.0:test" -> "io.grpc:grpc-alts:jar:1.25.0:test" ; 
+[INFO] 	"io.grpc:grpc-alts:jar:1.25.0:test" -> "io.grpc:grpc-grpclb:jar:1.25.0:test" ; 
+[INFO] 	"io.grpc:grpc-alts:jar:1.25.0:test" -> "org.apache.commons:commons-lang3:jar:3.5:test" ; 
+[INFO] 	"io.grpc:grpc-alts:jar:1.25.0:test" -> "org.conscrypt:conscrypt-openjdk-uber:jar:2.2.1:test" ; 
+[INFO] 	"com.google.cloud:google-cloud-core:jar:1.92.0:test" -> "com.google.api.grpc:proto-google-iam-v1:jar:0.13.0:test" ; 
+[INFO] 	"com.google.cloud:google-cloud-core:jar:1.92.0:test" -> "com.google.http-client:google-http-client-jackson2:jar:1.33.0:test" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "org.antlr:antlr4-runtime:jar:4.7.2:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "com.graphql-java:java-dataloader:jar:2.2.3:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "org.checkerframework:checker-qual:jar:2.11.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.3.4:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.0:test" -> "org.checkerframework:checker-compat-qual:jar:2.5.5:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.0:test" -> "com.googlecode.java-diff-utils:diffutils:jar:1.3.0:test" ; 
+[INFO] 	"com.google.truth.extensions:truth-proto-extension:jar:1.0:test" -> "com.google.truth.extensions:truth-liteproto-extension:jar:1.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< com.google.api.graphql:rejoiner-grpc >----------------
+[INFO] Building Rejoiner gRPC 0.4.0-SNAPSHOT                             [4/10]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/io/netty/netty-codec-http2/maven-metadata.xml
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/maven-metadata.xml
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/maven-metadata.xml (4.8 kB at 23 kB/s)
+[INFO] Downloaded from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/io/netty/netty-codec-http2/maven-metadata.xml (2.1 kB at 7.9 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ rejoiner-grpc ---
+[INFO] digraph "com.google.api.graphql:rejoiner-grpc:jar:0.4.0-SNAPSHOT" { 
+[INFO] 	"com.google.api.graphql:rejoiner-grpc:jar:0.4.0-SNAPSHOT" -> "com.google.protobuf:protobuf-java:jar:3.16.1:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-grpc:jar:0.4.0-SNAPSHOT" -> "com.google.protobuf:protobuf-java-util:jar:3.11.1:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-grpc:jar:0.4.0-SNAPSHOT" -> "io.grpc:grpc-netty:jar:1.26.0:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-grpc:jar:0.4.0-SNAPSHOT" -> "io.grpc:grpc-protobuf:jar:1.26.0:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-grpc:jar:0.4.0-SNAPSHOT" -> "io.grpc:grpc-stub:jar:1.26.0:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-grpc:jar:0.4.0-SNAPSHOT" -> "com.google.api.grpc:proto-google-common-protos:jar:1.17.0:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-grpc:jar:0.4.0-SNAPSHOT" -> "com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-grpc:jar:0.4.0-SNAPSHOT" -> "com.google.guava:guava:jar:29.0-jre:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-grpc:jar:0.4.0-SNAPSHOT" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-grpc:jar:0.4.0-SNAPSHOT" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-grpc:jar:0.4.0-SNAPSHOT" -> "com.google.auto.value:auto-value-annotations:jar:1.7.3:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-grpc:jar:0.4.0-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-grpc:jar:0.4.0-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-grpc:jar:0.4.0-SNAPSHOT" -> "com.google.truth:truth:jar:1.0:test" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-grpc:jar:0.4.0-SNAPSHOT" -> "com.google.truth.extensions:truth-proto-extension:jar:1.0:test" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.11.1:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.3.3:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.11.1:compile" -> "com.google.code.gson:gson:jar:2.8.6:compile" ; 
+[INFO] 	"io.grpc:grpc-netty:jar:1.26.0:compile" -> "io.grpc:grpc-core:jar:1.26.0:compile (version selected from constraint [1.26.0,1.26.0])" ; 
+[INFO] 	"io.grpc:grpc-netty:jar:1.26.0:compile" -> "io.netty:netty-codec-http2:jar:4.1.42.Final:compile (version selected from constraint [4.1.42.Final,4.1.42.Final])" ; 
+[INFO] 	"io.grpc:grpc-netty:jar:1.26.0:compile" -> "io.netty:netty-handler-proxy:jar:4.1.42.Final:compile" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.26.0:compile (version selected from constraint [1.26.0,1.26.0])" -> "com.google.android:annotations:jar:4.1.1.4:compile" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.26.0:compile (version selected from constraint [1.26.0,1.26.0])" -> "io.perfmark:perfmark-api:jar:0.19.0:compile" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.26.0:compile (version selected from constraint [1.26.0,1.26.0])" -> "io.opencensus:opencensus-api:jar:0.24.0:compile" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.26.0:compile (version selected from constraint [1.26.0,1.26.0])" -> "io.opencensus:opencensus-contrib-grpc-metrics:jar:0.24.0:compile" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.42.Final:compile (version selected from constraint [4.1.42.Final,4.1.42.Final])" -> "io.netty:netty-common:jar:4.1.42.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.42.Final:compile (version selected from constraint [4.1.42.Final,4.1.42.Final])" -> "io.netty:netty-buffer:jar:4.1.42.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.42.Final:compile (version selected from constraint [4.1.42.Final,4.1.42.Final])" -> "io.netty:netty-transport:jar:4.1.42.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.42.Final:compile (version selected from constraint [4.1.42.Final,4.1.42.Final])" -> "io.netty:netty-codec:jar:4.1.42.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.42.Final:compile (version selected from constraint [4.1.42.Final,4.1.42.Final])" -> "io.netty:netty-handler:jar:4.1.42.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.42.Final:compile (version selected from constraint [4.1.42.Final,4.1.42.Final])" -> "io.netty:netty-codec-http:jar:4.1.42.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.42.Final:compile" -> "io.netty:netty-resolver:jar:4.1.42.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler-proxy:jar:4.1.42.Final:compile" -> "io.netty:netty-codec-socks:jar:4.1.42.Final:compile" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.26.0:compile" -> "io.grpc:grpc-api:jar:1.26.0:compile" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.26.0:compile" -> "io.grpc:grpc-protobuf-lite:jar:1.26.0:compile" ; 
+[INFO] 	"io.grpc:grpc-api:jar:1.26.0:compile" -> "io.grpc:grpc-context:jar:1.26.0:compile" ; 
+[INFO] 	"io.grpc:grpc-api:jar:1.26.0:compile" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.17:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "org.antlr:antlr4-runtime:jar:4.7.2:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "com.graphql-java:java-dataloader:jar:2.2.3:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "org.checkerframework:checker-qual:jar:2.11.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.0:test" -> "org.checkerframework:checker-compat-qual:jar:2.5.5:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.0:test" -> "com.googlecode.java-diff-utils:diffutils:jar:1.3.0:test" ; 
+[INFO] 	"com.google.truth.extensions:truth-proto-extension:jar:1.0:test" -> "com.google.truth.extensions:truth-liteproto-extension:jar:1.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< com.google.api.graphql:schema-parent >----------------
+[INFO] Building Schema Parent 0.4.0-SNAPSHOT                             [5/10]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ schema-parent ---
+[INFO] digraph "com.google.api.graphql:schema-parent:pom:0.4.0-SNAPSHOT" { 
+[INFO] 	"com.google.api.graphql:schema-parent:pom:0.4.0-SNAPSHOT" -> "com.google.api.graphql:rejoiner:jar:0.4.0-SNAPSHOT:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-parent:pom:0.4.0-SNAPSHOT" -> "net.javacrumbs.future-converter:future-converter-java8-guava:jar:1.2.0:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-parent:pom:0.4.0-SNAPSHOT" -> "com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-parent:pom:0.4.0-SNAPSHOT" -> "com.google.guava:guava:jar:29.0-jre:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-parent:pom:0.4.0-SNAPSHOT" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-parent:pom:0.4.0-SNAPSHOT" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-parent:pom:0.4.0-SNAPSHOT" -> "com.google.auto.value:auto-value-annotations:jar:1.7.3:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-parent:pom:0.4.0-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-parent:pom:0.4.0-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"com.google.api.graphql:schema-parent:pom:0.4.0-SNAPSHOT" -> "com.google.truth:truth:jar:1.0:test" ; 
+[INFO] 	"com.google.api.graphql:schema-parent:pom:0.4.0-SNAPSHOT" -> "com.google.truth.extensions:truth-proto-extension:jar:1.0:test" ; 
+[INFO] 	"com.google.api.graphql:rejoiner:jar:0.4.0-SNAPSHOT:compile" -> "com.google.protobuf:protobuf-java-util:jar:3.11.1:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner:jar:0.4.0-SNAPSHOT:compile" -> "com.google.protobuf:protobuf-java:jar:3.16.1:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner:jar:0.4.0-SNAPSHOT:compile" -> "com.google.api.grpc:proto-google-common-protos:jar:1.17.0:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.11.1:compile" -> "com.google.code.gson:gson:jar:2.8.6:compile" ; 
+[INFO] 	"net.javacrumbs.future-converter:future-converter-java8-guava:jar:1.2.0:compile" -> "net.javacrumbs.future-converter:future-converter-common:jar:1.2.0:compile" ; 
+[INFO] 	"net.javacrumbs.future-converter:future-converter-java8-guava:jar:1.2.0:compile" -> "net.javacrumbs.future-converter:future-converter-java8-common:jar:1.2.0:compile" ; 
+[INFO] 	"net.javacrumbs.future-converter:future-converter-java8-guava:jar:1.2.0:compile" -> "net.javacrumbs.future-converter:future-converter-guava-common:jar:1.2.0:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "org.antlr:antlr4-runtime:jar:4.7.2:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "com.graphql-java:java-dataloader:jar:2.2.3:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "org.checkerframework:checker-qual:jar:2.11.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.3.4:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.0:test" -> "org.checkerframework:checker-compat-qual:jar:2.5.5:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.0:test" -> "com.googlecode.java-diff-utils:diffutils:jar:1.3.0:test" ; 
+[INFO] 	"com.google.truth.extensions:truth-proto-extension:jar:1.0:test" -> "com.google.truth.extensions:truth-liteproto-extension:jar:1.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< com.google.api.graphql:schema-common >----------------
+[INFO] Building Schema Common 0.4.0-SNAPSHOT                             [6/10]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/google/api/graphql/rejoiner-guice/0.4.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/google/api/graphql/rejoiner-guice/0.4.0-SNAPSHOT/maven-metadata.xml (1.0 kB at 3.3 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ schema-common ---
+[INFO] digraph "com.google.api.graphql:schema-common:jar:0.4.0-SNAPSHOT" { 
+[INFO] 	"com.google.api.graphql:schema-common:jar:0.4.0-SNAPSHOT" -> "com.google.api.graphql:rejoiner:jar:0.4.0-SNAPSHOT:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-common:jar:0.4.0-SNAPSHOT" -> "com.google.api.graphql:rejoiner-guice:jar:0.4.0-SNAPSHOT:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-common:jar:0.4.0-SNAPSHOT" -> "com.google.api:api-common:jar:1.8.1:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-common:jar:0.4.0-SNAPSHOT" -> "net.javacrumbs.future-converter:future-converter-java8-guava:jar:1.2.0:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-common:jar:0.4.0-SNAPSHOT" -> "com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-common:jar:0.4.0-SNAPSHOT" -> "com.google.guava:guava:jar:29.0-jre:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-common:jar:0.4.0-SNAPSHOT" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-common:jar:0.4.0-SNAPSHOT" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-common:jar:0.4.0-SNAPSHOT" -> "com.google.auto.value:auto-value-annotations:jar:1.7.3:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-common:jar:0.4.0-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-common:jar:0.4.0-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"com.google.api.graphql:schema-common:jar:0.4.0-SNAPSHOT" -> "com.google.truth:truth:jar:1.0:test" ; 
+[INFO] 	"com.google.api.graphql:schema-common:jar:0.4.0-SNAPSHOT" -> "com.google.truth.extensions:truth-proto-extension:jar:1.0:test" ; 
+[INFO] 	"com.google.api.graphql:rejoiner:jar:0.4.0-SNAPSHOT:compile" -> "com.google.protobuf:protobuf-java-util:jar:3.11.1:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner:jar:0.4.0-SNAPSHOT:compile" -> "com.google.protobuf:protobuf-java:jar:3.16.1:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner:jar:0.4.0-SNAPSHOT:compile" -> "com.google.api.grpc:proto-google-common-protos:jar:1.17.0:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.11.1:compile" -> "com.google.code.gson:gson:jar:2.8.6:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-guice:jar:0.4.0-SNAPSHOT:compile" -> "com.google.inject.extensions:guice-multibindings:jar:4.2.2:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-guice:jar:0.4.0-SNAPSHOT:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.google.inject.extensions:guice-multibindings:jar:4.2.2:compile" -> "com.google.inject:guice:jar:4.2.2:compile" ; 
+[INFO] 	"net.javacrumbs.future-converter:future-converter-java8-guava:jar:1.2.0:compile" -> "net.javacrumbs.future-converter:future-converter-common:jar:1.2.0:compile" ; 
+[INFO] 	"net.javacrumbs.future-converter:future-converter-java8-guava:jar:1.2.0:compile" -> "net.javacrumbs.future-converter:future-converter-java8-common:jar:1.2.0:compile" ; 
+[INFO] 	"net.javacrumbs.future-converter:future-converter-java8-guava:jar:1.2.0:compile" -> "net.javacrumbs.future-converter:future-converter-guava-common:jar:1.2.0:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "org.antlr:antlr4-runtime:jar:4.7.2:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "com.graphql-java:java-dataloader:jar:2.2.3:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "org.checkerframework:checker-qual:jar:2.11.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.3.4:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.0:test" -> "org.checkerframework:checker-compat-qual:jar:2.5.5:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.0:test" -> "com.googlecode.java-diff-utils:diffutils:jar:1.3.0:test" ; 
+[INFO] 	"com.google.truth.extensions:truth-proto-extension:jar:1.0:test" -> "com.google.truth.extensions:truth-liteproto-extension:jar:1.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< com.google.api.graphql:schema-firestore >---------------
+[INFO] Building Schema Firestore 0.4.0-SNAPSHOT                          [7/10]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ schema-firestore ---
+[INFO] digraph "com.google.api.graphql:schema-firestore:jar:0.4.0-SNAPSHOT" { 
+[INFO] 	"com.google.api.graphql:schema-firestore:jar:0.4.0-SNAPSHOT" -> "com.google.api.graphql:rejoiner:jar:0.4.0-SNAPSHOT:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-firestore:jar:0.4.0-SNAPSHOT" -> "com.google.api.graphql:rejoiner-guice:jar:0.4.0-SNAPSHOT:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-firestore:jar:0.4.0-SNAPSHOT" -> "com.google.cloud:google-cloud-firestore:jar:1.32.1:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-firestore:jar:0.4.0-SNAPSHOT" -> "net.javacrumbs.future-converter:future-converter-java8-guava:jar:1.2.0:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-firestore:jar:0.4.0-SNAPSHOT" -> "com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-firestore:jar:0.4.0-SNAPSHOT" -> "com.google.guava:guava:jar:29.0-jre:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-firestore:jar:0.4.0-SNAPSHOT" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-firestore:jar:0.4.0-SNAPSHOT" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-firestore:jar:0.4.0-SNAPSHOT" -> "com.google.auto.value:auto-value-annotations:jar:1.7.3:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-firestore:jar:0.4.0-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-firestore:jar:0.4.0-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"com.google.api.graphql:schema-firestore:jar:0.4.0-SNAPSHOT" -> "com.google.truth:truth:jar:1.0:test" ; 
+[INFO] 	"com.google.api.graphql:schema-firestore:jar:0.4.0-SNAPSHOT" -> "com.google.truth.extensions:truth-proto-extension:jar:1.0:test" ; 
+[INFO] 	"com.google.api.graphql:rejoiner:jar:0.4.0-SNAPSHOT:compile" -> "com.google.protobuf:protobuf-java-util:jar:3.11.1:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner:jar:0.4.0-SNAPSHOT:compile" -> "com.google.protobuf:protobuf-java:jar:3.16.1:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner:jar:0.4.0-SNAPSHOT:compile" -> "com.google.api.grpc:proto-google-common-protos:jar:1.17.0:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-guice:jar:0.4.0-SNAPSHOT:compile" -> "com.google.inject.extensions:guice-multibindings:jar:4.2.2:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-guice:jar:0.4.0-SNAPSHOT:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.google.inject.extensions:guice-multibindings:jar:4.2.2:compile" -> "com.google.inject:guice:jar:4.2.2:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:compile" -> "com.google.cloud:google-cloud-core-grpc:jar:1.92.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:compile" -> "com.google.api.grpc:proto-google-cloud-firestore-admin-v1:jar:1.32.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:compile" -> "com.google.api.grpc:proto-google-cloud-firestore-v1:jar:1.32.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:compile" -> "com.google.api.grpc:proto-google-cloud-firestore-v1beta1:jar:0.85.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:compile" -> "io.opencensus:opencensus-contrib-grpc-util:jar:0.24.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:compile" -> "com.google.api:api-common:jar:1.8.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:compile" -> "io.grpc:grpc-protobuf:jar:1.26.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:compile" -> "io.grpc:grpc-context:jar:1.26.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:compile" -> "com.google.api:gax:jar:1.52.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:compile" -> "com.google.api:gax-grpc:jar:1.52.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:compile" -> "org.threeten:threetenbp:jar:1.4.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:compile" -> "io.grpc:grpc-stub:jar:1.26.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:compile" -> "io.opencensus:opencensus-api:jar:0.24.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:compile" -> "com.google.auth:google-auth-library-credentials:jar:0.19.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:compile" -> "com.google.cloud:google-cloud-core:jar:1.92.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:compile" -> "com.google.code.gson:gson:jar:2.8.6:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.10.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-core-grpc:jar:1.92.0:compile" -> "com.google.http-client:google-http-client:jar:1.33.0:compile" ; 
+[INFO] 	"com.google.http-client:google-http-client:jar:1.33.0:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.10:compile" ; 
+[INFO] 	"com.google.http-client:google-http-client:jar:1.33.0:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.12:compile" ; 
+[INFO] 	"com.google.http-client:google-http-client:jar:1.33.0:compile" -> "io.opencensus:opencensus-contrib-http-util:jar:0.24.0:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.10:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.10:compile" -> "commons-codec:commons-codec:jar:1.11:compile" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.26.0:compile" -> "io.grpc:grpc-protobuf-lite:jar:1.26.0:compile" ; 
+[INFO] 	"com.google.api:gax:jar:1.52.0:compile" -> "com.google.auth:google-auth-library-oauth2-http:jar:0.19.0:compile" ; 
+[INFO] 	"com.google.api:gax-grpc:jar:1.52.0:compile" -> "io.grpc:grpc-auth:jar:1.25.0:compile" ; 
+[INFO] 	"com.google.api:gax-grpc:jar:1.52.0:compile" -> "io.grpc:grpc-netty-shaded:jar:1.25.0:compile" ; 
+[INFO] 	"com.google.api:gax-grpc:jar:1.52.0:compile" -> "io.grpc:grpc-alts:jar:1.25.0:compile" ; 
+[INFO] 	"io.grpc:grpc-alts:jar:1.25.0:compile" -> "io.grpc:grpc-grpclb:jar:1.25.0:compile" ; 
+[INFO] 	"io.grpc:grpc-alts:jar:1.25.0:compile" -> "org.apache.commons:commons-lang3:jar:3.5:compile" ; 
+[INFO] 	"io.grpc:grpc-alts:jar:1.25.0:compile" -> "org.conscrypt:conscrypt-openjdk-uber:jar:2.2.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-core:jar:1.92.0:compile" -> "com.google.api.grpc:proto-google-iam-v1:jar:0.13.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-core:jar:1.92.0:compile" -> "com.google.http-client:google-http-client-jackson2:jar:1.33.0:compile" ; 
+[INFO] 	"net.javacrumbs.future-converter:future-converter-java8-guava:jar:1.2.0:compile" -> "net.javacrumbs.future-converter:future-converter-common:jar:1.2.0:compile" ; 
+[INFO] 	"net.javacrumbs.future-converter:future-converter-java8-guava:jar:1.2.0:compile" -> "net.javacrumbs.future-converter:future-converter-java8-common:jar:1.2.0:compile" ; 
+[INFO] 	"net.javacrumbs.future-converter:future-converter-java8-guava:jar:1.2.0:compile" -> "net.javacrumbs.future-converter:future-converter-guava-common:jar:1.2.0:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "org.antlr:antlr4-runtime:jar:4.7.2:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "com.graphql-java:java-dataloader:jar:2.2.3:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "org.checkerframework:checker-qual:jar:2.11.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.3.4:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.0:test" -> "org.checkerframework:checker-compat-qual:jar:2.5.5:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.0:test" -> "com.googlecode.java-diff-utils:diffutils:jar:1.3.0:test" ; 
+[INFO] 	"com.google.truth.extensions:truth-proto-extension:jar:1.0:test" -> "com.google.truth.extensions:truth-liteproto-extension:jar:1.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------< com.google.api.graphql:schema-cloud-container >------------
+[INFO] Building Schema Common 0.4.0-SNAPSHOT                             [8/10]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ schema-cloud-container ---
+[INFO] digraph "com.google.api.graphql:schema-cloud-container:jar:0.4.0-SNAPSHOT" { 
+[INFO] 	"com.google.api.graphql:schema-cloud-container:jar:0.4.0-SNAPSHOT" -> "com.google.cloud:google-cloud-container:jar:0.118.0-beta:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-cloud-container:jar:0.4.0-SNAPSHOT" -> "com.google.api.graphql:rejoiner:jar:0.4.0-SNAPSHOT:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-cloud-container:jar:0.4.0-SNAPSHOT" -> "com.google.api.graphql:rejoiner-guice:jar:0.4.0-SNAPSHOT:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-cloud-container:jar:0.4.0-SNAPSHOT" -> "net.javacrumbs.future-converter:future-converter-java8-guava:jar:1.2.0:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-cloud-container:jar:0.4.0-SNAPSHOT" -> "com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-cloud-container:jar:0.4.0-SNAPSHOT" -> "com.google.guava:guava:jar:29.0-jre:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-cloud-container:jar:0.4.0-SNAPSHOT" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-cloud-container:jar:0.4.0-SNAPSHOT" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-cloud-container:jar:0.4.0-SNAPSHOT" -> "com.google.auto.value:auto-value-annotations:jar:1.7.3:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-cloud-container:jar:0.4.0-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-cloud-container:jar:0.4.0-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"com.google.api.graphql:schema-cloud-container:jar:0.4.0-SNAPSHOT" -> "com.google.truth:truth:jar:1.0:test" ; 
+[INFO] 	"com.google.api.graphql:schema-cloud-container:jar:0.4.0-SNAPSHOT" -> "com.google.truth.extensions:truth-proto-extension:jar:1.0:test" ; 
+[INFO] 	"com.google.cloud:google-cloud-container:jar:0.118.0-beta:compile" -> "io.grpc:grpc-stub:jar:1.25.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-container:jar:0.118.0-beta:compile" -> "io.grpc:grpc-protobuf:jar:1.25.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-container:jar:0.118.0-beta:compile" -> "com.google.api:api-common:jar:1.8.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-container:jar:0.118.0-beta:compile" -> "com.google.protobuf:protobuf-java:jar:3.11.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-container:jar:0.118.0-beta:compile" -> "com.google.api.grpc:proto-google-common-protos:jar:1.17.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-container:jar:0.118.0-beta:compile" -> "com.google.api.grpc:proto-google-cloud-container-v1:jar:0.83.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-container:jar:0.118.0-beta:compile" -> "com.google.api:gax:jar:1.50.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-container:jar:0.118.0-beta:compile" -> "com.google.api:gax-grpc:jar:1.50.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-container:jar:0.118.0-beta:compile" -> "org.threeten:threetenbp:jar:1.4.0:compile" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.25.0:compile" -> "io.grpc:grpc-protobuf-lite:jar:1.25.0:compile" ; 
+[INFO] 	"com.google.api:gax:jar:1.50.1:compile" -> "com.google.auth:google-auth-library-oauth2-http:jar:0.18.0:compile" ; 
+[INFO] 	"com.google.api:gax:jar:1.50.1:compile" -> "io.opencensus:opencensus-api:jar:0.24.0:compile" ; 
+[INFO] 	"com.google.auth:google-auth-library-oauth2-http:jar:0.18.0:compile" -> "com.google.http-client:google-http-client:jar:1.32.1:compile" ; 
+[INFO] 	"com.google.auth:google-auth-library-oauth2-http:jar:0.18.0:compile" -> "com.google.http-client:google-http-client-jackson2:jar:1.32.1:compile" ; 
+[INFO] 	"com.google.http-client:google-http-client:jar:1.32.1:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.10:compile" ; 
+[INFO] 	"com.google.http-client:google-http-client:jar:1.32.1:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.12:compile" ; 
+[INFO] 	"com.google.http-client:google-http-client:jar:1.32.1:compile" -> "io.opencensus:opencensus-contrib-http-util:jar:0.24.0:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.10:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.10:compile" -> "commons-codec:commons-codec:jar:1.11:compile" ; 
+[INFO] 	"com.google.http-client:google-http-client-jackson2:jar:1.32.1:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.9.9:compile" ; 
+[INFO] 	"io.opencensus:opencensus-api:jar:0.24.0:compile" -> "io.grpc:grpc-context:jar:1.22.1:compile" ; 
+[INFO] 	"com.google.api:gax-grpc:jar:1.50.1:compile" -> "io.grpc:grpc-auth:jar:1.25.0:compile" ; 
+[INFO] 	"com.google.api:gax-grpc:jar:1.50.1:compile" -> "com.google.auth:google-auth-library-credentials:jar:0.18.0:compile" ; 
+[INFO] 	"com.google.api:gax-grpc:jar:1.50.1:compile" -> "io.grpc:grpc-netty-shaded:jar:1.25.0:compile" ; 
+[INFO] 	"com.google.api:gax-grpc:jar:1.50.1:compile" -> "io.grpc:grpc-alts:jar:1.25.0:compile" ; 
+[INFO] 	"io.grpc:grpc-alts:jar:1.25.0:compile" -> "io.grpc:grpc-grpclb:jar:1.25.0:compile" ; 
+[INFO] 	"io.grpc:grpc-alts:jar:1.25.0:compile" -> "org.apache.commons:commons-lang3:jar:3.5:compile" ; 
+[INFO] 	"io.grpc:grpc-alts:jar:1.25.0:compile" -> "org.conscrypt:conscrypt-openjdk-uber:jar:2.2.1:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner:jar:0.4.0-SNAPSHOT:compile" -> "com.google.protobuf:protobuf-java-util:jar:3.11.1:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.11.1:compile" -> "com.google.code.gson:gson:jar:2.8.6:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-guice:jar:0.4.0-SNAPSHOT:compile" -> "com.google.inject.extensions:guice-multibindings:jar:4.2.2:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-guice:jar:0.4.0-SNAPSHOT:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.google.inject.extensions:guice-multibindings:jar:4.2.2:compile" -> "com.google.inject:guice:jar:4.2.2:compile" ; 
+[INFO] 	"net.javacrumbs.future-converter:future-converter-java8-guava:jar:1.2.0:compile" -> "net.javacrumbs.future-converter:future-converter-common:jar:1.2.0:compile" ; 
+[INFO] 	"net.javacrumbs.future-converter:future-converter-java8-guava:jar:1.2.0:compile" -> "net.javacrumbs.future-converter:future-converter-java8-common:jar:1.2.0:compile" ; 
+[INFO] 	"net.javacrumbs.future-converter:future-converter-java8-guava:jar:1.2.0:compile" -> "net.javacrumbs.future-converter:future-converter-guava-common:jar:1.2.0:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "org.antlr:antlr4-runtime:jar:4.7.2:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "com.graphql-java:java-dataloader:jar:2.2.3:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "org.checkerframework:checker-qual:jar:2.11.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.3.4:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.0:test" -> "org.checkerframework:checker-compat-qual:jar:2.5.5:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.0:test" -> "com.googlecode.java-diff-utils:diffutils:jar:1.3.0:test" ; 
+[INFO] 	"com.google.truth.extensions:truth-proto-extension:jar:1.0:test" -> "com.google.truth.extensions:truth-liteproto-extension:jar:1.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< com.google.api.graphql:examples >-------------------
+[INFO] Building Example - Parent 0.4.0-SNAPSHOT                          [9/10]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ examples ---
+[INFO] digraph "com.google.api.graphql:examples:pom:0.4.0-SNAPSHOT" { 
+[INFO] 	"com.google.api.graphql:examples:pom:0.4.0-SNAPSHOT" -> "com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" ; 
+[INFO] 	"com.google.api.graphql:examples:pom:0.4.0-SNAPSHOT" -> "com.google.guava:guava:jar:29.0-jre:compile" ; 
+[INFO] 	"com.google.api.graphql:examples:pom:0.4.0-SNAPSHOT" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"com.google.api.graphql:examples:pom:0.4.0-SNAPSHOT" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"com.google.api.graphql:examples:pom:0.4.0-SNAPSHOT" -> "com.google.auto.value:auto-value-annotations:jar:1.7.3:compile" ; 
+[INFO] 	"com.google.api.graphql:examples:pom:0.4.0-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.api.graphql:examples:pom:0.4.0-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"com.google.api.graphql:examples:pom:0.4.0-SNAPSHOT" -> "com.google.truth:truth:jar:1.0:test" ; 
+[INFO] 	"com.google.api.graphql:examples:pom:0.4.0-SNAPSHOT" -> "com.google.truth.extensions:truth-proto-extension:jar:1.0:test" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "org.antlr:antlr4-runtime:jar:4.7.2:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "com.graphql-java:java-dataloader:jar:2.2.3:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "org.checkerframework:checker-qual:jar:2.11.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.3.4:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.0:test" -> "org.checkerframework:checker-compat-qual:jar:2.5.5:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.0:test" -> "com.googlecode.java-diff-utils:diffutils:jar:1.3.0:test" ; 
+[INFO] 	"com.google.truth.extensions:truth-proto-extension:jar:1.0:test" -> "com.google.truth.extensions:truth-liteproto-extension:jar:1.0:test" ; 
+[INFO] 	"com.google.truth.extensions:truth-proto-extension:jar:1.0:test" -> "com.google.protobuf:protobuf-java:jar:3.6.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< com.google.api.graphql:example-schema >----------------
+[INFO] Building Example - Schema 0.4.0-SNAPSHOT                         [10/10]
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/google/api/graphql/schema-common/0.4.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/google/api/graphql/schema-common/0.4.0-SNAPSHOT/maven-metadata.xml (785 B at 2.9 kB/s)
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/google/api/graphql/schema-cloud-container/0.4.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/google/api/graphql/schema-cloud-container/0.4.0-SNAPSHOT/maven-metadata.xml (794 B at 3.0 kB/s)
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/google/api/graphql/schema-firestore/0.4.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/google/api/graphql/schema-firestore/0.4.0-SNAPSHOT/maven-metadata.xml (788 B at 3.1 kB/s)
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/google/api/graphql/rejoiner-grpc/0.4.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/google/api/graphql/rejoiner-grpc/0.4.0-SNAPSHOT/maven-metadata.xml (1.2 kB at 4.5 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ example-schema ---
+[INFO] digraph "com.google.api.graphql:example-schema:war:0.4.0-SNAPSHOT" { 
+[INFO] 	"com.google.api.graphql:example-schema:war:0.4.0-SNAPSHOT" -> "javax.servlet:javax.servlet-api:jar:3.0.1:compile" ; 
+[INFO] 	"com.google.api.graphql:example-schema:war:0.4.0-SNAPSHOT" -> "org.eclipse.jetty:jetty-server:jar:9.4.41.v20210516:compile" ; 
+[INFO] 	"com.google.api.graphql:example-schema:war:0.4.0-SNAPSHOT" -> "org.eclipse.jetty:jetty-webapp:jar:9.4.34.v20201102:compile" ; 
+[INFO] 	"com.google.api.graphql:example-schema:war:0.4.0-SNAPSHOT" -> "com.google.inject.extensions:guice-servlet:jar:4.2.2:compile" ; 
+[INFO] 	"com.google.api.graphql:example-schema:war:0.4.0-SNAPSHOT" -> "com.google.api.graphql:schema-common:jar:0.4.0-SNAPSHOT:compile" ; 
+[INFO] 	"com.google.api.graphql:example-schema:war:0.4.0-SNAPSHOT" -> "com.google.api.graphql:schema-cloud-container:jar:0.4.0-SNAPSHOT:compile" ; 
+[INFO] 	"com.google.api.graphql:example-schema:war:0.4.0-SNAPSHOT" -> "com.google.api.graphql:schema-firestore:jar:0.4.0-SNAPSHOT:compile" ; 
+[INFO] 	"com.google.api.graphql:example-schema:war:0.4.0-SNAPSHOT" -> "com.google.api.graphql:rejoiner-grpc:jar:0.4.0-SNAPSHOT:compile" ; 
+[INFO] 	"com.google.api.graphql:example-schema:war:0.4.0-SNAPSHOT" -> "com.google.api.graphql:rejoiner-guice:jar:0.4.0-SNAPSHOT:compile" ; 
+[INFO] 	"com.google.api.graphql:example-schema:war:0.4.0-SNAPSHOT" -> "io.grpc:grpc-netty:jar:1.26.0:compile" ; 
+[INFO] 	"com.google.api.graphql:example-schema:war:0.4.0-SNAPSHOT" -> "io.grpc:grpc-protobuf:jar:1.26.0:compile" ; 
+[INFO] 	"com.google.api.graphql:example-schema:war:0.4.0-SNAPSHOT" -> "io.grpc:grpc-stub:jar:1.26.0:compile" ; 
+[INFO] 	"com.google.api.graphql:example-schema:war:0.4.0-SNAPSHOT" -> "com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" ; 
+[INFO] 	"com.google.api.graphql:example-schema:war:0.4.0-SNAPSHOT" -> "com.google.guava:guava:jar:29.0-jre:compile" ; 
+[INFO] 	"com.google.api.graphql:example-schema:war:0.4.0-SNAPSHOT" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"com.google.api.graphql:example-schema:war:0.4.0-SNAPSHOT" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"com.google.api.graphql:example-schema:war:0.4.0-SNAPSHOT" -> "com.google.auto.value:auto-value-annotations:jar:1.7.3:compile" ; 
+[INFO] 	"com.google.api.graphql:example-schema:war:0.4.0-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.api.graphql:example-schema:war:0.4.0-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"com.google.api.graphql:example-schema:war:0.4.0-SNAPSHOT" -> "com.google.truth:truth:jar:1.0:test" ; 
+[INFO] 	"com.google.api.graphql:example-schema:war:0.4.0-SNAPSHOT" -> "com.google.truth.extensions:truth-proto-extension:jar:1.0:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.41.v20210516:compile" -> "org.eclipse.jetty:jetty-http:jar:9.4.41.v20210516:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.41.v20210516:compile" -> "org.eclipse.jetty:jetty-io:jar:9.4.41.v20210516:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-http:jar:9.4.41.v20210516:compile" -> "org.eclipse.jetty:jetty-util:jar:9.4.41.v20210516:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-webapp:jar:9.4.34.v20201102:compile" -> "org.eclipse.jetty:jetty-xml:jar:9.4.34.v20201102:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-webapp:jar:9.4.34.v20201102:compile" -> "org.eclipse.jetty:jetty-servlet:jar:9.4.34.v20201102:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.34.v20201102:compile" -> "org.eclipse.jetty:jetty-security:jar:9.4.34.v20201102:compile" ; 
+[INFO] 	"com.google.inject.extensions:guice-servlet:jar:4.2.2:compile" -> "com.google.inject:guice:jar:4.2.2:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-common:jar:0.4.0-SNAPSHOT:compile" -> "com.google.api.graphql:rejoiner:jar:0.4.0-SNAPSHOT:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-common:jar:0.4.0-SNAPSHOT:compile" -> "com.google.api:api-common:jar:1.8.1:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-common:jar:0.4.0-SNAPSHOT:compile" -> "net.javacrumbs.future-converter:future-converter-java8-guava:jar:1.2.0:compile" ; 
+[INFO] 	"net.javacrumbs.future-converter:future-converter-java8-guava:jar:1.2.0:compile" -> "net.javacrumbs.future-converter:future-converter-common:jar:1.2.0:compile" ; 
+[INFO] 	"net.javacrumbs.future-converter:future-converter-java8-guava:jar:1.2.0:compile" -> "net.javacrumbs.future-converter:future-converter-java8-common:jar:1.2.0:compile" ; 
+[INFO] 	"net.javacrumbs.future-converter:future-converter-java8-guava:jar:1.2.0:compile" -> "net.javacrumbs.future-converter:future-converter-guava-common:jar:1.2.0:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-cloud-container:jar:0.4.0-SNAPSHOT:compile" -> "com.google.cloud:google-cloud-container:jar:0.118.0-beta:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-container:jar:0.118.0-beta:compile" -> "com.google.api.grpc:proto-google-cloud-container-v1:jar:0.83.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-container:jar:0.118.0-beta:compile" -> "com.google.api:gax:jar:1.50.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-container:jar:0.118.0-beta:compile" -> "com.google.api:gax-grpc:jar:1.50.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-container:jar:0.118.0-beta:compile" -> "org.threeten:threetenbp:jar:1.4.0:compile" ; 
+[INFO] 	"com.google.api:gax:jar:1.50.1:compile" -> "com.google.auth:google-auth-library-oauth2-http:jar:0.18.0:compile" ; 
+[INFO] 	"com.google.api:gax-grpc:jar:1.50.1:compile" -> "io.grpc:grpc-auth:jar:1.25.0:compile" ; 
+[INFO] 	"com.google.api:gax-grpc:jar:1.50.1:compile" -> "io.grpc:grpc-netty-shaded:jar:1.25.0:compile" ; 
+[INFO] 	"com.google.api:gax-grpc:jar:1.50.1:compile" -> "io.grpc:grpc-alts:jar:1.25.0:compile" ; 
+[INFO] 	"io.grpc:grpc-alts:jar:1.25.0:compile" -> "io.grpc:grpc-grpclb:jar:1.25.0:compile" ; 
+[INFO] 	"io.grpc:grpc-alts:jar:1.25.0:compile" -> "org.apache.commons:commons-lang3:jar:3.5:compile" ; 
+[INFO] 	"io.grpc:grpc-alts:jar:1.25.0:compile" -> "org.conscrypt:conscrypt-openjdk-uber:jar:2.2.1:compile" ; 
+[INFO] 	"com.google.api.graphql:schema-firestore:jar:0.4.0-SNAPSHOT:compile" -> "com.google.cloud:google-cloud-firestore:jar:1.32.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:compile" -> "com.google.cloud:google-cloud-core-grpc:jar:1.92.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:compile" -> "com.google.api.grpc:proto-google-cloud-firestore-admin-v1:jar:1.32.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:compile" -> "com.google.api.grpc:proto-google-cloud-firestore-v1:jar:1.32.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:compile" -> "com.google.api.grpc:proto-google-cloud-firestore-v1beta1:jar:0.85.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:compile" -> "io.opencensus:opencensus-contrib-grpc-util:jar:0.24.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:compile" -> "io.grpc:grpc-context:jar:1.26.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:compile" -> "io.opencensus:opencensus-api:jar:0.24.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:compile" -> "com.google.auth:google-auth-library-credentials:jar:0.19.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:compile" -> "com.google.cloud:google-cloud-core:jar:1.92.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:compile" -> "com.google.code.gson:gson:jar:2.8.6:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-firestore:jar:1.32.1:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.10.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-core-grpc:jar:1.92.0:compile" -> "com.google.http-client:google-http-client:jar:1.33.0:compile" ; 
+[INFO] 	"com.google.http-client:google-http-client:jar:1.33.0:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.10:compile" ; 
+[INFO] 	"com.google.http-client:google-http-client:jar:1.33.0:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.12:compile" ; 
+[INFO] 	"com.google.http-client:google-http-client:jar:1.33.0:compile" -> "io.opencensus:opencensus-contrib-http-util:jar:0.24.0:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.10:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.10:compile" -> "commons-codec:commons-codec:jar:1.11:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-core:jar:1.92.0:compile" -> "com.google.api.grpc:proto-google-iam-v1:jar:0.13.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-core:jar:1.92.0:compile" -> "com.google.http-client:google-http-client-jackson2:jar:1.33.0:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-grpc:jar:0.4.0-SNAPSHOT:compile" -> "com.google.protobuf:protobuf-java:jar:3.16.1:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-grpc:jar:0.4.0-SNAPSHOT:compile" -> "com.google.protobuf:protobuf-java-util:jar:3.11.1:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-grpc:jar:0.4.0-SNAPSHOT:compile" -> "com.google.api.grpc:proto-google-common-protos:jar:1.17.0:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-guice:jar:0.4.0-SNAPSHOT:compile" -> "com.google.inject.extensions:guice-multibindings:jar:4.2.2:compile" ; 
+[INFO] 	"com.google.api.graphql:rejoiner-guice:jar:0.4.0-SNAPSHOT:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"io.grpc:grpc-netty:jar:1.26.0:compile" -> "io.grpc:grpc-core:jar:1.26.0:compile (version selected from constraint [1.26.0,1.26.0])" ; 
+[INFO] 	"io.grpc:grpc-netty:jar:1.26.0:compile" -> "io.netty:netty-codec-http2:jar:4.1.42.Final:compile (version selected from constraint [4.1.42.Final,4.1.42.Final])" ; 
+[INFO] 	"io.grpc:grpc-netty:jar:1.26.0:compile" -> "io.netty:netty-handler-proxy:jar:4.1.42.Final:compile" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.26.0:compile (version selected from constraint [1.26.0,1.26.0])" -> "com.google.android:annotations:jar:4.1.1.4:compile" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.26.0:compile (version selected from constraint [1.26.0,1.26.0])" -> "io.perfmark:perfmark-api:jar:0.19.0:compile" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.26.0:compile (version selected from constraint [1.26.0,1.26.0])" -> "io.opencensus:opencensus-contrib-grpc-metrics:jar:0.24.0:compile" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.42.Final:compile (version selected from constraint [4.1.42.Final,4.1.42.Final])" -> "io.netty:netty-common:jar:4.1.42.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.42.Final:compile (version selected from constraint [4.1.42.Final,4.1.42.Final])" -> "io.netty:netty-buffer:jar:4.1.42.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.42.Final:compile (version selected from constraint [4.1.42.Final,4.1.42.Final])" -> "io.netty:netty-transport:jar:4.1.42.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.42.Final:compile (version selected from constraint [4.1.42.Final,4.1.42.Final])" -> "io.netty:netty-codec:jar:4.1.42.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.42.Final:compile (version selected from constraint [4.1.42.Final,4.1.42.Final])" -> "io.netty:netty-handler:jar:4.1.42.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.42.Final:compile (version selected from constraint [4.1.42.Final,4.1.42.Final])" -> "io.netty:netty-codec-http:jar:4.1.42.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.42.Final:compile" -> "io.netty:netty-resolver:jar:4.1.42.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler-proxy:jar:4.1.42.Final:compile" -> "io.netty:netty-codec-socks:jar:4.1.42.Final:compile" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.26.0:compile" -> "io.grpc:grpc-api:jar:1.26.0:compile" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.26.0:compile" -> "io.grpc:grpc-protobuf-lite:jar:1.26.0:compile" ; 
+[INFO] 	"io.grpc:grpc-api:jar:1.26.0:compile" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.17:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "org.antlr:antlr4-runtime:jar:4.7.2:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "com.graphql-java:java-dataloader:jar:2.2.3:compile" ; 
+[INFO] 	"com.graphql-java:graphql-java:jar:2020-01-03T02-30-51-fb97f3e:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "org.checkerframework:checker-qual:jar:2.11.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.3.4:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:29.0-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.0:test" -> "org.checkerframework:checker-compat-qual:jar:2.5.5:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.0:test" -> "com.googlecode.java-diff-utils:diffutils:jar:1.3.0:test" ; 
+[INFO] 	"com.google.truth.extensions:truth-proto-extension:jar:1.0:test" -> "com.google.truth.extensions:truth-liteproto-extension:jar:1.0:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Rejoiner Parent Project 0.4.0-SNAPSHOT:
+[INFO] 
+[INFO] Rejoiner Parent Project ............................ SUCCESS [  4.084 s]
+[INFO] Rejoiner ........................................... SUCCESS [  0.755 s]
+[INFO] Rejoiner Guice ..................................... SUCCESS [  5.359 s]
+[INFO] Rejoiner gRPC ...................................... SUCCESS [  0.726 s]
+[INFO] Schema Parent ...................................... SUCCESS [  0.315 s]
+[INFO] Schema Common ...................................... SUCCESS [  0.529 s]
+[INFO] Schema Firestore ................................... SUCCESS [  0.351 s]
+[INFO] Schema Common ...................................... SUCCESS [  0.322 s]
+[INFO] Example - Parent ................................... SUCCESS [  0.140 s]
+[INFO] Example - Schema ................................... SUCCESS [  1.823 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.481 s
+[INFO] Finished at: 2023-12-28T09:02:57+01:00
+[INFO] ------------------------------------------------------------------------

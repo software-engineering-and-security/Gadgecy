@@ -1,0 +1,34 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba:cooma:jar:0.4.1-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 98, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-source-plugin is missing. @ line 106, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-javadoc-plugin is missing. @ line 120, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] -------------------------< com.alibaba:cooma >--------------------------
+[INFO] Building Cooma Microcontainer 0.4.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ cooma ---
+[INFO] digraph "com.alibaba:cooma:jar:0.4.1-SNAPSHOT" { 
+[INFO] 	"com.alibaba:cooma:jar:0.4.1-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.6.6:compile" ; 
+[INFO] 	"com.alibaba:cooma:jar:0.4.1-SNAPSHOT" -> "junit:junit:jar:4.10:test" ; 
+[INFO] 	"com.alibaba:cooma:jar:0.4.1-SNAPSHOT" -> "org.easymock:easymock:jar:3.1:test" ; 
+[INFO] 	"com.alibaba:cooma:jar:0.4.1-SNAPSHOT" -> "org.easymock:easymockclassextension:jar:3.1:test" ; 
+[INFO] 	"com.alibaba:cooma:jar:0.4.1-SNAPSHOT" -> "org.slf4j:slf4j-log4j12:jar:1.6.6:test" ; 
+[INFO] 	"junit:junit:jar:4.10:test" -> "org.hamcrest:hamcrest-core:jar:1.1:test" ; 
+[INFO] 	"org.easymock:easymock:jar:3.1:test" -> "cglib:cglib-nodep:jar:2.2.2:test" ; 
+[INFO] 	"org.easymock:easymock:jar:3.1:test" -> "org.objenesis:objenesis:jar:1.2:test" ; 
+[INFO] 	"org.slf4j:slf4j-log4j12:jar:1.6.6:test" -> "log4j:log4j:jar:1.2.17:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.862 s
+[INFO] Finished at: 2023-12-28T09:02:17+01:00
+[INFO] ------------------------------------------------------------------------

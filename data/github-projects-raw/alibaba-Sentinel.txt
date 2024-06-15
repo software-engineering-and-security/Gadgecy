@@ -1,0 +1,274 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.csp:sentinel-demo-log-logback:jar:2.0.0-alpha2-SNAPSHOT
+[WARNING] 'dependencies.dependency.version' for com.github.stefanbirkner:system-rules:jar is either LATEST or RELEASE (both of them are being deprecated) @ line 40, column 22
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Detecting the operating system and CPU architecture
+[INFO] ------------------------------------------------------------------------
+[INFO] os.detected.name: linux
+[INFO] os.detected.arch: x86_64
+[INFO] os.detected.version: 5.10
+[INFO] os.detected.version.major: 5
+[INFO] os.detected.version.minor: 10
+[INFO] os.detected.release: debian
+[INFO] os.detected.release.version: 11
+[INFO] os.detected.release.like.debian: true
+[INFO] os.detected.classifier: linux-x86_64
+[INFO] ------------------------------------------------------------------------
+[INFO] Detecting the operating system and CPU architecture
+[INFO] ------------------------------------------------------------------------
+[INFO] os.detected.name: linux
+[INFO] os.detected.arch: x86_64
+[INFO] os.detected.version: 5.10
+[INFO] os.detected.version.major: 5
+[INFO] os.detected.version.minor: 10
+[INFO] os.detected.release: debian
+[INFO] os.detected.release.version: 11
+[INFO] os.detected.release.like.debian: true
+[INFO] os.detected.classifier: linux-x86_64
+[WARNING] The project com.alibaba.csp:sentinel-benchmark:jar:2.0.0-alpha2-SNAPSHOT uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] sentinel-parent                                                    [pom]
+[INFO] sentinel-core                                                      [jar]
+[INFO] sentinel-security-core                                             [jar]
+[INFO] sentinel-extension                                                 [pom]
+[INFO] sentinel-datasource-extension                                      [jar]
+[INFO] sentinel-datasource-nacos                                          [jar]
+[INFO] sentinel-datasource-zookeeper                                      [jar]
+[INFO] sentinel-datasource-apollo                                         [jar]
+[INFO] sentinel-datasource-redis                                          [jar]
+[INFO] sentinel-annotation-aspectj                                        [jar]
+[INFO] sentinel-transport                                                 [pom]
+[INFO] sentinel-transport-common                                          [jar]
+[INFO] sentinel-parameter-flow-control                                    [jar]
+[INFO] sentinel-datasource-spring-cloud-config                            [jar]
+[INFO] sentinel-datasource-consul                                         [jar]
+[INFO] sentinel-datasource-etcd                                           [jar]
+[INFO] sentinel-datasource-eureka                                         [jar]
+[INFO] sentinel-annotation-cdi-interceptor                                [jar]
+[INFO] sentinel-metric-exporter                                           [jar]
+[INFO] sentinel-datasource-opensergo                                      [jar]
+[INFO] sentinel-datasource-xds                                            [jar]
+[INFO] sentinel-transport-simple-http                                     [jar]
+[INFO] sentinel-transport-netty-http                                      [jar]
+[INFO] sentinel-transport-spring-mvc                                      [jar]
+[INFO] sentinel-adapter                                                   [pom]
+[INFO] sentinel-web-servlet                                               [jar]
+[INFO] sentinel-dubbo-adapter                                             [jar]
+[INFO] sentinel-apache-dubbo-adapter                                      [jar]
+[INFO] sentinel-apache-dubbo3-adapter                                     [jar]
+[INFO] sentinel-apache-httpclient-adapter                                 [jar]
+[INFO] sentinel-sofa-rpc-adapter                                          [jar]
+[INFO] sentinel-grpc-adapter                                              [jar]
+[INFO] sentinel-api-gateway-adapter-common                                [jar]
+[INFO] sentinel-zuul-adapter                                              [jar]
+[INFO] sentinel-reactor-adapter                                           [jar]
+[INFO] sentinel-spring-webflux-adapter                                    [jar]
+[INFO] sentinel-spring-cloud-gateway-adapter                              [jar]
+[INFO] sentinel-spring-webmvc-adapter                                     [jar]
+[INFO] sentinel-zuul2-adapter                                             [jar]
+[INFO] sentinel-okhttp-adapter                                            [jar]
+[INFO] sentinel-jax-rs-adapter                                            [jar]
+[INFO] sentinel-quarkus-adapter-parent                                    [pom]
+[INFO] sentinel-annotation-quarkus-adapter                                [jar]
+[INFO] sentinel-annotation-quarkus-adapter-deployment                     [jar]
+[INFO] sentinel-jax-rs-quarkus-adapter                                    [jar]
+[INFO] sentinel-jax-rs-quarkus-adapter-deployment                         [jar]
+[INFO] sentinel-logging                                                   [pom]
+[INFO] sentinel-logging-slf4j                                             [jar]
+[INFO] sentinel-native-image-quarkus-adapter                              [jar]
+[INFO] sentinel-native-image-quarkus-adapter-deployment                   [jar]
+[INFO] sentinel-motan-adapter                                             [jar]
+[INFO] sentinel-cluster                                                   [pom]
+[INFO] sentinel-cluster-common-default                                    [jar]
+[INFO] sentinel-cluster-client-default                                    [jar]
+[INFO] sentinel-cluster-server-default                                    [jar]
+[INFO] sentinel-cluster-server-envoy-rls                                  [jar]
+[INFO] sentinel-dashboard                                                 [jar]
+[INFO] sentinel-demo                                                      [pom]
+[INFO] sentinel-demo-basic                                                [jar]
+[INFO] sentinel-demo-dynamic-file-rule                                    [jar]
+[INFO] sentinel-demo-rocketmq                                             [jar]
+[INFO] sentinel-demo-dubbo                                                [jar]
+[INFO] sentinel-demo-nacos-datasource                                     [jar]
+[INFO] sentinel-demo-zookeeper-datasource                                 [jar]
+[INFO] sentinel-demo-apollo-datasource                                    [jar]
+[INFO] sentinel-demo-annotation-spring-aop                                [jar]
+[INFO] sentinel-demo-parameter-flow-control                               [jar]
+[INFO] sentinel-demo-slot-spi                                             [jar]
+[INFO] sentinel-demo-slotchain-spi                                        [jar]
+[INFO] sentinel-demo-cluster                                              [pom]
+[INFO] sentinel-demo-cluster-embedded                                     [jar]
+[INFO] sentinel-demo-cluster-server-alone                                 [jar]
+[INFO] sentinel-demo-command-handler                                      [jar]
+[INFO] sentinel-demo-spring-webflux                                       [jar]
+[INFO] sentinel-demo-apache-dubbo                                         [jar]
+[INFO] sentinel-demo-apache-httpclient                                    [jar]
+[INFO] sentinel-demo-sofa-rpc                                             [jar]
+[INFO] sentinel-demo-spring-cloud-gateway                                 [jar]
+[INFO] sentinel-demo-zuul-gateway                                         [jar]
+[INFO] sentinel-demo-etcd-datasource                                      [jar]
+[INFO] sentinel-demo-spring-webmvc                                        [jar]
+[INFO] sentinel-demo-zuul2-gateway                                        [jar]
+[INFO] sentinel-demo-log-logback                                          [jar]
+[INFO] sentinel-demo-okhttp                                               [jar]
+[INFO] sentinel-demo-jax-rs                                               [jar]
+[INFO] sentinel-demo-quarkus                                              [jar]
+[INFO] sentinel-demo-annotation-cdi-interceptor                           [jar]
+[INFO] sentinel-demo-motan                                                [jar]
+[INFO] sentinel-demo-transport-spring-mvc                                 [jar]
+[INFO] sentinel-demo-opensergo-datasource                                 [jar]
+[INFO] Sentinel JMH benchmark                                             [jar]
+[INFO] 
+[INFO] ------------------< com.alibaba.csp:sentinel-parent >-------------------
+[INFO] Building sentinel-parent 2.0.0-alpha2-SNAPSHOT                    [1/91]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sentinel-parent ---
+[INFO] digraph "com.alibaba.csp:sentinel-parent:pom:2.0.0-alpha2-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< com.alibaba.csp:sentinel-core >--------------------
+[INFO] Building sentinel-core 2.0.0-alpha2-SNAPSHOT                      [2/91]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sentinel-core ---
+[INFO] digraph "com.alibaba.csp:sentinel-core:jar:2.0.0-alpha2-SNAPSHOT" { 
+[INFO] 	"com.alibaba.csp:sentinel-core:jar:2.0.0-alpha2-SNAPSHOT" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"com.alibaba.csp:sentinel-core:jar:2.0.0-alpha2-SNAPSHOT" -> "org.mockito:mockito-core:jar:2.28.2:test" ; 
+[INFO] 	"com.alibaba.csp:sentinel-core:jar:2.0.0-alpha2-SNAPSHOT" -> "org.awaitility:awaitility:jar:3.1.5:test" ; 
+[INFO] 	"com.alibaba.csp:sentinel-core:jar:2.0.0-alpha2-SNAPSHOT" -> "org.hamcrest:java-hamcrest:jar:2.0.0.0:test" ; 
+[INFO] 	"com.alibaba.csp:sentinel-core:jar:2.0.0-alpha2-SNAPSHOT" -> "org.powermock:powermock-module-junit4:jar:2.0.0:test" ; 
+[INFO] 	"com.alibaba.csp:sentinel-core:jar:2.0.0-alpha2-SNAPSHOT" -> "org.powermock:powermock-api-mockito2:jar:2.0.0:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.28.2:test" -> "net.bytebuddy:byte-buddy:jar:1.9.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.28.2:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.9.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.28.2:test" -> "org.objenesis:objenesis:jar:2.6:test" ; 
+[INFO] 	"org.awaitility:awaitility:jar:3.1.5:test" -> "org.hamcrest:hamcrest-library:jar:1.3:test" ; 
+[INFO] 	"org.awaitility:awaitility:jar:3.1.5:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.powermock:powermock-module-junit4:jar:2.0.0:test" -> "org.powermock:powermock-module-junit4-common:jar:2.0.0:test" ; 
+[INFO] 	"org.powermock:powermock-module-junit4-common:jar:2.0.0:test" -> "org.powermock:powermock-reflect:jar:2.0.0:test" ; 
+[INFO] 	"org.powermock:powermock-module-junit4-common:jar:2.0.0:test" -> "org.powermock:powermock-core:jar:2.0.0:test" ; 
+[INFO] 	"org.powermock:powermock-core:jar:2.0.0:test" -> "org.javassist:javassist:jar:3.24.0-GA:test" ; 
+[INFO] 	"org.powermock:powermock-api-mockito2:jar:2.0.0:test" -> "org.powermock:powermock-api-support:jar:2.0.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< com.alibaba.csp:sentinel-security-core >---------------
+[INFO] Building sentinel-security-core 2.0.0-alpha2-SNAPSHOT             [3/91]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for sentinel-parent 2.0.0-alpha2-SNAPSHOT:
+[INFO] 
+[INFO] sentinel-parent .................................... SUCCESS [  3.897 s]
+[INFO] sentinel-core ...................................... SUCCESS [  0.498 s]
+[INFO] sentinel-security-core ............................. FAILURE [  0.080 s]
+[INFO] sentinel-extension ................................. SKIPPED
+[INFO] sentinel-datasource-extension ...................... SKIPPED
+[INFO] sentinel-datasource-nacos .......................... SKIPPED
+[INFO] sentinel-datasource-zookeeper ...................... SKIPPED
+[INFO] sentinel-datasource-apollo ......................... SKIPPED
+[INFO] sentinel-datasource-redis .......................... SKIPPED
+[INFO] sentinel-annotation-aspectj ........................ SKIPPED
+[INFO] sentinel-transport ................................. SKIPPED
+[INFO] sentinel-transport-common .......................... SKIPPED
+[INFO] sentinel-parameter-flow-control .................... SKIPPED
+[INFO] sentinel-datasource-spring-cloud-config ............ SKIPPED
+[INFO] sentinel-datasource-consul ......................... SKIPPED
+[INFO] sentinel-datasource-etcd ........................... SKIPPED
+[INFO] sentinel-datasource-eureka ......................... SKIPPED
+[INFO] sentinel-annotation-cdi-interceptor ................ SKIPPED
+[INFO] sentinel-metric-exporter ........................... SKIPPED
+[INFO] sentinel-datasource-opensergo ...................... SKIPPED
+[INFO] sentinel-datasource-xds ............................ SKIPPED
+[INFO] sentinel-transport-simple-http ..................... SKIPPED
+[INFO] sentinel-transport-netty-http ...................... SKIPPED
+[INFO] sentinel-transport-spring-mvc ...................... SKIPPED
+[INFO] sentinel-adapter ................................... SKIPPED
+[INFO] sentinel-web-servlet ............................... SKIPPED
+[INFO] sentinel-dubbo-adapter ............................. SKIPPED
+[INFO] sentinel-apache-dubbo-adapter ...................... SKIPPED
+[INFO] sentinel-apache-dubbo3-adapter ..................... SKIPPED
+[INFO] sentinel-apache-httpclient-adapter ................. SKIPPED
+[INFO] sentinel-sofa-rpc-adapter .......................... SKIPPED
+[INFO] sentinel-grpc-adapter .............................. SKIPPED
+[INFO] sentinel-api-gateway-adapter-common ................ SKIPPED
+[INFO] sentinel-zuul-adapter .............................. SKIPPED
+[INFO] sentinel-reactor-adapter ........................... SKIPPED
+[INFO] sentinel-spring-webflux-adapter .................... SKIPPED
+[INFO] sentinel-spring-cloud-gateway-adapter .............. SKIPPED
+[INFO] sentinel-spring-webmvc-adapter ..................... SKIPPED
+[INFO] sentinel-zuul2-adapter ............................. SKIPPED
+[INFO] sentinel-okhttp-adapter ............................ SKIPPED
+[INFO] sentinel-jax-rs-adapter ............................ SKIPPED
+[INFO] sentinel-quarkus-adapter-parent .................... SKIPPED
+[INFO] sentinel-annotation-quarkus-adapter ................ SKIPPED
+[INFO] sentinel-annotation-quarkus-adapter-deployment ..... SKIPPED
+[INFO] sentinel-jax-rs-quarkus-adapter .................... SKIPPED
+[INFO] sentinel-jax-rs-quarkus-adapter-deployment ......... SKIPPED
+[INFO] sentinel-logging ................................... SKIPPED
+[INFO] sentinel-logging-slf4j ............................. SKIPPED
+[INFO] sentinel-native-image-quarkus-adapter .............. SKIPPED
+[INFO] sentinel-native-image-quarkus-adapter-deployment ... SKIPPED
+[INFO] sentinel-motan-adapter ............................. SKIPPED
+[INFO] sentinel-cluster ................................... SKIPPED
+[INFO] sentinel-cluster-common-default .................... SKIPPED
+[INFO] sentinel-cluster-client-default .................... SKIPPED
+[INFO] sentinel-cluster-server-default .................... SKIPPED
+[INFO] sentinel-cluster-server-envoy-rls .................. SKIPPED
+[INFO] sentinel-dashboard ................................. SKIPPED
+[INFO] sentinel-demo ...................................... SKIPPED
+[INFO] sentinel-demo-basic ................................ SKIPPED
+[INFO] sentinel-demo-dynamic-file-rule .................... SKIPPED
+[INFO] sentinel-demo-rocketmq ............................. SKIPPED
+[INFO] sentinel-demo-dubbo ................................ SKIPPED
+[INFO] sentinel-demo-nacos-datasource ..................... SKIPPED
+[INFO] sentinel-demo-zookeeper-datasource ................. SKIPPED
+[INFO] sentinel-demo-apollo-datasource .................... SKIPPED
+[INFO] sentinel-demo-annotation-spring-aop ................ SKIPPED
+[INFO] sentinel-demo-parameter-flow-control ............... SKIPPED
+[INFO] sentinel-demo-slot-spi ............................. SKIPPED
+[INFO] sentinel-demo-slotchain-spi ........................ SKIPPED
+[INFO] sentinel-demo-cluster .............................. SKIPPED
+[INFO] sentinel-demo-cluster-embedded ..................... SKIPPED
+[INFO] sentinel-demo-cluster-server-alone ................. SKIPPED
+[INFO] sentinel-demo-command-handler ...................... SKIPPED
+[INFO] sentinel-demo-spring-webflux ....................... SKIPPED
+[INFO] sentinel-demo-apache-dubbo ......................... SKIPPED
+[INFO] sentinel-demo-apache-httpclient .................... SKIPPED
+[INFO] sentinel-demo-sofa-rpc ............................. SKIPPED
+[INFO] sentinel-demo-spring-cloud-gateway ................. SKIPPED
+[INFO] sentinel-demo-zuul-gateway ......................... SKIPPED
+[INFO] sentinel-demo-etcd-datasource ...................... SKIPPED
+[INFO] sentinel-demo-spring-webmvc ........................ SKIPPED
+[INFO] sentinel-demo-zuul2-gateway ........................ SKIPPED
+[INFO] sentinel-demo-log-logback .......................... SKIPPED
+[INFO] sentinel-demo-okhttp ............................... SKIPPED
+[INFO] sentinel-demo-jax-rs ............................... SKIPPED
+[INFO] sentinel-demo-quarkus .............................. SKIPPED
+[INFO] sentinel-demo-annotation-cdi-interceptor ........... SKIPPED
+[INFO] sentinel-demo-motan ................................ SKIPPED
+[INFO] sentinel-demo-transport-spring-mvc ................. SKIPPED
+[INFO] sentinel-demo-opensergo-datasource ................. SKIPPED
+[INFO] Sentinel JMH benchmark ............................. SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.296 s
+[INFO] Finished at: 2023-12-28T09:02:27+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project sentinel-security-core: Could not resolve dependencies for project com.alibaba.csp:sentinel-security-core:jar:2.0.0-alpha2-SNAPSHOT: Could not find artifact com.alibaba.csp:sentinel-core:jar:2.0.0-alpha2-SNAPSHOT -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :sentinel-security-core

@@ -1,0 +1,19 @@
+[INFO] Scanning for projects...
+[INFO] Downloading from sonatype-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/eclipse/xtext/xtext-dev-bom/2.34.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from sonatype-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/eclipse/xtext/xtext-dev-bom/2.34.0-SNAPSHOT/maven-metadata.xml (790 B at 421 B/s)
+[INFO] Downloading from sonatype-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/eclipse/xtext/xtext-dev-bom/2.34.0-SNAPSHOT/xtext-dev-bom-2.34.0-20231222.100609-13.pom
+[INFO] Downloaded from sonatype-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/eclipse/xtext/xtext-dev-bom/2.34.0-SNAPSHOT/xtext-dev-bom-2.34.0-20231222.100609-13.pom (16 kB at 37 kB/s)
+[INFO] 
+[INFO] -------------------< org.eclipse.xtext:xtext-parent >-------------------
+[INFO] Building Xtext Parent POM 2.34.0-SNAPSHOT
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ xtext-parent ---
+[INFO] digraph "org.eclipse.xtext:xtext-parent:pom:2.34.0-SNAPSHOT" { 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.993 s
+[INFO] Finished at: 2023-12-28T09:02:50+01:00
+[INFO] ------------------------------------------------------------------------

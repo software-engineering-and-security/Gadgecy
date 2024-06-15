@@ -1,0 +1,1104 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Zipkin (Parent)                                                    [pom]
+[INFO] Zipkin Core Library                                                [jar]
+[INFO] Zipkin Interop Tests                                               [jar]
+[INFO] Collector                                                          [pom]
+[INFO] Collector: Core Library                                            [jar]
+[INFO] Zipkin JUnit                                                       [jar]
+[INFO] Zipkin JUnit5                                                      [jar]
+[INFO] Storage                                                            [pom]
+[INFO] Storage: Cassandra                                                 [jar]
+[INFO] Storage: MySQL (v1)                                                [jar]
+[INFO] Storage: Elasticsearch (V2)                                        [jar]
+[INFO] Collector: ActiveMQ                                                [jar]
+[INFO] Collector: Kafka 0.10+                                             [jar]
+[INFO] Collector: RabbitMQ                                                [jar]
+[INFO] Collector: Scribe (Legacy)                                         [jar]
+[INFO] Zipkin Lens                                                        [jar]
+[INFO] Zipkin Server                                                      [jar]
+[INFO] Benchmarks                                                         [jar]
+[INFO] 
+[INFO] ----------------------< io.zipkin:zipkin-parent >-----------------------
+[INFO] Building Zipkin (Parent) 2.24.4-SNAPSHOT                          [1/18]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ zipkin-parent ---
+[INFO] digraph "io.zipkin:zipkin-parent:pom:2.24.4-SNAPSHOT" { 
+[INFO] 	"io.zipkin:zipkin-parent:pom:2.24.4-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"io.zipkin:zipkin-parent:pom:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin:zipkin-parent:pom:2.24.4-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin:zipkin-parent:pom:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin:zipkin-parent:pom:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin:zipkin-parent:pom:2.24.4-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"io.zipkin:zipkin-parent:pom:2.24.4-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.8.0:test" ; 
+[INFO] 	"io.zipkin:zipkin-parent:pom:2.24.4-SNAPSHOT" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.12.21:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< io.zipkin.zipkin2:zipkin >----------------------
+[INFO] Building Zipkin Core Library 2.24.4-SNAPSHOT                      [2/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ zipkin ---
+[INFO] digraph "io.zipkin.zipkin2:zipkin:jar:2.24.4-SNAPSHOT" { 
+[INFO] 	"io.zipkin.zipkin2:zipkin:jar:2.24.4-SNAPSHOT" -> "org.jvnet:animal-sniffer-annotation:jar:1.0:provided" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin:jar:2.24.4-SNAPSHOT" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin:jar:2.24.4-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin:jar:2.24.4-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin:jar:2.24.4-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin:jar:2.24.4-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.8.0:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin:jar:2.24.4-SNAPSHOT" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.12.21:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< io.zipkin.zipkin2:zipkin-tests >-------------------
+[INFO] Building Zipkin Interop Tests 2.24.4-SNAPSHOT                     [3/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ zipkin-tests ---
+[INFO] digraph "io.zipkin.zipkin2:zipkin-tests:jar:2.24.4-SNAPSHOT" { 
+[INFO] 	"io.zipkin.zipkin2:zipkin-tests:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-tests:jar:2.24.4-SNAPSHOT" -> "junit:junit:jar:4.13.2:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-tests:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-tests:jar:2.24.4-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-tests:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-tests:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-tests:jar:2.24.4-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-tests:jar:2.24.4-SNAPSHOT" -> "com.esotericsoftware:kryo:jar:5.5.0:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-tests:jar:2.24.4-SNAPSHOT" -> "com.google.code.gson:gson:jar:2.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-tests:jar:2.24.4-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.8.0:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-tests:jar:2.24.4-SNAPSHOT" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:compile" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:compile" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:compile" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:compile" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:compile" -> "org.apiguardian:apiguardian-api:jar:1.1.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:compile" -> "org.opentest4j:opentest4j:jar:1.3.0:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:compile" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:compile" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:compile" -> "net.bytebuddy:byte-buddy:jar:1.12.21:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.5.0:test" -> "com.esotericsoftware:reflectasm:jar:1.11.9:test" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.5.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.5.0:test" -> "com.esotericsoftware:minlog:jar:1.3.1:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< io.zipkin.zipkin2:zipkin-collector-parent >--------------
+[INFO] Building Collector 2.24.4-SNAPSHOT                                [4/18]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ zipkin-collector-parent ---
+[INFO] digraph "io.zipkin.zipkin2:zipkin-collector-parent:pom:2.24.4-SNAPSHOT" { 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-parent:pom:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-parent:pom:2.24.4-SNAPSHOT" -> "com.google.code.gson:gson:jar:2.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-parent:pom:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-tests:jar:2.24.4-SNAPSHOT:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-parent:pom:2.24.4-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-parent:pom:2.24.4-SNAPSHOT" -> "org.testcontainers:testcontainers:jar:1.19.3:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-parent:pom:2.24.4-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-parent:pom:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-parent:pom:2.24.4-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-parent:pom:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-parent:pom:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-parent:pom:2.24.4-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-parent:pom:2.24.4-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.8.0:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-parent:pom:2.24.4-SNAPSHOT" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.slf4j:slf4j-simple:jar:1.7.36:test" -> "org.slf4j:slf4j-api:jar:1.7.36:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "org.apache.commons:commons-compress:jar:1.24.0:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "com.github.docker-java:docker-java-api:jar:3.3.4:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" ; 
+[INFO] 	"org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" -> "org.jetbrains:annotations:jar:17.0.0:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-api:jar:3.3.4:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.10.3:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" -> "com.github.docker-java:docker-java-transport:jar:3.3.4:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" -> "net.java.dev.jna:jna:jar:5.13.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.12.21:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< io.zipkin.zipkin2:zipkin-collector >-----------------
+[INFO] Building Collector: Core Library 2.24.4-SNAPSHOT                  [5/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ zipkin-collector ---
+[INFO] digraph "io.zipkin.zipkin2:zipkin-collector:jar:2.24.4-SNAPSHOT" { 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector:jar:2.24.4-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector:jar:2.24.4-SNAPSHOT" -> "uk.org.lidalia:slf4j-test:jar:1.2.0:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector:jar:2.24.4-SNAPSHOT" -> "com.google.code.gson:gson:jar:2.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-tests:jar:2.24.4-SNAPSHOT:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector:jar:2.24.4-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector:jar:2.24.4-SNAPSHOT" -> "org.testcontainers:testcontainers:jar:1.19.3:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector:jar:2.24.4-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector:jar:2.24.4-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector:jar:2.24.4-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector:jar:2.24.4-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.8.0:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector:jar:2.24.4-SNAPSHOT" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"uk.org.lidalia:slf4j-test:jar:1.2.0:test" -> "uk.org.lidalia:lidalia-lang:jar:1.0.0:test" ; 
+[INFO] 	"uk.org.lidalia:slf4j-test:jar:1.2.0:test" -> "com.google.guava:guava:jar:14.0.1:test" ; 
+[INFO] 	"uk.org.lidalia:slf4j-test:jar:1.2.0:test" -> "uk.org.lidalia:lidalia-slf4j-ext:jar:1.0.0:test" ; 
+[INFO] 	"uk.org.lidalia:slf4j-test:jar:1.2.0:test" -> "joda-time:joda-time:jar:2.2:test" ; 
+[INFO] 	"uk.org.lidalia:lidalia-lang:jar:1.0.0:test" -> "org.apache.commons:commons-lang3:jar:3.1:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "org.apache.commons:commons-compress:jar:1.24.0:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "com.github.docker-java:docker-java-api:jar:3.3.4:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" ; 
+[INFO] 	"org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" -> "org.jetbrains:annotations:jar:17.0.0:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-api:jar:3.3.4:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.10.3:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" -> "com.github.docker-java:docker-java-transport:jar:3.3.4:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" -> "net.java.dev.jna:jna:jar:5.13.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.12.21:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< io.zipkin.zipkin2:zipkin-junit >-------------------
+[INFO] Building Zipkin JUnit 2.24.4-SNAPSHOT                             [6/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ zipkin-junit ---
+[INFO] digraph "io.zipkin.zipkin2:zipkin-junit:jar:2.24.4-SNAPSHOT" { 
+[INFO] 	"io.zipkin.zipkin2:zipkin-junit:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-junit:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-collector:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-junit:jar:2.24.4-SNAPSHOT" -> "com.squareup.okhttp3:mockwebserver:jar:4.12.0:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-junit:jar:2.24.4-SNAPSHOT" -> "junit:junit:jar:4.13.2:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-junit:jar:2.24.4-SNAPSHOT" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-junit:jar:2.24.4-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-junit:jar:2.24.4-SNAPSHOT" -> "com.google.code.gson:gson:jar:2.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-junit:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-tests:jar:2.24.4-SNAPSHOT:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-junit:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-junit:jar:2.24.4-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-junit:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-junit:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-junit:jar:2.24.4-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-junit:jar:2.24.4-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.8.0:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-junit:jar:2.24.4-SNAPSHOT" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector:jar:2.24.4-SNAPSHOT:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"com.squareup.okhttp3:mockwebserver:jar:4.12.0:compile" -> "com.squareup.okhttp3:okhttp:jar:4.12.0:compile" ; 
+[INFO] 	"com.squareup.okhttp3:mockwebserver:jar:4.12.0:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:4.12.0:compile" -> "com.squareup.okio:okio:jar:3.6.0:compile" ; 
+[INFO] 	"com.squareup.okio:okio:jar:3.6.0:compile" -> "com.squareup.okio:okio-jvm:jar:3.6.0:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:compile" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.8.21:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.8.21:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.8.21:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.8.21:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.8.21:compile" -> "org.jetbrains:annotations:jar:13.0:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.12.21:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< io.zipkin.zipkin2:zipkin-junit5 >-------------------
+[INFO] Building Zipkin JUnit5 2.24.4-SNAPSHOT                            [7/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ zipkin-junit5 ---
+[INFO] digraph "io.zipkin.zipkin2:zipkin-junit5:jar:2.24.4-SNAPSHOT" { 
+[INFO] 	"io.zipkin.zipkin2:zipkin-junit5:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-junit5:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-collector:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-junit5:jar:2.24.4-SNAPSHOT" -> "com.squareup.okhttp3:mockwebserver3-junit5:jar:5.0.0-alpha.11:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-junit5:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-junit5:jar:2.24.4-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-junit5:jar:2.24.4-SNAPSHOT" -> "com.google.code.gson:gson:jar:2.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-junit5:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-tests:jar:2.24.4-SNAPSHOT:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-junit5:jar:2.24.4-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-junit5:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-junit5:jar:2.24.4-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-junit5:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-junit5:jar:2.24.4-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-junit5:jar:2.24.4-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.8.0:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-junit5:jar:2.24.4-SNAPSHOT" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector:jar:2.24.4-SNAPSHOT:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"com.squareup.okhttp3:mockwebserver3-junit5:jar:5.0.0-alpha.11:compile" -> "com.squareup.okhttp3:mockwebserver3:jar:5.0.0-alpha.11:compile" ; 
+[INFO] 	"com.squareup.okhttp3:mockwebserver3-junit5:jar:5.0.0-alpha.11:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.7.10:compile" ; 
+[INFO] 	"com.squareup.okhttp3:mockwebserver3:jar:5.0.0-alpha.11:compile" -> "com.squareup.okhttp3:okhttp-jvm:jar:5.0.0-alpha.11:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp-jvm:jar:5.0.0-alpha.11:compile" -> "com.squareup.okio:okio-jvm:jar:3.2.0:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp-jvm:jar:5.0.0-alpha.11:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.7.10:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.7.10:compile" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.7.10:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.7.10:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.7.10:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.7.10:compile" -> "org.jetbrains:annotations:jar:13.0:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:compile" -> "org.opentest4j:opentest4j:jar:1.3.0:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:compile" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:compile" -> "org.apiguardian:apiguardian-api:jar:1.1.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.12.21:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< io.zipkin.zipkin2:zipkin-storage-parent >---------------
+[INFO] Building Storage 2.24.4-SNAPSHOT                                  [8/18]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ zipkin-storage-parent ---
+[INFO] digraph "io.zipkin.zipkin2:zipkin-storage-parent:pom:2.24.4-SNAPSHOT" { 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-parent:pom:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-parent:pom:2.24.4-SNAPSHOT" -> "com.google.code.gson:gson:jar:2.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-parent:pom:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-tests:jar:2.24.4-SNAPSHOT:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-parent:pom:2.24.4-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-parent:pom:2.24.4-SNAPSHOT" -> "org.testcontainers:testcontainers:jar:1.19.3:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-parent:pom:2.24.4-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-parent:pom:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-parent:pom:2.24.4-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-parent:pom:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-parent:pom:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-parent:pom:2.24.4-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-parent:pom:2.24.4-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.8.0:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-parent:pom:2.24.4-SNAPSHOT" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.slf4j:slf4j-simple:jar:1.7.36:test" -> "org.slf4j:slf4j-api:jar:1.7.36:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "org.apache.commons:commons-compress:jar:1.24.0:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "com.github.docker-java:docker-java-api:jar:3.3.4:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" ; 
+[INFO] 	"org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" -> "org.jetbrains:annotations:jar:17.0.0:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-api:jar:3.3.4:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.10.3:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" -> "com.github.docker-java:docker-java-transport:jar:3.3.4:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" -> "net.java.dev.jna:jna:jar:5.13.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.12.21:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< io.zipkin.zipkin2:zipkin-storage-cassandra >-------------
+[INFO] Building Storage: Cassandra 2.24.4-SNAPSHOT                       [9/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ zipkin-storage-cassandra ---
+[INFO] digraph "io.zipkin.zipkin2:zipkin-storage-cassandra:jar:2.24.4-SNAPSHOT" { 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-cassandra:jar:2.24.4-SNAPSHOT" -> "com.google.auto.value:auto-value-annotations:jar:1.7.4:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-cassandra:jar:2.24.4-SNAPSHOT" -> "com.google.auto.value:auto-value:jar:1.7.4:provided" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-cassandra:jar:2.24.4-SNAPSHOT" -> "com.datastax.oss:java-driver-core:jar:4.17.0:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-cassandra:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-cassandra:jar:2.24.4-SNAPSHOT" -> "com.google.code.gson:gson:jar:2.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-cassandra:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-tests:jar:2.24.4-SNAPSHOT:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-cassandra:jar:2.24.4-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-cassandra:jar:2.24.4-SNAPSHOT" -> "org.testcontainers:testcontainers:jar:1.19.3:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-cassandra:jar:2.24.4-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-cassandra:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-cassandra:jar:2.24.4-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-cassandra:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-cassandra:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-cassandra:jar:2.24.4-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-cassandra:jar:2.24.4-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.8.0:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-cassandra:jar:2.24.4-SNAPSHOT" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.0:compile" -> "com.datastax.oss:native-protocol:jar:1.5.1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.0:compile" -> "io.netty:netty-handler:jar:4.1.95.Final:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.0:compile" -> "com.datastax.oss:java-driver-shaded-guava:jar:25.1-jre-graal-sub-1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.0:compile" -> "com.typesafe:config:jar:1.4.1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.0:compile" -> "com.github.jnr:jnr-posix:jar:3.1.15:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.0:compile" -> "org.slf4j:slf4j-api:jar:1.7.26:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.0:compile" -> "io.dropwizard.metrics:metrics-core:jar:4.1.18:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.0:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.0:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.2:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.0:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.2.2:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.0:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.3:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.0:compile" -> "com.github.stephenc.jcip:jcip-annotations:jar:1.0-1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.0:compile" -> "com.github.spotbugs:spotbugs-annotations:jar:3.1.12:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.95.Final:compile" -> "io.netty:netty-common:jar:4.1.95.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.95.Final:compile" -> "io.netty:netty-resolver:jar:4.1.95.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.95.Final:compile" -> "io.netty:netty-buffer:jar:4.1.95.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.95.Final:compile" -> "io.netty:netty-transport:jar:4.1.95.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.95.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.95.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.95.Final:compile" -> "io.netty:netty-codec:jar:4.1.95.Final:compile" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:compile" -> "com.github.jnr:jnr-ffi:jar:2.2.11:compile" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:compile" -> "com.github.jnr:jnr-constants:jar:0.10.3:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jffi:jar:1.3.9:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jffi:jar:native:1.3.9:runtime" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-commons:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-analysis:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-tree:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-util:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jnr-a64asm:jar:1.0.0:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jnr-x86asm:jar:1.0.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.2.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.2:compile" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:3.1.12:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "org.apache.commons:commons-compress:jar:1.24.0:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "com.github.docker-java:docker-java-api:jar:3.3.4:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" ; 
+[INFO] 	"org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" -> "org.jetbrains:annotations:jar:17.0.0:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" -> "com.github.docker-java:docker-java-transport:jar:3.3.4:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" -> "net.java.dev.jna:jna:jar:5.13.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.12.21:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< io.zipkin.zipkin2:zipkin-storage-mysql-v1 >--------------
+[INFO] Building Storage: MySQL (v1) 2.24.4-SNAPSHOT                     [10/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ zipkin-storage-mysql-v1 ---
+[INFO] digraph "io.zipkin.zipkin2:zipkin-storage-mysql-v1:jar:2.24.4-SNAPSHOT" { 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-mysql-v1:jar:2.24.4-SNAPSHOT" -> "org.jooq:jooq:jar:3.14.4:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-mysql-v1:jar:2.24.4-SNAPSHOT" -> "javax.annotation:javax.annotation-api:jar:1.3.1:provided" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-mysql-v1:jar:2.24.4-SNAPSHOT" -> "org.mariadb.jdbc:mariadb-java-client:jar:2.7.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-mysql-v1:jar:2.24.4-SNAPSHOT" -> "org.testcontainers:mysql:jar:1.19.3:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-mysql-v1:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-mysql-v1:jar:2.24.4-SNAPSHOT" -> "com.google.code.gson:gson:jar:2.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-mysql-v1:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-tests:jar:2.24.4-SNAPSHOT:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-mysql-v1:jar:2.24.4-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-mysql-v1:jar:2.24.4-SNAPSHOT" -> "org.testcontainers:testcontainers:jar:1.19.3:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-mysql-v1:jar:2.24.4-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-mysql-v1:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-mysql-v1:jar:2.24.4-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-mysql-v1:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-mysql-v1:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-mysql-v1:jar:2.24.4-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-mysql-v1:jar:2.24.4-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.8.0:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-mysql-v1:jar:2.24.4-SNAPSHOT" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.jooq:jooq:jar:3.14.4:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.2:compile" ; 
+[INFO] 	"org.jooq:jooq:jar:3.14.4:compile" -> "javax.xml.bind:jaxb-api:jar:2.3.1:compile" ; 
+[INFO] 	"javax.xml.bind:jaxb-api:jar:2.3.1:compile" -> "javax.activation:javax.activation-api:jar:1.2.0:compile" ; 
+[INFO] 	"org.testcontainers:mysql:jar:1.19.3:test" -> "org.testcontainers:jdbc:jar:1.19.3:test" ; 
+[INFO] 	"org.testcontainers:jdbc:jar:1.19.3:test" -> "org.testcontainers:database-commons:jar:1.19.3:test" ; 
+[INFO] 	"org.slf4j:slf4j-simple:jar:1.7.36:test" -> "org.slf4j:slf4j-api:jar:1.7.36:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "org.apache.commons:commons-compress:jar:1.24.0:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "com.github.docker-java:docker-java-api:jar:3.3.4:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" ; 
+[INFO] 	"org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" -> "org.jetbrains:annotations:jar:17.0.0:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-api:jar:3.3.4:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.10.3:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" -> "com.github.docker-java:docker-java-transport:jar:3.3.4:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" -> "net.java.dev.jna:jna:jar:5.13.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.12.21:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------< io.zipkin.zipkin2:zipkin-storage-elasticsearch >-----------
+[INFO] Building Storage: Elasticsearch (V2) 2.24.4-SNAPSHOT             [11/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ zipkin-storage-elasticsearch ---
+[INFO] digraph "io.zipkin.zipkin2:zipkin-storage-elasticsearch:jar:2.24.4-SNAPSHOT" { 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-elasticsearch:jar:2.24.4-SNAPSHOT" -> "com.linecorp.armeria:armeria:jar:1.17.2:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-elasticsearch:jar:2.24.4-SNAPSHOT" -> "com.google.auto.value:auto-value-annotations:jar:1.7.4:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-elasticsearch:jar:2.24.4-SNAPSHOT" -> "com.google.auto.value:auto-value:jar:1.7.4:provided" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-elasticsearch:jar:2.24.4-SNAPSHOT" -> "org.awaitility:awaitility:jar:4.2.0:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-elasticsearch:jar:2.24.4-SNAPSHOT" -> "com.linecorp.armeria:armeria-junit5:jar:1.17.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-elasticsearch:jar:2.24.4-SNAPSHOT" -> "com.linecorp.armeria:armeria-junit4:jar:1.17.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-elasticsearch:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-elasticsearch:jar:2.24.4-SNAPSHOT" -> "com.google.code.gson:gson:jar:2.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-elasticsearch:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-tests:jar:2.24.4-SNAPSHOT:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-elasticsearch:jar:2.24.4-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-elasticsearch:jar:2.24.4-SNAPSHOT" -> "org.testcontainers:testcontainers:jar:1.19.3:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-elasticsearch:jar:2.24.4-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-elasticsearch:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-elasticsearch:jar:2.24.4-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-elasticsearch:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-elasticsearch:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-elasticsearch:jar:2.24.4-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-elasticsearch:jar:2.24.4-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.8.0:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-elasticsearch:jar:2.24.4-SNAPSHOT" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.3:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.3:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.3:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.micrometer:micrometer-core:jar:1.9.1:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-transport:jar:4.1.78.Final:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-codec-http2:jar:4.1.78.Final:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-codec-haproxy:jar:4.1.78.Final:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-resolver-dns:jar:4.1.78.Final:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.4:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-resolver-dns-native-macos:jar:osx-x86_64:4.1.78.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-resolver-dns-native-macos:jar:osx-aarch_64:4.1.78.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-transport-native-unix-common:jar:linux-x86_64:4.1.78.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.78.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:linux-x86_64:2.0.53.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:linux-aarch_64:2.0.53.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:osx-x86_64:2.0.53.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:osx-aarch_64:2.0.53.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:windows-x86_64:2.0.53.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-handler-proxy:jar:4.1.78.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "com.aayushatharva.brotli4j:brotli4j:jar:1.7.1:runtime" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.9.1:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.9.1:compile" -> "org.latencyutils:LatencyUtils:jar:2.0.3:runtime" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.78.Final:compile" -> "io.netty:netty-common:jar:4.1.78.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.78.Final:compile" -> "io.netty:netty-buffer:jar:4.1.78.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.78.Final:compile" -> "io.netty:netty-resolver:jar:4.1.78.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.78.Final:compile" -> "io.netty:netty-codec:jar:4.1.78.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.78.Final:compile" -> "io.netty:netty-handler:jar:4.1.78.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.78.Final:compile" -> "io.netty:netty-codec-http:jar:4.1.78.Final:compile" ; 
+[INFO] 	"io.netty:netty-resolver-dns:jar:4.1.78.Final:compile" -> "io.netty:netty-codec-dns:jar:4.1.78.Final:compile" ; 
+[INFO] 	"io.netty:netty-resolver-dns-native-macos:jar:osx-x86_64:4.1.78.Final:runtime" -> "io.netty:netty-resolver-dns-classes-macos:jar:4.1.78.Final:runtime" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.78.Final:runtime" -> "io.netty:netty-transport-native-unix-common:jar:4.1.78.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.78.Final:runtime" -> "io.netty:netty-transport-classes-epoll:jar:4.1.78.Final:runtime" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:linux-x86_64:2.0.53.Final:runtime" -> "io.netty:netty-tcnative-classes:jar:2.0.53.Final:runtime" ; 
+[INFO] 	"io.netty:netty-handler-proxy:jar:4.1.78.Final:runtime" -> "io.netty:netty-codec-socks:jar:4.1.78.Final:runtime" ; 
+[INFO] 	"com.aayushatharva.brotli4j:brotli4j:jar:1.7.1:runtime" -> "com.aayushatharva.brotli4j:native-linux-x86_64:jar:1.7.1:runtime" ; 
+[INFO] 	"org.awaitility:awaitility:jar:4.2.0:test" -> "org.hamcrest:hamcrest:jar:2.1:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "org.apache.commons:commons-compress:jar:1.24.0:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "com.github.docker-java:docker-java-api:jar:3.3.4:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" ; 
+[INFO] 	"org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" -> "org.jetbrains:annotations:jar:17.0.0:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" -> "com.github.docker-java:docker-java-transport:jar:3.3.4:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" -> "net.java.dev.jna:jna:jar:5.13.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.12.21:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< io.zipkin.zipkin2:zipkin-collector-activemq >-------------
+[INFO] Building Collector: ActiveMQ 2.24.4-SNAPSHOT                     [12/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ zipkin-collector-activemq ---
+[INFO] digraph "io.zipkin.zipkin2:zipkin-collector-activemq:jar:2.24.4-SNAPSHOT" { 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-activemq:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-collector:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-activemq:jar:2.24.4-SNAPSHOT" -> "org.apache.activemq:activemq-client:jar:5.16.3:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-activemq:jar:2.24.4-SNAPSHOT" -> "org.apache.activemq:activemq-broker:jar:5.16.3:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-activemq:jar:2.24.4-SNAPSHOT" -> "org.apache.activemq.tooling:activemq-junit:jar:5.16.3:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-activemq:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-activemq:jar:2.24.4-SNAPSHOT" -> "com.google.code.gson:gson:jar:2.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-activemq:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-tests:jar:2.24.4-SNAPSHOT:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-activemq:jar:2.24.4-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-activemq:jar:2.24.4-SNAPSHOT" -> "org.testcontainers:testcontainers:jar:1.19.3:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-activemq:jar:2.24.4-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-activemq:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-activemq:jar:2.24.4-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-activemq:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-activemq:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-activemq:jar:2.24.4-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-activemq:jar:2.24.4-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.8.0:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-activemq:jar:2.24.4-SNAPSHOT" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector:jar:2.24.4-SNAPSHOT:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.activemq:activemq-client:jar:5.16.3:compile" -> "org.apache.geronimo.specs:geronimo-jms_1.1_spec:jar:1.1.1:compile" ; 
+[INFO] 	"org.apache.activemq:activemq-client:jar:5.16.3:compile" -> "org.fusesource.hawtbuf:hawtbuf:jar:1.11:compile" ; 
+[INFO] 	"org.apache.activemq:activemq-client:jar:5.16.3:compile" -> "org.apache.geronimo.specs:geronimo-j2ee-management_1.1_spec:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.activemq:activemq-broker:jar:5.16.3:test" -> "org.apache.activemq:activemq-openwire-legacy:jar:5.16.3:test" ; 
+[INFO] 	"org.apache.activemq:activemq-broker:jar:5.16.3:test" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.12.4:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.12.4:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.12.4:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.12.4:test" -> "com.fasterxml.jackson.core:jackson-core:jar:2.12.4:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "org.apache.commons:commons-compress:jar:1.24.0:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "com.github.docker-java:docker-java-api:jar:3.3.4:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" ; 
+[INFO] 	"org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" -> "org.jetbrains:annotations:jar:17.0.0:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" -> "com.github.docker-java:docker-java-transport:jar:3.3.4:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" -> "net.java.dev.jna:jna:jar:5.13.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.12.21:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< io.zipkin.zipkin2:zipkin-collector-kafka >--------------
+[INFO] Building Collector: Kafka 0.10+ 2.24.4-SNAPSHOT                  [13/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ zipkin-collector-kafka ---
+[INFO] digraph "io.zipkin.zipkin2:zipkin-collector-kafka:jar:2.24.4-SNAPSHOT" { 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-kafka:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-collector:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-kafka:jar:2.24.4-SNAPSHOT" -> "org.apache.kafka:kafka-clients:jar:3.4.0:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-kafka:jar:2.24.4-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.0:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-kafka:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-kafka:jar:2.24.4-SNAPSHOT" -> "com.google.code.gson:gson:jar:2.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-kafka:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-tests:jar:2.24.4-SNAPSHOT:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-kafka:jar:2.24.4-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-kafka:jar:2.24.4-SNAPSHOT" -> "org.testcontainers:testcontainers:jar:1.19.3:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-kafka:jar:2.24.4-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-kafka:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-kafka:jar:2.24.4-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-kafka:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-kafka:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-kafka:jar:2.24.4-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-kafka:jar:2.24.4-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.8.0:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-kafka:jar:2.24.4-SNAPSHOT" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector:jar:2.24.4-SNAPSHOT:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.kafka:kafka-clients:jar:3.4.0:compile" -> "com.github.luben:zstd-jni:jar:1.5.2-1:runtime" ; 
+[INFO] 	"org.apache.kafka:kafka-clients:jar:3.4.0:compile" -> "org.lz4:lz4-java:jar:1.8.0:runtime" ; 
+[INFO] 	"org.apache.kafka:kafka-clients:jar:3.4.0:compile" -> "org.xerial.snappy:snappy-java:jar:1.1.8.4:runtime" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.0:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.0:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.0:test" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.0:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "org.apache.commons:commons-compress:jar:1.24.0:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "com.github.docker-java:docker-java-api:jar:3.3.4:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" ; 
+[INFO] 	"org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" -> "org.jetbrains:annotations:jar:17.0.0:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" -> "com.github.docker-java:docker-java-transport:jar:3.3.4:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" -> "net.java.dev.jna:jna:jar:5.13.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.12.21:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< io.zipkin.zipkin2:zipkin-collector-rabbitmq >-------------
+[INFO] Building Collector: RabbitMQ 2.24.4-SNAPSHOT                     [14/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ zipkin-collector-rabbitmq ---
+[INFO] digraph "io.zipkin.zipkin2:zipkin-collector-rabbitmq:jar:2.24.4-SNAPSHOT" { 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-rabbitmq:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-collector:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-rabbitmq:jar:2.24.4-SNAPSHOT" -> "com.rabbitmq:amqp-client:jar:4.12.0:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-rabbitmq:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-rabbitmq:jar:2.24.4-SNAPSHOT" -> "com.google.code.gson:gson:jar:2.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-rabbitmq:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-tests:jar:2.24.4-SNAPSHOT:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-rabbitmq:jar:2.24.4-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-rabbitmq:jar:2.24.4-SNAPSHOT" -> "org.testcontainers:testcontainers:jar:1.19.3:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-rabbitmq:jar:2.24.4-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-rabbitmq:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-rabbitmq:jar:2.24.4-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-rabbitmq:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-rabbitmq:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-rabbitmq:jar:2.24.4-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-rabbitmq:jar:2.24.4-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.8.0:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-rabbitmq:jar:2.24.4-SNAPSHOT" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector:jar:2.24.4-SNAPSHOT:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "org.apache.commons:commons-compress:jar:1.24.0:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "com.github.docker-java:docker-java-api:jar:3.3.4:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" ; 
+[INFO] 	"org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" -> "org.jetbrains:annotations:jar:17.0.0:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-api:jar:3.3.4:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.10.3:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" -> "com.github.docker-java:docker-java-transport:jar:3.3.4:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" -> "net.java.dev.jna:jna:jar:5.13.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.12.21:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< io.zipkin.zipkin2:zipkin-collector-scribe >--------------
+[INFO] Building Collector: Scribe (Legacy) 2.24.4-SNAPSHOT              [15/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ zipkin-collector-scribe ---
+[INFO] digraph "io.zipkin.zipkin2:zipkin-collector-scribe:jar:2.24.4-SNAPSHOT" { 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-scribe:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-collector:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-scribe:jar:2.24.4-SNAPSHOT" -> "com.linecorp.armeria:armeria-thrift0.15:jar:1.17.2:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-scribe:jar:2.24.4-SNAPSHOT" -> "javax.annotation:javax.annotation-api:jar:1.3.1:provided" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-scribe:jar:2.24.4-SNAPSHOT" -> "com.linecorp.armeria:armeria-junit4:jar:1.17.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-scribe:jar:2.24.4-SNAPSHOT" -> "org.awaitility:awaitility:jar:4.2.0:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-scribe:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-scribe:jar:2.24.4-SNAPSHOT" -> "com.google.code.gson:gson:jar:2.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-scribe:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-tests:jar:2.24.4-SNAPSHOT:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-scribe:jar:2.24.4-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-scribe:jar:2.24.4-SNAPSHOT" -> "org.testcontainers:testcontainers:jar:1.19.3:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-scribe:jar:2.24.4-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-scribe:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-scribe:jar:2.24.4-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-scribe:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-scribe:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-scribe:jar:2.24.4-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-scribe:jar:2.24.4-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.8.0:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-scribe:jar:2.24.4-SNAPSHOT" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector:jar:2.24.4-SNAPSHOT:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria-thrift0.15:jar:1.17.2:compile" -> "com.linecorp.armeria:armeria:jar:1.17.2:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria-thrift0.15:jar:1.17.2:compile" -> "org.apache.thrift:libthrift:jar:0.15.0:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria-thrift0.15:jar:1.17.2:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.3:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.3:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.3:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.micrometer:micrometer-core:jar:1.9.1:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-transport:jar:4.1.78.Final:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-codec-http2:jar:4.1.78.Final:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-codec-haproxy:jar:4.1.78.Final:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-resolver-dns:jar:4.1.78.Final:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.4:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-resolver-dns-native-macos:jar:osx-x86_64:4.1.78.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-resolver-dns-native-macos:jar:osx-aarch_64:4.1.78.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-transport-native-unix-common:jar:linux-x86_64:4.1.78.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.78.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:linux-x86_64:2.0.53.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:linux-aarch_64:2.0.53.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:osx-x86_64:2.0.53.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:osx-aarch_64:2.0.53.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:windows-x86_64:2.0.53.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-handler-proxy:jar:4.1.78.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "com.aayushatharva.brotli4j:brotli4j:jar:1.7.1:runtime" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.9.1:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.9.1:compile" -> "org.latencyutils:LatencyUtils:jar:2.0.3:runtime" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.78.Final:compile" -> "io.netty:netty-common:jar:4.1.78.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.78.Final:compile" -> "io.netty:netty-buffer:jar:4.1.78.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.78.Final:compile" -> "io.netty:netty-resolver:jar:4.1.78.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.78.Final:compile" -> "io.netty:netty-codec:jar:4.1.78.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.78.Final:compile" -> "io.netty:netty-handler:jar:4.1.78.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.78.Final:compile" -> "io.netty:netty-codec-http:jar:4.1.78.Final:compile" ; 
+[INFO] 	"io.netty:netty-resolver-dns:jar:4.1.78.Final:compile" -> "io.netty:netty-codec-dns:jar:4.1.78.Final:compile" ; 
+[INFO] 	"io.netty:netty-resolver-dns-native-macos:jar:osx-x86_64:4.1.78.Final:runtime" -> "io.netty:netty-resolver-dns-classes-macos:jar:4.1.78.Final:runtime" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.78.Final:runtime" -> "io.netty:netty-transport-native-unix-common:jar:4.1.78.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.78.Final:runtime" -> "io.netty:netty-transport-classes-epoll:jar:4.1.78.Final:runtime" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:linux-x86_64:2.0.53.Final:runtime" -> "io.netty:netty-tcnative-classes:jar:2.0.53.Final:runtime" ; 
+[INFO] 	"io.netty:netty-handler-proxy:jar:4.1.78.Final:runtime" -> "io.netty:netty-codec-socks:jar:4.1.78.Final:runtime" ; 
+[INFO] 	"com.aayushatharva.brotli4j:brotli4j:jar:1.7.1:runtime" -> "com.aayushatharva.brotli4j:native-linux-x86_64:jar:1.7.1:runtime" ; 
+[INFO] 	"org.awaitility:awaitility:jar:4.2.0:test" -> "org.hamcrest:hamcrest:jar:2.1:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "org.apache.commons:commons-compress:jar:1.24.0:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "com.github.docker-java:docker-java-api:jar:3.3.4:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" ; 
+[INFO] 	"org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" -> "org.jetbrains:annotations:jar:17.0.0:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" -> "com.github.docker-java:docker-java-transport:jar:3.3.4:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" -> "net.java.dev.jna:jna:jar:5.13.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.12.21:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------------< io.zipkin:zipkin-lens >------------------------
+[INFO] Building Zipkin Lens 2.24.4-SNAPSHOT                             [16/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ zipkin-lens ---
+[INFO] digraph "io.zipkin:zipkin-lens:jar:2.24.4-SNAPSHOT" { 
+[INFO] 	"io.zipkin:zipkin-lens:jar:2.24.4-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"io.zipkin:zipkin-lens:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin:zipkin-lens:jar:2.24.4-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin:zipkin-lens:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin:zipkin-lens:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin:zipkin-lens:jar:2.24.4-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"io.zipkin:zipkin-lens:jar:2.24.4-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.8.0:test" ; 
+[INFO] 	"io.zipkin:zipkin-lens:jar:2.24.4-SNAPSHOT" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.12.21:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< io.zipkin:zipkin-server >-----------------------
+[INFO] Building Zipkin Server 2.24.4-SNAPSHOT                           [17/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ zipkin-server ---
+[INFO] digraph "io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" { 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter:jar:2.7.14:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-actuator:jar:2.7.14:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "org.yaml:snakeyaml:jar:2.0:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "org.xerial.snappy:snappy-java:jar:1.1.10.3:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "org.apache.logging.log4j:log4j-api:jar:2.17.1:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "org.apache.logging.log4j:log4j-core:jar:2.17.1:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "org.apache.logging.log4j:log4j-jul:jar:2.17.1:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-log4j2:jar:2.7.14:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "com.linecorp.armeria:armeria-spring-boot2-autoconfigure:jar:1.17.2:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "com.linecorp.armeria:armeria-brave:jar:1.17.2:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "com.linecorp.armeria:armeria-grpc-protocol:jar:1.17.2:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "io.micrometer:micrometer-registry-prometheus:jar:1.9.3:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "com.netflix.concurrency-limits:concurrency-limits-core:jar:0.3.6:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "io.micrometer:micrometer-core:jar:1.9.3:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-collector:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:provided" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-storage-cassandra:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-storage-elasticsearch:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-storage-mysql-v1:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "org.mariadb.jdbc:mariadb-java-client:jar:2.7.1:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "com.zaxxer:HikariCP:jar:3.4.5:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-collector-activemq:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-collector-kafka:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-collector-rabbitmq:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-collector-scribe:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "io.zipkin.brave:brave:jar:5.13.2:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "io.zipkin.brave:brave-context-slf4j:jar:5.13.2:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "io.zipkin.proto3:zipkin-proto3:jar:1.0.0:test" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "com.google.code.gson:gson:jar:2.10.1:test" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "com.squareup.wire:wire-runtime:jar:3.0.2:test" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "com.squareup.okhttp3:okhttp:jar:4.12.0:test" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "com.linecorp.armeria:armeria-junit5:jar:1.17.2:test" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "com.linecorp.armeria:armeria-junit4:jar:1.17.2:test" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.7.14:test" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "org.springframework.boot:spring-boot-test:jar:2.7.14:test" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "org.springframework:spring-test:jar:5.3.29:test" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-tests:jar:2.24.4-SNAPSHOT:test" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "org.awaitility:awaitility:jar:4.2.0:test" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "com.jayway.jsonpath:json-path:jar:2.8.0:test" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "com.linecorp.armeria:armeria-spring-boot2-actuator-autoconfigure:jar:1.17.2:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "io.zipkin:zipkin-lens:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.8.0:test" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.14:compile" -> "org.springframework.boot:spring-boot:jar:2.7.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.14:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.7.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.14:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.14:compile" -> "org.springframework:spring-core:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.7.14:compile" -> "org.springframework:spring-context:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.29:compile" -> "org.springframework:spring-aop:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.29:compile" -> "org.springframework:spring-beans:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.29:compile" -> "org.springframework:spring-expression:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.29:compile" -> "org.springframework:spring-jcl:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-actuator:jar:2.7.14:compile" -> "org.springframework.boot:spring-boot-actuator-autoconfigure:jar:2.7.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-actuator-autoconfigure:jar:2.7.14:compile" -> "org.springframework.boot:spring-boot-actuator:jar:2.7.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-actuator-autoconfigure:jar:2.7.14:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-actuator-autoconfigure:jar:2.7.14:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.15.0:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria-spring-boot2-autoconfigure:jar:1.17.2:compile" -> "com.linecorp.armeria:armeria:jar:1.17.2:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria-spring-boot2-autoconfigure:jar:1.17.2:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria-spring-boot2-autoconfigure:jar:1.17.2:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.0:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.0:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-transport:jar:4.1.95.Final:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-codec-http2:jar:4.1.95.Final:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-codec-haproxy:jar:4.1.95.Final:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-resolver-dns:jar:4.1.95.Final:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.4:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-resolver-dns-native-macos:jar:osx-x86_64:4.1.95.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-resolver-dns-native-macos:jar:osx-aarch_64:4.1.95.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-transport-native-unix-common:jar:linux-x86_64:4.1.95.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.95.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:linux-x86_64:2.0.61.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:linux-aarch_64:2.0.61.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:osx-x86_64:2.0.61.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:osx-aarch_64:2.0.61.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:windows-x86_64:2.0.61.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-handler-proxy:jar:4.1.95.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "com.aayushatharva.brotli4j:brotli4j:jar:1.7.1:runtime" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.95.Final:compile" -> "io.netty:netty-common:jar:4.1.95.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.95.Final:compile" -> "io.netty:netty-buffer:jar:4.1.95.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.95.Final:compile" -> "io.netty:netty-resolver:jar:4.1.95.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.95.Final:compile" -> "io.netty:netty-codec:jar:4.1.95.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.95.Final:compile" -> "io.netty:netty-codec-http:jar:4.1.95.Final:compile" ; 
+[INFO] 	"io.netty:netty-resolver-dns:jar:4.1.95.Final:compile" -> "io.netty:netty-codec-dns:jar:4.1.95.Final:compile" ; 
+[INFO] 	"io.netty:netty-resolver-dns-native-macos:jar:osx-x86_64:4.1.95.Final:runtime" -> "io.netty:netty-resolver-dns-classes-macos:jar:4.1.95.Final:runtime" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.95.Final:runtime" -> "io.netty:netty-transport-native-unix-common:jar:4.1.95.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.95.Final:runtime" -> "io.netty:netty-transport-classes-epoll:jar:4.1.95.Final:runtime" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:linux-x86_64:2.0.61.Final:runtime" -> "io.netty:netty-tcnative-classes:jar:2.0.61.Final:runtime" ; 
+[INFO] 	"io.netty:netty-handler-proxy:jar:4.1.95.Final:runtime" -> "io.netty:netty-codec-socks:jar:4.1.95.Final:runtime" ; 
+[INFO] 	"com.aayushatharva.brotli4j:brotli4j:jar:1.7.1:runtime" -> "com.aayushatharva.brotli4j:native-linux-x86_64:jar:1.7.1:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria-brave:jar:1.17.2:compile" -> "io.zipkin.brave:brave-instrumentation-http:jar:5.13.2:compile" ; 
+[INFO] 	"io.micrometer:micrometer-registry-prometheus:jar:1.9.3:compile" -> "io.prometheus:simpleclient_common:jar:0.15.0:compile" ; 
+[INFO] 	"io.prometheus:simpleclient_common:jar:0.15.0:compile" -> "io.prometheus:simpleclient:jar:0.15.0:compile" ; 
+[INFO] 	"io.prometheus:simpleclient:jar:0.15.0:compile" -> "io.prometheus:simpleclient_tracer_otel:jar:0.15.0:compile" ; 
+[INFO] 	"io.prometheus:simpleclient:jar:0.15.0:compile" -> "io.prometheus:simpleclient_tracer_otel_agent:jar:0.15.0:compile" ; 
+[INFO] 	"io.prometheus:simpleclient_tracer_otel:jar:0.15.0:compile" -> "io.prometheus:simpleclient_tracer_common:jar:0.15.0:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.9.3:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.9.3:compile" -> "org.latencyutils:LatencyUtils:jar:2.0.3:runtime" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-cassandra:jar:2.24.4-SNAPSHOT:compile" -> "com.google.auto.value:auto-value-annotations:jar:1.7.4:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-cassandra:jar:2.24.4-SNAPSHOT:compile" -> "com.datastax.oss:java-driver-core:jar:4.17.0:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.0:compile" -> "com.datastax.oss:native-protocol:jar:1.5.1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.0:compile" -> "io.netty:netty-handler:jar:4.1.95.Final:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.0:compile" -> "com.datastax.oss:java-driver-shaded-guava:jar:25.1-jre-graal-sub-1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.0:compile" -> "com.typesafe:config:jar:1.4.1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.0:compile" -> "com.github.jnr:jnr-posix:jar:3.1.15:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.0:compile" -> "io.dropwizard.metrics:metrics-core:jar:4.1.18:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.0:compile" -> "com.github.stephenc.jcip:jcip-annotations:jar:1.0-1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.0:compile" -> "com.github.spotbugs:spotbugs-annotations:jar:3.1.12:compile" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:compile" -> "com.github.jnr:jnr-ffi:jar:2.2.11:compile" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:compile" -> "com.github.jnr:jnr-constants:jar:0.10.3:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jffi:jar:1.3.9:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jffi:jar:native:1.3.9:runtime" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-commons:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-analysis:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-tree:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-util:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jnr-a64asm:jar:1.0.0:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jnr-x86asm:jar:1.0.2:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-mysql-v1:jar:2.24.4-SNAPSHOT:compile" -> "org.jooq:jooq:jar:3.14.4:compile" ; 
+[INFO] 	"org.jooq:jooq:jar:3.14.4:compile" -> "javax.xml.bind:jaxb-api:jar:2.3.1:compile" ; 
+[INFO] 	"javax.xml.bind:jaxb-api:jar:2.3.1:compile" -> "javax.activation:javax.activation-api:jar:1.2.0:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-activemq:jar:2.24.4-SNAPSHOT:compile" -> "org.apache.activemq:activemq-client:jar:5.16.3:compile" ; 
+[INFO] 	"org.apache.activemq:activemq-client:jar:5.16.3:compile" -> "org.apache.geronimo.specs:geronimo-jms_1.1_spec:jar:1.1.1:compile" ; 
+[INFO] 	"org.apache.activemq:activemq-client:jar:5.16.3:compile" -> "org.fusesource.hawtbuf:hawtbuf:jar:1.11:compile" ; 
+[INFO] 	"org.apache.activemq:activemq-client:jar:5.16.3:compile" -> "org.apache.geronimo.specs:geronimo-j2ee-management_1.1_spec:jar:1.0.1:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-kafka:jar:2.24.4-SNAPSHOT:compile" -> "org.apache.kafka:kafka-clients:jar:3.4.0:compile" ; 
+[INFO] 	"org.apache.kafka:kafka-clients:jar:3.4.0:compile" -> "com.github.luben:zstd-jni:jar:1.5.2-1:runtime" ; 
+[INFO] 	"org.apache.kafka:kafka-clients:jar:3.4.0:compile" -> "org.lz4:lz4-java:jar:1.8.0:runtime" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-rabbitmq:jar:2.24.4-SNAPSHOT:compile" -> "com.rabbitmq:amqp-client:jar:4.12.0:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-collector-scribe:jar:2.24.4-SNAPSHOT:compile" -> "com.linecorp.armeria:armeria-thrift0.15:jar:1.17.2:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria-thrift0.15:jar:1.17.2:compile" -> "org.apache.thrift:libthrift:jar:0.15.0:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria-thrift0.15:jar:1.17.2:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"io.zipkin.brave:brave:jar:5.13.2:compile" -> "io.zipkin.reporter2:zipkin-reporter-brave:jar:2.16.1:compile" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-brave:jar:2.16.1:compile" -> "io.zipkin.reporter2:zipkin-reporter:jar:2.16.1:compile" ; 
+[INFO] 	"com.squareup.wire:wire-runtime:jar:3.0.2:test" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.3.50:test" ; 
+[INFO] 	"com.squareup.wire:wire-runtime:jar:3.0.2:test" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.3.50:test" ; 
+[INFO] 	"com.squareup.wire:wire-runtime:jar:3.0.2:test" -> "com.squareup.okio:okio:jar:2.4.1:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.3.50:test" -> "org.jetbrains:annotations:jar:13.0:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:4.12.0:test" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:test" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.8.21:test" ; 
+[INFO] 	"org.awaitility:awaitility:jar:4.2.0:test" -> "org.hamcrest:hamcrest:jar:2.1:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.8.0:test" -> "net.minidev:json-smart:jar:2.4.10:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.10:test" -> "net.minidev:accessors-smart:jar:2.4.9:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.9:test" -> "org.ow2.asm:asm:jar:9.3:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.12.21:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------------< io.zipkin:benchmarks >------------------------
+[INFO] Building Benchmarks 2.24.4-SNAPSHOT                              [18/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ benchmarks ---
+[INFO] digraph "io.zipkin:benchmarks:jar:2.24.4-SNAPSHOT" { 
+[INFO] 	"io.zipkin:benchmarks:jar:2.24.4-SNAPSHOT" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"io.zipkin:benchmarks:jar:2.24.4-SNAPSHOT" -> "com.squareup.moshi:moshi:jar:1.15.0:compile" ; 
+[INFO] 	"io.zipkin:benchmarks:jar:2.24.4-SNAPSHOT" -> "com.esotericsoftware:kryo:jar:5.5.0:compile" ; 
+[INFO] 	"io.zipkin:benchmarks:jar:2.24.4-SNAPSHOT" -> "org.openjdk.jmh:jmh-core:jar:1.37:compile" ; 
+[INFO] 	"io.zipkin:benchmarks:jar:2.24.4-SNAPSHOT" -> "org.openjdk.jmh:jmh-generator-annprocess:jar:1.37:provided" ; 
+[INFO] 	"io.zipkin:benchmarks:jar:2.24.4-SNAPSHOT" -> "com.google.protobuf:protobuf-java:jar:3.25.1:compile" ; 
+[INFO] 	"io.zipkin:benchmarks:jar:2.24.4-SNAPSHOT" -> "io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin:benchmarks:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-storage-elasticsearch:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin:benchmarks:jar:2.24.4-SNAPSHOT" -> "com.squareup.wire:wire-runtime:jar:3.0.2:compile" ; 
+[INFO] 	"io.zipkin:benchmarks:jar:2.24.4-SNAPSHOT" -> "io.zipkin.proto3:zipkin-proto3:jar:1.0.0:compile" ; 
+[INFO] 	"io.zipkin:benchmarks:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-tests:jar:2.24.4-SNAPSHOT:test" ; 
+[INFO] 	"io.zipkin:benchmarks:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-storage-cassandra:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin:benchmarks:jar:2.24.4-SNAPSHOT" -> "com.datastax.oss:java-driver-core:jar:4.17.0:test" ; 
+[INFO] 	"io.zipkin:benchmarks:jar:2.24.4-SNAPSHOT" -> "io.zipkin.zipkin2:zipkin-storage-mysql-v1:jar:2.24.4-SNAPSHOT:test" ; 
+[INFO] 	"io.zipkin:benchmarks:jar:2.24.4-SNAPSHOT" -> "org.mariadb.jdbc:mariadb-java-client:jar:2.7.1:test" ; 
+[INFO] 	"io.zipkin:benchmarks:jar:2.24.4-SNAPSHOT" -> "com.zaxxer:HikariCP:jar:3.4.5:test" ; 
+[INFO] 	"io.zipkin:benchmarks:jar:2.24.4-SNAPSHOT" -> "org.testcontainers:testcontainers:jar:1.19.3:test" ; 
+[INFO] 	"io.zipkin:benchmarks:jar:2.24.4-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"io.zipkin:benchmarks:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin:benchmarks:jar:2.24.4-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin:benchmarks:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin:benchmarks:jar:2.24.4-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.zipkin:benchmarks:jar:2.24.4-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"io.zipkin:benchmarks:jar:2.24.4-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.8.0:test" ; 
+[INFO] 	"io.zipkin:benchmarks:jar:2.24.4-SNAPSHOT" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"com.squareup.moshi:moshi:jar:1.15.0:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.21:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.8.21:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.5.0:compile" -> "com.esotericsoftware:reflectasm:jar:1.11.9:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.5.0:compile" -> "org.objenesis:objenesis:jar:3.3:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.5.0:compile" -> "com.esotericsoftware:minlog:jar:1.3.1:compile" ; 
+[INFO] 	"org.openjdk.jmh:jmh-core:jar:1.37:compile" -> "net.sf.jopt-simple:jopt-simple:jar:5.0.4:compile" ; 
+[INFO] 	"org.openjdk.jmh:jmh-core:jar:1.37:compile" -> "org.apache.commons:commons-math3:jar:3.6.1:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.7.14:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT:compile" -> "org.springframework.boot:spring-boot-starter-actuator:jar:2.7.14:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT:compile" -> "org.yaml:snakeyaml:jar:2.0:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT:compile" -> "org.xerial.snappy:snappy-java:jar:1.1.10.3:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.1:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT:compile" -> "org.apache.logging.log4j:log4j-core:jar:2.17.1:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT:compile" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT:compile" -> "org.apache.logging.log4j:log4j-jul:jar:2.17.1:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT:compile" -> "org.springframework.boot:spring-boot-starter-log4j2:jar:2.7.14:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT:compile" -> "com.linecorp.armeria:armeria-spring-boot2-autoconfigure:jar:1.17.2:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT:compile" -> "com.linecorp.armeria:armeria-brave:jar:1.17.2:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT:compile" -> "com.linecorp.armeria:armeria-grpc-protocol:jar:1.17.2:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT:compile" -> "io.micrometer:micrometer-registry-prometheus:jar:1.9.3:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT:compile" -> "com.netflix.concurrency-limits:concurrency-limits-core:jar:0.3.6:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT:compile" -> "io.micrometer:micrometer-core:jar:1.9.3:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT:compile" -> "io.zipkin.zipkin2:zipkin:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT:compile" -> "io.zipkin.zipkin2:zipkin-collector:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"io.zipkin:zipkin-server:jar:2.24.4-SNAPSHOT:compile" -> "io.zipkin:zipkin-lens:jar:2.24.4-SNAPSHOT:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.14:compile" -> "org.springframework.boot:spring-boot:jar:2.7.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.14:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.7.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.14:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.14:compile" -> "org.springframework:spring-core:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.7.14:compile" -> "org.springframework:spring-context:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.29:compile" -> "org.springframework:spring-aop:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.29:compile" -> "org.springframework:spring-beans:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.29:compile" -> "org.springframework:spring-expression:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.29:compile" -> "org.springframework:spring-jcl:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-actuator:jar:2.7.14:compile" -> "org.springframework.boot:spring-boot-actuator-autoconfigure:jar:2.7.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-actuator-autoconfigure:jar:2.7.14:compile" -> "org.springframework.boot:spring-boot-actuator:jar:2.7.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-actuator-autoconfigure:jar:2.7.14:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.15.0:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria-spring-boot2-autoconfigure:jar:1.17.2:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria-spring-boot2-autoconfigure:jar:1.17.2:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria-brave:jar:1.17.2:compile" -> "io.zipkin.brave:brave:jar:5.13.9:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria-brave:jar:1.17.2:compile" -> "io.zipkin.brave:brave-instrumentation-http:jar:5.13.9:compile" ; 
+[INFO] 	"io.zipkin.brave:brave:jar:5.13.9:compile" -> "io.zipkin.reporter2:zipkin-reporter-brave:jar:2.16.3:compile" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-reporter-brave:jar:2.16.3:compile" -> "io.zipkin.reporter2:zipkin-reporter:jar:2.16.3:compile" ; 
+[INFO] 	"io.micrometer:micrometer-registry-prometheus:jar:1.9.3:compile" -> "io.prometheus:simpleclient_common:jar:0.15.0:compile" ; 
+[INFO] 	"io.prometheus:simpleclient_common:jar:0.15.0:compile" -> "io.prometheus:simpleclient:jar:0.15.0:compile" ; 
+[INFO] 	"io.prometheus:simpleclient:jar:0.15.0:compile" -> "io.prometheus:simpleclient_tracer_otel:jar:0.15.0:compile" ; 
+[INFO] 	"io.prometheus:simpleclient:jar:0.15.0:compile" -> "io.prometheus:simpleclient_tracer_otel_agent:jar:0.15.0:compile" ; 
+[INFO] 	"io.prometheus:simpleclient_tracer_otel:jar:0.15.0:compile" -> "io.prometheus:simpleclient_tracer_common:jar:0.15.0:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.9.3:compile" -> "org.latencyutils:LatencyUtils:jar:2.0.3:runtime" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-elasticsearch:jar:2.24.4-SNAPSHOT:compile" -> "com.linecorp.armeria:armeria:jar:1.17.2:compile" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-elasticsearch:jar:2.24.4-SNAPSHOT:compile" -> "com.google.auto.value:auto-value-annotations:jar:1.7.4:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.0:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-transport:jar:4.1.95.Final:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-codec-http2:jar:4.1.95.Final:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-codec-haproxy:jar:4.1.95.Final:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-resolver-dns:jar:4.1.95.Final:compile" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-resolver-dns-native-macos:jar:osx-x86_64:4.1.95.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-resolver-dns-native-macos:jar:osx-aarch_64:4.1.95.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-transport-native-unix-common:jar:linux-x86_64:4.1.95.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.95.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:linux-x86_64:2.0.61.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:linux-aarch_64:2.0.61.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:osx-x86_64:2.0.61.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:osx-aarch_64:2.0.61.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:windows-x86_64:2.0.61.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "io.netty:netty-handler-proxy:jar:4.1.95.Final:runtime" ; 
+[INFO] 	"com.linecorp.armeria:armeria:jar:1.17.2:compile" -> "com.aayushatharva.brotli4j:brotli4j:jar:1.7.1:runtime" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.95.Final:compile" -> "io.netty:netty-common:jar:4.1.95.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.95.Final:compile" -> "io.netty:netty-buffer:jar:4.1.95.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.95.Final:compile" -> "io.netty:netty-resolver:jar:4.1.95.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.95.Final:compile" -> "io.netty:netty-codec:jar:4.1.95.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.95.Final:compile" -> "io.netty:netty-handler:jar:4.1.95.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.95.Final:compile" -> "io.netty:netty-codec-http:jar:4.1.95.Final:compile" ; 
+[INFO] 	"io.netty:netty-resolver-dns:jar:4.1.95.Final:compile" -> "io.netty:netty-codec-dns:jar:4.1.95.Final:compile" ; 
+[INFO] 	"io.netty:netty-resolver-dns-native-macos:jar:osx-x86_64:4.1.95.Final:runtime" -> "io.netty:netty-resolver-dns-classes-macos:jar:4.1.95.Final:runtime" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.95.Final:runtime" -> "io.netty:netty-transport-native-unix-common:jar:4.1.95.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.95.Final:runtime" -> "io.netty:netty-transport-classes-epoll:jar:4.1.95.Final:runtime" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:linux-x86_64:2.0.61.Final:runtime" -> "io.netty:netty-tcnative-classes:jar:2.0.61.Final:runtime" ; 
+[INFO] 	"io.netty:netty-handler-proxy:jar:4.1.95.Final:runtime" -> "io.netty:netty-codec-socks:jar:4.1.95.Final:runtime" ; 
+[INFO] 	"com.aayushatharva.brotli4j:brotli4j:jar:1.7.1:runtime" -> "com.aayushatharva.brotli4j:native-linux-x86_64:jar:1.7.1:runtime" ; 
+[INFO] 	"com.squareup.wire:wire-runtime:jar:3.0.2:compile" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.3.50:compile" ; 
+[INFO] 	"com.squareup.wire:wire-runtime:jar:3.0.2:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.3.50:compile" ; 
+[INFO] 	"com.squareup.wire:wire-runtime:jar:3.0.2:compile" -> "com.squareup.okio:okio:jar:2.4.1:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.3.50:compile" -> "org.jetbrains:annotations:jar:13.0:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.0:test" -> "com.datastax.oss:native-protocol:jar:1.5.1:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.0:test" -> "com.datastax.oss:java-driver-shaded-guava:jar:25.1-jre-graal-sub-1:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.0:test" -> "com.typesafe:config:jar:1.4.1:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.0:test" -> "com.github.jnr:jnr-posix:jar:3.1.15:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.0:test" -> "io.dropwizard.metrics:metrics-core:jar:4.1.18:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.0:test" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.0:test" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.0:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.0:test" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.0:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.0:test" -> "org.reactivestreams:reactive-streams:jar:1.0.3:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.0:test" -> "com.github.stephenc.jcip:jcip-annotations:jar:1.0-1:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.0:test" -> "com.github.spotbugs:spotbugs-annotations:jar:3.1.12:test" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:test" -> "com.github.jnr:jnr-ffi:jar:2.2.11:test" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:test" -> "com.github.jnr:jnr-constants:jar:0.10.3:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "com.github.jnr:jffi:jar:1.3.9:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "com.github.jnr:jffi:jar:native:1.3.9:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "org.ow2.asm:asm:jar:9.2:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "org.ow2.asm:asm-commons:jar:9.2:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "org.ow2.asm:asm-analysis:jar:9.2:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "org.ow2.asm:asm-tree:jar:9.2:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "org.ow2.asm:asm-util:jar:9.2:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "com.github.jnr:jnr-a64asm:jar:1.0.0:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "com.github.jnr:jnr-x86asm:jar:1.0.2:test" ; 
+[INFO] 	"io.zipkin.zipkin2:zipkin-storage-mysql-v1:jar:2.24.4-SNAPSHOT:test" -> "org.jooq:jooq:jar:3.14.4:test" ; 
+[INFO] 	"org.jooq:jooq:jar:3.14.4:test" -> "javax.xml.bind:jaxb-api:jar:2.3.1:test" ; 
+[INFO] 	"javax.xml.bind:jaxb-api:jar:2.3.1:test" -> "javax.activation:javax.activation-api:jar:1.2.0:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "org.apache.commons:commons-compress:jar:1.24.0:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "com.github.docker-java:docker-java-api:jar:3.3.4:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" -> "com.github.docker-java:docker-java-transport:jar:3.3.4:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" -> "net.java.dev.jna:jna:jar:5.13.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.12.21:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Zipkin (Parent) 2.24.4-SNAPSHOT:
+[INFO] 
+[INFO] Zipkin (Parent) .................................... SUCCESS [  4.858 s]
+[INFO] Zipkin Core Library ................................ SUCCESS [  0.202 s]
+[INFO] Zipkin Interop Tests ............................... SUCCESS [  0.146 s]
+[INFO] Collector .......................................... SUCCESS [  0.184 s]
+[INFO] Collector: Core Library ............................ SUCCESS [  0.163 s]
+[INFO] Zipkin JUnit ....................................... SUCCESS [  0.127 s]
+[INFO] Zipkin JUnit5 ...................................... SUCCESS [  0.133 s]
+[INFO] Storage ............................................ SUCCESS [  0.059 s]
+[INFO] Storage: Cassandra ................................. SUCCESS [  0.383 s]
+[INFO] Storage: MySQL (v1) ................................ SUCCESS [  0.157 s]
+[INFO] Storage: Elasticsearch (V2) ........................ SUCCESS [  0.623 s]
+[INFO] Collector: ActiveMQ ................................ SUCCESS [  0.234 s]
+[INFO] Collector: Kafka 0.10+ ............................. SUCCESS [  0.158 s]
+[INFO] Collector: RabbitMQ ................................ SUCCESS [  0.085 s]
+[INFO] Collector: Scribe (Legacy) ......................... SUCCESS [  0.168 s]
+[INFO] Zipkin Lens ........................................ SUCCESS [  0.015 s]
+[INFO] Zipkin Server ...................................... SUCCESS [  0.774 s]
+[INFO] Benchmarks ......................................... SUCCESS [  0.316 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.240 s
+[INFO] Finished at: 2023-12-28T09:03:19+01:00
+[INFO] ------------------------------------------------------------------------

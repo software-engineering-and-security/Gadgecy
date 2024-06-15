@@ -1,0 +1,86 @@
+[INFO] Scanning for projects...
+[INFO] Downloading from spring-snapshot: https://repo.spring.io/snapshot/org/springframework/data/build/spring-data-parent/3.3.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/org/springframework/data/build/spring-data-parent/3.3.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from spring-snapshot: https://repo.spring.io/snapshot/org/springframework/data/build/spring-data-parent/3.3.0-SNAPSHOT/maven-metadata.xml (0 B at 0 B/s)
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/io/projectreactor/reactor-bom/2023.0.1/reactor-bom-2023.0.1.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/projectreactor/reactor-bom/2023.0.1/reactor-bom-2023.0.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/projectreactor/reactor-bom/2023.0.1/reactor-bom-2023.0.1.pom (0 B at 0 B/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-bom/1.12.1/micrometer-bom-1.12.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-bom/1.12.1/micrometer-bom-1.12.1.pom (0 B at 0 B/s)
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/io/micrometer/micrometer-tracing-bom/1.2.1/micrometer-tracing-bom-1.2.1.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-tracing-bom/1.2.1/micrometer-tracing-bom-1.2.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-tracing-bom/1.2.1/micrometer-tracing-bom-1.2.1.pom (0 B at 0 B/s)
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/org/springframework/spring-framework-bom/6.1.2/spring-framework-bom-6.1.2.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/6.1.2/spring-framework-bom-6.1.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/6.1.2/spring-framework-bom-6.1.2.pom (0 B at 0 B/s)
+[INFO] 
+[INFO] -----------< org.springframework.data:spring-data-keyvalue >------------
+[INFO] Building Spring Data KeyValue 3.3.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from spring-snapshot: https://repo.spring.io/snapshot/org/springframework/data/spring-data-commons/3.3.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/org/springframework/data/spring-data-commons/3.3.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from spring-snapshot: https://repo.spring.io/snapshot/org/springframework/data/spring-data-commons/3.3.0-SNAPSHOT/maven-metadata.xml (1.2 kB at 4.3 kB/s)
+[INFO] Downloading from spring-snapshot: https://repo.spring.io/snapshot/org/springframework/data/spring-data-commons/3.3.0-SNAPSHOT/spring-data-commons-3.3.0-20231227.192005-71.pom
+[INFO] Downloaded from spring-snapshot: https://repo.spring.io/snapshot/org/springframework/data/spring-data-commons/3.3.0-SNAPSHOT/spring-data-commons-3.3.0-20231227.192005-71.pom (10 kB at 35 kB/s)
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/org/springframework/spring-expression/6.1.2/spring-expression-6.1.2.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-expression/6.1.2/spring-expression-6.1.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-expression/6.1.2/spring-expression-6.1.2.pom (0 B at 0 B/s)
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/io/micrometer/micrometer-observation/1.12.1/micrometer-observation-1.12.1.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.12.1/micrometer-observation-1.12.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.12.1/micrometer-observation-1.12.1.pom (3.8 kB at 10 kB/s)
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/io/micrometer/micrometer-commons/1.12.1/micrometer-commons-1.12.1.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-commons/1.12.1/micrometer-commons-1.12.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-commons/1.12.1/micrometer-commons-1.12.1.pom (3.4 kB at 36 kB/s)
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/org/springframework/spring-tx/6.1.2/spring-tx-6.1.2.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-tx/6.1.2/spring-tx-6.1.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-tx/6.1.2/spring-tx-6.1.2.pom (2.2 kB at 67 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.5.0:tree (default-cli) @ spring-data-keyvalue ---
+[INFO] digraph "org.springframework.data:spring-data-keyvalue:jar:3.3.0-SNAPSHOT" { 
+[INFO] 	"org.springframework.data:spring-data-keyvalue:jar:3.3.0-SNAPSHOT" -> "org.springframework.data:spring-data-commons:jar:3.3.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-keyvalue:jar:3.3.0-SNAPSHOT" -> "org.springframework:spring-context:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-keyvalue:jar:3.3.0-SNAPSHOT" -> "org.springframework:spring-tx:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-keyvalue:jar:3.3.0-SNAPSHOT" -> "com.querydsl:querydsl-collections:jar:5.0.0:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-keyvalue:jar:3.3.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.data:spring-data-keyvalue:jar:3.3.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.data:spring-data-keyvalue:jar:3.3.0-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.5.0:test" ; 
+[INFO] 	"org.springframework.data:spring-data-keyvalue:jar:3.3.0-SNAPSHOT" -> "org.mockito:mockito-junit-jupiter:jar:5.5.0:test" ; 
+[INFO] 	"org.springframework.data:spring-data-keyvalue:jar:3.3.0-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"org.springframework.data:spring-data-keyvalue:jar:3.3.0-SNAPSHOT" -> "org.springframework:spring-test:jar:6.1.2:test" ; 
+[INFO] 	"org.springframework.data:spring-data-keyvalue:jar:3.3.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.2:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-keyvalue:jar:3.3.0-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.4.13:test" ; 
+[INFO] 	"org.springframework.data:spring-data-commons:jar:3.3.0-SNAPSHOT:compile" -> "org.springframework:spring-core:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-commons:jar:3.3.0-SNAPSHOT:compile" -> "org.springframework:spring-beans:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.1.2:compile" -> "org.springframework:spring-jcl:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.2:compile" -> "org.springframework:spring-aop:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.2:compile" -> "org.springframework:spring-expression:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.2:compile" -> "io.micrometer:micrometer-observation:jar:1.12.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-observation:jar:1.12.1:compile" -> "io.micrometer:micrometer-commons:jar:1.12.1:compile" ; 
+[INFO] 	"com.querydsl:querydsl-collections:jar:5.0.0:compile" -> "com.querydsl:querydsl-codegen:jar:5.0.0:compile" ; 
+[INFO] 	"com.querydsl:querydsl-collections:jar:5.0.0:compile" -> "com.querydsl:querydsl-apt:jar:5.0.0:compile" ; 
+[INFO] 	"com.querydsl:querydsl-codegen:jar:5.0.0:compile" -> "com.querydsl:querydsl-core:jar:5.0.0:compile" ; 
+[INFO] 	"com.querydsl:querydsl-codegen:jar:5.0.0:compile" -> "com.querydsl:codegen-utils:jar:5.0.0:compile" ; 
+[INFO] 	"com.querydsl:querydsl-codegen:jar:5.0.0:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.querydsl:querydsl-codegen:jar:5.0.0:compile" -> "io.github.classgraph:classgraph:jar:4.8.108:compile" ; 
+[INFO] 	"com.querydsl:querydsl-core:jar:5.0.0:compile" -> "com.mysema.commons:mysema-commons-lang:jar:0.2.4:compile" ; 
+[INFO] 	"com.querydsl:codegen-utils:jar:5.0.0:compile" -> "org.eclipse.jdt:ecj:jar:3.26.0:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.5.0:test" -> "net.bytebuddy:byte-buddy:jar:1.14.6:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.5.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.6:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.5.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.13:test" -> "ch.qos.logback:logback-core:jar:1.4.13:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  11.047 s
+[INFO] Finished at: 2023-12-28T09:03:28+01:00
+[INFO] ------------------------------------------------------------------------

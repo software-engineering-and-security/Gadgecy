@@ -1,0 +1,788 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] hutool                                                             [pom]
+[INFO] hutool-core                                                        [jar]
+[INFO] hutool-aop                                                         [jar]
+[INFO] hutool-bloomFilter                                                 [jar]
+[INFO] hutool-cache                                                       [jar]
+[INFO] hutool-crypto                                                      [jar]
+[INFO] hutool-log                                                         [jar]
+[INFO] hutool-setting                                                     [jar]
+[INFO] hutool-db                                                          [jar]
+[INFO] hutool-json                                                        [jar]
+[INFO] hutool-dfa                                                         [jar]
+[INFO] hutool-extra                                                       [jar]
+[INFO] hutool-http                                                        [jar]
+[INFO] hutool-script                                                      [jar]
+[INFO] hutool-system                                                      [jar]
+[INFO] hutool-cron                                                        [jar]
+[INFO] hutool-poi                                                         [jar]
+[INFO] hutool-captcha                                                     [jar]
+[INFO] hutool-socket                                                      [jar]
+[INFO] hutool-jwt                                                         [jar]
+[INFO] hutool-all                                                         [jar]
+[INFO] hutool-bom                                                         [pom]
+[INFO] 
+[INFO] ----------------------< cn.hutool:hutool-parent >-----------------------
+[INFO] Building hutool 5.8.23                                            [1/22]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ hutool-parent ---
+[INFO] digraph "cn.hutool:hutool-parent:pom:5.8.23" { 
+[INFO] 	"cn.hutool:hutool-parent:pom:5.8.23" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"cn.hutool:hutool-parent:pom:5.8.23" -> "org.projectlombok:lombok:jar:1.18.30:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------------< cn.hutool:hutool-core >------------------------
+[INFO] Building hutool-core 5.8.23                                       [2/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ hutool-core ---
+[INFO] digraph "cn.hutool:hutool-core:jar:5.8.23" { 
+[INFO] 	"cn.hutool:hutool-core:jar:5.8.23" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"cn.hutool:hutool-core:jar:5.8.23" -> "org.projectlombok:lombok:jar:1.18.30:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------------< cn.hutool:hutool-aop >------------------------
+[INFO] Building hutool-aop 5.8.23                                        [3/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ hutool-aop ---
+[INFO] digraph "cn.hutool:hutool-aop:jar:5.8.23" { 
+[INFO] 	"cn.hutool:hutool-aop:jar:5.8.23" -> "cn.hutool:hutool-core:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-aop:jar:5.8.23" -> "cglib:cglib:jar:3.3.0:compile" ; 
+[INFO] 	"cn.hutool:hutool-aop:jar:5.8.23" -> "org.springframework:spring-core:jar:5.3.27:compile" ; 
+[INFO] 	"cn.hutool:hutool-aop:jar:5.8.23" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"cn.hutool:hutool-aop:jar:5.8.23" -> "org.projectlombok:lombok:jar:1.18.30:test" ; 
+[INFO] 	"cglib:cglib:jar:3.3.0:compile" -> "org.ow2.asm:asm:jar:7.1:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.27:compile" -> "org.springframework:spring-jcl:jar:5.3.27:compile" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< cn.hutool:hutool-bloomFilter >--------------------
+[INFO] Building hutool-bloomFilter 5.8.23                                [4/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ hutool-bloomFilter ---
+[INFO] digraph "cn.hutool:hutool-bloomFilter:jar:5.8.23" { 
+[INFO] 	"cn.hutool:hutool-bloomFilter:jar:5.8.23" -> "cn.hutool:hutool-core:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-bloomFilter:jar:5.8.23" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"cn.hutool:hutool-bloomFilter:jar:5.8.23" -> "org.projectlombok:lombok:jar:1.18.30:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------------< cn.hutool:hutool-cache >-----------------------
+[INFO] Building hutool-cache 5.8.23                                      [5/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ hutool-cache ---
+[INFO] digraph "cn.hutool:hutool-cache:jar:5.8.23" { 
+[INFO] 	"cn.hutool:hutool-cache:jar:5.8.23" -> "cn.hutool:hutool-core:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-cache:jar:5.8.23" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"cn.hutool:hutool-cache:jar:5.8.23" -> "org.projectlombok:lombok:jar:1.18.30:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< cn.hutool:hutool-crypto >-----------------------
+[INFO] Building hutool-crypto 5.8.23                                     [6/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ hutool-crypto ---
+[INFO] digraph "cn.hutool:hutool-crypto:jar:5.8.23" { 
+[INFO] 	"cn.hutool:hutool-crypto:jar:5.8.23" -> "cn.hutool:hutool-core:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-crypto:jar:5.8.23" -> "org.bouncycastle:bcpkix-jdk18on:jar:1.76:compile" ; 
+[INFO] 	"cn.hutool:hutool-crypto:jar:5.8.23" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"cn.hutool:hutool-crypto:jar:5.8.23" -> "org.projectlombok:lombok:jar:1.18.30:test" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk18on:jar:1.76:compile" -> "org.bouncycastle:bcprov-jdk18on:jar:1.76:compile" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk18on:jar:1.76:compile" -> "org.bouncycastle:bcutil-jdk18on:jar:1.76:compile" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------------< cn.hutool:hutool-log >------------------------
+[INFO] Building hutool-log 5.8.23                                        [7/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ hutool-log ---
+[INFO] digraph "cn.hutool:hutool-log:jar:5.8.23" { 
+[INFO] 	"cn.hutool:hutool-log:jar:5.8.23" -> "cn.hutool:hutool-core:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-log:jar:5.8.23" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"cn.hutool:hutool-log:jar:5.8.23" -> "ch.qos.logback:logback-classic:jar:1.4.6:compile" ; 
+[INFO] 	"cn.hutool:hutool-log:jar:5.8.23" -> "log4j:log4j:jar:1.2.17:compile" ; 
+[INFO] 	"cn.hutool:hutool-log:jar:5.8.23" -> "org.apache.logging.log4j:log4j-api:jar:2.20.0:compile" ; 
+[INFO] 	"cn.hutool:hutool-log:jar:5.8.23" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"cn.hutool:hutool-log:jar:5.8.23" -> "org.tinylog:tinylog:jar:1.3.6:compile" ; 
+[INFO] 	"cn.hutool:hutool-log:jar:5.8.23" -> "org.tinylog:tinylog-api:jar:2.6.2:compile" ; 
+[INFO] 	"cn.hutool:hutool-log:jar:5.8.23" -> "org.jboss.logging:jboss-logging:jar:3.4.3.Final:compile" ; 
+[INFO] 	"cn.hutool:hutool-log:jar:5.8.23" -> "io.github.logtube:logtube:jar:0.45.0:compile" ; 
+[INFO] 	"cn.hutool:hutool-log:jar:5.8.23" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"cn.hutool:hutool-log:jar:5.8.23" -> "org.tinylog:tinylog-impl:jar:2.6.2:test" ; 
+[INFO] 	"cn.hutool:hutool-log:jar:5.8.23" -> "org.apache.logging.log4j:log4j-core:jar:2.20.0:test" ; 
+[INFO] 	"cn.hutool:hutool-log:jar:5.8.23" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"cn.hutool:hutool-log:jar:5.8.23" -> "org.projectlombok:lombok:jar:1.18.30:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.6:compile" -> "ch.qos.logback:logback-core:jar:1.4.6:compile" ; 
+[INFO] 	"io.github.logtube:logtube:jar:0.45.0:compile" -> "com.google.code.gson:gson:jar:2.8.5:compile" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< cn.hutool:hutool-setting >----------------------
+[INFO] Building hutool-setting 5.8.23                                    [8/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ hutool-setting ---
+[INFO] digraph "cn.hutool:hutool-setting:jar:5.8.23" { 
+[INFO] 	"cn.hutool:hutool-setting:jar:5.8.23" -> "cn.hutool:hutool-core:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-setting:jar:5.8.23" -> "cn.hutool:hutool-log:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-setting:jar:5.8.23" -> "org.yaml:snakeyaml:jar:2.2:compile" ; 
+[INFO] 	"cn.hutool:hutool-setting:jar:5.8.23" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"cn.hutool:hutool-setting:jar:5.8.23" -> "org.projectlombok:lombok:jar:1.18.30:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------------< cn.hutool:hutool-db >-------------------------
+[INFO] Building hutool-db 5.8.23                                         [9/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ hutool-db ---
+[WARNING] The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33
+[INFO] digraph "cn.hutool:hutool-db:jar:5.8.23" { 
+[INFO] 	"cn.hutool:hutool-db:jar:5.8.23" -> "cn.hutool:hutool-core:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-db:jar:5.8.23" -> "cn.hutool:hutool-setting:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-db:jar:5.8.23" -> "cn.hutool:hutool-log:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-db:jar:5.8.23" -> "org.apache.tomcat:tomcat-jdbc:jar:10.0.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-db:jar:5.8.23" -> "com.alibaba:druid:jar:1.2.20:compile" ; 
+[INFO] 	"cn.hutool:hutool-db:jar:5.8.23" -> "com.zaxxer:HikariCP:jar:4.0.3:compile" ; 
+[INFO] 	"cn.hutool:hutool-db:jar:5.8.23" -> "com.mchange:c3p0:jar:0.9.5.5:compile" ; 
+[INFO] 	"cn.hutool:hutool-db:jar:5.8.23" -> "com.github.chris2018998:beecp:jar:3.4.2:compile" ; 
+[INFO] 	"cn.hutool:hutool-db:jar:5.8.23" -> "org.apache.commons:commons-dbcp2:jar:2.11.0:compile" ; 
+[INFO] 	"cn.hutool:hutool-db:jar:5.8.23" -> "org.mongodb:mongodb-driver-sync:jar:4.9.1:compile" ; 
+[INFO] 	"cn.hutool:hutool-db:jar:5.8.23" -> "redis.clients:jedis:jar:5.0.2:compile" ; 
+[INFO] 	"cn.hutool:hutool-db:jar:5.8.23" -> "org.xerial:sqlite-jdbc:jar:3.43.2.2:test" ; 
+[INFO] 	"cn.hutool:hutool-db:jar:5.8.23" -> "org.hsqldb:hsqldb:jar:2.5.2:test" ; 
+[INFO] 	"cn.hutool:hutool-db:jar:5.8.23" -> "org.zenframework.z8.dependencies.commons:ojdbc6:jar:2.0:test" ; 
+[INFO] 	"cn.hutool:hutool-db:jar:5.8.23" -> "com.mysql:mysql-connector-j:jar:8.0.33:test" ; 
+[INFO] 	"cn.hutool:hutool-db:jar:5.8.23" -> "org.postgresql:postgresql:jar:42.6.0:test" ; 
+[INFO] 	"cn.hutool:hutool-db:jar:5.8.23" -> "com.microsoft.sqlserver:mssql-jdbc:jar:12.2.0.jre8:test" ; 
+[INFO] 	"cn.hutool:hutool-db:jar:5.8.23" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"cn.hutool:hutool-db:jar:5.8.23" -> "com.h2database:h2:jar:2.2.220:test" ; 
+[INFO] 	"cn.hutool:hutool-db:jar:5.8.23" -> "com.clickhouse:clickhouse-jdbc:jar:0.5.0:test" ; 
+[INFO] 	"cn.hutool:hutool-db:jar:5.8.23" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"cn.hutool:hutool-db:jar:5.8.23" -> "org.projectlombok:lombok:jar:1.18.30:test" ; 
+[INFO] 	"org.apache.tomcat:tomcat-jdbc:jar:10.0.23:compile" -> "org.apache.tomcat:tomcat-juli:jar:10.0.23:compile" ; 
+[INFO] 	"com.mchange:c3p0:jar:0.9.5.5:compile" -> "com.mchange:mchange-commons-java:jar:0.2.19:compile" ; 
+[INFO] 	"org.apache.commons:commons-dbcp2:jar:2.11.0:compile" -> "org.apache.commons:commons-pool2:jar:2.12.0:compile" ; 
+[INFO] 	"org.apache.commons:commons-dbcp2:jar:2.11.0:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.commons:commons-dbcp2:jar:2.11.0:compile" -> "jakarta.transaction:jakarta.transaction-api:jar:1.3.3:compile" ; 
+[INFO] 	"org.mongodb:mongodb-driver-sync:jar:4.9.1:compile" -> "org.mongodb:bson:jar:4.9.1:compile" ; 
+[INFO] 	"org.mongodb:mongodb-driver-sync:jar:4.9.1:compile" -> "org.mongodb:mongodb-driver-core:jar:4.9.1:compile" ; 
+[INFO] 	"org.mongodb:mongodb-driver-core:jar:4.9.1:compile" -> "org.mongodb:bson-record-codec:jar:4.9.1:runtime" ; 
+[INFO] 	"redis.clients:jedis:jar:5.0.2:compile" -> "org.json:json:jar:20231013:compile" ; 
+[INFO] 	"redis.clients:jedis:jar:5.0.2:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"org.xerial:sqlite-jdbc:jar:3.43.2.2:test" -> "org.slf4j:slf4j-api:jar:1.7.36:test" ; 
+[INFO] 	"com.mysql:mysql-connector-j:jar:8.0.33:test" -> "com.google.protobuf:protobuf-java:jar:3.21.9:test" ; 
+[INFO] 	"org.postgresql:postgresql:jar:42.6.0:test" -> "org.checkerframework:checker-qual:jar:3.31.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------------< cn.hutool:hutool-json >------------------------
+[INFO] Building hutool-json 5.8.23                                      [10/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ hutool-json ---
+[INFO] digraph "cn.hutool:hutool-json:jar:5.8.23" { 
+[INFO] 	"cn.hutool:hutool-json:jar:5.8.23" -> "cn.hutool:hutool-core:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-json:jar:5.8.23" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"cn.hutool:hutool-json:jar:5.8.23" -> "org.projectlombok:lombok:jar:1.18.30:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------------< cn.hutool:hutool-dfa >------------------------
+[INFO] Building hutool-dfa 5.8.23                                       [11/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ hutool-dfa ---
+[INFO] digraph "cn.hutool:hutool-dfa:jar:5.8.23" { 
+[INFO] 	"cn.hutool:hutool-dfa:jar:5.8.23" -> "cn.hutool:hutool-json:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-dfa:jar:5.8.23" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"cn.hutool:hutool-dfa:jar:5.8.23" -> "org.projectlombok:lombok:jar:1.18.30:test" ; 
+[INFO] 	"cn.hutool:hutool-json:jar:5.8.23:compile" -> "cn.hutool:hutool-core:jar:5.8.23:compile" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------------< cn.hutool:hutool-extra >-----------------------
+[INFO] Building hutool-extra 5.8.23                                     [12/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ hutool-extra ---
+[INFO] digraph "cn.hutool:hutool-extra:jar:5.8.23" { 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "cn.hutool:hutool-core:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "cn.hutool:hutool-setting:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "javax.servlet:javax.servlet-api:jar:4.0.1:provided" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "jakarta.servlet:jakarta.servlet-api:jar:5.0.0:provided" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "org.apache.velocity:velocity-engine-core:jar:2.3:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "com.ibeetl:beetl:jar:3.15.10.RELEASE:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "org.rythmengine:rythm-engine:jar:1.4.2:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "org.freemarker:freemarker:jar:2.3.32:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "com.jfinal:enjoy:jar:5.1.3:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "org.thymeleaf:thymeleaf:jar:3.1.2.RELEASE:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "org.febit.wit:wit-core:jar:2.6.0:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "com.github.subchen:jetbrick-template:jar:2.1.10:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "com.sun.mail:javax.mail:jar:1.6.2:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "com.jcraft:jsch:jar:0.1.55:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "com.hierynomus:sshj:jar:0.37.0:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "ch.ethz.ganymed:ganymed-ssh2:jar:262:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "com.google.zxing:core:jar:3.5.2:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "commons-net:commons-net:jar:3.9.0:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "org.apache.ftpserver:ftpserver-core:jar:1.2.0:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "com.vdurmont:emoji-java:jar:5.1.1:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "org.ansj:ansj_seg:jar:5.1.6:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "com.huaban:jieba-analysis:jar:1.0.2:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "org.lionsoul:jcseg-core:jar:2.6.3:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "com.chenlb.mmseg4j:mmseg4j-core:jar:1.10.0:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "com.janeluo:ikanalyzer:jar:2012_u6:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "com.hankcs:hanlp:jar:portable-1.8.4:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "org.apache.lucene:lucene-analyzers-smartcn:jar:8.11.2:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "org.apdplat:word:jar:1.3.1:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "com.mayabot.mynlp:mynlp-segment:jar:3.0.2:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "org.springframework.boot:spring-boot-starter:jar:2.7.14:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "io.github.biezhi:TinyPinyin:jar:2.0.3.RELEASE:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "com.belerweb:pinyin4j:jar:2.5.1:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "com.github.stuxuhai:jpinyin:jar:1.1.8:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "com.rnkrsoft.bopomofo4j:bopomofo4j:jar:1.0.0:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "com.github.houbb:pinyin:jar:0.4.0:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "cglib:cglib:jar:3.3.0:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "jakarta.validation:jakarta.validation-api:jar:3.0.2:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "org.hibernate.validator:hibernate-validator:jar:7.0.4.Final:test" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "org.glassfish:jakarta.el:jar:4.0.2:test" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "org.springframework.boot:spring-boot-starter-test:jar:2.7.14:test" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "ch.qos.logback:logback-classic:jar:1.2.11:test" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "com.googlecode.aviator:aviator:jar:5.4.1:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "commons-beanutils:commons-beanutils:jar:1.9.4:test" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "org.apache.commons:commons-jexl3:jar:3.3:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "org.mvel:mvel2:jar:2.5.0.Final:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "com.jfirer:jfireEl:jar:1.0:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "org.springframework:spring-expression:jar:5.3.30:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "org.mozilla:rhino:jar:1.7.14:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "com.alibaba:QLExpress:jar:3.3.2:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "org.apache.commons:commons-compress:jar:1.24.0:compile" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"cn.hutool:hutool-extra:jar:5.8.23" -> "org.projectlombok:lombok:jar:1.18.30:test" ; 
+[INFO] 	"cn.hutool:hutool-setting:jar:5.8.23:compile" -> "cn.hutool:hutool-log:jar:5.8.23:compile" ; 
+[INFO] 	"org.apache.velocity:velocity-engine-core:jar:2.3:compile" -> "org.apache.commons:commons-lang3:jar:3.11:compile" ; 
+[INFO] 	"org.apache.velocity:velocity-engine-core:jar:2.3:compile" -> "org.slf4j:slf4j-api:jar:1.7.30:compile" ; 
+[INFO] 	"com.ibeetl:beetl:jar:3.15.10.RELEASE:compile" -> "org.antlr:antlr4-runtime:jar:4.9.3:compile" ; 
+[INFO] 	"com.ibeetl:beetl:jar:3.15.10.RELEASE:compile" -> "com.ibeetl:beetl-core:jar:3.15.10.RELEASE:compile" ; 
+[INFO] 	"com.ibeetl:beetl:jar:3.15.10.RELEASE:compile" -> "com.ibeetl:beetl-default-antlr4.9-support:jar:3.15.10.RELEASE:compile" ; 
+[INFO] 	"com.ibeetl:beetl:jar:3.15.10.RELEASE:compile" -> "com.ibeetl:beetl-ext:jar:3.15.10.RELEASE:compile" ; 
+[INFO] 	"org.rythmengine:rythm-engine:jar:1.4.2:compile" -> "org.eclipse.jdt.core.compiler:ecj:jar:4.6.1:compile" ; 
+[INFO] 	"org.rythmengine:rythm-engine:jar:1.4.2:compile" -> "com.stevesoft.pat:pat:jar:1.5.3:compile" ; 
+[INFO] 	"org.rythmengine:rythm-engine:jar:1.4.2:compile" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"org.rythmengine:rythm-engine:jar:1.4.2:compile" -> "com.alibaba:fastjson:jar:1.2.83:compile" ; 
+[INFO] 	"org.rythmengine:rythm-engine:jar:1.4.2:compile" -> "org.osgl:osgl-version:jar:2.0.0-BETA-4-JAVA7:compile" ; 
+[INFO] 	"org.rythmengine:rythm-engine:jar:1.4.2:compile" -> "org.osgl:osgl-ut:jar:2.0.0-BETA-4-JAVA7:compile" ; 
+[INFO] 	"org.osgl:osgl-ut:jar:2.0.0-BETA-4-JAVA7:compile" -> "org.hamcrest:hamcrest-junit:jar:2.0.0.0:compile" ; 
+[INFO] 	"org.hamcrest:hamcrest-junit:jar:2.0.0.0:compile" -> "org.hamcrest:java-hamcrest:jar:2.0.0.0:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.1.2.RELEASE:compile" -> "ognl:ognl:jar:3.3.4:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.1.2.RELEASE:compile" -> "org.attoparser:attoparser:jar:2.0.7.RELEASE:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.1.2.RELEASE:compile" -> "org.unbescape:unbescape:jar:1.1.6.RELEASE:compile" ; 
+[INFO] 	"ognl:ognl:jar:3.3.4:compile" -> "org.javassist:javassist:jar:3.29.0-GA:compile" ; 
+[INFO] 	"com.github.subchen:jetbrick-template:jar:2.1.10:compile" -> "com.github.subchen:jetbrick-commons:jar:2.1.9:compile" ; 
+[INFO] 	"com.sun.mail:javax.mail:jar:1.6.2:compile" -> "javax.activation:activation:jar:1.1:compile" ; 
+[INFO] 	"com.hierynomus:sshj:jar:0.37.0:compile" -> "org.bouncycastle:bcprov-jdk18on:jar:1.75:runtime" ; 
+[INFO] 	"com.hierynomus:sshj:jar:0.37.0:compile" -> "org.bouncycastle:bcpkix-jdk18on:jar:1.75:runtime" ; 
+[INFO] 	"com.hierynomus:sshj:jar:0.37.0:compile" -> "com.hierynomus:asn-one:jar:0.6.0:runtime" ; 
+[INFO] 	"com.hierynomus:sshj:jar:0.37.0:compile" -> "net.i2p.crypto:eddsa:jar:0.3.0:runtime" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk18on:jar:1.75:runtime" -> "org.bouncycastle:bcutil-jdk18on:jar:1.75:runtime" ; 
+[INFO] 	"org.apache.ftpserver:ftpserver-core:jar:1.2.0:compile" -> "org.apache.ftpserver:ftplet-api:jar:1.2.0:compile" ; 
+[INFO] 	"org.apache.ftpserver:ftpserver-core:jar:1.2.0:compile" -> "org.apache.mina:mina-core:jar:2.1.6:compile" ; 
+[INFO] 	"com.vdurmont:emoji-java:jar:5.1.1:compile" -> "org.json:json:jar:20170516:compile" ; 
+[INFO] 	"org.ansj:ansj_seg:jar:5.1.6:compile" -> "org.nlpcn:nlp-lang:jar:1.7.7:compile" ; 
+[INFO] 	"org.apache.lucene:lucene-analyzers-smartcn:jar:8.11.2:compile" -> "org.apache.lucene:lucene-analyzers-common:jar:8.11.2:compile" ; 
+[INFO] 	"org.apache.lucene:lucene-analyzers-smartcn:jar:8.11.2:compile" -> "org.apache.lucene:lucene-core:jar:8.11.2:compile" ; 
+[INFO] 	"org.apdplat:word:jar:1.3.1:compile" -> "org.apache.lucene:lucene-queryparser:jar:4.10.4:compile" ; 
+[INFO] 	"org.apdplat:word:jar:1.3.1:compile" -> "org.apache.lucene:lucene-suggest:jar:4.10.4:compile" ; 
+[INFO] 	"org.apache.lucene:lucene-queryparser:jar:4.10.4:compile" -> "org.apache.lucene:lucene-queries:jar:4.10.4:compile" ; 
+[INFO] 	"org.apache.lucene:lucene-queryparser:jar:4.10.4:compile" -> "org.apache.lucene:lucene-sandbox:jar:4.10.4:compile" ; 
+[INFO] 	"org.apache.lucene:lucene-suggest:jar:4.10.4:compile" -> "org.apache.lucene:lucene-misc:jar:4.10.4:compile" ; 
+[INFO] 	"com.mayabot.mynlp:mynlp-segment:jar:3.0.2:compile" -> "com.mayabot.mynlp:mynlp-core:jar:3.0.2:compile" ; 
+[INFO] 	"com.mayabot.mynlp:mynlp-segment:jar:3.0.2:compile" -> "com.mayabot.mynlp:mynlp-perceptron:jar:3.0.2:compile" ; 
+[INFO] 	"com.mayabot.mynlp:mynlp-segment:jar:3.0.2:compile" -> "com.mayabot.mynlp.resource:mynlp-resource-coredict:jar:1.0.0:runtime" ; 
+[INFO] 	"com.mayabot.mynlp:mynlp-segment:jar:3.0.2:compile" -> "com.mayabot.mynlp.resource:mynlp-resource-pos:jar:1.0.0:runtime" ; 
+[INFO] 	"com.mayabot.mynlp:mynlp-segment:jar:3.0.2:compile" -> "com.mayabot.mynlp.resource:mynlp-resource-ner:jar:1.0.0:runtime" ; 
+[INFO] 	"com.mayabot.mynlp:mynlp-core:jar:3.0.2:compile" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.3.50:compile" ; 
+[INFO] 	"com.mayabot.mynlp:mynlp-core:jar:3.0.2:compile" -> "com.google.guava:guava:jar:19.0:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.3.50:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.3.50:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.3.50:compile" -> "org.jetbrains:annotations:jar:13.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.14:compile" -> "org.springframework.boot:spring-boot:jar:2.7.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.14:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.7.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.14:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.7.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.14:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.14:compile" -> "org.springframework:spring-core:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.14:compile" -> "org.yaml:snakeyaml:jar:1.30:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.7.14:compile" -> "org.springframework:spring-context:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.29:compile" -> "org.springframework:spring-aop:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.29:compile" -> "org.springframework:spring-beans:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.14:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.14:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.29:compile" -> "org.springframework:spring-jcl:jar:5.3.29:compile" ; 
+[INFO] 	"io.github.biezhi:TinyPinyin:jar:2.0.3.RELEASE:compile" -> "org.ahocorasick:ahocorasick:jar:0.4.0:compile" ; 
+[INFO] 	"com.github.houbb:pinyin:jar:0.4.0:compile" -> "com.github.houbb:heaven:jar:0.2.0:compile" ; 
+[INFO] 	"com.github.houbb:pinyin:jar:0.4.0:compile" -> "com.github.houbb:nlp-common:jar:0.0.5:compile" ; 
+[INFO] 	"cglib:cglib:jar:3.3.0:compile" -> "org.ow2.asm:asm:jar:7.1:compile" ; 
+[INFO] 	"org.hibernate.validator:hibernate-validator:jar:7.0.4.Final:test" -> "org.jboss.logging:jboss-logging:jar:3.4.1.Final:test" ; 
+[INFO] 	"org.hibernate.validator:hibernate-validator:jar:7.0.4.Final:test" -> "com.fasterxml:classmate:jar:1.5.1:test" ; 
+[INFO] 	"org.glassfish:jakarta.el:jar:4.0.2:test" -> "jakarta.el:jakarta.el-api:jar:4.0.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.14:test" -> "org.springframework.boot:spring-boot-test:jar:2.7.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.14:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.7.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.14:test" -> "com.jayway.jsonpath:json-path:jar:2.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.14:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.14:test" -> "org.assertj:assertj-core:jar:3.22.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.14:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.14:test" -> "org.mockito:mockito-core:jar:4.5.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.14:test" -> "org.mockito:mockito-junit-jupiter:jar:4.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.14:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.14:test" -> "org.springframework:spring-test:jar:5.3.29:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.14:test" -> "org.xmlunit:xmlunit-core:jar:2.9.1:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.7.0:test" -> "net.minidev:json-smart:jar:2.4.7:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.7:test" -> "net.minidev:accessors-smart:jar:2.4.7:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:compile" -> "net.bytebuddy:byte-buddy:jar:1.12.9:compile" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:compile" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.9:compile" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:compile" -> "org.objenesis:objenesis:jar:3.2:runtime" ; 
+[INFO] 	"org.mockito:mockito-junit-jupiter:jar:4.5.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.11:test" -> "ch.qos.logback:logback-core:jar:1.2.11:test" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:test" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:test" -> "commons-collections:commons-collections:jar:3.2.2:test" ; 
+[INFO] 	"com.jfirer:jfireEl:jar:1.0:compile" -> "com.jfirer:baseutil:jar:1.0:compile" ; 
+[INFO] 	"com.alibaba:QLExpress:jar:3.3.2:compile" -> "commons-lang:commons-lang:jar:2.4:compile" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "junit:junit:jar:4.13.2:compile" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:compile" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:compile" -> "org.hamcrest:hamcrest-core:jar:1.3:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------------< cn.hutool:hutool-http >------------------------
+[INFO] Building hutool-http 5.8.23                                      [13/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ hutool-http ---
+[INFO] digraph "cn.hutool:hutool-http:jar:5.8.23" { 
+[INFO] 	"cn.hutool:hutool-http:jar:5.8.23" -> "cn.hutool:hutool-core:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-http:jar:5.8.23" -> "cn.hutool:hutool-json:jar:5.8.23:test" ; 
+[INFO] 	"cn.hutool:hutool-http:jar:5.8.23" -> "javax.xml.soap:javax.xml.soap-api:jar:1.4.0:provided" ; 
+[INFO] 	"cn.hutool:hutool-http:jar:5.8.23" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"cn.hutool:hutool-http:jar:5.8.23" -> "org.projectlombok:lombok:jar:1.18.30:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< cn.hutool:hutool-script >-----------------------
+[INFO] Building hutool-script 5.8.23                                    [14/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ hutool-script ---
+[INFO] digraph "cn.hutool:hutool-script:jar:5.8.23" { 
+[INFO] 	"cn.hutool:hutool-script:jar:5.8.23" -> "cn.hutool:hutool-core:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-script:jar:5.8.23" -> "org.python:jython:jar:2.7.3:provided" ; 
+[INFO] 	"cn.hutool:hutool-script:jar:5.8.23" -> "org.luaj:luaj-jse:jar:3.0.1:provided" ; 
+[INFO] 	"cn.hutool:hutool-script:jar:5.8.23" -> "org.codehaus.groovy:groovy-all:pom:3.0.19:provided" ; 
+[INFO] 	"cn.hutool:hutool-script:jar:5.8.23" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"cn.hutool:hutool-script:jar:5.8.23" -> "org.projectlombok:lombok:jar:1.18.30:test" ; 
+[INFO] 	"org.codehaus.groovy:groovy-all:pom:3.0.19:provided" -> "org.codehaus.groovy:groovy:jar:3.0.19:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-all:pom:3.0.19:provided" -> "org.codehaus.groovy:groovy-ant:jar:3.0.19:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-all:pom:3.0.19:provided" -> "org.codehaus.groovy:groovy-astbuilder:jar:3.0.19:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-all:pom:3.0.19:provided" -> "org.codehaus.groovy:groovy-cli-picocli:jar:3.0.19:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-all:pom:3.0.19:provided" -> "org.codehaus.groovy:groovy-console:jar:3.0.19:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-all:pom:3.0.19:provided" -> "org.codehaus.groovy:groovy-datetime:jar:3.0.19:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-all:pom:3.0.19:provided" -> "org.codehaus.groovy:groovy-docgenerator:jar:3.0.19:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-all:pom:3.0.19:provided" -> "org.codehaus.groovy:groovy-groovydoc:jar:3.0.19:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-all:pom:3.0.19:provided" -> "org.codehaus.groovy:groovy-groovysh:jar:3.0.19:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-all:pom:3.0.19:provided" -> "org.codehaus.groovy:groovy-jmx:jar:3.0.19:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-all:pom:3.0.19:provided" -> "org.codehaus.groovy:groovy-json:jar:3.0.19:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-all:pom:3.0.19:provided" -> "org.codehaus.groovy:groovy-jsr223:jar:3.0.19:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-all:pom:3.0.19:provided" -> "org.codehaus.groovy:groovy-macro:jar:3.0.19:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-all:pom:3.0.19:provided" -> "org.codehaus.groovy:groovy-nio:jar:3.0.19:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-all:pom:3.0.19:provided" -> "org.codehaus.groovy:groovy-servlet:jar:3.0.19:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-all:pom:3.0.19:provided" -> "org.codehaus.groovy:groovy-sql:jar:3.0.19:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-all:pom:3.0.19:provided" -> "org.codehaus.groovy:groovy-swing:jar:3.0.19:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-all:pom:3.0.19:provided" -> "org.codehaus.groovy:groovy-templates:jar:3.0.19:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-all:pom:3.0.19:provided" -> "org.codehaus.groovy:groovy-test:jar:3.0.19:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-all:pom:3.0.19:provided" -> "org.codehaus.groovy:groovy-test-junit5:jar:3.0.19:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-all:pom:3.0.19:provided" -> "org.codehaus.groovy:groovy-testng:jar:3.0.19:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-all:pom:3.0.19:provided" -> "org.codehaus.groovy:groovy-xml:jar:3.0.19:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-ant:jar:3.0.19:provided" -> "org.apache.ant:ant:jar:1.10.12:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-ant:jar:3.0.19:provided" -> "org.apache.ant:ant-junit:jar:1.10.12:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-ant:jar:3.0.19:provided" -> "org.apache.ant:ant-launcher:jar:1.10.12:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-ant:jar:3.0.19:provided" -> "org.apache.ant:ant-antlr:jar:1.10.12:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-cli-picocli:jar:3.0.19:provided" -> "info.picocli:picocli:jar:4.6.3:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-docgenerator:jar:3.0.19:provided" -> "com.thoughtworks.qdox:qdox:jar:1.12.1:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-groovydoc:jar:3.0.19:provided" -> "com.github.javaparser:javaparser-core:jar:3.25.4:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-groovysh:jar:3.0.19:provided" -> "jline:jline:jar:2.14.6:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-test-junit5:jar:3.0.19:provided" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.2:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-test-junit5:jar:3.0.19:provided" -> "org.junit.platform:junit-platform-launcher:jar:1.9.2:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-test-junit5:jar:3.0.19:provided" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.2:provided" ; 
+[INFO] 	"org.codehaus.groovy:groovy-testng:jar:3.0.19:provided" -> "org.testng:testng:jar:7.5:provided" ; 
+[INFO] 	"org.testng:testng:jar:7.5:provided" -> "org.slf4j:slf4j-api:jar:1.7.32:provided" ; 
+[INFO] 	"org.testng:testng:jar:7.5:provided" -> "com.beust:jcommander:jar:1.78:provided" ; 
+[INFO] 	"org.testng:testng:jar:7.5:provided" -> "org.webjars:jquery:jar:3.5.1:provided" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:provided" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:provided" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:provided" -> "org.opentest4j:opentest4j:jar:1.3.0:provided" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:provided" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:provided" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< cn.hutool:hutool-system >-----------------------
+[INFO] Building hutool-system 5.8.23                                    [15/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ hutool-system ---
+[INFO] digraph "cn.hutool:hutool-system:jar:5.8.23" { 
+[INFO] 	"cn.hutool:hutool-system:jar:5.8.23" -> "cn.hutool:hutool-core:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-system:jar:5.8.23" -> "com.github.oshi:oshi-core:jar:6.4.7:provided" ; 
+[INFO] 	"cn.hutool:hutool-system:jar:5.8.23" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"cn.hutool:hutool-system:jar:5.8.23" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"cn.hutool:hutool-system:jar:5.8.23" -> "org.projectlombok:lombok:jar:1.18.30:test" ; 
+[INFO] 	"com.github.oshi:oshi-core:jar:6.4.7:provided" -> "net.java.dev.jna:jna:jar:5.13.0:provided" ; 
+[INFO] 	"com.github.oshi:oshi-core:jar:6.4.7:provided" -> "net.java.dev.jna:jna-platform:jar:5.13.0:provided" ; 
+[INFO] 	"com.github.oshi:oshi-core:jar:6.4.7:provided" -> "org.slf4j:slf4j-api:jar:2.0.9:provided" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------------< cn.hutool:hutool-cron >------------------------
+[INFO] Building hutool-cron 5.8.23                                      [16/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ hutool-cron ---
+[INFO] digraph "cn.hutool:hutool-cron:jar:5.8.23" { 
+[INFO] 	"cn.hutool:hutool-cron:jar:5.8.23" -> "cn.hutool:hutool-core:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-cron:jar:5.8.23" -> "cn.hutool:hutool-setting:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-cron:jar:5.8.23" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"cn.hutool:hutool-cron:jar:5.8.23" -> "org.projectlombok:lombok:jar:1.18.30:test" ; 
+[INFO] 	"cn.hutool:hutool-setting:jar:5.8.23:compile" -> "cn.hutool:hutool-log:jar:5.8.23:compile" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------------< cn.hutool:hutool-poi >------------------------
+[INFO] Building hutool-poi 5.8.23                                       [17/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ hutool-poi ---
+[INFO] digraph "cn.hutool:hutool-poi:jar:5.8.23" { 
+[INFO] 	"cn.hutool:hutool-poi:jar:5.8.23" -> "cn.hutool:hutool-core:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-poi:jar:5.8.23" -> "cn.hutool:hutool-log:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-poi:jar:5.8.23" -> "org.apache.poi:poi-ooxml:jar:4.1.2:compile" ; 
+[INFO] 	"cn.hutool:hutool-poi:jar:5.8.23" -> "org.ofdrw:ofdrw-full:jar:2.1.0:compile" ; 
+[INFO] 	"cn.hutool:hutool-poi:jar:5.8.23" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"cn.hutool:hutool-poi:jar:5.8.23" -> "org.projectlombok:lombok:jar:1.18.30:test" ; 
+[INFO] 	"org.apache.poi:poi-ooxml:jar:4.1.2:compile" -> "org.apache.poi:poi:jar:4.1.2:compile" ; 
+[INFO] 	"org.apache.poi:poi-ooxml:jar:4.1.2:compile" -> "org.apache.poi:poi-ooxml-schemas:jar:4.1.2:compile" ; 
+[INFO] 	"org.apache.poi:poi-ooxml:jar:4.1.2:compile" -> "org.apache.commons:commons-compress:jar:1.19:compile" ; 
+[INFO] 	"org.apache.poi:poi-ooxml:jar:4.1.2:compile" -> "com.github.virtuald:curvesapi:jar:1.06:compile" ; 
+[INFO] 	"org.apache.poi:poi:jar:4.1.2:compile" -> "commons-codec:commons-codec:jar:1.13:compile" ; 
+[INFO] 	"org.apache.poi:poi:jar:4.1.2:compile" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"org.apache.poi:poi:jar:4.1.2:compile" -> "org.apache.commons:commons-math3:jar:3.6.1:compile" ; 
+[INFO] 	"org.apache.poi:poi:jar:4.1.2:compile" -> "com.zaxxer:SparseBitSet:jar:1.2:compile" ; 
+[INFO] 	"org.apache.poi:poi-ooxml-schemas:jar:4.1.2:compile" -> "org.apache.xmlbeans:xmlbeans:jar:3.1.0:compile" ; 
+[INFO] 	"org.ofdrw:ofdrw-full:jar:2.1.0:compile" -> "org.ofdrw:ofdrw-gv:jar:2.1.0:compile" ; 
+[INFO] 	"org.ofdrw:ofdrw-full:jar:2.1.0:compile" -> "org.ofdrw:ofdrw-core:jar:2.1.0:compile" ; 
+[INFO] 	"org.ofdrw:ofdrw-full:jar:2.1.0:compile" -> "org.ofdrw:ofdrw-layout:jar:2.1.0:compile" ; 
+[INFO] 	"org.ofdrw:ofdrw-full:jar:2.1.0:compile" -> "org.ofdrw:ofdrw-pkg:jar:2.1.0:compile" ; 
+[INFO] 	"org.ofdrw:ofdrw-full:jar:2.1.0:compile" -> "org.ofdrw:ofdrw-font:jar:2.1.0:compile" ; 
+[INFO] 	"org.ofdrw:ofdrw-full:jar:2.1.0:compile" -> "org.ofdrw:ofdrw-reader:jar:2.1.0:compile" ; 
+[INFO] 	"org.ofdrw:ofdrw-full:jar:2.1.0:compile" -> "org.ofdrw:ofdrw-gm:jar:2.1.0:compile" ; 
+[INFO] 	"org.ofdrw:ofdrw-full:jar:2.1.0:compile" -> "org.ofdrw:ofdrw-sign:jar:2.1.0:compile" ; 
+[INFO] 	"org.ofdrw:ofdrw-full:jar:2.1.0:compile" -> "org.ofdrw:ofdrw-converter:jar:2.1.0:compile" ; 
+[INFO] 	"org.ofdrw:ofdrw-full:jar:2.1.0:compile" -> "org.ofdrw:ofdrw-tool:jar:2.1.0:compile" ; 
+[INFO] 	"org.ofdrw:ofdrw-full:jar:2.1.0:compile" -> "org.ofdrw:ofdrw-graphics2d:jar:2.1.0:compile" ; 
+[INFO] 	"org.ofdrw:ofdrw-full:jar:2.1.0:compile" -> "commons-io:commons-io:jar:2.8.0:compile" ; 
+[INFO] 	"org.ofdrw:ofdrw-core:jar:2.1.0:compile" -> "org.bouncycastle:bcprov-jdk15on:jar:1.68:compile" ; 
+[INFO] 	"org.ofdrw:ofdrw-core:jar:2.1.0:compile" -> "jaxen:jaxen:jar:1.2.0:compile" ; 
+[INFO] 	"org.ofdrw:ofdrw-core:jar:2.1.0:compile" -> "org.dom4j:dom4j:jar:2.1.4:compile" ; 
+[INFO] 	"org.ofdrw:ofdrw-core:jar:2.1.0:compile" -> "org.jetbrains:annotations:jar:21.0.1:compile" ; 
+[INFO] 	"org.ofdrw:ofdrw-layout:jar:2.1.0:compile" -> "com.twelvemonkeys.imageio:imageio-tiff:jar:3.5:compile" ; 
+[INFO] 	"com.twelvemonkeys.imageio:imageio-tiff:jar:3.5:compile" -> "com.twelvemonkeys.imageio:imageio-core:jar:3.5:compile" ; 
+[INFO] 	"com.twelvemonkeys.imageio:imageio-tiff:jar:3.5:compile" -> "com.twelvemonkeys.imageio:imageio-metadata:jar:3.5:compile" ; 
+[INFO] 	"com.twelvemonkeys.imageio:imageio-tiff:jar:3.5:compile" -> "com.twelvemonkeys.common:common-lang:jar:3.5:compile" ; 
+[INFO] 	"com.twelvemonkeys.imageio:imageio-tiff:jar:3.5:compile" -> "com.twelvemonkeys.common:common-io:jar:3.5:compile" ; 
+[INFO] 	"com.twelvemonkeys.imageio:imageio-tiff:jar:3.5:compile" -> "com.twelvemonkeys.common:common-image:jar:3.5:compile" ; 
+[INFO] 	"org.ofdrw:ofdrw-pkg:jar:2.1.0:compile" -> "net.lingala.zip4j:zip4j:jar:2.11.3:compile" ; 
+[INFO] 	"org.ofdrw:ofdrw-reader:jar:2.1.0:compile" -> "org.apache.pdfbox:jbig2-imageio:jar:3.0.3:compile" ; 
+[INFO] 	"org.ofdrw:ofdrw-gm:jar:2.1.0:compile" -> "org.bouncycastle:bcpkix-jdk15on:jar:1.68:compile" ; 
+[INFO] 	"org.ofdrw:ofdrw-converter:jar:2.1.0:compile" -> "org.apache.pdfbox:fontbox:jar:2.0.27:compile" ; 
+[INFO] 	"org.ofdrw:ofdrw-converter:jar:2.1.0:compile" -> "org.apache.pdfbox:pdfbox:jar:2.0.27:compile" ; 
+[INFO] 	"org.ofdrw:ofdrw-converter:jar:2.1.0:compile" -> "org.ujmp:ujmp-core:jar:0.3.0:compile" ; 
+[INFO] 	"org.ofdrw:ofdrw-converter:jar:2.1.0:compile" -> "com.itextpdf:kernel:jar:7.1.13:compile" ; 
+[INFO] 	"org.ofdrw:ofdrw-converter:jar:2.1.0:compile" -> "com.itextpdf:layout:jar:7.1.13:compile" ; 
+[INFO] 	"org.ofdrw:ofdrw-converter:jar:2.1.0:compile" -> "com.itextpdf:font-asian:jar:7.1.13:compile" ; 
+[INFO] 	"org.ofdrw:ofdrw-converter:jar:2.1.0:compile" -> "org.apache.xmlgraphics:batik-transcoder:jar:1.17:compile" ; 
+[INFO] 	"org.apache.pdfbox:fontbox:jar:2.0.27:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.ujmp:ujmp-core:jar:0.3.0:compile" -> "org.json:json:jar:20141113:compile" ; 
+[INFO] 	"com.itextpdf:kernel:jar:7.1.13:compile" -> "com.itextpdf:io:jar:7.1.13:compile" ; 
+[INFO] 	"com.itextpdf:kernel:jar:7.1.13:compile" -> "org.slf4j:slf4j-api:jar:1.7.13:compile" ; 
+[INFO] 	"org.apache.xmlgraphics:batik-transcoder:jar:1.17:compile" -> "org.apache.xmlgraphics:batik-anim:jar:1.17:compile" ; 
+[INFO] 	"org.apache.xmlgraphics:batik-transcoder:jar:1.17:compile" -> "org.apache.xmlgraphics:batik-awt-util:jar:1.17:compile" ; 
+[INFO] 	"org.apache.xmlgraphics:batik-transcoder:jar:1.17:compile" -> "org.apache.xmlgraphics:batik-bridge:jar:1.17:compile" ; 
+[INFO] 	"org.apache.xmlgraphics:batik-transcoder:jar:1.17:compile" -> "org.apache.xmlgraphics:batik-dom:jar:1.17:compile" ; 
+[INFO] 	"org.apache.xmlgraphics:batik-transcoder:jar:1.17:compile" -> "org.apache.xmlgraphics:batik-gvt:jar:1.17:compile" ; 
+[INFO] 	"org.apache.xmlgraphics:batik-transcoder:jar:1.17:compile" -> "org.apache.xmlgraphics:batik-shared-resources:jar:1.17:compile" ; 
+[INFO] 	"org.apache.xmlgraphics:batik-transcoder:jar:1.17:compile" -> "org.apache.xmlgraphics:batik-svggen:jar:1.17:compile" ; 
+[INFO] 	"org.apache.xmlgraphics:batik-transcoder:jar:1.17:compile" -> "org.apache.xmlgraphics:batik-util:jar:1.17:compile" ; 
+[INFO] 	"org.apache.xmlgraphics:batik-transcoder:jar:1.17:compile" -> "org.apache.xmlgraphics:batik-xml:jar:1.17:compile" ; 
+[INFO] 	"org.apache.xmlgraphics:batik-transcoder:jar:1.17:compile" -> "xml-apis:xml-apis-ext:jar:1.3.04:compile" ; 
+[INFO] 	"org.apache.xmlgraphics:batik-anim:jar:1.17:compile" -> "org.apache.xmlgraphics:batik-css:jar:1.17:compile" ; 
+[INFO] 	"org.apache.xmlgraphics:batik-anim:jar:1.17:compile" -> "org.apache.xmlgraphics:batik-ext:jar:1.17:compile" ; 
+[INFO] 	"org.apache.xmlgraphics:batik-anim:jar:1.17:compile" -> "org.apache.xmlgraphics:batik-parser:jar:1.17:compile" ; 
+[INFO] 	"org.apache.xmlgraphics:batik-anim:jar:1.17:compile" -> "org.apache.xmlgraphics:batik-svg-dom:jar:1.17:compile" ; 
+[INFO] 	"org.apache.xmlgraphics:batik-awt-util:jar:1.17:compile" -> "org.apache.xmlgraphics:xmlgraphics-commons:jar:2.9:compile" ; 
+[INFO] 	"org.apache.xmlgraphics:batik-bridge:jar:1.17:compile" -> "org.apache.xmlgraphics:batik-script:jar:1.17:compile" ; 
+[INFO] 	"org.apache.xmlgraphics:batik-dom:jar:1.17:compile" -> "xml-apis:xml-apis:jar:1.4.01:compile" ; 
+[INFO] 	"org.apache.xmlgraphics:batik-util:jar:1.17:compile" -> "org.apache.xmlgraphics:batik-constants:jar:1.17:compile" ; 
+[INFO] 	"org.apache.xmlgraphics:batik-util:jar:1.17:compile" -> "org.apache.xmlgraphics:batik-i18n:jar:1.17:compile" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< cn.hutool:hutool-captcha >----------------------
+[INFO] Building hutool-captcha 5.8.23                                   [18/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ hutool-captcha ---
+[INFO] digraph "cn.hutool:hutool-captcha:jar:5.8.23" { 
+[INFO] 	"cn.hutool:hutool-captcha:jar:5.8.23" -> "cn.hutool:hutool-core:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-captcha:jar:5.8.23" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"cn.hutool:hutool-captcha:jar:5.8.23" -> "org.projectlombok:lombok:jar:1.18.30:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< cn.hutool:hutool-socket >-----------------------
+[INFO] Building hutool-socket 5.8.23                                    [19/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ hutool-socket ---
+[INFO] digraph "cn.hutool:hutool-socket:jar:5.8.23" { 
+[INFO] 	"cn.hutool:hutool-socket:jar:5.8.23" -> "cn.hutool:hutool-core:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-socket:jar:5.8.23" -> "cn.hutool:hutool-log:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-socket:jar:5.8.23" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"cn.hutool:hutool-socket:jar:5.8.23" -> "org.projectlombok:lombok:jar:1.18.30:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------------< cn.hutool:hutool-jwt >------------------------
+[INFO] Building hutool-jwt 5.8.23                                       [20/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ hutool-jwt ---
+[INFO] digraph "cn.hutool:hutool-jwt:jar:5.8.23" { 
+[INFO] 	"cn.hutool:hutool-jwt:jar:5.8.23" -> "cn.hutool:hutool-json:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-jwt:jar:5.8.23" -> "cn.hutool:hutool-crypto:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-jwt:jar:5.8.23" -> "org.bouncycastle:bcpkix-jdk18on:jar:1.76:test" ; 
+[INFO] 	"cn.hutool:hutool-jwt:jar:5.8.23" -> "io.jsonwebtoken:jjwt-impl:jar:0.12.3:test" ; 
+[INFO] 	"cn.hutool:hutool-jwt:jar:5.8.23" -> "io.jsonwebtoken:jjwt-gson:jar:0.12.3:test" ; 
+[INFO] 	"cn.hutool:hutool-jwt:jar:5.8.23" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"cn.hutool:hutool-jwt:jar:5.8.23" -> "org.projectlombok:lombok:jar:1.18.30:test" ; 
+[INFO] 	"cn.hutool:hutool-json:jar:5.8.23:compile" -> "cn.hutool:hutool-core:jar:5.8.23:compile" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk18on:jar:1.76:test" -> "org.bouncycastle:bcprov-jdk18on:jar:1.76:test" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk18on:jar:1.76:test" -> "org.bouncycastle:bcutil-jdk18on:jar:1.76:test" ; 
+[INFO] 	"io.jsonwebtoken:jjwt-impl:jar:0.12.3:test" -> "io.jsonwebtoken:jjwt-api:jar:0.12.3:test" ; 
+[INFO] 	"io.jsonwebtoken:jjwt-gson:jar:0.12.3:test" -> "com.google.code.gson:gson:jar:2.9.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------------< cn.hutool:hutool-all >------------------------
+[INFO] Building hutool-all 5.8.23                                       [21/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ hutool-all ---
+[INFO] digraph "cn.hutool:hutool-all:jar:5.8.23" { 
+[INFO] 	"cn.hutool:hutool-all:jar:5.8.23" -> "cn.hutool:hutool-core:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-all:jar:5.8.23" -> "cn.hutool:hutool-aop:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-all:jar:5.8.23" -> "cn.hutool:hutool-bloomFilter:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-all:jar:5.8.23" -> "cn.hutool:hutool-cache:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-all:jar:5.8.23" -> "cn.hutool:hutool-crypto:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-all:jar:5.8.23" -> "cn.hutool:hutool-db:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-all:jar:5.8.23" -> "cn.hutool:hutool-dfa:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-all:jar:5.8.23" -> "cn.hutool:hutool-extra:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-all:jar:5.8.23" -> "cn.hutool:hutool-http:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-all:jar:5.8.23" -> "cn.hutool:hutool-log:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-all:jar:5.8.23" -> "cn.hutool:hutool-script:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-all:jar:5.8.23" -> "cn.hutool:hutool-setting:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-all:jar:5.8.23" -> "cn.hutool:hutool-system:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-all:jar:5.8.23" -> "cn.hutool:hutool-cron:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-all:jar:5.8.23" -> "cn.hutool:hutool-json:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-all:jar:5.8.23" -> "cn.hutool:hutool-poi:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-all:jar:5.8.23" -> "cn.hutool:hutool-captcha:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-all:jar:5.8.23" -> "cn.hutool:hutool-socket:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-all:jar:5.8.23" -> "cn.hutool:hutool-jwt:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-all:jar:5.8.23" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"cn.hutool:hutool-all:jar:5.8.23" -> "org.projectlombok:lombok:jar:1.18.30:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------------< cn.hutool:hutool-bom >------------------------
+[INFO] Building hutool-bom 5.8.23                                       [22/22]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ hutool-bom ---
+[INFO] digraph "cn.hutool:hutool-bom:pom:5.8.23" { 
+[INFO] 	"cn.hutool:hutool-bom:pom:5.8.23" -> "cn.hutool:hutool-core:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-bom:pom:5.8.23" -> "cn.hutool:hutool-aop:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-bom:pom:5.8.23" -> "cn.hutool:hutool-bloomFilter:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-bom:pom:5.8.23" -> "cn.hutool:hutool-cache:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-bom:pom:5.8.23" -> "cn.hutool:hutool-crypto:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-bom:pom:5.8.23" -> "cn.hutool:hutool-db:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-bom:pom:5.8.23" -> "cn.hutool:hutool-dfa:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-bom:pom:5.8.23" -> "cn.hutool:hutool-extra:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-bom:pom:5.8.23" -> "cn.hutool:hutool-http:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-bom:pom:5.8.23" -> "cn.hutool:hutool-log:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-bom:pom:5.8.23" -> "cn.hutool:hutool-script:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-bom:pom:5.8.23" -> "cn.hutool:hutool-setting:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-bom:pom:5.8.23" -> "cn.hutool:hutool-system:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-bom:pom:5.8.23" -> "cn.hutool:hutool-cron:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-bom:pom:5.8.23" -> "cn.hutool:hutool-json:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-bom:pom:5.8.23" -> "cn.hutool:hutool-poi:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-bom:pom:5.8.23" -> "cn.hutool:hutool-captcha:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-bom:pom:5.8.23" -> "cn.hutool:hutool-socket:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-bom:pom:5.8.23" -> "cn.hutool:hutool-jwt:jar:5.8.23:compile" ; 
+[INFO] 	"cn.hutool:hutool-bom:pom:5.8.23" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"cn.hutool:hutool-bom:pom:5.8.23" -> "org.projectlombok:lombok:jar:1.18.30:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for hutool 5.8.23:
+[INFO] 
+[INFO] hutool ............................................. SUCCESS [  4.360 s]
+[INFO] hutool-core ........................................ SUCCESS [  0.101 s]
+[INFO] hutool-aop ......................................... SUCCESS [  0.060 s]
+[INFO] hutool-bloomFilter ................................. SUCCESS [  0.115 s]
+[INFO] hutool-cache ....................................... SUCCESS [  0.075 s]
+[INFO] hutool-crypto ...................................... SUCCESS [  0.051 s]
+[INFO] hutool-log ......................................... SUCCESS [  0.417 s]
+[INFO] hutool-setting ..................................... SUCCESS [  0.075 s]
+[INFO] hutool-db .......................................... SUCCESS [  0.319 s]
+[INFO] hutool-json ........................................ SUCCESS [  0.022 s]
+[INFO] hutool-dfa ......................................... SUCCESS [  0.164 s]
+[INFO] hutool-extra ....................................... SUCCESS [  2.285 s]
+[INFO] hutool-http ........................................ SUCCESS [  0.099 s]
+[INFO] hutool-script ...................................... SUCCESS [  0.526 s]
+[INFO] hutool-system ...................................... SUCCESS [  0.153 s]
+[INFO] hutool-cron ........................................ SUCCESS [  0.060 s]
+[INFO] hutool-poi ......................................... SUCCESS [  0.688 s]
+[INFO] hutool-captcha ..................................... SUCCESS [  0.014 s]
+[INFO] hutool-socket ...................................... SUCCESS [  0.081 s]
+[INFO] hutool-jwt ......................................... SUCCESS [  0.089 s]
+[INFO] hutool-all ......................................... SUCCESS [  0.145 s]
+[INFO] hutool-bom ......................................... SUCCESS [  0.125 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  13.788 s
+[INFO] Finished at: 2023-12-28T09:02:45+01:00
+[INFO] ------------------------------------------------------------------------

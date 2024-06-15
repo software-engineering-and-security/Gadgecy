@@ -1,0 +1,170 @@
+[INFO] Scanning for projects...
+[INFO] --- tiles-maven-plugin: Injecting 1 tiles as intermediary parent artifacts for com.alibaba.otter:canal.admin-web...
+[INFO] Mixed 'null:canal.admin-web:null' with tile 'io.ebean.tile:enhancement:11.41.1' as its new parent.
+[INFO] Explicitly set groupId to 'com.alibaba.otter' from original parent 'com.alibaba.otter:canal.admin:1.1.8-SNAPSHOT'.
+[INFO] Explicitly set version to '1.1.8-SNAPSHOT' from original parent 'com.alibaba.otter:canal.admin:1.1.8-SNAPSHOT'.
+[INFO] Mixed 'io.ebean.tile:enhancement:11.41.1' with original parent 'com.alibaba.otter:canal.admin:1.1.8-SNAPSHOT' as its new top level parent.
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] canal module for otter 1.1.8-SNAPSHOT                              [pom]
+[INFO] canal common module for otter 1.1.8-SNAPSHOT                       [jar]
+[INFO] canal protocol module for otter 1.1.8-SNAPSHOT                     [jar]
+[INFO] canal meta module for otter 1.1.8-SNAPSHOT                         [jar]
+[INFO] canal driver module for otter 1.1.8-SNAPSHOT                       [jar]
+[INFO] canal dbsync module for otter 1.1.8-SNAPSHOT                       [jar]
+[INFO] canal sink module for otter 1.1.8-SNAPSHOT                         [jar]
+[INFO] canal store module for otter 1.1.8-SNAPSHOT                        [jar]
+[INFO] canal sink module for otter 1.1.8-SNAPSHOT                         [jar]
+[INFO] canal parse module for otter 1.1.8-SNAPSHOT                        [jar]
+[INFO] canal instance core module for otter 1.1.8-SNAPSHOT                [jar]
+[INFO] canal instance spring module for otter 1.1.8-SNAPSHOT              [jar]
+[INFO] canal instance manager module for otter 1.1.8-SNAPSHOT             [jar]
+[INFO] canal instance module for otter 1.1.8-SNAPSHOT                     [pom]
+[INFO] canal connector module for otter 1.1.8-SNAPSHOT                    [pom]
+[INFO] canal connector core module for otter 1.1.8-SNAPSHOT               [jar]
+[INFO] canal server module for otter 1.1.8-SNAPSHOT                       [jar]
+[INFO] canal client module for otter 1.1.8-SNAPSHOT                       [jar]
+[INFO] canal prometheus module for otter 1.1.8-SNAPSHOT                   [jar]
+[INFO] canal connector kafka module for otter 1.1.8-SNAPSHOT              [jar]
+[INFO] canal connector rocketMQ module for otter 1.1.8-SNAPSHOT           [jar]
+[INFO] canal connector rabbitmq module for otter 1.1.8-SNAPSHOT           [jar]
+[INFO] canal connector pulsarmq module for otter 1.1.8-SNAPSHOT           [jar]
+[INFO] canal deployer module for otter 1.1.8-SNAPSHOT                     [jar]
+[INFO] canal example module for otter 1.1.8-SNAPSHOT                      [jar]
+[INFO] canal admin module for otter 1.1.8-SNAPSHOT                        [pom]
+[INFO] canal admin-ui module for otter 1.1.8-SNAPSHOT                     [jar]
+[INFO] canal admin-web for otter 1.1.8-SNAPSHOT                           [jar]
+[INFO] canal client adapter module for otter 1.1.8-SNAPSHOT               [pom]
+[INFO] canal client adapter common module for otter 1.1.8-SNAPSHOT        [jar]
+[INFO] canal client adapter logger example module for otter 1.1.8-SNAPSHOT [jar]
+[INFO] canal client adapter hbase module for otter 1.1.8-SNAPSHOT         [jar]
+[INFO] canal client adapter escore module for otter 1.1.8-SNAPSHOT        [jar]
+[INFO] canal client adapter es v6x module for otter 1.1.8-SNAPSHOT        [jar]
+[INFO] canal client adapter es v7x module for otter 1.1.8-SNAPSHOT        [jar]
+[INFO] canal client adapter es v8x module for otter 1.1.8-SNAPSHOT        [jar]
+[INFO] canal client adapter rdb module for otter 1.1.8-SNAPSHOT           [jar]
+[INFO] canal client adapter rdb module for otter 1.1.8-SNAPSHOT           [jar]
+[INFO] canal client adapter clickhouse module for otter 1.1.8-SNAPSHOT    [jar]
+[INFO] canal connector tcp module for otter 1.1.8-SNAPSHOT                [jar]
+[INFO] canal client adapter launcher module for otter 1.1.8-SNAPSHOT      [jar]
+[INFO] canal client adapter kudu module for otter 1.1.8-SNAPSHOT          [jar]
+[INFO] canal client adapter phoenix module for otter 1.1.8-SNAPSHOT       [jar]
+[INFO] 
+[INFO] ----------------------< com.alibaba.otter:canal >-----------------------
+[INFO] Building canal module for otter 1.1.8-SNAPSHOT 1.1.8-SNAPSHOT     [1/43]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ canal ---
+[INFO] digraph "com.alibaba.otter:canal:pom:1.1.8-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< com.alibaba.otter:canal.common >-------------------
+[INFO] Building canal common module for otter 1.1.8-SNAPSHOT 1.1.8-SNAPSHOT [2/43]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ canal.common ---
+[INFO] digraph "com.alibaba.otter:canal.common:jar:1.1.8-SNAPSHOT" { 
+[INFO] 	"com.alibaba.otter:canal.common:jar:1.1.8-SNAPSHOT" -> "io.netty:netty-all:jar:4.1.68.Final:compile" ; 
+[INFO] 	"com.alibaba.otter:canal.common:jar:1.1.8-SNAPSHOT" -> "org.apache.zookeeper:zookeeper:jar:3.5.6:compile" ; 
+[INFO] 	"com.alibaba.otter:canal.common:jar:1.1.8-SNAPSHOT" -> "com.101tec:zkclient:jar:0.10:compile" ; 
+[INFO] 	"com.alibaba.otter:canal.common:jar:1.1.8-SNAPSHOT" -> "commons-io:commons-io:jar:2.4:compile" ; 
+[INFO] 	"com.alibaba.otter:canal.common:jar:1.1.8-SNAPSHOT" -> "commons-lang:commons-lang:jar:2.6:compile" ; 
+[INFO] 	"com.alibaba.otter:canal.common:jar:1.1.8-SNAPSHOT" -> "commons-codec:commons-codec:jar:1.9:compile" ; 
+[INFO] 	"com.alibaba.otter:canal.common:jar:1.1.8-SNAPSHOT" -> "com.alibaba.fastjson2:fastjson2:jar:2.0.31:compile" ; 
+[INFO] 	"com.alibaba.otter:canal.common:jar:1.1.8-SNAPSHOT" -> "com.google.guava:guava:jar:22.0:compile" ; 
+[INFO] 	"com.alibaba.otter:canal.common:jar:1.1.8-SNAPSHOT" -> "ch.qos.logback:logback-core:jar:1.2.9:compile" ; 
+[INFO] 	"com.alibaba.otter:canal.common:jar:1.1.8-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.2.9:compile" ; 
+[INFO] 	"com.alibaba.otter:canal.common:jar:1.1.8-SNAPSHOT" -> "org.slf4j:jcl-over-slf4j:jar:1.7.12:compile" ; 
+[INFO] 	"com.alibaba.otter:canal.common:jar:1.1.8-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.12:compile" ; 
+[INFO] 	"com.alibaba.otter:canal.common:jar:1.1.8-SNAPSHOT" -> "org.springframework:spring-core:jar:5.3.9:compile" ; 
+[INFO] 	"com.alibaba.otter:canal.common:jar:1.1.8-SNAPSHOT" -> "org.springframework:spring-aop:jar:5.3.9:compile" ; 
+[INFO] 	"com.alibaba.otter:canal.common:jar:1.1.8-SNAPSHOT" -> "org.springframework:spring-context:jar:5.3.9:compile" ; 
+[INFO] 	"com.alibaba.otter:canal.common:jar:1.1.8-SNAPSHOT" -> "org.springframework:spring-jdbc:jar:5.3.9:compile" ; 
+[INFO] 	"com.alibaba.otter:canal.common:jar:1.1.8-SNAPSHOT" -> "org.springframework:spring-orm:jar:5.3.9:compile" ; 
+[INFO] 	"com.alibaba.otter:canal.common:jar:1.1.8-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.alibaba.otter:canal.common:jar:1.1.8-SNAPSHOT" -> "org.springframework:spring-test:jar:5.3.9:test" ; 
+[INFO] 	"com.alibaba.otter:canal.common:jar:1.1.8-SNAPSHOT" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.6:compile" -> "org.apache.zookeeper:zookeeper-jute:jar:3.5.6:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.6:compile" -> "org.apache.yetus:audience-annotations:jar:0.5.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:22.0:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.0.18:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:22.0:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:22.0:compile" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.14:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.9:compile" -> "org.springframework:spring-jcl:jar:5.3.9:compile" ; 
+[INFO] 	"org.springframework:spring-aop:jar:5.3.9:compile" -> "org.springframework:spring-beans:jar:5.3.9:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.9:compile" -> "org.springframework:spring-expression:jar:5.3.9:compile" ; 
+[INFO] 	"org.springframework:spring-jdbc:jar:5.3.9:compile" -> "org.springframework:spring-tx:jar:5.3.9:compile" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< com.alibaba.otter:canal.protocol >------------------
+[INFO] Building canal protocol module for otter 1.1.8-SNAPSHOT 1.1.8-SNAPSHOT [3/43]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from sonatype-release: https://oss.sonatype.org/service/local/repositories/releases/content/com/alibaba/otter/canal.common/1.1.8-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/alibaba/otter/canal.common/1.1.8-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from sonatype: https://oss.sonatype.org/content/repositories/snapshots/com/alibaba/otter/canal.common/1.1.8-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from sonatype: https://oss.sonatype.org/content/repositories/snapshots/com/alibaba/otter/canal.common/1.1.8-SNAPSHOT/canal.common-1.1.8-SNAPSHOT.jar
+[INFO] Downloading from sonatype-release: https://oss.sonatype.org/service/local/repositories/releases/content/com/alibaba/otter/canal.common/1.1.8-SNAPSHOT/canal.common-1.1.8-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for canal module for otter 1.1.8-SNAPSHOT 1.1.8-SNAPSHOT:
+[INFO] 
+[INFO] canal module for otter 1.1.8-SNAPSHOT .............. SUCCESS [  2.921 s]
+[INFO] canal common module for otter 1.1.8-SNAPSHOT ....... SUCCESS [  0.673 s]
+[INFO] canal protocol module for otter 1.1.8-SNAPSHOT ..... FAILURE [  4.311 s]
+[INFO] canal meta module for otter 1.1.8-SNAPSHOT ......... SKIPPED
+[INFO] canal driver module for otter 1.1.8-SNAPSHOT ....... SKIPPED
+[INFO] canal dbsync module for otter 1.1.8-SNAPSHOT ....... SKIPPED
+[INFO] canal sink module for otter 1.1.8-SNAPSHOT ......... SKIPPED
+[INFO] canal store module for otter 1.1.8-SNAPSHOT ........ SKIPPED
+[INFO] canal sink module for otter 1.1.8-SNAPSHOT ......... SKIPPED
+[INFO] canal parse module for otter 1.1.8-SNAPSHOT ........ SKIPPED
+[INFO] canal instance core module for otter 1.1.8-SNAPSHOT  SKIPPED
+[INFO] canal instance spring module for otter 1.1.8-SNAPSHOT SKIPPED
+[INFO] canal instance manager module for otter 1.1.8-SNAPSHOT SKIPPED
+[INFO] canal instance module for otter 1.1.8-SNAPSHOT ..... SKIPPED
+[INFO] canal connector module for otter 1.1.8-SNAPSHOT .... SKIPPED
+[INFO] canal connector core module for otter 1.1.8-SNAPSHOT SKIPPED
+[INFO] canal server module for otter 1.1.8-SNAPSHOT ....... SKIPPED
+[INFO] canal client module for otter 1.1.8-SNAPSHOT ....... SKIPPED
+[INFO] canal prometheus module for otter 1.1.8-SNAPSHOT ... SKIPPED
+[INFO] canal connector kafka module for otter 1.1.8-SNAPSHOT SKIPPED
+[INFO] canal connector rocketMQ module for otter 1.1.8-SNAPSHOT SKIPPED
+[INFO] canal connector rabbitmq module for otter 1.1.8-SNAPSHOT SKIPPED
+[INFO] canal connector pulsarmq module for otter 1.1.8-SNAPSHOT SKIPPED
+[INFO] canal deployer module for otter 1.1.8-SNAPSHOT ..... SKIPPED
+[INFO] canal example module for otter 1.1.8-SNAPSHOT ...... SKIPPED
+[INFO] canal admin module for otter 1.1.8-SNAPSHOT ........ SKIPPED
+[INFO] canal admin-ui module for otter 1.1.8-SNAPSHOT ..... SKIPPED
+[INFO] canal admin-web for otter 1.1.8-SNAPSHOT ........... SKIPPED
+[INFO] canal client adapter module for otter 1.1.8-SNAPSHOT SKIPPED
+[INFO] canal client adapter common module for otter 1.1.8-SNAPSHOT SKIPPED
+[INFO] canal client adapter logger example module for otter 1.1.8-SNAPSHOT SKIPPED
+[INFO] canal client adapter hbase module for otter 1.1.8-SNAPSHOT SKIPPED
+[INFO] canal client adapter escore module for otter 1.1.8-SNAPSHOT SKIPPED
+[INFO] canal client adapter es v6x module for otter 1.1.8-SNAPSHOT SKIPPED
+[INFO] canal client adapter es v7x module for otter 1.1.8-SNAPSHOT SKIPPED
+[INFO] canal client adapter es v8x module for otter 1.1.8-SNAPSHOT SKIPPED
+[INFO] canal client adapter rdb module for otter 1.1.8-SNAPSHOT SKIPPED
+[INFO] canal client adapter rdb module for otter 1.1.8-SNAPSHOT SKIPPED
+[INFO] canal client adapter clickhouse module for otter 1.1.8-SNAPSHOT SKIPPED
+[INFO] canal connector tcp module for otter 1.1.8-SNAPSHOT  SKIPPED
+[INFO] canal client adapter launcher module for otter 1.1.8-SNAPSHOT SKIPPED
+[INFO] canal client adapter kudu module for otter 1.1.8-SNAPSHOT SKIPPED
+[INFO] canal client adapter phoenix module for otter 1.1.8-SNAPSHOT SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  22.633 s
+[INFO] Finished at: 2023-12-28T09:02:37+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project canal.protocol: Could not resolve dependencies for project com.alibaba.otter:canal.protocol:jar:1.1.8-SNAPSHOT: Could not find artifact com.alibaba.otter:canal.common:jar:1.1.8-SNAPSHOT in sonatype (https://oss.sonatype.org/content/repositories/snapshots) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :canal.protocol

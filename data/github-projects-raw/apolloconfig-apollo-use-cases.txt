@@ -1,0 +1,157 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] apollo-use-cases                                                   [pom]
+[INFO] dubbo                                                              [jar]
+[INFO] spring-boot-dubbo                                                  [pom]
+[INFO] spring-boot-dubbo-api                                              [jar]
+[INFO] spring-boot-dubbo-consumer                                         [jar]
+[INFO] spring-boot-dubbo-provider                                         [jar]
+[INFO] spring-cloud-zuul                                                  [jar]
+[INFO] spring-cloud-zuul-ratelimit                                        [jar]
+[INFO] spring-boot-logger                                                 [jar]
+[INFO] dynamic-datasource                                                 [jar]
+[INFO] spring-boot-encrypt                                                [jar]
+[INFO] spring-cloud-logger                                                [jar]
+[INFO] netflix-archaius                                                   [jar]
+[INFO] sentinel                                                           [jar]
+[INFO] properties-keeper                                                  [jar]
+[INFO] spring-boot-agent                                                  [pom]
+[INFO] apollo-agent                                                       [jar]
+[INFO] app                                                                [jar]
+[INFO] spring-cloud-gateway                                               [jar]
+[INFO] spring-mvc-logger                                                  [jar]
+[INFO] 
+[INFO] ------------< com.ctrip.framework.apollo:apollo-use-cases >-------------
+[INFO] Building apollo-use-cases 1.0-SNAPSHOT                            [1/20]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ apollo-use-cases ---
+[INFO] digraph "com.ctrip.framework.apollo:apollo-use-cases:pom:1.0-SNAPSHOT" { 
+[INFO] 	"com.ctrip.framework.apollo:apollo-use-cases:pom:1.0-SNAPSHOT" -> "com.ctrip.framework.apollo:apollo-client:jar:1.9.2:compile" ; 
+[INFO] 	"com.ctrip.framework.apollo:apollo-client:jar:1.9.2:compile" -> "com.ctrip.framework.apollo:apollo-core:jar:1.9.2:compile" ; 
+[INFO] 	"com.ctrip.framework.apollo:apollo-client:jar:1.9.2:compile" -> "com.google.inject:guice:jar:3.0:compile" ; 
+[INFO] 	"com.ctrip.framework.apollo:apollo-client:jar:1.9.2:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"com.ctrip.framework.apollo:apollo-client:jar:1.9.2:compile" -> "org.yaml:snakeyaml:jar:1.19:compile" ; 
+[INFO] 	"com.ctrip.framework.apollo:apollo-core:jar:1.9.2:compile" -> "com.google.code.gson:gson:jar:2.8.5:compile" ; 
+[INFO] 	"com.ctrip.framework.apollo:apollo-core:jar:1.9.2:compile" -> "com.google.guava:guava:jar:20.0:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:3.0:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:3.0:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< com.ctrip.framework.apollo:dubbo >------------------
+[INFO] Building dubbo 1.0-SNAPSHOT                                       [2/20]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ dubbo ---
+[INFO] digraph "com.ctrip.framework.apollo:dubbo:jar:1.0-SNAPSHOT" { 
+[INFO] 	"com.ctrip.framework.apollo:dubbo:jar:1.0-SNAPSHOT" -> "com.alibaba:dubbo:jar:2.6.12:compile" ; 
+[INFO] 	"com.ctrip.framework.apollo:dubbo:jar:1.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper:jar:3.4.14:compile" ; 
+[INFO] 	"com.ctrip.framework.apollo:dubbo:jar:1.0-SNAPSHOT" -> "com.101tec:zkclient:jar:0.10:compile" ; 
+[INFO] 	"com.ctrip.framework.apollo:dubbo:jar:1.0-SNAPSHOT" -> "org.apache.curator:curator-framework:jar:2.12.0:compile" ; 
+[INFO] 	"com.ctrip.framework.apollo:dubbo:jar:1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:compile" ; 
+[INFO] 	"com.ctrip.framework.apollo:dubbo:jar:1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-api:jar:2.17.1:compile" ; 
+[INFO] 	"com.ctrip.framework.apollo:dubbo:jar:1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-core:jar:2.17.1:compile" ; 
+[INFO] 	"com.ctrip.framework.apollo:dubbo:jar:1.0-SNAPSHOT" -> "org.slf4j:log4j-over-slf4j:jar:1.7.25:compile" ; 
+[INFO] 	"com.ctrip.framework.apollo:dubbo:jar:1.0-SNAPSHOT" -> "com.ctrip.framework.apollo:apollo-client:jar:1.9.2:compile" ; 
+[INFO] 	"com.alibaba:dubbo:jar:2.6.12:compile" -> "org.springframework:spring-context:jar:5.0.7.RELEASE:compile" ; 
+[INFO] 	"com.alibaba:dubbo:jar:2.6.12:compile" -> "org.javassist:javassist:jar:3.20.0-GA:compile" ; 
+[INFO] 	"com.alibaba:dubbo:jar:2.6.12:compile" -> "org.jboss.netty:netty:jar:3.2.5.Final:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.0.7.RELEASE:compile" -> "org.springframework:spring-aop:jar:5.0.7.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.0.7.RELEASE:compile" -> "org.springframework:spring-beans:jar:5.0.7.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.0.7.RELEASE:compile" -> "org.springframework:spring-core:jar:5.0.7.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.0.7.RELEASE:compile" -> "org.springframework:spring-expression:jar:5.0.7.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.0.7.RELEASE:compile" -> "org.springframework:spring-jcl:jar:5.0.7.RELEASE:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "com.github.spotbugs:spotbugs-annotations:jar:3.1.9:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "jline:jline:jar:2.14.6:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "org.apache.yetus:audience-annotations:jar:0.5.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "io.netty:netty:jar:3.10.6.Final:compile" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:3.1.9:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"org.apache.curator:curator-framework:jar:2.12.0:compile" -> "org.apache.curator:curator-client:jar:2.12.0:compile" ; 
+[INFO] 	"org.apache.curator:curator-client:jar:2.12.0:compile" -> "com.google.guava:guava:jar:20.0:compile" ; 
+[INFO] 	"com.ctrip.framework.apollo:apollo-client:jar:1.9.2:compile" -> "com.ctrip.framework.apollo:apollo-core:jar:1.9.2:compile" ; 
+[INFO] 	"com.ctrip.framework.apollo:apollo-client:jar:1.9.2:compile" -> "com.google.inject:guice:jar:3.0:compile" ; 
+[INFO] 	"com.ctrip.framework.apollo:apollo-client:jar:1.9.2:compile" -> "org.yaml:snakeyaml:jar:1.19:compile" ; 
+[INFO] 	"com.ctrip.framework.apollo:apollo-core:jar:1.9.2:compile" -> "com.google.code.gson:gson:jar:2.8.5:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:3.0:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:3.0:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< com.ctrip.framework.apollo:spring-boot-dubbo >------------
+[INFO] Building spring-boot-dubbo 1.0-SNAPSHOT                           [3/20]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ spring-boot-dubbo ---
+[INFO] digraph "com.ctrip.framework.apollo:spring-boot-dubbo:pom:1.0-SNAPSHOT" { 
+[INFO] 	"com.ctrip.framework.apollo:spring-boot-dubbo:pom:1.0-SNAPSHOT" -> "com.ctrip.framework.apollo:apollo-client:jar:1.9.2:compile" ; 
+[INFO] 	"com.ctrip.framework.apollo:apollo-client:jar:1.9.2:compile" -> "com.ctrip.framework.apollo:apollo-core:jar:1.9.2:compile" ; 
+[INFO] 	"com.ctrip.framework.apollo:apollo-client:jar:1.9.2:compile" -> "com.google.inject:guice:jar:3.0:compile" ; 
+[INFO] 	"com.ctrip.framework.apollo:apollo-client:jar:1.9.2:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"com.ctrip.framework.apollo:apollo-client:jar:1.9.2:compile" -> "org.yaml:snakeyaml:jar:1.19:compile" ; 
+[INFO] 	"com.ctrip.framework.apollo:apollo-core:jar:1.9.2:compile" -> "com.google.code.gson:gson:jar:2.8.5:compile" ; 
+[INFO] 	"com.ctrip.framework.apollo:apollo-core:jar:1.9.2:compile" -> "com.google.guava:guava:jar:20.0:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:3.0:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:3.0:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------< com.ctrip.framework.apollo:spring-boot-dubbo-api >----------
+[INFO] Building spring-boot-dubbo-api 1.0-SNAPSHOT                       [4/20]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ spring-boot-dubbo-api ---
+[INFO] digraph "com.ctrip.framework.apollo:spring-boot-dubbo-api:jar:1.0-SNAPSHOT" { 
+[INFO] 	"com.ctrip.framework.apollo:spring-boot-dubbo-api:jar:1.0-SNAPSHOT" -> "com.ctrip.framework.apollo:apollo-client:jar:1.9.2:compile" ; 
+[INFO] 	"com.ctrip.framework.apollo:apollo-client:jar:1.9.2:compile" -> "com.ctrip.framework.apollo:apollo-core:jar:1.9.2:compile" ; 
+[INFO] 	"com.ctrip.framework.apollo:apollo-client:jar:1.9.2:compile" -> "com.google.inject:guice:jar:3.0:compile" ; 
+[INFO] 	"com.ctrip.framework.apollo:apollo-client:jar:1.9.2:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"com.ctrip.framework.apollo:apollo-client:jar:1.9.2:compile" -> "org.yaml:snakeyaml:jar:1.19:compile" ; 
+[INFO] 	"com.ctrip.framework.apollo:apollo-core:jar:1.9.2:compile" -> "com.google.code.gson:gson:jar:2.8.5:compile" ; 
+[INFO] 	"com.ctrip.framework.apollo:apollo-core:jar:1.9.2:compile" -> "com.google.guava:guava:jar:20.0:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:3.0:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:3.0:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------< com.ctrip.framework.apollo:spring-boot-dubbo-consumer >--------
+[INFO] Building spring-boot-dubbo-consumer 1.0-SNAPSHOT                  [5/20]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for apollo-use-cases 1.0-SNAPSHOT:
+[INFO] 
+[INFO] apollo-use-cases ................................... SUCCESS [  4.554 s]
+[INFO] dubbo .............................................. SUCCESS [  0.586 s]
+[INFO] spring-boot-dubbo .................................. SUCCESS [  0.157 s]
+[INFO] spring-boot-dubbo-api .............................. SUCCESS [  0.291 s]
+[INFO] spring-boot-dubbo-consumer ......................... FAILURE [  0.474 s]
+[INFO] spring-boot-dubbo-provider ......................... SKIPPED
+[INFO] spring-cloud-zuul .................................. SKIPPED
+[INFO] spring-cloud-zuul-ratelimit ........................ SKIPPED
+[INFO] spring-boot-logger ................................. SKIPPED
+[INFO] dynamic-datasource ................................. SKIPPED
+[INFO] spring-boot-encrypt ................................ SKIPPED
+[INFO] spring-cloud-logger ................................ SKIPPED
+[INFO] netflix-archaius ................................... SKIPPED
+[INFO] sentinel ........................................... SKIPPED
+[INFO] properties-keeper .................................. SKIPPED
+[INFO] spring-boot-agent .................................. SKIPPED
+[INFO] apollo-agent ....................................... SKIPPED
+[INFO] app ................................................ SKIPPED
+[INFO] spring-cloud-gateway ............................... SKIPPED
+[INFO] spring-mvc-logger .................................. SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.942 s
+[INFO] Finished at: 2023-12-28T09:02:37+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project spring-boot-dubbo-consumer: Could not resolve dependencies for project com.ctrip.framework.apollo:spring-boot-dubbo-consumer:jar:1.0-SNAPSHOT: Could not find artifact com.ctrip.framework.apollo:spring-boot-dubbo-api:jar:1.0-SNAPSHOT -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :spring-boot-dubbo-consumer

@@ -1,0 +1,213 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Redisson examples                                                  [pom]
+[INFO] collections-examples                                               [jar]
+[INFO] locks-synchronizers-examples                                       [jar]
+[INFO] objects-examples                                                   [jar]
+[INFO] services-examples                                                  [jar]
+[INFO] 
+[INFO] -------------------< org.redisson:redisson-examples >-------------------
+[INFO] Building Redisson examples 1.0.0-SNAPSHOT                          [1/5]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ redisson-examples ---
+[INFO] digraph "org.redisson:redisson-examples:pom:1.0.0-SNAPSHOT" { 
+[INFO] 	"org.redisson:redisson-examples:pom:1.0.0-SNAPSHOT" -> "org.redisson:redisson:jar:3.19.3:compile" ; 
+[INFO] 	"org.redisson:redisson-examples:pom:1.0.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.16:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-common:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-codec:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-buffer:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-transport:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-resolver:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-resolver-dns:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-handler:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "javax.cache:cache-api:jar:1.1.1:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.projectreactor:reactor-core:jar:3.4.24:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.4:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.reactivex.rxjava3:rxjava:jar:3.1.5:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "org.jboss.marshalling:jboss-marshalling:jar:2.0.11.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "org.jboss.marshalling:jboss-marshalling-river:jar:2.0.11.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "com.esotericsoftware:kryo:jar:5.4.0:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.14.1:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.14.1:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.14.1:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.14.1:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "net.bytebuddy:byte-buddy:jar:1.12.18:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "org.yaml:snakeyaml:jar:1.33:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "org.jodd:jodd-bean:jar:5.1.6:compile" ; 
+[INFO] 	"io.netty:netty-resolver-dns:jar:4.1.87.Final:compile" -> "io.netty:netty-codec-dns:jar:4.1.87.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.87.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.87.Final:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.4.0:compile" -> "com.esotericsoftware:reflectasm:jar:1.11.9:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.4.0:compile" -> "org.objenesis:objenesis:jar:3.3:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.4.0:compile" -> "com.esotericsoftware:minlog:jar:1.3.1:compile" ; 
+[INFO] 	"org.jodd:jodd-bean:jar:5.1.6:compile" -> "org.jodd:jodd-core:jar:5.1.6:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.redisson:collections-examples >------------------
+[INFO] Building collections-examples 1.0.0-SNAPSHOT                       [2/5]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ collections-examples ---
+[INFO] digraph "org.redisson:collections-examples:jar:1.0.0-SNAPSHOT" { 
+[INFO] 	"org.redisson:collections-examples:jar:1.0.0-SNAPSHOT" -> "org.redisson:redisson:jar:3.19.3:compile" ; 
+[INFO] 	"org.redisson:collections-examples:jar:1.0.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.16:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-common:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-codec:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-buffer:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-transport:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-resolver:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-resolver-dns:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-handler:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "javax.cache:cache-api:jar:1.1.1:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.projectreactor:reactor-core:jar:3.4.24:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.4:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.reactivex.rxjava3:rxjava:jar:3.1.5:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "org.jboss.marshalling:jboss-marshalling:jar:2.0.11.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "org.jboss.marshalling:jboss-marshalling-river:jar:2.0.11.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "com.esotericsoftware:kryo:jar:5.4.0:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.14.1:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.14.1:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.14.1:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.14.1:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "net.bytebuddy:byte-buddy:jar:1.12.18:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "org.yaml:snakeyaml:jar:1.33:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "org.jodd:jodd-bean:jar:5.1.6:compile" ; 
+[INFO] 	"io.netty:netty-resolver-dns:jar:4.1.87.Final:compile" -> "io.netty:netty-codec-dns:jar:4.1.87.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.87.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.87.Final:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.4.0:compile" -> "com.esotericsoftware:reflectasm:jar:1.11.9:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.4.0:compile" -> "org.objenesis:objenesis:jar:3.3:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.4.0:compile" -> "com.esotericsoftware:minlog:jar:1.3.1:compile" ; 
+[INFO] 	"org.jodd:jodd-bean:jar:5.1.6:compile" -> "org.jodd:jodd-core:jar:5.1.6:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< org.redisson:locks-synchronizers-examples >--------------
+[INFO] Building locks-synchronizers-examples 1.0.0-SNAPSHOT               [3/5]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ locks-synchronizers-examples ---
+[INFO] digraph "org.redisson:locks-synchronizers-examples:jar:1.0.0-SNAPSHOT" { 
+[INFO] 	"org.redisson:locks-synchronizers-examples:jar:1.0.0-SNAPSHOT" -> "org.redisson:redisson:jar:3.19.3:compile" ; 
+[INFO] 	"org.redisson:locks-synchronizers-examples:jar:1.0.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.16:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-common:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-codec:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-buffer:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-transport:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-resolver:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-resolver-dns:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-handler:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "javax.cache:cache-api:jar:1.1.1:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.projectreactor:reactor-core:jar:3.4.24:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.4:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.reactivex.rxjava3:rxjava:jar:3.1.5:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "org.jboss.marshalling:jboss-marshalling:jar:2.0.11.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "org.jboss.marshalling:jboss-marshalling-river:jar:2.0.11.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "com.esotericsoftware:kryo:jar:5.4.0:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.14.1:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.14.1:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.14.1:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.14.1:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "net.bytebuddy:byte-buddy:jar:1.12.18:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "org.yaml:snakeyaml:jar:1.33:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "org.jodd:jodd-bean:jar:5.1.6:compile" ; 
+[INFO] 	"io.netty:netty-resolver-dns:jar:4.1.87.Final:compile" -> "io.netty:netty-codec-dns:jar:4.1.87.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.87.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.87.Final:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.4.0:compile" -> "com.esotericsoftware:reflectasm:jar:1.11.9:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.4.0:compile" -> "org.objenesis:objenesis:jar:3.3:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.4.0:compile" -> "com.esotericsoftware:minlog:jar:1.3.1:compile" ; 
+[INFO] 	"org.jodd:jodd-bean:jar:5.1.6:compile" -> "org.jodd:jodd-core:jar:5.1.6:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< org.redisson:objects-examples >--------------------
+[INFO] Building objects-examples 1.0.0-SNAPSHOT                           [4/5]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ objects-examples ---
+[INFO] digraph "org.redisson:objects-examples:jar:1.0.0-SNAPSHOT" { 
+[INFO] 	"org.redisson:objects-examples:jar:1.0.0-SNAPSHOT" -> "org.redisson:redisson:jar:3.19.3:compile" ; 
+[INFO] 	"org.redisson:objects-examples:jar:1.0.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.16:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-common:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-codec:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-buffer:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-transport:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-resolver:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-resolver-dns:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-handler:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "javax.cache:cache-api:jar:1.1.1:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.projectreactor:reactor-core:jar:3.4.24:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.4:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.reactivex.rxjava3:rxjava:jar:3.1.5:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "org.jboss.marshalling:jboss-marshalling:jar:2.0.11.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "org.jboss.marshalling:jboss-marshalling-river:jar:2.0.11.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "com.esotericsoftware:kryo:jar:5.4.0:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.14.1:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.14.1:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.14.1:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.14.1:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "net.bytebuddy:byte-buddy:jar:1.12.18:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "org.yaml:snakeyaml:jar:1.33:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "org.jodd:jodd-bean:jar:5.1.6:compile" ; 
+[INFO] 	"io.netty:netty-resolver-dns:jar:4.1.87.Final:compile" -> "io.netty:netty-codec-dns:jar:4.1.87.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.87.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.87.Final:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.4.0:compile" -> "com.esotericsoftware:reflectasm:jar:1.11.9:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.4.0:compile" -> "org.objenesis:objenesis:jar:3.3:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.4.0:compile" -> "com.esotericsoftware:minlog:jar:1.3.1:compile" ; 
+[INFO] 	"org.jodd:jodd-bean:jar:5.1.6:compile" -> "org.jodd:jodd-core:jar:5.1.6:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< org.redisson:services-examples >-------------------
+[INFO] Building services-examples 1.0.0-SNAPSHOT                          [5/5]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ services-examples ---
+[INFO] digraph "org.redisson:services-examples:jar:1.0.0-SNAPSHOT" { 
+[INFO] 	"org.redisson:services-examples:jar:1.0.0-SNAPSHOT" -> "org.redisson:redisson:jar:3.19.3:compile" ; 
+[INFO] 	"org.redisson:services-examples:jar:1.0.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.16:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-common:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-codec:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-buffer:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-transport:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-resolver:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-resolver-dns:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.netty:netty-handler:jar:4.1.87.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "javax.cache:cache-api:jar:1.1.1:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.projectreactor:reactor-core:jar:3.4.24:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.4:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "io.reactivex.rxjava3:rxjava:jar:3.1.5:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "org.jboss.marshalling:jboss-marshalling:jar:2.0.11.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "org.jboss.marshalling:jboss-marshalling-river:jar:2.0.11.Final:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "com.esotericsoftware:kryo:jar:5.4.0:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.14.1:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.14.1:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.14.1:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.14.1:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "net.bytebuddy:byte-buddy:jar:1.12.18:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "org.yaml:snakeyaml:jar:1.33:compile" ; 
+[INFO] 	"org.redisson:redisson:jar:3.19.3:compile" -> "org.jodd:jodd-bean:jar:5.1.6:compile" ; 
+[INFO] 	"io.netty:netty-resolver-dns:jar:4.1.87.Final:compile" -> "io.netty:netty-codec-dns:jar:4.1.87.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.87.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.87.Final:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.4.0:compile" -> "com.esotericsoftware:reflectasm:jar:1.11.9:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.4.0:compile" -> "org.objenesis:objenesis:jar:3.3:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.4.0:compile" -> "com.esotericsoftware:minlog:jar:1.3.1:compile" ; 
+[INFO] 	"org.jodd:jodd-bean:jar:5.1.6:compile" -> "org.jodd:jodd-core:jar:5.1.6:compile" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Redisson examples 1.0.0-SNAPSHOT:
+[INFO] 
+[INFO] Redisson examples .................................. SUCCESS [  4.346 s]
+[INFO] collections-examples ............................... SUCCESS [  0.241 s]
+[INFO] locks-synchronizers-examples ....................... SUCCESS [  0.146 s]
+[INFO] objects-examples ................................... SUCCESS [  0.067 s]
+[INFO] services-examples .................................. SUCCESS [  0.082 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.733 s
+[INFO] Finished at: 2023-12-28T09:03:21+01:00
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,22 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< processing:sound >--------------------------
+[INFO] Building sound 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sound ---
+[INFO] digraph "processing:sound:jar:1.0-SNAPSHOT" { 
+[INFO] 	"processing:sound:jar:1.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"processing:sound:jar:1.0-SNAPSHOT" -> "com.googlecode.soundlibs:mp3spi:jar:1.9.5.4:compile" ; 
+[INFO] 	"processing:sound:jar:1.0-SNAPSHOT" -> "com.googlecode.soundlibs:vorbisspi:jar:1.0.3.3:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"com.googlecode.soundlibs:mp3spi:jar:1.9.5.4:compile" -> "com.googlecode.soundlibs:jlayer:jar:1.0.1.4:compile" ; 
+[INFO] 	"com.googlecode.soundlibs:mp3spi:jar:1.9.5.4:compile" -> "com.googlecode.soundlibs:tritonus-share:jar:0.3.7.4:compile" ; 
+[INFO] 	"com.googlecode.soundlibs:vorbisspi:jar:1.0.3.3:compile" -> "com.googlecode.soundlibs:jorbis:jar:0.0.17.4:compile" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.833 s
+[INFO] Finished at: 2023-12-28T09:03:18+01:00
+[INFO] ------------------------------------------------------------------------

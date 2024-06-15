@@ -1,0 +1,91 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] jetcache                                                           [pom]
+[INFO] jetcache-anno-api                                                  [jar]
+[INFO] jetcache-core                                                      [jar]
+[INFO] jetcache-anno                                                      [jar]
+[INFO] jetcache-redis                                                     [jar]
+[INFO] jetcache-redis-lettuce                                             [jar]
+[INFO] jetcache-redis-springdata                                          [jar]
+[INFO] jetcache-redisson                                                  [jar]
+[INFO] jetcache-autoconfigure                                             [jar]
+[INFO] jetcache-starter-redisson                                          [jar]
+[INFO] jetcache-test                                                      [jar]
+[INFO] jetcache-starter-redis                                             [jar]
+[INFO] jetcache-starter-redis-lettuce                                     [jar]
+[INFO] jetcache-starter-redis-springdata                                  [jar]
+[INFO] 
+[INFO] -----------------< com.alicp.jetcache:jetcache-parent >-----------------
+[INFO] Building jetcache 2.7.5-SNAPSHOT                                  [1/14]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ jetcache-parent ---
+[INFO] digraph "com.alicp.jetcache:jetcache-parent:pom:2.7.5-SNAPSHOT" { 
+[INFO] 	"com.alicp.jetcache:jetcache-parent:pom:2.7.5-SNAPSHOT" -> "org.junit.platform:junit-platform-launcher:jar:1.9.3:test" ; 
+[INFO] 	"com.alicp.jetcache:jetcache-parent:pom:2.7.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.3:test" ; 
+[INFO] 	"com.alicp.jetcache:jetcache-parent:pom:2.7.5-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.9.3:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-launcher:jar:1.9.3:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.3:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-launcher:jar:1.9.3:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.3:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.3:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.3:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.9.3:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< com.alicp.jetcache:jetcache-anno-api >----------------
+[INFO] Building jetcache-anno-api 2.7.5-SNAPSHOT                         [2/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ jetcache-anno-api ---
+[INFO] digraph "com.alicp.jetcache:jetcache-anno-api:jar:2.7.5-SNAPSHOT" { 
+[INFO] 	"com.alicp.jetcache:jetcache-anno-api:jar:2.7.5-SNAPSHOT" -> "org.junit.platform:junit-platform-launcher:jar:1.9.3:test" ; 
+[INFO] 	"com.alicp.jetcache:jetcache-anno-api:jar:2.7.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.3:test" ; 
+[INFO] 	"com.alicp.jetcache:jetcache-anno-api:jar:2.7.5-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.9.3:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-launcher:jar:1.9.3:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.3:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-launcher:jar:1.9.3:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.3:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.3:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.3:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.9.3:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< com.alicp.jetcache:jetcache-core >------------------
+[INFO] Building jetcache-core 2.7.5-SNAPSHOT                             [3/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for jetcache 2.7.5-SNAPSHOT:
+[INFO] 
+[INFO] jetcache ........................................... SUCCESS [  4.075 s]
+[INFO] jetcache-anno-api .................................. SUCCESS [  0.064 s]
+[INFO] jetcache-core ...................................... FAILURE [  0.215 s]
+[INFO] jetcache-anno ...................................... SKIPPED
+[INFO] jetcache-redis ..................................... SKIPPED
+[INFO] jetcache-redis-lettuce ............................. SKIPPED
+[INFO] jetcache-redis-springdata .......................... SKIPPED
+[INFO] jetcache-redisson .................................. SKIPPED
+[INFO] jetcache-autoconfigure ............................. SKIPPED
+[INFO] jetcache-starter-redisson .......................... SKIPPED
+[INFO] jetcache-test ...................................... SKIPPED
+[INFO] jetcache-starter-redis ............................. SKIPPED
+[INFO] jetcache-starter-redis-lettuce ..................... SKIPPED
+[INFO] jetcache-starter-redis-springdata .................. SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.469 s
+[INFO] Finished at: 2023-12-28T09:02:21+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project jetcache-core: Could not resolve dependencies for project com.alicp.jetcache:jetcache-core:jar:2.7.5-SNAPSHOT: Could not find artifact com.alicp.jetcache:jetcache-anno-api:jar:2.7.5-SNAPSHOT -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :jetcache-core

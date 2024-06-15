@@ -1,0 +1,94 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 8 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 8 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] JJWT                                                               [pom]
+[INFO] JJWT :: API                                                        [jar]
+[INFO] JJWT :: Extensions :: Jackson                                      [jar]
+[INFO] JJWT :: Extensions :: org.json                                     [jar]
+[INFO] JJWT :: Extensions :: Gson                                         [jar]
+[INFO] JJWT :: Impl                                                       [jar]
+[INFO] JJWT :: Extensions                                                 [pom]
+[INFO] JJWT :: Legacy Transitive Dependency Jar                           [jar]
+[INFO] 
+[INFO] ---------------------< io.jsonwebtoken:jjwt-root >----------------------
+[INFO] Building JJWT 0.12.4-SNAPSHOT                                      [1/8]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ jjwt-root ---
+[INFO] digraph "io.jsonwebtoken:jjwt-root:pom:0.12.4-SNAPSHOT" { 
+[INFO] 	"io.jsonwebtoken:jjwt-root:pom:0.12.4-SNAPSHOT" -> "org.codehaus.groovy:groovy:jar:3.0.19:test" ; 
+[INFO] 	"io.jsonwebtoken:jjwt-root:pom:0.12.4-SNAPSHOT" -> "org.easymock:easymock:jar:4.2:test" ; 
+[INFO] 	"io.jsonwebtoken:jjwt-root:pom:0.12.4-SNAPSHOT" -> "org.powermock:powermock-module-junit4:jar:2.0.7:test" ; 
+[INFO] 	"io.jsonwebtoken:jjwt-root:pom:0.12.4-SNAPSHOT" -> "org.powermock:powermock-api-easymock:jar:2.0.7:test" ; 
+[INFO] 	"io.jsonwebtoken:jjwt-root:pom:0.12.4-SNAPSHOT" -> "org.powermock:powermock-core:jar:2.0.7:test" ; 
+[INFO] 	"io.jsonwebtoken:jjwt-root:pom:0.12.4-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"org.easymock:easymock:jar:4.2:test" -> "org.objenesis:objenesis:jar:3.1:test" ; 
+[INFO] 	"org.powermock:powermock-module-junit4:jar:2.0.7:test" -> "org.powermock:powermock-module-junit4-common:jar:2.0.7:test" ; 
+[INFO] 	"org.powermock:powermock-module-junit4:jar:2.0.7:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.powermock:powermock-api-easymock:jar:2.0.7:test" -> "org.powermock:powermock-api-support:jar:2.0.7:test" ; 
+[INFO] 	"org.powermock:powermock-api-easymock:jar:2.0.7:test" -> "cglib:cglib-nodep:jar:3.2.9:test" ; 
+[INFO] 	"org.powermock:powermock-core:jar:2.0.7:test" -> "org.powermock:powermock-reflect:jar:2.0.7:test" ; 
+[INFO] 	"org.powermock:powermock-core:jar:2.0.7:test" -> "org.javassist:javassist:jar:3.27.0-GA:test" ; 
+[INFO] 	"org.powermock:powermock-core:jar:2.0.7:test" -> "net.bytebuddy:byte-buddy:jar:1.9.10:test" ; 
+[INFO] 	"org.powermock:powermock-core:jar:2.0.7:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.9.10:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< io.jsonwebtoken:jjwt-api >----------------------
+[INFO] Building JJWT :: API 0.12.4-SNAPSHOT                               [2/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ jjwt-api ---
+[INFO] digraph "io.jsonwebtoken:jjwt-api:jar:0.12.4-SNAPSHOT" { 
+[INFO] 	"io.jsonwebtoken:jjwt-api:jar:0.12.4-SNAPSHOT" -> "org.codehaus.groovy:groovy:jar:3.0.19:test" ; 
+[INFO] 	"io.jsonwebtoken:jjwt-api:jar:0.12.4-SNAPSHOT" -> "org.easymock:easymock:jar:4.2:test" ; 
+[INFO] 	"io.jsonwebtoken:jjwt-api:jar:0.12.4-SNAPSHOT" -> "org.powermock:powermock-module-junit4:jar:2.0.7:test" ; 
+[INFO] 	"io.jsonwebtoken:jjwt-api:jar:0.12.4-SNAPSHOT" -> "org.powermock:powermock-api-easymock:jar:2.0.7:test" ; 
+[INFO] 	"io.jsonwebtoken:jjwt-api:jar:0.12.4-SNAPSHOT" -> "org.powermock:powermock-core:jar:2.0.7:test" ; 
+[INFO] 	"io.jsonwebtoken:jjwt-api:jar:0.12.4-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"org.easymock:easymock:jar:4.2:test" -> "org.objenesis:objenesis:jar:3.1:test" ; 
+[INFO] 	"org.powermock:powermock-module-junit4:jar:2.0.7:test" -> "org.powermock:powermock-module-junit4-common:jar:2.0.7:test" ; 
+[INFO] 	"org.powermock:powermock-module-junit4:jar:2.0.7:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.powermock:powermock-api-easymock:jar:2.0.7:test" -> "org.powermock:powermock-api-support:jar:2.0.7:test" ; 
+[INFO] 	"org.powermock:powermock-api-easymock:jar:2.0.7:test" -> "cglib:cglib-nodep:jar:3.2.9:test" ; 
+[INFO] 	"org.powermock:powermock-core:jar:2.0.7:test" -> "org.powermock:powermock-reflect:jar:2.0.7:test" ; 
+[INFO] 	"org.powermock:powermock-core:jar:2.0.7:test" -> "org.javassist:javassist:jar:3.27.0-GA:test" ; 
+[INFO] 	"org.powermock:powermock-core:jar:2.0.7:test" -> "net.bytebuddy:byte-buddy:jar:1.9.10:test" ; 
+[INFO] 	"org.powermock:powermock-core:jar:2.0.7:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.9.10:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< io.jsonwebtoken:jjwt-jackson >--------------------
+[INFO] Building JJWT :: Extensions :: Jackson 0.12.4-SNAPSHOT             [3/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from ossrh: https://oss.sonatype.org/content/repositories/snapshots/io/jsonwebtoken/jjwt-api/0.12.4-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from ossrh: https://oss.sonatype.org/content/repositories/snapshots/io/jsonwebtoken/jjwt-api/0.12.4-SNAPSHOT/jjwt-api-0.12.4-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for JJWT 0.12.4-SNAPSHOT:
+[INFO] 
+[INFO] JJWT ............................................... SUCCESS [  2.685 s]
+[INFO] JJWT :: API ........................................ SUCCESS [  0.161 s]
+[INFO] JJWT :: Extensions :: Jackson ...................... FAILURE [  3.085 s]
+[INFO] JJWT :: Extensions :: org.json ..................... SKIPPED
+[INFO] JJWT :: Extensions :: Gson ......................... SKIPPED
+[INFO] JJWT :: Impl ....................................... SKIPPED
+[INFO] JJWT :: Extensions ................................. SKIPPED
+[INFO] JJWT :: Legacy Transitive Dependency Jar ........... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.062 s
+[INFO] Finished at: 2023-12-28T09:03:15+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project jjwt-jackson: Could not resolve dependencies for project io.jsonwebtoken:jjwt-jackson:jar:0.12.4-SNAPSHOT: Could not find artifact io.jsonwebtoken:jjwt-api:jar:0.12.4-SNAPSHOT in ossrh (https://oss.sonatype.org/content/repositories/snapshots) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :jjwt-jackson

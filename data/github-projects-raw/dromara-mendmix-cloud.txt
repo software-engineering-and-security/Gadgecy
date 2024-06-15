@@ -1,0 +1,179 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.mendmix:mendmix-common:jar:1.4.4
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-javadoc-plugin is missing. @ com.mendmix:mendmix-parent:1.4.4, /home/brunok/apache-ysoserial-vuln/pom/dromara-mendmix-cloud/pom.xml, line 329, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-deploy-plugin is missing. @ line 100, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.mendmix:mendmix-spring:jar:1.4.4
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-javadoc-plugin is missing. @ com.mendmix:mendmix-parent:1.4.4, /home/brunok/apache-ysoserial-vuln/pom/dromara-mendmix-cloud/pom.xml, line 329, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-deploy-plugin is missing. @ line 89, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.mendmix:mendmix-cache:jar:1.4.4
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-javadoc-plugin is missing. @ com.mendmix:mendmix-parent:1.4.4, /home/brunok/apache-ysoserial-vuln/pom/dromara-mendmix-cloud/pom.xml, line 329, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-deploy-plugin is missing. @ line 56, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.mendmix:mendmix-scheduler:jar:1.4.4
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-javadoc-plugin is missing. @ com.mendmix:mendmix-parent:1.4.4, /home/brunok/apache-ysoserial-vuln/pom/dromara-mendmix-cloud/pom.xml, line 329, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-deploy-plugin is missing. @ line 78, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.mendmix:mendmix-mybatis:jar:1.4.4
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-javadoc-plugin is missing. @ com.mendmix:mendmix-parent:1.4.4, /home/brunok/apache-ysoserial-vuln/pom/dromara-mendmix-cloud/pom.xml, line 329, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-deploy-plugin is missing. @ line 131, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.mendmix:mendmix-springweb:jar:1.4.4
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-javadoc-plugin is missing. @ com.mendmix:mendmix-parent:1.4.4, /home/brunok/apache-ysoserial-vuln/pom/dromara-mendmix-cloud/pom.xml, line 329, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-deploy-plugin is missing. @ line 91, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.mendmix:mendmix-security:jar:1.4.4
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-javadoc-plugin is missing. @ com.mendmix:mendmix-parent:1.4.4, /home/brunok/apache-ysoserial-vuln/pom/dromara-mendmix-cloud/pom.xml, line 329, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-deploy-plugin is missing. @ line 75, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.mendmix:mendmix-common2:jar:1.4.4
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: commons-io:commons-io:jar -> version 2.11.0 vs (?) @ line 72, column 15
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-javadoc-plugin is missing. @ com.mendmix:mendmix-parent:1.4.4, /home/brunok/apache-ysoserial-vuln/pom/dromara-mendmix-cloud/pom.xml, line 329, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-deploy-plugin is missing. @ line 119, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.mendmix:mendmix-logging:jar:1.4.4
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-javadoc-plugin is missing. @ com.mendmix:mendmix-parent:1.4.4, /home/brunok/apache-ysoserial-vuln/pom/dromara-mendmix-cloud/pom.xml, line 329, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-deploy-plugin is missing. @ com.mendmix:mendmix-parent:1.4.4, /home/brunok/apache-ysoserial-vuln/pom/dromara-mendmix-cloud/pom.xml, line 321, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.mendmix:mendmix-springcloud-support:jar:1.4.4
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-javadoc-plugin is missing. @ com.mendmix:mendmix-parent:1.4.4, /home/brunok/apache-ysoserial-vuln/pom/dromara-mendmix-cloud/pom.xml, line 329, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-deploy-plugin is missing. @ line 150, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.mendmix:mendmix-gateway:jar:1.4.4
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-javadoc-plugin is missing. @ com.mendmix:mendmix-parent:1.4.4, /home/brunok/apache-ysoserial-vuln/pom/dromara-mendmix-cloud/pom.xml, line 329, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-deploy-plugin is missing. @ com.mendmix:mendmix-parent:1.4.4, /home/brunok/apache-ysoserial-vuln/pom/dromara-mendmix-cloud/pom.xml, line 321, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.mendmix:mendmix-amqp-adapter:jar:1.4.4
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-javadoc-plugin is missing. @ com.mendmix:mendmix-parent:1.4.4, /home/brunok/apache-ysoserial-vuln/pom/dromara-mendmix-cloud/pom.xml, line 329, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-deploy-plugin is missing. @ com.mendmix:mendmix-parent:1.4.4, /home/brunok/apache-ysoserial-vuln/pom/dromara-mendmix-cloud/pom.xml, line 321, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.mendmix:mendmix-cos-adapter:jar:1.4.4
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-javadoc-plugin is missing. @ com.mendmix:mendmix-parent:1.4.4, /home/brunok/apache-ysoserial-vuln/pom/dromara-mendmix-cloud/pom.xml, line 329, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-deploy-plugin is missing. @ com.mendmix:mendmix-parent:1.4.4, /home/brunok/apache-ysoserial-vuln/pom/dromara-mendmix-cloud/pom.xml, line 321, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.mendmix:mendmix-parent:pom:1.4.4
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-javadoc-plugin is missing. @ line 329, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-deploy-plugin is missing. @ line 321, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] mendmix                                                            [pom]
+[INFO] mendmix-common                                                     [jar]
+[INFO] mendmix-spring                                                     [jar]
+[INFO] mendmix-cache                                                      [jar]
+[INFO] mendmix-logging                                                    [jar]
+[INFO] mendmix-scheduler                                                  [jar]
+[INFO] mendmix-mybatis                                                    [jar]
+[INFO] mendmix-springweb                                                  [jar]
+[INFO] mendmix-security                                                   [jar]
+[INFO] mendmix-common2                                                    [jar]
+[INFO] mendmix-cos-adapter                                                [jar]
+[INFO] mendmix-amqp-adapter                                               [jar]
+[INFO] mendmix-springcloud-support                                        [jar]
+[INFO] mendmix-gateway                                                    [jar]
+[INFO] 
+[INFO] ---------------------< com.mendmix:mendmix-parent >---------------------
+[INFO] Building mendmix 1.4.4                                            [1/14]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/junit/junit/maven-metadata.xml
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/junit/junit/maven-metadata.xml (1.3 kB at 915 B/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ mendmix-parent ---
+[INFO] digraph "com.mendmix:mendmix-parent:pom:1.4.4" { 
+[INFO] 	"com.mendmix:mendmix-parent:pom:1.4.4" -> "org.apache.logging.log4j:log4j-core:jar:2.17.2:test" ; 
+[INFO] 	"com.mendmix:mendmix-parent:pom:1.4.4" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.2:test" ; 
+[INFO] 	"com.mendmix:mendmix-parent:pom:1.4.4" -> "org.slf4j:slf4j-api:jar:1.7.32:compile" ; 
+[INFO] 	"com.mendmix:mendmix-parent:pom:1.4.4" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.mendmix:mendmix-parent:pom:1.4.4" -> "org.springframework:spring-test:jar:5.3.18:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-core:jar:2.17.2:test" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.springframework:spring-test:jar:5.3.18:test" -> "org.springframework:spring-core:jar:5.3.18:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.18:test" -> "org.springframework:spring-jcl:jar:5.3.18:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< com.mendmix:mendmix-common >---------------------
+[INFO] Building mendmix-common 1.4.4                                     [2/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpclient/maven-metadata.xml
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpclient/maven-metadata.xml (2.1 kB at 35 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpmime/maven-metadata.xml
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpmime/maven-metadata.xml (2.0 kB at 38 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ mendmix-common ---
+[INFO] digraph "com.mendmix:mendmix-common:jar:1.4.4" { 
+[INFO] 	"com.mendmix:mendmix-common:jar:1.4.4" -> "org.apache.commons:commons-lang3:jar:3.4:compile" ; 
+[INFO] 	"com.mendmix:mendmix-common:jar:1.4.4" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"com.mendmix:mendmix-common:jar:1.4.4" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.3:compile" ; 
+[INFO] 	"com.mendmix:mendmix-common:jar:1.4.4" -> "com.esotericsoftware:kryo:jar:5.0.4:compile" ; 
+[INFO] 	"com.mendmix:mendmix-common:jar:1.4.4" -> "de.ruedigermoeller:fst:jar:1.55:compile" ; 
+[INFO] 	"com.mendmix:mendmix-common:jar:1.4.4" -> "org.yaml:snakeyaml:jar:2.0:compile" ; 
+[INFO] 	"com.mendmix:mendmix-common:jar:1.4.4" -> "com.squareup.okhttp3:okhttp:jar:3.14.9:compile" ; 
+[INFO] 	"com.mendmix:mendmix-common:jar:1.4.4" -> "org.apache.httpcomponents:httpclient:jar:4.5.14:compile" ; 
+[INFO] 	"com.mendmix:mendmix-common:jar:1.4.4" -> "org.apache.httpcomponents:httpmime:jar:4.5.14:compile" ; 
+[INFO] 	"com.mendmix:mendmix-common:jar:1.4.4" -> "javax.servlet:javax.servlet-api:jar:4.0.1:provided" ; 
+[INFO] 	"com.mendmix:mendmix-common:jar:1.4.4" -> "net.sf.jmimemagic:jmimemagic:jar:0.1.5:compile" ; 
+[INFO] 	"com.mendmix:mendmix-common:jar:1.4.4" -> "org.apache.logging.log4j:log4j-core:jar:2.17.2:test" ; 
+[INFO] 	"com.mendmix:mendmix-common:jar:1.4.4" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.2:test" ; 
+[INFO] 	"com.mendmix:mendmix-common:jar:1.4.4" -> "org.slf4j:slf4j-api:jar:1.7.32:compile" ; 
+[INFO] 	"com.mendmix:mendmix-common:jar:1.4.4" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.mendmix:mendmix-common:jar:1.4.4" -> "org.springframework:spring-test:jar:5.3.18:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.3:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.3:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.3:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.3:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.0.4:compile" -> "com.esotericsoftware:reflectasm:jar:1.11.9:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.0.4:compile" -> "org.objenesis:objenesis:jar:3.1:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo:jar:5.0.4:compile" -> "com.esotericsoftware:minlog:jar:1.3.1:compile" ; 
+[INFO] 	"de.ruedigermoeller:fst:jar:1.55:compile" -> "org.javassist:javassist:jar:3.18.1-GA:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.14.9:compile" -> "com.squareup.okio:okio:jar:1.17.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.14:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.16:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.14:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.14:compile" -> "commons-codec:commons-codec:jar:1.11:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-core:jar:2.17.2:test" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.springframework:spring-test:jar:5.3.18:test" -> "org.springframework:spring-core:jar:5.3.18:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.18:test" -> "org.springframework:spring-jcl:jar:5.3.18:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< com.mendmix:mendmix-spring >---------------------
+[INFO] Building mendmix-spring 1.4.4                                     [3/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/mendmix/mendmix-common/1.4.4/mendmix-common-1.4.4.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for mendmix 1.4.4:
+[INFO] 
+[INFO] mendmix ............................................ SUCCESS [  8.255 s]
+[INFO] mendmix-common ..................................... SUCCESS [  0.873 s]
+[INFO] mendmix-spring ..................................... FAILURE [  0.414 s]
+[INFO] mendmix-cache ...................................... SKIPPED
+[INFO] mendmix-logging .................................... SKIPPED
+[INFO] mendmix-scheduler .................................. SKIPPED
+[INFO] mendmix-mybatis .................................... SKIPPED
+[INFO] mendmix-springweb .................................. SKIPPED
+[INFO] mendmix-security ................................... SKIPPED
+[INFO] mendmix-common2 .................................... SKIPPED
+[INFO] mendmix-cos-adapter ................................ SKIPPED
+[INFO] mendmix-amqp-adapter ............................... SKIPPED
+[INFO] mendmix-springcloud-support ........................ SKIPPED
+[INFO] mendmix-gateway .................................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.967 s
+[INFO] Finished at: 2023-12-28T09:02:45+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project mendmix-spring: Could not resolve dependencies for project com.mendmix:mendmix-spring:jar:1.4.4: Could not find artifact com.mendmix:mendmix-common:jar:1.4.4 in central (https://repo.maven.apache.org/maven2) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :mendmix-spring

@@ -1,0 +1,132 @@
+{
+
+  "ceylon.language" : "org/ceylon-lang/ceylon.language",
+  "wildfly-connector" : "org/wildfly/wildfly-connector",
+
+  "commons-collections" :[
+    ["commons-collections", "commons-collections/commons-collections"],
+    ["commons-collections4", "org/apache/commons/commons-collections4"]
+  ],
+
+  "struts2-core" : "org/apache/struts/struts2-core",
+  "struts2-jasperreports-plugin" : "org/apache/struts/struts2-jasperreports-plugin",
+
+  "scala-library" :[
+    [ "scala-library", "org/scala-lang/scala-library"],
+    ["scala3-library_3", "org/scala-lang/scala3-library_3"]
+  ],
+
+
+  "transactions-osgi" : "com/atomikos/transactions-osgi",
+  "jta" : "javax/transaction/jta",
+
+  "spring-tx": "org/springframework/spring-tx",
+  "spring-context": "org/springframework/spring-context",
+
+  "myfaces-impl" : [
+    ["myfaces-impl" , "org/apache/myfaces/core/myfaces-impl"],
+    ["myfaces-impl" , "myfaces/myfaces-impl"]
+  ],
+  "myfaces-api" : [
+
+    ["myfaces-api", "org/apache/myfaces/core/myfaces-api"],
+    ["myfaces-api", "myfaces/myfaces-api"]
+  ],
+  "apache-el" : "org/mortbay/jasper/apache-el",
+  "aspectjweaver" : [
+    ["aspectjweaver", "org/aspectj/aspectjweaver"],
+    ["aspectjweaver", "aspectj/aspectjweaver"]
+  ],
+  "bsh" : [
+    ["bsh", "bsh/bsh"],
+    ["bsh","org/apache-extras/beanshell/bsh" ],
+    [ "bsh", "org/beanshell/bsh"]
+  ],
+  "c3p0" : [
+    ["c3p0", "com/mchange/c3p0"],
+    ["c3p0", "c3p0/c3p0"]
+  ],
+  "mchange-commons-java" : "com/mchange/mchange-commons-java",
+  "click-nodeps" : [
+    ["click-nodeps","org/apache/click/click-nodeps"],
+    ["click-nodeps", "net/sf/click/click-nodeps"]
+
+  ],
+  "dom4j" : [
+    [ "dom4j", "dom4j/dom4j"],
+    ["dom4j", "org/dom4j/dom4j"]
+
+
+  ],
+  "servlet-api" : [
+
+    ["javax.servlet-api","javax/servlet/javax.servlet-api"],
+    ["servlet-api", "javax/servlet/servlet-api"]
+
+  ],
+  "clojure" : "org/clojure/clojure",
+  "commons-beanutils" : "commons-beanutils/commons-beanutils",
+  "commons-logging" : "commons-logging/commons-logging",
+  "commons-fileupload" : "commons-fileupload/commons-fileupload",
+  "commons-io" : "commons-io/commons-io",
+  "groovy" : [
+
+    ["groovy", "org/codehaus/groovy/groovy"],
+    ["groovy", "org/apache/groovy/groovy"]
+  ],
+  "javassist" :[
+    [ "javassist","org/javassist/javassist"] ,
+    [ "javassist", "javassist/javassist"]
+  ],
+  "jboss-interceptor-core" : "org/jboss/interceptor/jboss-interceptor-core",
+
+
+"cdi-api" :[
+  [ "cdi-api","javax/enterprise/cdi-api" ],
+  [ "jakarta.enterprise.cdi-api","jakarta/enterprise/jakarta.enterprise.cdi-api" ]
+],
+
+"javax.interceptor-api" : "javax/interceptor/javax.interceptor-api",
+
+"jboss-interceptor-spi" : "org/jboss/interceptor/jboss-interceptor-spi",
+"slf4j-api" : "org/slf4j/slf4j-api",
+"json-lib" : "net/sf/json-lib/json-lib",
+"spring-aop" : "org/springframework/spring-aop",
+"aopalliance" : "aopalliance/aopalliance",
+
+"commons-lang" :[
+["commons-lang","commons-lang/commons-lang"] ,
+["commons-lang3","org/apache/commons/commons-lang3"]
+],
+
+"ezmorph" : "net/sf/ezmorph/ezmorph",
+"spring-core" : "org/springframework/spring-core",
+"weld-core": "org/jboss/weld/weld-core",
+"jython-standalone": "org/python/jython-standalone",
+"jython": "org/python/jython",
+
+"js":[
+["js","rhino/js"],
+["rhino","org/mozilla/rhino"]
+],
+
+"rome" : [
+["rome","rome/rome"],
+["rome","com/rometools/rome"]
+],
+
+"spring-beans" : "org/springframework/spring-beans",
+"vaadin-server" : "com/vaadin/vaadin-server",
+"vaadin-shared" : "com/vaadin/vaadin-shared",
+"wicket-util" : "org/apache/wicket/wicket-util",
+"hibernate-core" : [
+["hibernate-core", "org/hibernate/hibernate-core"],
+["hibernate-core", "org/hibernate/orm/hibernate-core"]
+],
+"transaction-api": [
+["javax.transaction-api","javax/transaction/javax.transaction-api"],
+["jakarta.transaction-api", "jakarta/transaction/jakarta.transaction-api"]
+],
+"jboss-logging" : "org/jboss/logging/jboss-logging"
+
+}

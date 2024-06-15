@@ -1,0 +1,11 @@
+
+data/libraries/**
+data/jdk/**
+output/**
+ysoserial*
+.env
+
+__pycache__/
+output/main/**
+output/rce/**
+file.ser

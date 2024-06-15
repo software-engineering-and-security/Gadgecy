@@ -1,0 +1,40 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.badlogicgames.box2dlights:box2dlights:jar:1.6-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-source-plugin is missing. @ line 59, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] -------------< com.badlogicgames.box2dlights:box2dlights >--------------
+[INFO] Building Box2dlights 1.6-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ box2dlights ---
+[INFO] digraph "com.badlogicgames.box2dlights:box2dlights:jar:1.6-SNAPSHOT" { 
+[INFO] 	"com.badlogicgames.box2dlights:box2dlights:jar:1.6-SNAPSHOT" -> "com.badlogicgames.gdx:gdx:jar:1.6.2:compile" ; 
+[INFO] 	"com.badlogicgames.box2dlights:box2dlights:jar:1.6-SNAPSHOT" -> "com.badlogicgames.gdx:gdx-platform:jar:natives-desktop:1.6.2:test" ; 
+[INFO] 	"com.badlogicgames.box2dlights:box2dlights:jar:1.6-SNAPSHOT" -> "com.badlogicgames.gdx:gdx-backend-lwjgl:jar:1.6.2:test" ; 
+[INFO] 	"com.badlogicgames.box2dlights:box2dlights:jar:1.6-SNAPSHOT" -> "com.badlogicgames.gdx:gdx-box2d:jar:1.6.2:compile" ; 
+[INFO] 	"com.badlogicgames.box2dlights:box2dlights:jar:1.6-SNAPSHOT" -> "com.badlogicgames.gdx:gdx-box2d-platform:jar:natives-desktop:1.6.2:test" ; 
+[INFO] 	"com.badlogicgames.gdx:gdx-backend-lwjgl:jar:1.6.2:test" -> "org.lwjgl.lwjgl:lwjgl:jar:2.9.2:test" ; 
+[INFO] 	"com.badlogicgames.gdx:gdx-backend-lwjgl:jar:1.6.2:test" -> "org.lwjgl.lwjgl:lwjgl_util:jar:2.9.2:test" ; 
+[INFO] 	"com.badlogicgames.gdx:gdx-backend-lwjgl:jar:1.6.2:test" -> "com.badlogicgames.jlayer:jlayer:jar:1.0.1-gdx:test" ; 
+[INFO] 	"com.badlogicgames.gdx:gdx-backend-lwjgl:jar:1.6.2:test" -> "org.jcraft:jorbis:jar:0.0.17:test" ; 
+[INFO] 	"org.lwjgl.lwjgl:lwjgl:jar:2.9.2:test" -> "org.lwjgl.lwjgl:lwjgl-platform:jar:natives-windows:2.9.2:test" ; 
+[INFO] 	"org.lwjgl.lwjgl:lwjgl:jar:2.9.2:test" -> "org.lwjgl.lwjgl:lwjgl-platform:jar:natives-linux:2.9.2:test" ; 
+[INFO] 	"org.lwjgl.lwjgl:lwjgl:jar:2.9.2:test" -> "org.lwjgl.lwjgl:lwjgl-platform:jar:natives-osx:2.9.2:test" ; 
+[INFO] 	"org.lwjgl.lwjgl:lwjgl:jar:2.9.2:test" -> "net.java.jinput:jinput:jar:2.0.5:test" ; 
+[INFO] 	"net.java.jinput:jinput:jar:2.0.5:test" -> "net.java.jutils:jutils:jar:1.0.0:test" ; 
+[INFO] 	"net.java.jinput:jinput:jar:2.0.5:test" -> "net.java.jinput:jinput-platform:jar:natives-linux:2.0.5:test" ; 
+[INFO] 	"net.java.jinput:jinput:jar:2.0.5:test" -> "net.java.jinput:jinput-platform:jar:natives-windows:2.0.5:test" ; 
+[INFO] 	"net.java.jinput:jinput:jar:2.0.5:test" -> "net.java.jinput:jinput-platform:jar:natives-osx:2.0.5:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.436 s
+[INFO] Finished at: 2023-12-28T09:03:11+01:00
+[INFO] ------------------------------------------------------------------------

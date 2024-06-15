@@ -1,0 +1,99 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Quarkus images                                                     [pom]
+[INFO] jdock                                                              [jar]
+[INFO] jdock-variant-helper                                               [jar]
+[INFO] quarkus-micro-base-image                                           [jar]
+[INFO] quarkus-distroless-base-image                                      [jar]
+[INFO] quarkus-mandrel-builder-image                                      [jar]
+[INFO] quarkus-graalvm-builder-image                                      [jar]
+[INFO] quarkus-binary-s2i                                                 [jar]
+[INFO] quarkus-native-s2i                                                 [jar]
+[INFO] 
+[INFO] --------------< io.quarkus.images:quarkus-images-parent >---------------
+[INFO] Building Quarkus images 1.0-SNAPSHOT                               [1/9]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ quarkus-images-parent ---
+[INFO] digraph "io.quarkus.images:quarkus-images-parent:pom:1.0-SNAPSHOT" { 
+[INFO] 	"io.quarkus.images:quarkus-images-parent:pom:1.0-SNAPSHOT" -> "com.google.guava:guava:jar:32.0.0-jre:compile" ; 
+[INFO] 	"io.quarkus.images:quarkus-images-parent:pom:1.0-SNAPSHOT" -> "org.zeroturnaround:zt-exec:jar:1.12:compile" ; 
+[INFO] 	"io.quarkus.images:quarkus-images-parent:pom:1.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.29:compile" ; 
+[INFO] 	"io.quarkus.images:quarkus-images-parent:pom:1.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.8.2:test" ; 
+[INFO] 	"io.quarkus.images:quarkus-images-parent:pom:1.0-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.23.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.0-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.0-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.0-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.0-jre:compile" -> "org.checkerframework:checker-qual:jar:3.33.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.0-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.18.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.0-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.8.2:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.23.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.10:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< io.quarkus.images:jdock >-----------------------
+[INFO] Building jdock 1.0-SNAPSHOT                                        [2/9]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ jdock ---
+[INFO] digraph "io.quarkus.images:jdock:jar:1.0-SNAPSHOT" { 
+[INFO] 	"io.quarkus.images:jdock:jar:1.0-SNAPSHOT" -> "com.google.guava:guava:jar:32.0.0-jre:compile" ; 
+[INFO] 	"io.quarkus.images:jdock:jar:1.0-SNAPSHOT" -> "org.zeroturnaround:zt-exec:jar:1.12:compile" ; 
+[INFO] 	"io.quarkus.images:jdock:jar:1.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.29:compile" ; 
+[INFO] 	"io.quarkus.images:jdock:jar:1.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.8.2:test" ; 
+[INFO] 	"io.quarkus.images:jdock:jar:1.0-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.23.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.0-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.0-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.0-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.0-jre:compile" -> "org.checkerframework:checker-qual:jar:3.33.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.0-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.18.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.0-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.8.2:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.23.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.10:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< io.quarkus.images:jdock-variant-helper >---------------
+[INFO] Building jdock-variant-helper 1.0-SNAPSHOT                         [3/9]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Quarkus images 1.0-SNAPSHOT:
+[INFO] 
+[INFO] Quarkus images ..................................... SUCCESS [  2.833 s]
+[INFO] jdock .............................................. SUCCESS [  0.130 s]
+[INFO] jdock-variant-helper ............................... FAILURE [  0.153 s]
+[INFO] quarkus-micro-base-image ........................... SKIPPED
+[INFO] quarkus-distroless-base-image ...................... SKIPPED
+[INFO] quarkus-mandrel-builder-image ...................... SKIPPED
+[INFO] quarkus-graalvm-builder-image ...................... SKIPPED
+[INFO] quarkus-binary-s2i ................................. SKIPPED
+[INFO] quarkus-native-s2i ................................. SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.816 s
+[INFO] Finished at: 2023-12-28T09:03:20+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project jdock-variant-helper: Could not resolve dependencies for project io.quarkus.images:jdock-variant-helper:jar:1.0-SNAPSHOT: Could not find artifact io.quarkus.images:jdock:jar:1.0-SNAPSHOT -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :jdock-variant-helper

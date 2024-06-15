@@ -1,0 +1,128 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Eclipse Milo Build Tools                                           [jar]
+[INFO] Eclipse Milo - OPC UA (IEC 62541)                                  [pom]
+[INFO] opc-ua-stack                                                       [pom]
+[INFO] stack-core                                                         [jar]
+[INFO] stack-client                                                       [jar]
+[INFO] opc-ua-sdk                                                         [pom]
+[INFO] sdk-core                                                           [jar]
+[INFO] sdk-client                                                         [jar]
+[INFO] bsd-core                                                           [jar]
+[INFO] bsd-parser                                                         [jar]
+[INFO] dictionary-reader                                                  [jar]
+[INFO] stack-server                                                       [jar]
+[INFO] bsd-generator                                                      [jar]
+[INFO] sdk-server                                                         [jar]
+[INFO] dictionary-manager                                                 [jar]
+[INFO] milo-examples                                                      [pom]
+[INFO] server-examples                                                    [jar]
+[INFO] client-examples                                                    [jar]
+[INFO] bsd-parser-gson                                                    [jar]
+[INFO] stack-tests                                                        [jar]
+[INFO] sdk-tests                                                          [jar]
+[INFO] integration-tests                                                  [jar]
+[INFO] 
+[INFO] --------------------< org.eclipse.milo:build-tools >--------------------
+[INFO] Building Eclipse Milo Build Tools 0.6.12-SNAPSHOT                 [1/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ build-tools ---
+[INFO] digraph "org.eclipse.milo:build-tools:jar:0.6.12-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------------< org.eclipse.milo:milo >------------------------
+[INFO] Building Eclipse Milo - OPC UA (IEC 62541) 0.6.12-SNAPSHOT        [2/22]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ milo ---
+[INFO] digraph "org.eclipse.milo:milo:pom:0.6.12-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< org.eclipse.milo:opc-ua-stack >--------------------
+[INFO] Building opc-ua-stack 0.6.12-SNAPSHOT                             [3/22]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ opc-ua-stack ---
+[INFO] digraph "org.eclipse.milo:opc-ua-stack:pom:0.6.12-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< org.eclipse.milo:stack-core >---------------------
+[INFO] Building stack-core 0.6.12-SNAPSHOT                               [4/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ stack-core ---
+[INFO] digraph "org.eclipse.milo:stack-core:jar:0.6.12-SNAPSHOT" { 
+[INFO] 	"org.eclipse.milo:stack-core:jar:0.6.12-SNAPSHOT" -> "org.bouncycastle:bcprov-jdk18on:jar:1.75:compile" ; 
+[INFO] 	"org.eclipse.milo:stack-core:jar:0.6.12-SNAPSHOT" -> "org.bouncycastle:bcpkix-jdk18on:jar:1.75:compile" ; 
+[INFO] 	"org.eclipse.milo:stack-core:jar:0.6.12-SNAPSHOT" -> "com.google.guava:guava:jar:31.0.1-jre:compile" ; 
+[INFO] 	"org.eclipse.milo:stack-core:jar:0.6.12-SNAPSHOT" -> "io.netty:netty-codec:jar:4.1.97.Final:compile" ; 
+[INFO] 	"org.eclipse.milo:stack-core:jar:0.6.12-SNAPSHOT" -> "io.netty:netty-handler:jar:4.1.97.Final:compile" ; 
+[INFO] 	"org.eclipse.milo:stack-core:jar:0.6.12-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.32:compile" ; 
+[INFO] 	"org.eclipse.milo:stack-core:jar:0.6.12-SNAPSHOT" -> "org.glassfish.jaxb:jaxb-runtime:jar:2.3.6:compile" ; 
+[INFO] 	"org.eclipse.milo:stack-core:jar:0.6.12-SNAPSHOT" -> "org.jetbrains:annotations:jar:22.0.0:provided" ; 
+[INFO] 	"org.eclipse.milo:stack-core:jar:0.6.12-SNAPSHOT" -> "org.projectlombok:lombok:jar:1.18.22:provided" ; 
+[INFO] 	"org.eclipse.milo:stack-core:jar:0.6.12-SNAPSHOT" -> "org.testng:testng:jar:6.9.10:test" ; 
+[INFO] 	"org.eclipse.milo:stack-core:jar:0.6.12-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.32:test" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk18on:jar:1.75:compile" -> "org.bouncycastle:bcutil-jdk18on:jar:1.75:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.0.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"io.netty:netty-codec:jar:4.1.97.Final:compile" -> "io.netty:netty-common:jar:4.1.97.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec:jar:4.1.97.Final:compile" -> "io.netty:netty-buffer:jar:4.1.97.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec:jar:4.1.97.Final:compile" -> "io.netty:netty-transport:jar:4.1.97.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.97.Final:compile" -> "io.netty:netty-resolver:jar:4.1.97.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.97.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.97.Final:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.6:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.6:compile" -> "org.glassfish.jaxb:txw2:jar:2.3.6:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.6:compile" -> "com.sun.istack:istack-commons-runtime:jar:3.0.12:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.6:compile" -> "com.sun.activation:jakarta.activation:jar:1.2.2:runtime" ; 
+[INFO] 	"org.testng:testng:jar:6.9.10:test" -> "com.beust:jcommander:jar:1.48:test" ; 
+[INFO] 	"org.testng:testng:jar:6.9.10:test" -> "org.beanshell:bsh:jar:2.0b4:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< org.eclipse.milo:stack-client >--------------------
+[INFO] Building stack-client 0.6.12-SNAPSHOT                             [5/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Eclipse Milo - OPC UA (IEC 62541) 0.6.12-SNAPSHOT:
+[INFO] 
+[INFO] Eclipse Milo Build Tools ........................... SUCCESS [  4.720 s]
+[INFO] Eclipse Milo - OPC UA (IEC 62541) .................. SUCCESS [  0.070 s]
+[INFO] opc-ua-stack ....................................... SUCCESS [  0.204 s]
+[INFO] stack-core ......................................... SUCCESS [  0.506 s]
+[INFO] stack-client ....................................... FAILURE [  0.096 s]
+[INFO] opc-ua-sdk ......................................... SKIPPED
+[INFO] sdk-core ........................................... SKIPPED
+[INFO] sdk-client ......................................... SKIPPED
+[INFO] bsd-core ........................................... SKIPPED
+[INFO] bsd-parser ......................................... SKIPPED
+[INFO] dictionary-reader .................................. SKIPPED
+[INFO] stack-server ....................................... SKIPPED
+[INFO] bsd-generator ...................................... SKIPPED
+[INFO] sdk-server ......................................... SKIPPED
+[INFO] dictionary-manager ................................. SKIPPED
+[INFO] milo-examples ...................................... SKIPPED
+[INFO] server-examples .................................... SKIPPED
+[INFO] client-examples .................................... SKIPPED
+[INFO] bsd-parser-gson .................................... SKIPPED
+[INFO] stack-tests ........................................ SKIPPED
+[INFO] sdk-tests .......................................... SKIPPED
+[INFO] integration-tests .................................. SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.705 s
+[INFO] Finished at: 2023-12-28T09:02:42+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project stack-client: Could not resolve dependencies for project org.eclipse.milo:stack-client:jar:0.6.12-SNAPSHOT: Could not find artifact org.eclipse.milo:stack-core:jar:0.6.12-SNAPSHOT -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :stack-client

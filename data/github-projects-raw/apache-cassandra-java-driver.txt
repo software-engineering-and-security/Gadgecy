@@ -1,0 +1,1054 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 15 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 15 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Apache Cassandra Java Driver                                       [pom]
+[INFO] Apache Cassandra Java Driver - core                             [bundle]
+[INFO] Apache Cassandra Java Driver - core with shaded deps               [jar]
+[INFO] Apache Cassandra Java Driver - query builder                    [bundle]
+[INFO] Apache Cassandra Java Driver - object mapper runtime            [bundle]
+[INFO] Apache Cassandra Java Driver - object mapper processor             [jar]
+[INFO] Apache Cassandra Java Driver - Metrics - Micrometer             [bundle]
+[INFO] Apache Cassandra Java Driver - Metrics - Microprofile           [bundle]
+[INFO] Apache Cassandra Java Driver - test infrastructure tools        [bundle]
+[INFO] Apache Cassandra Java Driver - integration tests                   [jar]
+[INFO] Apache Cassandra Java Driver - OSGi tests                          [jar]
+[INFO] Apache Cassandra Java Driver - binary distribution                 [jar]
+[INFO] Apache Cassandra Java Driver - distribution tests                  [jar]
+[INFO] Apache Cassandra Java Driver - examples.                           [jar]
+[INFO] Apache Cassandra Java Driver - Bill Of Materials                   [pom]
+[INFO] 
+[INFO] ----------------< com.datastax.oss:java-driver-parent >-----------------
+[INFO] Building Apache Cassandra Java Driver 4.17.1-SNAPSHOT             [1/15]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ java-driver-parent ---
+[INFO] digraph "com.datastax.oss:java-driver-parent:pom:4.17.1-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< com.datastax.oss:java-driver-core >------------------
+[INFO] Building Apache Cassandra Java Driver - core 4.17.1-SNAPSHOT      [2/15]
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ java-driver-core ---
+[INFO] digraph "com.datastax.oss:java-driver-core:bundle:4.17.1-SNAPSHOT" { 
+[INFO] 	"com.datastax.oss:java-driver-core:bundle:4.17.1-SNAPSHOT" -> "com.datastax.oss:native-protocol:jar:1.5.1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:bundle:4.17.1-SNAPSHOT" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:bundle:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-shaded-guava:jar:25.1-jre-graal-sub-1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:bundle:4.17.1-SNAPSHOT" -> "com.typesafe:config:jar:1.4.1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:bundle:4.17.1-SNAPSHOT" -> "com.github.jnr:jnr-posix:jar:3.1.15:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:bundle:4.17.1-SNAPSHOT" -> "org.xerial.snappy:snappy-java:jar:1.1.10.1:compile (optional) " ; 
+[INFO] 	"com.datastax.oss:java-driver-core:bundle:4.17.1-SNAPSHOT" -> "org.lz4:lz4-java:jar:1.7.1:compile (optional) " ; 
+[INFO] 	"com.datastax.oss:java-driver-core:bundle:4.17.1-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.26:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:bundle:4.17.1-SNAPSHOT" -> "io.dropwizard.metrics:metrics-core:jar:4.1.18:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:bundle:4.17.1-SNAPSHOT" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:bundle:4.17.1-SNAPSHOT" -> "com.esri.geometry:esri-geometry-api:jar:1.2.1:compile (optional) " ; 
+[INFO] 	"com.datastax.oss:java-driver-core:bundle:4.17.1-SNAPSHOT" -> "org.apache.tinkerpop:gremlin-core:jar:3.5.6:compile (optional) " ; 
+[INFO] 	"com.datastax.oss:java-driver-core:bundle:4.17.1-SNAPSHOT" -> "org.apache.tinkerpop:tinkergraph-gremlin:jar:3.5.6:compile (optional) " ; 
+[INFO] 	"com.datastax.oss:java-driver-core:bundle:4.17.1-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:bundle:4.17.1-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:bundle:4.17.1-SNAPSHOT" -> "org.reactivestreams:reactive-streams:jar:1.0.3:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:bundle:4.17.1-SNAPSHOT" -> "com.github.stephenc.jcip:jcip-annotations:jar:1.0-1:provided" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:bundle:4.17.1-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:3.1.12:provided" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:bundle:4.17.1-SNAPSHOT" -> "org.graalvm.sdk:graal-sdk:jar:22.0.0.2:provided" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:bundle:4.17.1-SNAPSHOT" -> "org.graalvm.nativeimage:svm:jar:22.0.0.2:provided" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:bundle:4.17.1-SNAPSHOT" -> "io.projectreactor.tools:blockhound:jar:1.0.8.RELEASE:provided" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:bundle:4.17.1-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.2.3:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:bundle:4.17.1-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:bundle:4.17.1-SNAPSHOT" -> "com.tngtech.java:junit-dataprovider:jar:1.13.1:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:bundle:4.17.1-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.19.0:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:bundle:4.17.1-SNAPSHOT" -> "org.mockito:mockito-core:jar:2.28.2:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:bundle:4.17.1-SNAPSHOT" -> "io.reactivex.rxjava2:rxjava:jar:2.2.2:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:bundle:4.17.1-SNAPSHOT" -> "org.reactivestreams:reactive-streams-tck:jar:1.0.3:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:bundle:4.17.1-SNAPSHOT" -> "org.awaitility:awaitility:jar:4.0.3:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:bundle:4.17.1-SNAPSHOT" -> "org.testng:testng:jar:7.3.0:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:bundle:4.17.1-SNAPSHOT" -> "com.github.tomakehurst:wiremock:jar:2.25.0:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:compile" -> "com.github.jnr:jnr-ffi:jar:2.2.11:compile" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:compile" -> "com.github.jnr:jnr-constants:jar:0.10.3:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jffi:jar:1.3.9:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jffi:jar:native:1.3.9:runtime" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-commons:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-analysis:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-tree:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-util:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jnr-a64asm:jar:1.0.0:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jnr-x86asm:jar:1.0.2:compile" ; 
+[INFO] 	"com.esri.geometry:esri-geometry-api:jar:1.2.1:compile (optional) " -> "org.json:json:jar:20230227:compile (optional) " ; 
+[INFO] 	"com.esri.geometry:esri-geometry-api:jar:1.2.1:compile (optional) " -> "org.codehaus.jackson:jackson-core-asl:jar:1.9.12:compile (optional) " ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:compile (optional) " -> "org.apache.tinkerpop:gremlin-shaded:jar:3.5.6:compile (optional) " ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:compile (optional) " -> "org.apache.tinkerpop:gremlin-language:jar:3.5.6:compile (optional) " ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:compile (optional) " -> "org.apache.commons:commons-configuration2:jar:2.9.0:compile (optional) " ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:compile (optional) " -> "commons-beanutils:commons-beanutils:jar:1.9.4:compile (optional) " ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:compile (optional) " -> "commons-collections:commons-collections:jar:3.2.2:compile (optional) " ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:compile (optional) " -> "org.apache.commons:commons-lang3:jar:3.11:compile" ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:compile (optional) " -> "org.apache.commons:commons-text:jar:1.10.0:compile (optional) " ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:compile (optional) " -> "org.javatuples:javatuples:jar:1.2:compile (optional) " ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:compile (optional) " -> "com.squareup:javapoet:jar:1.13.0:compile (optional) " ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:compile (optional) " -> "org.slf4j:jcl-over-slf4j:jar:1.7.25:compile (optional) " ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-language:jar:3.5.6:compile (optional) " -> "org.antlr:antlr4-runtime:jar:4.9.1:compile" ; 
+[INFO] 	"org.apache.commons:commons-configuration2:jar:2.9.0:compile (optional) " -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:compile" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:3.1.12:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"org.graalvm.nativeimage:svm:jar:22.0.0.2:provided" -> "org.graalvm.nativeimage:objectfile:jar:22.0.0.2:provided" ; 
+[INFO] 	"org.graalvm.nativeimage:svm:jar:22.0.0.2:provided" -> "org.graalvm.nativeimage:pointsto:jar:22.0.0.2:provided" ; 
+[INFO] 	"org.graalvm.nativeimage:svm:jar:22.0.0.2:provided" -> "org.graalvm.compiler:compiler:jar:22.0.0.2:provided" ; 
+[INFO] 	"org.graalvm.nativeimage:svm:jar:22.0.0.2:provided" -> "org.graalvm.nativeimage:native-image-base:jar:22.0.0.2:provided" ; 
+[INFO] 	"org.graalvm.compiler:compiler:jar:22.0.0.2:provided" -> "org.graalvm.truffle:truffle-api:jar:22.0.0.2:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "ch.qos.logback:logback-core:jar:1.2.3:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.28.2:test" -> "net.bytebuddy:byte-buddy:jar:1.9.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.28.2:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.9.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.28.2:test" -> "org.objenesis:objenesis:jar:2.6:test" ; 
+[INFO] 	"org.reactivestreams:reactive-streams-tck:jar:1.0.3:test" -> "org.reactivestreams:reactive-streams-examples:jar:1.0.3:test" ; 
+[INFO] 	"org.awaitility:awaitility:jar:4.0.3:test" -> "org.hamcrest:hamcrest:jar:2.1:test" ; 
+[INFO] 	"org.testng:testng:jar:7.3.0:test" -> "com.beust:jcommander:jar:1.78:test" ; 
+[INFO] 	"org.testng:testng:jar:7.3.0:test" -> "org.apache.ant:ant:jar:1.10.3:test" ; 
+[INFO] 	"org.testng:testng:jar:7.3.0:test" -> "com.google.inject:guice:jar:no_aop:4.2.2:test" ; 
+[INFO] 	"org.testng:testng:jar:7.3.0:test" -> "org.yaml:snakeyaml:jar:1.21:test" ; 
+[INFO] 	"org.apache.ant:ant:jar:1.10.3:test" -> "org.apache.ant:ant-launcher:jar:1.10.3:test" ; 
+[INFO] 	"com.google.inject:guice:jar:no_aop:4.2.2:test" -> "javax.inject:javax.inject:jar:1:test" ; 
+[INFO] 	"com.google.inject:guice:jar:no_aop:4.2.2:test" -> "aopalliance:aopalliance:jar:1.0:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock:jar:2.25.0:test" -> "org.eclipse.jetty:jetty-server:jar:9.2.28.v20190418:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock:jar:2.25.0:test" -> "org.eclipse.jetty:jetty-servlet:jar:9.2.28.v20190418:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock:jar:2.25.0:test" -> "org.eclipse.jetty:jetty-servlets:jar:9.2.28.v20190418:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock:jar:2.25.0:test" -> "org.eclipse.jetty:jetty-webapp:jar:9.2.28.v20190418:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock:jar:2.25.0:test" -> "com.google.guava:guava:jar:25.1-jre:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock:jar:2.25.0:test" -> "org.apache.httpcomponents:httpclient:jar:4.5.6:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock:jar:2.25.0:test" -> "org.xmlunit:xmlunit-core:jar:2.6.2:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock:jar:2.25.0:test" -> "org.xmlunit:xmlunit-legacy:jar:2.6.2:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock:jar:2.25.0:test" -> "org.xmlunit:xmlunit-placeholders:jar:2.6.2:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock:jar:2.25.0:test" -> "com.jayway.jsonpath:json-path:jar:2.4.0:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock:jar:2.25.0:test" -> "org.ow2.asm:asm:jar:7.0:compile" ; 
+[INFO] 	"com.github.tomakehurst:wiremock:jar:2.25.0:test" -> "net.sf.jopt-simple:jopt-simple:jar:5.0.3:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock:jar:2.25.0:test" -> "com.flipkart.zjsonpatch:zjsonpatch:jar:0.4.4:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock:jar:2.25.0:test" -> "com.github.jknack:handlebars:jar:4.0.7:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock:jar:2.25.0:test" -> "com.github.jknack:handlebars-helpers:jar:4.0.7:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock:jar:2.25.0:test" -> "commons-fileupload:commons-fileupload:jar:1.4:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.2.28.v20190418:test" -> "javax.servlet:javax.servlet-api:jar:3.1.0:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.2.28.v20190418:test" -> "org.eclipse.jetty:jetty-http:jar:9.2.28.v20190418:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.2.28.v20190418:test" -> "org.eclipse.jetty:jetty-io:jar:9.2.28.v20190418:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.2.28.v20190418:test" -> "org.eclipse.jetty:jetty-security:jar:9.2.28.v20190418:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:9.2.28.v20190418:test" -> "org.eclipse.jetty:jetty-continuation:jar:9.2.28.v20190418:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:9.2.28.v20190418:test" -> "org.eclipse.jetty:jetty-util:jar:9.2.28.v20190418:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-webapp:jar:9.2.28.v20190418:test" -> "org.eclipse.jetty:jetty-xml:jar:9.2.28.v20190418:test" ; 
+[INFO] 	"com.google.guava:guava:jar:25.1-jre:test" -> "org.checkerframework:checker-qual:jar:2.0.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:25.1-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.1.3:test" ; 
+[INFO] 	"com.google.guava:guava:jar:25.1-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:1.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:25.1-jre:test" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.14:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.6:test" -> "org.apache.httpcomponents:httpcore:jar:4.4.10:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.6:test" -> "commons-codec:commons-codec:jar:1.10:test" ; 
+[INFO] 	"org.xmlunit:xmlunit-core:jar:2.6.2:test" -> "javax.xml.bind:jaxb-api:jar:2.3.0:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.4.0:test" -> "net.minidev:json-smart:jar:2.3:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.3:test" -> "net.minidev:accessors-smart:jar:1.2:test" ; 
+[INFO] 	"commons-fileupload:commons-fileupload:jar:1.4:test" -> "commons-io:commons-io:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< com.datastax.oss:java-driver-core-shaded >--------------
+[INFO] Building Apache Cassandra Java Driver - core with shaded deps 4.17.1-SNAPSHOT [3/15]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/com/datastax/oss/java-driver-core/4.17.1-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ java-driver-core-shaded ---
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/com/datastax/oss/java-driver-core/4.17.1-SNAPSHOT/java-driver-core-4.17.1-SNAPSHOT.jar
+[INFO] digraph "com.datastax.oss:java-driver-core-shaded:jar:4.17.1-SNAPSHOT" { 
+[INFO] 	"com.datastax.oss:java-driver-core-shaded:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core-shaded:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:native-protocol:jar:1.5.1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core-shaded:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-shaded-guava:jar:25.1-jre-graal-sub-1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core-shaded:jar:4.17.1-SNAPSHOT" -> "com.typesafe:config:jar:1.4.1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core-shaded:jar:4.17.1-SNAPSHOT" -> "com.github.jnr:jnr-posix:jar:3.1.15:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core-shaded:jar:4.17.1-SNAPSHOT" -> "org.xerial.snappy:snappy-java:jar:1.1.10.1:compile (optional) " ; 
+[INFO] 	"com.datastax.oss:java-driver-core-shaded:jar:4.17.1-SNAPSHOT" -> "org.lz4:lz4-java:jar:1.7.1:compile (optional) " ; 
+[INFO] 	"com.datastax.oss:java-driver-core-shaded:jar:4.17.1-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.26:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core-shaded:jar:4.17.1-SNAPSHOT" -> "io.dropwizard.metrics:metrics-core:jar:4.1.18:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core-shaded:jar:4.17.1-SNAPSHOT" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core-shaded:jar:4.17.1-SNAPSHOT" -> "com.esri.geometry:esri-geometry-api:jar:1.2.1:compile (optional) " ; 
+[INFO] 	"com.datastax.oss:java-driver-core-shaded:jar:4.17.1-SNAPSHOT" -> "org.apache.tinkerpop:gremlin-core:jar:3.5.6:compile (optional) " ; 
+[INFO] 	"com.datastax.oss:java-driver-core-shaded:jar:4.17.1-SNAPSHOT" -> "org.apache.tinkerpop:tinkergraph-gremlin:jar:3.5.6:compile (optional) " ; 
+[INFO] 	"com.datastax.oss:java-driver-core-shaded:jar:4.17.1-SNAPSHOT" -> "org.reactivestreams:reactive-streams:jar:1.0.3:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core-shaded:jar:4.17.1-SNAPSHOT" -> "com.github.stephenc.jcip:jcip-annotations:jar:1.0-1:provided" ; 
+[INFO] 	"com.datastax.oss:java-driver-core-shaded:jar:4.17.1-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:3.1.12:provided" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:compile" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:compile" -> "com.github.jnr:jnr-ffi:jar:2.2.11:compile" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:compile" -> "com.github.jnr:jnr-constants:jar:0.10.3:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jffi:jar:1.3.9:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jffi:jar:native:1.3.9:runtime" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-commons:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-analysis:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-tree:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-util:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jnr-a64asm:jar:1.0.0:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jnr-x86asm:jar:1.0.2:compile" ; 
+[INFO] 	"com.esri.geometry:esri-geometry-api:jar:1.2.1:compile (optional) " -> "org.json:json:jar:20230227:compile (optional) " ; 
+[INFO] 	"com.esri.geometry:esri-geometry-api:jar:1.2.1:compile (optional) " -> "org.codehaus.jackson:jackson-core-asl:jar:1.9.12:compile (optional) " ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:compile (optional) " -> "org.apache.tinkerpop:gremlin-shaded:jar:3.5.6:compile (optional) " ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:compile (optional) " -> "org.apache.tinkerpop:gremlin-language:jar:3.5.6:compile (optional) " ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:compile (optional) " -> "org.apache.commons:commons-configuration2:jar:2.9.0:compile (optional) " ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:compile (optional) " -> "commons-beanutils:commons-beanutils:jar:1.9.4:compile (optional) " ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:compile (optional) " -> "commons-collections:commons-collections:jar:3.2.2:compile (optional) " ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:compile (optional) " -> "org.apache.commons:commons-lang3:jar:3.11:compile (optional) " ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:compile (optional) " -> "org.apache.commons:commons-text:jar:1.10.0:compile (optional) " ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:compile (optional) " -> "org.javatuples:javatuples:jar:1.2:compile (optional) " ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:compile (optional) " -> "com.squareup:javapoet:jar:1.13.0:compile (optional) " ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:compile (optional) " -> "org.slf4j:jcl-over-slf4j:jar:1.7.25:compile (optional) " ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-language:jar:3.5.6:compile (optional) " -> "org.antlr:antlr4-runtime:jar:4.9.1:compile (optional) " ; 
+[INFO] 	"org.apache.commons:commons-configuration2:jar:2.9.0:compile (optional) " -> "commons-logging:commons-logging:jar:1.2:compile (optional) " ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:3.1.12:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< com.datastax.oss:java-driver-query-builder >-------------
+[INFO] Building Apache Cassandra Java Driver - query builder 4.17.1-SNAPSHOT [4/15]
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ java-driver-query-builder ---
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/com/datastax/oss/java-driver-core/4.17.1-SNAPSHOT/java-driver-core-4.17.1-SNAPSHOT-tests.jar
+[INFO] digraph "com.datastax.oss:java-driver-query-builder:bundle:4.17.1-SNAPSHOT" { 
+[INFO] 	"com.datastax.oss:java-driver-query-builder:bundle:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-query-builder:bundle:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-shaded-guava:jar:25.1-jre-graal-sub-1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-query-builder:bundle:4.17.1-SNAPSHOT" -> "com.github.stephenc.jcip:jcip-annotations:jar:1.0-1:provided" ; 
+[INFO] 	"com.datastax.oss:java-driver-query-builder:bundle:4.17.1-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:3.1.12:provided" ; 
+[INFO] 	"com.datastax.oss:java-driver-query-builder:bundle:4.17.1-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-query-builder:bundle:4.17.1-SNAPSHOT" -> "com.tngtech.java:junit-dataprovider:jar:1.13.1:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-query-builder:bundle:4.17.1-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.19.0:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-query-builder:bundle:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-core:test-jar:tests:4.17.1-SNAPSHOT:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.datastax.oss:native-protocol:jar:1.5.1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.typesafe:config:jar:1.4.1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.github.jnr:jnr-posix:jar:3.1.15:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "org.slf4j:slf4j-api:jar:1.7.26:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "io.dropwizard.metrics:metrics-core:jar:4.1.18:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.3:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:compile" -> "com.github.jnr:jnr-ffi:jar:2.2.11:compile" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:compile" -> "com.github.jnr:jnr-constants:jar:0.10.3:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jffi:jar:1.3.9:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jffi:jar:native:1.3.9:runtime" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-commons:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-analysis:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-tree:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-util:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jnr-a64asm:jar:1.0.0:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jnr-x86asm:jar:1.0.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:compile" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:3.1.12:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< com.datastax.oss:java-driver-mapper-runtime >-------------
+[INFO] Building Apache Cassandra Java Driver - object mapper runtime 4.17.1-SNAPSHOT [5/15]
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/com/datastax/oss/java-driver-query-builder/4.17.1-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ java-driver-mapper-runtime ---
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/com/datastax/oss/java-driver-query-builder/4.17.1-SNAPSHOT/java-driver-query-builder-4.17.1-SNAPSHOT.jar
+[INFO] digraph "com.datastax.oss:java-driver-mapper-runtime:bundle:4.17.1-SNAPSHOT" { 
+[INFO] 	"com.datastax.oss:java-driver-mapper-runtime:bundle:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-mapper-runtime:bundle:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-query-builder:jar:4.17.1-SNAPSHOT:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-mapper-runtime:bundle:4.17.1-SNAPSHOT" -> "com.github.stephenc.jcip:jcip-annotations:jar:1.0-1:provided" ; 
+[INFO] 	"com.datastax.oss:java-driver-mapper-runtime:bundle:4.17.1-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:3.1.12:provided" ; 
+[INFO] 	"com.datastax.oss:java-driver-mapper-runtime:bundle:4.17.1-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-mapper-runtime:bundle:4.17.1-SNAPSHOT" -> "org.testng:testng:jar:7.3.0:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-mapper-runtime:bundle:4.17.1-SNAPSHOT" -> "org.reactivestreams:reactive-streams-tck:jar:1.0.3:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-mapper-runtime:bundle:4.17.1-SNAPSHOT" -> "io.reactivex.rxjava2:rxjava:jar:2.2.2:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-mapper-runtime:bundle:4.17.1-SNAPSHOT" -> "org.mockito:mockito-core:jar:2.28.2:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-mapper-runtime:bundle:4.17.1-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.19.0:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-mapper-runtime:bundle:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-core:test-jar:tests:4.17.1-SNAPSHOT:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.datastax.oss:native-protocol:jar:1.5.1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.datastax.oss:java-driver-shaded-guava:jar:25.1-jre-graal-sub-1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.typesafe:config:jar:1.4.1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.github.jnr:jnr-posix:jar:3.1.15:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "org.slf4j:slf4j-api:jar:1.7.26:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "io.dropwizard.metrics:metrics-core:jar:4.1.18:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.3:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:compile" -> "com.github.jnr:jnr-ffi:jar:2.2.11:compile" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:compile" -> "com.github.jnr:jnr-constants:jar:0.10.3:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jffi:jar:1.3.9:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jffi:jar:native:1.3.9:runtime" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-commons:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-analysis:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-tree:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-util:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jnr-a64asm:jar:1.0.0:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jnr-x86asm:jar:1.0.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:compile" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:3.1.12:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.testng:testng:jar:7.3.0:test" -> "com.beust:jcommander:jar:1.78:test" ; 
+[INFO] 	"org.testng:testng:jar:7.3.0:test" -> "org.apache.ant:ant:jar:1.10.3:test" ; 
+[INFO] 	"org.testng:testng:jar:7.3.0:test" -> "com.google.inject:guice:jar:no_aop:4.2.2:test" ; 
+[INFO] 	"org.testng:testng:jar:7.3.0:test" -> "org.yaml:snakeyaml:jar:1.21:test" ; 
+[INFO] 	"org.apache.ant:ant:jar:1.10.3:test" -> "org.apache.ant:ant-launcher:jar:1.10.3:test" ; 
+[INFO] 	"com.google.inject:guice:jar:no_aop:4.2.2:test" -> "javax.inject:javax.inject:jar:1:test" ; 
+[INFO] 	"com.google.inject:guice:jar:no_aop:4.2.2:test" -> "aopalliance:aopalliance:jar:1.0:test" ; 
+[INFO] 	"com.google.inject:guice:jar:no_aop:4.2.2:test" -> "com.google.guava:guava:jar:25.1-jre:test" ; 
+[INFO] 	"com.google.guava:guava:jar:25.1-jre:test" -> "org.checkerframework:checker-qual:jar:2.0.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:25.1-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.1.3:test" ; 
+[INFO] 	"com.google.guava:guava:jar:25.1-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:1.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:25.1-jre:test" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.14:test" ; 
+[INFO] 	"org.reactivestreams:reactive-streams-tck:jar:1.0.3:test" -> "org.reactivestreams:reactive-streams-examples:jar:1.0.3:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.28.2:test" -> "net.bytebuddy:byte-buddy:jar:1.9.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.28.2:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.9.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.28.2:test" -> "org.objenesis:objenesis:jar:2.6:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------< com.datastax.oss:java-driver-mapper-processor >------------
+[INFO] Building Apache Cassandra Java Driver - object mapper processor 4.17.1-SNAPSHOT [6/15]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/com/datastax/oss/java-driver-mapper-runtime/4.17.1-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ java-driver-mapper-processor ---
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/com/datastax/oss/java-driver-mapper-runtime/4.17.1-SNAPSHOT/java-driver-mapper-runtime-4.17.1-SNAPSHOT.jar
+[INFO] digraph "com.datastax.oss:java-driver-mapper-processor:jar:4.17.1-SNAPSHOT" { 
+[INFO] 	"com.datastax.oss:java-driver-mapper-processor:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-mapper-runtime:jar:4.17.1-SNAPSHOT:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-mapper-processor:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-shaded-guava:jar:25.1-jre-graal-sub-1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-mapper-processor:jar:4.17.1-SNAPSHOT" -> "com.squareup:javapoet:jar:1.13.0:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-mapper-processor:jar:4.17.1-SNAPSHOT" -> "com.github.stephenc.jcip:jcip-annotations:jar:1.0-1:provided" ; 
+[INFO] 	"com.datastax.oss:java-driver-mapper-processor:jar:4.17.1-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:3.1.12:provided" ; 
+[INFO] 	"com.datastax.oss:java-driver-mapper-processor:jar:4.17.1-SNAPSHOT" -> "com.google.testing.compile:compile-testing:jar:0.19:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-mapper-processor:jar:4.17.1-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-mapper-processor:jar:4.17.1-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.19.0:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-mapper-processor:jar:4.17.1-SNAPSHOT" -> "com.tngtech.java:junit-dataprovider:jar:1.13.1:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-mapper-processor:jar:4.17.1-SNAPSHOT" -> "org.mockito:mockito-core:jar:2.28.2:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-mapper-processor:jar:4.17.1-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.2.3:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-mapper-processor:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-core:test-jar:tests:4.17.1-SNAPSHOT:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-mapper-runtime:jar:4.17.1-SNAPSHOT:compile" -> "com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-mapper-runtime:jar:4.17.1-SNAPSHOT:compile" -> "com.datastax.oss:java-driver-query-builder:jar:4.17.1-SNAPSHOT:compile" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:3.1.12:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"com.google.testing.compile:compile-testing:jar:0.19:test" -> "com.google.truth:truth:jar:1.1:test" ; 
+[INFO] 	"com.google.testing.compile:compile-testing:jar:0.19:test" -> "com.google.guava:guava:jar:25.1-jre:test" ; 
+[INFO] 	"com.google.testing.compile:compile-testing:jar:0.19:test" -> "com.google.auto.value:auto-value:jar:1.7.4:test" ; 
+[INFO] 	"com.google.testing.compile:compile-testing:jar:0.19:test" -> "com.google.auto:auto-common:jar:0.11:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.1:test" -> "org.checkerframework:checker-qual:jar:3.7.0:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.1:test" -> "com.google.auto.value:auto-value-annotations:jar:1.7.4:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.1:test" -> "com.google.errorprone:error_prone_annotations:jar:2.4.0:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.1:test" -> "org.ow2.asm:asm:jar:9.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:25.1-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:1.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:25.1-jre:test" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.14:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.28.2:test" -> "net.bytebuddy:byte-buddy:jar:1.9.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.28.2:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.9.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.28.2:test" -> "org.objenesis:objenesis:jar:2.6:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "ch.qos.logback:logback-core:jar:1.2.3:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "org.slf4j:slf4j-api:jar:1.7.26:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:test-jar:tests:4.17.1-SNAPSHOT:test" -> "com.datastax.oss:native-protocol:jar:1.5.1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:test-jar:tests:4.17.1-SNAPSHOT:test" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:test-jar:tests:4.17.1-SNAPSHOT:test" -> "com.typesafe:config:jar:1.4.1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:test-jar:tests:4.17.1-SNAPSHOT:test" -> "com.github.jnr:jnr-posix:jar:3.1.15:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:test-jar:tests:4.17.1-SNAPSHOT:test" -> "io.dropwizard.metrics:metrics-core:jar:4.1.18:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:test-jar:tests:4.17.1-SNAPSHOT:test" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:test-jar:tests:4.17.1-SNAPSHOT:test" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:test-jar:tests:4.17.1-SNAPSHOT:test" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:test-jar:tests:4.17.1-SNAPSHOT:test" -> "org.reactivestreams:reactive-streams:jar:1.0.3:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:compile" -> "com.github.jnr:jnr-ffi:jar:2.2.11:compile" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:compile" -> "com.github.jnr:jnr-constants:jar:0.10.3:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jffi:jar:1.3.9:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jffi:jar:native:1.3.9:runtime" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-commons:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-analysis:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-tree:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-util:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jnr-a64asm:jar:1.0.0:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jnr-x86asm:jar:1.0.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------< com.datastax.oss:java-driver-metrics-micrometer >-----------
+[INFO] Building Apache Cassandra Java Driver - Metrics - Micrometer 4.17.1-SNAPSHOT [7/15]
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ java-driver-metrics-micrometer ---
+[INFO] digraph "com.datastax.oss:java-driver-metrics-micrometer:bundle:4.17.1-SNAPSHOT" { 
+[INFO] 	"com.datastax.oss:java-driver-metrics-micrometer:bundle:4.17.1-SNAPSHOT" -> "io.micrometer:micrometer-core:jar:1.6.5:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-metrics-micrometer:bundle:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-metrics-micrometer:bundle:4.17.1-SNAPSHOT" -> "com.github.stephenc.jcip:jcip-annotations:jar:1.0-1:provided" ; 
+[INFO] 	"com.datastax.oss:java-driver-metrics-micrometer:bundle:4.17.1-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:3.1.12:provided" ; 
+[INFO] 	"com.datastax.oss:java-driver-metrics-micrometer:bundle:4.17.1-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.2.3:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-metrics-micrometer:bundle:4.17.1-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-metrics-micrometer:bundle:4.17.1-SNAPSHOT" -> "com.tngtech.java:junit-dataprovider:jar:1.13.1:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-metrics-micrometer:bundle:4.17.1-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.19.0:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-metrics-micrometer:bundle:4.17.1-SNAPSHOT" -> "org.mockito:mockito-core:jar:2.28.2:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-metrics-micrometer:bundle:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-core:test-jar:tests:4.17.1-SNAPSHOT:test" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.6.5:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.6.5:compile" -> "org.latencyutils:LatencyUtils:jar:2.0.3:runtime" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.datastax.oss:native-protocol:jar:1.5.1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.datastax.oss:java-driver-shaded-guava:jar:25.1-jre-graal-sub-1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.typesafe:config:jar:1.4.1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.github.jnr:jnr-posix:jar:3.1.15:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "org.slf4j:slf4j-api:jar:1.7.26:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.3:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:compile" -> "com.github.jnr:jnr-ffi:jar:2.2.11:compile" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:compile" -> "com.github.jnr:jnr-constants:jar:0.10.3:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jffi:jar:1.3.9:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jffi:jar:native:1.3.9:runtime" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-commons:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-analysis:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-tree:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-util:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jnr-a64asm:jar:1.0.0:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jnr-x86asm:jar:1.0.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:compile" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:3.1.12:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "ch.qos.logback:logback-core:jar:1.2.3:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.28.2:test" -> "net.bytebuddy:byte-buddy:jar:1.9.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.28.2:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.9.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.28.2:test" -> "org.objenesis:objenesis:jar:2.6:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:test-jar:tests:4.17.1-SNAPSHOT:test" -> "io.dropwizard.metrics:metrics-core:jar:4.1.18:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------< com.datastax.oss:java-driver-metrics-microprofile >----------
+[INFO] Building Apache Cassandra Java Driver - Metrics - Microprofile 4.17.1-SNAPSHOT [8/15]
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ java-driver-metrics-microprofile ---
+[INFO] digraph "com.datastax.oss:java-driver-metrics-microprofile:bundle:4.17.1-SNAPSHOT" { 
+[INFO] 	"com.datastax.oss:java-driver-metrics-microprofile:bundle:4.17.1-SNAPSHOT" -> "org.eclipse.microprofile.metrics:microprofile-metrics-api:jar:3.0:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-metrics-microprofile:bundle:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-metrics-microprofile:bundle:4.17.1-SNAPSHOT" -> "com.github.stephenc.jcip:jcip-annotations:jar:1.0-1:provided" ; 
+[INFO] 	"com.datastax.oss:java-driver-metrics-microprofile:bundle:4.17.1-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:3.1.12:provided" ; 
+[INFO] 	"com.datastax.oss:java-driver-metrics-microprofile:bundle:4.17.1-SNAPSHOT" -> "io.smallrye:smallrye-metrics:jar:3.0.3:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-metrics-microprofile:bundle:4.17.1-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.2.3:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-metrics-microprofile:bundle:4.17.1-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-metrics-microprofile:bundle:4.17.1-SNAPSHOT" -> "com.tngtech.java:junit-dataprovider:jar:1.13.1:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-metrics-microprofile:bundle:4.17.1-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.19.0:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-metrics-microprofile:bundle:4.17.1-SNAPSHOT" -> "org.mockito:mockito-core:jar:2.28.2:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-metrics-microprofile:bundle:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-core:test-jar:tests:4.17.1-SNAPSHOT:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.datastax.oss:native-protocol:jar:1.5.1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.datastax.oss:java-driver-shaded-guava:jar:25.1-jre-graal-sub-1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.typesafe:config:jar:1.4.1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.github.jnr:jnr-posix:jar:3.1.15:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "org.slf4j:slf4j-api:jar:1.7.26:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.3:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:compile" -> "com.github.jnr:jnr-ffi:jar:2.2.11:compile" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:compile" -> "com.github.jnr:jnr-constants:jar:0.10.3:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jffi:jar:1.3.9:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jffi:jar:native:1.3.9:runtime" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-commons:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-analysis:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-tree:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-util:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jnr-a64asm:jar:1.0.0:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jnr-x86asm:jar:1.0.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:compile" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:3.1.12:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"io.smallrye:smallrye-metrics:jar:3.0.3:test" -> "org.jboss.logging:jboss-logging:jar:3.4.1.Final:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "ch.qos.logback:logback-core:jar:1.2.3:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.28.2:test" -> "net.bytebuddy:byte-buddy:jar:1.9.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.28.2:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.9.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.28.2:test" -> "org.objenesis:objenesis:jar:2.6:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:test-jar:tests:4.17.1-SNAPSHOT:test" -> "io.dropwizard.metrics:metrics-core:jar:4.1.18:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:test-jar:tests:4.17.1-SNAPSHOT:test" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< com.datastax.oss:java-driver-test-infra >---------------
+[INFO] Building Apache Cassandra Java Driver - test infrastructure tools 4.17.1-SNAPSHOT [9/15]
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ java-driver-test-infra ---
+[INFO] digraph "com.datastax.oss:java-driver-test-infra:bundle:4.17.1-SNAPSHOT" { 
+[INFO] 	"com.datastax.oss:java-driver-test-infra:bundle:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-test-infra:bundle:4.17.1-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:3.1.12:provided" ; 
+[INFO] 	"com.datastax.oss:java-driver-test-infra:bundle:4.17.1-SNAPSHOT" -> "junit:junit:jar:4.13.2:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-test-infra:bundle:4.17.1-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.19.0:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-test-infra:bundle:4.17.1-SNAPSHOT" -> "com.datastax.oss.simulacron:simulacron-native-server:jar:0.11.0:compile (optional) " ; 
+[INFO] 	"com.datastax.oss:java-driver-test-infra:bundle:4.17.1-SNAPSHOT" -> "org.apache.commons:commons-exec:jar:1.3:compile (optional) " ; 
+[INFO] 	"com.datastax.oss:java-driver-test-infra:bundle:4.17.1-SNAPSHOT" -> "org.awaitility:awaitility:jar:4.0.3:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.datastax.oss:native-protocol:jar:1.5.1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.datastax.oss:java-driver-shaded-guava:jar:25.1-jre-graal-sub-1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.typesafe:config:jar:1.4.1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.github.jnr:jnr-posix:jar:3.1.15:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "org.slf4j:slf4j-api:jar:1.7.26:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "io.dropwizard.metrics:metrics-core:jar:4.1.18:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.3:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:compile" -> "com.github.jnr:jnr-ffi:jar:2.2.11:compile" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:compile" -> "com.github.jnr:jnr-constants:jar:0.10.3:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jffi:jar:1.3.9:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jffi:jar:native:1.3.9:runtime" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-commons:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-analysis:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-tree:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-util:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jnr-a64asm:jar:1.0.0:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jnr-x86asm:jar:1.0.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:compile" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:3.1.12:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"junit:junit:jar:4.13.2:compile" -> "org.hamcrest:hamcrest-core:jar:1.3:compile" ; 
+[INFO] 	"com.datastax.oss.simulacron:simulacron-native-server:jar:0.11.0:compile (optional) " -> "com.datastax.oss.simulacron:simulacron-common:jar:0.11.0:compile (optional) " ; 
+[INFO] 	"com.datastax.oss.simulacron:simulacron-common:jar:0.11.0:compile (optional) " -> "com.datastax.oss.simulacron:simulacron-native-protocol-json:jar:0.11.0:compile (optional) " ; 
+[INFO] 	"org.awaitility:awaitility:jar:4.0.3:compile" -> "org.hamcrest:hamcrest:jar:2.1:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------< com.datastax.oss:java-driver-integration-tests >-----------
+[INFO] Building Apache Cassandra Java Driver - integration tests 4.17.1-SNAPSHOT [10/15]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/com/datastax/oss/java-driver-test-infra/4.17.1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/com/datastax/oss/java-driver-mapper-processor/4.17.1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/com/datastax/oss/java-driver-metrics-micrometer/4.17.1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/com/datastax/oss/java-driver-metrics-microprofile/4.17.1-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ java-driver-integration-tests ---
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/com/datastax/oss/java-driver-test-infra/4.17.1-SNAPSHOT/java-driver-test-infra-4.17.1-SNAPSHOT.jar
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/com/datastax/oss/java-driver-mapper-processor/4.17.1-SNAPSHOT/java-driver-mapper-processor-4.17.1-SNAPSHOT.jar
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/com/datastax/oss/java-driver-metrics-micrometer/4.17.1-SNAPSHOT/java-driver-metrics-micrometer-4.17.1-SNAPSHOT.jar
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/com/datastax/oss/java-driver-metrics-microprofile/4.17.1-SNAPSHOT/java-driver-metrics-microprofile-4.17.1-SNAPSHOT.jar
+[INFO] digraph "com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" { 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-test-infra:jar:4.17.1-SNAPSHOT:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-query-builder:jar:4.17.1-SNAPSHOT:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-mapper-processor:jar:4.17.1-SNAPSHOT:test (optional) " ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-mapper-runtime:jar:4.17.1-SNAPSHOT:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-core:test-jar:tests:4.17.1-SNAPSHOT:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-metrics-micrometer:jar:4.17.1-SNAPSHOT:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-metrics-microprofile:jar:4.17.1-SNAPSHOT:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "com.github.stephenc.jcip:jcip-annotations:jar:1.0-1:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:3.1.12:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "com.tngtech.java:junit-dataprovider:jar:1.13.1:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.2.3:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "org.mockito:mockito-core:jar:2.28.2:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "com.google.guava:guava:jar:25.1-jre:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "org.xerial.snappy:snappy-java:jar:1.1.10.1:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "org.lz4:lz4-java:jar:1.7.1:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "io.reactivex.rxjava2:rxjava:jar:2.2.2:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "org.apache.tinkerpop:gremlin-core:jar:3.5.6:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "org.apache.tinkerpop:tinkergraph-gremlin:jar:3.5.6:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "org.apache.directory.server:apacheds-core:jar:2.0.0-M19:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "org.apache.directory.server:apacheds-protocol-kerberos:jar:2.0.0-M19:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "org.apache.directory.server:apacheds-interceptor-kerberos:jar:2.0.0-M19:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "org.apache.directory.server:apacheds-protocol-ldap:jar:2.0.0-M19:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "org.apache.directory.server:apacheds-ldif-partition:jar:2.0.0-M19:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "org.apache.directory.server:apacheds-jdbm-partition:jar:2.0.0-M19:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "org.apache.directory.api:api-ldap-codec-standalone:jar:1.0.0-M26:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "com.github.tomakehurst:wiremock:jar:2.25.0:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss.simulacron:simulacron-native-server:jar:0.11.0:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "org.apache.commons:commons-exec:jar:1.3:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "io.smallrye:smallrye-metrics:jar:3.0.3:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "io.projectreactor:reactor-core:jar:3.4.4:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "io.projectreactor:reactor-test:jar:3.4.4:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "io.projectreactor.tools:blockhound-junit-platform:jar:1.0.8.RELEASE:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-integration-tests:jar:4.17.1-SNAPSHOT" -> "com.esri.geometry:esri-geometry-api:jar:1.2.1:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-test-infra:jar:4.17.1-SNAPSHOT:test" -> "com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-test-infra:jar:4.17.1-SNAPSHOT:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-test-infra:jar:4.17.1-SNAPSHOT:test" -> "org.assertj:assertj-core:jar:3.19.0:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-test-infra:jar:4.17.1-SNAPSHOT:test" -> "org.awaitility:awaitility:jar:4.0.3:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.awaitility:awaitility:jar:4.0.3:test" -> "org.hamcrest:hamcrest:jar:2.1:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-query-builder:jar:4.17.1-SNAPSHOT:test" -> "com.datastax.oss:java-driver-shaded-guava:jar:25.1-jre-graal-sub-1:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-mapper-processor:jar:4.17.1-SNAPSHOT:test (optional) " -> "com.squareup:javapoet:jar:1.13.0:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:test-jar:tests:4.17.1-SNAPSHOT:test" -> "com.datastax.oss:native-protocol:jar:1.5.1:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:test-jar:tests:4.17.1-SNAPSHOT:test" -> "io.netty:netty-handler:jar:4.1.94.Final:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:test-jar:tests:4.17.1-SNAPSHOT:test" -> "com.typesafe:config:jar:1.4.1:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:test-jar:tests:4.17.1-SNAPSHOT:test" -> "com.github.jnr:jnr-posix:jar:3.1.15:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:test-jar:tests:4.17.1-SNAPSHOT:test" -> "org.slf4j:slf4j-api:jar:1.7.26:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:test-jar:tests:4.17.1-SNAPSHOT:test" -> "io.dropwizard.metrics:metrics-core:jar:4.1.18:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:test-jar:tests:4.17.1-SNAPSHOT:test" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:test-jar:tests:4.17.1-SNAPSHOT:test" -> "org.reactivestreams:reactive-streams:jar:1.0.3:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:test" -> "io.netty:netty-common:jar:4.1.94.Final:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:test" -> "io.netty:netty-resolver:jar:4.1.94.Final:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:test" -> "io.netty:netty-buffer:jar:4.1.94.Final:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:test" -> "io.netty:netty-transport:jar:4.1.94.Final:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:test" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:test" -> "io.netty:netty-codec:jar:4.1.94.Final:test" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:test" -> "com.github.jnr:jnr-ffi:jar:2.2.11:test" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:test" -> "com.github.jnr:jnr-constants:jar:0.10.3:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "com.github.jnr:jffi:jar:1.3.9:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "com.github.jnr:jffi:jar:native:1.3.9:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "org.ow2.asm:asm-commons:jar:9.2:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "org.ow2.asm:asm-analysis:jar:9.2:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "org.ow2.asm:asm-tree:jar:9.2:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "org.ow2.asm:asm-util:jar:9.2:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "com.github.jnr:jnr-a64asm:jar:1.0.0:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "com.github.jnr:jnr-x86asm:jar:1.0.2:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-metrics-micrometer:jar:4.17.1-SNAPSHOT:test" -> "io.micrometer:micrometer-core:jar:1.6.5:test" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.6.5:test" -> "org.latencyutils:LatencyUtils:jar:2.0.3:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-metrics-microprofile:jar:4.17.1-SNAPSHOT:test" -> "org.eclipse.microprofile.metrics:microprofile-metrics-api:jar:3.0:test" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:3.1.12:test" -> "com.google.code.findbugs:jsr305:jar:3.0.2:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "ch.qos.logback:logback-core:jar:1.2.3:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.28.2:test" -> "net.bytebuddy:byte-buddy:jar:1.9.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.28.2:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.9.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.28.2:test" -> "org.objenesis:objenesis:jar:2.6:test" ; 
+[INFO] 	"com.google.guava:guava:jar:25.1-jre:test" -> "org.checkerframework:checker-qual:jar:2.0.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:25.1-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.1.3:test" ; 
+[INFO] 	"com.google.guava:guava:jar:25.1-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:1.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:25.1-jre:test" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.14:test" ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:test" -> "org.apache.tinkerpop:gremlin-shaded:jar:3.5.6:test" ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:test" -> "org.apache.tinkerpop:gremlin-language:jar:3.5.6:test" ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:test" -> "org.apache.commons:commons-configuration2:jar:2.9.0:test" ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:test" -> "commons-beanutils:commons-beanutils:jar:1.9.4:test" ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:test" -> "commons-collections:commons-collections:jar:3.2.2:test" ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:test" -> "org.apache.commons:commons-lang3:jar:3.11:test" ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:test" -> "org.apache.commons:commons-text:jar:1.10.0:test" ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:test" -> "org.javatuples:javatuples:jar:1.2:test" ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:test" -> "org.slf4j:jcl-over-slf4j:jar:1.7.25:test" ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-language:jar:3.5.6:test" -> "org.antlr:antlr4-runtime:jar:4.9.1:test" ; 
+[INFO] 	"org.apache.commons:commons-configuration2:jar:2.9.0:test" -> "commons-logging:commons-logging:jar:1.2:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-core:jar:2.0.0-M19:test" -> "org.apache.directory.server:apacheds-i18n:jar:2.0.0-M19:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-core:jar:2.0.0-M19:test" -> "org.apache.directory.server:apacheds-core-shared:jar:2.0.0-M19:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-core:jar:2.0.0-M19:test" -> "org.apache.directory.server:apacheds-interceptors-admin:jar:2.0.0-M19:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-core:jar:2.0.0-M19:test" -> "org.apache.directory.server:apacheds-interceptors-authn:jar:2.0.0-M19:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-core:jar:2.0.0-M19:test" -> "org.apache.directory.server:apacheds-interceptors-number:jar:2.0.0-M19:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-core:jar:2.0.0-M19:test" -> "org.apache.directory.server:apacheds-interceptors-authz:jar:2.0.0-M19:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-core:jar:2.0.0-M19:test" -> "org.apache.directory.server:apacheds-interceptors-changelog:jar:2.0.0-M19:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-core:jar:2.0.0-M19:test" -> "org.apache.directory.server:apacheds-interceptors-collective:jar:2.0.0-M19:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-core:jar:2.0.0-M19:test" -> "org.apache.directory.server:apacheds-interceptors-event:jar:2.0.0-M19:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-core:jar:2.0.0-M19:test" -> "org.apache.directory.server:apacheds-interceptors-exception:jar:2.0.0-M19:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-core:jar:2.0.0-M19:test" -> "org.apache.directory.server:apacheds-interceptors-journal:jar:2.0.0-M19:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-core:jar:2.0.0-M19:test" -> "org.apache.directory.server:apacheds-interceptors-normalization:jar:2.0.0-M19:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-core:jar:2.0.0-M19:test" -> "org.apache.directory.server:apacheds-interceptors-operational:jar:2.0.0-M19:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-core:jar:2.0.0-M19:test" -> "org.apache.directory.server:apacheds-interceptors-referral:jar:2.0.0-M19:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-core:jar:2.0.0-M19:test" -> "org.apache.directory.server:apacheds-interceptors-schema:jar:2.0.0-M19:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-core:jar:2.0.0-M19:test" -> "org.apache.directory.server:apacheds-interceptors-subtree:jar:2.0.0-M19:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-core:jar:2.0.0-M19:test" -> "org.apache.directory.server:apacheds-interceptors-trigger:jar:2.0.0-M19:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-core:jar:2.0.0-M19:test" -> "commons-lang:commons-lang:jar:2.6:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-core:jar:2.0.0-M19:test" -> "org.apache.directory.api:api-ldap-codec-core:jar:1.0.0-M26:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-core:jar:2.0.0-M19:test" -> "org.apache.directory.api:api-ldap-extras-util:jar:1.0.0-M26:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-core:jar:2.0.0-M19:test" -> "org.apache.directory.api:api-ldap-model:jar:1.0.0-M26:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-core:jar:2.0.0-M19:test" -> "org.apache.directory.api:api-ldap-schema-data:jar:1.0.0-M26:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-core:jar:2.0.0-M19:test" -> "org.apache.directory.api:api-util:jar:1.0.0-M26:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-core:jar:2.0.0-M19:test" -> "bouncycastle:bcprov-jdk15:jar:140:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-core-shared:jar:2.0.0-M19:test" -> "org.apache.directory.mavibot:mavibot:jar:1.0.0-M6:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-interceptors-authz:jar:2.0.0-M19:test" -> "org.apache.directory.api:api-ldap-extras-aci:jar:1.0.0-M26:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-interceptors-schema:jar:2.0.0-M19:test" -> "org.apache.directory.api:api-i18n:jar:1.0.0-M26:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-interceptors-trigger:jar:2.0.0-M19:test" -> "org.apache.directory.api:api-ldap-extras-trigger:jar:1.0.0-M26:test" ; 
+[INFO] 	"org.apache.directory.api:api-ldap-model:jar:1.0.0-M26:test" -> "antlr:antlr:jar:2.7.7:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-protocol-kerberos:jar:2.0.0-M19:test" -> "org.apache.directory.server:apacheds-core-api:jar:2.0.0-M19:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-protocol-kerberos:jar:2.0.0-M19:test" -> "org.apache.directory.server:apacheds-kerberos-codec:jar:2.0.0-M19:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-protocol-kerberos:jar:2.0.0-M19:test" -> "org.apache.directory.server:apacheds-protocol-shared:jar:2.0.0-M19:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-protocol-kerberos:jar:2.0.0-M19:test" -> "org.apache.directory.api:api-asn1-api:jar:1.0.0-M26:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-protocol-kerberos:jar:2.0.0-M19:test" -> "org.apache.mina:mina-core:jar:2.0.9:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-protocol-kerberos:jar:2.0.0-M19:test" -> "net.sf.ehcache:ehcache-core:jar:2.4.4:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-core-api:jar:2.0.0-M19:test" -> "org.apache.directory.server:apacheds-core-constants:jar:2.0.0-M19:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-protocol-ldap:jar:2.0.0-M19:test" -> "org.apache.directory.jdbm:apacheds-jdbm1:jar:2.0.0-M3:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-protocol-ldap:jar:2.0.0-M19:test" -> "org.apache.directory.api:api-asn1-ber:jar:1.0.0-M26:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-protocol-ldap:jar:2.0.0-M19:test" -> "org.apache.directory.api:api-ldap-client-api:jar:1.0.0-M26:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-protocol-ldap:jar:2.0.0-M19:test" -> "org.apache.directory.api:api-ldap-extras-codec-api:jar:1.0.0-M26:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-protocol-ldap:jar:2.0.0-M19:test" -> "org.apache.directory.api:api-ldap-extras-codec:jar:1.0.0-M26:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-protocol-ldap:jar:2.0.0-M19:test" -> "org.apache.directory.api:api-ldap-extras-sp:jar:1.0.0-M26:test" ; 
+[INFO] 	"org.apache.directory.api:api-ldap-client-api:jar:1.0.0-M26:test" -> "commons-pool:commons-pool:jar:1.6:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-ldif-partition:jar:2.0.0-M19:test" -> "org.apache.directory.server:apacheds-xdbm-partition:jar:2.0.0-M19:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-ldif-partition:jar:2.0.0-M19:test" -> "commons-io:commons-io:jar:2.4:test" ; 
+[INFO] 	"org.apache.directory.server:apacheds-jdbm-partition:jar:2.0.0-M19:test" -> "org.apache.directory.server:apacheds-core-avl:jar:2.0.0-M19:test" ; 
+[INFO] 	"org.apache.directory.api:api-ldap-codec-standalone:jar:1.0.0-M26:test" -> "org.apache.directory.api:api-ldap-net-mina:jar:1.0.0-M26:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock:jar:2.25.0:test" -> "org.eclipse.jetty:jetty-server:jar:9.2.28.v20190418:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock:jar:2.25.0:test" -> "org.eclipse.jetty:jetty-servlet:jar:9.2.28.v20190418:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock:jar:2.25.0:test" -> "org.eclipse.jetty:jetty-servlets:jar:9.2.28.v20190418:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock:jar:2.25.0:test" -> "org.eclipse.jetty:jetty-webapp:jar:9.2.28.v20190418:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock:jar:2.25.0:test" -> "org.apache.httpcomponents:httpclient:jar:4.5.6:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock:jar:2.25.0:test" -> "org.xmlunit:xmlunit-core:jar:2.6.2:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock:jar:2.25.0:test" -> "org.xmlunit:xmlunit-legacy:jar:2.6.2:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock:jar:2.25.0:test" -> "org.xmlunit:xmlunit-placeholders:jar:2.6.2:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock:jar:2.25.0:test" -> "com.jayway.jsonpath:json-path:jar:2.4.0:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock:jar:2.25.0:test" -> "org.ow2.asm:asm:jar:7.0:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock:jar:2.25.0:test" -> "net.sf.jopt-simple:jopt-simple:jar:5.0.3:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock:jar:2.25.0:test" -> "com.flipkart.zjsonpatch:zjsonpatch:jar:0.4.4:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock:jar:2.25.0:test" -> "com.github.jknack:handlebars:jar:4.0.7:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock:jar:2.25.0:test" -> "com.github.jknack:handlebars-helpers:jar:4.0.7:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock:jar:2.25.0:test" -> "commons-fileupload:commons-fileupload:jar:1.4:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.2.28.v20190418:test" -> "javax.servlet:javax.servlet-api:jar:3.1.0:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.2.28.v20190418:test" -> "org.eclipse.jetty:jetty-http:jar:9.2.28.v20190418:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.2.28.v20190418:test" -> "org.eclipse.jetty:jetty-io:jar:9.2.28.v20190418:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.2.28.v20190418:test" -> "org.eclipse.jetty:jetty-security:jar:9.2.28.v20190418:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:9.2.28.v20190418:test" -> "org.eclipse.jetty:jetty-continuation:jar:9.2.28.v20190418:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:9.2.28.v20190418:test" -> "org.eclipse.jetty:jetty-util:jar:9.2.28.v20190418:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-webapp:jar:9.2.28.v20190418:test" -> "org.eclipse.jetty:jetty-xml:jar:9.2.28.v20190418:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.6:test" -> "org.apache.httpcomponents:httpcore:jar:4.4.10:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.6:test" -> "commons-codec:commons-codec:jar:1.10:test" ; 
+[INFO] 	"org.xmlunit:xmlunit-core:jar:2.6.2:test" -> "javax.xml.bind:jaxb-api:jar:2.3.0:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.4.0:test" -> "net.minidev:json-smart:jar:2.3:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.3:test" -> "net.minidev:accessors-smart:jar:1.2:test" ; 
+[INFO] 	"com.datastax.oss.simulacron:simulacron-native-server:jar:0.11.0:test" -> "com.datastax.oss.simulacron:simulacron-common:jar:0.11.0:test" ; 
+[INFO] 	"com.datastax.oss.simulacron:simulacron-common:jar:0.11.0:test" -> "com.datastax.oss.simulacron:simulacron-native-protocol-json:jar:0.11.0:test" ; 
+[INFO] 	"io.smallrye:smallrye-metrics:jar:3.0.3:test" -> "org.jboss.logging:jboss-logging:jar:3.4.1.Final:test" ; 
+[INFO] 	"io.projectreactor.tools:blockhound-junit-platform:jar:1.0.8.RELEASE:test" -> "io.projectreactor.tools:blockhound:jar:1.0.8.RELEASE:test" ; 
+[INFO] 	"com.esri.geometry:esri-geometry-api:jar:1.2.1:test" -> "org.json:json:jar:20230227:test" ; 
+[INFO] 	"com.esri.geometry:esri-geometry-api:jar:1.2.1:test" -> "org.codehaus.jackson:jackson-core-asl:jar:1.9.12:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< com.datastax.oss:java-driver-osgi-tests >---------------
+[INFO] Building Apache Cassandra Java Driver - OSGi tests 4.17.1-SNAPSHOT [11/15]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ java-driver-osgi-tests ---
+[INFO] digraph "com.datastax.oss:java-driver-osgi-tests:jar:4.17.1-SNAPSHOT" { 
+[INFO] 	"com.datastax.oss:java-driver-osgi-tests:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-osgi-tests:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-query-builder:jar:4.17.1-SNAPSHOT:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-osgi-tests:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-mapper-processor:jar:4.17.1-SNAPSHOT:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-osgi-tests:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-mapper-runtime:jar:4.17.1-SNAPSHOT:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-osgi-tests:jar:4.17.1-SNAPSHOT" -> "com.github.stephenc.jcip:jcip-annotations:jar:1.0-1:provided" ; 
+[INFO] 	"com.datastax.oss:java-driver-osgi-tests:jar:4.17.1-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:3.1.12:provided" ; 
+[INFO] 	"com.datastax.oss:java-driver-osgi-tests:jar:4.17.1-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-osgi-tests:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-shaded-guava:jar:25.1-jre-graal-sub-1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-osgi-tests:jar:4.17.1-SNAPSHOT" -> "org.xerial.snappy:snappy-java:jar:1.1.10.1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-osgi-tests:jar:4.17.1-SNAPSHOT" -> "org.lz4:lz4-java:jar:1.7.1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-osgi-tests:jar:4.17.1-SNAPSHOT" -> "org.reactivestreams:reactive-streams:jar:1.0.3:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-osgi-tests:jar:4.17.1-SNAPSHOT" -> "com.esri.geometry:esri-geometry-api:jar:1.2.1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-osgi-tests:jar:4.17.1-SNAPSHOT" -> "org.apache.tinkerpop:gremlin-core:jar:3.5.6:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-osgi-tests:jar:4.17.1-SNAPSHOT" -> "org.apache.tinkerpop:tinkergraph-gremlin:jar:3.5.6:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-osgi-tests:jar:4.17.1-SNAPSHOT" -> "org.osgi:org.osgi.core:jar:6.0.0:provided" ; 
+[INFO] 	"com.datastax.oss:java-driver-osgi-tests:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-test-infra:jar:4.17.1-SNAPSHOT:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-osgi-tests:jar:4.17.1-SNAPSHOT" -> "org.ops4j.pax.exam:pax-exam-junit4:jar:4.13.4:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-osgi-tests:jar:4.17.1-SNAPSHOT" -> "org.ops4j.pax.exam:pax-exam-container-forked:jar:4.13.4:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-osgi-tests:jar:4.17.1-SNAPSHOT" -> "org.ops4j.pax.exam:pax-exam-link-mvn:jar:4.13.4:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-osgi-tests:jar:4.17.1-SNAPSHOT" -> "org.ops4j.pax.url:pax-url-wrap:jar:2.6.4:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-osgi-tests:jar:4.17.1-SNAPSHOT" -> "org.ops4j.pax.url:pax-url-reference:jar:2.6.4:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-osgi-tests:jar:4.17.1-SNAPSHOT" -> "javax.inject:javax.inject:jar:1:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-osgi-tests:jar:4.17.1-SNAPSHOT" -> "org.apache.felix:org.apache.felix.framework:jar:7.0.1:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-osgi-tests:jar:4.17.1-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.19.0:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-osgi-tests:jar:4.17.1-SNAPSHOT" -> "org.apache.commons:commons-exec:jar:1.3:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-osgi-tests:jar:4.17.1-SNAPSHOT" -> "io.reactivex.rxjava2:rxjava:jar:2.2.2:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-osgi-tests:jar:4.17.1-SNAPSHOT" -> "org.awaitility:awaitility:jar:4.0.3:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.datastax.oss:native-protocol:jar:1.5.1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.typesafe:config:jar:1.4.1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.github.jnr:jnr-posix:jar:3.1.15:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "org.slf4j:slf4j-api:jar:1.7.26:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "io.dropwizard.metrics:metrics-core:jar:4.1.18:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:compile" -> "com.github.jnr:jnr-ffi:jar:2.2.11:compile" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:compile" -> "com.github.jnr:jnr-constants:jar:0.10.3:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jffi:jar:1.3.9:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jffi:jar:native:1.3.9:runtime" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-commons:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-analysis:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-tree:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-util:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jnr-a64asm:jar:1.0.0:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jnr-x86asm:jar:1.0.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-mapper-processor:jar:4.17.1-SNAPSHOT:compile" -> "com.squareup:javapoet:jar:1.13.0:compile" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:3.1.12:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO] 	"com.esri.geometry:esri-geometry-api:jar:1.2.1:compile" -> "org.json:json:jar:20230227:compile" ; 
+[INFO] 	"com.esri.geometry:esri-geometry-api:jar:1.2.1:compile" -> "org.codehaus.jackson:jackson-core-asl:jar:1.9.12:compile" ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:compile" -> "org.apache.tinkerpop:gremlin-shaded:jar:3.5.6:compile" ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:compile" -> "org.apache.tinkerpop:gremlin-language:jar:3.5.6:compile" ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:compile" -> "org.apache.commons:commons-configuration2:jar:2.9.0:compile" ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:compile" -> "commons-beanutils:commons-beanutils:jar:1.9.4:compile" ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:compile" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:compile" -> "org.apache.commons:commons-lang3:jar:3.11:compile" ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:compile" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:compile" -> "org.javatuples:javatuples:jar:1.2:compile" ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-core:jar:3.5.6:compile" -> "org.slf4j:jcl-over-slf4j:jar:1.7.25:compile" ; 
+[INFO] 	"org.apache.tinkerpop:gremlin-language:jar:3.5.6:compile" -> "org.antlr:antlr4-runtime:jar:4.9.1:compile" ; 
+[INFO] 	"org.apache.commons:commons-configuration2:jar:2.9.0:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-test-infra:jar:4.17.1-SNAPSHOT:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.ops4j.pax.exam:pax-exam-junit4:jar:4.13.4:test" -> "org.ops4j.pax.exam:pax-exam-spi:jar:4.13.4:test" ; 
+[INFO] 	"org.ops4j.pax.exam:pax-exam-junit4:jar:4.13.4:test" -> "org.ops4j.base:ops4j-base-lang:jar:1.5.1:test" ; 
+[INFO] 	"org.ops4j.pax.exam:pax-exam-spi:jar:4.13.4:test" -> "org.ops4j.pax.tinybundles:tinybundles:jar:3.0.0:test" ; 
+[INFO] 	"org.ops4j.pax.exam:pax-exam-container-forked:jar:4.13.4:test" -> "org.ops4j.pax.exam:pax-exam:jar:4.13.4:test" ; 
+[INFO] 	"org.ops4j.pax.exam:pax-exam-container-forked:jar:4.13.4:test" -> "org.ops4j.base:ops4j-base-exec:jar:1.5.1:test" ; 
+[INFO] 	"org.ops4j.pax.exam:pax-exam-container-forked:jar:4.13.4:test" -> "org.ops4j.base:ops4j-base-net:jar:1.5.1:test" ; 
+[INFO] 	"org.ops4j.pax.exam:pax-exam-container-forked:jar:4.13.4:test" -> "org.ops4j.base:ops4j-base-io:jar:1.5.1:test" ; 
+[INFO] 	"org.ops4j.pax.exam:pax-exam-container-forked:jar:4.13.4:test" -> "org.ops4j.base:ops4j-base-spi:jar:1.5.1:test" ; 
+[INFO] 	"org.ops4j.pax.exam:pax-exam-container-forked:jar:4.13.4:test" -> "org.ops4j.pax.swissbox:pax-swissbox-framework:jar:1.8.3:test" ; 
+[INFO] 	"org.ops4j.pax.exam:pax-exam-container-forked:jar:4.13.4:test" -> "org.ops4j.pax.swissbox:pax-swissbox-tracker:jar:1.8.3:test" ; 
+[INFO] 	"org.ops4j.pax.exam:pax-exam:jar:4.13.4:test" -> "org.ops4j.base:ops4j-base-store:jar:1.5.1:test" ; 
+[INFO] 	"org.ops4j.base:ops4j-base-net:jar:1.5.1:test" -> "org.ops4j.base:ops4j-base-monitors:jar:1.5.1:test" ; 
+[INFO] 	"org.ops4j.pax.swissbox:pax-swissbox-tracker:jar:1.8.3:test" -> "org.ops4j.pax.swissbox:pax-swissbox-lifecycle:jar:1.8.3:test" ; 
+[INFO] 	"org.ops4j.pax.exam:pax-exam-link-mvn:jar:4.13.4:test" -> "org.ops4j.pax.url:pax-url-aether:jar:2.6.2:test" ; 
+[INFO] 	"org.ops4j.pax.exam:pax-exam-link-mvn:jar:4.13.4:test" -> "org.ops4j.pax.url:pax-url-link:jar:2.6.2:test" ; 
+[INFO] 	"org.ops4j.pax.exam:pax-exam-link-mvn:jar:4.13.4:test" -> "org.ops4j.pax.url:pax-url-classpath:jar:2.6.2:test" ; 
+[INFO] 	"org.ops4j.pax.url:pax-url-aether:jar:2.6.2:test" -> "org.ops4j.pax.url:pax-url-aether-support:jar:2.6.2:test" ; 
+[INFO] 	"org.ops4j.pax.url:pax-url-aether-support:jar:2.6.2:test" -> "org.apache.maven.resolver:maven-resolver-impl:jar:1.3.1:test" ; 
+[INFO] 	"org.apache.maven.resolver:maven-resolver-impl:jar:1.3.1:test" -> "org.apache.maven.resolver:maven-resolver-api:jar:1.3.1:test" ; 
+[INFO] 	"org.apache.maven.resolver:maven-resolver-impl:jar:1.3.1:test" -> "org.apache.maven.resolver:maven-resolver-spi:jar:1.3.1:test" ; 
+[INFO] 	"org.apache.maven.resolver:maven-resolver-impl:jar:1.3.1:test" -> "org.apache.maven.resolver:maven-resolver-util:jar:1.3.1:test" ; 
+[INFO] 	"org.ops4j.pax.url:pax-url-wrap:jar:2.6.4:test" -> "org.ops4j.pax.url:pax-url-commons:jar:2.6.4:test" ; 
+[INFO] 	"org.ops4j.pax.url:pax-url-wrap:jar:2.6.4:test" -> "org.ops4j.pax.swissbox:pax-swissbox-bnd:jar:1.8.4:test" ; 
+[INFO] 	"org.ops4j.pax.url:pax-url-commons:jar:2.6.4:test" -> "org.ops4j.pax.swissbox:pax-swissbox-property:jar:1.8.4:test" ; 
+[INFO] 	"org.ops4j.pax.swissbox:pax-swissbox-bnd:jar:1.8.4:test" -> "biz.aQute.bnd:biz.aQute.bndlib:jar:5.2.0:test" ; 
+[INFO] 	"org.ops4j.pax.url:pax-url-reference:jar:2.6.4:test" -> "org.ops4j.base:ops4j-base-util-property:jar:1.5.1:test" ; 
+[INFO] 	"org.ops4j.pax.url:pax-url-reference:jar:2.6.4:test" -> "org.ops4j.pax.swissbox:pax-swissbox-optional-jcl:jar:1.8.4:test" ; 
+[INFO] 	"org.apache.felix:org.apache.felix.framework:jar:7.0.1:test" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.9:test" ; 
+[INFO] 	"org.awaitility:awaitility:jar:4.0.3:test" -> "org.hamcrest:hamcrest:jar:2.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< com.datastax.oss:java-driver-distribution >--------------
+[INFO] Building Apache Cassandra Java Driver - binary distribution 4.17.1-SNAPSHOT [12/15]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ java-driver-distribution ---
+[INFO] digraph "com.datastax.oss:java-driver-distribution:jar:4.17.1-SNAPSHOT" { 
+[INFO] 	"com.datastax.oss:java-driver-distribution:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-distribution:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-query-builder:jar:4.17.1-SNAPSHOT:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-distribution:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-mapper-runtime:jar:4.17.1-SNAPSHOT:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-distribution:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-mapper-processor:jar:4.17.1-SNAPSHOT:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.datastax.oss:native-protocol:jar:1.5.1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.datastax.oss:java-driver-shaded-guava:jar:25.1-jre-graal-sub-1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.typesafe:config:jar:1.4.1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.github.jnr:jnr-posix:jar:3.1.15:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "org.slf4j:slf4j-api:jar:1.7.26:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "io.dropwizard.metrics:metrics-core:jar:4.1.18:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.3:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:compile" -> "com.github.jnr:jnr-ffi:jar:2.2.11:compile" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:compile" -> "com.github.jnr:jnr-constants:jar:0.10.3:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jffi:jar:1.3.9:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jffi:jar:native:1.3.9:runtime" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-commons:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-analysis:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-tree:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-util:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jnr-a64asm:jar:1.0.0:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jnr-x86asm:jar:1.0.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-mapper-processor:jar:4.17.1-SNAPSHOT:compile" -> "com.squareup:javapoet:jar:1.13.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------< com.datastax.oss:java-driver-distribution-tests >-----------
+[INFO] Building Apache Cassandra Java Driver - distribution tests 4.17.1-SNAPSHOT [13/15]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ java-driver-distribution-tests ---
+[INFO] digraph "com.datastax.oss:java-driver-distribution-tests:jar:4.17.1-SNAPSHOT" { 
+[INFO] 	"com.datastax.oss:java-driver-distribution-tests:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-test-infra:jar:4.17.1-SNAPSHOT:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-distribution-tests:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-query-builder:jar:4.17.1-SNAPSHOT:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-distribution-tests:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-mapper-processor:jar:4.17.1-SNAPSHOT:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-distribution-tests:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-mapper-runtime:jar:4.17.1-SNAPSHOT:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-distribution-tests:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-distribution-tests:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-metrics-micrometer:jar:4.17.1-SNAPSHOT:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-distribution-tests:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-metrics-microprofile:jar:4.17.1-SNAPSHOT:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-distribution-tests:jar:4.17.1-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-test-infra:jar:4.17.1-SNAPSHOT:test" -> "org.assertj:assertj-core:jar:3.19.0:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-test-infra:jar:4.17.1-SNAPSHOT:test" -> "org.awaitility:awaitility:jar:4.0.3:test" ; 
+[INFO] 	"org.awaitility:awaitility:jar:4.0.3:test" -> "org.hamcrest:hamcrest:jar:2.1:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-query-builder:jar:4.17.1-SNAPSHOT:test" -> "com.datastax.oss:java-driver-shaded-guava:jar:25.1-jre-graal-sub-1:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-mapper-processor:jar:4.17.1-SNAPSHOT:test" -> "com.squareup:javapoet:jar:1.13.0:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:test" -> "com.datastax.oss:native-protocol:jar:1.5.1:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:test" -> "io.netty:netty-handler:jar:4.1.94.Final:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:test" -> "com.typesafe:config:jar:1.4.1:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:test" -> "com.github.jnr:jnr-posix:jar:3.1.15:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:test" -> "org.slf4j:slf4j-api:jar:1.7.26:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:test" -> "io.dropwizard.metrics:metrics-core:jar:4.1.18:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:test" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:test" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:test" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:test" -> "org.reactivestreams:reactive-streams:jar:1.0.3:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:test" -> "io.netty:netty-common:jar:4.1.94.Final:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:test" -> "io.netty:netty-resolver:jar:4.1.94.Final:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:test" -> "io.netty:netty-buffer:jar:4.1.94.Final:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:test" -> "io.netty:netty-transport:jar:4.1.94.Final:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:test" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:test" -> "io.netty:netty-codec:jar:4.1.94.Final:test" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:test" -> "com.github.jnr:jnr-ffi:jar:2.2.11:test" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:test" -> "com.github.jnr:jnr-constants:jar:0.10.3:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "com.github.jnr:jffi:jar:1.3.9:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "com.github.jnr:jffi:jar:native:1.3.9:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "org.ow2.asm:asm:jar:9.2:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "org.ow2.asm:asm-commons:jar:9.2:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "org.ow2.asm:asm-analysis:jar:9.2:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "org.ow2.asm:asm-tree:jar:9.2:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "org.ow2.asm:asm-util:jar:9.2:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "com.github.jnr:jnr-a64asm:jar:1.0.0:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:test" -> "com.github.jnr:jnr-x86asm:jar:1.0.2:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-metrics-micrometer:jar:4.17.1-SNAPSHOT:test" -> "io.micrometer:micrometer-core:jar:1.6.5:test" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.6.5:test" -> "org.latencyutils:LatencyUtils:jar:2.0.3:test" ; 
+[INFO] 	"com.datastax.oss:java-driver-metrics-microprofile:jar:4.17.1-SNAPSHOT:test" -> "org.eclipse.microprofile.metrics:microprofile-metrics-api:jar:3.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< com.datastax.oss:java-driver-examples >----------------
+[INFO] Building Apache Cassandra Java Driver - examples. 4.17.1-SNAPSHOT [14/15]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ java-driver-examples ---
+[INFO] digraph "com.datastax.oss:java-driver-examples:jar:4.17.1-SNAPSHOT" { 
+[INFO] 	"com.datastax.oss:java-driver-examples:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-examples:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-query-builder:jar:4.17.1-SNAPSHOT:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-examples:jar:4.17.1-SNAPSHOT" -> "com.datastax.oss:java-driver-mapper-runtime:jar:4.17.1-SNAPSHOT:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-examples:jar:4.17.1-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-examples:jar:4.17.1-SNAPSHOT" -> "com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:jar:2.13.4:compile (optional) " ; 
+[INFO] 	"com.datastax.oss:java-driver-examples:jar:4.17.1-SNAPSHOT" -> "com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.13.4:compile (optional) " ; 
+[INFO] 	"com.datastax.oss:java-driver-examples:jar:4.17.1-SNAPSHOT" -> "javax.json:javax.json-api:jar:1.1.4:compile (optional) " ; 
+[INFO] 	"com.datastax.oss:java-driver-examples:jar:4.17.1-SNAPSHOT" -> "org.glassfish:javax.json:jar:1.1.4:runtime (optional) " ; 
+[INFO] 	"com.datastax.oss:java-driver-examples:jar:4.17.1-SNAPSHOT" -> "javax.ws.rs:javax.ws.rs-api:jar:2.1.1:compile (optional) " ; 
+[INFO] 	"com.datastax.oss:java-driver-examples:jar:4.17.1-SNAPSHOT" -> "org.glassfish.jersey.core:jersey-server:jar:2.31:compile (optional) " ; 
+[INFO] 	"com.datastax.oss:java-driver-examples:jar:4.17.1-SNAPSHOT" -> "org.glassfish.jersey.media:jersey-media-json-jackson:jar:2.31:compile (optional) " ; 
+[INFO] 	"com.datastax.oss:java-driver-examples:jar:4.17.1-SNAPSHOT" -> "org.glassfish.jersey.containers:jersey-container-jdk-http:jar:2.31:compile (optional) " ; 
+[INFO] 	"com.datastax.oss:java-driver-examples:jar:4.17.1-SNAPSHOT" -> "org.glassfish.hk2:hk2-api:jar:2.5.0:compile (optional) " ; 
+[INFO] 	"com.datastax.oss:java-driver-examples:jar:4.17.1-SNAPSHOT" -> "org.glassfish.jersey.inject:jersey-hk2:jar:2.31:compile (optional) " ; 
+[INFO] 	"com.datastax.oss:java-driver-examples:jar:4.17.1-SNAPSHOT" -> "javax.inject:javax.inject:jar:1:compile (optional) " ; 
+[INFO] 	"com.datastax.oss:java-driver-examples:jar:4.17.1-SNAPSHOT" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile (optional) " ; 
+[INFO] 	"com.datastax.oss:java-driver-examples:jar:4.17.1-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.2.3:runtime" ; 
+[INFO] 	"com.datastax.oss:java-driver-examples:jar:4.17.1-SNAPSHOT" -> "at.favre.lib:bcrypt:jar:0.8.0:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-examples:jar:4.17.1-SNAPSHOT" -> "io.projectreactor:reactor-core:jar:3.4.4:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-examples:jar:4.17.1-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:3.1.12:provided" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.datastax.oss:native-protocol:jar:1.5.1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.datastax.oss:java-driver-shaded-guava:jar:25.1-jre-graal-sub-1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.typesafe:config:jar:1.4.1:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.github.jnr:jnr-posix:jar:3.1.15:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "org.slf4j:slf4j-api:jar:1.7.26:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "io.dropwizard.metrics:metrics-core:jar:4.1.18:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:compile" ; 
+[INFO] 	"com.datastax.oss:java-driver-core:jar:4.17.1-SNAPSHOT:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.3:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:compile" -> "com.github.jnr:jnr-ffi:jar:2.2.11:compile" ; 
+[INFO] 	"com.github.jnr:jnr-posix:jar:3.1.15:compile" -> "com.github.jnr:jnr-constants:jar:0.10.3:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jffi:jar:1.3.9:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jffi:jar:native:1.3.9:runtime" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-commons:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-analysis:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-tree:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "org.ow2.asm:asm-util:jar:9.2:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jnr-a64asm:jar:1.0.0:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.11:compile" -> "com.github.jnr:jnr-x86asm:jar:1.0.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:compile" ; 
+[INFO] 	"com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.13.4:compile (optional) " -> "com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.13.4:compile (optional) " ; 
+[INFO] 	"com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.13.4:compile (optional) " -> "jakarta.activation:jakarta.activation-api:jar:1.2.1:compile (optional) " ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-server:jar:2.31:compile (optional) " -> "org.glassfish.jersey.core:jersey-common:jar:2.31:compile (optional) " ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-server:jar:2.31:compile (optional) " -> "org.glassfish.jersey.core:jersey-client:jar:2.31:compile (optional) " ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-server:jar:2.31:compile (optional) " -> "jakarta.ws.rs:jakarta.ws.rs-api:jar:2.1.6:compile (optional) " ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-server:jar:2.31:compile (optional) " -> "org.glassfish.jersey.media:jersey-media-jaxb:jar:2.31:compile (optional) " ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-server:jar:2.31:compile (optional) " -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile (optional) " ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-server:jar:2.31:compile (optional) " -> "org.glassfish.hk2.external:jakarta.inject:jar:2.6.1:compile (optional) " ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-server:jar:2.31:compile (optional) " -> "jakarta.validation:jakarta.validation-api:jar:2.0.2:compile (optional) " ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-server:jar:2.31:compile (optional) " -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile (optional) " ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-common:jar:2.31:compile (optional) " -> "org.glassfish.hk2:osgi-resource-locator:jar:1.0.3:compile (optional) " ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-common:jar:2.31:compile (optional) " -> "com.sun.activation:jakarta.activation:jar:1.2.2:compile (optional) " ; 
+[INFO] 	"org.glassfish.jersey.media:jersey-media-json-jackson:jar:2.31:compile (optional) " -> "org.glassfish.jersey.ext:jersey-entity-filtering:jar:2.31:compile (optional) " ; 
+[INFO] 	"org.glassfish.hk2:hk2-api:jar:2.5.0:compile (optional) " -> "org.glassfish.hk2:hk2-utils:jar:2.5.0:compile (optional) " ; 
+[INFO] 	"org.glassfish.hk2:hk2-api:jar:2.5.0:compile (optional) " -> "org.glassfish.hk2.external:aopalliance-repackaged:jar:2.5.0:compile (optional) " ; 
+[INFO] 	"org.glassfish.jersey.inject:jersey-hk2:jar:2.31:compile (optional) " -> "org.glassfish.hk2:hk2-locator:jar:2.6.1:compile (optional) " ; 
+[INFO] 	"org.glassfish.jersey.inject:jersey-hk2:jar:2.31:compile (optional) " -> "org.javassist:javassist:jar:3.25.0-GA:compile (optional) " ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:runtime" -> "ch.qos.logback:logback-core:jar:1.2.3:runtime" ; 
+[INFO] 	"at.favre.lib:bcrypt:jar:0.8.0:compile" -> "at.favre.lib:bytes:jar:1.1.0:compile" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:3.1.12:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< com.datastax.oss:java-driver-bom >------------------
+[INFO] Building Apache Cassandra Java Driver - Bill Of Materials 4.17.1-SNAPSHOT [15/15]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ java-driver-bom ---
+[INFO] digraph "com.datastax.oss:java-driver-bom:pom:4.17.1-SNAPSHOT" { 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Apache Cassandra Java Driver 4.17.1-SNAPSHOT:
+[INFO] 
+[INFO] Apache Cassandra Java Driver ....................... SUCCESS [  3.444 s]
+[INFO] Apache Cassandra Java Driver - core ................ SUCCESS [  2.085 s]
+[INFO] Apache Cassandra Java Driver - core with shaded deps SUCCESS [  4.132 s]
+[INFO] Apache Cassandra Java Driver - query builder ....... SUCCESS [  0.481 s]
+[INFO] Apache Cassandra Java Driver - object mapper runtime SUCCESS [  0.690 s]
+[INFO] Apache Cassandra Java Driver - object mapper processor SUCCESS [  0.799 s]
+[INFO] Apache Cassandra Java Driver - Metrics - Micrometer  SUCCESS [  0.281 s]
+[INFO] Apache Cassandra Java Driver - Metrics - Microprofile SUCCESS [  0.313 s]
+[INFO] Apache Cassandra Java Driver - test infrastructure tools SUCCESS [  0.147 s]
+[INFO] Apache Cassandra Java Driver - integration tests ... SUCCESS [  2.185 s]
+[INFO] Apache Cassandra Java Driver - OSGi tests .......... SUCCESS [  0.529 s]
+[INFO] Apache Cassandra Java Driver - binary distribution . SUCCESS [  0.047 s]
+[INFO] Apache Cassandra Java Driver - distribution tests .. SUCCESS [  0.158 s]
+[INFO] Apache Cassandra Java Driver - examples. ........... SUCCESS [  0.525 s]
+[INFO] Apache Cassandra Java Driver - Bill Of Materials ... SUCCESS [  0.051 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  27.645 s
+[INFO] Finished at: 2023-12-28T09:02:41+01:00
+[INFO] ------------------------------------------------------------------------

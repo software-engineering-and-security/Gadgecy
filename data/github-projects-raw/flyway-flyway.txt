@@ -1,0 +1,935 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.flywaydb:flyway-commandline:jar:10.1.0
+[WARNING] 'dependencyManagement.dependencies.dependency.systemPath' for net.adoptium:jre:zip:windows-x64 should not point at files within the project directory, ${basedir}/src/main/assembly/OpenJDK17U-jre_x64_windows_hotspot_${jre.version}_1.zip will be unresolvable by dependent projects @ line 483, column 29
+[WARNING] 'dependencyManagement.dependencies.dependency.systemPath' for net.adoptium:jre:tar.gz:linux-x64 should not point at files within the project directory, ${basedir}/src/main/assembly/OpenJDK17U-jre_x64_linux_hotspot_${jre.version}_1.tar.gz will be unresolvable by dependent projects @ line 492, column 29
+[WARNING] 'dependencyManagement.dependencies.dependency.systemPath' for net.adoptium:jre:tar.gz:linux-alpine-x64 should not point at files within the project directory, ${basedir}/src/main/assembly/OpenJDK17U-jre_x64_alpine-linux_hotspot_${jre.version}_1.tar.gz will be unresolvable by dependent projects @ line 501, column 29
+[WARNING] 'dependencyManagement.dependencies.dependency.systemPath' for net.adoptium:jre:tar.gz:macos-x64 should not point at files within the project directory, ${basedir}/src/main/assembly/OpenJDK17U-jre_x64_mac_hotspot_${jre.version}_1.tar.gz will be unresolvable by dependent projects @ line 510, column 29
+[WARNING] 'dependencyManagement.dependencies.dependency.systemPath' for net.adoptium:jre:tar.gz:macos-arm64 should not point at files within the project directory, ${basedir}/src/main/assembly/OpenJDK17U-jre_aarch64_mac_hotspot_${jre.version}_1.tar.gz will be unresolvable by dependent projects @ line 519, column 29
+[WARNING] 'dependencyManagement.dependencies.dependency.systemPath' for net.adoptium:jre:zip:windows-x64 refers to a non-existing file /home/brunok/apache-ysoserial-vuln/pom/flyway-flyway/flyway-commandline/src/main/assembly/OpenJDK17U-jre_x64_windows_hotspot_17.0.8.1_1.zip @ line 483, column 29
+[WARNING] 'dependencyManagement.dependencies.dependency.systemPath' for net.adoptium:jre:tar.gz:linux-x64 refers to a non-existing file /home/brunok/apache-ysoserial-vuln/pom/flyway-flyway/flyway-commandline/src/main/assembly/OpenJDK17U-jre_x64_linux_hotspot_17.0.8.1_1.tar.gz @ line 492, column 29
+[WARNING] 'dependencyManagement.dependencies.dependency.systemPath' for net.adoptium:jre:tar.gz:linux-alpine-x64 refers to a non-existing file /home/brunok/apache-ysoserial-vuln/pom/flyway-flyway/flyway-commandline/src/main/assembly/OpenJDK17U-jre_x64_alpine-linux_hotspot_17.0.8.1_1.tar.gz @ line 501, column 29
+[WARNING] 'dependencyManagement.dependencies.dependency.systemPath' for net.adoptium:jre:tar.gz:macos-x64 refers to a non-existing file /home/brunok/apache-ysoserial-vuln/pom/flyway-flyway/flyway-commandline/src/main/assembly/OpenJDK17U-jre_x64_mac_hotspot_17.0.8.1_1.tar.gz @ line 510, column 29
+[WARNING] 'dependencyManagement.dependencies.dependency.systemPath' for net.adoptium:jre:tar.gz:macos-arm64 refers to a non-existing file /home/brunok/apache-ysoserial-vuln/pom/flyway-flyway/flyway-commandline/src/main/assembly/OpenJDK17U-jre_aarch64_mac_hotspot_17.0.8.1_1.tar.gz @ line 519, column 29
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.flywaydb:flyway-database-db2:jar:10.1.0
+[WARNING] 'version' contains an expression but should be a constant. @ org.flywaydb:flyway-database-db2:${project.parent.version}, /home/brunok/apache-ysoserial-vuln/pom/flyway-flyway/flyway-database/flyway-database-db2/pom.xml, line 32, column 14
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.flywaydb:flyway-database-derby:jar:10.1.0
+[WARNING] 'version' contains an expression but should be a constant. @ org.flywaydb:flyway-database-derby:${project.parent.version}, /home/brunok/apache-ysoserial-vuln/pom/flyway-flyway/flyway-database/flyway-database-derby/pom.xml, line 32, column 14
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.flywaydb:flyway-database-hsqldb:jar:10.1.0
+[WARNING] 'version' contains an expression but should be a constant. @ org.flywaydb:flyway-database-hsqldb:${project.parent.version}, /home/brunok/apache-ysoserial-vuln/pom/flyway-flyway/flyway-database/flyway-database-hsqldb/pom.xml, line 32, column 14
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.flywaydb:flyway-database-informix:jar:10.1.0
+[WARNING] 'version' contains an expression but should be a constant. @ org.flywaydb:flyway-database-informix:${project.parent.version}, /home/brunok/apache-ysoserial-vuln/pom/flyway-flyway/flyway-database/flyway-database-informix/pom.xml, line 32, column 14
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.flywaydb:flyway-database-postgresql:jar:10.1.0
+[WARNING] 'version' contains an expression but should be a constant. @ org.flywaydb:flyway-database-postgresql:${project.parent.version}, /home/brunok/apache-ysoserial-vuln/pom/flyway-flyway/flyway-database/flyway-database-postgresql/pom.xml, line 32, column 14
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.flywaydb:flyway-database-oracle:jar:10.1.0
+[WARNING] 'version' contains an expression but should be a constant. @ org.flywaydb:flyway-database-oracle:${project.parent.version}, /home/brunok/apache-ysoserial-vuln/pom/flyway-flyway/flyway-database/flyway-database-oracle/pom.xml, line 33, column 14
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.flywaydb:flyway-database-mongodb:jar:10.1.0
+[WARNING] 'version' contains an expression but should be a constant. @ org.flywaydb:flyway-database-mongodb:${project.parent.version}, /home/brunok/apache-ysoserial-vuln/pom/flyway-flyway/flyway-database/flyway-database-mongodb/pom.xml, line 32, column 14
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.flywaydb:flyway-database-redshift:jar:10.1.0
+[WARNING] 'version' contains an expression but should be a constant. @ org.flywaydb:flyway-database-redshift:${project.parent.version}, /home/brunok/apache-ysoserial-vuln/pom/flyway-flyway/flyway-database/flyway-database-redshift/pom.xml, line 32, column 14
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.flywaydb:flyway-database-saphana:jar:10.1.0
+[WARNING] 'version' contains an expression but should be a constant. @ org.flywaydb:flyway-database-saphana:${project.parent.version}, /home/brunok/apache-ysoserial-vuln/pom/flyway-flyway/flyway-database/flyway-database-saphana/pom.xml, line 32, column 14
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.flywaydb:flyway-database-snowflake:jar:10.1.0
+[WARNING] 'version' contains an expression but should be a constant. @ org.flywaydb:flyway-database-snowflake:${project.parent.version}, /home/brunok/apache-ysoserial-vuln/pom/flyway-flyway/flyway-database/flyway-database-snowflake/pom.xml, line 32, column 14
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.flywaydb:flyway-database-sybasease:jar:10.1.0
+[WARNING] 'version' contains an expression but should be a constant. @ org.flywaydb:flyway-database-sybasease:${project.parent.version}, /home/brunok/apache-ysoserial-vuln/pom/flyway-flyway/flyway-database/flyway-database-sybasease/pom.xml, line 32, column 14
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.flywaydb:flyway-firebird:jar:10.1.0
+[WARNING] 'version' contains an expression but should be a constant. @ org.flywaydb:flyway-firebird:${project.parent.version}, /home/brunok/apache-ysoserial-vuln/pom/flyway-flyway/flyway-database/flyway-firebird/pom.xml, line 33, column 14
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.flywaydb:flyway-gcp-bigquery:jar:10.1.0
+[WARNING] 'version' contains an expression but should be a constant. @ org.flywaydb:flyway-gcp-bigquery:${project.parent.version}, /home/brunok/apache-ysoserial-vuln/pom/flyway-flyway/flyway-database/flyway-gcp-bigquery/pom.xml, line 32, column 14
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.flywaydb:flyway-gcp-spanner:jar:10.1.0
+[WARNING] 'version' contains an expression but should be a constant. @ org.flywaydb:flyway-gcp-spanner:${project.parent.version}, /home/brunok/apache-ysoserial-vuln/pom/flyway-flyway/flyway-database/flyway-gcp-spanner/pom.xml, line 32, column 14
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.flywaydb:flyway-mysql:jar:10.1.0
+[WARNING] 'version' contains an expression but should be a constant. @ org.flywaydb:flyway-mysql:${project.parent.version}, /home/brunok/apache-ysoserial-vuln/pom/flyway-flyway/flyway-database/flyway-mysql/pom.xml, line 33, column 14
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.flywaydb:flyway-singlestore:jar:10.1.0
+[WARNING] 'version' contains an expression but should be a constant. @ org.flywaydb:flyway-singlestore:${project.parent.version}, /home/brunok/apache-ysoserial-vuln/pom/flyway-flyway/flyway-database/flyway-singlestore/pom.xml, line 32, column 14
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.flywaydb:flyway-sqlserver:jar:10.1.0
+[WARNING] 'version' contains an expression but should be a constant. @ org.flywaydb:flyway-sqlserver:${project.parent.version}, /home/brunok/apache-ysoserial-vuln/pom/flyway-flyway/flyway-sqlserver/pom.xml, line 31, column 14
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.flywaydb:flyway-database:pom:10.1.0
+[WARNING] 'version' contains an expression but should be a constant. @ org.flywaydb:flyway-database:${project.parent.version}, /home/brunok/apache-ysoserial-vuln/pom/flyway-flyway/flyway-database/pom.xml, line 32, column 14
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] flyway-parent                                                      [pom]
+[INFO] flyway-core                                                        [jar]
+[INFO] flyway-mysql                                                       [jar]
+[INFO] flyway-community-db-support                                        [pom]
+[INFO] flyway-database-tidb                                               [jar]
+[INFO] flyway-database-ignite                                             [jar]
+[INFO] flyway-database-postgresql                                         [jar]
+[INFO] flyway-database-yugabytedb                                         [jar]
+[INFO] flyway-database-oracle                                             [jar]
+[INFO] flyway-gradle-plugin                                               [jar]
+[INFO] flyway-maven-plugin                                       [maven-plugin]
+[INFO] flyway-gcp-bigquery                                                [jar]
+[INFO] flyway-gcp-spanner                                                 [jar]
+[INFO] flyway-sqlserver                                                   [jar]
+[INFO] flyway-database-db2                                                [jar]
+[INFO] flyway-database-derby                                              [jar]
+[INFO] flyway-database-hsqldb                                             [jar]
+[INFO] flyway-database-informix                                           [jar]
+[INFO] flyway-database-saphana                                            [jar]
+[INFO] flyway-database-snowflake                                          [jar]
+[INFO] flyway-database-redshift                                           [jar]
+[INFO] flyway-database-sybasease                                          [jar]
+[INFO] flyway-firebird                                                    [jar]
+[INFO] flyway-singlestore                                                 [jar]
+[INFO] flyway-commandline                                                 [jar]
+[INFO] flyway-database-mongodb                                            [jar]
+[INFO] flyway-database                                                    [pom]
+[INFO] 
+[INFO] ---------------------< org.flywaydb:flyway-parent >---------------------
+[INFO] Building flyway-parent 10.1.0                                     [1/27]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ flyway-parent ---
+[INFO] digraph "org.flywaydb:flyway-parent:pom:10.1.0" { 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< org.flywaydb:flyway-core >----------------------
+[INFO] Building flyway-core 10.1.0                                       [2/27]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from maven-central: https://repo1.maven.org/maven2/software/amazon/awssdk/s3/maven-metadata.xml
+[INFO] Downloading from flyway-repo: https://nexus.flywaydb.org/repository/flyway/software/amazon/awssdk/s3/maven-metadata.xml
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/software/amazon/awssdk/s3/maven-metadata.xml
+[INFO] Downloading from repo.gradle.org: https://repo.gradle.org/gradle/libs-releases-local/software/amazon/awssdk/s3/maven-metadata.xml
+[INFO] Downloaded from maven-central: https://repo1.maven.org/maven2/software/amazon/awssdk/s3/maven-metadata.xml (39 kB at 39 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/software/amazon/awssdk/s3/maven-metadata.xml (39 kB at 36 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ flyway-core ---
+[INFO] digraph "org.flywaydb:flyway-core:jar:10.1.0" { 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0" -> "org.slf4j:slf4j-api:jar:1.7.30:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0" -> "org.apache.logging.log4j:log4j-api:jar:2.17.1:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0" -> "org.jboss:jboss-vfs:jar:3.2.15.Final:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0" -> "org.osgi:org.osgi.core:jar:4.3.1:provided" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0" -> "software.amazon.awssdk:s3:jar:2.20.162:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0" -> "com.google.cloud:google-cloud-storage:jar:2.22.5:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0" -> "com.amazonaws.secretsmanager:aws-secretsmanager-jdbc:jar:2.0.0:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0" -> "com.oracle.database.jdbc:ojdbc8:jar:19.6.0.0:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0" -> "org.projectlombok:lombok:jar:1.18.20:provided" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"org.jboss:jboss-vfs:jar:3.2.15.Final:compile" -> "org.jboss.logging:jboss-logging:jar:3.1.4.GA:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:compile" -> "software.amazon.awssdk:aws-xml-protocol:jar:2.20.162:compile" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:compile" -> "software.amazon.awssdk:protocol-core:jar:2.20.162:compile" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:compile" -> "software.amazon.awssdk:arns:jar:2.20.162:compile" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:compile" -> "software.amazon.awssdk:profiles:jar:2.20.162:compile" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:compile" -> "software.amazon.awssdk:crt-core:jar:2.20.162:compile" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:compile" -> "software.amazon.awssdk:sdk-core:jar:2.20.162:compile" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:compile" -> "software.amazon.awssdk:auth:jar:2.20.162:compile" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:compile" -> "software.amazon.awssdk:http-client-spi:jar:2.20.162:compile" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:compile" -> "software.amazon.awssdk:regions:jar:2.20.162:compile" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:compile" -> "software.amazon.awssdk:annotations:jar:2.20.162:compile" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:compile" -> "software.amazon.awssdk:utils:jar:2.20.162:compile" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:compile" -> "software.amazon.awssdk:aws-core:jar:2.20.162:compile" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:compile" -> "software.amazon.awssdk:metrics-spi:jar:2.20.162:compile" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:compile" -> "software.amazon.awssdk:json-utils:jar:2.20.162:compile" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:compile" -> "software.amazon.awssdk:endpoints-spi:jar:2.20.162:compile" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:compile" -> "software.amazon.awssdk:apache-client:jar:2.20.162:runtime" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:compile" -> "software.amazon.awssdk:netty-nio-client:jar:2.20.162:runtime" ; 
+[INFO] 	"software.amazon.awssdk:aws-xml-protocol:jar:2.20.162:compile" -> "software.amazon.awssdk:aws-query-protocol:jar:2.20.162:compile" ; 
+[INFO] 	"software.amazon.awssdk:sdk-core:jar:2.20.162:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.4:compile" ; 
+[INFO] 	"software.amazon.awssdk:auth:jar:2.20.162:compile" -> "software.amazon.eventstream:eventstream:jar:1.0.1:compile" ; 
+[INFO] 	"software.amazon.awssdk:json-utils:jar:2.20.162:compile" -> "software.amazon.awssdk:third-party-jackson-core:jar:2.20.162:compile" ; 
+[INFO] 	"software.amazon.awssdk:apache-client:jar:2.20.162:runtime" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:runtime" ; 
+[INFO] 	"software.amazon.awssdk:apache-client:jar:2.20.162:runtime" -> "org.apache.httpcomponents:httpcore:jar:4.4.13:runtime" ; 
+[INFO] 	"software.amazon.awssdk:netty-nio-client:jar:2.20.162:runtime" -> "io.netty:netty-codec-http:jar:4.1.94.Final:runtime" ; 
+[INFO] 	"software.amazon.awssdk:netty-nio-client:jar:2.20.162:runtime" -> "io.netty:netty-codec-http2:jar:4.1.94.Final:runtime" ; 
+[INFO] 	"software.amazon.awssdk:netty-nio-client:jar:2.20.162:runtime" -> "io.netty:netty-codec:jar:4.1.94.Final:runtime" ; 
+[INFO] 	"software.amazon.awssdk:netty-nio-client:jar:2.20.162:runtime" -> "io.netty:netty-transport:jar:4.1.94.Final:runtime" ; 
+[INFO] 	"software.amazon.awssdk:netty-nio-client:jar:2.20.162:runtime" -> "io.netty:netty-common:jar:4.1.94.Final:runtime" ; 
+[INFO] 	"software.amazon.awssdk:netty-nio-client:jar:2.20.162:runtime" -> "io.netty:netty-buffer:jar:4.1.94.Final:runtime" ; 
+[INFO] 	"software.amazon.awssdk:netty-nio-client:jar:2.20.162:runtime" -> "io.netty:netty-handler:jar:4.1.94.Final:runtime" ; 
+[INFO] 	"software.amazon.awssdk:netty-nio-client:jar:2.20.162:runtime" -> "io.netty:netty-transport-classes-epoll:jar:4.1.94.Final:runtime" ; 
+[INFO] 	"software.amazon.awssdk:netty-nio-client:jar:2.20.162:runtime" -> "io.netty:netty-resolver:jar:4.1.94.Final:runtime" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:runtime" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.guava:guava:jar:32.0.1-jre:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.18.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.http-client:google-http-client:jar:1.43.3:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "io.opencensus:opencensus-contrib-http-util:jar:0.31.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.http-client:google-http-client-jackson2:jar:1.43.3:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.http-client:google-http-client-gson:jar:1.43.3:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.api-client:google-api-client:jar:2.2.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.oauth-client:google-oauth-client:jar:1.34.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.http-client:google-http-client-apache-v2:jar:1.43.3:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.apis:google-api-services-storage:jar:v1-rev20230301-2.0.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.cloud:google-cloud-core:jar:2.20.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.auto.value:auto-value-annotations:jar:1.10.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.cloud:google-cloud-core-http:jar:2.20.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.http-client:google-http-client-appengine:jar:1.43.3:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.api:gax-httpjson:jar:2.30.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.cloud:google-cloud-core-grpc:jar:2.20.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.api:gax:jar:2.30.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.api:gax-grpc:jar:2.30.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "io.grpc:grpc-alts:jar:1.55.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "io.grpc:grpc-grpclb:jar:1.55.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "org.conscrypt:conscrypt-openjdk-uber:jar:2.5.2:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "io.grpc:grpc-auth:jar:1.55.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "io.grpc:grpc-protobuf:jar:1.55.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "io.grpc:grpc-protobuf-lite:jar:1.55.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.auth:google-auth-library-credentials:jar:1.18.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.auth:google-auth-library-oauth2-http:jar:1.18.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.api:api-common:jar:2.13.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "io.opencensus:opencensus-api:jar:0.31.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "io.grpc:grpc-context:jar:1.55.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.api.grpc:proto-google-iam-v1:jar:1.16.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.protobuf:protobuf-java:jar:3.23.2:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.protobuf:protobuf-java-util:jar:3.23.2:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.api.grpc:proto-google-common-protos:jar:2.21.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "org.threeten:threetenbp:jar:1.6.8:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.api.grpc:proto-google-cloud-storage-v2:jar:2.22.5-alpha:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.api.grpc:grpc-google-cloud-storage-v2:jar:2.22.5-alpha:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.api.grpc:gapic-google-cloud-storage-v2:jar:2.22.5-alpha:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "io.grpc:grpc-api:jar:1.55.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "io.grpc:grpc-netty-shaded:jar:1.55.1:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "io.perfmark:perfmark-api:jar:0.26.0:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "io.grpc:grpc-core:jar:1.55.1:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.android:annotations:jar:4.1.1.4:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.23:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "io.grpc:grpc-stub:jar:1.55.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "io.grpc:grpc-googleapis:jar:1.55.1:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "org.checkerframework:checker-qual:jar:3.33.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "io.grpc:grpc-xds:jar:1.55.1:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "io.opencensus:opencensus-proto:jar:0.2.0:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "io.grpc:grpc-services:jar:1.55.1:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "com.google.re2j:re2j:jar:1.6:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:compile" -> "io.grpc:grpc-rls:jar:1.55.1:runtime" ; 
+[INFO] 	"com.amazonaws.secretsmanager:aws-secretsmanager-jdbc:jar:2.0.0:compile" -> "com.amazonaws.secretsmanager:aws-secretsmanager-caching-java:jar:2.0.0:compile" ; 
+[INFO] 	"com.amazonaws.secretsmanager:aws-secretsmanager-jdbc:jar:2.0.0:compile" -> "software.amazon.awssdk:secretsmanager:jar:2.20.93:compile" ; 
+[INFO] 	"com.amazonaws.secretsmanager:aws-secretsmanager-jdbc:jar:2.0.0:compile" -> "com.github.spotbugs:spotbugs-annotations:jar:4.7.3:compile" ; 
+[INFO] 	"software.amazon.awssdk:secretsmanager:jar:2.20.93:compile" -> "software.amazon.awssdk:aws-json-protocol:jar:2.20.93:compile" ; 
+[INFO] 	"com.oracle.database.jdbc:ojdbc8:jar:19.6.0.0:compile" -> "com.oracle.database.jdbc:ucp:jar:19.6.0.0:compile" ; 
+[INFO] 	"com.oracle.database.jdbc:ojdbc8:jar:19.6.0.0:compile" -> "com.oracle.database.security:oraclepki:jar:19.6.0.0:compile" ; 
+[INFO] 	"com.oracle.database.jdbc:ojdbc8:jar:19.6.0.0:compile" -> "com.oracle.database.security:osdt_cert:jar:19.6.0.0:compile" ; 
+[INFO] 	"com.oracle.database.jdbc:ojdbc8:jar:19.6.0.0:compile" -> "com.oracle.database.security:osdt_core:jar:19.6.0.0:compile" ; 
+[INFO] 	"com.oracle.database.jdbc:ojdbc8:jar:19.6.0.0:compile" -> "com.oracle.database.ha:simplefan:jar:19.6.0.0:compile" ; 
+[INFO] 	"com.oracle.database.jdbc:ojdbc8:jar:19.6.0.0:compile" -> "com.oracle.database.ha:ons:jar:19.6.0.0:compile" ; 
+[INFO] 	"org.apache.commons:commons-text:jar:1.10.0:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< org.flywaydb:flyway-mysql >----------------------
+[INFO] Building flyway-mysql 10.1.0                                      [3/27]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ flyway-mysql ---
+[INFO] digraph "org.flywaydb:flyway-mysql:jar:10.1.0" { 
+[INFO] 	"org.flywaydb:flyway-mysql:jar:10.1.0" -> "org.flywaydb:flyway-core:jar:10.1.0:compile" ; 
+[INFO] 	"org.flywaydb:flyway-mysql:jar:10.1.0" -> "org.projectlombok:lombok:jar:1.18.20:provided" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< org.flywaydb:flyway-community-db-support >--------------
+[INFO] Building flyway-community-db-support 10.1.0                       [4/27]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ flyway-community-db-support ---
+[INFO] digraph "org.flywaydb:flyway-community-db-support:pom:10.1.0" { 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.flywaydb:flyway-database-tidb >------------------
+[INFO] Building flyway-database-tidb 10.1.0                              [5/27]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ flyway-database-tidb ---
+[INFO] digraph "org.flywaydb:flyway-database-tidb:jar:10.1.0" { 
+[INFO] 	"org.flywaydb:flyway-database-tidb:jar:10.1.0" -> "org.flywaydb:flyway-core:jar:10.1.0:compile" ; 
+[INFO] 	"org.flywaydb:flyway-database-tidb:jar:10.1.0" -> "org.flywaydb:flyway-mysql:jar:10.1.0:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< org.flywaydb:flyway-database-ignite >-----------------
+[INFO] Building flyway-database-ignite 10.1.0                            [6/27]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ flyway-database-ignite ---
+[INFO] digraph "org.flywaydb:flyway-database-ignite:jar:10.1.0" { 
+[INFO] 	"org.flywaydb:flyway-database-ignite:jar:10.1.0" -> "org.flywaydb:flyway-core:jar:10.1.0:compile" ; 
+[INFO] 	"org.flywaydb:flyway-database-ignite:jar:10.1.0" -> "org.apache.ignite:ignite-core:jar:2.13.0:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO] 	"org.apache.ignite:ignite-core:jar:2.13.0:compile" -> "javax.cache:cache-api:jar:1.0.0:compile" ; 
+[INFO] 	"org.apache.ignite:ignite-core:jar:2.13.0:compile" -> "org.jetbrains:annotations:jar:16.0.3:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< org.flywaydb:flyway-database-postgresql >---------------
+[INFO] Building flyway-database-postgresql 10.1.0                        [7/27]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ flyway-database-postgresql ---
+[INFO] digraph "org.flywaydb:flyway-database-postgresql:jar:10.1.0" { 
+[INFO] 	"org.flywaydb:flyway-database-postgresql:jar:10.1.0" -> "org.flywaydb:flyway-core:jar:10.1.0:compile" ; 
+[INFO] 	"org.flywaydb:flyway-database-postgresql:jar:10.1.0" -> "org.projectlombok:lombok:jar:1.18.20:provided" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< org.flywaydb:flyway-database-yugabytedb >---------------
+[INFO] Building flyway-database-yugabytedb 10.1.0                        [8/27]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ flyway-database-yugabytedb ---
+[INFO] digraph "org.flywaydb:flyway-database-yugabytedb:jar:10.1.0" { 
+[INFO] 	"org.flywaydb:flyway-database-yugabytedb:jar:10.1.0" -> "org.flywaydb:flyway-core:jar:10.1.0:compile" ; 
+[INFO] 	"org.flywaydb:flyway-database-yugabytedb:jar:10.1.0" -> "org.flywaydb:flyway-database-postgresql:jar:10.1.0:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< org.flywaydb:flyway-database-oracle >-----------------
+[INFO] Building flyway-database-oracle 10.1.0                            [9/27]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ flyway-database-oracle ---
+[INFO] digraph "org.flywaydb:flyway-database-oracle:jar:10.1.0" { 
+[INFO] 	"org.flywaydb:flyway-database-oracle:jar:10.1.0" -> "org.flywaydb:flyway-core:jar:10.1.0:compile" ; 
+[INFO] 	"org.flywaydb:flyway-database-oracle:jar:10.1.0" -> "org.projectlombok:lombok:jar:1.18.20:provided" ; 
+[INFO] 	"org.flywaydb:flyway-database-oracle:jar:10.1.0" -> "com.oracle.database.jdbc:ojdbc8:jar:19.6.0.0:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO] 	"com.oracle.database.jdbc:ojdbc8:jar:19.6.0.0:compile" -> "com.oracle.database.jdbc:ucp:jar:19.6.0.0:compile" ; 
+[INFO] 	"com.oracle.database.jdbc:ojdbc8:jar:19.6.0.0:compile" -> "com.oracle.database.security:oraclepki:jar:19.6.0.0:compile" ; 
+[INFO] 	"com.oracle.database.jdbc:ojdbc8:jar:19.6.0.0:compile" -> "com.oracle.database.security:osdt_cert:jar:19.6.0.0:compile" ; 
+[INFO] 	"com.oracle.database.jdbc:ojdbc8:jar:19.6.0.0:compile" -> "com.oracle.database.security:osdt_core:jar:19.6.0.0:compile" ; 
+[INFO] 	"com.oracle.database.jdbc:ojdbc8:jar:19.6.0.0:compile" -> "com.oracle.database.ha:simplefan:jar:19.6.0.0:compile" ; 
+[INFO] 	"com.oracle.database.jdbc:ojdbc8:jar:19.6.0.0:compile" -> "com.oracle.database.ha:ons:jar:19.6.0.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.flywaydb:flyway-gradle-plugin >------------------
+[INFO] Building flyway-gradle-plugin 10.1.0                             [10/27]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ flyway-gradle-plugin ---
+[INFO] digraph "org.flywaydb:flyway-gradle-plugin:jar:10.1.0" { 
+[INFO] 	"org.flywaydb:flyway-gradle-plugin:jar:10.1.0" -> "org.flywaydb:flyway-core:jar:10.1.0:compile" ; 
+[INFO] 	"org.flywaydb:flyway-gradle-plugin:jar:10.1.0" -> "org.flywaydb:flyway-database-oracle:jar:10.1.0:compile" ; 
+[INFO] 	"org.flywaydb:flyway-gradle-plugin:jar:10.1.0" -> "org.gradle:gradle-core:jar:6.1.1:provided" ; 
+[INFO] 	"org.flywaydb:flyway-gradle-plugin:jar:10.1.0" -> "org.gradle:gradle-plugins:jar:6.1.1:provided" ; 
+[INFO] 	"org.flywaydb:flyway-gradle-plugin:jar:10.1.0" -> "org.gradle:gradle-core-api:jar:6.1.1:provided" ; 
+[INFO] 	"org.flywaydb:flyway-gradle-plugin:jar:10.1.0" -> "org.gradle:gradle-logging:jar:6.1.1:provided" ; 
+[INFO] 	"org.flywaydb:flyway-gradle-plugin:jar:10.1.0" -> "org.gradle:gradle-base-services:jar:6.1.1:provided" ; 
+[INFO] 	"org.flywaydb:flyway-gradle-plugin:jar:10.1.0" -> "org.gradle:gradle-process-services:jar:6.1.1:provided" ; 
+[INFO] 	"org.flywaydb:flyway-gradle-plugin:jar:10.1.0" -> "org.gradle:gradle-model-core:jar:6.1.1:provided" ; 
+[INFO] 	"org.flywaydb:flyway-gradle-plugin:jar:10.1.0" -> "org.slf4j:slf4j-api:jar:1.7.30:provided" ; 
+[INFO] 	"org.flywaydb:flyway-gradle-plugin:jar:10.1.0" -> "org.codehaus.groovy:groovy-all:jar:2.4.7:provided" ; 
+[INFO] 	"org.flywaydb:flyway-gradle-plugin:jar:10.1.0" -> "org.projectlombok:lombok:jar:1.18.20:provided" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< org.flywaydb:flyway-maven-plugin >------------------
+[INFO] Building flyway-maven-plugin 10.1.0                              [11/27]
+[INFO] ----------------------------[ maven-plugin ]----------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ flyway-maven-plugin ---
+[INFO] digraph "org.flywaydb:flyway-maven-plugin:maven-plugin:10.1.0" { 
+[INFO] 	"org.flywaydb:flyway-maven-plugin:maven-plugin:10.1.0" -> "org.apache.maven:maven-plugin-api:jar:3.9.4:provided" ; 
+[INFO] 	"org.flywaydb:flyway-maven-plugin:maven-plugin:10.1.0" -> "org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.6.0:provided" ; 
+[INFO] 	"org.flywaydb:flyway-maven-plugin:maven-plugin:10.1.0" -> "org.apache.maven:maven-core:jar:3.9.4:provided" ; 
+[INFO] 	"org.flywaydb:flyway-maven-plugin:maven-plugin:10.1.0" -> "org.flywaydb:flyway-core:jar:10.1.0:compile" ; 
+[INFO] 	"org.flywaydb:flyway-maven-plugin:maven-plugin:10.1.0" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" ; 
+[INFO] 	"org.flywaydb:flyway-maven-plugin:maven-plugin:10.1.0" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"org.flywaydb:flyway-maven-plugin:maven-plugin:10.1.0" -> "org.projectlombok:lombok:jar:1.18.20:provided" ; 
+[INFO] 	"org.apache.maven:maven-plugin-api:jar:3.9.4:provided" -> "org.apache.maven:maven-model:jar:3.9.4:provided" ; 
+[INFO] 	"org.apache.maven:maven-plugin-api:jar:3.9.4:provided" -> "org.apache.maven:maven-artifact:jar:3.9.4:provided" ; 
+[INFO] 	"org.apache.maven:maven-plugin-api:jar:3.9.4:provided" -> "org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.3.5:provided" ; 
+[INFO] 	"org.apache.maven:maven-plugin-api:jar:3.9.4:provided" -> "org.codehaus.plexus:plexus-utils:jar:3.5.1:provided" ; 
+[INFO] 	"org.apache.maven:maven-plugin-api:jar:3.9.4:provided" -> "org.codehaus.plexus:plexus-classworlds:jar:2.7.0:provided" ; 
+[INFO] 	"org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.3.5:provided" -> "javax.annotation:javax.annotation-api:jar:1.2:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.4:provided" -> "org.apache.maven:maven-settings:jar:3.9.4:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.4:provided" -> "org.apache.maven:maven-settings-builder:jar:3.9.4:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.4:provided" -> "org.apache.maven:maven-builder-support:jar:3.9.4:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.4:provided" -> "org.apache.maven:maven-repository-metadata:jar:3.9.4:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.4:provided" -> "org.apache.maven:maven-model-builder:jar:3.9.4:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.4:provided" -> "org.apache.maven:maven-resolver-provider:jar:3.9.4:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.4:provided" -> "org.apache.maven.resolver:maven-resolver-impl:jar:1.9.14:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.4:provided" -> "org.apache.maven.resolver:maven-resolver-api:jar:1.9.14:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.4:provided" -> "org.apache.maven.resolver:maven-resolver-spi:jar:1.9.14:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.4:provided" -> "org.apache.maven.resolver:maven-resolver-util:jar:1.9.14:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.4:provided" -> "org.apache.maven.shared:maven-shared-utils:jar:3.3.4:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.4:provided" -> "org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.3.5:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.4:provided" -> "com.google.inject:guice:jar:5.1.0:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.4:provided" -> "com.google.guava:guava:jar:32.0.1-jre:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.4:provided" -> "com.google.guava:failureaccess:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.4:provided" -> "javax.inject:javax.inject:jar:1:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.4:provided" -> "org.codehaus.plexus:plexus-interpolation:jar:1.26:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.4:provided" -> "org.codehaus.plexus:plexus-component-annotations:jar:2.1.0:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.4:provided" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.4:provided" -> "org.slf4j:slf4j-api:jar:1.7.30:provided" ; 
+[INFO] 	"org.apache.maven:maven-settings-builder:jar:3.9.4:provided" -> "org.codehaus.plexus:plexus-sec-dispatcher:jar:2.0:provided" ; 
+[INFO] 	"org.codehaus.plexus:plexus-sec-dispatcher:jar:2.0:provided" -> "org.codehaus.plexus:plexus-cipher:jar:2.0:provided" ; 
+[INFO] 	"org.apache.maven.resolver:maven-resolver-impl:jar:1.9.14:provided" -> "org.apache.maven.resolver:maven-resolver-named-locks:jar:1.9.14:provided" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:provided" -> "aopalliance:aopalliance:jar:1.0:provided" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< org.flywaydb:flyway-gcp-bigquery >------------------
+[INFO] Building flyway-gcp-bigquery 10.1.0                              [12/27]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ flyway-gcp-bigquery ---
+[INFO] digraph "org.flywaydb:flyway-gcp-bigquery:jar:10.1.0" { 
+[INFO] 	"org.flywaydb:flyway-gcp-bigquery:jar:10.1.0" -> "org.flywaydb:flyway-core:jar:10.1.0:compile" ; 
+[INFO] 	"org.flywaydb:flyway-gcp-bigquery:jar:10.1.0" -> "org.projectlombok:lombok:jar:1.18.20:provided" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< org.flywaydb:flyway-gcp-spanner >-------------------
+[INFO] Building flyway-gcp-spanner 10.1.0                               [13/27]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ flyway-gcp-spanner ---
+[INFO] digraph "org.flywaydb:flyway-gcp-spanner:jar:10.1.0" { 
+[INFO] 	"org.flywaydb:flyway-gcp-spanner:jar:10.1.0" -> "org.flywaydb:flyway-core:jar:10.1.0:compile" ; 
+[INFO] 	"org.flywaydb:flyway-gcp-spanner:jar:10.1.0" -> "org.projectlombok:lombok:jar:1.18.20:provided" ; 
+[INFO] 	"org.flywaydb:flyway-gcp-spanner:jar:10.1.0" -> "com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" ; 
+[INFO] 	"org.flywaydb:flyway-gcp-spanner:jar:10.1.0" -> "com.google.api:gax:jar:2.30.0:test" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "com.google.http-client:google-http-client:jar:1.43.3:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.14:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.16:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.18.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "io.opencensus:opencensus-api:jar:0.31.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "io.opencensus:opencensus-contrib-http-util:jar:0.31.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "io.grpc:grpc-api:jar:1.55.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "io.grpc:grpc-context:jar:1.55.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "com.google.cloud:google-cloud-core-grpc:jar:2.20.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "com.google.api:gax-grpc:jar:2.30.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "com.google.api.grpc:proto-google-common-protos:jar:2.21.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "org.threeten:threetenbp:jar:1.6.8:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "com.google.cloud:google-cloud-spanner:jar:6.43.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "com.google.cloud:grpc-gcp:jar:1.4.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "io.grpc:grpc-auth:jar:1.55.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "io.grpc:grpc-core:jar:1.55.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "com.google.android:annotations:jar:4.1.1.4:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.23:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "io.perfmark:perfmark-api:jar:0.26.0:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "io.grpc:grpc-protobuf:jar:1.55.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "io.grpc:grpc-protobuf-lite:jar:1.55.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "io.grpc:grpc-stub:jar:1.55.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "com.google.auto.value:auto-value-annotations:jar:1.10.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "com.google.protobuf:protobuf-java-util:jar:3.23.2:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "com.google.api.grpc:grpc-google-common-protos:jar:2.21.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "org.checkerframework:checker-qual:jar:3.33.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "com.google.api.grpc:proto-google-iam-v1:jar:1.16.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "com.google.http-client:google-http-client-gson:jar:1.43.3:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "io.opencensus:opencensus-contrib-grpc-util:jar:0.31.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "com.google.api.grpc:proto-google-cloud-spanner-admin-instance-v1:jar:6.43.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "com.google.api.grpc:proto-google-cloud-spanner-admin-database-v1:jar:6.43.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "com.google.api.grpc:grpc-google-cloud-spanner-admin-instance-v1:jar:6.43.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "com.google.api.grpc:grpc-google-cloud-spanner-v1:jar:6.43.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "com.google.api.grpc:grpc-google-cloud-spanner-admin-database-v1:jar:6.43.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "com.google.api:gax-httpjson:jar:2.30.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "org.conscrypt:conscrypt-openjdk-uber:jar:2.5.2:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "io.grpc:grpc-grpclb:jar:1.55.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "io.grpc:grpc-googleapis:jar:1.55.1:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "io.grpc:grpc-xds:jar:1.55.1:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "io.opencensus:opencensus-proto:jar:0.2.0:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "io.grpc:grpc-services:jar:1.55.1:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "com.google.re2j:re2j:jar:1.6:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "io.grpc:grpc-rls:jar:1.55.1:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "io.grpc:grpc-alts:jar:1.55.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "com.google.protobuf:protobuf-java:jar:3.23.2:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "com.google.guava:guava:jar:32.0.1-jre:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "io.grpc:grpc-netty-shaded:jar:1.55.1:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "com.google.api:api-common:jar:2.13.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "com.google.auth:google-auth-library-oauth2-http:jar:1.18.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "com.google.auth:google-auth-library-credentials:jar:1.18.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "com.google.cloud:google-cloud-core:jar:2.20.0:compile" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:compile" -> "com.google.api.grpc:proto-google-cloud-spanner-v1:jar:6.43.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< org.flywaydb:flyway-sqlserver >--------------------
+[INFO] Building flyway-sqlserver 10.1.0                                 [14/27]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ flyway-sqlserver ---
+[INFO] digraph "org.flywaydb:flyway-sqlserver:jar:10.1.0" { 
+[INFO] 	"org.flywaydb:flyway-sqlserver:jar:10.1.0" -> "org.flywaydb:flyway-core:jar:10.1.0:compile" ; 
+[INFO] 	"org.flywaydb:flyway-sqlserver:jar:10.1.0" -> "org.projectlombok:lombok:jar:1.18.20:provided" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< org.flywaydb:flyway-database-db2 >------------------
+[INFO] Building flyway-database-db2 10.1.0                              [15/27]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ flyway-database-db2 ---
+[INFO] digraph "org.flywaydb:flyway-database-db2:jar:10.1.0" { 
+[INFO] 	"org.flywaydb:flyway-database-db2:jar:10.1.0" -> "org.flywaydb:flyway-core:jar:10.1.0:compile" ; 
+[INFO] 	"org.flywaydb:flyway-database-db2:jar:10.1.0" -> "org.projectlombok:lombok:jar:1.18.20:provided" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.flywaydb:flyway-database-derby >-----------------
+[INFO] Building flyway-database-derby 10.1.0                            [16/27]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ flyway-database-derby ---
+[INFO] digraph "org.flywaydb:flyway-database-derby:jar:10.1.0" { 
+[INFO] 	"org.flywaydb:flyway-database-derby:jar:10.1.0" -> "org.flywaydb:flyway-core:jar:10.1.0:compile" ; 
+[INFO] 	"org.flywaydb:flyway-database-derby:jar:10.1.0" -> "org.projectlombok:lombok:jar:1.18.20:provided" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< org.flywaydb:flyway-database-hsqldb >-----------------
+[INFO] Building flyway-database-hsqldb 10.1.0                           [17/27]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ flyway-database-hsqldb ---
+[INFO] digraph "org.flywaydb:flyway-database-hsqldb:jar:10.1.0" { 
+[INFO] 	"org.flywaydb:flyway-database-hsqldb:jar:10.1.0" -> "org.flywaydb:flyway-core:jar:10.1.0:compile" ; 
+[INFO] 	"org.flywaydb:flyway-database-hsqldb:jar:10.1.0" -> "org.projectlombok:lombok:jar:1.18.20:provided" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.flywaydb:flyway-database-informix >----------------
+[INFO] Building flyway-database-informix 10.1.0                         [18/27]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ flyway-database-informix ---
+[INFO] digraph "org.flywaydb:flyway-database-informix:jar:10.1.0" { 
+[INFO] 	"org.flywaydb:flyway-database-informix:jar:10.1.0" -> "org.flywaydb:flyway-core:jar:10.1.0:compile" ; 
+[INFO] 	"org.flywaydb:flyway-database-informix:jar:10.1.0" -> "org.projectlombok:lombok:jar:1.18.20:provided" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< org.flywaydb:flyway-database-saphana >----------------
+[INFO] Building flyway-database-saphana 10.1.0                          [19/27]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ flyway-database-saphana ---
+[INFO] digraph "org.flywaydb:flyway-database-saphana:jar:10.1.0" { 
+[INFO] 	"org.flywaydb:flyway-database-saphana:jar:10.1.0" -> "org.flywaydb:flyway-core:jar:10.1.0:compile" ; 
+[INFO] 	"org.flywaydb:flyway-database-saphana:jar:10.1.0" -> "org.projectlombok:lombok:jar:1.18.20:provided" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.flywaydb:flyway-database-snowflake >---------------
+[INFO] Building flyway-database-snowflake 10.1.0                        [20/27]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ flyway-database-snowflake ---
+[INFO] digraph "org.flywaydb:flyway-database-snowflake:jar:10.1.0" { 
+[INFO] 	"org.flywaydb:flyway-database-snowflake:jar:10.1.0" -> "org.flywaydb:flyway-core:jar:10.1.0:compile" ; 
+[INFO] 	"org.flywaydb:flyway-database-snowflake:jar:10.1.0" -> "org.projectlombok:lombok:jar:1.18.20:provided" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.flywaydb:flyway-database-redshift >----------------
+[INFO] Building flyway-database-redshift 10.1.0                         [21/27]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ flyway-database-redshift ---
+[INFO] digraph "org.flywaydb:flyway-database-redshift:jar:10.1.0" { 
+[INFO] 	"org.flywaydb:flyway-database-redshift:jar:10.1.0" -> "org.flywaydb:flyway-core:jar:10.1.0:compile" ; 
+[INFO] 	"org.flywaydb:flyway-database-redshift:jar:10.1.0" -> "org.projectlombok:lombok:jar:1.18.20:provided" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.flywaydb:flyway-database-sybasease >---------------
+[INFO] Building flyway-database-sybasease 10.1.0                        [22/27]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ flyway-database-sybasease ---
+[INFO] digraph "org.flywaydb:flyway-database-sybasease:jar:10.1.0" { 
+[INFO] 	"org.flywaydb:flyway-database-sybasease:jar:10.1.0" -> "org.flywaydb:flyway-core:jar:10.1.0:compile" ; 
+[INFO] 	"org.flywaydb:flyway-database-sybasease:jar:10.1.0" -> "org.projectlombok:lombok:jar:1.18.20:provided" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< org.flywaydb:flyway-firebird >--------------------
+[INFO] Building flyway-firebird 10.1.0                                  [23/27]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ flyway-firebird ---
+[INFO] digraph "org.flywaydb:flyway-firebird:jar:10.1.0" { 
+[INFO] 	"org.flywaydb:flyway-firebird:jar:10.1.0" -> "org.flywaydb:flyway-core:jar:10.1.0:compile" ; 
+[INFO] 	"org.flywaydb:flyway-firebird:jar:10.1.0" -> "org.projectlombok:lombok:jar:1.18.20:provided" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< org.flywaydb:flyway-singlestore >-------------------
+[INFO] Building flyway-singlestore 10.1.0                               [24/27]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ flyway-singlestore ---
+[INFO] digraph "org.flywaydb:flyway-singlestore:jar:10.1.0" { 
+[INFO] 	"org.flywaydb:flyway-singlestore:jar:10.1.0" -> "org.flywaydb:flyway-core:jar:10.1.0:compile" ; 
+[INFO] 	"org.flywaydb:flyway-singlestore:jar:10.1.0" -> "org.projectlombok:lombok:jar:1.18.20:provided" ; 
+[INFO] 	"org.flywaydb:flyway-singlestore:jar:10.1.0" -> "com.singlestore:singlestore-jdbc-client:jar:1.1.4:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< org.flywaydb:flyway-commandline >-------------------
+[INFO] Building flyway-commandline 10.1.0                               [25/27]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from maven-central: https://repo1.maven.org/maven2/net/minidev/json-smart/maven-metadata.xml
+[INFO] Downloading from repo.gradle.org: https://repo.gradle.org/gradle/libs-releases-local/net/minidev/json-smart/maven-metadata.xml
+[INFO] Downloading from flyway-repo: https://nexus.flywaydb.org/repository/flyway/net/minidev/json-smart/maven-metadata.xml
+[INFO] Downloading from shibboleth-repo: https://build.shibboleth.net/nexus/content/repositories/releases/net/minidev/json-smart/maven-metadata.xml
+[INFO] Downloaded from maven-central: https://repo1.maven.org/maven2/net/minidev/json-smart/maven-metadata.xml (1.3 kB at 25 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ flyway-commandline ---
+[INFO] digraph "org.flywaydb:flyway-commandline:jar:10.1.0" { 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.flywaydb:flyway-core:jar:10.1.0:compile" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.flywaydb:flyway-gcp-bigquery:jar:10.1.0:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.flywaydb:flyway-gcp-spanner:jar:10.1.0:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.flywaydb:flyway-sqlserver:jar:10.1.0:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.flywaydb:flyway-database-oracle:jar:10.1.0:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.flywaydb:flyway-database-db2:jar:10.1.0:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.flywaydb:flyway-database-derby:jar:10.1.0:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.flywaydb:flyway-database-hsqldb:jar:10.1.0:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.flywaydb:flyway-database-informix:jar:10.1.0:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.flywaydb:flyway-database-postgresql:jar:10.1.0:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.flywaydb:flyway-database-saphana:jar:10.1.0:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.flywaydb:flyway-database-snowflake:jar:10.1.0:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.flywaydb:flyway-database-redshift:jar:10.1.0:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.flywaydb:flyway-database-sybasease:jar:10.1.0:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.flywaydb:flyway-mysql:jar:10.1.0:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.flywaydb:flyway-firebird:jar:10.1.0:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.flywaydb:flyway-singlestore:jar:10.1.0:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.flywaydb:flyway-database-ignite:jar:10.1.0:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.flywaydb:flyway-database-tidb:jar:10.1.0:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.flywaydb:flyway-database-yugabytedb:jar:10.1.0:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.apache.derby:derby:jar:10.15.2.0:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.apache.derby:derbytools:jar:10.15.2.0:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.apache.derby:derbyshared:jar:10.15.2.0:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.apache.derby:derbyclient:jar:10.15.2.0:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "com.h2database:h2:jar:2.2.220:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.hsqldb:hsqldb:jar:2.7.1:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "com.microsoft.sqlserver:mssql-jdbc:jar:12.2.0.jre8:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "com.microsoft.azure:msal4j:jar:1.13.8:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "net.sourceforge.jtds:jtds:jar:1.3.1:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "com.singlestore:singlestore-jdbc-client:jar:1.1.4:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "net.java.dev.jna:jna:jar:4.5.2:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "net.java.dev.jna:jna-platform:jar:4.5.2:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.firebirdsql.jdbc:jaybird-jdk18:jar:3.0.10:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.mariadb.jdbc:mariadb-java-client:jar:2.7.10:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.postgresql:postgresql:jar:42.4.3:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "com.oracle.database.jdbc:ojdbc8:jar:19.6.0.0:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "net.snowflake:snowflake-jdbc:jar:3.13.30:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.xerial:sqlite-jdbc:jar:3.41.2.2:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.fusesource.jansi:jansi:jar:1.18:compile" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "software.amazon.awssdk:s3:jar:2.20.162:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "com.google.cloud:google-cloud-storage:jar:2.22.5:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "com.amazonaws.secretsmanager:aws-secretsmanager-jdbc:jar:2.0.0:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.projectlombok:lombok:jar:1.18.20:provided" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.apache.commons:commons-text:jar:1.10.0:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "org.slf4j:slf4j-nop:jar:1.7.30:runtime" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"org.flywaydb:flyway-commandline:jar:10.1.0" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-xml:jar:2.15.2:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" ; 
+[INFO] 	"com.microsoft.azure:msal4j:jar:1.13.8:runtime" -> "com.nimbusds:oauth2-oidc-sdk:jar:10.7.1:runtime" ; 
+[INFO] 	"com.microsoft.azure:msal4j:jar:1.13.8:runtime" -> "net.minidev:json-smart:jar:2.4.10:runtime" ; 
+[INFO] 	"com.microsoft.azure:msal4j:jar:1.13.8:runtime" -> "org.slf4j:slf4j-api:jar:1.7.30:runtime" ; 
+[INFO] 	"com.nimbusds:oauth2-oidc-sdk:jar:10.7.1:runtime" -> "com.github.stephenc.jcip:jcip-annotations:jar:1.0-1:runtime" ; 
+[INFO] 	"com.nimbusds:oauth2-oidc-sdk:jar:10.7.1:runtime" -> "com.nimbusds:content-type:jar:2.2:runtime" ; 
+[INFO] 	"com.nimbusds:oauth2-oidc-sdk:jar:10.7.1:runtime" -> "com.nimbusds:lang-tag:jar:1.7:runtime" ; 
+[INFO] 	"com.nimbusds:oauth2-oidc-sdk:jar:10.7.1:runtime" -> "com.nimbusds:nimbus-jose-jwt:jar:9.22:runtime" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.10:runtime" -> "net.minidev:accessors-smart:jar:2.4.9:runtime" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.9:runtime" -> "org.ow2.asm:asm:jar:9.3:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "com.google.http-client:google-http-client:jar:1.43.3:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "org.apache.httpcomponents:httpclient:jar:4.5.14:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "org.apache.httpcomponents:httpcore:jar:4.4.16:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "com.google.errorprone:error_prone_annotations:jar:2.18.0:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "com.google.j2objc:j2objc-annotations:jar:2.8:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "io.opencensus:opencensus-api:jar:0.31.1:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "io.opencensus:opencensus-contrib-http-util:jar:0.31.1:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "io.grpc:grpc-api:jar:1.55.1:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "io.grpc:grpc-context:jar:1.55.1:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "com.google.cloud:google-cloud-core-grpc:jar:2.20.0:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "com.google.api:gax-grpc:jar:2.30.0:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "com.google.api.grpc:proto-google-common-protos:jar:2.21.0:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "com.google.api:gax:jar:2.30.0:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "org.threeten:threetenbp:jar:1.6.8:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "com.google.cloud:google-cloud-spanner:jar:6.43.0:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "com.google.cloud:grpc-gcp:jar:1.4.1:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "io.grpc:grpc-auth:jar:1.55.1:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "io.grpc:grpc-core:jar:1.55.1:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "com.google.android:annotations:jar:4.1.1.4:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.23:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "io.perfmark:perfmark-api:jar:0.26.0:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "io.grpc:grpc-protobuf:jar:1.55.1:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "io.grpc:grpc-protobuf-lite:jar:1.55.1:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "io.grpc:grpc-stub:jar:1.55.1:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "com.google.auto.value:auto-value-annotations:jar:1.10.1:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "com.google.protobuf:protobuf-java-util:jar:3.23.2:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "com.google.api.grpc:grpc-google-common-protos:jar:2.21.0:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "com.google.guava:failureaccess:jar:1.0.1:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "org.checkerframework:checker-qual:jar:3.33.0:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "com.google.api.grpc:proto-google-iam-v1:jar:1.16.0:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "com.google.http-client:google-http-client-gson:jar:1.43.3:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "io.opencensus:opencensus-contrib-grpc-util:jar:0.31.1:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "commons-logging:commons-logging:jar:1.2:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "commons-codec:commons-codec:jar:1.15:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "com.google.api.grpc:proto-google-cloud-spanner-admin-instance-v1:jar:6.43.0:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "com.google.api.grpc:proto-google-cloud-spanner-admin-database-v1:jar:6.43.0:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "com.google.api.grpc:grpc-google-cloud-spanner-admin-instance-v1:jar:6.43.0:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "com.google.api.grpc:grpc-google-cloud-spanner-v1:jar:6.43.0:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "com.google.api.grpc:grpc-google-cloud-spanner-admin-database-v1:jar:6.43.0:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "com.google.api:gax-httpjson:jar:2.30.0:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "org.conscrypt:conscrypt-openjdk-uber:jar:2.5.2:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "io.grpc:grpc-grpclb:jar:1.55.1:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "io.grpc:grpc-googleapis:jar:1.55.1:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "io.grpc:grpc-xds:jar:1.55.1:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "io.opencensus:opencensus-proto:jar:0.2.0:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "io.grpc:grpc-services:jar:1.55.1:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "com.google.re2j:re2j:jar:1.6:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "io.grpc:grpc-rls:jar:1.55.1:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "javax.annotation:javax.annotation-api:jar:1.3.2:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "io.grpc:grpc-alts:jar:1.55.1:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "com.google.protobuf:protobuf-java:jar:3.23.2:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "com.google.guava:guava:jar:32.0.1-jre:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "io.grpc:grpc-netty-shaded:jar:1.55.1:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "com.google.api:api-common:jar:2.13.0:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "com.google.code.findbugs:jsr305:jar:3.0.2:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "com.google.auth:google-auth-library-oauth2-http:jar:1.18.0:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "com.google.auth:google-auth-library-credentials:jar:1.18.0:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "com.google.cloud:google-cloud-core:jar:2.20.0:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-spanner-jdbc:jar:2.11.1:runtime" -> "com.google.api.grpc:proto-google-cloud-spanner-v1:jar:6.43.0:runtime" ; 
+[INFO] 	"org.firebirdsql.jdbc:jaybird-jdk18:jar:3.0.10:runtime" -> "javax.resource:connector-api:jar:1.5:runtime" ; 
+[INFO] 	"org.firebirdsql.jdbc:jaybird-jdk18:jar:3.0.10:runtime" -> "org.antlr:antlr4-runtime:jar:4.7:runtime" ; 
+[INFO] 	"com.oracle.database.jdbc:ojdbc8:jar:19.6.0.0:runtime" -> "com.oracle.database.jdbc:ucp:jar:19.6.0.0:runtime" ; 
+[INFO] 	"com.oracle.database.jdbc:ojdbc8:jar:19.6.0.0:runtime" -> "com.oracle.database.security:oraclepki:jar:19.6.0.0:runtime" ; 
+[INFO] 	"com.oracle.database.jdbc:ojdbc8:jar:19.6.0.0:runtime" -> "com.oracle.database.security:osdt_cert:jar:19.6.0.0:runtime" ; 
+[INFO] 	"com.oracle.database.jdbc:ojdbc8:jar:19.6.0.0:runtime" -> "com.oracle.database.security:osdt_core:jar:19.6.0.0:runtime" ; 
+[INFO] 	"com.oracle.database.jdbc:ojdbc8:jar:19.6.0.0:runtime" -> "com.oracle.database.ha:simplefan:jar:19.6.0.0:runtime" ; 
+[INFO] 	"com.oracle.database.jdbc:ojdbc8:jar:19.6.0.0:runtime" -> "com.oracle.database.ha:ons:jar:19.6.0.0:runtime" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:runtime" -> "software.amazon.awssdk:aws-xml-protocol:jar:2.20.162:runtime" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:runtime" -> "software.amazon.awssdk:protocol-core:jar:2.20.162:runtime" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:runtime" -> "software.amazon.awssdk:arns:jar:2.20.162:runtime" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:runtime" -> "software.amazon.awssdk:profiles:jar:2.20.162:runtime" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:runtime" -> "software.amazon.awssdk:crt-core:jar:2.20.162:runtime" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:runtime" -> "software.amazon.awssdk:sdk-core:jar:2.20.162:runtime" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:runtime" -> "software.amazon.awssdk:auth:jar:2.20.162:runtime" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:runtime" -> "software.amazon.awssdk:http-client-spi:jar:2.20.162:runtime" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:runtime" -> "software.amazon.awssdk:regions:jar:2.20.162:runtime" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:runtime" -> "software.amazon.awssdk:annotations:jar:2.20.162:runtime" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:runtime" -> "software.amazon.awssdk:utils:jar:2.20.162:runtime" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:runtime" -> "software.amazon.awssdk:aws-core:jar:2.20.162:runtime" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:runtime" -> "software.amazon.awssdk:metrics-spi:jar:2.20.162:runtime" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:runtime" -> "software.amazon.awssdk:json-utils:jar:2.20.162:runtime" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:runtime" -> "software.amazon.awssdk:endpoints-spi:jar:2.20.162:runtime" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:runtime" -> "software.amazon.awssdk:apache-client:jar:2.20.162:runtime" ; 
+[INFO] 	"software.amazon.awssdk:s3:jar:2.20.162:runtime" -> "software.amazon.awssdk:netty-nio-client:jar:2.20.162:runtime" ; 
+[INFO] 	"software.amazon.awssdk:aws-xml-protocol:jar:2.20.162:runtime" -> "software.amazon.awssdk:aws-query-protocol:jar:2.20.162:runtime" ; 
+[INFO] 	"software.amazon.awssdk:sdk-core:jar:2.20.162:runtime" -> "org.reactivestreams:reactive-streams:jar:1.0.4:runtime" ; 
+[INFO] 	"software.amazon.awssdk:auth:jar:2.20.162:runtime" -> "software.amazon.eventstream:eventstream:jar:1.0.1:runtime" ; 
+[INFO] 	"software.amazon.awssdk:json-utils:jar:2.20.162:runtime" -> "software.amazon.awssdk:third-party-jackson-core:jar:2.20.162:runtime" ; 
+[INFO] 	"software.amazon.awssdk:netty-nio-client:jar:2.20.162:runtime" -> "io.netty:netty-codec-http:jar:4.1.94.Final:runtime" ; 
+[INFO] 	"software.amazon.awssdk:netty-nio-client:jar:2.20.162:runtime" -> "io.netty:netty-codec-http2:jar:4.1.94.Final:runtime" ; 
+[INFO] 	"software.amazon.awssdk:netty-nio-client:jar:2.20.162:runtime" -> "io.netty:netty-codec:jar:4.1.94.Final:runtime" ; 
+[INFO] 	"software.amazon.awssdk:netty-nio-client:jar:2.20.162:runtime" -> "io.netty:netty-transport:jar:4.1.94.Final:runtime" ; 
+[INFO] 	"software.amazon.awssdk:netty-nio-client:jar:2.20.162:runtime" -> "io.netty:netty-common:jar:4.1.94.Final:runtime" ; 
+[INFO] 	"software.amazon.awssdk:netty-nio-client:jar:2.20.162:runtime" -> "io.netty:netty-buffer:jar:4.1.94.Final:runtime" ; 
+[INFO] 	"software.amazon.awssdk:netty-nio-client:jar:2.20.162:runtime" -> "io.netty:netty-handler:jar:4.1.94.Final:runtime" ; 
+[INFO] 	"software.amazon.awssdk:netty-nio-client:jar:2.20.162:runtime" -> "io.netty:netty-transport-classes-epoll:jar:4.1.94.Final:runtime" ; 
+[INFO] 	"software.amazon.awssdk:netty-nio-client:jar:2.20.162:runtime" -> "io.netty:netty-resolver:jar:4.1.94.Final:runtime" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:runtime" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:runtime" -> "com.google.http-client:google-http-client-jackson2:jar:1.43.3:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:runtime" -> "com.google.api-client:google-api-client:jar:2.2.0:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:runtime" -> "com.google.oauth-client:google-oauth-client:jar:1.34.1:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:runtime" -> "com.google.http-client:google-http-client-apache-v2:jar:1.43.3:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:runtime" -> "com.google.apis:google-api-services-storage:jar:v1-rev20230301-2.0.0:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:runtime" -> "com.google.cloud:google-cloud-core-http:jar:2.20.0:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:runtime" -> "com.google.http-client:google-http-client-appengine:jar:1.43.3:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:runtime" -> "com.google.api.grpc:proto-google-cloud-storage-v2:jar:2.22.5-alpha:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:runtime" -> "com.google.api.grpc:grpc-google-cloud-storage-v2:jar:2.22.5-alpha:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:runtime" -> "com.google.api.grpc:gapic-google-cloud-storage-v2:jar:2.22.5-alpha:runtime" ; 
+[INFO] 	"com.google.cloud:google-cloud-storage:jar:2.22.5:runtime" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"com.amazonaws.secretsmanager:aws-secretsmanager-jdbc:jar:2.0.0:runtime" -> "com.amazonaws.secretsmanager:aws-secretsmanager-caching-java:jar:2.0.0:runtime" ; 
+[INFO] 	"com.amazonaws.secretsmanager:aws-secretsmanager-jdbc:jar:2.0.0:runtime" -> "software.amazon.awssdk:secretsmanager:jar:2.20.93:runtime" ; 
+[INFO] 	"com.amazonaws.secretsmanager:aws-secretsmanager-jdbc:jar:2.0.0:runtime" -> "com.github.spotbugs:spotbugs-annotations:jar:4.7.3:runtime" ; 
+[INFO] 	"software.amazon.awssdk:secretsmanager:jar:2.20.93:runtime" -> "software.amazon.awssdk:aws-json-protocol:jar:2.20.93:runtime" ; 
+[INFO] 	"org.apache.commons:commons-text:jar:1.10.0:runtime" -> "org.apache.commons:commons-lang3:jar:3.12.0:runtime" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-xml:jar:2.15.2:compile" -> "org.codehaus.woodstox:stax2-api:jar:4.2.1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-xml:jar:2.15.2:compile" -> "com.fasterxml.woodstox:woodstox-core:jar:6.5.1:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< org.flywaydb:flyway-database-mongodb >----------------
+[INFO] Building flyway-database-mongodb 10.1.0                          [26/27]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from maven-central: https://repo1.maven.org/maven2/com/github/kornilova203/mongo-jdbc-driver/1.18/mongo-jdbc-driver-1.18.pom
+[INFO] Downloading from repo.gradle.org: https://repo.gradle.org/gradle/libs-releases-local/com/github/kornilova203/mongo-jdbc-driver/1.18/mongo-jdbc-driver-1.18.pom
+[INFO] Downloading from flyway-repo: https://nexus.flywaydb.org/repository/flyway/com/github/kornilova203/mongo-jdbc-driver/1.18/mongo-jdbc-driver-1.18.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/github/kornilova203/mongo-jdbc-driver/1.18/mongo-jdbc-driver-1.18.pom
+[WARNING] The POM for com.github.kornilova203:mongo-jdbc-driver:jar:1.18 is missing, no dependency information available
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ flyway-database-mongodb ---
+[INFO] digraph "org.flywaydb:flyway-database-mongodb:jar:10.1.0" { 
+[INFO] 	"org.flywaydb:flyway-database-mongodb:jar:10.1.0" -> "org.flywaydb:flyway-core:jar:10.1.0:compile" ; 
+[INFO] 	"org.flywaydb:flyway-database-mongodb:jar:10.1.0" -> "org.projectlombok:lombok:jar:1.18.20:provided" ; 
+[INFO] 	"org.flywaydb:flyway-database-mongodb:jar:10.1.0" -> "com.github.kornilova203:mongo-jdbc-driver:jar:1.18:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" ; 
+[INFO] 	"org.flywaydb:flyway-core:jar:10.1.0:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-toml:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< org.flywaydb:flyway-database >--------------------
+[INFO] Building flyway-database 10.1.0                                  [27/27]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ flyway-database ---
+[INFO] digraph "org.flywaydb:flyway-database:pom:10.1.0" { 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for flyway-parent 10.1.0:
+[INFO] 
+[INFO] flyway-parent ...................................... SUCCESS [  4.306 s]
+[INFO] flyway-core ........................................ SUCCESS [  4.794 s]
+[INFO] flyway-mysql ....................................... SUCCESS [  0.083 s]
+[INFO] flyway-community-db-support ........................ SUCCESS [  0.080 s]
+[INFO] flyway-database-tidb ............................... SUCCESS [  0.073 s]
+[INFO] flyway-database-ignite ............................. SUCCESS [  0.119 s]
+[INFO] flyway-database-postgresql ......................... SUCCESS [  0.089 s]
+[INFO] flyway-database-yugabytedb ......................... SUCCESS [  0.086 s]
+[INFO] flyway-database-oracle ............................. SUCCESS [  0.145 s]
+[INFO] flyway-gradle-plugin ............................... SUCCESS [  0.112 s]
+[INFO] flyway-maven-plugin ................................ SUCCESS [  0.571 s]
+[INFO] flyway-gcp-bigquery ................................ SUCCESS [  0.069 s]
+[INFO] flyway-gcp-spanner ................................. SUCCESS [  0.507 s]
+[INFO] flyway-sqlserver ................................... SUCCESS [  0.050 s]
+[INFO] flyway-database-db2 ................................ SUCCESS [  0.043 s]
+[INFO] flyway-database-derby .............................. SUCCESS [  0.086 s]
+[INFO] flyway-database-hsqldb ............................. SUCCESS [  0.046 s]
+[INFO] flyway-database-informix ........................... SUCCESS [  0.092 s]
+[INFO] flyway-database-saphana ............................ SUCCESS [  0.049 s]
+[INFO] flyway-database-snowflake .......................... SUCCESS [  0.058 s]
+[INFO] flyway-database-redshift ........................... SUCCESS [  0.033 s]
+[INFO] flyway-database-sybasease .......................... SUCCESS [  0.055 s]
+[INFO] flyway-firebird .................................... SUCCESS [  0.048 s]
+[INFO] flyway-singlestore ................................. SUCCESS [  0.039 s]
+[INFO] flyway-commandline ................................. SUCCESS [  1.928 s]
+[INFO] flyway-database-mongodb ............................ SUCCESS [  1.100 s]
+[INFO] flyway-database .................................... SUCCESS [  0.008 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  20.984 s
+[INFO] Finished at: 2023-12-28T09:02:55+01:00
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,64 @@
+[INFO] Scanning for projects...
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/squareup/seismic/1.0.4-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/squareup/seismic/1.0.4-SNAPSHOT/seismic-1.0.4-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Seismic (Parent)                                                   [pom]
+[INFO] Seismic                                                            [jar]
+[INFO] Seismic Sample                                                     [apk]
+[INFO] 
+[INFO] --------------------< com.squareup:seismic-parent >---------------------
+[INFO] Building Seismic (Parent) 1.0.4-SNAPSHOT                           [1/3]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ seismic-parent ---
+[INFO] digraph "com.squareup:seismic-parent:pom:1.0.4-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------------< com.squareup:seismic >------------------------
+[INFO] Building Seismic 1.0.4-SNAPSHOT                                    [2/3]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ seismic ---
+[INFO] digraph "com.squareup:seismic:jar:1.0.4-SNAPSHOT" { 
+[INFO] 	"com.squareup:seismic:jar:1.0.4-SNAPSHOT" -> "com.google.android:android:jar:4.1.1.4:provided" ; 
+[INFO] 	"com.squareup:seismic:jar:1.0.4-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"com.squareup:seismic:jar:1.0.4-SNAPSHOT" -> "org.easytesting:fest-assert-core:jar:2.0M7:test" ; 
+[INFO] 	"com.google.android:android:jar:4.1.1.4:provided" -> "commons-logging:commons-logging:jar:1.1.1:provided" ; 
+[INFO] 	"com.google.android:android:jar:4.1.1.4:provided" -> "org.apache.httpcomponents:httpclient:jar:4.0.1:provided" ; 
+[INFO] 	"com.google.android:android:jar:4.1.1.4:provided" -> "org.khronos:opengl-api:jar:gl1.1-android-2.1_r1:provided" ; 
+[INFO] 	"com.google.android:android:jar:4.1.1.4:provided" -> "xerces:xmlParserAPIs:jar:2.6.2:provided" ; 
+[INFO] 	"com.google.android:android:jar:4.1.1.4:provided" -> "xpp3:xpp3:jar:1.1.4c:provided" ; 
+[INFO] 	"com.google.android:android:jar:4.1.1.4:provided" -> "org.json:json:jar:20080701:provided" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.0.1:provided" -> "org.apache.httpcomponents:httpcore:jar:4.0.1:provided" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.0.1:provided" -> "commons-codec:commons-codec:jar:1.3:provided" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.easytesting:fest-assert-core:jar:2.0M7:test" -> "org.easytesting:fest-util:jar:1.2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< com.squareup:seismic-sample >---------------------
+[INFO] Building Seismic Sample 1.0.4-SNAPSHOT                             [3/3]
+[INFO] --------------------------------[ apk ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Seismic (Parent) 1.0.4-SNAPSHOT:
+[INFO] 
+[INFO] Seismic (Parent) ................................... SUCCESS [  0.857 s]
+[INFO] Seismic ............................................ SUCCESS [  0.045 s]
+[INFO] Seismic Sample ..................................... FAILURE [  0.086 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.765 s
+[INFO] Finished at: 2023-12-28T09:03:28+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project seismic-sample: Could not resolve dependencies for project com.squareup:seismic-sample:apk:1.0.4-SNAPSHOT: Failure to find com.squareup:seismic:jar:1.0.4-SNAPSHOT in https://oss.sonatype.org/content/repositories/snapshots was cached in the local repository, resolution will not be reattempted until the update interval of sonatype-nexus-snapshots has elapsed or updates are forced -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :seismic-sample

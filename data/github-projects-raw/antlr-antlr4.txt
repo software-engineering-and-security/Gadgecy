@@ -1,0 +1,62 @@
+[INFO] Scanning for projects...
+[WARNING] The project org.antlr:antlr4-master:pom:4.13.2-SNAPSHOT uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[WARNING] The project org.antlr:antlr4-runtime:jar:4.13.2-SNAPSHOT uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[WARNING] The project org.antlr:antlr4:jar:4.13.2-SNAPSHOT uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[WARNING] The project org.antlr:antlr4-runtime-testsuite:jar:4.13.2-SNAPSHOT uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[WARNING] The project org.antlr:antlr4-tool-testsuite:jar:4.13.2-SNAPSHOT uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] ANTLR 4                                                            [pom]
+[INFO] ANTLR 4 Runtime                                                    [jar]
+[INFO] ANTLR 4 Tool                                                       [jar]
+[INFO] ANTLR 4 Maven plugin                                      [maven-plugin]
+[INFO] ANTLR 4 Runtime Tests (4th generation)                             [jar]
+[INFO] ANTLR 4 Tool Tests                                                 [jar]
+[INFO] 
+[INFO] ----------------------< org.antlr:antlr4-master >-----------------------
+[INFO] Building ANTLR 4 4.13.2-SNAPSHOT                                   [1/6]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ antlr4-master ---
+[INFO] digraph "org.antlr:antlr4-master:pom:4.13.2-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< org.antlr:antlr4-runtime >----------------------
+[INFO] Building ANTLR 4 Runtime 4.13.2-SNAPSHOT                           [2/6]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ antlr4-runtime ---
+[INFO] digraph "org.antlr:antlr4-runtime:jar:4.13.2-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------------< org.antlr:antlr4 >--------------------------
+[INFO] Building ANTLR 4 Tool 4.13.2-SNAPSHOT                              [3/6]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/antlr/antlr4-runtime/4.13.2-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/antlr/antlr4-runtime/4.13.2-SNAPSHOT/antlr4-runtime-4.13.2-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for ANTLR 4 4.13.2-SNAPSHOT:
+[INFO] 
+[INFO] ANTLR 4 ............................................ SUCCESS [  4.532 s]
+[INFO] ANTLR 4 Runtime .................................... SUCCESS [  0.225 s]
+[INFO] ANTLR 4 Tool ....................................... FAILURE [  4.030 s]
+[INFO] ANTLR 4 Maven plugin ............................... SKIPPED
+[INFO] ANTLR 4 Runtime Tests (4th generation) ............. SKIPPED
+[INFO] ANTLR 4 Tool Tests ................................. SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  14.235 s
+[INFO] Finished at: 2023-12-28T09:02:28+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project antlr4: Could not resolve dependencies for project org.antlr:antlr4:jar:4.13.2-SNAPSHOT: Could not find artifact org.antlr:antlr4-runtime:jar:4.13.2-SNAPSHOT in sonatype-nexus-snapshots (https://oss.sonatype.org/content/repositories/snapshots) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :antlr4

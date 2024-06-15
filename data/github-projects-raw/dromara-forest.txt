@@ -1,0 +1,1312 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.dtflys.forest:forest-jaxb:jar:1.5.33
+[WARNING] The expression ${parent.version} is deprecated. Please use ${project.parent.version} instead. @ com.dtflys.forest:forest-jaxb:${revision}, /home/brunok/apache-ysoserial-vuln/pom/dromara-forest/forest-jaxb/pom.xml
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.dtflys.forest:forest-jakarta-xml:jar:1.5.33
+[WARNING] The expression ${parent.version} is deprecated. Please use ${project.parent.version} instead. @ com.dtflys.forest:forest-jakarta-xml:${revision}, /home/brunok/apache-ysoserial-vuln/pom/dromara-forest/forest-jakarta-xml/pom.xml
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.dtflys.forest:forest-spring-boot-starter:jar:1.5.33
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.alibaba:fastjson:jar -> duplicate declaration of version ${fastjson.version} @ com.dtflys.forest:forest-spring-boot-starter:${revision}, /home/brunok/apache-ysoserial-vuln/pom/dromara-forest/forest-spring-boot-starter/pom.xml, line 108, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.dtflys.forest:forest-spring-boot3-starter:jar:1.5.33
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.alibaba:fastjson:jar -> duplicate declaration of version ${fastjson.version} @ com.dtflys.forest:forest-spring-boot3-starter:${revision}, /home/brunok/apache-ysoserial-vuln/pom/dromara-forest/forest-spring-boot3-starter/pom.xml, line 135, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.dtflys.forest:forest-solon-plugin:jar:1.5.33
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.alibaba:fastjson:jar -> duplicate declaration of version ${fastjson.version} @ com.dtflys.forest:forest-solon-plugin:${revision}, /home/brunok/apache-ysoserial-vuln/pom/dromara-forest/forest-solon-plugin/pom.xml, line 88, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.dtflys.forest:forest-spring-boot-test:jar:1.5.33
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.alibaba:fastjson:jar -> duplicate declaration of version ${fastjson.version} @ com.dtflys.forest:forest-spring-boot-test:${revision}, /home/brunok/apache-ysoserial-vuln/pom/dromara-forest/forest-test/forest-spring-boot-test/pom.xml, line 94, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.dtflys.forest:forest-spring-boot3-test:jar:1.5.33
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.alibaba:fastjson:jar -> duplicate declaration of version ${fastjson.version} @ com.dtflys.forest:forest-spring-boot3-test:${revision}, /home/brunok/apache-ysoserial-vuln/pom/dromara-forest/forest-test/forest-spring-boot3-test/pom.xml, line 100, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] forest                                                             [pom]
+[INFO] forest-mock                                                        [jar]
+[INFO] forest-core                                                        [jar]
+[INFO] forest-jaxb                                                        [jar]
+[INFO] forest-jakarta-xml                                                 [jar]
+[INFO] forest-spring                                                      [jar]
+[INFO] forest-spring-boot-starter                                         [jar]
+[INFO] forest-spring-boot3-starter                                        [jar]
+[INFO] forest-solon-plugin                                                [jar]
+[INFO] forest-test                                                        [pom]
+[INFO] forest-spring-boot-test                                            [jar]
+[INFO] forest-spring-boot-test                                            [jar]
+[INFO] 
+[INFO] ----------------------< com.dtflys.forest:forest >----------------------
+[INFO] Building forest 1.5.33                                            [1/12]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ forest ---
+[INFO] digraph "com.dtflys.forest:forest:pom:1.5.33" { 
+[INFO] 	"com.dtflys.forest:forest:pom:1.5.33" -> "org.mockito:mockito-core:jar:4.5.1:test" ; 
+[INFO] 	"com.dtflys.forest:forest:pom:1.5.33" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.dtflys.forest:forest:pom:1.5.33" -> "xerces:xercesImpl:jar:2.12.2:provided" ; 
+[INFO] 	"com.dtflys.forest:forest:pom:1.5.33" -> "io.netty:netty-all:jar:4.1.45.Final:test" ; 
+[INFO] 	"com.dtflys.forest:forest:pom:1.5.33" -> "org.mock-server:mockserver-netty:jar:5.4.1:provided" ; 
+[INFO] 	"com.dtflys.forest:forest:pom:1.5.33" -> "org.mock-server:mockserver-client-java:jar:5.4.1:test" ; 
+[INFO] 	"com.dtflys.forest:forest:pom:1.5.33" -> "com.github.dreamhead:moco-core:jar:1.2.0:test" ; 
+[INFO] 	"com.dtflys.forest:forest:pom:1.5.33" -> "org.assertj:assertj-core:jar:3.13.2:test" ; 
+[INFO] 	"com.dtflys.forest:forest:pom:1.5.33" -> "com.squareup.okhttp3:mockwebserver:jar:3.14.9:test" ; 
+[INFO] 	"com.dtflys.forest:forest:pom:1.5.33" -> "cn.hutool:hutool-all:jar:5.5.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"xerces:xercesImpl:jar:2.12.2:provided" -> "xml-apis:xml-apis:jar:1.4.01:provided" ; 
+[INFO] 	"org.mock-server:mockserver-netty:jar:5.4.1:provided" -> "org.mock-server:mockserver-core:jar:5.4.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-netty:jar:5.4.1:provided" -> "org.slf4j:slf4j-api:jar:1.7.36:provided" ; 
+[INFO] 	"org.mock-server:mockserver-netty:jar:5.4.1:provided" -> "ch.qos.logback:logback-classic:jar:1.2.11:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "javax.servlet:javax.servlet-api:jar:4.0.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "io.netty:netty-handler-proxy:jar:4.1.77.Final:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "com.jcraft:jzlib:jar:1.1.3:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.bouncycastle:bcprov-jdk15on:jar:1.58:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.bouncycastle:bcpkix-jdk15on:jar:1.58:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.velocity:velocity-engine-scripting:jar:2.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.velocity:velocity-engine-core:jar:2.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.skyscreamer:jsonassert:jar:1.5.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "javax.xml.bind:jaxb-api:jar:2.3.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.commons:commons-text:jar:1.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.commons:commons-collections4:jar:4.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "commons-io:commons-io:jar:2.6:provided" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.0:provided" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "javax.mail:mailapi:jar:1.4.3:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "joda-time:joda-time:jar:2.9.7:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "com.googlecode.libphonenumber:libphonenumber:jar:8.0.0:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "net.sf.jopt-simple:jopt-simple:jar:5.0.3:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "org.mozilla:rhino:jar:1.7R4:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "com.github.fge:jackson-coreutils:jar:1.8:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "com.github.fge:uri-template:jar:0.9:provided" ; 
+[INFO] 	"com.github.fge:jackson-coreutils:jar:1.8:provided" -> "com.github.fge:msg-simple:jar:1.1:provided" ; 
+[INFO] 	"com.github.fge:msg-simple:jar:1.1:provided" -> "com.github.fge:btf:jar:1.2:provided" ; 
+[INFO] 	"javax.mail:mailapi:jar:1.4.3:provided" -> "javax.activation:activation:jar:1.1:provided" ; 
+[INFO] 	"javax.xml.bind:jaxb-api:jar:2.3.1:provided" -> "javax.activation:javax.activation-api:jar:1.2.0:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.11:provided" -> "ch.qos.logback:logback-core:jar:1.2.11:provided" ; 
+[INFO] 	"org.mock-server:mockserver-client-java:jar:5.4.1:test" -> "org.apache.commons:commons-lang3:jar:3.12.0:provided" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "com.google.guava:guava:jar:30.1.1-jre:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "io.netty:netty-codec-http:jar:4.1.77.Final:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "io.netty:netty-handler:jar:4.1.77.Final:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.3:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "com.jayway.jsonpath:json-path:jar:2.6.0:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "org.freemarker:freemarker:jar:2.3.31:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "org.checkerframework:checker-qual:jar:3.8.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.5.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:1.3:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-common:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-buffer:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-transport:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-codec:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.77.Final:test" -> "io.netty:netty-resolver:jar:4.1.77.Final:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.3:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.3:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.3:test" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.3:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:test" -> "org.apache.httpcomponents:httpcore:jar:4.4.15:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:test" -> "commons-codec:commons-codec:jar:1.15:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.6.0:test" -> "net.minidev:json-smart:jar:2.4.8:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.8:test" -> "net.minidev:accessors-smart:jar:2.4.8:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.8:test" -> "org.ow2.asm:asm:jar:9.1:test" ; 
+[INFO] 	"com.squareup.okhttp3:mockwebserver:jar:3.14.9:test" -> "com.squareup.okhttp3:okhttp:jar:3.14.9:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.14.9:test" -> "com.squareup.okio:okio:jar:1.17.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< com.dtflys.forest:forest-mock >--------------------
+[INFO] Building forest-mock 1.5.33                                       [2/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ forest-mock ---
+[INFO] digraph "com.dtflys.forest:forest-mock:jar:1.5.33" { 
+[INFO] 	"com.dtflys.forest:forest-mock:jar:1.5.33" -> "commons-fileupload:commons-fileupload:jar:1.3.3:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-mock:jar:1.5.33" -> "commons-io:commons-io:jar:2.7:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-mock:jar:1.5.33" -> "com.squareup.okhttp3:mockwebserver:jar:3.14.9:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-mock:jar:1.5.33" -> "junit:junit:jar:4.13.2:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-mock:jar:1.5.33" -> "org.mockito:mockito-core:jar:4.5.1:test" ; 
+[INFO] 	"com.dtflys.forest:forest-mock:jar:1.5.33" -> "xerces:xercesImpl:jar:2.12.2:provided" ; 
+[INFO] 	"com.dtflys.forest:forest-mock:jar:1.5.33" -> "io.netty:netty-all:jar:4.1.45.Final:test" ; 
+[INFO] 	"com.dtflys.forest:forest-mock:jar:1.5.33" -> "org.mock-server:mockserver-netty:jar:5.4.1:provided" ; 
+[INFO] 	"com.dtflys.forest:forest-mock:jar:1.5.33" -> "org.mock-server:mockserver-client-java:jar:5.4.1:test" ; 
+[INFO] 	"com.dtflys.forest:forest-mock:jar:1.5.33" -> "com.github.dreamhead:moco-core:jar:1.2.0:test" ; 
+[INFO] 	"com.dtflys.forest:forest-mock:jar:1.5.33" -> "org.assertj:assertj-core:jar:3.13.2:test" ; 
+[INFO] 	"com.dtflys.forest:forest-mock:jar:1.5.33" -> "cn.hutool:hutool-all:jar:5.5.2:test" ; 
+[INFO] 	"com.squareup.okhttp3:mockwebserver:jar:3.14.9:compile" -> "com.squareup.okhttp3:okhttp:jar:3.14.9:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.14.9:compile" -> "com.squareup.okio:okio:jar:1.17.2:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:compile" -> "org.hamcrest:hamcrest-core:jar:2.2:compile" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:compile" -> "org.hamcrest:hamcrest:jar:2.2:compile" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"xerces:xercesImpl:jar:2.12.2:provided" -> "xml-apis:xml-apis:jar:1.4.01:provided" ; 
+[INFO] 	"org.mock-server:mockserver-netty:jar:5.4.1:provided" -> "org.mock-server:mockserver-core:jar:5.4.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-netty:jar:5.4.1:provided" -> "org.slf4j:slf4j-api:jar:1.7.36:provided" ; 
+[INFO] 	"org.mock-server:mockserver-netty:jar:5.4.1:provided" -> "ch.qos.logback:logback-classic:jar:1.2.11:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "javax.servlet:javax.servlet-api:jar:4.0.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "io.netty:netty-handler-proxy:jar:4.1.77.Final:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "com.jcraft:jzlib:jar:1.1.3:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.bouncycastle:bcprov-jdk15on:jar:1.58:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.bouncycastle:bcpkix-jdk15on:jar:1.58:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.velocity:velocity-engine-scripting:jar:2.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.velocity:velocity-engine-core:jar:2.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.skyscreamer:jsonassert:jar:1.5.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "javax.xml.bind:jaxb-api:jar:2.3.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.commons:commons-text:jar:1.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.commons:commons-collections4:jar:4.1:provided" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.0:provided" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "javax.mail:mailapi:jar:1.4.3:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "joda-time:joda-time:jar:2.9.7:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "com.googlecode.libphonenumber:libphonenumber:jar:8.0.0:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "net.sf.jopt-simple:jopt-simple:jar:5.0.3:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "org.mozilla:rhino:jar:1.7R4:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "com.github.fge:jackson-coreutils:jar:1.8:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "com.github.fge:uri-template:jar:0.9:provided" ; 
+[INFO] 	"com.github.fge:jackson-coreutils:jar:1.8:provided" -> "com.github.fge:msg-simple:jar:1.1:provided" ; 
+[INFO] 	"com.github.fge:msg-simple:jar:1.1:provided" -> "com.github.fge:btf:jar:1.2:provided" ; 
+[INFO] 	"javax.mail:mailapi:jar:1.4.3:provided" -> "javax.activation:activation:jar:1.1:provided" ; 
+[INFO] 	"javax.xml.bind:jaxb-api:jar:2.3.1:provided" -> "javax.activation:javax.activation-api:jar:1.2.0:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.11:provided" -> "ch.qos.logback:logback-core:jar:1.2.11:provided" ; 
+[INFO] 	"org.mock-server:mockserver-client-java:jar:5.4.1:test" -> "org.apache.commons:commons-lang3:jar:3.12.0:provided" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "com.google.guava:guava:jar:30.1.1-jre:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "io.netty:netty-codec-http:jar:4.1.77.Final:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "io.netty:netty-handler:jar:4.1.77.Final:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.3:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "com.jayway.jsonpath:json-path:jar:2.6.0:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "org.freemarker:freemarker:jar:2.3.31:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "org.checkerframework:checker-qual:jar:3.8.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.5.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:1.3:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-common:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-buffer:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-transport:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-codec:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.77.Final:test" -> "io.netty:netty-resolver:jar:4.1.77.Final:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.3:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.3:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.3:test" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.3:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:test" -> "org.apache.httpcomponents:httpcore:jar:4.4.15:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:test" -> "commons-codec:commons-codec:jar:1.15:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.6.0:test" -> "net.minidev:json-smart:jar:2.4.8:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.8:test" -> "net.minidev:accessors-smart:jar:2.4.8:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.8:test" -> "org.ow2.asm:asm:jar:9.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< com.dtflys.forest:forest-core >--------------------
+[INFO] Building forest-core 1.5.33                                       [3/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ forest-core ---
+[INFO] digraph "com.dtflys.forest:forest-core:jar:1.5.33" { 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "com.googlecode.juniversalchardet:juniversalchardet:jar:1.0.3:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "org.apache.httpcomponents:httpclient-cache:jar:4.5.13:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "org.apache.httpcomponents:httpcore:jar:4.4.14:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "org.apache.httpcomponents:httpmime:jar:4.5.13:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "com.squareup.okhttp3:okhttp:jar:3.14.9:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "com.google.code.findbugs:jsr305:jar:3.0.1:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "commons-io:commons-io:jar:2.7:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "com.alibaba:fastjson:jar:1.2.83:provided" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.3:provided" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.3:provided" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.3:provided" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "com.google.code.gson:gson:jar:2.8.9:provided" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "com.google.protobuf:protobuf-java-util:jar:3.16.1:provided" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "com.dtflys.forest:forest-mock:jar:1.5.33:test" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "org.slf4j:slf4j-api:jar:1.7.30:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "org.slf4j:jcl-over-slf4j:jar:1.7.30:test" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "ch.qos.logback:logback-classic:jar:1.2.11:test" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "net.bytebuddy:byte-buddy:jar:1.12.3:test" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.3:test" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "org.jetbrains.kotlin:kotlin-test:jar:1.6.20:test" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.6.20:provided" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:1.6.2:provided" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "org.mockito:mockito-core:jar:4.5.1:test" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "xerces:xercesImpl:jar:2.12.2:provided" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "io.netty:netty-all:jar:4.1.45.Final:test" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "org.mock-server:mockserver-netty:jar:5.4.1:provided" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "org.mock-server:mockserver-client-java:jar:5.4.1:test" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "com.github.dreamhead:moco-core:jar:1.2.0:test" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "org.assertj:assertj-core:jar:3.13.2:test" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "com.squareup.okhttp3:mockwebserver:jar:3.14.9:test" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33" -> "cn.hutool:hutool-all:jar:5.5.2:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient-cache:jar:4.5.13:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.14.9:compile" -> "com.squareup.okio:okio:jar:1.17.2:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.16.1:provided" -> "com.google.protobuf:protobuf-java:jar:3.16.1:provided" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.16.1:provided" -> "com.google.errorprone:error_prone_annotations:jar:2.3.4:provided" ; 
+[INFO] 	"com.dtflys.forest:forest-mock:jar:1.5.33:test" -> "commons-fileupload:commons-fileupload:jar:1.3.3:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.11:test" -> "ch.qos.logback:logback-core:jar:1.2.11:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.6.20:provided" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.6.21:provided" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.6.20:provided" -> "org.jetbrains:annotations:jar:13.0:provided" ; 
+[INFO] 	"org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:1.6.2:provided" -> "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:1.5.2:provided" ; 
+[INFO] 	"org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:1.5.2:provided" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.6.21:provided" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.6.21:provided" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.6.21:provided" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"xerces:xercesImpl:jar:2.12.2:provided" -> "xml-apis:xml-apis:jar:1.4.01:provided" ; 
+[INFO] 	"org.mock-server:mockserver-netty:jar:5.4.1:provided" -> "org.mock-server:mockserver-core:jar:5.4.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "javax.servlet:javax.servlet-api:jar:4.0.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "io.netty:netty-handler-proxy:jar:4.1.77.Final:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "com.jcraft:jzlib:jar:1.1.3:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.bouncycastle:bcprov-jdk15on:jar:1.58:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.bouncycastle:bcpkix-jdk15on:jar:1.58:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.velocity:velocity-engine-scripting:jar:2.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.velocity:velocity-engine-core:jar:2.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.skyscreamer:jsonassert:jar:1.5.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "javax.xml.bind:jaxb-api:jar:2.3.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.commons:commons-text:jar:1.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.commons:commons-collections4:jar:4.1:provided" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.0:provided" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "javax.mail:mailapi:jar:1.4.3:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "joda-time:joda-time:jar:2.9.7:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "com.googlecode.libphonenumber:libphonenumber:jar:8.0.0:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "net.sf.jopt-simple:jopt-simple:jar:5.0.3:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "org.mozilla:rhino:jar:1.7R4:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "com.github.fge:jackson-coreutils:jar:1.8:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "com.github.fge:uri-template:jar:0.9:provided" ; 
+[INFO] 	"com.github.fge:jackson-coreutils:jar:1.8:provided" -> "com.github.fge:msg-simple:jar:1.1:provided" ; 
+[INFO] 	"com.github.fge:msg-simple:jar:1.1:provided" -> "com.github.fge:btf:jar:1.2:provided" ; 
+[INFO] 	"javax.mail:mailapi:jar:1.4.3:provided" -> "javax.activation:activation:jar:1.1:provided" ; 
+[INFO] 	"javax.xml.bind:jaxb-api:jar:2.3.1:provided" -> "javax.activation:javax.activation-api:jar:1.2.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-client-java:jar:5.4.1:test" -> "org.apache.commons:commons-lang3:jar:3.12.0:provided" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "com.google.guava:guava:jar:30.1.1-jre:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "io.netty:netty-codec-http:jar:4.1.77.Final:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "io.netty:netty-handler:jar:4.1.77.Final:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "com.jayway.jsonpath:json-path:jar:2.6.0:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "org.freemarker:freemarker:jar:2.3.31:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "org.checkerframework:checker-qual:jar:3.8.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:1.3:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-common:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-buffer:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-transport:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-codec:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.77.Final:test" -> "io.netty:netty-resolver:jar:4.1.77.Final:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.6.0:test" -> "net.minidev:json-smart:jar:2.4.8:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.8:test" -> "net.minidev:accessors-smart:jar:2.4.8:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.8:test" -> "org.ow2.asm:asm:jar:9.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< com.dtflys.forest:forest-jaxb >--------------------
+[INFO] Building forest-jaxb 1.5.33                                       [4/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ forest-jaxb ---
+[INFO] digraph "com.dtflys.forest:forest-jaxb:jar:1.5.33" { 
+[INFO] 	"com.dtflys.forest:forest-jaxb:jar:1.5.33" -> "com.dtflys.forest:forest-core:jar:1.5.33:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-jaxb:jar:1.5.33" -> "org.glassfish.jaxb:jaxb-runtime:jar:2.3.1:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-jaxb:jar:1.5.33" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.dtflys.forest:forest-jaxb:jar:1.5.33" -> "com.dtflys.forest:forest-mock:jar:1.5.33:test" ; 
+[INFO] 	"com.dtflys.forest:forest-jaxb:jar:1.5.33" -> "com.alibaba:fastjson:jar:1.2.83:provided" ; 
+[INFO] 	"com.dtflys.forest:forest-jaxb:jar:1.5.33" -> "org.mockito:mockito-core:jar:4.5.1:test" ; 
+[INFO] 	"com.dtflys.forest:forest-jaxb:jar:1.5.33" -> "xerces:xercesImpl:jar:2.12.2:provided" ; 
+[INFO] 	"com.dtflys.forest:forest-jaxb:jar:1.5.33" -> "io.netty:netty-all:jar:4.1.45.Final:test" ; 
+[INFO] 	"com.dtflys.forest:forest-jaxb:jar:1.5.33" -> "org.mock-server:mockserver-netty:jar:5.4.1:provided" ; 
+[INFO] 	"com.dtflys.forest:forest-jaxb:jar:1.5.33" -> "org.mock-server:mockserver-client-java:jar:5.4.1:test" ; 
+[INFO] 	"com.dtflys.forest:forest-jaxb:jar:1.5.33" -> "com.github.dreamhead:moco-core:jar:1.2.0:test" ; 
+[INFO] 	"com.dtflys.forest:forest-jaxb:jar:1.5.33" -> "org.assertj:assertj-core:jar:3.13.2:test" ; 
+[INFO] 	"com.dtflys.forest:forest-jaxb:jar:1.5.33" -> "com.squareup.okhttp3:mockwebserver:jar:3.14.9:test" ; 
+[INFO] 	"com.dtflys.forest:forest-jaxb:jar:1.5.33" -> "cn.hutool:hutool-all:jar:5.5.2:test" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "com.googlecode.juniversalchardet:juniversalchardet:jar:1.0.3:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.apache.httpcomponents:httpclient-cache:jar:4.5.13:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.15:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.apache.httpcomponents:httpmime:jar:4.5.13:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "com.squareup.okhttp3:okhttp:jar:3.14.9:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.1:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "commons-io:commons-io:jar:2.7:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient-cache:jar:4.5.13:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.14.9:compile" -> "com.squareup.okio:okio:jar:1.17.2:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.1:compile" -> "javax.xml.bind:jaxb-api:jar:2.3.1:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.1:compile" -> "org.glassfish.jaxb:txw2:jar:2.3.6:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.1:compile" -> "com.sun.istack:istack-commons-runtime:jar:3.0.7:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.1:compile" -> "org.jvnet.staxex:stax-ex:jar:1.8:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.1:compile" -> "com.sun.xml.fastinfoset:FastInfoset:jar:1.2.15:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.1:compile" -> "javax.activation:javax.activation-api:jar:1.2.0:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"com.dtflys.forest:forest-mock:jar:1.5.33:test" -> "commons-fileupload:commons-fileupload:jar:1.3.3:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"xerces:xercesImpl:jar:2.12.2:provided" -> "xml-apis:xml-apis:jar:1.4.01:provided" ; 
+[INFO] 	"org.mock-server:mockserver-netty:jar:5.4.1:provided" -> "org.mock-server:mockserver-core:jar:5.4.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-netty:jar:5.4.1:provided" -> "ch.qos.logback:logback-classic:jar:1.2.11:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "javax.servlet:javax.servlet-api:jar:4.0.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "io.netty:netty-handler-proxy:jar:4.1.77.Final:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "com.jcraft:jzlib:jar:1.1.3:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.bouncycastle:bcprov-jdk15on:jar:1.58:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.bouncycastle:bcpkix-jdk15on:jar:1.58:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.velocity:velocity-engine-scripting:jar:2.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.velocity:velocity-engine-core:jar:2.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.skyscreamer:jsonassert:jar:1.5.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.commons:commons-text:jar:1.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.commons:commons-collections4:jar:4.1:provided" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.0:provided" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "javax.mail:mailapi:jar:1.4.3:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "joda-time:joda-time:jar:2.9.7:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "com.googlecode.libphonenumber:libphonenumber:jar:8.0.0:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "net.sf.jopt-simple:jopt-simple:jar:5.0.3:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "org.mozilla:rhino:jar:1.7R4:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "com.github.fge:jackson-coreutils:jar:1.8:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "com.github.fge:uri-template:jar:0.9:provided" ; 
+[INFO] 	"com.github.fge:jackson-coreutils:jar:1.8:provided" -> "com.github.fge:msg-simple:jar:1.1:provided" ; 
+[INFO] 	"com.github.fge:msg-simple:jar:1.1:provided" -> "com.github.fge:btf:jar:1.2:provided" ; 
+[INFO] 	"javax.mail:mailapi:jar:1.4.3:provided" -> "javax.activation:activation:jar:1.1:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.11:provided" -> "ch.qos.logback:logback-core:jar:1.2.11:provided" ; 
+[INFO] 	"org.mock-server:mockserver-client-java:jar:5.4.1:test" -> "org.apache.commons:commons-lang3:jar:3.12.0:provided" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "com.google.guava:guava:jar:30.1.1-jre:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "io.netty:netty-codec-http:jar:4.1.77.Final:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "io.netty:netty-handler:jar:4.1.77.Final:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.3:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "com.jayway.jsonpath:json-path:jar:2.6.0:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "org.freemarker:freemarker:jar:2.3.31:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "org.checkerframework:checker-qual:jar:3.8.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.5.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:1.3:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-common:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-buffer:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-transport:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-codec:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.77.Final:test" -> "io.netty:netty-resolver:jar:4.1.77.Final:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.3:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.3:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.3:test" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.3:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.6.0:test" -> "net.minidev:json-smart:jar:2.4.8:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.8:test" -> "net.minidev:accessors-smart:jar:2.4.8:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.8:test" -> "org.ow2.asm:asm:jar:9.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< com.dtflys.forest:forest-jakarta-xml >----------------
+[INFO] Building forest-jakarta-xml 1.5.33                                [5/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ forest-jakarta-xml ---
+[INFO] digraph "com.dtflys.forest:forest-jakarta-xml:jar:1.5.33" { 
+[INFO] 	"com.dtflys.forest:forest-jakarta-xml:jar:1.5.33" -> "com.dtflys.forest:forest-core:jar:1.5.33:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-jakarta-xml:jar:1.5.33" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.0:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-jakarta-xml:jar:1.5.33" -> "jakarta.activation:jakarta.activation-api:jar:2.1.1:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-jakarta-xml:jar:1.5.33" -> "org.glassfish.jaxb:jaxb-runtime:jar:4.0.2:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-jakarta-xml:jar:1.5.33" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.dtflys.forest:forest-jakarta-xml:jar:1.5.33" -> "org.mockito:mockito-core:jar:4.5.1:test" ; 
+[INFO] 	"com.dtflys.forest:forest-jakarta-xml:jar:1.5.33" -> "xerces:xercesImpl:jar:2.12.2:provided" ; 
+[INFO] 	"com.dtflys.forest:forest-jakarta-xml:jar:1.5.33" -> "io.netty:netty-all:jar:4.1.45.Final:test" ; 
+[INFO] 	"com.dtflys.forest:forest-jakarta-xml:jar:1.5.33" -> "org.mock-server:mockserver-netty:jar:5.4.1:provided" ; 
+[INFO] 	"com.dtflys.forest:forest-jakarta-xml:jar:1.5.33" -> "org.mock-server:mockserver-client-java:jar:5.4.1:test" ; 
+[INFO] 	"com.dtflys.forest:forest-jakarta-xml:jar:1.5.33" -> "com.github.dreamhead:moco-core:jar:1.2.0:test" ; 
+[INFO] 	"com.dtflys.forest:forest-jakarta-xml:jar:1.5.33" -> "org.assertj:assertj-core:jar:3.13.2:test" ; 
+[INFO] 	"com.dtflys.forest:forest-jakarta-xml:jar:1.5.33" -> "com.squareup.okhttp3:mockwebserver:jar:3.14.9:test" ; 
+[INFO] 	"com.dtflys.forest:forest-jakarta-xml:jar:1.5.33" -> "cn.hutool:hutool-all:jar:5.5.2:test" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "com.googlecode.juniversalchardet:juniversalchardet:jar:1.0.3:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.apache.httpcomponents:httpclient-cache:jar:4.5.13:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.15:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.apache.httpcomponents:httpmime:jar:4.5.13:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "com.squareup.okhttp3:okhttp:jar:3.14.9:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.1:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "commons-io:commons-io:jar:2.7:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient-cache:jar:4.5.13:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.14.9:compile" -> "com.squareup.okio:okio:jar:1.17.2:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:4.0.2:compile" -> "org.glassfish.jaxb:jaxb-core:jar:4.0.2:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.2:compile" -> "org.eclipse.angus:angus-activation:jar:2.0.0:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.2:compile" -> "org.glassfish.jaxb:txw2:jar:2.3.6:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.2:compile" -> "com.sun.istack:istack-commons-runtime:jar:4.1.1:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"xerces:xercesImpl:jar:2.12.2:provided" -> "xml-apis:xml-apis:jar:1.4.01:provided" ; 
+[INFO] 	"org.mock-server:mockserver-netty:jar:5.4.1:provided" -> "org.mock-server:mockserver-core:jar:5.4.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-netty:jar:5.4.1:provided" -> "ch.qos.logback:logback-classic:jar:1.2.11:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "javax.servlet:javax.servlet-api:jar:4.0.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "io.netty:netty-handler-proxy:jar:4.1.77.Final:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "com.jcraft:jzlib:jar:1.1.3:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.bouncycastle:bcprov-jdk15on:jar:1.58:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.bouncycastle:bcpkix-jdk15on:jar:1.58:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.velocity:velocity-engine-scripting:jar:2.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.velocity:velocity-engine-core:jar:2.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.skyscreamer:jsonassert:jar:1.5.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "javax.xml.bind:jaxb-api:jar:2.3.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.commons:commons-text:jar:1.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.commons:commons-collections4:jar:4.1:provided" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.0:provided" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "javax.mail:mailapi:jar:1.4.3:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "joda-time:joda-time:jar:2.9.7:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "com.googlecode.libphonenumber:libphonenumber:jar:8.0.0:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "net.sf.jopt-simple:jopt-simple:jar:5.0.3:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "org.mozilla:rhino:jar:1.7R4:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "com.github.fge:jackson-coreutils:jar:1.8:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "com.github.fge:uri-template:jar:0.9:provided" ; 
+[INFO] 	"com.github.fge:jackson-coreutils:jar:1.8:provided" -> "com.github.fge:msg-simple:jar:1.1:provided" ; 
+[INFO] 	"com.github.fge:msg-simple:jar:1.1:provided" -> "com.github.fge:btf:jar:1.2:provided" ; 
+[INFO] 	"javax.mail:mailapi:jar:1.4.3:provided" -> "javax.activation:activation:jar:1.1:provided" ; 
+[INFO] 	"javax.xml.bind:jaxb-api:jar:2.3.1:provided" -> "javax.activation:javax.activation-api:jar:1.2.0:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.11:provided" -> "ch.qos.logback:logback-core:jar:1.2.11:provided" ; 
+[INFO] 	"org.mock-server:mockserver-client-java:jar:5.4.1:test" -> "org.apache.commons:commons-lang3:jar:3.12.0:provided" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "com.google.guava:guava:jar:30.1.1-jre:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "io.netty:netty-codec-http:jar:4.1.77.Final:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "io.netty:netty-handler:jar:4.1.77.Final:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.3:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "com.jayway.jsonpath:json-path:jar:2.6.0:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "org.freemarker:freemarker:jar:2.3.31:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "org.checkerframework:checker-qual:jar:3.8.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.5.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:1.3:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-common:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-buffer:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-transport:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-codec:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.77.Final:test" -> "io.netty:netty-resolver:jar:4.1.77.Final:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.3:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.3:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.3:test" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.3:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.6.0:test" -> "net.minidev:json-smart:jar:2.4.8:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.8:test" -> "net.minidev:accessors-smart:jar:2.4.8:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.8:test" -> "org.ow2.asm:asm:jar:9.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< com.dtflys.forest:forest-spring >-------------------
+[INFO] Building forest-spring 1.5.33                                     [6/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ forest-spring ---
+[INFO] digraph "com.dtflys.forest:forest-spring:jar:1.5.33" { 
+[INFO] 	"com.dtflys.forest:forest-spring:jar:1.5.33" -> "com.dtflys.forest:forest-core:jar:1.5.33:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-spring:jar:1.5.33" -> "org.springframework:spring-core:jar:5.3.20:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-spring:jar:1.5.33" -> "org.springframework:spring-beans:jar:5.3.20:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-spring:jar:1.5.33" -> "org.springframework:spring-context:jar:5.3.20:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-spring:jar:1.5.33" -> "org.springframework:spring-webmvc:jar:5.3.20:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-spring:jar:1.5.33" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.6.8:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-spring:jar:1.5.33" -> "org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring:jar:1.5.33" -> "org.springframework:spring-test:jar:5.3.20:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring:jar:1.5.33" -> "org.slf4j:slf4j-api:jar:1.7.10:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-spring:jar:1.5.33" -> "org.slf4j:jcl-over-slf4j:jar:1.7.10:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring:jar:1.5.33" -> "org.apache.logging.log4j:log4j-core:jar:2.13.3:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring:jar:1.5.33" -> "org.apache.logging.log4j:log4j-api:jar:2.13.3:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring:jar:1.5.33" -> "com.alibaba:fastjson:jar:1.2.83:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring:jar:1.5.33" -> "com.google.protobuf:protobuf-java-util:jar:3.16.1:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring:jar:1.5.33" -> "javax.annotation:jsr250-api:jar:1.0:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring:jar:1.5.33" -> "org.mockito:mockito-core:jar:4.5.1:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring:jar:1.5.33" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring:jar:1.5.33" -> "xerces:xercesImpl:jar:2.12.2:provided" ; 
+[INFO] 	"com.dtflys.forest:forest-spring:jar:1.5.33" -> "io.netty:netty-all:jar:4.1.45.Final:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring:jar:1.5.33" -> "org.mock-server:mockserver-netty:jar:5.4.1:provided" ; 
+[INFO] 	"com.dtflys.forest:forest-spring:jar:1.5.33" -> "org.mock-server:mockserver-client-java:jar:5.4.1:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring:jar:1.5.33" -> "com.github.dreamhead:moco-core:jar:1.2.0:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring:jar:1.5.33" -> "org.assertj:assertj-core:jar:3.13.2:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring:jar:1.5.33" -> "com.squareup.okhttp3:mockwebserver:jar:3.14.9:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring:jar:1.5.33" -> "cn.hutool:hutool-all:jar:5.5.2:test" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "com.googlecode.juniversalchardet:juniversalchardet:jar:1.0.3:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.apache.httpcomponents:httpclient-cache:jar:4.5.13:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.15:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.apache.httpcomponents:httpmime:jar:4.5.13:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "com.squareup.okhttp3:okhttp:jar:3.14.9:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.1:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "commons-io:commons-io:jar:2.7:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient-cache:jar:4.5.13:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.14.9:compile" -> "com.squareup.okio:okio:jar:1.17.2:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.20:compile" -> "org.springframework:spring-jcl:jar:5.3.20:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.20:compile" -> "org.springframework:spring-aop:jar:5.3.20:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.20:compile" -> "org.springframework:spring-expression:jar:5.3.20:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.20:compile" -> "org.springframework:spring-web:jar:5.3.20:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-autoconfigure:jar:2.6.8:compile" -> "org.springframework.boot:spring-boot:jar:2.6.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" -> "org.springframework.boot:spring-boot-starter:jar:2.6.8:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" -> "org.springframework.boot:spring-boot-test:jar:2.6.8:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.6.8:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" -> "com.jayway.jsonpath:json-path:jar:2.6.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" -> "org.junit.jupiter:junit-jupiter:jar:5.8.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" -> "org.mockito:mockito-junit-jupiter:jar:4.0.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" -> "org.skyscreamer:jsonassert:jar:1.5.0:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" -> "org.xmlunit:xmlunit-core:jar:2.8.4:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.8:test" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.6.8:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.8:test" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.8:test" -> "org.yaml:snakeyaml:jar:1.29:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.8:test" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.8:test" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.6.0:test" -> "net.minidev:json-smart:jar:2.4.8:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.8:test" -> "net.minidev:accessors-smart:jar:2.4.8:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.8:test" -> "org.ow2.asm:asm:jar:9.1:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.8.2:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.0:provided" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:provided" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.16.1:test" -> "com.google.protobuf:protobuf-java:jar:3.16.1:test" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.16.1:test" -> "com.google.guava:guava:jar:30.1-android:test" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.16.1:test" -> "com.google.errorprone:error_prone_annotations:jar:2.3.4:test" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.16.1:test" -> "com.google.code.gson:gson:jar:2.8.9:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1-android:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1-android:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1-android:test" -> "org.checkerframework:checker-compat-qual:jar:2.5.5:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1-android:test" -> "com.google.j2objc:j2objc-annotations:jar:1.3:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"xerces:xercesImpl:jar:2.12.2:provided" -> "xml-apis:xml-apis:jar:1.4.01:provided" ; 
+[INFO] 	"org.mock-server:mockserver-netty:jar:5.4.1:provided" -> "org.mock-server:mockserver-core:jar:5.4.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-netty:jar:5.4.1:provided" -> "ch.qos.logback:logback-classic:jar:1.2.11:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "javax.servlet:javax.servlet-api:jar:4.0.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "io.netty:netty-handler-proxy:jar:4.1.77.Final:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "com.jcraft:jzlib:jar:1.1.3:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.bouncycastle:bcprov-jdk15on:jar:1.58:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.bouncycastle:bcpkix-jdk15on:jar:1.58:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.velocity:velocity-engine-scripting:jar:2.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.velocity:velocity-engine-core:jar:2.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "javax.xml.bind:jaxb-api:jar:2.3.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.commons:commons-text:jar:1.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.commons:commons-collections4:jar:4.1:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "javax.mail:mailapi:jar:1.4.3:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "joda-time:joda-time:jar:2.9.7:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "com.googlecode.libphonenumber:libphonenumber:jar:8.0.0:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "net.sf.jopt-simple:jopt-simple:jar:5.0.3:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "org.mozilla:rhino:jar:1.7R4:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "com.github.fge:jackson-coreutils:jar:1.8:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "com.github.fge:uri-template:jar:0.9:provided" ; 
+[INFO] 	"com.github.fge:jackson-coreutils:jar:1.8:provided" -> "com.github.fge:msg-simple:jar:1.1:provided" ; 
+[INFO] 	"com.github.fge:msg-simple:jar:1.1:provided" -> "com.github.fge:btf:jar:1.2:provided" ; 
+[INFO] 	"javax.mail:mailapi:jar:1.4.3:provided" -> "javax.activation:activation:jar:1.1:provided" ; 
+[INFO] 	"javax.xml.bind:jaxb-api:jar:2.3.1:provided" -> "javax.activation:javax.activation-api:jar:1.2.0:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.11:provided" -> "ch.qos.logback:logback-core:jar:1.2.11:provided" ; 
+[INFO] 	"org.mock-server:mockserver-client-java:jar:5.4.1:test" -> "org.apache.commons:commons-lang3:jar:3.12.0:provided" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "io.netty:netty-codec-http:jar:4.1.77.Final:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "io.netty:netty-handler:jar:4.1.77.Final:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.3:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "org.freemarker:freemarker:jar:2.3.31:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-common:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-buffer:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-transport:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-codec:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.77.Final:test" -> "io.netty:netty-resolver:jar:4.1.77.Final:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.3:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.3:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.3:test" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< com.dtflys.forest:forest-spring-boot-starter >------------
+[INFO] Building forest-spring-boot-starter 1.5.33                        [7/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ forest-spring-boot-starter ---
+[INFO] digraph "com.dtflys.forest:forest-spring-boot-starter:jar:1.5.33" { 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-starter:jar:1.5.33" -> "com.dtflys.forest:forest-core:jar:1.5.33:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-starter:jar:1.5.33" -> "com.dtflys.forest:forest-spring:jar:1.5.33:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-starter:jar:1.5.33" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.6.8:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-starter:jar:1.5.33" -> "com.google.protobuf:protobuf-java:jar:3.16.1:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-starter:jar:1.5.33" -> "org.springframework.boot:spring-boot-starter:jar:2.6.8:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-starter:jar:1.5.33" -> "org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-starter:jar:1.5.33" -> "com.alibaba:fastjson:jar:1.2.83:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-starter:jar:1.5.33" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.3:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-starter:jar:1.5.33" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.3:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-starter:jar:1.5.33" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.3:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-starter:jar:1.5.33" -> "com.google.code.gson:gson:jar:2.8.9:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-starter:jar:1.5.33" -> "net.bytebuddy:byte-buddy:jar:1.12.3:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-starter:jar:1.5.33" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.3:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-starter:jar:1.5.33" -> "org.mockito:mockito-core:jar:4.5.1:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-starter:jar:1.5.33" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-starter:jar:1.5.33" -> "xerces:xercesImpl:jar:2.12.2:provided" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-starter:jar:1.5.33" -> "io.netty:netty-all:jar:4.1.45.Final:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-starter:jar:1.5.33" -> "org.mock-server:mockserver-netty:jar:5.4.1:provided" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-starter:jar:1.5.33" -> "org.mock-server:mockserver-client-java:jar:5.4.1:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-starter:jar:1.5.33" -> "com.github.dreamhead:moco-core:jar:1.2.0:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-starter:jar:1.5.33" -> "org.assertj:assertj-core:jar:3.13.2:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-starter:jar:1.5.33" -> "com.squareup.okhttp3:mockwebserver:jar:3.14.9:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-starter:jar:1.5.33" -> "cn.hutool:hutool-all:jar:5.5.2:test" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "com.googlecode.juniversalchardet:juniversalchardet:jar:1.0.3:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.apache.httpcomponents:httpclient-cache:jar:4.5.13:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.15:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.apache.httpcomponents:httpmime:jar:4.5.13:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "com.squareup.okhttp3:okhttp:jar:3.14.9:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.1:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "commons-io:commons-io:jar:2.7:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient-cache:jar:4.5.13:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.14.9:compile" -> "com.squareup.okio:okio:jar:1.17.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.8:compile" -> "org.springframework.boot:spring-boot:jar:2.6.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.8:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.6.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.8:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.6.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.8:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.8:compile" -> "org.springframework:spring-core:jar:5.3.20:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.8:compile" -> "org.yaml:snakeyaml:jar:1.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.6.8:compile" -> "org.springframework:spring-context:jar:5.3.20:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.20:compile" -> "org.springframework:spring-aop:jar:5.3.20:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.20:compile" -> "org.springframework:spring-beans:jar:5.3.20:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.20:compile" -> "org.springframework:spring-expression:jar:5.3.20:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.8:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.8:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.20:compile" -> "org.springframework:spring-jcl:jar:5.3.20:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" -> "org.springframework.boot:spring-boot-test:jar:2.6.8:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.6.8:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" -> "com.jayway.jsonpath:json-path:jar:2.6.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" -> "org.junit.jupiter:junit-jupiter:jar:5.8.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" -> "org.mockito:mockito-junit-jupiter:jar:4.0.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" -> "org.skyscreamer:jsonassert:jar:1.5.0:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" -> "org.springframework:spring-test:jar:5.3.20:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" -> "org.xmlunit:xmlunit-core:jar:2.8.4:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.6.0:test" -> "net.minidev:json-smart:jar:2.4.8:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.8:test" -> "net.minidev:accessors-smart:jar:2.4.8:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.8:test" -> "org.ow2.asm:asm:jar:9.1:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.8.2:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.0:provided" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:provided" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"xerces:xercesImpl:jar:2.12.2:provided" -> "xml-apis:xml-apis:jar:1.4.01:provided" ; 
+[INFO] 	"org.mock-server:mockserver-netty:jar:5.4.1:provided" -> "org.mock-server:mockserver-core:jar:5.4.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-netty:jar:5.4.1:provided" -> "ch.qos.logback:logback-classic:jar:1.2.11:compile" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "javax.servlet:javax.servlet-api:jar:4.0.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "io.netty:netty-handler-proxy:jar:4.1.77.Final:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "com.jcraft:jzlib:jar:1.1.3:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.bouncycastle:bcprov-jdk15on:jar:1.58:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.bouncycastle:bcpkix-jdk15on:jar:1.58:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.velocity:velocity-engine-scripting:jar:2.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.velocity:velocity-engine-core:jar:2.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "javax.xml.bind:jaxb-api:jar:2.3.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.commons:commons-text:jar:1.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.commons:commons-collections4:jar:4.1:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "javax.mail:mailapi:jar:1.4.3:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "joda-time:joda-time:jar:2.9.7:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "com.googlecode.libphonenumber:libphonenumber:jar:8.0.0:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "net.sf.jopt-simple:jopt-simple:jar:5.0.3:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "org.mozilla:rhino:jar:1.7R4:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "com.github.fge:jackson-coreutils:jar:1.8:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "com.github.fge:uri-template:jar:0.9:provided" ; 
+[INFO] 	"com.github.fge:jackson-coreutils:jar:1.8:provided" -> "com.github.fge:msg-simple:jar:1.1:provided" ; 
+[INFO] 	"com.github.fge:msg-simple:jar:1.1:provided" -> "com.github.fge:btf:jar:1.2:provided" ; 
+[INFO] 	"javax.mail:mailapi:jar:1.4.3:provided" -> "javax.activation:activation:jar:1.1:provided" ; 
+[INFO] 	"javax.xml.bind:jaxb-api:jar:2.3.1:provided" -> "javax.activation:javax.activation-api:jar:1.2.0:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.11:compile" -> "ch.qos.logback:logback-core:jar:1.2.11:compile" ; 
+[INFO] 	"org.mock-server:mockserver-client-java:jar:5.4.1:test" -> "org.apache.commons:commons-lang3:jar:3.12.0:provided" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "com.google.guava:guava:jar:30.1.1-jre:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "io.netty:netty-codec-http:jar:4.1.77.Final:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "io.netty:netty-handler:jar:4.1.77.Final:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "org.freemarker:freemarker:jar:2.3.31:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "org.checkerframework:checker-qual:jar:3.8.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.5.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:1.3:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-common:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-buffer:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-transport:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-codec:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.77.Final:test" -> "io.netty:netty-resolver:jar:4.1.77.Final:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------< com.dtflys.forest:forest-spring-boot3-starter >------------
+[INFO] Building forest-spring-boot3-starter 1.5.33                       [8/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ forest-spring-boot3-starter ---
+[INFO] digraph "com.dtflys.forest:forest-spring-boot3-starter:jar:1.5.33" { 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-starter:jar:1.5.33" -> "com.dtflys.forest:forest-core:jar:1.5.33:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-starter:jar:1.5.33" -> "com.dtflys.forest:forest-spring:jar:1.5.33:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-starter:jar:1.5.33" -> "org.springframework.boot:spring-boot-configuration-processor:jar:3.1.4:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-starter:jar:1.5.33" -> "com.google.protobuf:protobuf-java:jar:3.16.1:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-starter:jar:1.5.33" -> "org.springframework.boot:spring-boot-starter:jar:3.1.4:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-starter:jar:1.5.33" -> "org.springframework.boot:spring-boot-starter-test:jar:3.1.4:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-starter:jar:1.5.33" -> "com.alibaba:fastjson:jar:1.2.83:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-starter:jar:1.5.33" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.3:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-starter:jar:1.5.33" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.3:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-starter:jar:1.5.33" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.3:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-starter:jar:1.5.33" -> "com.google.code.gson:gson:jar:2.8.9:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-starter:jar:1.5.33" -> "net.bytebuddy:byte-buddy:jar:1.12.3:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-starter:jar:1.5.33" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.3:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-starter:jar:1.5.33" -> "org.mockito:mockito-core:jar:4.5.1:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-starter:jar:1.5.33" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-starter:jar:1.5.33" -> "xerces:xercesImpl:jar:2.12.2:provided" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-starter:jar:1.5.33" -> "io.netty:netty-all:jar:4.1.45.Final:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-starter:jar:1.5.33" -> "org.mock-server:mockserver-netty:jar:5.4.1:provided" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-starter:jar:1.5.33" -> "org.mock-server:mockserver-client-java:jar:5.4.1:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-starter:jar:1.5.33" -> "com.github.dreamhead:moco-core:jar:1.2.0:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-starter:jar:1.5.33" -> "org.assertj:assertj-core:jar:3.13.2:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-starter:jar:1.5.33" -> "com.squareup.okhttp3:mockwebserver:jar:3.14.9:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-starter:jar:1.5.33" -> "cn.hutool:hutool-all:jar:5.5.2:test" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "com.googlecode.juniversalchardet:juniversalchardet:jar:1.0.3:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.apache.httpcomponents:httpclient-cache:jar:4.5.13:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.15:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.apache.httpcomponents:httpmime:jar:4.5.13:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "com.squareup.okhttp3:okhttp:jar:3.14.9:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.1:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "commons-io:commons-io:jar:2.7:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient-cache:jar:4.5.13:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.14.9:compile" -> "com.squareup.okio:okio:jar:1.17.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.1.4:compile" -> "org.springframework.boot:spring-boot:jar:2.6.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.1.4:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.6.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.1.4:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.6.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.1.4:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.1.4:compile" -> "org.springframework:spring-core:jar:5.3.20:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.1.4:compile" -> "org.yaml:snakeyaml:jar:1.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.6.8:compile" -> "org.springframework:spring-context:jar:5.3.20:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.20:compile" -> "org.springframework:spring-aop:jar:5.3.20:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.20:compile" -> "org.springframework:spring-beans:jar:5.3.20:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.20:compile" -> "org.springframework:spring-expression:jar:5.3.20:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.8:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.8:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.20:compile" -> "org.springframework:spring-jcl:jar:5.3.20:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.1.4:test" -> "org.springframework.boot:spring-boot-test:jar:2.6.8:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.1.4:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.6.8:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.1.4:test" -> "com.jayway.jsonpath:json-path:jar:2.6.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.1.4:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.1.4:test" -> "net.minidev:json-smart:jar:2.4.8:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.1.4:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.1.4:test" -> "org.junit.jupiter:junit-jupiter:jar:5.8.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.1.4:test" -> "org.mockito:mockito-junit-jupiter:jar:4.0.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.1.4:test" -> "org.skyscreamer:jsonassert:jar:1.5.0:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.1.4:test" -> "org.springframework:spring-test:jar:5.3.20:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.1.4:test" -> "org.xmlunit:xmlunit-core:jar:2.8.4:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.8:test" -> "net.minidev:accessors-smart:jar:2.4.8:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.8:test" -> "org.ow2.asm:asm:jar:9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.8.2:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.0:provided" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:provided" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"xerces:xercesImpl:jar:2.12.2:provided" -> "xml-apis:xml-apis:jar:1.4.01:provided" ; 
+[INFO] 	"org.mock-server:mockserver-netty:jar:5.4.1:provided" -> "org.mock-server:mockserver-core:jar:5.4.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-netty:jar:5.4.1:provided" -> "ch.qos.logback:logback-classic:jar:1.2.11:compile" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "javax.servlet:javax.servlet-api:jar:4.0.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "io.netty:netty-handler-proxy:jar:4.1.77.Final:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "com.jcraft:jzlib:jar:1.1.3:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.bouncycastle:bcprov-jdk15on:jar:1.58:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.bouncycastle:bcpkix-jdk15on:jar:1.58:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.velocity:velocity-engine-scripting:jar:2.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.velocity:velocity-engine-core:jar:2.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "javax.xml.bind:jaxb-api:jar:2.3.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.commons:commons-text:jar:1.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.commons:commons-collections4:jar:4.1:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "javax.mail:mailapi:jar:1.4.3:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "joda-time:joda-time:jar:2.9.7:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "com.googlecode.libphonenumber:libphonenumber:jar:8.0.0:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "net.sf.jopt-simple:jopt-simple:jar:5.0.3:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "org.mozilla:rhino:jar:1.7R4:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "com.github.fge:jackson-coreutils:jar:1.8:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "com.github.fge:uri-template:jar:0.9:provided" ; 
+[INFO] 	"com.github.fge:jackson-coreutils:jar:1.8:provided" -> "com.github.fge:msg-simple:jar:1.1:provided" ; 
+[INFO] 	"com.github.fge:msg-simple:jar:1.1:provided" -> "com.github.fge:btf:jar:1.2:provided" ; 
+[INFO] 	"javax.mail:mailapi:jar:1.4.3:provided" -> "javax.activation:activation:jar:1.1:provided" ; 
+[INFO] 	"javax.xml.bind:jaxb-api:jar:2.3.1:provided" -> "javax.activation:javax.activation-api:jar:1.2.0:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.11:compile" -> "ch.qos.logback:logback-core:jar:1.2.11:compile" ; 
+[INFO] 	"org.mock-server:mockserver-client-java:jar:5.4.1:test" -> "org.apache.commons:commons-lang3:jar:3.12.0:provided" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "com.google.guava:guava:jar:30.1.1-jre:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "io.netty:netty-codec-http:jar:4.1.77.Final:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "io.netty:netty-handler:jar:4.1.77.Final:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "org.freemarker:freemarker:jar:2.3.31:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "org.checkerframework:checker-qual:jar:3.8.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.5.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:1.3:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-common:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-buffer:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-transport:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-codec:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.77.Final:test" -> "io.netty:netty-resolver:jar:4.1.77.Final:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< com.dtflys.forest:forest-solon-plugin >----------------
+[INFO] Building forest-solon-plugin 1.5.33                               [9/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ forest-solon-plugin ---
+[INFO] digraph "com.dtflys.forest:forest-solon-plugin:jar:1.5.33" { 
+[INFO] 	"com.dtflys.forest:forest-solon-plugin:jar:1.5.33" -> "org.noear:solon:jar:2.5.10:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-solon-plugin:jar:1.5.33" -> "com.dtflys.forest:forest-core:jar:1.5.33:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-solon-plugin:jar:1.5.33" -> "com.google.protobuf:protobuf-java:jar:3.16.1:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-solon-plugin:jar:1.5.33" -> "org.noear:solon-test-junit4:jar:2.5.10:test" ; 
+[INFO] 	"com.dtflys.forest:forest-solon-plugin:jar:1.5.33" -> "com.alibaba:fastjson:jar:1.2.83:test" ; 
+[INFO] 	"com.dtflys.forest:forest-solon-plugin:jar:1.5.33" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.3:test" ; 
+[INFO] 	"com.dtflys.forest:forest-solon-plugin:jar:1.5.33" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.3:test" ; 
+[INFO] 	"com.dtflys.forest:forest-solon-plugin:jar:1.5.33" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.3:test" ; 
+[INFO] 	"com.dtflys.forest:forest-solon-plugin:jar:1.5.33" -> "com.google.code.gson:gson:jar:2.8.9:test" ; 
+[INFO] 	"com.dtflys.forest:forest-solon-plugin:jar:1.5.33" -> "net.bytebuddy:byte-buddy:jar:1.12.3:test" ; 
+[INFO] 	"com.dtflys.forest:forest-solon-plugin:jar:1.5.33" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.3:test" ; 
+[INFO] 	"com.dtflys.forest:forest-solon-plugin:jar:1.5.33" -> "org.mockito:mockito-core:jar:4.5.1:test" ; 
+[INFO] 	"com.dtflys.forest:forest-solon-plugin:jar:1.5.33" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.dtflys.forest:forest-solon-plugin:jar:1.5.33" -> "xerces:xercesImpl:jar:2.12.2:provided" ; 
+[INFO] 	"com.dtflys.forest:forest-solon-plugin:jar:1.5.33" -> "io.netty:netty-all:jar:4.1.45.Final:test" ; 
+[INFO] 	"com.dtflys.forest:forest-solon-plugin:jar:1.5.33" -> "org.mock-server:mockserver-netty:jar:5.4.1:provided" ; 
+[INFO] 	"com.dtflys.forest:forest-solon-plugin:jar:1.5.33" -> "org.mock-server:mockserver-client-java:jar:5.4.1:test" ; 
+[INFO] 	"com.dtflys.forest:forest-solon-plugin:jar:1.5.33" -> "com.github.dreamhead:moco-core:jar:1.2.0:test" ; 
+[INFO] 	"com.dtflys.forest:forest-solon-plugin:jar:1.5.33" -> "org.assertj:assertj-core:jar:3.13.2:test" ; 
+[INFO] 	"com.dtflys.forest:forest-solon-plugin:jar:1.5.33" -> "com.squareup.okhttp3:mockwebserver:jar:3.14.9:test" ; 
+[INFO] 	"com.dtflys.forest:forest-solon-plugin:jar:1.5.33" -> "cn.hutool:hutool-all:jar:5.5.2:test" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "com.googlecode.juniversalchardet:juniversalchardet:jar:1.0.3:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.apache.httpcomponents:httpclient-cache:jar:4.5.13:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.15:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.apache.httpcomponents:httpmime:jar:4.5.13:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "com.squareup.okhttp3:okhttp:jar:3.14.9:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.1:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "commons-io:commons-io:jar:2.7:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient-cache:jar:4.5.13:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.14.9:compile" -> "com.squareup.okio:okio:jar:1.17.2:compile" ; 
+[INFO] 	"org.noear:solon-test-junit4:jar:2.5.10:test" -> "org.noear:solon.test:jar:2.5.10:test" ; 
+[INFO] 	"org.noear:solon.test:jar:2.5.10:test" -> "org.noear:solon.data:jar:2.5.10:test" ; 
+[INFO] 	"org.noear:solon.test:jar:2.5.10:test" -> "org.noear:solon.proxy:jar:2.5.10:test" ; 
+[INFO] 	"org.noear:solon.test:jar:2.5.10:test" -> "org.noear:solon.config.yaml:jar:2.5.10:test" ; 
+[INFO] 	"org.noear:solon.proxy:jar:2.5.10:test" -> "org.ow2.asm:asm:jar:9.5:test" ; 
+[INFO] 	"org.noear:solon.config.yaml:jar:2.5.10:test" -> "org.yaml:snakeyaml:jar:1.29:test" ; 
+[INFO] 	"org.noear:solon.config.yaml:jar:2.5.10:test" -> "org.noear:snack3:jar:3.2.80:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"xerces:xercesImpl:jar:2.12.2:provided" -> "xml-apis:xml-apis:jar:1.4.01:provided" ; 
+[INFO] 	"org.mock-server:mockserver-netty:jar:5.4.1:provided" -> "org.mock-server:mockserver-core:jar:5.4.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-netty:jar:5.4.1:provided" -> "ch.qos.logback:logback-classic:jar:1.2.11:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "javax.servlet:javax.servlet-api:jar:4.0.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "io.netty:netty-handler-proxy:jar:4.1.77.Final:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "com.jcraft:jzlib:jar:1.1.3:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.bouncycastle:bcprov-jdk15on:jar:1.58:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.bouncycastle:bcpkix-jdk15on:jar:1.58:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.velocity:velocity-engine-scripting:jar:2.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.velocity:velocity-engine-core:jar:2.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.skyscreamer:jsonassert:jar:1.5.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "javax.xml.bind:jaxb-api:jar:2.3.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.commons:commons-text:jar:1.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.commons:commons-collections4:jar:4.1:provided" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.0:provided" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "javax.mail:mailapi:jar:1.4.3:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "joda-time:joda-time:jar:2.9.7:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "com.googlecode.libphonenumber:libphonenumber:jar:8.0.0:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "net.sf.jopt-simple:jopt-simple:jar:5.0.3:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "org.mozilla:rhino:jar:1.7R4:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "com.github.fge:jackson-coreutils:jar:1.8:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "com.github.fge:uri-template:jar:0.9:provided" ; 
+[INFO] 	"com.github.fge:jackson-coreutils:jar:1.8:provided" -> "com.github.fge:msg-simple:jar:1.1:provided" ; 
+[INFO] 	"com.github.fge:msg-simple:jar:1.1:provided" -> "com.github.fge:btf:jar:1.2:provided" ; 
+[INFO] 	"javax.mail:mailapi:jar:1.4.3:provided" -> "javax.activation:activation:jar:1.1:provided" ; 
+[INFO] 	"javax.xml.bind:jaxb-api:jar:2.3.1:provided" -> "javax.activation:javax.activation-api:jar:1.2.0:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.11:provided" -> "ch.qos.logback:logback-core:jar:1.2.11:provided" ; 
+[INFO] 	"org.mock-server:mockserver-client-java:jar:5.4.1:test" -> "org.apache.commons:commons-lang3:jar:3.12.0:provided" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "com.google.guava:guava:jar:30.1.1-jre:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "io.netty:netty-codec-http:jar:4.1.77.Final:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "io.netty:netty-handler:jar:4.1.77.Final:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "com.jayway.jsonpath:json-path:jar:2.6.0:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "org.freemarker:freemarker:jar:2.3.31:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "org.checkerframework:checker-qual:jar:3.8.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.5.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:1.3:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-common:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-buffer:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-transport:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-codec:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.77.Final:test" -> "io.netty:netty-resolver:jar:4.1.77.Final:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.6.0:test" -> "net.minidev:json-smart:jar:2.4.8:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.8:test" -> "net.minidev:accessors-smart:jar:2.4.8:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< com.dtflys.forest:forest-test >--------------------
+[INFO] Building forest-test 1.5.33                                      [10/12]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ forest-test ---
+[INFO] digraph "com.dtflys.forest:forest-test:pom:1.5.33" { 
+[INFO] 	"com.dtflys.forest:forest-test:pom:1.5.33" -> "org.mockito:mockito-core:jar:4.5.1:test" ; 
+[INFO] 	"com.dtflys.forest:forest-test:pom:1.5.33" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.dtflys.forest:forest-test:pom:1.5.33" -> "xerces:xercesImpl:jar:2.12.2:provided" ; 
+[INFO] 	"com.dtflys.forest:forest-test:pom:1.5.33" -> "io.netty:netty-all:jar:4.1.45.Final:test" ; 
+[INFO] 	"com.dtflys.forest:forest-test:pom:1.5.33" -> "org.mock-server:mockserver-netty:jar:5.4.1:provided" ; 
+[INFO] 	"com.dtflys.forest:forest-test:pom:1.5.33" -> "org.mock-server:mockserver-client-java:jar:5.4.1:test" ; 
+[INFO] 	"com.dtflys.forest:forest-test:pom:1.5.33" -> "com.github.dreamhead:moco-core:jar:1.2.0:test" ; 
+[INFO] 	"com.dtflys.forest:forest-test:pom:1.5.33" -> "org.assertj:assertj-core:jar:3.13.2:test" ; 
+[INFO] 	"com.dtflys.forest:forest-test:pom:1.5.33" -> "com.squareup.okhttp3:mockwebserver:jar:3.14.9:test" ; 
+[INFO] 	"com.dtflys.forest:forest-test:pom:1.5.33" -> "cn.hutool:hutool-all:jar:5.5.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"xerces:xercesImpl:jar:2.12.2:provided" -> "xml-apis:xml-apis:jar:1.4.01:provided" ; 
+[INFO] 	"org.mock-server:mockserver-netty:jar:5.4.1:provided" -> "org.mock-server:mockserver-core:jar:5.4.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-netty:jar:5.4.1:provided" -> "org.slf4j:slf4j-api:jar:1.7.36:provided" ; 
+[INFO] 	"org.mock-server:mockserver-netty:jar:5.4.1:provided" -> "ch.qos.logback:logback-classic:jar:1.2.11:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "javax.servlet:javax.servlet-api:jar:4.0.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "io.netty:netty-handler-proxy:jar:4.1.77.Final:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "com.jcraft:jzlib:jar:1.1.3:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.bouncycastle:bcprov-jdk15on:jar:1.58:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.bouncycastle:bcpkix-jdk15on:jar:1.58:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.velocity:velocity-engine-scripting:jar:2.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.velocity:velocity-engine-core:jar:2.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.skyscreamer:jsonassert:jar:1.5.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "javax.xml.bind:jaxb-api:jar:2.3.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.commons:commons-text:jar:1.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.commons:commons-collections4:jar:4.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "commons-io:commons-io:jar:2.6:provided" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.0:provided" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "javax.mail:mailapi:jar:1.4.3:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "joda-time:joda-time:jar:2.9.7:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "com.googlecode.libphonenumber:libphonenumber:jar:8.0.0:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "net.sf.jopt-simple:jopt-simple:jar:5.0.3:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "org.mozilla:rhino:jar:1.7R4:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "com.github.fge:jackson-coreutils:jar:1.8:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "com.github.fge:uri-template:jar:0.9:provided" ; 
+[INFO] 	"com.github.fge:jackson-coreutils:jar:1.8:provided" -> "com.github.fge:msg-simple:jar:1.1:provided" ; 
+[INFO] 	"com.github.fge:msg-simple:jar:1.1:provided" -> "com.github.fge:btf:jar:1.2:provided" ; 
+[INFO] 	"javax.mail:mailapi:jar:1.4.3:provided" -> "javax.activation:activation:jar:1.1:provided" ; 
+[INFO] 	"javax.xml.bind:jaxb-api:jar:2.3.1:provided" -> "javax.activation:javax.activation-api:jar:1.2.0:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.11:provided" -> "ch.qos.logback:logback-core:jar:1.2.11:provided" ; 
+[INFO] 	"org.mock-server:mockserver-client-java:jar:5.4.1:test" -> "org.apache.commons:commons-lang3:jar:3.12.0:provided" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "com.google.guava:guava:jar:30.1.1-jre:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "io.netty:netty-codec-http:jar:4.1.77.Final:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "io.netty:netty-handler:jar:4.1.77.Final:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.3:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "com.jayway.jsonpath:json-path:jar:2.6.0:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "org.freemarker:freemarker:jar:2.3.31:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "org.checkerframework:checker-qual:jar:3.8.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.5.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:1.3:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-common:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-buffer:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-transport:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-codec:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.77.Final:test" -> "io.netty:netty-resolver:jar:4.1.77.Final:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.3:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.3:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.3:test" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.3:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:test" -> "org.apache.httpcomponents:httpcore:jar:4.4.15:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:test" -> "commons-codec:commons-codec:jar:1.15:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.6.0:test" -> "net.minidev:json-smart:jar:2.4.8:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.8:test" -> "net.minidev:accessors-smart:jar:2.4.8:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.8:test" -> "org.ow2.asm:asm:jar:9.1:test" ; 
+[INFO] 	"com.squareup.okhttp3:mockwebserver:jar:3.14.9:test" -> "com.squareup.okhttp3:okhttp:jar:3.14.9:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.14.9:test" -> "com.squareup.okio:okio:jar:1.17.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< com.dtflys.forest:forest-spring-boot-test >--------------
+[INFO] Building forest-spring-boot-test 1.5.33                          [11/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ forest-spring-boot-test ---
+[INFO] digraph "com.dtflys.forest:forest-spring-boot-test:jar:1.5.33" { 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-test:jar:1.5.33" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.6.8:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-test:jar:1.5.33" -> "com.dtflys.forest:forest-spring-boot-starter:jar:1.5.33:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-test:jar:1.5.33" -> "org.springframework.boot:spring-boot-starter:jar:2.6.8:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-test:jar:1.5.33" -> "org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-test:jar:1.5.33" -> "com.alibaba:fastjson:jar:1.2.83:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-test:jar:1.5.33" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.3:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-test:jar:1.5.33" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.3:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-test:jar:1.5.33" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.3:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-test:jar:1.5.33" -> "com.google.code.gson:gson:jar:2.8.9:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-test:jar:1.5.33" -> "net.bytebuddy:byte-buddy:jar:1.12.3:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-test:jar:1.5.33" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.3:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-test:jar:1.5.33" -> "org.mockito:mockito-core:jar:4.5.1:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-test:jar:1.5.33" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-test:jar:1.5.33" -> "xerces:xercesImpl:jar:2.12.2:provided" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-test:jar:1.5.33" -> "io.netty:netty-all:jar:4.1.45.Final:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-test:jar:1.5.33" -> "org.mock-server:mockserver-netty:jar:5.4.1:provided" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-test:jar:1.5.33" -> "org.mock-server:mockserver-client-java:jar:5.4.1:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-test:jar:1.5.33" -> "com.github.dreamhead:moco-core:jar:1.2.0:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-test:jar:1.5.33" -> "org.assertj:assertj-core:jar:3.13.2:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-test:jar:1.5.33" -> "com.squareup.okhttp3:mockwebserver:jar:3.14.9:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-test:jar:1.5.33" -> "cn.hutool:hutool-all:jar:5.5.2:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-starter:jar:1.5.33:compile" -> "com.dtflys.forest:forest-core:jar:1.5.33:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-starter:jar:1.5.33:compile" -> "com.dtflys.forest:forest-spring:jar:1.5.33:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot-starter:jar:1.5.33:compile" -> "com.google.protobuf:protobuf-java:jar:3.16.1:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "com.googlecode.juniversalchardet:juniversalchardet:jar:1.0.3:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.apache.httpcomponents:httpclient-cache:jar:4.5.13:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.15:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.apache.httpcomponents:httpmime:jar:4.5.13:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.1:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "commons-io:commons-io:jar:2.7:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient-cache:jar:4.5.13:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.8:test" -> "org.springframework.boot:spring-boot:jar:2.6.8:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.8:test" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.6.8:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.8:test" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.6.8:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.8:test" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.8:test" -> "org.springframework:spring-core:jar:5.3.20:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.8:test" -> "org.yaml:snakeyaml:jar:1.29:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.6.8:test" -> "org.springframework:spring-context:jar:5.3.20:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.20:test" -> "org.springframework:spring-aop:jar:5.3.20:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.20:test" -> "org.springframework:spring-beans:jar:5.3.20:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.20:test" -> "org.springframework:spring-expression:jar:5.3.20:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.8:test" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.8:test" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:test" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.20:test" -> "org.springframework:spring-jcl:jar:5.3.20:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" -> "org.springframework.boot:spring-boot-test:jar:2.6.8:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.6.8:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" -> "com.jayway.jsonpath:json-path:jar:2.6.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" -> "org.junit.jupiter:junit-jupiter:jar:5.8.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" -> "org.mockito:mockito-junit-jupiter:jar:4.0.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" -> "org.skyscreamer:jsonassert:jar:1.5.0:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" -> "org.springframework:spring-test:jar:5.3.20:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.12:test" -> "org.xmlunit:xmlunit-core:jar:2.8.4:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.6.0:test" -> "net.minidev:json-smart:jar:2.4.8:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.8:test" -> "net.minidev:accessors-smart:jar:2.4.8:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.8:test" -> "org.ow2.asm:asm:jar:9.1:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.8.2:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.0:provided" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:provided" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"xerces:xercesImpl:jar:2.12.2:provided" -> "xml-apis:xml-apis:jar:1.4.01:provided" ; 
+[INFO] 	"org.mock-server:mockserver-netty:jar:5.4.1:provided" -> "org.mock-server:mockserver-core:jar:5.4.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-netty:jar:5.4.1:provided" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.mock-server:mockserver-netty:jar:5.4.1:provided" -> "ch.qos.logback:logback-classic:jar:1.2.11:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "javax.servlet:javax.servlet-api:jar:4.0.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "io.netty:netty-handler-proxy:jar:4.1.77.Final:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "com.jcraft:jzlib:jar:1.1.3:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.bouncycastle:bcprov-jdk15on:jar:1.58:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.bouncycastle:bcpkix-jdk15on:jar:1.58:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.velocity:velocity-engine-scripting:jar:2.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.velocity:velocity-engine-core:jar:2.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "javax.xml.bind:jaxb-api:jar:2.3.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.commons:commons-text:jar:1.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.commons:commons-collections4:jar:4.1:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "javax.mail:mailapi:jar:1.4.3:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "joda-time:joda-time:jar:2.9.7:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "com.googlecode.libphonenumber:libphonenumber:jar:8.0.0:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "net.sf.jopt-simple:jopt-simple:jar:5.0.3:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "org.mozilla:rhino:jar:1.7R4:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "com.github.fge:jackson-coreutils:jar:1.8:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "com.github.fge:uri-template:jar:0.9:provided" ; 
+[INFO] 	"com.github.fge:jackson-coreutils:jar:1.8:provided" -> "com.github.fge:msg-simple:jar:1.1:provided" ; 
+[INFO] 	"com.github.fge:msg-simple:jar:1.1:provided" -> "com.github.fge:btf:jar:1.2:provided" ; 
+[INFO] 	"javax.mail:mailapi:jar:1.4.3:provided" -> "javax.activation:activation:jar:1.1:provided" ; 
+[INFO] 	"javax.xml.bind:jaxb-api:jar:2.3.1:provided" -> "javax.activation:javax.activation-api:jar:1.2.0:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.11:provided" -> "ch.qos.logback:logback-core:jar:1.2.11:provided" ; 
+[INFO] 	"org.mock-server:mockserver-client-java:jar:5.4.1:test" -> "org.apache.commons:commons-lang3:jar:3.12.0:provided" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "com.google.guava:guava:jar:30.1.1-jre:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "io.netty:netty-codec-http:jar:4.1.77.Final:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "io.netty:netty-handler:jar:4.1.77.Final:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "org.freemarker:freemarker:jar:2.3.31:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "org.checkerframework:checker-qual:jar:3.8.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.5.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:1.3:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-common:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-buffer:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-transport:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.77.Final:test" -> "io.netty:netty-codec:jar:4.1.77.Final:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.77.Final:test" -> "io.netty:netty-resolver:jar:4.1.77.Final:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"com.squareup.okhttp3:mockwebserver:jar:3.14.9:test" -> "com.squareup.okhttp3:okhttp:jar:3.14.9:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.14.9:compile" -> "com.squareup.okio:okio:jar:1.17.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< com.dtflys.forest:forest-spring-boot3-test >-------------
+[INFO] Building forest-spring-boot-test 1.5.33                          [12/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ forest-spring-boot3-test ---
+[INFO] digraph "com.dtflys.forest:forest-spring-boot3-test:jar:1.5.33" { 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-test:jar:1.5.33" -> "org.springframework.boot:spring-boot-configuration-processor:jar:3.1.4:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-test:jar:1.5.33" -> "com.dtflys.forest:forest-spring-boot3-starter:jar:1.5.33:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-test:jar:1.5.33" -> "org.springframework.boot:spring-boot-starter:jar:3.1.4:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-test:jar:1.5.33" -> "org.springframework.boot:spring-boot-starter-test:jar:3.1.4:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-test:jar:1.5.33" -> "com.alibaba:fastjson:jar:1.2.83:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-test:jar:1.5.33" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.3:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-test:jar:1.5.33" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.3:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-test:jar:1.5.33" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.3:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-test:jar:1.5.33" -> "com.google.code.gson:gson:jar:2.8.9:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-test:jar:1.5.33" -> "net.bytebuddy:byte-buddy:jar:1.12.3:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-test:jar:1.5.33" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.3:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-test:jar:1.5.33" -> "org.mockito:mockito-core:jar:4.5.1:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-test:jar:1.5.33" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-test:jar:1.5.33" -> "xerces:xercesImpl:jar:2.12.2:provided" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-test:jar:1.5.33" -> "io.netty:netty-all:jar:4.1.45.Final:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-test:jar:1.5.33" -> "org.mock-server:mockserver-netty:jar:5.4.1:provided" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-test:jar:1.5.33" -> "org.mock-server:mockserver-client-java:jar:5.4.1:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-test:jar:1.5.33" -> "com.github.dreamhead:moco-core:jar:1.2.0:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-test:jar:1.5.33" -> "org.assertj:assertj-core:jar:3.13.2:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-test:jar:1.5.33" -> "com.squareup.okhttp3:mockwebserver:jar:3.14.9:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-test:jar:1.5.33" -> "cn.hutool:hutool-all:jar:5.5.2:test" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-starter:jar:1.5.33:compile" -> "com.dtflys.forest:forest-core:jar:1.5.33:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-starter:jar:1.5.33:compile" -> "com.dtflys.forest:forest-spring:jar:1.5.33:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-spring-boot3-starter:jar:1.5.33:compile" -> "com.google.protobuf:protobuf-java:jar:3.16.1:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "com.googlecode.juniversalchardet:juniversalchardet:jar:1.0.3:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.apache.httpcomponents:httpclient-cache:jar:4.5.13:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.16:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "org.apache.httpcomponents:httpmime:jar:4.5.13:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.1:compile" ; 
+[INFO] 	"com.dtflys.forest:forest-core:jar:1.5.33:compile" -> "commons-io:commons-io:jar:2.7:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.1.4:test" -> "org.springframework.boot:spring-boot:jar:3.1.4:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.1.4:test" -> "org.springframework.boot:spring-boot-autoconfigure:jar:3.1.4:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.1.4:test" -> "org.springframework.boot:spring-boot-starter-logging:jar:3.1.4:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.1.4:test" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.1.4:test" -> "org.springframework:spring-core:jar:6.0.12:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:3.1.4:test" -> "org.yaml:snakeyaml:jar:1.33:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:3.1.4:test" -> "org.springframework:spring-context:jar:6.0.12:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.0.12:test" -> "org.springframework:spring-aop:jar:6.0.12:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.0.12:test" -> "org.springframework:spring-beans:jar:6.0.12:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.0.12:test" -> "org.springframework:spring-expression:jar:6.0.12:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.1.4:test" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.20.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:3.1.4:test" -> "org.slf4j:jul-to-slf4j:jar:2.0.9:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.20.0:test" -> "org.apache.logging.log4j:log4j-api:jar:2.20.0:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.0.12:test" -> "org.springframework:spring-jcl:jar:6.0.12:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.1.4:test" -> "org.springframework.boot:spring-boot-test:jar:3.1.4:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.1.4:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:3.1.4:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.1.4:test" -> "com.jayway.jsonpath:json-path:jar:2.8.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.1.4:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.1.4:test" -> "net.minidev:json-smart:jar:2.4.11:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.1.4:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.1.4:test" -> "org.junit.jupiter:junit-jupiter:jar:5.9.3:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.1.4:test" -> "org.mockito:mockito-junit-jupiter:jar:5.3.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.1.4:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.1.4:test" -> "org.springframework:spring-test:jar:6.0.12:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:3.1.4:test" -> "org.xmlunit:xmlunit-core:jar:2.9.1:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:test" -> "jakarta.activation:jakarta.activation-api:jar:2.1.2:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.11:test" -> "net.minidev:accessors-smart:jar:2.4.11:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.11:test" -> "org.ow2.asm:asm:jar:9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.3:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.3:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.3:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.3:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.3:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:provided" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:provided" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"xerces:xercesImpl:jar:2.12.2:provided" -> "xml-apis:xml-apis:jar:1.4.01:provided" ; 
+[INFO] 	"org.mock-server:mockserver-netty:jar:5.4.1:provided" -> "org.mock-server:mockserver-core:jar:5.4.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-netty:jar:5.4.1:provided" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"org.mock-server:mockserver-netty:jar:5.4.1:provided" -> "ch.qos.logback:logback-classic:jar:1.4.11:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "javax.servlet:javax.servlet-api:jar:3.1.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "io.netty:netty-handler-proxy:jar:4.1.97.Final:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "com.jcraft:jzlib:jar:1.1.3:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.bouncycastle:bcprov-jdk15on:jar:1.58:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.bouncycastle:bcpkix-jdk15on:jar:1.58:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.velocity:velocity-engine-scripting:jar:2.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.velocity:velocity-engine-core:jar:2.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "javax.xml.bind:jaxb-api:jar:2.3.0:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.commons:commons-text:jar:1.1:provided" ; 
+[INFO] 	"org.mock-server:mockserver-core:jar:5.4.1:provided" -> "org.apache.commons:commons-collections4:jar:4.1:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "javax.mail:mailapi:jar:1.4.3:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "joda-time:joda-time:jar:2.9.7:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "com.googlecode.libphonenumber:libphonenumber:jar:8.0.0:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-validator:jar:2.2.8:provided" -> "net.sf.jopt-simple:jopt-simple:jar:5.0.3:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "org.mozilla:rhino:jar:1.7R4:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "com.github.fge:jackson-coreutils:jar:1.8:provided" ; 
+[INFO] 	"com.github.java-json-tools:json-schema-core:jar:1.2.8:provided" -> "com.github.fge:uri-template:jar:0.9:provided" ; 
+[INFO] 	"com.github.fge:jackson-coreutils:jar:1.8:provided" -> "com.github.fge:msg-simple:jar:1.1:provided" ; 
+[INFO] 	"com.github.fge:msg-simple:jar:1.1:provided" -> "com.github.fge:btf:jar:1.2:provided" ; 
+[INFO] 	"javax.mail:mailapi:jar:1.4.3:provided" -> "javax.activation:activation:jar:1.1:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.11:provided" -> "ch.qos.logback:logback-core:jar:1.4.11:provided" ; 
+[INFO] 	"org.mock-server:mockserver-client-java:jar:5.4.1:test" -> "org.apache.commons:commons-lang3:jar:3.12.0:provided" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "com.google.guava:guava:jar:30.1.1-jre:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "io.netty:netty-codec-http:jar:4.1.97.Final:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "io.netty:netty-handler:jar:4.1.97.Final:test" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"com.github.dreamhead:moco-core:jar:1.2.0:test" -> "org.freemarker:freemarker:jar:2.3.32:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "org.checkerframework:checker-qual:jar:3.8.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.5.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1.1-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:1.3:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.97.Final:test" -> "io.netty:netty-common:jar:4.1.97.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.97.Final:test" -> "io.netty:netty-buffer:jar:4.1.97.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.97.Final:test" -> "io.netty:netty-transport:jar:4.1.97.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.97.Final:test" -> "io.netty:netty-codec:jar:4.1.97.Final:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.97.Final:test" -> "io.netty:netty-resolver:jar:4.1.97.Final:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.97.Final:test" -> "io.netty:netty-transport-native-unix-common:jar:4.1.97.Final:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"com.squareup.okhttp3:mockwebserver:jar:3.14.9:test" -> "com.squareup.okhttp3:okhttp:jar:4.10.0:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:4.10.0:compile" -> "com.squareup.okio:okio-jvm:jar:3.0.0:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:4.10.0:compile" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.8.22:compile" ; 
+[INFO] 	"com.squareup.okio:okio-jvm:jar:3.0.0:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.22:compile" ; 
+[INFO] 	"com.squareup.okio:okio-jvm:jar:3.0.0:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.8.22:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.8.22:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.8.22:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.8.22:compile" -> "org.jetbrains:annotations:jar:13.0:compile" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for forest 1.5.33:
+[INFO] 
+[INFO] forest ............................................. SUCCESS [  3.926 s]
+[INFO] forest-mock ........................................ SUCCESS [  0.316 s]
+[INFO] forest-core ........................................ SUCCESS [  0.406 s]
+[INFO] forest-jaxb ........................................ SUCCESS [  0.299 s]
+[INFO] forest-jakarta-xml ................................. SUCCESS [  0.254 s]
+[INFO] forest-spring ...................................... SUCCESS [  0.244 s]
+[INFO] forest-spring-boot-starter ......................... SUCCESS [  0.147 s]
+[INFO] forest-spring-boot3-starter ........................ SUCCESS [  0.139 s]
+[INFO] forest-solon-plugin ................................ SUCCESS [  0.156 s]
+[INFO] forest-test ........................................ SUCCESS [  0.053 s]
+[INFO] forest-spring-boot-test ............................ SUCCESS [  0.081 s]
+[INFO] forest-spring-boot-test ............................ SUCCESS [  0.244 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.295 s
+[INFO] Finished at: 2023-12-28T09:02:40+01:00
+[INFO] ------------------------------------------------------------------------

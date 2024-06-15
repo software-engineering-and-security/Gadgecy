@@ -1,0 +1,354 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] sms4j                                                              [pom]
+[INFO] sms4j-comm                                                         [jar]
+[INFO] sms4j-api                                                          [jar]
+[INFO] sms4j-provider                                                     [jar]
+[INFO] sms4j-core                                                         [jar]
+[INFO] sms4j-spring-boot-starter                                          [jar]
+[INFO] sms4j-solon-plugin                                                 [jar]
+[INFO] sms4j-spring-boot-example                                          [jar]
+[INFO] sms4j-javase-plugin                                                [jar]
+[INFO] sms4j-Email-plugin                                                 [pom]
+[INFO] sms4j-Email-comm                                                   [jar]
+[INFO] sms4j-Email-api                                                    [jar]
+[INFO] sms4j-Email-core                                                   [jar]
+[INFO] 
+[INFO] ----------------------< org.dromara.sms4j:sms4j >-----------------------
+[INFO] Building sms4j 3.0.4                                              [1/13]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sms4j ---
+[INFO] digraph "org.dromara.sms4j:sms4j:pom:3.0.4" { 
+[INFO] 	"org.dromara.sms4j:sms4j:pom:3.0.4" -> "org.projectlombok:lombok:jar:1.18.28:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< org.dromara.sms4j:sms4j-comm >--------------------
+[INFO] Building sms4j-comm 3.0.4                                         [2/13]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sms4j-comm ---
+[INFO] digraph "org.dromara.sms4j:sms4j-comm:jar:3.0.4" { 
+[INFO] 	"org.dromara.sms4j:sms4j-comm:jar:3.0.4" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-comm:jar:3.0.4" -> "cn.hutool:hutool-json:jar:5.8.20:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-comm:jar:3.0.4" -> "cn.hutool:hutool-http:jar:5.8.20:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-comm:jar:3.0.4" -> "org.projectlombok:lombok:jar:1.18.28:compile" ; 
+[INFO] 	"cn.hutool:hutool-json:jar:5.8.20:compile" -> "cn.hutool:hutool-core:jar:5.8.20:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< org.dromara.sms4j:sms4j-api >---------------------
+[INFO] Building sms4j-api 3.0.4                                          [3/13]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sms4j-api ---
+[INFO] digraph "org.dromara.sms4j:sms4j-api:jar:3.0.4" { 
+[INFO] 	"org.dromara.sms4j:sms4j-api:jar:3.0.4" -> "org.dromara.sms4j:sms4j-comm:jar:3.0.4:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-api:jar:3.0.4" -> "org.projectlombok:lombok:jar:1.18.28:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-comm:jar:3.0.4:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-comm:jar:3.0.4:compile" -> "cn.hutool:hutool-json:jar:5.8.20:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-comm:jar:3.0.4:compile" -> "cn.hutool:hutool-http:jar:5.8.20:compile" ; 
+[INFO] 	"cn.hutool:hutool-json:jar:5.8.20:compile" -> "cn.hutool:hutool-core:jar:5.8.20:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< org.dromara.sms4j:sms4j-provider >------------------
+[INFO] Building sms4j-provider 3.0.4                                     [4/13]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sms4j-provider ---
+[INFO] digraph "org.dromara.sms4j:sms4j-provider:jar:3.0.4" { 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4" -> "org.dromara.sms4j:sms4j-api:jar:3.0.4:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4" -> "com.jdcloud.sdk:sms:jar:1.3.3:provided" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4" -> "javax.xml.bind:jaxb-api:jar:2.3.0:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4" -> "com.sun.xml.bind:jaxb-impl:jar:2.3.0:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4" -> "com.sun.xml.bind:jaxb-core:jar:2.3.0:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4" -> "javax.activation:activation:jar:1.1.1:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4" -> "cn.hutool:hutool-crypto:jar:5.8.20:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4" -> "org.projectlombok:lombok:jar:1.18.28:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-api:jar:3.0.4:compile" -> "org.dromara.sms4j:sms4j-comm:jar:3.0.4:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-comm:jar:3.0.4:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-comm:jar:3.0.4:compile" -> "cn.hutool:hutool-json:jar:5.8.20:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-comm:jar:3.0.4:compile" -> "cn.hutool:hutool-http:jar:5.8.20:compile" ; 
+[INFO] 	"com.jdcloud.sdk:sms:jar:1.3.3:provided" -> "com.jdcloud.sdk:core:jar:1.2.3:provided" ; 
+[INFO] 	"com.jdcloud.sdk:core:jar:1.2.3:provided" -> "com.google.http-client:google-http-client:jar:1.24.1:provided" ; 
+[INFO] 	"com.jdcloud.sdk:core:jar:1.2.3:provided" -> "com.google.http-client:google-http-client-gson:jar:1.24.1:provided" ; 
+[INFO] 	"com.jdcloud.sdk:core:jar:1.2.3:provided" -> "joda-time:joda-time:jar:2.9.3:provided" ; 
+[INFO] 	"com.jdcloud.sdk:core:jar:1.2.3:provided" -> "com.alibaba:fastjson:jar:1.2.69:provided" ; 
+[INFO] 	"com.google.http-client:google-http-client:jar:1.24.1:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"com.google.http-client:google-http-client:jar:1.24.1:provided" -> "org.apache.httpcomponents:httpclient:jar:4.5.14:provided" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.14:provided" -> "org.apache.httpcomponents:httpcore:jar:4.4.16:provided" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.14:provided" -> "commons-codec:commons-codec:jar:1.15:provided" ; 
+[INFO] 	"com.google.http-client:google-http-client-gson:jar:1.24.1:provided" -> "com.google.code.gson:gson:jar:2.9.1:provided" ; 
+[INFO] 	"cn.hutool:hutool-crypto:jar:5.8.20:compile" -> "cn.hutool:hutool-core:jar:5.8.20:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< org.dromara.sms4j:sms4j-core >--------------------
+[INFO] Building sms4j-core 3.0.4                                         [5/13]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sms4j-core ---
+[INFO] digraph "org.dromara.sms4j:sms4j-core:jar:3.0.4" { 
+[INFO] 	"org.dromara.sms4j:sms4j-core:jar:3.0.4" -> "org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-core:jar:3.0.4" -> "org.projectlombok:lombok:jar:1.18.28:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" -> "org.dromara.sms4j:sms4j-api:jar:3.0.4:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" -> "javax.xml.bind:jaxb-api:jar:2.3.0:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" -> "com.sun.xml.bind:jaxb-impl:jar:2.3.0:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" -> "com.sun.xml.bind:jaxb-core:jar:2.3.0:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" -> "javax.activation:activation:jar:1.1.1:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" -> "cn.hutool:hutool-crypto:jar:5.8.20:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-api:jar:3.0.4:compile" -> "org.dromara.sms4j:sms4j-comm:jar:3.0.4:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-comm:jar:3.0.4:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-comm:jar:3.0.4:compile" -> "cn.hutool:hutool-json:jar:5.8.20:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-comm:jar:3.0.4:compile" -> "cn.hutool:hutool-http:jar:5.8.20:compile" ; 
+[INFO] 	"cn.hutool:hutool-crypto:jar:5.8.20:compile" -> "cn.hutool:hutool-core:jar:5.8.20:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< org.dromara.sms4j:sms4j-spring-boot-starter >-------------
+[INFO] Building sms4j-spring-boot-starter 3.0.4                          [6/13]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sms4j-spring-boot-starter ---
+[INFO] digraph "org.dromara.sms4j:sms4j-spring-boot-starter:jar:3.0.4" { 
+[INFO] 	"org.dromara.sms4j:sms4j-spring-boot-starter:jar:3.0.4" -> "org.dromara.sms4j:sms4j-core:jar:3.0.4:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-spring-boot-starter:jar:3.0.4" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.7.15:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-spring-boot-starter:jar:3.0.4" -> "org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-spring-boot-starter:jar:3.0.4" -> "org.projectlombok:lombok:jar:1.18.28:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-core:jar:3.0.4:compile" -> "org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" -> "org.dromara.sms4j:sms4j-api:jar:3.0.4:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" -> "javax.xml.bind:jaxb-api:jar:2.3.0:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" -> "com.sun.xml.bind:jaxb-impl:jar:2.3.0:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" -> "com.sun.xml.bind:jaxb-core:jar:2.3.0:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" -> "javax.activation:activation:jar:1.1.1:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" -> "cn.hutool:hutool-crypto:jar:5.8.20:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-api:jar:3.0.4:compile" -> "org.dromara.sms4j:sms4j-comm:jar:3.0.4:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-comm:jar:3.0.4:compile" -> "cn.hutool:hutool-json:jar:5.8.20:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-comm:jar:3.0.4:compile" -> "cn.hutool:hutool-http:jar:5.8.20:compile" ; 
+[INFO] 	"cn.hutool:hutool-crypto:jar:5.8.20:compile" -> "cn.hutool:hutool-core:jar:5.8.20:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.springframework:spring-core:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.yaml:snakeyaml:jar:1.30:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.7.15:compile" -> "org.springframework:spring-context:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.29:compile" -> "org.springframework:spring-aop:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.29:compile" -> "org.springframework:spring-beans:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.29:compile" -> "org.springframework:spring-expression:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:compile" -> "ch.qos.logback:logback-classic:jar:1.2.12:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:compile" -> "ch.qos.logback:logback-core:jar:1.2.12:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.29:compile" -> "org.springframework:spring-jcl:jar:5.3.29:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< org.dromara.sms4j:sms4j-solon-plugin >----------------
+[INFO] Building sms4j-solon-plugin 3.0.4                                 [7/13]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sms4j-solon-plugin ---
+[INFO] digraph "org.dromara.sms4j:sms4j-solon-plugin:jar:3.0.4" { 
+[INFO] 	"org.dromara.sms4j:sms4j-solon-plugin:jar:3.0.4" -> "org.noear:solon:jar:2.5.4:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-solon-plugin:jar:3.0.4" -> "org.dromara.sms4j:sms4j-core:jar:3.0.4:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-solon-plugin:jar:3.0.4" -> "org.projectlombok:lombok:jar:1.18.28:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-core:jar:3.0.4:compile" -> "org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" -> "org.dromara.sms4j:sms4j-api:jar:3.0.4:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" -> "javax.xml.bind:jaxb-api:jar:2.3.0:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" -> "com.sun.xml.bind:jaxb-impl:jar:2.3.0:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" -> "com.sun.xml.bind:jaxb-core:jar:2.3.0:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" -> "javax.activation:activation:jar:1.1.1:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" -> "cn.hutool:hutool-crypto:jar:5.8.20:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-api:jar:3.0.4:compile" -> "org.dromara.sms4j:sms4j-comm:jar:3.0.4:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-comm:jar:3.0.4:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-comm:jar:3.0.4:compile" -> "cn.hutool:hutool-json:jar:5.8.20:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-comm:jar:3.0.4:compile" -> "cn.hutool:hutool-http:jar:5.8.20:compile" ; 
+[INFO] 	"cn.hutool:hutool-crypto:jar:5.8.20:compile" -> "cn.hutool:hutool-core:jar:5.8.20:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< org.dromara.sms4j:sms4j-spring-boot-example >-------------
+[INFO] Building sms4j-spring-boot-example 3.0.4                          [8/13]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sms4j-spring-boot-example ---
+[INFO] digraph "org.dromara.sms4j:sms4j-spring-boot-example:jar:3.0.4" { 
+[INFO] 	"org.dromara.sms4j:sms4j-spring-boot-example:jar:3.0.4" -> "org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-spring-boot-example:jar:3.0.4" -> "org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-spring-boot-example:jar:3.0.4" -> "org.dromara.sms4j:sms4j-spring-boot-starter:jar:3.0.4:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-spring-boot-example:jar:3.0.4" -> "com.jdcloud.sdk:sms:jar:1.3.3:provided" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-spring-boot-example:jar:3.0.4" -> "org.projectlombok:lombok:jar:1.18.28:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.springframework:spring-core:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.7.15:compile" -> "org.yaml:snakeyaml:jar:1.30:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.7.15:compile" -> "org.springframework:spring-context:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.29:compile" -> "org.springframework:spring-aop:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.29:compile" -> "org.springframework:spring-beans:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.29:compile" -> "org.springframework:spring-expression:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:compile" -> "ch.qos.logback:logback-classic:jar:1.2.12:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.7.15:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.12:compile" -> "ch.qos.logback:logback-core:jar:1.2.12:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.29:compile" -> "org.springframework:spring-jcl:jar:5.3.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "org.springframework.boot:spring-boot-test:jar:2.7.15:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.7.15:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "com.jayway.jsonpath:json-path:jar:2.7.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "org.assertj:assertj-core:jar:3.22.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "org.junit.jupiter:junit-jupiter:jar:5.8.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "org.mockito:mockito-core:jar:4.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "org.mockito:mockito-junit-jupiter:jar:4.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "org.springframework:spring-test:jar:5.3.29:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.7.15:test" -> "org.xmlunit:xmlunit-core:jar:2.9.1:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.7.0:test" -> "net.minidev:json-smart:jar:2.4.11:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.7.0:test" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.11:test" -> "net.minidev:accessors-smart:jar:2.4.11:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.11:test" -> "org.ow2.asm:asm:jar:9.3:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.8.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.23:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.23:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.5.1:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-spring-boot-starter:jar:3.0.4:compile" -> "org.dromara.sms4j:sms4j-core:jar:3.0.4:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-core:jar:3.0.4:compile" -> "org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" -> "org.dromara.sms4j:sms4j-api:jar:3.0.4:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" -> "javax.xml.bind:jaxb-api:jar:2.3.0:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" -> "com.sun.xml.bind:jaxb-impl:jar:2.3.0:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" -> "com.sun.xml.bind:jaxb-core:jar:2.3.0:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" -> "javax.activation:activation:jar:1.1.1:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" -> "cn.hutool:hutool-crypto:jar:5.8.20:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-api:jar:3.0.4:compile" -> "org.dromara.sms4j:sms4j-comm:jar:3.0.4:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-comm:jar:3.0.4:compile" -> "cn.hutool:hutool-json:jar:5.8.20:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-comm:jar:3.0.4:compile" -> "cn.hutool:hutool-http:jar:5.8.20:compile" ; 
+[INFO] 	"cn.hutool:hutool-crypto:jar:5.8.20:compile" -> "cn.hutool:hutool-core:jar:5.8.20:compile" ; 
+[INFO] 	"com.jdcloud.sdk:sms:jar:1.3.3:provided" -> "com.jdcloud.sdk:core:jar:1.2.3:provided" ; 
+[INFO] 	"com.jdcloud.sdk:core:jar:1.2.3:provided" -> "com.google.http-client:google-http-client:jar:1.24.1:provided" ; 
+[INFO] 	"com.jdcloud.sdk:core:jar:1.2.3:provided" -> "com.google.http-client:google-http-client-gson:jar:1.24.1:provided" ; 
+[INFO] 	"com.jdcloud.sdk:core:jar:1.2.3:provided" -> "joda-time:joda-time:jar:2.9.3:provided" ; 
+[INFO] 	"com.jdcloud.sdk:core:jar:1.2.3:provided" -> "com.alibaba:fastjson:jar:1.2.69:provided" ; 
+[INFO] 	"com.google.http-client:google-http-client:jar:1.24.1:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"com.google.http-client:google-http-client:jar:1.24.1:provided" -> "org.apache.httpcomponents:httpclient:jar:4.5.14:provided" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.14:provided" -> "org.apache.httpcomponents:httpcore:jar:4.4.16:provided" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.14:provided" -> "commons-codec:commons-codec:jar:1.15:provided" ; 
+[INFO] 	"com.google.http-client:google-http-client-gson:jar:1.24.1:provided" -> "com.google.code.gson:gson:jar:2.9.1:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.dromara.sms4j:sms4j-javase-plugin >----------------
+[INFO] Building sms4j-javase-plugin 3.0.4                                [9/13]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sms4j-javase-plugin ---
+[INFO] digraph "org.dromara.sms4j:sms4j-javase-plugin:jar:3.0.4" { 
+[INFO] 	"org.dromara.sms4j:sms4j-javase-plugin:jar:3.0.4" -> "org.dromara.sms4j:sms4j-core:jar:3.0.4:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-javase-plugin:jar:3.0.4" -> "org.yaml:snakeyaml:jar:2.0:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-javase-plugin:jar:3.0.4" -> "org.projectlombok:lombok:jar:1.18.28:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-core:jar:3.0.4:compile" -> "org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" -> "org.dromara.sms4j:sms4j-api:jar:3.0.4:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" -> "javax.xml.bind:jaxb-api:jar:2.3.0:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" -> "com.sun.xml.bind:jaxb-impl:jar:2.3.0:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" -> "com.sun.xml.bind:jaxb-core:jar:2.3.0:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" -> "javax.activation:activation:jar:1.1.1:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-provider:jar:3.0.4:compile" -> "cn.hutool:hutool-crypto:jar:5.8.20:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-api:jar:3.0.4:compile" -> "org.dromara.sms4j:sms4j-comm:jar:3.0.4:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-comm:jar:3.0.4:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-comm:jar:3.0.4:compile" -> "cn.hutool:hutool-json:jar:5.8.20:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-comm:jar:3.0.4:compile" -> "cn.hutool:hutool-http:jar:5.8.20:compile" ; 
+[INFO] 	"cn.hutool:hutool-crypto:jar:5.8.20:compile" -> "cn.hutool:hutool-core:jar:5.8.20:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< org.dromara.sms4j:sms4j-Email-plugin >----------------
+[INFO] Building sms4j-Email-plugin 3.0.4                                [10/13]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sms4j-Email-plugin ---
+[INFO] digraph "org.dromara.sms4j:sms4j-Email-plugin:pom:3.0.4" { 
+[INFO] 	"org.dromara.sms4j:sms4j-Email-plugin:pom:3.0.4" -> "org.projectlombok:lombok:jar:1.18.28:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.dromara.sms4j:sms4j-Email-comm >-----------------
+[INFO] Building sms4j-Email-comm 3.0.4                                  [11/13]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sms4j-Email-comm ---
+[INFO] digraph "org.dromara.sms4j:sms4j-Email-comm:jar:3.0.4" { 
+[INFO] 	"org.dromara.sms4j:sms4j-Email-comm:jar:3.0.4" -> "cn.hutool:hutool-cron:jar:5.8.20:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-Email-comm:jar:3.0.4" -> "cn.hutool:hutool-http:jar:5.8.20:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-Email-comm:jar:3.0.4" -> "com.sun.mail:javax.mail:jar:1.6.2:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-Email-comm:jar:3.0.4" -> "org.projectlombok:lombok:jar:1.18.28:compile" ; 
+[INFO] 	"cn.hutool:hutool-cron:jar:5.8.20:compile" -> "cn.hutool:hutool-core:jar:5.8.20:compile" ; 
+[INFO] 	"cn.hutool:hutool-cron:jar:5.8.20:compile" -> "cn.hutool:hutool-setting:jar:5.8.20:compile" ; 
+[INFO] 	"cn.hutool:hutool-setting:jar:5.8.20:compile" -> "cn.hutool:hutool-log:jar:5.8.20:compile" ; 
+[INFO] 	"com.sun.mail:javax.mail:jar:1.6.2:compile" -> "javax.activation:activation:jar:1.1.1:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.dromara.sms4j:sms4j-Email-api >------------------
+[INFO] Building sms4j-Email-api 3.0.4                                   [12/13]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sms4j-Email-api ---
+[INFO] digraph "org.dromara.sms4j:sms4j-Email-api:jar:3.0.4" { 
+[INFO] 	"org.dromara.sms4j:sms4j-Email-api:jar:3.0.4" -> "org.dromara.sms4j:sms4j-Email-comm:jar:3.0.4:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-Email-api:jar:3.0.4" -> "org.projectlombok:lombok:jar:1.18.28:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-Email-comm:jar:3.0.4:compile" -> "cn.hutool:hutool-cron:jar:5.8.20:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-Email-comm:jar:3.0.4:compile" -> "cn.hutool:hutool-http:jar:5.8.20:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-Email-comm:jar:3.0.4:compile" -> "com.sun.mail:javax.mail:jar:1.6.2:compile" ; 
+[INFO] 	"cn.hutool:hutool-cron:jar:5.8.20:compile" -> "cn.hutool:hutool-core:jar:5.8.20:compile" ; 
+[INFO] 	"cn.hutool:hutool-cron:jar:5.8.20:compile" -> "cn.hutool:hutool-setting:jar:5.8.20:compile" ; 
+[INFO] 	"cn.hutool:hutool-setting:jar:5.8.20:compile" -> "cn.hutool:hutool-log:jar:5.8.20:compile" ; 
+[INFO] 	"com.sun.mail:javax.mail:jar:1.6.2:compile" -> "javax.activation:activation:jar:1.1.1:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.dromara.sms4j:sms4j-Email-core >-----------------
+[INFO] Building sms4j-Email-core 3.0.4                                  [13/13]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sms4j-Email-core ---
+[INFO] digraph "org.dromara.sms4j:sms4j-Email-core:jar:3.0.4" { 
+[INFO] 	"org.dromara.sms4j:sms4j-Email-core:jar:3.0.4" -> "org.dromara.sms4j:sms4j-Email-api:jar:3.0.4:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-Email-core:jar:3.0.4" -> "com.sun.activation:javax.activation:jar:1.2.0:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-Email-core:jar:3.0.4" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-Email-core:jar:3.0.4" -> "org.projectlombok:lombok:jar:1.18.28:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-Email-api:jar:3.0.4:compile" -> "org.dromara.sms4j:sms4j-Email-comm:jar:3.0.4:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-Email-comm:jar:3.0.4:compile" -> "cn.hutool:hutool-cron:jar:5.8.20:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-Email-comm:jar:3.0.4:compile" -> "cn.hutool:hutool-http:jar:5.8.20:compile" ; 
+[INFO] 	"org.dromara.sms4j:sms4j-Email-comm:jar:3.0.4:compile" -> "com.sun.mail:javax.mail:jar:1.6.2:compile" ; 
+[INFO] 	"cn.hutool:hutool-cron:jar:5.8.20:compile" -> "cn.hutool:hutool-core:jar:5.8.20:compile" ; 
+[INFO] 	"cn.hutool:hutool-cron:jar:5.8.20:compile" -> "cn.hutool:hutool-setting:jar:5.8.20:compile" ; 
+[INFO] 	"cn.hutool:hutool-setting:jar:5.8.20:compile" -> "cn.hutool:hutool-log:jar:5.8.20:compile" ; 
+[INFO] 	"com.sun.mail:javax.mail:jar:1.6.2:compile" -> "javax.activation:activation:jar:1.1.1:compile" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for sms4j 3.0.4:
+[INFO] 
+[INFO] sms4j .............................................. SUCCESS [  3.530 s]
+[INFO] sms4j-comm ......................................... SUCCESS [  0.209 s]
+[INFO] sms4j-api .......................................... SUCCESS [  0.152 s]
+[INFO] sms4j-provider ..................................... SUCCESS [  0.486 s]
+[INFO] sms4j-core ......................................... SUCCESS [  0.092 s]
+[INFO] sms4j-spring-boot-starter .......................... SUCCESS [  0.373 s]
+[INFO] sms4j-solon-plugin ................................. SUCCESS [  0.143 s]
+[INFO] sms4j-spring-boot-example .......................... SUCCESS [  0.488 s]
+[INFO] sms4j-javase-plugin ................................ SUCCESS [  0.064 s]
+[INFO] sms4j-Email-plugin ................................. SUCCESS [  0.022 s]
+[INFO] sms4j-Email-comm ................................... SUCCESS [  0.070 s]
+[INFO] sms4j-Email-api .................................... SUCCESS [  0.089 s]
+[INFO] sms4j-Email-core ................................... SUCCESS [  0.123 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.965 s
+[INFO] Finished at: 2023-12-28T09:02:44+01:00
+[INFO] ------------------------------------------------------------------------

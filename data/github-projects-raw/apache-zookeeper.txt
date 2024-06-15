@@ -1,0 +1,529 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Apache ZooKeeper                                                   [pom]
+[INFO] Apache ZooKeeper - Documentation                                   [pom]
+[INFO] Apache ZooKeeper - Jute                                            [jar]
+[INFO] Apache ZooKeeper - Server                                          [jar]
+[INFO] Apache ZooKeeper - Metrics Providers                               [pom]
+[INFO] Apache ZooKeeper - Prometheus.io Metrics Provider                  [jar]
+[INFO] Apache ZooKeeper - Client                                          [pom]
+[INFO] Apache ZooKeeper - Recipes                                         [pom]
+[INFO] Apache ZooKeeper - Recipes - Election                              [jar]
+[INFO] Apache ZooKeeper - Recipes - Lock                                  [jar]
+[INFO] Apache ZooKeeper - Recipes - Queue                                 [jar]
+[INFO] Apache ZooKeeper - Assembly                                        [pom]
+[INFO] Apache ZooKeeper - Compatibility Tests                             [pom]
+[INFO] Apache ZooKeeper - Compatibility Tests - Curator                   [jar]
+[INFO] 
+[INFO] --------------------< org.apache.zookeeper:parent >---------------------
+[INFO] Building Apache ZooKeeper 3.10.0-SNAPSHOT                         [1/14]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ parent ---
+[INFO] digraph "org.apache.zookeeper:parent:pom:3.10.0-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< org.apache.zookeeper:zookeeper-docs >-----------------
+[INFO] Building Apache ZooKeeper - Documentation 3.10.0-SNAPSHOT         [2/14]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ zookeeper-docs ---
+[INFO] digraph "org.apache.zookeeper:zookeeper-docs:pom:3.10.0-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< org.apache.zookeeper:zookeeper-jute >-----------------
+[INFO] Building Apache ZooKeeper - Jute 3.10.0-SNAPSHOT                  [3/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ zookeeper-jute ---
+[INFO] digraph "org.apache.zookeeper:zookeeper-jute:jar:3.10.0-SNAPSHOT" { 
+[INFO] 	"org.apache.zookeeper:zookeeper-jute:jar:3.10.0-SNAPSHOT" -> "org.apache.yetus:audience-annotations:jar:0.12.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-jute:jar:3.10.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.6.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.6.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.6.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.6.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.6.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.6.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.6.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.6.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.6.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< org.apache.zookeeper:zookeeper >-------------------
+[INFO] Building Apache ZooKeeper - Server 3.10.0-SNAPSHOT                [4/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/zookeeper/zookeeper-jute/3.10.0-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ zookeeper ---
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/zookeeper/zookeeper-jute/3.10.0-SNAPSHOT/zookeeper-jute-3.10.0-SNAPSHOT.jar
+[INFO] digraph "org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" { 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.0.2:provided (optional) " ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" -> "org.hamcrest:hamcrest-library:jar:2.2:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" -> "org.apache.commons:commons-collections4:jar:4.4:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper-jute:jar:3.10.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" -> "commons-cli:commons-cli:jar:1.5.0:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" -> "org.apache.yetus:audience-annotations:jar:0.12.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" -> "io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" -> "io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.30:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" -> "ch.qos.logback:logback-core:jar:1.2.10:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.2.10:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" -> "org.eclipse.jetty:jetty-server:jar:9.4.52.v20230823:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" -> "org.eclipse.jetty:jetty-servlet:jar:9.4.52.v20230823:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" -> "org.eclipse.jetty:jetty-client:jar:9.4.52.v20230823:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" -> "org.bouncycastle:bcprov-jdk18on:jar:1.75:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" -> "org.bouncycastle:bcpkix-jdk18on:jar:1.75:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" -> "jline:jline:jar:2.14.6:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" -> "io.dropwizard.metrics:metrics-core:jar:4.1.12.1:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" -> "org.apache.kerby:kerb-core:jar:2.0.0:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" -> "org.apache.kerby:kerb-simplekdc:jar:2.0.0:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" -> "org.apache.kerby:kerby-config:jar:2.0.0:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.9.0:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" -> "org.jmockit:jmockit:jar:1.48:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.6.2:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.6.2:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-params:jar:5.6.2:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" -> "org.junit.platform:junit-platform-runner:jar:1.6.2:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" -> "org.burningwave:tools:jar:0.25.4:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" -> "org.xerial.snappy:snappy-java:jar:1.1.10.5:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:4.0.2:provided (optional) " -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"org.hamcrest:hamcrest-library:jar:2.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.94.Final:compile" -> "io.netty:netty-transport-classes-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-classes:jar:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:linux-x86_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:linux-aarch_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:osx-x86_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:osx-aarch_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:windows-x86_64:2.0.61.Final:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.52.v20230823:provided" -> "javax.servlet:javax.servlet-api:jar:3.1.0:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.52.v20230823:provided" -> "org.eclipse.jetty:jetty-http:jar:9.4.52.v20230823:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.52.v20230823:provided" -> "org.eclipse.jetty:jetty-io:jar:9.4.52.v20230823:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-http:jar:9.4.52.v20230823:provided" -> "org.eclipse.jetty:jetty-util:jar:9.4.52.v20230823:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.52.v20230823:provided" -> "org.eclipse.jetty:jetty-security:jar:9.4.52.v20230823:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.52.v20230823:provided" -> "org.eclipse.jetty:jetty-util-ajax:jar:9.4.52.v20230823:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:provided" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk18on:jar:1.75:test" -> "org.bouncycastle:bcutil-jdk18on:jar:1.75:test" ; 
+[INFO] 	"org.apache.kerby:kerb-core:jar:2.0.0:test" -> "org.apache.kerby:kerby-pkix:jar:2.0.0:test" ; 
+[INFO] 	"org.apache.kerby:kerby-pkix:jar:2.0.0:test" -> "org.apache.kerby:kerby-asn1:jar:2.0.0:test" ; 
+[INFO] 	"org.apache.kerby:kerby-pkix:jar:2.0.0:test" -> "org.apache.kerby:kerby-util:jar:2.0.0:test" ; 
+[INFO] 	"org.apache.kerby:kerb-simplekdc:jar:2.0.0:test" -> "org.apache.kerby:kerb-client:jar:2.0.0:test" ; 
+[INFO] 	"org.apache.kerby:kerb-simplekdc:jar:2.0.0:test" -> "org.apache.kerby:kerb-admin:jar:2.0.0:test" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:2.0.0:test" -> "org.apache.kerby:kerb-common:jar:2.0.0:test" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:2.0.0:test" -> "org.apache.kerby:kerb-util:jar:2.0.0:test" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:2.0.0:test" -> "org.apache.kerby:token-provider:jar:2.0.0:test" ; 
+[INFO] 	"org.apache.kerby:kerb-common:jar:2.0.0:test" -> "org.apache.kerby:kerb-crypto:jar:2.0.0:test" ; 
+[INFO] 	"org.apache.kerby:token-provider:jar:2.0.0:test" -> "com.nimbusds:nimbus-jose-jwt:jar:4.41.2:test" ; 
+[INFO] 	"com.nimbusds:nimbus-jose-jwt:jar:4.41.2:test" -> "com.github.stephenc.jcip:jcip-annotations:jar:1.0-1:test" ; 
+[INFO] 	"com.nimbusds:nimbus-jose-jwt:jar:4.41.2:test" -> "net.minidev:json-smart:jar:2.3:test (version selected from constraint [1.3.1,2.3])" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.3:test (version selected from constraint [1.3.1,2.3])" -> "net.minidev:accessors-smart:jar:1.2:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:1.2:test" -> "org.ow2.asm:asm:jar:5.0.4:test" ; 
+[INFO] 	"org.apache.kerby:kerb-admin:jar:2.0.0:test" -> "org.apache.kerby:kerb-server:jar:2.0.0:test" ; 
+[INFO] 	"org.apache.kerby:kerb-admin:jar:2.0.0:test" -> "org.apache.kerby:kerby-xdr:jar:2.0.0:test" ; 
+[INFO] 	"org.apache.kerby:kerb-server:jar:2.0.0:test" -> "org.apache.kerby:kerb-identity:jar:2.0.0:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "net.bytebuddy:byte-buddy:jar:1.12.16:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.16:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.6.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.6.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.6.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.6.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.6.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.6.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-runner:jar:1.6.2:test" -> "junit:junit:jar:4.13:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-runner:jar:1.6.2:test" -> "org.junit.platform:junit-platform-launcher:jar:1.6.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-runner:jar:1.6.2:test" -> "org.junit.platform:junit-platform-suite-api:jar:1.6.2:test" ; 
+[INFO] 	"org.burningwave:tools:jar:0.25.4:test" -> "org.burningwave:core:jar:12.62.5:test" ; 
+[INFO] 	"org.burningwave:core:jar:12.62.5:test" -> "org.burningwave:jvm-driver:jar:8.14.0:test" ; 
+[INFO] 	"org.burningwave:jvm-driver:jar:8.14.0:test" -> "io.github.toolfactory:jvm-driver:jar:9.4.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------< org.apache.zookeeper:zookeeper-metrics-providers >----------
+[INFO] Building Apache ZooKeeper - Metrics Providers 3.10.0-SNAPSHOT     [5/14]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ zookeeper-metrics-providers ---
+[INFO] digraph "org.apache.zookeeper:zookeeper-metrics-providers:pom:3.10.0-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ---------< org.apache.zookeeper:zookeeper-prometheus-metrics >----------
+[INFO] Building Apache ZooKeeper - Prometheus.io Metrics Provider 3.10.0-SNAPSHOT [6/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/zookeeper/zookeeper/3.10.0-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ zookeeper-prometheus-metrics ---
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/zookeeper/zookeeper/3.10.0-SNAPSHOT/zookeeper-3.10.0-SNAPSHOT.jar
+[INFO] digraph "org.apache.zookeeper:zookeeper-prometheus-metrics:jar:3.10.0-SNAPSHOT" { 
+[INFO] 	"org.apache.zookeeper:zookeeper-prometheus-metrics:jar:3.10.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-prometheus-metrics:jar:3.10.0-SNAPSHOT" -> "io.prometheus:simpleclient:jar:0.9.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-prometheus-metrics:jar:3.10.0-SNAPSHOT" -> "io.prometheus:simpleclient_hotspot:jar:0.9.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-prometheus-metrics:jar:3.10.0-SNAPSHOT" -> "io.prometheus:simpleclient_servlet:jar:0.9.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-prometheus-metrics:jar:3.10.0-SNAPSHOT" -> "org.eclipse.jetty:jetty-server:jar:9.4.52.v20230823:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-prometheus-metrics:jar:3.10.0-SNAPSHOT" -> "org.eclipse.jetty:jetty-servlet:jar:9.4.52.v20230823:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-prometheus-metrics:jar:3.10.0-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.9.0:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-prometheus-metrics:jar:3.10.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.6.2:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-prometheus-metrics:jar:3.10.0-SNAPSHOT" -> "org.junit.platform:junit-platform-runner:jar:1.6.2:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "org.apache.zookeeper:zookeeper-jute:jar:3.10.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "org.apache.yetus:audience-annotations:jar:0.12.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "org.slf4j:slf4j-api:jar:1.7.30:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "ch.qos.logback:logback-core:jar:1.2.10:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "ch.qos.logback:logback-classic:jar:1.2.10:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.94.Final:compile" -> "io.netty:netty-transport-classes-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-classes:jar:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:linux-x86_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:linux-aarch_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:osx-x86_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:osx-aarch_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:windows-x86_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.prometheus:simpleclient_servlet:jar:0.9.0:compile" -> "io.prometheus:simpleclient_common:jar:0.9.0:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.52.v20230823:provided" -> "javax.servlet:javax.servlet-api:jar:3.1.0:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.52.v20230823:provided" -> "org.eclipse.jetty:jetty-http:jar:9.4.52.v20230823:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.52.v20230823:provided" -> "org.eclipse.jetty:jetty-io:jar:9.4.52.v20230823:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-http:jar:9.4.52.v20230823:provided" -> "org.eclipse.jetty:jetty-util:jar:9.4.52.v20230823:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.52.v20230823:provided" -> "org.eclipse.jetty:jetty-security:jar:9.4.52.v20230823:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.52.v20230823:provided" -> "org.eclipse.jetty:jetty-util-ajax:jar:9.4.52.v20230823:provided" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "net.bytebuddy:byte-buddy:jar:1.12.16:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.16:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.6.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.6.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.6.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.6.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.6.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.6.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.6.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.6.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-runner:jar:1.6.2:test" -> "junit:junit:jar:4.13:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-runner:jar:1.6.2:test" -> "org.junit.platform:junit-platform-launcher:jar:1.6.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-runner:jar:1.6.2:test" -> "org.junit.platform:junit-platform-suite-api:jar:1.6.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.apache.zookeeper:zookeeper-client >----------------
+[INFO] Building Apache ZooKeeper - Client 3.10.0-SNAPSHOT                [7/14]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ zookeeper-client ---
+[INFO] digraph "org.apache.zookeeper:zookeeper-client:pom:3.10.0-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.apache.zookeeper:zookeeper-recipes >---------------
+[INFO] Building Apache ZooKeeper - Recipes 3.10.0-SNAPSHOT               [8/14]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ zookeeper-recipes ---
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/zookeeper/zookeeper/3.10.0-SNAPSHOT/zookeeper-3.10.0-SNAPSHOT-tests.jar
+[INFO] digraph "org.apache.zookeeper:zookeeper-recipes:pom:3.10.0-SNAPSHOT" { 
+[INFO] 	"org.apache.zookeeper:zookeeper-recipes:pom:3.10.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-recipes:pom:3.10.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper:test-jar:tests:3.10.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-recipes:pom:3.10.0-SNAPSHOT" -> "org.xerial.snappy:snappy-java:jar:1.1.10.5:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-recipes:pom:3.10.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.6.2:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-recipes:pom:3.10.0-SNAPSHOT" -> "io.dropwizard.metrics:metrics-core:jar:4.1.12.1:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-recipes:pom:3.10.0-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.0.2:provided (optional) " ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "org.apache.zookeeper:zookeeper-jute:jar:3.10.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "org.apache.yetus:audience-annotations:jar:0.12.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "org.slf4j:slf4j-api:jar:1.7.30:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "ch.qos.logback:logback-core:jar:1.2.10:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "ch.qos.logback:logback-classic:jar:1.2.10:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.94.Final:compile" -> "io.netty:netty-transport-classes-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-classes:jar:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:linux-x86_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:linux-aarch_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:osx-x86_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:osx-aarch_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:windows-x86_64:2.0.61.Final:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.6.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.6.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.6.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.6.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.6.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.6.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.6.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.6.2:test" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:4.0.2:provided (optional) " -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided (optional) " ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------< org.apache.zookeeper:zookeeper-recipes-election >-----------
+[INFO] Building Apache ZooKeeper - Recipes - Election 3.10.0-SNAPSHOT    [9/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ zookeeper-recipes-election ---
+[INFO] digraph "org.apache.zookeeper:zookeeper-recipes-election:jar:3.10.0-SNAPSHOT" { 
+[INFO] 	"org.apache.zookeeper:zookeeper-recipes-election:jar:3.10.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-recipes-election:jar:3.10.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper:test-jar:tests:3.10.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-recipes-election:jar:3.10.0-SNAPSHOT" -> "org.xerial.snappy:snappy-java:jar:1.1.10.5:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-recipes-election:jar:3.10.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.6.2:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-recipes-election:jar:3.10.0-SNAPSHOT" -> "io.dropwizard.metrics:metrics-core:jar:4.1.12.1:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-recipes-election:jar:3.10.0-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.0.2:provided (optional) " ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "org.apache.zookeeper:zookeeper-jute:jar:3.10.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "org.apache.yetus:audience-annotations:jar:0.12.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "org.slf4j:slf4j-api:jar:1.7.30:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "ch.qos.logback:logback-core:jar:1.2.10:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "ch.qos.logback:logback-classic:jar:1.2.10:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.94.Final:compile" -> "io.netty:netty-transport-classes-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-classes:jar:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:linux-x86_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:linux-aarch_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:osx-x86_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:osx-aarch_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:windows-x86_64:2.0.61.Final:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.6.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.6.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.6.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.6.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.6.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.6.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.6.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.6.2:test" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:4.0.2:provided (optional) " -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided (optional) " ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< org.apache.zookeeper:zookeeper-recipes-lock >-------------
+[INFO] Building Apache ZooKeeper - Recipes - Lock 3.10.0-SNAPSHOT       [10/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ zookeeper-recipes-lock ---
+[INFO] digraph "org.apache.zookeeper:zookeeper-recipes-lock:jar:3.10.0-SNAPSHOT" { 
+[INFO] 	"org.apache.zookeeper:zookeeper-recipes-lock:jar:3.10.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-recipes-lock:jar:3.10.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper:test-jar:tests:3.10.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-recipes-lock:jar:3.10.0-SNAPSHOT" -> "org.xerial.snappy:snappy-java:jar:1.1.10.5:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-recipes-lock:jar:3.10.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.6.2:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-recipes-lock:jar:3.10.0-SNAPSHOT" -> "io.dropwizard.metrics:metrics-core:jar:4.1.12.1:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-recipes-lock:jar:3.10.0-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.0.2:provided (optional) " ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "org.apache.zookeeper:zookeeper-jute:jar:3.10.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "org.apache.yetus:audience-annotations:jar:0.12.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "org.slf4j:slf4j-api:jar:1.7.30:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "ch.qos.logback:logback-core:jar:1.2.10:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "ch.qos.logback:logback-classic:jar:1.2.10:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.94.Final:compile" -> "io.netty:netty-transport-classes-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-classes:jar:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:linux-x86_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:linux-aarch_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:osx-x86_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:osx-aarch_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:windows-x86_64:2.0.61.Final:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.6.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.6.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.6.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.6.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.6.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.6.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.6.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.6.2:test" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:4.0.2:provided (optional) " -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided (optional) " ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< org.apache.zookeeper:zookeeper-recipes-queue >------------
+[INFO] Building Apache ZooKeeper - Recipes - Queue 3.10.0-SNAPSHOT      [11/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ zookeeper-recipes-queue ---
+[INFO] digraph "org.apache.zookeeper:zookeeper-recipes-queue:jar:3.10.0-SNAPSHOT" { 
+[INFO] 	"org.apache.zookeeper:zookeeper-recipes-queue:jar:3.10.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-recipes-queue:jar:3.10.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper:test-jar:tests:3.10.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-recipes-queue:jar:3.10.0-SNAPSHOT" -> "org.xerial.snappy:snappy-java:jar:1.1.10.5:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-recipes-queue:jar:3.10.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.6.2:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-recipes-queue:jar:3.10.0-SNAPSHOT" -> "io.dropwizard.metrics:metrics-core:jar:4.1.12.1:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-recipes-queue:jar:3.10.0-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.0.2:provided (optional) " ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "org.apache.zookeeper:zookeeper-jute:jar:3.10.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "org.apache.yetus:audience-annotations:jar:0.12.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "org.slf4j:slf4j-api:jar:1.7.30:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "ch.qos.logback:logback-core:jar:1.2.10:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "ch.qos.logback:logback-classic:jar:1.2.10:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.94.Final:compile" -> "io.netty:netty-transport-classes-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-classes:jar:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:linux-x86_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:linux-aarch_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:osx-x86_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:osx-aarch_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:windows-x86_64:2.0.61.Final:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.6.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.6.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.6.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.6.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.6.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.6.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.6.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.6.2:test" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:4.0.2:provided (optional) " -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided (optional) " ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< org.apache.zookeeper:zookeeper-assembly >---------------
+[INFO] Building Apache ZooKeeper - Assembly 3.10.0-SNAPSHOT             [12/14]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/zookeeper/zookeeper-prometheus-metrics/3.10.0-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ zookeeper-assembly ---
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/zookeeper/zookeeper-prometheus-metrics/3.10.0-SNAPSHOT/zookeeper-prometheus-metrics-3.10.0-SNAPSHOT.jar
+[INFO] digraph "org.apache.zookeeper:zookeeper-assembly:pom:3.10.0-SNAPSHOT" { 
+[INFO] 	"org.apache.zookeeper:zookeeper-assembly:pom:3.10.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper-docs:pom:3.10.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-assembly:pom:3.10.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper-jute:jar:3.10.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-assembly:pom:3.10.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-assembly:pom:3.10.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper-client:pom:3.10.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-assembly:pom:3.10.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper-prometheus-metrics:jar:3.10.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-assembly:pom:3.10.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper-recipes:pom:3.10.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-assembly:pom:3.10.0-SNAPSHOT" -> "commons-cli:commons-cli:jar:1.5.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-assembly:pom:3.10.0-SNAPSHOT" -> "org.eclipse.jetty:jetty-server:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-assembly:pom:3.10.0-SNAPSHOT" -> "org.eclipse.jetty:jetty-servlet:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-assembly:pom:3.10.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-assembly:pom:3.10.0-SNAPSHOT" -> "jline:jline:jar:2.14.6:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-assembly:pom:3.10.0-SNAPSHOT" -> "io.dropwizard.metrics:metrics-core:jar:4.1.12.1:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-assembly:pom:3.10.0-SNAPSHOT" -> "org.xerial.snappy:snappy-java:jar:1.1.10.5:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-jute:jar:3.10.0-SNAPSHOT:compile" -> "org.apache.yetus:audience-annotations:jar:0.12.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "org.slf4j:slf4j-api:jar:1.7.30:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "ch.qos.logback:logback-core:jar:1.2.10:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "ch.qos.logback:logback-classic:jar:1.2.10:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.94.Final:compile" -> "io.netty:netty-transport-classes-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-classes:jar:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:linux-x86_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:linux-aarch_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:osx-x86_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:osx-aarch_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:windows-x86_64:2.0.61.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-prometheus-metrics:jar:3.10.0-SNAPSHOT:compile" -> "io.prometheus:simpleclient:jar:0.9.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-prometheus-metrics:jar:3.10.0-SNAPSHOT:compile" -> "io.prometheus:simpleclient_hotspot:jar:0.9.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-prometheus-metrics:jar:3.10.0-SNAPSHOT:compile" -> "io.prometheus:simpleclient_servlet:jar:0.9.0:compile" ; 
+[INFO] 	"io.prometheus:simpleclient_servlet:jar:0.9.0:compile" -> "io.prometheus:simpleclient_common:jar:0.9.0:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.52.v20230823:compile" -> "javax.servlet:javax.servlet-api:jar:3.1.0:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.52.v20230823:compile" -> "org.eclipse.jetty:jetty-http:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.52.v20230823:compile" -> "org.eclipse.jetty:jetty-io:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-http:jar:9.4.52.v20230823:compile" -> "org.eclipse.jetty:jetty-util:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.52.v20230823:compile" -> "org.eclipse.jetty:jetty-security:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.52.v20230823:compile" -> "org.eclipse.jetty:jetty-util-ajax:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------< org.apache.zookeeper:zookeeper-compatibility-tests >---------
+[INFO] Building Apache ZooKeeper - Compatibility Tests 3.10.0-SNAPSHOT  [13/14]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ zookeeper-compatibility-tests ---
+[INFO] digraph "org.apache.zookeeper:zookeeper-compatibility-tests:pom:3.10.0-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] -----< org.apache.zookeeper:zookeeper-compatibility-tests-curator >-----
+[INFO] Building Apache ZooKeeper - Compatibility Tests - Curator 3.10.0-SNAPSHOT [14/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ zookeeper-compatibility-tests-curator ---
+[INFO] digraph "org.apache.zookeeper:zookeeper-compatibility-tests-curator:jar:3.10.0-SNAPSHOT" { 
+[INFO] 	"org.apache.zookeeper:zookeeper-compatibility-tests-curator:jar:3.10.0-SNAPSHOT" -> "org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-compatibility-tests-curator:jar:3.10.0-SNAPSHOT" -> "org.apache.curator:curator-recipes:jar:5.0.0:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-compatibility-tests-curator:jar:3.10.0-SNAPSHOT" -> "org.apache.curator:curator-test:jar:5.0.0:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper-compatibility-tests-curator:jar:3.10.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.6.2:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "org.apache.zookeeper:zookeeper-jute:jar:3.10.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "org.apache.yetus:audience-annotations:jar:0.12.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "io.netty:netty-handler:jar:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.94.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "org.slf4j:slf4j-api:jar:1.7.30:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "ch.qos.logback:logback-core:jar:1.2.10:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "ch.qos.logback:logback-classic:jar:1.2.10:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.10.0-SNAPSHOT:compile" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-resolver:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-buffer:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.94.Final:compile" -> "io.netty:netty-codec:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.94.Final:compile" -> "io.netty:netty-transport-classes-epoll:jar:4.1.94.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-classes:jar:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:linux-x86_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:linux-aarch_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:osx-x86_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:osx-aarch_64:2.0.61.Final:compile" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:compile" -> "io.netty:netty-tcnative-boringssl-static:jar:windows-x86_64:2.0.61.Final:compile" ; 
+[INFO] 	"org.apache.curator:curator-recipes:jar:5.0.0:test" -> "org.apache.curator:curator-framework:jar:5.0.0:test" ; 
+[INFO] 	"org.apache.curator:curator-framework:jar:5.0.0:test" -> "org.apache.curator:curator-client:jar:5.0.0:test" ; 
+[INFO] 	"org.apache.curator:curator-test:jar:5.0.0:test" -> "io.dropwizard.metrics:metrics-core:jar:4.1.12.1:test" ; 
+[INFO] 	"org.apache.curator:curator-test:jar:5.0.0:test" -> "org.xerial.snappy:snappy-java:jar:1.1.10.5:test" ; 
+[INFO] 	"org.apache.curator:curator-test:jar:5.0.0:test" -> "com.google.guava:guava:jar:27.0.1-jre:test" ; 
+[INFO] 	"com.google.guava:guava:jar:27.0.1-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:27.0.1-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:27.0.1-jre:test" -> "com.google.code.findbugs:jsr305:jar:3.0.2:test" ; 
+[INFO] 	"com.google.guava:guava:jar:27.0.1-jre:test" -> "org.checkerframework:checker-qual:jar:2.5.2:test" ; 
+[INFO] 	"com.google.guava:guava:jar:27.0.1-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.2.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:27.0.1-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:1.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:27.0.1-jre:test" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.17:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.6.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.6.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.6.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.6.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.6.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.6.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.6.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.6.2:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Apache ZooKeeper 3.10.0-SNAPSHOT:
+[INFO] 
+[INFO] Apache ZooKeeper ................................... SUCCESS [  4.651 s]
+[INFO] Apache ZooKeeper - Documentation ................... SUCCESS [  0.101 s]
+[INFO] Apache ZooKeeper - Jute ............................ SUCCESS [  0.361 s]
+[INFO] Apache ZooKeeper - Server .......................... SUCCESS [  5.057 s]
+[INFO] Apache ZooKeeper - Metrics Providers ............... SUCCESS [  0.010 s]
+[INFO] Apache ZooKeeper - Prometheus.io Metrics Provider .. SUCCESS [  0.838 s]
+[INFO] Apache ZooKeeper - Client .......................... SUCCESS [  0.047 s]
+[INFO] Apache ZooKeeper - Recipes ......................... SUCCESS [  0.364 s]
+[INFO] Apache ZooKeeper - Recipes - Election .............. SUCCESS [  0.239 s]
+[INFO] Apache ZooKeeper - Recipes - Lock .................. SUCCESS [  0.102 s]
+[INFO] Apache ZooKeeper - Recipes - Queue ................. SUCCESS [  0.075 s]
+[INFO] Apache ZooKeeper - Assembly ........................ SUCCESS [  0.492 s]
+[INFO] Apache ZooKeeper - Compatibility Tests ............. SUCCESS [  0.009 s]
+[INFO] Apache ZooKeeper - Compatibility Tests - Curator ... SUCCESS [  0.093 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  17.804 s
+[INFO] Finished at: 2023-12-28T09:02:43+01:00
+[INFO] ------------------------------------------------------------------------

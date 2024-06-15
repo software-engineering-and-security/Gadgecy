@@ -1,0 +1,944 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] guacamole-client                                                   [pom]
+[INFO] guacamole-common                                                   [jar]
+[INFO] guacamole-ext                                                      [jar]
+[INFO] guacamole-common-js                                                [pom]
+[INFO] guacamole                                                          [war]
+[INFO] extensions                                                         [pom]
+[INFO] guacamole-auth-ban                                                 [jar]
+[INFO] guacamole-auth-duo                                                 [jar]
+[INFO] guacamole-auth-header                                              [jar]
+[INFO] guacamole-auth-jdbc                                                [pom]
+[INFO] guacamole-auth-jdbc-base                                           [jar]
+[INFO] guacamole-auth-jdbc-mysql                                          [jar]
+[INFO] guacamole-auth-jdbc-postgresql                                     [jar]
+[INFO] guacamole-auth-jdbc-sqlserver                                      [jar]
+[INFO] guacamole-auth-jdbc-dist                                           [pom]
+[INFO] guacamole-auth-json                                                [jar]
+[INFO] guacamole-auth-ldap                                                [jar]
+[INFO] guacamole-auth-quickconnect                                        [jar]
+[INFO] guacamole-auth-sso                                                 [pom]
+[INFO] guacamole-auth-sso-base                                            [jar]
+[INFO] guacamole-auth-sso-cas                                             [jar]
+[INFO] guacamole-auth-sso-openid                                          [jar]
+[INFO] guacamole-auth-sso-saml                                            [jar]
+[INFO] guacamole-auth-sso-ssl                                             [jar]
+[INFO] guacamole-auth-sso-dist                                            [pom]
+[INFO] guacamole-auth-totp                                                [jar]
+[INFO] guacamole-history-recording-storage                                [jar]
+[INFO] guacamole-vault                                                    [pom]
+[INFO] guacamole-vault-base                                               [jar]
+[INFO] guacamole-vault-ksm                                                [jar]
+[INFO] guacamole-vault-dist                                               [pom]
+[INFO] guacamole-display-statistics                                       [jar]
+[INFO] guacamole-example                                                  [war]
+[INFO] guacamole-playback-example                                         [war]
+[INFO] 
+[INFO] ---------------< org.apache.guacamole:guacamole-client >----------------
+[INFO] Building guacamole-client 1.5.4                                   [1/34]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ guacamole-client ---
+[INFO] digraph "org.apache.guacamole:guacamole-client:pom:1.5.4" { 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.apache.guacamole:guacamole-common >----------------
+[INFO] Building guacamole-common 1.5.4                                   [2/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ guacamole-common ---
+[INFO] digraph "org.apache.guacamole:guacamole-common:jar:1.5.4" { 
+[INFO] 	"org.apache.guacamole:guacamole-common:jar:1.5.4" -> "javax.servlet:servlet-api:jar:2.5:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-common:jar:1.5.4" -> "javax.websocket:javax.websocket-api:jar:1.0:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-common:jar:1.5.4" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-common:jar:1.5.4" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.apache.guacamole:guacamole-ext >-----------------
+[INFO] Building guacamole-ext 1.5.4                                      [3/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ guacamole-ext ---
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/guacamole/guacamole-common/1.5.4/guacamole-common-1.5.4.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/guacamole/guacamole-common/1.5.4/guacamole-common-1.5.4.jar (80 kB at 44 kB/s)
+[INFO] digraph "org.apache.guacamole:guacamole-ext:jar:1.5.4" { 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4" -> "javax.servlet:servlet-api:jar:2.5:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4" -> "org.apache.guacamole:guacamole-common:jar:1.5.4:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4" -> "com.google.guava:guava:jar:32.1.3-jre:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-common:jar:1.5.4:compile" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "org.checkerframework:checker-qual:jar:3.37.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.21.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< org.apache.guacamole:guacamole-common-js >--------------
+[INFO] Building guacamole-common-js 1.5.4                                [4/34]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ guacamole-common-js ---
+[INFO] digraph "org.apache.guacamole:guacamole-common-js:pom:1.5.4" { 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< org.apache.guacamole:guacamole >-------------------
+[INFO] Building guacamole 1.5.4                                          [5/34]
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ guacamole ---
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/guacamole/guacamole-ext/1.5.4/guacamole-ext-1.5.4.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/guacamole/guacamole-common-js/1.5.4/guacamole-common-js-1.5.4.zip
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/guacamole/guacamole-ext/1.5.4/guacamole-ext-1.5.4.jar (166 kB at 405 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/guacamole/guacamole-common-js/1.5.4/guacamole-common-js-1.5.4.zip (251 kB at 429 kB/s)
+[INFO] digraph "org.apache.guacamole:guacamole:war:1.5.4" { 
+[INFO] 	"org.apache.guacamole:guacamole:war:1.5.4" -> "javax.servlet:servlet-api:jar:2.5:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole:war:1.5.4" -> "javax.websocket:javax.websocket-api:jar:1.0:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole:war:1.5.4" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole:war:1.5.4" -> "org.slf4j:jul-to-slf4j:jar:2.0.9:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole:war:1.5.4" -> "ch.qos.logback:logback-classic:jar:1.3.14:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole:war:1.5.4" -> "org.apache.guacamole:guacamole-ext:jar:1.5.4:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole:war:1.5.4" -> "org.apache.guacamole:guacamole-common-js:zip:1.5.4:runtime" ; 
+[INFO] 	"org.apache.guacamole:guacamole:war:1.5.4" -> "org.eclipse.jetty:jetty-websocket:jar:8.1.1.v20120215:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole:war:1.5.4" -> "org.eclipse.jetty:jetty-parent:pom:20:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole:war:1.5.4" -> "org.eclipse.jetty.websocket:websocket-api:jar:9.0.7.v20131107:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole:war:1.5.4" -> "org.eclipse.jetty.websocket:websocket-servlet:jar:9.0.7.v20131107:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole:war:1.5.4" -> "org.apache.tomcat:tomcat-catalina:jar:7.0.37:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole:war:1.5.4" -> "org.apache.tomcat:tomcat-coyote:jar:7.0.37:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole:war:1.5.4" -> "com.google.inject:guice:jar:5.1.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole:war:1.5.4" -> "com.google.inject.extensions:guice-assistedinject:jar:5.1.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole:war:1.5.4" -> "com.google.inject.extensions:guice-servlet:jar:5.1.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole:war:1.5.4" -> "org.glassfish.jersey.containers:jersey-container-servlet-core:jar:2.41:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole:war:1.5.4" -> "org.glassfish.jersey.inject:jersey-hk2:jar:2.41:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole:war:1.5.4" -> "org.glassfish.hk2:guice-bridge:jar:2.6.1:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole:war:1.5.4" -> "org.glassfish.jersey.media:jersey-media-json-jackson:jar:2.41:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole:war:1.5.4" -> "javax.annotation:jsr250-api:jar:1.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole:war:1.5.4" -> "com.google.guava:guava:jar:32.1.3-jre:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole:war:1.5.4" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.3.14:compile" -> "ch.qos.logback:logback-core:jar:1.3.14:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:compile" -> "org.apache.guacamole:guacamole-common:jar:1.5.4:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-websocket:jar:8.1.1.v20120215:provided" -> "org.eclipse.jetty:jetty-util:jar:8.1.1.v20120215:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-websocket:jar:8.1.1.v20120215:provided" -> "org.eclipse.jetty:jetty-io:jar:8.1.1.v20120215:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-websocket:jar:8.1.1.v20120215:provided" -> "org.eclipse.jetty:jetty-http:jar:8.1.1.v20120215:provided" ; 
+[INFO] 	"org.apache.tomcat:tomcat-catalina:jar:7.0.37:provided" -> "org.apache.tomcat:tomcat-servlet-api:jar:7.0.37:provided" ; 
+[INFO] 	"org.apache.tomcat:tomcat-catalina:jar:7.0.37:provided" -> "org.apache.tomcat:tomcat-juli:jar:7.0.37:provided" ; 
+[INFO] 	"org.apache.tomcat:tomcat-catalina:jar:7.0.37:provided" -> "org.apache.tomcat:tomcat-annotations-api:jar:7.0.37:provided" ; 
+[INFO] 	"org.apache.tomcat:tomcat-catalina:jar:7.0.37:provided" -> "org.apache.tomcat:tomcat-api:jar:7.0.37:provided" ; 
+[INFO] 	"org.apache.tomcat:tomcat-catalina:jar:7.0.37:provided" -> "org.apache.tomcat:tomcat-util:jar:7.0.37:provided" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"org.glassfish.jersey.containers:jersey-container-servlet-core:jar:2.41:compile" -> "org.glassfish.hk2.external:jakarta.inject:jar:2.6.1:compile" ; 
+[INFO] 	"org.glassfish.jersey.containers:jersey-container-servlet-core:jar:2.41:compile" -> "org.glassfish.jersey.core:jersey-common:jar:2.41:compile" ; 
+[INFO] 	"org.glassfish.jersey.containers:jersey-container-servlet-core:jar:2.41:compile" -> "org.glassfish.jersey.core:jersey-server:jar:2.41:compile" ; 
+[INFO] 	"org.glassfish.jersey.containers:jersey-container-servlet-core:jar:2.41:compile" -> "jakarta.ws.rs:jakarta.ws.rs-api:jar:2.1.6:compile" ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-common:jar:2.41:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-common:jar:2.41:compile" -> "org.glassfish.hk2:osgi-resource-locator:jar:1.0.3:compile" ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-server:jar:2.41:compile" -> "org.glassfish.jersey.core:jersey-client:jar:2.41:compile" ; 
+[INFO] 	"org.glassfish.jersey.core:jersey-server:jar:2.41:compile" -> "jakarta.validation:jakarta.validation-api:jar:2.0.2:compile" ; 
+[INFO] 	"org.glassfish.jersey.inject:jersey-hk2:jar:2.41:compile" -> "org.glassfish.hk2:hk2-locator:jar:2.6.1:compile" ; 
+[INFO] 	"org.glassfish.jersey.inject:jersey-hk2:jar:2.41:compile" -> "org.javassist:javassist:jar:3.29.2-GA:compile" ; 
+[INFO] 	"org.glassfish.hk2:hk2-locator:jar:2.6.1:compile" -> "org.glassfish.hk2.external:aopalliance-repackaged:jar:2.6.1:compile" ; 
+[INFO] 	"org.glassfish.hk2:hk2-locator:jar:2.6.1:compile" -> "org.glassfish.hk2:hk2-utils:jar:2.6.1:compile" ; 
+[INFO] 	"org.glassfish.hk2:guice-bridge:jar:2.6.1:compile" -> "org.glassfish.hk2:hk2-api:jar:2.6.1:compile" ; 
+[INFO] 	"org.glassfish.jersey.media:jersey-media-json-jackson:jar:2.41:compile" -> "org.glassfish.jersey.ext:jersey-entity-filtering:jar:2.41:compile" ; 
+[INFO] 	"org.glassfish.jersey.media:jersey-media-json-jackson:jar:2.41:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:compile" ; 
+[INFO] 	"org.glassfish.jersey.media:jersey-media-json-jackson:jar:2.41:compile" -> "com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.16.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.16.0:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "org.checkerframework:checker-qual:jar:3.37.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.21.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< org.apache.guacamole:extensions >-------------------
+[INFO] Building extensions 1.5.4                                         [6/34]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ extensions ---
+[INFO] digraph "org.apache.guacamole:extensions:pom:1.5.4" { 
+[INFO] 	"org.apache.guacamole:extensions:pom:1.5.4" -> "org.slf4j:slf4j-api:jar:2.0.9:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< org.apache.guacamole:guacamole-auth-ban >---------------
+[INFO] Building guacamole-auth-ban 1.5.4                                 [7/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ guacamole-auth-ban ---
+[INFO] digraph "org.apache.guacamole:guacamole-auth-ban:jar:1.5.4" { 
+[INFO] 	"org.apache.guacamole:guacamole-auth-ban:jar:1.5.4" -> "javax.servlet:servlet-api:jar:2.5:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-ban:jar:1.5.4" -> "org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-ban:jar:1.5.4" -> "com.github.ben-manes.caffeine:caffeine:jar:2.9.3:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-ban:jar:1.5.4" -> "org.slf4j:slf4j-api:jar:2.0.9:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "org.apache.guacamole:guacamole-common:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "com.google.guava:guava:jar:32.1.3-jre:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:provided" -> "com.google.guava:failureaccess:jar:1.0.1:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:provided" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:provided" -> "com.google.j2objc:j2objc-annotations:jar:2.8:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:provided" ; 
+[INFO] 	"com.github.ben-manes.caffeine:caffeine:jar:2.9.3:compile" -> "org.checkerframework:checker-qual:jar:3.19.0:compile" ; 
+[INFO] 	"com.github.ben-manes.caffeine:caffeine:jar:2.9.3:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.10.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< org.apache.guacamole:guacamole-auth-duo >---------------
+[INFO] Building guacamole-auth-duo 1.5.4                                 [8/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ guacamole-auth-duo ---
+[INFO] digraph "org.apache.guacamole:guacamole-auth-duo:jar:1.5.4" { 
+[INFO] 	"org.apache.guacamole:guacamole-auth-duo:jar:1.5.4" -> "org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-duo:jar:1.5.4" -> "com.google.guava:guava:jar:32.1.3-jre:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-duo:jar:1.5.4" -> "com.google.inject:guice:jar:5.1.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-duo:jar:1.5.4" -> "javax.servlet:servlet-api:jar:2.5:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-duo:jar:1.5.4" -> "org.slf4j:slf4j-api:jar:2.0.9:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "org.apache.guacamole:guacamole-common:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "org.checkerframework:checker-qual:jar:3.37.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.21.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< org.apache.guacamole:guacamole-auth-header >-------------
+[INFO] Building guacamole-auth-header 1.5.4                              [9/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ guacamole-auth-header ---
+[INFO] digraph "org.apache.guacamole:guacamole-auth-header:jar:1.5.4" { 
+[INFO] 	"org.apache.guacamole:guacamole-auth-header:jar:1.5.4" -> "org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-header:jar:1.5.4" -> "com.google.inject:guice:jar:5.1.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-header:jar:1.5.4" -> "javax.servlet:servlet-api:jar:2.5:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-header:jar:1.5.4" -> "org.slf4j:slf4j-api:jar:2.0.9:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "org.apache.guacamole:guacamole-common:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "com.google.guava:guava:jar:32.1.3-jre:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "org.checkerframework:checker-qual:jar:3.37.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.21.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:provided" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< org.apache.guacamole:guacamole-auth-jdbc >--------------
+[INFO] Building guacamole-auth-jdbc 1.5.4                               [10/34]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ guacamole-auth-jdbc ---
+[INFO] digraph "org.apache.guacamole:guacamole-auth-jdbc:pom:1.5.4" { 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc:pom:1.5.4" -> "org.slf4j:slf4j-api:jar:2.0.9:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------< org.apache.guacamole:guacamole-auth-jdbc-base >------------
+[INFO] Building guacamole-auth-jdbc-base 1.5.4                          [11/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ guacamole-auth-jdbc-base ---
+[INFO] digraph "org.apache.guacamole:guacamole-auth-jdbc-base:jar:1.5.4" { 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-base:jar:1.5.4" -> "javax.servlet:servlet-api:jar:2.5:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-base:jar:1.5.4" -> "org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-base:jar:1.5.4" -> "org.mybatis:mybatis:jar:3.5.14:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-base:jar:1.5.4" -> "org.mybatis:mybatis-guice:jar:3.18:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-base:jar:1.5.4" -> "com.google.inject:guice:jar:5.1.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-base:jar:1.5.4" -> "com.google.guava:guava:jar:32.1.3-jre:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-base:jar:1.5.4" -> "org.slf4j:slf4j-api:jar:2.0.9:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "org.apache.guacamole:guacamole-common:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:provided" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "org.checkerframework:checker-qual:jar:3.37.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.21.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------< org.apache.guacamole:guacamole-auth-jdbc-mysql >-----------
+[INFO] Building guacamole-auth-jdbc-mysql 1.5.4                         [12/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ guacamole-auth-jdbc-mysql ---
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/guacamole/guacamole-auth-jdbc-base/1.5.4/guacamole-auth-jdbc-base-1.5.4.jar
+[INFO] digraph "org.apache.guacamole:guacamole-auth-jdbc-mysql:jar:1.5.4" { 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-mysql:jar:1.5.4" -> "org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-mysql:jar:1.5.4" -> "org.apache.guacamole:guacamole-auth-jdbc-base:jar:1.5.4:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-mysql:jar:1.5.4" -> "org.slf4j:slf4j-api:jar:2.0.9:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "org.apache.guacamole:guacamole-common:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "com.google.guava:guava:jar:32.1.3-jre:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "org.checkerframework:checker-qual:jar:3.37.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.21.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-base:jar:1.5.4:compile" -> "org.mybatis:mybatis:jar:3.5.14:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-base:jar:1.5.4:compile" -> "org.mybatis:mybatis-guice:jar:3.18:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-base:jar:1.5.4:compile" -> "com.google.inject:guice:jar:5.1.0:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------< org.apache.guacamole:guacamole-auth-jdbc-postgresql >---------
+[INFO] Building guacamole-auth-jdbc-postgresql 1.5.4                    [13/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ guacamole-auth-jdbc-postgresql ---
+[INFO] digraph "org.apache.guacamole:guacamole-auth-jdbc-postgresql:jar:1.5.4" { 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-postgresql:jar:1.5.4" -> "org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-postgresql:jar:1.5.4" -> "org.apache.guacamole:guacamole-auth-jdbc-base:jar:1.5.4:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-postgresql:jar:1.5.4" -> "org.slf4j:slf4j-api:jar:2.0.9:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "org.apache.guacamole:guacamole-common:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "com.google.guava:guava:jar:32.1.3-jre:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "org.checkerframework:checker-qual:jar:3.37.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.21.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-base:jar:1.5.4:compile" -> "org.mybatis:mybatis:jar:3.5.14:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-base:jar:1.5.4:compile" -> "org.mybatis:mybatis-guice:jar:3.18:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-base:jar:1.5.4:compile" -> "com.google.inject:guice:jar:5.1.0:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------< org.apache.guacamole:guacamole-auth-jdbc-sqlserver >---------
+[INFO] Building guacamole-auth-jdbc-sqlserver 1.5.4                     [14/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ guacamole-auth-jdbc-sqlserver ---
+[INFO] digraph "org.apache.guacamole:guacamole-auth-jdbc-sqlserver:jar:1.5.4" { 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-sqlserver:jar:1.5.4" -> "org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-sqlserver:jar:1.5.4" -> "org.apache.guacamole:guacamole-auth-jdbc-base:jar:1.5.4:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-sqlserver:jar:1.5.4" -> "org.slf4j:slf4j-api:jar:2.0.9:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "org.apache.guacamole:guacamole-common:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "com.google.guava:guava:jar:32.1.3-jre:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "org.checkerframework:checker-qual:jar:3.37.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.21.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-base:jar:1.5.4:compile" -> "org.mybatis:mybatis:jar:3.5.14:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-base:jar:1.5.4:compile" -> "org.mybatis:mybatis-guice:jar:3.18:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-base:jar:1.5.4:compile" -> "com.google.inject:guice:jar:5.1.0:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------< org.apache.guacamole:guacamole-auth-jdbc-dist >------------
+[INFO] Building guacamole-auth-jdbc-dist 1.5.4                          [15/34]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ guacamole-auth-jdbc-dist ---
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/guacamole/guacamole-auth-jdbc-mysql/1.5.4/guacamole-auth-jdbc-mysql-1.5.4.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/guacamole/guacamole-auth-jdbc-postgresql/1.5.4/guacamole-auth-jdbc-postgresql-1.5.4.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/guacamole/guacamole-auth-jdbc-sqlserver/1.5.4/guacamole-auth-jdbc-sqlserver-1.5.4.jar
+[INFO] digraph "org.apache.guacamole:guacamole-auth-jdbc-dist:pom:1.5.4" { 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-dist:pom:1.5.4" -> "org.apache.guacamole:guacamole-auth-jdbc-mysql:jar:1.5.4:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-dist:pom:1.5.4" -> "org.apache.guacamole:guacamole-auth-jdbc-postgresql:jar:1.5.4:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-dist:pom:1.5.4" -> "org.apache.guacamole:guacamole-auth-jdbc-sqlserver:jar:1.5.4:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-dist:pom:1.5.4" -> "org.slf4j:slf4j-api:jar:2.0.9:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-mysql:jar:1.5.4:compile" -> "org.apache.guacamole:guacamole-auth-jdbc-base:jar:1.5.4:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-base:jar:1.5.4:compile" -> "org.mybatis:mybatis:jar:3.5.14:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-base:jar:1.5.4:compile" -> "org.mybatis:mybatis-guice:jar:3.18:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-base:jar:1.5.4:compile" -> "com.google.inject:guice:jar:5.1.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-jdbc-base:jar:1.5.4:compile" -> "com.google.guava:guava:jar:32.1.3-jre:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "org.checkerframework:checker-qual:jar:3.37.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.21.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< org.apache.guacamole:guacamole-auth-json >--------------
+[INFO] Building guacamole-auth-json 1.5.4                               [16/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ guacamole-auth-json ---
+[INFO] digraph "org.apache.guacamole:guacamole-auth-json:jar:1.5.4" { 
+[INFO] 	"org.apache.guacamole:guacamole-auth-json:jar:1.5.4" -> "org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-json:jar:1.5.4" -> "com.google.inject:guice:jar:5.1.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-json:jar:1.5.4" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-json:jar:1.5.4" -> "com.google.guava:guava:jar:32.1.3-jre:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-json:jar:1.5.4" -> "javax.servlet:servlet-api:jar:2.5:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-json:jar:1.5.4" -> "com.github.seancfoley:ipaddress:jar:5.4.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-json:jar:1.5.4" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-json:jar:1.5.4" -> "org.slf4j:slf4j-api:jar:2.0.9:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "org.apache.guacamole:guacamole-common:jar:1.5.4:provided" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "org.checkerframework:checker-qual:jar:3.37.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.21.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< org.apache.guacamole:guacamole-auth-ldap >--------------
+[INFO] Building guacamole-auth-ldap 1.5.4                               [17/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ guacamole-auth-ldap ---
+[INFO] digraph "org.apache.guacamole:guacamole-auth-ldap:jar:1.5.4" { 
+[INFO] 	"org.apache.guacamole:guacamole-auth-ldap:jar:1.5.4" -> "org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-ldap:jar:1.5.4" -> "org.apache.directory.api:api-all:jar:2.1.5:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-ldap:jar:1.5.4" -> "com.google.inject:guice:jar:5.1.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-ldap:jar:1.5.4" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-ldap:jar:1.5.4" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-ldap:jar:1.5.4" -> "org.apache.commons:commons-lang3:jar:3.14.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-ldap:jar:1.5.4" -> "org.slf4j:slf4j-api:jar:2.0.9:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "org.apache.guacamole:guacamole-common:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "com.google.guava:guava:jar:32.1.3-jre:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "org.checkerframework:checker-qual:jar:3.37.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.21.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"org.apache.directory.api:api-all:jar:2.1.5:compile" -> "org.apache.servicemix.bundles:org.apache.servicemix.bundles.xpp3:jar:1.1.4c_7:compile" ; 
+[INFO] 	"org.apache.directory.api:api-all:jar:2.1.5:compile" -> "org.apache.servicemix.bundles:org.apache.servicemix.bundles.dom4j:jar:2.1.4_1:compile" ; 
+[INFO] 	"org.apache.directory.api:api-all:jar:2.1.5:compile" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"org.apache.directory.api:api-all:jar:2.1.5:compile" -> "org.apache.commons:commons-pool2:jar:2.12.0:compile" ; 
+[INFO] 	"org.apache.directory.api:api-all:jar:2.1.5:compile" -> "org.apache.mina:mina-core:jar:2.2.3:compile" ; 
+[INFO] 	"org.apache.directory.api:api-all:jar:2.1.5:compile" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"org.apache.directory.api:api-all:jar:2.1.5:compile" -> "org.apache.servicemix.bundles:org.apache.servicemix.bundles.antlr:jar:2.7.7_5:compile" ; 
+[INFO] 	"org.apache.directory.api:api-all:jar:2.1.5:compile" -> "commons-codec:commons-codec:jar:1.16.0:compile" ; 
+[INFO] 	"org.apache.directory.api:api-all:jar:2.1.5:compile" -> "com.github.ben-manes.caffeine:caffeine:jar:2.9.3:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.16.0:compile" -> "org.yaml:snakeyaml:jar:2.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------< org.apache.guacamole:guacamole-auth-quickconnect >----------
+[INFO] Building guacamole-auth-quickconnect 1.5.4                       [18/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ guacamole-auth-quickconnect ---
+[INFO] digraph "org.apache.guacamole:guacamole-auth-quickconnect:jar:1.5.4" { 
+[INFO] 	"org.apache.guacamole:guacamole-auth-quickconnect:jar:1.5.4" -> "org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-quickconnect:jar:1.5.4" -> "com.google.inject:guice:jar:5.1.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-quickconnect:jar:1.5.4" -> "javax.ws.rs:jsr311-api:jar:1.1.1:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-quickconnect:jar:1.5.4" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-quickconnect:jar:1.5.4" -> "org.slf4j:slf4j-api:jar:2.0.9:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "org.apache.guacamole:guacamole-common:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "com.google.guava:guava:jar:32.1.3-jre:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "org.checkerframework:checker-qual:jar:3.37.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.21.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:provided" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< org.apache.guacamole:guacamole-auth-sso >---------------
+[INFO] Building guacamole-auth-sso 1.5.4                                [19/34]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ guacamole-auth-sso ---
+[INFO] digraph "org.apache.guacamole:guacamole-auth-sso:pom:1.5.4" { 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso:pom:1.5.4" -> "org.slf4j:slf4j-api:jar:2.0.9:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< org.apache.guacamole:guacamole-auth-sso-base >------------
+[INFO] Building guacamole-auth-sso-base 1.5.4                           [20/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ guacamole-auth-sso-base ---
+[INFO] digraph "org.apache.guacamole:guacamole-auth-sso-base:jar:1.5.4" { 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-base:jar:1.5.4" -> "org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-base:jar:1.5.4" -> "com.google.inject:guice:jar:5.1.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-base:jar:1.5.4" -> "javax.ws.rs:jsr311-api:jar:1.1.1:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-base:jar:1.5.4" -> "org.slf4j:slf4j-api:jar:2.0.9:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "org.apache.guacamole:guacamole-common:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "com.google.guava:guava:jar:32.1.3-jre:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "org.checkerframework:checker-qual:jar:3.37.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.21.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:provided" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< org.apache.guacamole:guacamole-auth-sso-cas >-------------
+[INFO] Building guacamole-auth-sso-cas 1.5.4                            [21/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ guacamole-auth-sso-cas ---
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/guacamole/guacamole-auth-sso-base/1.5.4/guacamole-auth-sso-base-1.5.4.jar
+[INFO] digraph "org.apache.guacamole:guacamole-auth-sso-cas:jar:1.5.4" { 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-cas:jar:1.5.4" -> "org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-cas:jar:1.5.4" -> "org.apache.guacamole:guacamole-auth-sso-base:jar:1.5.4:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-cas:jar:1.5.4" -> "org.jasig.cas.client:cas-client-core:jar:3.6.4:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-cas:jar:1.5.4" -> "com.google.guava:guava:jar:32.1.3-jre:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-cas:jar:1.5.4" -> "com.google.inject:guice:jar:5.1.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-cas:jar:1.5.4" -> "javax.servlet:servlet-api:jar:2.5:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-cas:jar:1.5.4" -> "javax.ws.rs:jsr311-api:jar:1.1.1:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-cas:jar:1.5.4" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-cas:jar:1.5.4" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-cas:jar:1.5.4" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-cas:jar:1.5.4" -> "javax.xml.bind:jaxb-api:jar:2.3.1:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-cas:jar:1.5.4" -> "commons-codec:commons-codec:jar:1.16.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-cas:jar:1.5.4" -> "org.slf4j:slf4j-api:jar:2.0.9:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "org.apache.guacamole:guacamole-common:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:compile" ; 
+[INFO] 	"org.jasig.cas.client:cas-client-core:jar:3.6.4:compile" -> "org.bouncycastle:bcpkix-jdk15on:jar:1.70:compile" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk15on:jar:1.70:compile" -> "org.bouncycastle:bcprov-jdk15on:jar:1.70:compile" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk15on:jar:1.70:compile" -> "org.bouncycastle:bcutil-jdk15on:jar:1.70:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "org.checkerframework:checker-qual:jar:3.37.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.21.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"javax.xml.bind:jaxb-api:jar:2.3.1:compile" -> "javax.activation:javax.activation-api:jar:1.2.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------< org.apache.guacamole:guacamole-auth-sso-openid >-----------
+[INFO] Building guacamole-auth-sso-openid 1.5.4                         [22/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ guacamole-auth-sso-openid ---
+[INFO] digraph "org.apache.guacamole:guacamole-auth-sso-openid:jar:1.5.4" { 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-openid:jar:1.5.4" -> "org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-openid:jar:1.5.4" -> "org.apache.guacamole:guacamole-auth-sso-base:jar:1.5.4:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-openid:jar:1.5.4" -> "org.bitbucket.b_c:jose4j:jar:0.9.3:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-openid:jar:1.5.4" -> "com.google.inject:guice:jar:5.1.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-openid:jar:1.5.4" -> "javax.servlet:servlet-api:jar:2.5:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-openid:jar:1.5.4" -> "javax.ws.rs:jsr311-api:jar:1.1.1:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-openid:jar:1.5.4" -> "org.slf4j:slf4j-api:jar:2.0.9:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "org.apache.guacamole:guacamole-common:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "com.google.guava:guava:jar:32.1.3-jre:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "org.checkerframework:checker-qual:jar:3.37.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.21.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:provided" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< org.apache.guacamole:guacamole-auth-sso-saml >------------
+[INFO] Building guacamole-auth-sso-saml 1.5.4                           [23/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ guacamole-auth-sso-saml ---
+[INFO] digraph "org.apache.guacamole:guacamole-auth-sso-saml:jar:1.5.4" { 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-saml:jar:1.5.4" -> "org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-saml:jar:1.5.4" -> "org.apache.guacamole:guacamole-auth-sso-base:jar:1.5.4:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-saml:jar:1.5.4" -> "com.google.inject:guice:jar:5.1.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-saml:jar:1.5.4" -> "javax.servlet:servlet-api:jar:2.5:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-saml:jar:1.5.4" -> "javax.ws.rs:jsr311-api:jar:1.1.1:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-saml:jar:1.5.4" -> "com.onelogin:java-saml:jar:2.9.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-saml:jar:1.5.4" -> "com.fasterxml.woodstox:woodstox-core:jar:5.4.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-saml:jar:1.5.4" -> "org.apache.santuario:xmlsec:jar:2.2.6:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-saml:jar:1.5.4" -> "org.apache.commons:commons-lang3:jar:3.14.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-saml:jar:1.5.4" -> "commons-codec:commons-codec:jar:1.16.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-saml:jar:1.5.4" -> "org.slf4j:slf4j-api:jar:2.0.9:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "org.apache.guacamole:guacamole-common:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "com.google.guava:guava:jar:32.1.3-jre:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "org.checkerframework:checker-qual:jar:3.37.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.21.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:provided" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"com.onelogin:java-saml:jar:2.9.0:compile" -> "com.onelogin:java-saml-core:jar:2.9.0:compile" ; 
+[INFO] 	"com.onelogin:java-saml:jar:2.9.0:compile" -> "joda-time:joda-time:jar:2.10.6:compile" ; 
+[INFO] 	"com.fasterxml.woodstox:woodstox-core:jar:5.4.0:compile" -> "org.codehaus.woodstox:stax2-api:jar:4.2:compile" ; 
+[INFO] 	"org.apache.santuario:xmlsec:jar:2.2.6:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.2:compile" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.2:compile" -> "jakarta.activation:jakarta.activation-api:jar:1.2.1:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< org.apache.guacamole:guacamole-auth-sso-ssl >-------------
+[INFO] Building guacamole-auth-sso-ssl 1.5.4                            [24/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ guacamole-auth-sso-ssl ---
+[INFO] digraph "org.apache.guacamole:guacamole-auth-sso-ssl:jar:1.5.4" { 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-ssl:jar:1.5.4" -> "org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-ssl:jar:1.5.4" -> "org.apache.guacamole:guacamole-auth-sso-base:jar:1.5.4:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-ssl:jar:1.5.4" -> "com.google.inject:guice:jar:5.1.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-ssl:jar:1.5.4" -> "javax.servlet:servlet-api:jar:2.5:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-ssl:jar:1.5.4" -> "javax.ws.rs:jsr311-api:jar:1.1.1:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-ssl:jar:1.5.4" -> "org.bouncycastle:bcpkix-fips:jar:1.0.7:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-ssl:jar:1.5.4" -> "org.bouncycastle:bc-fips:jar:1.0.2.4:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-ssl:jar:1.5.4" -> "org.slf4j:slf4j-api:jar:2.0.9:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "org.apache.guacamole:guacamole-common:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "com.google.guava:guava:jar:32.1.3-jre:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "org.checkerframework:checker-qual:jar:3.37.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.21.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:provided" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< org.apache.guacamole:guacamole-auth-sso-dist >------------
+[INFO] Building guacamole-auth-sso-dist 1.5.4                           [25/34]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ guacamole-auth-sso-dist ---
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/guacamole/guacamole-auth-sso-cas/1.5.4/guacamole-auth-sso-cas-1.5.4.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/guacamole/guacamole-auth-sso-openid/1.5.4/guacamole-auth-sso-openid-1.5.4.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/guacamole/guacamole-auth-sso-saml/1.5.4/guacamole-auth-sso-saml-1.5.4.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/guacamole/guacamole-auth-sso-ssl/1.5.4/guacamole-auth-sso-ssl-1.5.4.jar
+[INFO] digraph "org.apache.guacamole:guacamole-auth-sso-dist:pom:1.5.4" { 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-dist:pom:1.5.4" -> "org.apache.guacamole:guacamole-auth-sso-cas:jar:1.5.4:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-dist:pom:1.5.4" -> "org.apache.guacamole:guacamole-auth-sso-openid:jar:1.5.4:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-dist:pom:1.5.4" -> "org.apache.guacamole:guacamole-auth-sso-saml:jar:1.5.4:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-dist:pom:1.5.4" -> "org.apache.guacamole:guacamole-auth-sso-ssl:jar:1.5.4:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-dist:pom:1.5.4" -> "org.slf4j:slf4j-api:jar:2.0.9:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-cas:jar:1.5.4:compile" -> "org.apache.guacamole:guacamole-auth-sso-base:jar:1.5.4:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-cas:jar:1.5.4:compile" -> "org.jasig.cas.client:cas-client-core:jar:3.6.4:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-cas:jar:1.5.4:compile" -> "com.google.guava:guava:jar:32.1.3-jre:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-cas:jar:1.5.4:compile" -> "com.google.inject:guice:jar:5.1.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-cas:jar:1.5.4:compile" -> "javax.xml.bind:jaxb-api:jar:2.3.1:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-cas:jar:1.5.4:compile" -> "commons-codec:commons-codec:jar:1.16.0:compile" ; 
+[INFO] 	"org.jasig.cas.client:cas-client-core:jar:3.6.4:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" ; 
+[INFO] 	"org.jasig.cas.client:cas-client-core:jar:3.6.4:compile" -> "org.bouncycastle:bcpkix-jdk15on:jar:1.70:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:compile" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk15on:jar:1.70:compile" -> "org.bouncycastle:bcprov-jdk15on:jar:1.70:compile" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk15on:jar:1.70:compile" -> "org.bouncycastle:bcutil-jdk15on:jar:1.70:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "org.checkerframework:checker-qual:jar:3.37.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.21.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"javax.xml.bind:jaxb-api:jar:2.3.1:compile" -> "javax.activation:javax.activation-api:jar:1.2.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-openid:jar:1.5.4:compile" -> "org.bitbucket.b_c:jose4j:jar:0.9.3:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-saml:jar:1.5.4:compile" -> "com.onelogin:java-saml:jar:2.9.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-saml:jar:1.5.4:compile" -> "com.fasterxml.woodstox:woodstox-core:jar:5.4.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-saml:jar:1.5.4:compile" -> "org.apache.santuario:xmlsec:jar:2.2.6:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-saml:jar:1.5.4:compile" -> "org.apache.commons:commons-lang3:jar:3.14.0:compile" ; 
+[INFO] 	"com.onelogin:java-saml:jar:2.9.0:compile" -> "com.onelogin:java-saml-core:jar:2.9.0:compile" ; 
+[INFO] 	"com.onelogin:java-saml:jar:2.9.0:compile" -> "joda-time:joda-time:jar:2.10.6:compile" ; 
+[INFO] 	"com.fasterxml.woodstox:woodstox-core:jar:5.4.0:compile" -> "org.codehaus.woodstox:stax2-api:jar:4.2:compile" ; 
+[INFO] 	"org.apache.santuario:xmlsec:jar:2.2.6:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.2:compile" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.2:compile" -> "jakarta.activation:jakarta.activation-api:jar:1.2.1:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-ssl:jar:1.5.4:compile" -> "org.bouncycastle:bcpkix-fips:jar:1.0.7:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-sso-ssl:jar:1.5.4:compile" -> "org.bouncycastle:bc-fips:jar:1.0.2.4:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< org.apache.guacamole:guacamole-auth-totp >--------------
+[INFO] Building guacamole-auth-totp 1.5.4                               [26/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ guacamole-auth-totp ---
+[INFO] digraph "org.apache.guacamole:guacamole-auth-totp:jar:1.5.4" { 
+[INFO] 	"org.apache.guacamole:guacamole-auth-totp:jar:1.5.4" -> "org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-totp:jar:1.5.4" -> "com.google.guava:guava:jar:32.1.3-jre:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-totp:jar:1.5.4" -> "com.google.inject:guice:jar:5.1.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-totp:jar:1.5.4" -> "javax.servlet:servlet-api:jar:2.5:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-totp:jar:1.5.4" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-totp:jar:1.5.4" -> "com.google.zxing:javase:jar:3.5.2:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-totp:jar:1.5.4" -> "com.google.zxing:core:jar:3.5.2:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-totp:jar:1.5.4" -> "javax.ws.rs:javax.ws.rs-api:jar:2.0:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-auth-totp:jar:1.5.4" -> "org.slf4j:slf4j-api:jar:2.0.9:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "org.apache.guacamole:guacamole-common:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "org.checkerframework:checker-qual:jar:3.37.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.21.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"com.google.zxing:javase:jar:3.5.2:compile" -> "com.beust:jcommander:jar:1.82:compile" ; 
+[INFO] 	"com.google.zxing:javase:jar:3.5.2:compile" -> "com.github.jai-imageio:jai-imageio-core:jar:1.4.0:runtime" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------< org.apache.guacamole:guacamole-history-recording-storage >------
+[INFO] Building guacamole-history-recording-storage 1.5.4               [27/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ guacamole-history-recording-storage ---
+[INFO] digraph "org.apache.guacamole:guacamole-history-recording-storage:jar:1.5.4" { 
+[INFO] 	"org.apache.guacamole:guacamole-history-recording-storage:jar:1.5.4" -> "org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-history-recording-storage:jar:1.5.4" -> "org.slf4j:slf4j-api:jar:2.0.9:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "org.apache.guacamole:guacamole-common:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "com.google.guava:guava:jar:32.1.3-jre:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:provided" -> "com.google.guava:failureaccess:jar:1.0.1:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:provided" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:provided" -> "org.checkerframework:checker-qual:jar:3.37.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:provided" -> "com.google.errorprone:error_prone_annotations:jar:2.21.1:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:provided" -> "com.google.j2objc:j2objc-annotations:jar:2.8:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< org.apache.guacamole:guacamole-vault >----------------
+[INFO] Building guacamole-vault 1.5.4                                   [28/34]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ guacamole-vault ---
+[INFO] digraph "org.apache.guacamole:guacamole-vault:pom:1.5.4" { 
+[INFO] 	"org.apache.guacamole:guacamole-vault:pom:1.5.4" -> "org.slf4j:slf4j-api:jar:2.0.9:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< org.apache.guacamole:guacamole-vault-base >--------------
+[INFO] Building guacamole-vault-base 1.5.4                              [29/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ guacamole-vault-base ---
+[INFO] digraph "org.apache.guacamole:guacamole-vault-base:jar:1.5.4" { 
+[INFO] 	"org.apache.guacamole:guacamole-vault-base:jar:1.5.4" -> "org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-vault-base:jar:1.5.4" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-vault-base:jar:1.5.4" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-vault-base:jar:1.5.4" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.apache.guacamole:guacamole-vault-base:jar:1.5.4" -> "com.google.inject:guice:jar:5.1.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-vault-base:jar:1.5.4" -> "com.google.inject.extensions:guice-assistedinject:jar:5.1.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-vault-base:jar:1.5.4" -> "org.slf4j:slf4j-api:jar:2.0.9:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "org.apache.guacamole:guacamole-common:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "com.google.guava:guava:jar:32.1.3-jre:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "org.checkerframework:checker-qual:jar:3.37.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.21.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.16.0:compile" -> "org.yaml:snakeyaml:jar:2.2:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< org.apache.guacamole:guacamole-vault-ksm >--------------
+[INFO] Building guacamole-vault-ksm 1.5.4                               [30/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ guacamole-vault-ksm ---
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/guacamole/guacamole-vault-base/1.5.4/guacamole-vault-base-1.5.4.jar
+[INFO] digraph "org.apache.guacamole:guacamole-vault-ksm:jar:1.5.4" { 
+[INFO] 	"org.apache.guacamole:guacamole-vault-ksm:jar:1.5.4" -> "org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-vault-ksm:jar:1.5.4" -> "org.apache.guacamole:guacamole-vault-base:jar:1.5.4:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-vault-ksm:jar:1.5.4" -> "com.keepersecurity.secrets-manager:core:jar:16.6.2:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-vault-ksm:jar:1.5.4" -> "org.jetbrains.kotlin:kotlin-reflect:jar:1.9.21:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-vault-ksm:jar:1.5.4" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.9.21:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-vault-ksm:jar:1.5.4" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.9.21:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-vault-ksm:jar:1.5.4" -> "org.bouncycastle:bc-fips:jar:1.0.2.4:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-vault-ksm:jar:1.5.4" -> "org.slf4j:slf4j-api:jar:2.0.9:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "org.apache.guacamole:guacamole-common:jar:1.5.4:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "com.google.guava:guava:jar:32.1.3-jre:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-ext:jar:1.5.4:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "org.checkerframework:checker-qual:jar:3.37.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.21.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-vault-base:jar:1.5.4:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-vault-base:jar:1.5.4:compile" -> "com.google.inject:guice:jar:5.1.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-vault-base:jar:1.5.4:compile" -> "com.google.inject.extensions:guice-assistedinject:jar:5.1.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.16.0:compile" -> "org.yaml:snakeyaml:jar:2.2:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"com.keepersecurity.secrets-manager:core:jar:16.6.2:compile" -> "org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:jar:1.3.3:runtime" ; 
+[INFO] 	"org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:jar:1.3.3:runtime" -> "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:1.3.3:runtime" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.9.21:compile" -> "org.jetbrains:annotations:jar:13.0:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.9.21:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.9.21:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< org.apache.guacamole:guacamole-vault-dist >--------------
+[INFO] Building guacamole-vault-dist 1.5.4                              [31/34]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ guacamole-vault-dist ---
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/guacamole/guacamole-vault-ksm/1.5.4/guacamole-vault-ksm-1.5.4.jar
+[INFO] digraph "org.apache.guacamole:guacamole-vault-dist:pom:1.5.4" { 
+[INFO] 	"org.apache.guacamole:guacamole-vault-dist:pom:1.5.4" -> "org.apache.guacamole:guacamole-vault-ksm:jar:1.5.4:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-vault-dist:pom:1.5.4" -> "org.slf4j:slf4j-api:jar:2.0.9:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-vault-ksm:jar:1.5.4:compile" -> "org.apache.guacamole:guacamole-vault-base:jar:1.5.4:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-vault-ksm:jar:1.5.4:compile" -> "com.keepersecurity.secrets-manager:core:jar:16.6.2:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-vault-ksm:jar:1.5.4:compile" -> "org.jetbrains.kotlin:kotlin-reflect:jar:1.9.21:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-vault-ksm:jar:1.5.4:compile" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.9.21:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-vault-ksm:jar:1.5.4:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.9.21:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-vault-ksm:jar:1.5.4:compile" -> "org.bouncycastle:bc-fips:jar:1.0.2.4:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-vault-base:jar:1.5.4:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-vault-base:jar:1.5.4:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.16.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-vault-base:jar:1.5.4:compile" -> "com.google.inject:guice:jar:5.1.0:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-vault-base:jar:1.5.4:compile" -> "com.google.inject.extensions:guice-assistedinject:jar:5.1.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.16.0:compile" -> "org.yaml:snakeyaml:jar:2.2:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "com.google.guava:guava:jar:32.1.3-jre:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "org.checkerframework:checker-qual:jar:3.37.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.21.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"com.keepersecurity.secrets-manager:core:jar:16.6.2:compile" -> "org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:jar:1.3.3:runtime" ; 
+[INFO] 	"org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:jar:1.3.3:runtime" -> "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:1.3.3:runtime" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.9.21:compile" -> "org.jetbrains:annotations:jar:13.0:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.9.21:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.9.21:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------< org.apache.guacamole:guacamole-display-statistics >----------
+[INFO] Building guacamole-display-statistics 1.5.4                      [32/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ guacamole-display-statistics ---
+[INFO] digraph "org.apache.guacamole:guacamole-display-statistics:jar:1.5.4" { 
+[INFO] 	"org.apache.guacamole:guacamole-display-statistics:jar:1.5.4" -> "org.slf4j:slf4j-api:jar:2.0.9:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.apache.guacamole:guacamole-example >---------------
+[INFO] Building guacamole-example 1.5.4                                 [33/34]
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ guacamole-example ---
+[INFO] digraph "org.apache.guacamole:guacamole-example:war:1.5.4" { 
+[INFO] 	"org.apache.guacamole:guacamole-example:war:1.5.4" -> "javax.servlet:servlet-api:jar:2.5:provided" ; 
+[INFO] 	"org.apache.guacamole:guacamole-example:war:1.5.4" -> "org.apache.guacamole:guacamole-common:jar:1.5.4:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-example:war:1.5.4" -> "org.apache.guacamole:guacamole-common-js:zip:1.5.4:runtime" ; 
+[INFO] 	"org.apache.guacamole:guacamole-example:war:1.5.4" -> "org.slf4j:slf4j-simple:jar:2.0.7:compile" ; 
+[INFO] 	"org.apache.guacamole:guacamole-common:jar:1.5.4:compile" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------< org.apache.guacamole:guacamole-playback-example >-----------
+[INFO] Building guacamole-playback-example 1.5.4                        [34/34]
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ guacamole-playback-example ---
+[INFO] digraph "org.apache.guacamole:guacamole-playback-example:war:1.5.4" { 
+[INFO] 	"org.apache.guacamole:guacamole-playback-example:war:1.5.4" -> "org.apache.guacamole:guacamole-common-js:zip:1.5.4:runtime" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for guacamole-client 1.5.4:
+[INFO] 
+[INFO] guacamole-client ................................... SUCCESS [  5.386 s]
+[INFO] guacamole-common ................................... SUCCESS [  0.242 s]
+[INFO] guacamole-ext ...................................... SUCCESS [  3.433 s]
+[INFO] guacamole-common-js ................................ SUCCESS [  0.006 s]
+[INFO] guacamole .......................................... SUCCESS [  1.788 s]
+[INFO] extensions ......................................... SUCCESS [  0.032 s]
+[INFO] guacamole-auth-ban ................................. SUCCESS [  0.186 s]
+[INFO] guacamole-auth-duo ................................. SUCCESS [  0.207 s]
+[INFO] guacamole-auth-header .............................. SUCCESS [  0.141 s]
+[INFO] guacamole-auth-jdbc ................................ SUCCESS [  0.168 s]
+[INFO] guacamole-auth-jdbc-base ........................... SUCCESS [  0.212 s]
+[INFO] guacamole-auth-jdbc-mysql .......................... SUCCESS [  0.314 s]
+[INFO] guacamole-auth-jdbc-postgresql ..................... SUCCESS [  0.128 s]
+[INFO] guacamole-auth-jdbc-sqlserver ...................... SUCCESS [  0.158 s]
+[INFO] guacamole-auth-jdbc-dist ........................... SUCCESS [  0.395 s]
+[INFO] guacamole-auth-json ................................ SUCCESS [  0.106 s]
+[INFO] guacamole-auth-ldap ................................ SUCCESS [  0.710 s]
+[INFO] guacamole-auth-quickconnect ........................ SUCCESS [  0.099 s]
+[INFO] guacamole-auth-sso ................................. SUCCESS [  0.012 s]
+[INFO] guacamole-auth-sso-base ............................ SUCCESS [  0.069 s]
+[INFO] guacamole-auth-sso-cas ............................. SUCCESS [  0.458 s]
+[INFO] guacamole-auth-sso-openid .......................... SUCCESS [  0.210 s]
+[INFO] guacamole-auth-sso-saml ............................ SUCCESS [  0.300 s]
+[INFO] guacamole-auth-sso-ssl ............................. SUCCESS [  0.068 s]
+[INFO] guacamole-auth-sso-dist ............................ SUCCESS [  0.342 s]
+[INFO] guacamole-auth-totp ................................ SUCCESS [  0.084 s]
+[INFO] guacamole-history-recording-storage ................ SUCCESS [  0.025 s]
+[INFO] guacamole-vault .................................... SUCCESS [  0.023 s]
+[INFO] guacamole-vault-base ............................... SUCCESS [  0.089 s]
+[INFO] guacamole-vault-ksm ................................ SUCCESS [  0.337 s]
+[INFO] guacamole-vault-dist ............................... SUCCESS [  0.359 s]
+[INFO] guacamole-display-statistics ....................... SUCCESS [  0.067 s]
+[INFO] guacamole-example .................................. SUCCESS [  2.522 s]
+[INFO] guacamole-playback-example ......................... SUCCESS [  0.068 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  20.876 s
+[INFO] Finished at: 2023-12-28T09:02:34+01:00
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,288 @@
+[INFO] Scanning for projects...
+[WARNING] The project org.apache.mina:mina-parent:pom:3.0.0-M3-SNAPSHOT uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Apache MINA 3.0.0-M3-SNAPSHOT                                      [pom]
+[INFO] Apache MINA Codec 3.0.0-M3-SNAPSHOT                                [jar]
+[INFO] Apache MINA Core 3.0.0-M3-SNAPSHOT                                 [jar]
+[INFO] Apache MINA HTTP 3.0.0-M3-SNAPSHOT                                 [jar]
+[INFO] Apache MINA HTTP2 3.0.0-M3-SNAPSHOT                                [jar]
+[INFO] Apache MINA CoAP (constrained application protocol) 3.0.0-M3-SNAPSHOT [jar]
+[INFO] Apache MINA examples 3.0.0-M3-SNAPSHOT                             [jar]
+[INFO] Apache MINA Serialization::Thrift 3.0.0-M3-SNAPSHOT                [jar]
+[INFO] Apache MINA Serialization::Protobuf 3.0.0-M3-SNAPSHOT              [jar]
+[INFO] Apache MINA Serialization::Avro 3.0.0-M3-SNAPSHOT                  [jar]
+[INFO] Apache MINA Monitoring::Monitoring 3.0.0-M3-SNAPSHOT               [jar]
+[INFO] Apache MINA Benchmarks tests                                       [pom]
+[INFO] Apache MINA Benchmarks against JDK and MINA tests                  [jar]
+[INFO] Apache MINA Benchmarks against Netty3 tests                        [jar]
+[INFO] Apache MINA Benchmarks against Netty4 tests                        [jar]
+[INFO] 
+[INFO] --------------------< org.apache.mina:mina-parent >---------------------
+[INFO] Building Apache MINA 3.0.0-M3-SNAPSHOT 3.0.0-M3-SNAPSHOT          [1/15]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ mina-parent ---
+[INFO] digraph "org.apache.mina:mina-parent:pom:3.0.0-M3-SNAPSHOT" { 
+[INFO] 	"org.apache.mina:mina-parent:pom:3.0.0-M3-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.5:compile" ; 
+[INFO] 	"org.apache.mina:mina-parent:pom:3.0.0-M3-SNAPSHOT" -> "junit:junit:jar:4.11:test" ; 
+[INFO] 	"org.apache.mina:mina-parent:pom:3.0.0-M3-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.2:test" ; 
+[INFO] 	"junit:junit:jar:4.11:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.2:test" -> "org.apache.logging.log4j:log4j-api:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< org.apache.mina:mina-codec >---------------------
+[INFO] Building Apache MINA Codec 3.0.0-M3-SNAPSHOT 3.0.0-M3-SNAPSHOT    [2/15]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ mina-codec ---
+[INFO] digraph "org.apache.mina:mina-codec:jar:3.0.0-M3-SNAPSHOT" { 
+[INFO] 	"org.apache.mina:mina-codec:jar:3.0.0-M3-SNAPSHOT" -> "org.mockito:mockito-core:jar:1.9.5:test" ; 
+[INFO] 	"org.apache.mina:mina-codec:jar:3.0.0-M3-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.5:compile" ; 
+[INFO] 	"org.apache.mina:mina-codec:jar:3.0.0-M3-SNAPSHOT" -> "junit:junit:jar:4.11:test" ; 
+[INFO] 	"org.apache.mina:mina-codec:jar:3.0.0-M3-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:1.9.5:test" -> "org.objenesis:objenesis:jar:1.0:test" ; 
+[INFO] 	"junit:junit:jar:4.11:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.2:test" -> "org.apache.logging.log4j:log4j-api:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< org.apache.mina:mina-core >----------------------
+[INFO] Building Apache MINA Core 3.0.0-M3-SNAPSHOT 3.0.0-M3-SNAPSHOT     [3/15]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots: http://repository.apache.org/snapshots/org/apache/mina/mina-codec/3.0.0-M3-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: http://repository.apache.org/snapshots/org/apache/mina/mina-codec/3.0.0-M3-SNAPSHOT/maven-metadata.xml (1.4 kB at 2.5 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ mina-core ---
+[INFO] digraph "org.apache.mina:mina-core:jar:3.0.0-M3-SNAPSHOT" { 
+[INFO] 	"org.apache.mina:mina-core:jar:3.0.0-M3-SNAPSHOT" -> "junit:junit:jar:4.11:test" ; 
+[INFO] 	"org.apache.mina:mina-core:jar:3.0.0-M3-SNAPSHOT" -> "org.apache.mina:mina-codec:jar:3.0.0-M3-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.mina:mina-core:jar:3.0.0-M3-SNAPSHOT" -> "org.mockito:mockito-core:jar:1.9.5:test" ; 
+[INFO] 	"org.apache.mina:mina-core:jar:3.0.0-M3-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.1:test" ; 
+[INFO] 	"org.apache.mina:mina-core:jar:3.0.0-M3-SNAPSHOT" -> "org.apache.logging.log4j:log4j-core:jar:2.1:test" ; 
+[INFO] 	"org.apache.mina:mina-core:jar:3.0.0-M3-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.5:compile" ; 
+[INFO] 	"junit:junit:jar:4.11:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:1.9.5:test" -> "org.objenesis:objenesis:jar:1.0:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.1:test" -> "org.apache.logging.log4j:log4j-api:jar:2.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< org.apache.mina:mina-http >----------------------
+[INFO] Building Apache MINA HTTP 3.0.0-M3-SNAPSHOT 3.0.0-M3-SNAPSHOT     [4/15]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots: http://repository.apache.org/snapshots/org/apache/mina/mina-core/3.0.0-M3-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: http://repository.apache.org/snapshots/org/apache/mina/mina-core/3.0.0-M3-SNAPSHOT/maven-metadata.xml (1.2 kB at 5.2 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ mina-http ---
+[INFO] digraph "org.apache.mina:mina-http:jar:3.0.0-M3-SNAPSHOT" { 
+[INFO] 	"org.apache.mina:mina-http:jar:3.0.0-M3-SNAPSHOT" -> "org.apache.mina:mina-core:jar:3.0.0-M3-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.mina:mina-http:jar:3.0.0-M3-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.5:compile" ; 
+[INFO] 	"org.apache.mina:mina-http:jar:3.0.0-M3-SNAPSHOT" -> "junit:junit:jar:4.11:test" ; 
+[INFO] 	"org.apache.mina:mina-http:jar:3.0.0-M3-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.2:test" ; 
+[INFO] 	"org.apache.mina:mina-core:jar:3.0.0-M3-SNAPSHOT:compile" -> "org.apache.mina:mina-codec:jar:3.0.0-M3-SNAPSHOT:compile" ; 
+[INFO] 	"junit:junit:jar:4.11:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.2:test" -> "org.apache.logging.log4j:log4j-api:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< org.apache.mina:mina-http2 >---------------------
+[INFO] Building Apache MINA HTTP2 3.0.0-M3-SNAPSHOT 3.0.0-M3-SNAPSHOT    [5/15]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots: http://repository.apache.org/snapshots/org/apache/mina/mina-http/3.0.0-M3-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: http://repository.apache.org/snapshots/org/apache/mina/mina-http/3.0.0-M3-SNAPSHOT/maven-metadata.xml (1.2 kB at 5.6 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ mina-http2 ---
+[INFO] digraph "org.apache.mina:mina-http2:jar:3.0.0-M3-SNAPSHOT" { 
+[INFO] 	"org.apache.mina:mina-http2:jar:3.0.0-M3-SNAPSHOT" -> "org.apache.mina:mina-core:jar:3.0.0-M3-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.mina:mina-http2:jar:3.0.0-M3-SNAPSHOT" -> "org.apache.mina:mina-http:jar:3.0.0-M3-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.mina:mina-http2:jar:3.0.0-M3-SNAPSHOT" -> "com.twitter:hpack:jar:0.10.0:compile" ; 
+[INFO] 	"org.apache.mina:mina-http2:jar:3.0.0-M3-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.5:compile" ; 
+[INFO] 	"org.apache.mina:mina-http2:jar:3.0.0-M3-SNAPSHOT" -> "junit:junit:jar:4.11:test" ; 
+[INFO] 	"org.apache.mina:mina-http2:jar:3.0.0-M3-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.2:test" ; 
+[INFO] 	"org.apache.mina:mina-core:jar:3.0.0-M3-SNAPSHOT:compile" -> "org.apache.mina:mina-codec:jar:3.0.0-M3-SNAPSHOT:compile" ; 
+[INFO] 	"junit:junit:jar:4.11:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.2:test" -> "org.apache.logging.log4j:log4j-api:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< org.apache.mina:mina-coap >----------------------
+[INFO] Building Apache MINA CoAP (constrained application protocol) 3.0.0-M3-SNAPSHOT 3.0.0-M3-SNAPSHOT [6/15]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ mina-coap ---
+[INFO] digraph "org.apache.mina:mina-coap:jar:3.0.0-M3-SNAPSHOT" { 
+[INFO] 	"org.apache.mina:mina-coap:jar:3.0.0-M3-SNAPSHOT" -> "org.apache.mina:mina-core:jar:3.0.0-M3-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.mina:mina-coap:jar:3.0.0-M3-SNAPSHOT" -> "org.apache.mina:mina-codec:jar:3.0.0-M3-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.mina:mina-coap:jar:3.0.0-M3-SNAPSHOT" -> "org.mockito:mockito-core:jar:1.9.5:test" ; 
+[INFO] 	"org.apache.mina:mina-coap:jar:3.0.0-M3-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.5:compile" ; 
+[INFO] 	"org.apache.mina:mina-coap:jar:3.0.0-M3-SNAPSHOT" -> "junit:junit:jar:4.11:test" ; 
+[INFO] 	"org.apache.mina:mina-coap:jar:3.0.0-M3-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:1.9.5:test" -> "org.hamcrest:hamcrest-core:jar:1.1:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:1.9.5:test" -> "org.objenesis:objenesis:jar:1.0:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.2:test" -> "org.apache.logging.log4j:log4j-api:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< org.apache.mina:mina-examples >--------------------
+[INFO] Building Apache MINA examples 3.0.0-M3-SNAPSHOT 3.0.0-M3-SNAPSHOT [7/15]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots: http://repository.apache.org/snapshots/org/apache/mina/mina-coap/3.0.0-M3-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: http://repository.apache.org/snapshots/org/apache/mina/mina-coap/3.0.0-M3-SNAPSHOT/maven-metadata.xml (1.2 kB at 3.0 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ mina-examples ---
+[INFO] digraph "org.apache.mina:mina-examples:jar:3.0.0-M3-SNAPSHOT" { 
+[INFO] 	"org.apache.mina:mina-examples:jar:3.0.0-M3-SNAPSHOT" -> "org.apache.mina:mina-core:jar:3.0.0-M3-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.mina:mina-examples:jar:3.0.0-M3-SNAPSHOT" -> "org.apache.mina:mina-http:jar:3.0.0-M3-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.mina:mina-examples:jar:3.0.0-M3-SNAPSHOT" -> "org.apache.mina:mina-coap:jar:3.0.0-M3-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.mina:mina-examples:jar:3.0.0-M3-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.2:runtime" ; 
+[INFO] 	"org.apache.mina:mina-examples:jar:3.0.0-M3-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.5:compile" ; 
+[INFO] 	"org.apache.mina:mina-examples:jar:3.0.0-M3-SNAPSHOT" -> "junit:junit:jar:4.11:test" ; 
+[INFO] 	"org.apache.mina:mina-core:jar:3.0.0-M3-SNAPSHOT:compile" -> "org.apache.mina:mina-codec:jar:3.0.0-M3-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.2:runtime" -> "org.apache.logging.log4j:log4j-api:jar:2.2:runtime" ; 
+[INFO] 	"junit:junit:jar:4.11:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< org.apache.mina:mina-thrift >---------------------
+[INFO] Building Apache MINA Serialization::Thrift 3.0.0-M3-SNAPSHOT 3.0.0-M3-SNAPSHOT [8/15]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ mina-thrift ---
+[INFO] digraph "org.apache.mina:mina-thrift:jar:3.0.0-M3-SNAPSHOT" { 
+[INFO] 	"org.apache.mina:mina-thrift:jar:3.0.0-M3-SNAPSHOT" -> "org.apache.thrift:libthrift:jar:0.14.0:compile" ; 
+[INFO] 	"org.apache.mina:mina-thrift:jar:3.0.0-M3-SNAPSHOT" -> "org.apache.mina:mina-codec:jar:3.0.0-M3-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.mina:mina-thrift:jar:3.0.0-M3-SNAPSHOT" -> "org.apache.mina:mina-codec:test-jar:tests:3.0.0-M3-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.mina:mina-thrift:jar:3.0.0-M3-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.5:compile" ; 
+[INFO] 	"org.apache.mina:mina-thrift:jar:3.0.0-M3-SNAPSHOT" -> "junit:junit:jar:4.11:test" ; 
+[INFO] 	"org.apache.mina:mina-thrift:jar:3.0.0-M3-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.2:test" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.14.0:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.10:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.14.0:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.12:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.14.0:compile" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:8.5.46:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.14.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.10:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.10:compile" -> "commons-codec:commons-codec:jar:1.11:compile" ; 
+[INFO] 	"org.apache.tomcat.embed:tomcat-embed-core:jar:8.5.46:compile" -> "org.apache.tomcat:tomcat-annotations-api:jar:8.5.46:compile" ; 
+[INFO] 	"junit:junit:jar:4.11:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.2:test" -> "org.apache.logging.log4j:log4j-api:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< org.apache.mina:mina-protobuf >--------------------
+[INFO] Building Apache MINA Serialization::Protobuf 3.0.0-M3-SNAPSHOT 3.0.0-M3-SNAPSHOT [9/15]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ mina-protobuf ---
+[INFO] digraph "org.apache.mina:mina-protobuf:jar:3.0.0-M3-SNAPSHOT" { 
+[INFO] 	"org.apache.mina:mina-protobuf:jar:3.0.0-M3-SNAPSHOT" -> "com.google.protobuf:protobuf-java:jar:3.16.3:compile" ; 
+[INFO] 	"org.apache.mina:mina-protobuf:jar:3.0.0-M3-SNAPSHOT" -> "org.apache.mina:mina-codec:jar:3.0.0-M3-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.mina:mina-protobuf:jar:3.0.0-M3-SNAPSHOT" -> "org.apache.mina:mina-codec:test-jar:tests:3.0.0-M3-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.mina:mina-protobuf:jar:3.0.0-M3-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.5:compile" ; 
+[INFO] 	"org.apache.mina:mina-protobuf:jar:3.0.0-M3-SNAPSHOT" -> "junit:junit:jar:4.11:test" ; 
+[INFO] 	"org.apache.mina:mina-protobuf:jar:3.0.0-M3-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.2:test" ; 
+[INFO] 	"junit:junit:jar:4.11:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.2:test" -> "org.apache.logging.log4j:log4j-api:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< org.apache.mina:mina-avro >----------------------
+[INFO] Building Apache MINA Serialization::Avro 3.0.0-M3-SNAPSHOT 3.0.0-M3-SNAPSHOT [10/15]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ mina-avro ---
+[INFO] digraph "org.apache.mina:mina-avro:jar:3.0.0-M3-SNAPSHOT" { 
+[INFO] 	"org.apache.mina:mina-avro:jar:3.0.0-M3-SNAPSHOT" -> "org.apache.avro:avro:jar:1.7.4:compile" ; 
+[INFO] 	"org.apache.mina:mina-avro:jar:3.0.0-M3-SNAPSHOT" -> "org.apache.mina:mina-codec:jar:3.0.0-M3-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.mina:mina-avro:jar:3.0.0-M3-SNAPSHOT" -> "org.apache.mina:mina-codec:test-jar:tests:3.0.0-M3-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.mina:mina-avro:jar:3.0.0-M3-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.5:compile" ; 
+[INFO] 	"org.apache.mina:mina-avro:jar:3.0.0-M3-SNAPSHOT" -> "junit:junit:jar:4.11:test" ; 
+[INFO] 	"org.apache.mina:mina-avro:jar:3.0.0-M3-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.2:test" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.7.4:compile" -> "org.codehaus.jackson:jackson-core-asl:jar:1.8.8:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.7.4:compile" -> "org.codehaus.jackson:jackson-mapper-asl:jar:1.8.8:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.7.4:compile" -> "com.thoughtworks.paranamer:paranamer:jar:2.3:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.7.4:compile" -> "org.xerial.snappy:snappy-java:jar:1.0.4.1:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.7.4:compile" -> "org.apache.commons:commons-compress:jar:1.4.1:compile" ; 
+[INFO] 	"org.apache.commons:commons-compress:jar:1.4.1:compile" -> "org.tukaani:xz:jar:1.0:compile" ; 
+[INFO] 	"junit:junit:jar:4.11:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.2:test" -> "org.apache.logging.log4j:log4j-api:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< org.apache.mina:mina-monitoring >-------------------
+[INFO] Building Apache MINA Monitoring::Monitoring 3.0.0-M3-SNAPSHOT 3.0.0-M3-SNAPSHOT [11/15]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ mina-monitoring ---
+[INFO] digraph "org.apache.mina:mina-monitoring:jar:3.0.0-M3-SNAPSHOT" { 
+[INFO] 	"org.apache.mina:mina-monitoring:jar:3.0.0-M3-SNAPSHOT" -> "com.codahale.metrics:metrics-core:jar:3.0.1:compile" ; 
+[INFO] 	"org.apache.mina:mina-monitoring:jar:3.0.0-M3-SNAPSHOT" -> "org.apache.mina:mina-core:jar:3.0.0-M3-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.mina:mina-monitoring:jar:3.0.0-M3-SNAPSHOT" -> "org.slf4j:slf4j-log4j12:jar:1.7.5:test" ; 
+[INFO] 	"org.apache.mina:mina-monitoring:jar:3.0.0-M3-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.5:compile" ; 
+[INFO] 	"org.apache.mina:mina-monitoring:jar:3.0.0-M3-SNAPSHOT" -> "junit:junit:jar:4.11:test" ; 
+[INFO] 	"org.apache.mina:mina-monitoring:jar:3.0.0-M3-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.2:test" ; 
+[INFO] 	"org.apache.mina:mina-core:jar:3.0.0-M3-SNAPSHOT:compile" -> "org.apache.mina:mina-codec:jar:3.0.0-M3-SNAPSHOT:compile" ; 
+[INFO] 	"org.slf4j:slf4j-log4j12:jar:1.7.5:test" -> "log4j:log4j:jar:1.2.17:test" ; 
+[INFO] 	"junit:junit:jar:4.11:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.2:test" -> "org.apache.logging.log4j:log4j-api:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< org.apache.mina:mina-benchmarks >-------------------
+[INFO] Building Apache MINA Benchmarks tests 3.0.0-M3-SNAPSHOT          [12/15]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ mina-benchmarks ---
+[INFO] digraph "org.apache.mina:mina-benchmarks:pom:3.0.0-M3-SNAPSHOT" { 
+[INFO] 	"org.apache.mina:mina-benchmarks:pom:3.0.0-M3-SNAPSHOT" -> "org.apache.mina:mina-core:jar:3.0.0-M3-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.mina:mina-benchmarks:pom:3.0.0-M3-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.5:test" ; 
+[INFO] 	"org.apache.mina:mina-benchmarks:pom:3.0.0-M3-SNAPSHOT" -> "junit:junit:jar:4.11:test" ; 
+[INFO] 	"org.apache.mina:mina-benchmarks:pom:3.0.0-M3-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.2:test" ; 
+[INFO] 	"org.apache.mina:mina-core:jar:3.0.0-M3-SNAPSHOT:test" -> "org.apache.mina:mina-codec:jar:3.0.0-M3-SNAPSHOT:test" ; 
+[INFO] 	"junit:junit:jar:4.11:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.2:test" -> "org.apache.logging.log4j:log4j-api:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.apache.mina:mina-benchmarks-common >---------------
+[INFO] Building Apache MINA Benchmarks against JDK and MINA tests 3.0.0-M3-SNAPSHOT [13/15]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ mina-benchmarks-common ---
+[INFO] digraph "org.apache.mina:mina-benchmarks-common:jar:3.0.0-M3-SNAPSHOT" { 
+[INFO] 	"org.apache.mina:mina-benchmarks-common:jar:3.0.0-M3-SNAPSHOT" -> "org.apache.mina:mina-core:jar:3.0.0-M3-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.mina:mina-benchmarks-common:jar:3.0.0-M3-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.5:test" ; 
+[INFO] 	"org.apache.mina:mina-benchmarks-common:jar:3.0.0-M3-SNAPSHOT" -> "junit:junit:jar:4.11:test" ; 
+[INFO] 	"org.apache.mina:mina-benchmarks-common:jar:3.0.0-M3-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.2:test" ; 
+[INFO] 	"org.apache.mina:mina-core:jar:3.0.0-M3-SNAPSHOT:test" -> "org.apache.mina:mina-codec:jar:3.0.0-M3-SNAPSHOT:test" ; 
+[INFO] 	"junit:junit:jar:4.11:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.2:test" -> "org.apache.logging.log4j:log4j-api:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.apache.mina:mina-benchmarks-netty3 >---------------
+[INFO] Building Apache MINA Benchmarks against Netty3 tests 3.0.0-M3-SNAPSHOT [14/15]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots: http://repository.apache.org/snapshots/org/apache/mina/mina-benchmarks-common/3.0.0-M3-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: http://repository.apache.org/snapshots/org/apache/mina/mina-benchmarks-common/3.0.0-M3-SNAPSHOT/mina-benchmarks-common-3.0.0-M3-SNAPSHOT-tests.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Apache MINA 3.0.0-M3-SNAPSHOT 3.0.0-M3-SNAPSHOT:
+[INFO] 
+[INFO] Apache MINA 3.0.0-M3-SNAPSHOT ...................... SUCCESS [  4.453 s]
+[INFO] Apache MINA Codec 3.0.0-M3-SNAPSHOT ................ SUCCESS [  0.251 s]
+[INFO] Apache MINA Core 3.0.0-M3-SNAPSHOT ................. SUCCESS [  2.525 s]
+[INFO] Apache MINA HTTP 3.0.0-M3-SNAPSHOT ................. SUCCESS [  0.346 s]
+[INFO] Apache MINA HTTP2 3.0.0-M3-SNAPSHOT ................ SUCCESS [  0.306 s]
+[INFO] Apache MINA CoAP (constrained application protocol) 3.0.0-M3-SNAPSHOT SUCCESS [  0.121 s]
+[INFO] Apache MINA examples 3.0.0-M3-SNAPSHOT ............. SUCCESS [  0.518 s]
+[INFO] Apache MINA Serialization::Thrift 3.0.0-M3-SNAPSHOT  SUCCESS [  0.486 s]
+[INFO] Apache MINA Serialization::Protobuf 3.0.0-M3-SNAPSHOT SUCCESS [  0.073 s]
+[INFO] Apache MINA Serialization::Avro 3.0.0-M3-SNAPSHOT .. SUCCESS [  0.063 s]
+[INFO] Apache MINA Monitoring::Monitoring 3.0.0-M3-SNAPSHOT SUCCESS [  0.060 s]
+[INFO] Apache MINA Benchmarks tests ....................... SUCCESS [  0.055 s]
+[INFO] Apache MINA Benchmarks against JDK and MINA tests .. SUCCESS [  0.014 s]
+[INFO] Apache MINA Benchmarks against Netty3 tests ........ FAILURE [  0.146 s]
+[INFO] Apache MINA Benchmarks against Netty4 tests ........ SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.938 s
+[INFO] Finished at: 2023-12-28T09:02:31+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project mina-benchmarks-netty3: Could not resolve dependencies for project org.apache.mina:mina-benchmarks-netty3:jar:3.0.0-M3-SNAPSHOT: Could not find artifact org.apache.mina:mina-benchmarks-common:jar:tests:3.0.0-M3-SNAPSHOT in apache.snapshots (http://repository.apache.org/snapshots) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :mina-benchmarks-netty3

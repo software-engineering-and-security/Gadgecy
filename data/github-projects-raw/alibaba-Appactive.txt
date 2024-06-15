@@ -1,0 +1,1411 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for io.appactive.demo:frontend:jar:0.2.1
+[WARNING] 'build.plugins.plugin.version' for org.springframework.boot:spring-boot-maven-plugin is missing. @ line 79, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for io.appactive.demo:product:jar:0.2.1
+[WARNING] 'build.plugins.plugin.version' for org.springframework.boot:spring-boot-maven-plugin is missing. @ line 62, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for io.appactive.demo:storage:jar:0.2.1
+[WARNING] 'build.plugins.plugin.version' for org.springframework.boot:spring-boot-maven-plugin is missing. @ line 68, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] msha-appactive-0.2.1                                               [pom]
+[INFO] appactive-portal-0.2.1                                             [jar]
+[INFO] appactive-gateway-0.2.1                                            [jar]
+[INFO] appactive-java-api-0.2.1                                           [jar]
+[INFO] appactive-java-client-0.2.1                                        [pom]
+[INFO] client-support                                                     [jar]
+[INFO] client-channel                                                     [jar]
+[INFO] client-rule                                                        [jar]
+[INFO] client-bridge                                                      [pom]
+[INFO] client-bridge-servlet                                              [jar]
+[INFO] client-bridge-rpc-base                                             [jar]
+[INFO] client-bridge-rpc-apache-dubbo                                     [pom]
+[INFO] client-bridge-rpc-apache-dubbo2-metainfo                           [jar]
+[INFO] client-bridge-rpc-apache-dubbo2                                    [jar]
+[INFO] client-bridge-db-mysql                                             [jar]
+[INFO] client-bridge-rpc-springcloud                                      [pom]
+[INFO] client-bridge-rpc-springcloud-common                               [jar]
+[INFO] client-bridge-rpc-springcloud-nacos                                [jar]
+[INFO] client-bridge-rpc-springcloud-eureka                               [jar]
+[INFO] client-spi-metainfo                                                [jar]
+[INFO] appactive-demo-0.2.1                                               [pom]
+[INFO] common                                                             [jar]
+[INFO] frontend                                                           [jar]
+[INFO] product                                                            [jar]
+[INFO] storage                                                            [jar]
+[INFO] 
+[INFO] ------------------< com.alibaba.msha:msha-appactive >-------------------
+[INFO] Building msha-appactive-0.2.1 0.2.1                               [1/25]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ msha-appactive ---
+[INFO] digraph "com.alibaba.msha:msha-appactive:pom:0.2.1" { 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< com.alibaba.msha:appactive-portal >------------------
+[INFO] Building appactive-portal-0.2.1 0.2.1                             [2/25]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ appactive-portal ---
+[INFO] digraph "com.alibaba.msha:appactive-portal:jar:0.2.1" { 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< com.alibaba.msha:appactive-gateway >-----------------
+[INFO] Building appactive-gateway-0.2.1 0.2.1                            [3/25]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ appactive-gateway ---
+[INFO] digraph "com.alibaba.msha:appactive-gateway:jar:0.2.1" { 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< com.alibaba.msha:appactive-java-api >-----------------
+[INFO] Building appactive-java-api-0.2.1 0.2.1                           [4/25]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ appactive-java-api ---
+[INFO] digraph "com.alibaba.msha:appactive-java-api:jar:0.2.1" { 
+[INFO] 	"com.alibaba.msha:appactive-java-api:jar:0.2.1" -> "javax.servlet:javax.servlet-api:jar:3.1.0:provided" ; 
+[INFO] 	"com.alibaba.msha:appactive-java-api:jar:0.2.1" -> "org.apache.dubbo:dubbo:jar:2.7.13:provided" ; 
+[INFO] 	"com.alibaba.msha:appactive-java-api:jar:0.2.1" -> "javax.validation:validation-api:jar:2.0.1.Final:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:provided" -> "org.springframework:spring-context:jar:5.2.8.RELEASE:provided" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:provided" -> "com.alibaba.spring:spring-context-support:jar:1.0.11:provided" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:provided" -> "org.javassist:javassist:jar:3.23.1-GA:provided" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:provided" -> "io.netty:netty-all:jar:4.1.51.Final:provided" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:provided" -> "com.google.code.gson:gson:jar:2.8.5:provided" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:provided" -> "org.yaml:snakeyaml:jar:1.20:provided" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:provided" -> "com.alibaba:fastjson:jar:1.2.70:provided" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.2.8.RELEASE:provided" -> "org.springframework:spring-aop:jar:5.2.8.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.2.8.RELEASE:provided" -> "org.springframework:spring-beans:jar:5.2.8.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.2.8.RELEASE:provided" -> "org.springframework:spring-core:jar:5.2.8.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.2.8.RELEASE:provided" -> "org.springframework:spring-expression:jar:5.2.8.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.2.8.RELEASE:provided" -> "org.springframework:spring-jcl:jar:5.2.8.RELEASE:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< com.alibaba.msha:appactive-java-client >---------------
+[INFO] Building appactive-java-client-0.2.1 0.2.1                        [5/25]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ appactive-java-client ---
+[INFO] digraph "com.alibaba.msha:appactive-java-client:pom:0.2.1" { 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< com.alibaba.msha:client-support >-------------------
+[INFO] Building client-support 0.2.1                                     [6/25]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ client-support ---
+[INFO] digraph "com.alibaba.msha:client-support:jar:0.2.1" { 
+[INFO] 	"com.alibaba.msha:client-support:jar:0.2.1" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"com.alibaba.msha:client-support:jar:0.2.1" -> "com.alibaba.msha:appactive-java-api:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-support:jar:0.2.1" -> "com.alibaba:fastjson:jar:1.2.83:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"com.alibaba.msha:appactive-java-api:jar:0.2.1:compile" -> "javax.validation:validation-api:jar:2.0.1.Final:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< com.alibaba.msha:client-channel >-------------------
+[INFO] Building client-channel 0.2.1                                     [7/25]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ client-channel ---
+[INFO] digraph "com.alibaba.msha:client-channel:jar:0.2.1" { 
+[INFO] 	"com.alibaba.msha:client-channel:jar:0.2.1" -> "com.alibaba.msha:client-support:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-channel:jar:0.2.1" -> "com.alibaba.nacos:nacos-client:jar:2.0.4:compile" ; 
+[INFO] 	"com.alibaba.msha:client-channel:jar:0.2.1" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"com.alibaba.msha:client-support:jar:0.2.1:compile" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"com.alibaba.msha:client-support:jar:0.2.1:compile" -> "com.alibaba.msha:appactive-java-api:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-support:jar:0.2.1:compile" -> "com.alibaba:fastjson:jar:1.2.83:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"com.alibaba.msha:appactive-java-api:jar:0.2.1:compile" -> "javax.validation:validation-api:jar:2.0.1.Final:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "commons-codec:commons-codec:jar:1.11:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.12.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.12.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "org.reflections:reflections:jar:0.9.11:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "io.prometheus:simpleclient:jar:0.5.0:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "org.yaml:snakeyaml:jar:1.23:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.12.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.12.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.6:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "org.apache.httpcomponents:httpcore-nio:jar:4.4.6:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.3:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.reflections:reflections:jar:0.9.11:compile" -> "com.google.guava:guava:jar:28.1-jre:test" ; 
+[INFO] 	"org.reflections:reflections:jar:0.9.11:compile" -> "org.javassist:javassist:jar:3.21.0-GA:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.code.findbugs:jsr305:jar:3.0.2:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "org.checkerframework:checker-qual:jar:2.8.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.3.2:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:1.3:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.18:test" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< com.alibaba.msha:client-rule >--------------------
+[INFO] Building client-rule 0.2.1                                        [8/25]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ client-rule ---
+[INFO] digraph "com.alibaba.msha:client-rule:jar:0.2.1" { 
+[INFO] 	"com.alibaba.msha:client-rule:jar:0.2.1" -> "com.alibaba.msha:client-channel:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-rule:jar:0.2.1" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"com.alibaba.msha:client-rule:jar:0.2.1" -> "com.google.guava:guava:jar:28.1-jre:test" ; 
+[INFO] 	"com.alibaba.msha:client-channel:jar:0.2.1:compile" -> "com.alibaba.msha:client-support:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-channel:jar:0.2.1:compile" -> "com.alibaba.nacos:nacos-client:jar:2.0.4:compile" ; 
+[INFO] 	"com.alibaba.msha:client-support:jar:0.2.1:compile" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"com.alibaba.msha:client-support:jar:0.2.1:compile" -> "com.alibaba.msha:appactive-java-api:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-support:jar:0.2.1:compile" -> "com.alibaba:fastjson:jar:1.2.83:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"com.alibaba.msha:appactive-java-api:jar:0.2.1:compile" -> "javax.validation:validation-api:jar:2.0.1.Final:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "commons-codec:commons-codec:jar:1.11:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.12.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.12.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "org.reflections:reflections:jar:0.9.11:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "io.prometheus:simpleclient:jar:0.5.0:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "org.yaml:snakeyaml:jar:1.23:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.12.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.12.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.6:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "org.apache.httpcomponents:httpcore-nio:jar:4.4.6:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.3:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.reflections:reflections:jar:0.9.11:compile" -> "org.javassist:javassist:jar:3.21.0-GA:compile" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.code.findbugs:jsr305:jar:3.0.2:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "org.checkerframework:checker-qual:jar:2.8.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.3.2:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:1.3:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.18:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< com.alibaba.msha:client-bridge >-------------------
+[INFO] Building client-bridge 0.2.1                                      [9/25]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ client-bridge ---
+[INFO] digraph "com.alibaba.msha:client-bridge:pom:0.2.1" { 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< com.alibaba.msha:client-bridge-servlet >---------------
+[INFO] Building client-bridge-servlet 0.2.1                             [10/25]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ client-bridge-servlet ---
+[INFO] digraph "com.alibaba.msha:client-bridge-servlet:jar:0.2.1" { 
+[INFO] 	"com.alibaba.msha:client-bridge-servlet:jar:0.2.1" -> "com.alibaba.msha:client-support:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-servlet:jar:0.2.1" -> "com.alibaba.msha:client-rule:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-servlet:jar:0.2.1" -> "javax.servlet:javax.servlet-api:jar:3.1.0:provided" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-servlet:jar:0.2.1" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-servlet:jar:0.2.1" -> "org.mockito:mockito-all:jar:1.10.19:test" ; 
+[INFO] 	"com.alibaba.msha:client-support:jar:0.2.1:compile" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"com.alibaba.msha:client-support:jar:0.2.1:compile" -> "com.alibaba.msha:appactive-java-api:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-support:jar:0.2.1:compile" -> "com.alibaba:fastjson:jar:1.2.83:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"com.alibaba.msha:appactive-java-api:jar:0.2.1:compile" -> "javax.validation:validation-api:jar:2.0.1.Final:compile" ; 
+[INFO] 	"com.alibaba.msha:client-rule:jar:0.2.1:compile" -> "com.alibaba.msha:client-channel:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-channel:jar:0.2.1:compile" -> "com.alibaba.nacos:nacos-client:jar:2.0.4:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "commons-codec:commons-codec:jar:1.11:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.12.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.12.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "org.reflections:reflections:jar:0.9.11:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "io.prometheus:simpleclient:jar:0.5.0:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "org.yaml:snakeyaml:jar:1.23:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.12.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.12.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.6:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "org.apache.httpcomponents:httpcore-nio:jar:4.4.6:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.3:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.reflections:reflections:jar:0.9.11:compile" -> "com.google.guava:guava:jar:28.1-jre:test" ; 
+[INFO] 	"org.reflections:reflections:jar:0.9.11:compile" -> "org.javassist:javassist:jar:3.21.0-GA:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.code.findbugs:jsr305:jar:3.0.2:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "org.checkerframework:checker-qual:jar:2.8.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.3.2:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:1.3:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.18:test" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< com.alibaba.msha:client-bridge-rpc-base >---------------
+[INFO] Building client-bridge-rpc-base 0.2.1                            [11/25]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ client-bridge-rpc-base ---
+[INFO] digraph "com.alibaba.msha:client-bridge-rpc-base:jar:0.2.1" { 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-base:jar:0.2.1" -> "com.alibaba.msha:client-rule:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-rule:jar:0.2.1:compile" -> "com.alibaba.msha:client-channel:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-channel:jar:0.2.1:compile" -> "com.alibaba.msha:client-support:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-channel:jar:0.2.1:compile" -> "com.alibaba.nacos:nacos-client:jar:2.0.4:compile" ; 
+[INFO] 	"com.alibaba.msha:client-support:jar:0.2.1:compile" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"com.alibaba.msha:client-support:jar:0.2.1:compile" -> "com.alibaba.msha:appactive-java-api:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-support:jar:0.2.1:compile" -> "com.alibaba:fastjson:jar:1.2.83:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"com.alibaba.msha:appactive-java-api:jar:0.2.1:compile" -> "javax.validation:validation-api:jar:2.0.1.Final:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "commons-codec:commons-codec:jar:1.11:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.12.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.12.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "org.reflections:reflections:jar:0.9.11:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "io.prometheus:simpleclient:jar:0.5.0:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "org.yaml:snakeyaml:jar:1.23:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.12.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.12.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.6:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "org.apache.httpcomponents:httpcore-nio:jar:4.4.6:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.3:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.reflections:reflections:jar:0.9.11:compile" -> "com.google.guava:guava:jar:28.1-jre:test" ; 
+[INFO] 	"org.reflections:reflections:jar:0.9.11:compile" -> "org.javassist:javassist:jar:3.21.0-GA:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.code.findbugs:jsr305:jar:3.0.2:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "org.checkerframework:checker-qual:jar:2.8.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.3.2:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:1.3:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.18:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------< com.alibaba.msha:client-bridge-rpc-apache-dubbo >-----------
+[INFO] Building client-bridge-rpc-apache-dubbo 0.2.1                    [12/25]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ client-bridge-rpc-apache-dubbo ---
+[INFO] digraph "com.alibaba.msha:client-bridge-rpc-apache-dubbo:pom:0.2.1" { 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-apache-dubbo:pom:0.2.1" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----< com.alibaba.msha:client-bridge-rpc-apache-dubbo2-metainfo >------
+[INFO] Building client-bridge-rpc-apache-dubbo2-metainfo 0.2.1          [13/25]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ client-bridge-rpc-apache-dubbo2-metainfo ---
+[INFO] digraph "com.alibaba.msha:client-bridge-rpc-apache-dubbo2-metainfo:jar:0.2.1" { 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-apache-dubbo2-metainfo:jar:0.2.1" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------< com.alibaba.msha:client-bridge-rpc-apache-dubbo2 >----------
+[INFO] Building client-bridge-rpc-apache-dubbo2 0.2.1                   [14/25]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ client-bridge-rpc-apache-dubbo2 ---
+[INFO] digraph "com.alibaba.msha:client-bridge-rpc-apache-dubbo2:jar:0.2.1" { 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-apache-dubbo2:jar:0.2.1" -> "org.apache.dubbo:dubbo:jar:2.7.13:provided" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-apache-dubbo2:jar:0.2.1" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-apache-dubbo2:jar:0.2.1" -> "com.alibaba.msha:client-bridge-rpc-base:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-apache-dubbo2:jar:0.2.1" -> "com.alibaba.msha:client-bridge-rpc-apache-dubbo2-metainfo:jar:0.2.1:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:provided" -> "org.springframework:spring-context:jar:5.2.8.RELEASE:provided" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:provided" -> "com.alibaba.spring:spring-context-support:jar:1.0.11:provided" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:provided" -> "org.javassist:javassist:jar:3.23.1-GA:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:provided" -> "io.netty:netty-all:jar:4.1.51.Final:provided" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:provided" -> "com.google.code.gson:gson:jar:2.8.5:provided" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:provided" -> "org.yaml:snakeyaml:jar:1.20:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:provided" -> "com.alibaba:fastjson:jar:1.2.83:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.2.8.RELEASE:provided" -> "org.springframework:spring-aop:jar:5.2.8.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.2.8.RELEASE:provided" -> "org.springframework:spring-beans:jar:5.2.8.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.2.8.RELEASE:provided" -> "org.springframework:spring-core:jar:5.2.8.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.2.8.RELEASE:provided" -> "org.springframework:spring-expression:jar:5.2.8.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.2.8.RELEASE:provided" -> "org.springframework:spring-jcl:jar:5.2.8.RELEASE:provided" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-base:jar:0.2.1:compile" -> "com.alibaba.msha:client-rule:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-rule:jar:0.2.1:compile" -> "com.alibaba.msha:client-channel:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-channel:jar:0.2.1:compile" -> "com.alibaba.msha:client-support:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-channel:jar:0.2.1:compile" -> "com.alibaba.nacos:nacos-client:jar:2.0.4:compile" ; 
+[INFO] 	"com.alibaba.msha:client-support:jar:0.2.1:compile" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"com.alibaba.msha:client-support:jar:0.2.1:compile" -> "com.alibaba.msha:appactive-java-api:jar:0.2.1:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"com.alibaba.msha:appactive-java-api:jar:0.2.1:compile" -> "javax.validation:validation-api:jar:2.0.1.Final:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "commons-codec:commons-codec:jar:1.11:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.12.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.12.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "org.reflections:reflections:jar:0.9.11:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "io.prometheus:simpleclient:jar:0.5.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.12.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.12.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.6:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "org.apache.httpcomponents:httpcore-nio:jar:4.4.6:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.3:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.reflections:reflections:jar:0.9.11:compile" -> "com.google.guava:guava:jar:28.1-jre:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.code.findbugs:jsr305:jar:3.0.2:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "org.checkerframework:checker-qual:jar:2.8.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.3.2:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:1.3:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.18:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< com.alibaba.msha:client-bridge-db-mysql >---------------
+[INFO] Building client-bridge-db-mysql 0.2.1                            [15/25]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ client-bridge-db-mysql ---
+[INFO] digraph "com.alibaba.msha:client-bridge-db-mysql:jar:0.2.1" { 
+[INFO] 	"com.alibaba.msha:client-bridge-db-mysql:jar:0.2.1" -> "com.alibaba.msha:client-rule:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-rule:jar:0.2.1:compile" -> "com.alibaba.msha:client-channel:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-channel:jar:0.2.1:compile" -> "com.alibaba.msha:client-support:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-channel:jar:0.2.1:compile" -> "com.alibaba.nacos:nacos-client:jar:2.0.4:compile" ; 
+[INFO] 	"com.alibaba.msha:client-support:jar:0.2.1:compile" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"com.alibaba.msha:client-support:jar:0.2.1:compile" -> "com.alibaba.msha:appactive-java-api:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-support:jar:0.2.1:compile" -> "com.alibaba:fastjson:jar:1.2.83:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"com.alibaba.msha:appactive-java-api:jar:0.2.1:compile" -> "javax.validation:validation-api:jar:2.0.1.Final:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "commons-codec:commons-codec:jar:1.11:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.12.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.12.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "org.reflections:reflections:jar:0.9.11:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "io.prometheus:simpleclient:jar:0.5.0:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.4:compile" -> "org.yaml:snakeyaml:jar:1.23:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.12.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.12.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.6:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "org.apache.httpcomponents:httpcore-nio:jar:4.4.6:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.3:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.reflections:reflections:jar:0.9.11:compile" -> "com.google.guava:guava:jar:28.1-jre:test" ; 
+[INFO] 	"org.reflections:reflections:jar:0.9.11:compile" -> "org.javassist:javassist:jar:3.21.0-GA:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.code.findbugs:jsr305:jar:3.0.2:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "org.checkerframework:checker-qual:jar:2.8.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.3.2:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:1.3:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.18:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------< com.alibaba.msha:client-bridge-rpc-springcloud >-----------
+[INFO] Building client-bridge-rpc-springcloud 0.2.1                     [16/25]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ client-bridge-rpc-springcloud ---
+[INFO] digraph "com.alibaba.msha:client-bridge-rpc-springcloud:pom:0.2.1" { 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud:pom:0.2.1" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud:pom:0.2.1" -> "org.springframework.cloud:spring-cloud-commons:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud:pom:0.2.1" -> "org.springframework:spring-context:jar:3.0.5.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud:pom:0.2.1" -> "org.springframework:spring-beans:jar:5.3.18:provided" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud:pom:0.2.1" -> "org.springframework:spring-web:jar:5.2.21.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud:pom:0.2.1" -> "io.github.openfeign:feign-core:jar:9.5.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud:pom:0.2.1" -> "javax.servlet:javax.servlet-api:jar:3.1.0:provided" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud:pom:0.2.1" -> "com.alibaba.msha:appactive-java-api:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud:pom:0.2.1" -> "com.alibaba.msha:client-rule:jar:0.2.1:compile" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-commons:jar:2.2.9.RELEASE:compile" -> "org.springframework.security:spring-security-crypto:jar:5.3.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:3.0.5.RELEASE:compile" -> "org.springframework:spring-aop:jar:3.0.5.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:3.0.5.RELEASE:compile" -> "org.springframework:spring-core:jar:3.0.5.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:3.0.5.RELEASE:compile" -> "org.springframework:spring-expression:jar:3.0.5.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:3.0.5.RELEASE:compile" -> "org.springframework:spring-asm:jar:3.0.5.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-aop:jar:3.0.5.RELEASE:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:3.0.5.RELEASE:compile" -> "commons-logging:commons-logging:jar:1.1.1:compile" ; 
+[INFO] 	"com.alibaba.msha:appactive-java-api:jar:0.2.1:compile" -> "javax.validation:validation-api:jar:2.0.1.Final:compile" ; 
+[INFO] 	"com.alibaba.msha:client-rule:jar:0.2.1:compile" -> "com.alibaba.msha:client-channel:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-channel:jar:0.2.1:compile" -> "com.alibaba.msha:client-support:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-channel:jar:0.2.1:compile" -> "com.alibaba.nacos:nacos-client:jar:2.0.3:compile" ; 
+[INFO] 	"com.alibaba.msha:client-support:jar:0.2.1:compile" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"com.alibaba.msha:client-support:jar:0.2.1:compile" -> "com.alibaba:fastjson:jar:1.2.83:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "commons-codec:commons-codec:jar:1.11:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.12.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.12.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "org.reflections:reflections:jar:0.9.11:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "io.prometheus:simpleclient:jar:0.5.0:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "org.yaml:snakeyaml:jar:1.23:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.12.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.12.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.6:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "org.apache.httpcomponents:httpcore-nio:jar:4.4.6:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.3:compile" ; 
+[INFO] 	"org.reflections:reflections:jar:0.9.11:compile" -> "com.google.guava:guava:jar:28.1-jre:test" ; 
+[INFO] 	"org.reflections:reflections:jar:0.9.11:compile" -> "org.javassist:javassist:jar:3.21.0-GA:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.code.findbugs:jsr305:jar:3.0.2:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "org.checkerframework:checker-qual:jar:2.8.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.3.2:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:1.3:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.18:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------< com.alibaba.msha:client-bridge-rpc-springcloud-common >--------
+[INFO] Building client-bridge-rpc-springcloud-common 0.2.1              [17/25]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ client-bridge-rpc-springcloud-common ---
+[INFO] digraph "com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1" { 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1" -> "com.alibaba.msha:client-bridge-rpc-base:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1" -> "org.springframework.boot:spring-boot:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1" -> "org.aspectj:aspectjrt:jar:1.8.13:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1" -> "com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1" -> "io.github.openfeign:feign-java8:jar:9.5.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1" -> "org.springframework.cloud:spring-cloud-openfeign-core:jar:3.1.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1" -> "com.google.guava:guava:jar:16.0.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1" -> "org.springframework.cloud:spring-cloud-commons:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1" -> "org.springframework:spring-context:jar:3.0.5.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1" -> "org.springframework:spring-beans:jar:5.3.18:provided" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1" -> "org.springframework:spring-web:jar:5.2.21.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1" -> "io.github.openfeign:feign-core:jar:9.5.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1" -> "javax.servlet:javax.servlet-api:jar:3.1.0:provided" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1" -> "com.alibaba.msha:appactive-java-api:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1" -> "com.alibaba.msha:client-rule:jar:0.2.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.3.12.RELEASE:compile" -> "org.springframework:spring-core:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.2.15.RELEASE:compile" -> "org.springframework:spring-jcl:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile" -> "com.netflix.ribbon:ribbon-core:jar:2.3.0:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile" -> "com.netflix.netflix-commons:netflix-statistics:jar:0.1.1:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile" -> "io.reactivex:rxjava:jar:1.0.9:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile" -> "org.slf4j:slf4j-api:jar:1.7.12:compile" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile" -> "com.netflix.servo:servo-core:jar:0.12.21:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile" -> "com.netflix.archaius:archaius-core:jar:0.7.7:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile" -> "com.netflix.netflix-commons:netflix-commons-util:jar:0.3.0:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-core:jar:2.3.0:runtime" -> "commons-configuration:commons-configuration:jar:1.8:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-core:jar:2.3.0:runtime" -> "commons-lang:commons-lang:jar:2.6:runtime" ; 
+[INFO] 	"commons-configuration:commons-configuration:jar:1.8:runtime" -> "commons-logging:commons-logging:jar:1.1.1:compile" ; 
+[INFO] 	"com.netflix.archaius:archaius-core:jar:0.7.7:runtime" -> "com.google.code.findbugs:jsr305:jar:3.0.1:runtime" ; 
+[INFO] 	"com.netflix.archaius:archaius-core:jar:0.7.7:runtime" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.4.3:compile" ; 
+[INFO] 	"com.netflix.archaius:archaius-core:jar:0.7.7:runtime" -> "com.fasterxml.jackson.core:jackson-core:jar:2.4.3:compile" ; 
+[INFO] 	"com.netflix.archaius:archaius-core:jar:0.7.7:runtime" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.4.3:compile" ; 
+[INFO] 	"com.netflix.netflix-commons:netflix-commons-util:jar:0.3.0:runtime" -> "javax.inject:javax.inject:jar:1:runtime" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-openfeign-core:jar:3.1.1:compile" -> "org.springframework.boot:spring-boot-starter-aop:jar:2.6.3:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-openfeign-core:jar:3.1.1:compile" -> "io.github.openfeign.form:feign-form-spring:jar:3.8.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.6.3:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.6.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.6.3:compile" -> "org.aspectj:aspectjweaver:jar:1.9.7:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.3:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.6.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.3:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.3:compile" -> "org.yaml:snakeyaml:jar:1.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.3:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.3:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.33:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.1:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.1:compile" ; 
+[INFO] 	"io.github.openfeign.form:feign-form-spring:jar:3.8.0:compile" -> "io.github.openfeign.form:feign-form:jar:3.8.0:compile" ; 
+[INFO] 	"io.github.openfeign.form:feign-form-spring:jar:3.8.0:compile" -> "commons-fileupload:commons-fileupload:jar:1.4:compile" ; 
+[INFO] 	"commons-fileupload:commons-fileupload:jar:1.4:compile" -> "commons-io:commons-io:jar:2.2:compile" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-commons:jar:2.2.9.RELEASE:compile" -> "org.springframework.security:spring-security-crypto:jar:5.3.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:3.0.5.RELEASE:compile" -> "org.springframework:spring-aop:jar:3.0.5.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:3.0.5.RELEASE:compile" -> "org.springframework:spring-expression:jar:3.0.5.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:3.0.5.RELEASE:compile" -> "org.springframework:spring-asm:jar:3.0.5.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-aop:jar:3.0.5.RELEASE:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"com.alibaba.msha:appactive-java-api:jar:0.2.1:compile" -> "javax.validation:validation-api:jar:2.0.1.Final:compile" ; 
+[INFO] 	"com.alibaba.msha:client-rule:jar:0.2.1:compile" -> "com.alibaba.msha:client-channel:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-channel:jar:0.2.1:compile" -> "com.alibaba.msha:client-support:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-channel:jar:0.2.1:compile" -> "com.alibaba.nacos:nacos-client:jar:2.0.3:compile" ; 
+[INFO] 	"com.alibaba.msha:client-support:jar:0.2.1:compile" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"com.alibaba.msha:client-support:jar:0.2.1:compile" -> "com.alibaba:fastjson:jar:1.2.83:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "commons-codec:commons-codec:jar:1.11:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "org.reflections:reflections:jar:0.9.11:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "io.prometheus:simpleclient:jar:0.5.0:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.6:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "org.apache.httpcomponents:httpcore-nio:jar:4.4.6:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.3:compile" ; 
+[INFO] 	"org.reflections:reflections:jar:0.9.11:compile" -> "org.javassist:javassist:jar:3.21.0-GA:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------< com.alibaba.msha:client-bridge-rpc-springcloud-nacos >--------
+[INFO] Building client-bridge-rpc-springcloud-nacos 0.2.1               [18/25]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ client-bridge-rpc-springcloud-nacos ---
+[INFO] digraph "com.alibaba.msha:client-bridge-rpc-springcloud-nacos:jar:0.2.1" { 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-nacos:jar:0.2.1" -> "com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:jar:2.2.7.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-nacos:jar:0.2.1" -> "com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-nacos:jar:0.2.1" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-nacos:jar:0.2.1" -> "org.springframework.cloud:spring-cloud-commons:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-nacos:jar:0.2.1" -> "org.springframework:spring-context:jar:3.0.5.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-nacos:jar:0.2.1" -> "org.springframework:spring-beans:jar:5.3.18:provided" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-nacos:jar:0.2.1" -> "org.springframework:spring-web:jar:5.2.21.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-nacos:jar:0.2.1" -> "io.github.openfeign:feign-core:jar:9.5.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-nacos:jar:0.2.1" -> "javax.servlet:javax.servlet-api:jar:3.1.0:provided" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-nacos:jar:0.2.1" -> "com.alibaba.msha:appactive-java-api:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-nacos:jar:0.2.1" -> "com.alibaba.msha:client-rule:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:jar:2.2.7.RELEASE:compile" -> "com.alibaba.cloud:spring-cloud-alibaba-commons:jar:2.2.7.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:jar:2.2.7.RELEASE:compile" -> "com.alibaba.nacos:nacos-client:jar:2.0.3:compile" ; 
+[INFO] 	"com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:jar:2.2.7.RELEASE:compile" -> "com.alibaba.spring:spring-context-support:jar:1.0.10:compile" ; 
+[INFO] 	"com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:jar:2.2.7.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-context:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:jar:2.2.7.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "commons-codec:commons-codec:jar:1.11:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.12.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.12.2:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "org.reflections:reflections:jar:0.9.11:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "io.prometheus:simpleclient:jar:0.5.0:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "org.yaml:snakeyaml:jar:1.23:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.12.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.12.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.6:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "org.apache.httpcomponents:httpcore-nio:jar:4.4.6:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.3:compile" ; 
+[INFO] 	"org.reflections:reflections:jar:0.9.11:compile" -> "org.javassist:javassist:jar:3.21.0-GA:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-starter:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-netflix-ribbon:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-starter-netflix-archaius:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "com.netflix.ribbon:ribbon:jar:2.3.0:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "com.netflix.ribbon:ribbon-core:jar:2.3.0:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "com.netflix.ribbon:ribbon-httpclient:jar:2.3.0:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "io.reactivex:rxjava:jar:1.3.8:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter:jar:2.2.9.RELEASE:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter:jar:2.2.9.RELEASE:compile" -> "org.springframework.security:spring-security-rsa:jar:1.0.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.3.12.RELEASE:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.3.12.RELEASE:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.3.12.RELEASE:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.13.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.3.12.RELEASE:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.30:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.13.3:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.13.3:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-rsa:jar:1.0.9.RELEASE:compile" -> "org.bouncycastle:bcpkix-jdk15on:jar:1.64:compile" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk15on:jar:1.64:compile" -> "org.bouncycastle:bcprov-jdk15on:jar:1.64:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-netflix-archaius:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-archaius:jar:2.2.9.RELEASE:compile" -> "commons-configuration:commons-configuration:jar:1.8:compile" ; 
+[INFO] 	"com.netflix.ribbon:ribbon:jar:2.3.0:compile" -> "com.netflix.ribbon:ribbon-transport:jar:2.3.0:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon:jar:2.3.0:compile" -> "com.netflix.hystrix:hystrix-core:jar:1.5.18:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon:jar:2.3.0:compile" -> "javax.inject:javax.inject:jar:1:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon:jar:2.3.0:compile" -> "io.reactivex:rxnetty:jar:0.4.9:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-transport:jar:2.3.0:runtime" -> "io.reactivex:rxnetty-contexts:jar:0.4.9:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-transport:jar:2.3.0:runtime" -> "io.reactivex:rxnetty-servo:jar:0.4.9:runtime" ; 
+[INFO] 	"com.netflix.hystrix:hystrix-core:jar:1.5.18:runtime" -> "org.hdrhistogram:HdrHistogram:jar:2.1.9:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-core:jar:2.3.0:compile" -> "commons-lang:commons-lang:jar:2.6:compile" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-httpclient:jar:2.3.0:compile" -> "commons-collections:commons-collections:jar:3.2.2:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-httpclient:jar:2.3.0:compile" -> "com.sun.jersey:jersey-client:jar:1.19.1:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-httpclient:jar:2.3.0:compile" -> "com.sun.jersey.contribs:jersey-apache-client4:jar:1.19.1:runtime" ; 
+[INFO] 	"com.sun.jersey:jersey-client:jar:1.19.1:runtime" -> "com.sun.jersey:jersey-core:jar:1.19.1:runtime" ; 
+[INFO] 	"com.sun.jersey:jersey-core:jar:1.19.1:runtime" -> "javax.ws.rs:jsr311-api:jar:1.1.1:runtime" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "com.alibaba.msha:client-bridge-rpc-base:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "org.springframework.boot:spring-boot:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "org.aspectj:aspectjrt:jar:1.8.13:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "io.github.openfeign:feign-java8:jar:9.5.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "org.springframework.cloud:spring-cloud-openfeign-core:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "com.google.guava:guava:jar:28.1-jre:test" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile" -> "com.netflix.netflix-commons:netflix-statistics:jar:0.1.1:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile" -> "org.slf4j:slf4j-api:jar:1.7.12:compile" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile" -> "com.netflix.servo:servo-core:jar:0.12.21:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile" -> "com.netflix.archaius:archaius-core:jar:0.7.7:compile" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile" -> "com.netflix.netflix-commons:netflix-commons-util:jar:0.3.0:runtime" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-openfeign-core:jar:2.2.9.RELEASE:compile" -> "org.springframework.boot:spring-boot-starter-aop:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-openfeign-core:jar:2.2.9.RELEASE:compile" -> "io.github.openfeign.form:feign-form-spring:jar:3.8.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.3.12.RELEASE:compile" -> "org.aspectj:aspectjweaver:jar:1.9.6:compile" ; 
+[INFO] 	"io.github.openfeign.form:feign-form-spring:jar:3.8.0:compile" -> "io.github.openfeign.form:feign-form:jar:3.8.0:compile" ; 
+[INFO] 	"io.github.openfeign.form:feign-form-spring:jar:3.8.0:compile" -> "commons-fileupload:commons-fileupload:jar:1.4:compile" ; 
+[INFO] 	"commons-fileupload:commons-fileupload:jar:1.4:compile" -> "commons-io:commons-io:jar:2.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.code.findbugs:jsr305:jar:3.0.2:runtime" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "org.checkerframework:checker-qual:jar:2.8.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.3.2:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:1.3:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.18:test" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-commons:jar:2.2.9.RELEASE:compile" -> "org.springframework.security:spring-security-crypto:jar:5.3.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:3.0.5.RELEASE:compile" -> "org.springframework:spring-aop:jar:3.0.5.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:3.0.5.RELEASE:compile" -> "org.springframework:spring-core:jar:3.0.5.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:3.0.5.RELEASE:compile" -> "org.springframework:spring-expression:jar:3.0.5.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:3.0.5.RELEASE:compile" -> "org.springframework:spring-asm:jar:3.0.5.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-aop:jar:3.0.5.RELEASE:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:3.0.5.RELEASE:compile" -> "commons-logging:commons-logging:jar:1.1.1:compile" ; 
+[INFO] 	"com.alibaba.msha:appactive-java-api:jar:0.2.1:compile" -> "javax.validation:validation-api:jar:2.0.1.Final:compile" ; 
+[INFO] 	"com.alibaba.msha:client-rule:jar:0.2.1:compile" -> "com.alibaba.msha:client-channel:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-channel:jar:0.2.1:compile" -> "com.alibaba.msha:client-support:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-support:jar:0.2.1:compile" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"com.alibaba.msha:client-support:jar:0.2.1:compile" -> "com.alibaba:fastjson:jar:1.2.83:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------< com.alibaba.msha:client-bridge-rpc-springcloud-eureka >--------
+[INFO] Building client-bridge-rpc-springcloud-eureka 0.2.1              [19/25]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ client-bridge-rpc-springcloud-eureka ---
+[INFO] digraph "com.alibaba.msha:client-bridge-rpc-springcloud-eureka:jar:0.2.1" { 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-eureka:jar:0.2.1" -> "org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:jar:2.2.10.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-eureka:jar:0.2.1" -> "org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.10.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-eureka:jar:0.2.1" -> "com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-eureka:jar:0.2.1" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-eureka:jar:0.2.1" -> "org.springframework.cloud:spring-cloud-commons:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-eureka:jar:0.2.1" -> "org.springframework:spring-context:jar:3.0.5.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-eureka:jar:0.2.1" -> "org.springframework:spring-beans:jar:5.3.18:provided" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-eureka:jar:0.2.1" -> "org.springframework:spring-web:jar:5.2.21.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-eureka:jar:0.2.1" -> "io.github.openfeign:feign-core:jar:9.5.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-eureka:jar:0.2.1" -> "javax.servlet:javax.servlet-api:jar:3.1.0:provided" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-eureka:jar:0.2.1" -> "com.alibaba.msha:appactive-java-api:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-eureka:jar:0.2.1" -> "com.alibaba.msha:client-rule:jar:0.2.1:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:jar:2.2.10.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-starter:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:jar:2.2.10.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-netflix-hystrix:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:jar:2.2.10.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-netflix-eureka-client:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:jar:2.2.10.RELEASE:compile" -> "com.netflix.eureka:eureka-client:jar:1.10.14:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:jar:2.2.10.RELEASE:compile" -> "com.netflix.eureka:eureka-core:jar:1.10.14:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:jar:2.2.10.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-starter-netflix-archaius:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:jar:2.2.10.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-starter-loadbalancer:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:jar:2.2.10.RELEASE:compile" -> "com.netflix.ribbon:ribbon-eureka:jar:2.3.0:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter:jar:2.2.9.RELEASE:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter:jar:2.2.9.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-context:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter:jar:2.2.9.RELEASE:compile" -> "org.springframework.security:spring-security-rsa:jar:1.0.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.3.12.RELEASE:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.3.12.RELEASE:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.3.12.RELEASE:compile" -> "org.yaml:snakeyaml:jar:1.26:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.3.12.RELEASE:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.13.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.3.12.RELEASE:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.30:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.13.3:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.13.3:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-rsa:jar:1.0.9.RELEASE:compile" -> "org.bouncycastle:bcpkix-jdk15on:jar:1.64:compile" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk15on:jar:1.64:compile" -> "org.bouncycastle:bcprov-jdk15on:jar:1.64:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-netflix-hystrix:jar:2.2.9.RELEASE:compile" -> "org.springframework.boot:spring-boot-starter-aop:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.3.12.RELEASE:compile" -> "org.aspectj:aspectjweaver:jar:1.9.6:compile" ; 
+[INFO] 	"com.netflix.eureka:eureka-client:jar:1.10.14:compile" -> "com.netflix.netflix-commons:netflix-eventbus:jar:0.3.0:compile" ; 
+[INFO] 	"com.netflix.eureka:eureka-client:jar:1.10.14:compile" -> "com.thoughtworks.xstream:xstream:jar:1.4.16:compile" ; 
+[INFO] 	"com.netflix.eureka:eureka-client:jar:1.10.14:compile" -> "com.netflix.archaius:archaius-core:jar:0.7.7:compile" ; 
+[INFO] 	"com.netflix.eureka:eureka-client:jar:1.10.14:compile" -> "javax.ws.rs:jsr311-api:jar:1.1.1:compile" ; 
+[INFO] 	"com.netflix.eureka:eureka-client:jar:1.10.14:compile" -> "com.netflix.servo:servo-core:jar:0.12.21:compile" ; 
+[INFO] 	"com.netflix.eureka:eureka-client:jar:1.10.14:compile" -> "com.sun.jersey:jersey-core:jar:1.19.1:compile" ; 
+[INFO] 	"com.netflix.eureka:eureka-client:jar:1.10.14:compile" -> "com.sun.jersey:jersey-client:jar:1.19.1:compile" ; 
+[INFO] 	"com.netflix.eureka:eureka-client:jar:1.10.14:compile" -> "com.sun.jersey.contribs:jersey-apache-client4:jar:1.19.1:compile" ; 
+[INFO] 	"com.netflix.eureka:eureka-client:jar:1.10.14:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.3:compile" ; 
+[INFO] 	"com.netflix.eureka:eureka-client:jar:1.10.14:compile" -> "commons-configuration:commons-configuration:jar:1.10:compile" ; 
+[INFO] 	"com.netflix.eureka:eureka-client:jar:1.10.14:compile" -> "com.google.inject:guice:jar:4.1.0:compile" ; 
+[INFO] 	"com.netflix.eureka:eureka-client:jar:1.10.14:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.10.5:compile" ; 
+[INFO] 	"com.netflix.eureka:eureka-client:jar:1.10.14:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.10.5:compile" ; 
+[INFO] 	"com.netflix.eureka:eureka-client:jar:1.10.14:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.10.5.1:compile" ; 
+[INFO] 	"com.netflix.eureka:eureka-client:jar:1.10.14:compile" -> "org.codehaus.jettison:jettison:jar:1.4.0:runtime" ; 
+[INFO] 	"com.netflix.netflix-commons:netflix-eventbus:jar:0.3.0:compile" -> "com.netflix.netflix-commons:netflix-infix:jar:0.3.0:runtime" ; 
+[INFO] 	"com.netflix.netflix-commons:netflix-eventbus:jar:0.3.0:compile" -> "org.apache.commons:commons-math:jar:2.2:runtime" ; 
+[INFO] 	"com.netflix.netflix-commons:netflix-infix:jar:0.3.0:runtime" -> "commons-jxpath:commons-jxpath:jar:1.3:runtime" ; 
+[INFO] 	"com.netflix.netflix-commons:netflix-infix:jar:0.3.0:runtime" -> "joda-time:joda-time:jar:2.3:runtime" ; 
+[INFO] 	"com.netflix.netflix-commons:netflix-infix:jar:0.3.0:runtime" -> "org.antlr:antlr-runtime:jar:3.4:runtime" ; 
+[INFO] 	"com.netflix.netflix-commons:netflix-infix:jar:0.3.0:runtime" -> "com.google.code.gson:gson:jar:2.1:runtime" ; 
+[INFO] 	"org.antlr:antlr-runtime:jar:3.4:runtime" -> "org.antlr:stringtemplate:jar:3.2.1:runtime" ; 
+[INFO] 	"org.antlr:antlr-runtime:jar:3.4:runtime" -> "antlr:antlr:jar:2.7.7:runtime" ; 
+[INFO] 	"com.thoughtworks.xstream:xstream:jar:1.4.16:compile" -> "io.github.x-stream:mxparser:jar:1.2.1:compile" ; 
+[INFO] 	"io.github.x-stream:mxparser:jar:1.2.1:compile" -> "xmlpull:xmlpull:jar:1.1.3.1:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.3:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.6:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.3:compile" -> "commons-codec:commons-codec:jar:1.9:compile" ; 
+[INFO] 	"com.netflix.eureka:eureka-core:jar:1.10.14:compile" -> "com.fasterxml.woodstox:woodstox-core:jar:6.2.1:compile" ; 
+[INFO] 	"com.fasterxml.woodstox:woodstox-core:jar:6.2.1:compile" -> "org.codehaus.woodstox:stax2-api:jar:4.2.1:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-archaius:jar:2.2.9.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-netflix-archaius:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-loadbalancer:jar:2.2.9.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-loadbalancer:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-loadbalancer:jar:2.2.9.RELEASE:compile" -> "org.springframework.boot:spring-boot-starter-cache:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-loadbalancer:jar:2.2.9.RELEASE:compile" -> "com.stoyanr:evictor:jar:1.0.0:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-loadbalancer:jar:2.2.9.RELEASE:compile" -> "org.springframework.boot:spring-boot-starter-validation:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-loadbalancer:jar:2.2.9.RELEASE:compile" -> "io.projectreactor:reactor-core:jar:3.3.17.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-loadbalancer:jar:2.2.9.RELEASE:compile" -> "io.projectreactor.addons:reactor-extra:jar:3.3.6.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-validation:jar:2.3.12.RELEASE:compile" -> "org.glassfish:jakarta.el:jar:3.0.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-validation:jar:2.3.12.RELEASE:compile" -> "org.hibernate.validator:hibernate-validator:jar:6.1.7.Final:compile" ; 
+[INFO] 	"org.hibernate.validator:hibernate-validator:jar:6.1.7.Final:compile" -> "jakarta.validation:jakarta.validation-api:jar:2.0.2:compile" ; 
+[INFO] 	"org.hibernate.validator:hibernate-validator:jar:6.1.7.Final:compile" -> "org.jboss.logging:jboss-logging:jar:3.3.2.Final:compile" ; 
+[INFO] 	"org.hibernate.validator:hibernate-validator:jar:6.1.7.Final:compile" -> "com.fasterxml:classmate:jar:1.3.4:compile" ; 
+[INFO] 	"io.projectreactor:reactor-core:jar:3.3.17.RELEASE:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-cache:jar:2.3.12.RELEASE:compile" -> "org.springframework:spring-context-support:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-eureka:jar:2.3.0:compile" -> "org.slf4j:slf4j-api:jar:1.7.12:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.10.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-netflix-ribbon:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.10.RELEASE:compile" -> "com.netflix.ribbon:ribbon:jar:2.3.0:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.10.RELEASE:compile" -> "com.netflix.ribbon:ribbon-core:jar:2.3.0:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.10.RELEASE:compile" -> "com.netflix.ribbon:ribbon-httpclient:jar:2.3.0:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.10.RELEASE:compile" -> "com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.10.RELEASE:compile" -> "io.reactivex:rxjava:jar:1.3.8:compile" ; 
+[INFO] 	"com.netflix.ribbon:ribbon:jar:2.3.0:compile" -> "com.netflix.ribbon:ribbon-transport:jar:2.3.0:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon:jar:2.3.0:compile" -> "com.netflix.hystrix:hystrix-core:jar:1.5.18:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon:jar:2.3.0:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"com.netflix.ribbon:ribbon:jar:2.3.0:compile" -> "io.reactivex:rxnetty:jar:0.4.9:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-transport:jar:2.3.0:runtime" -> "io.reactivex:rxnetty-contexts:jar:0.4.9:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-transport:jar:2.3.0:runtime" -> "io.reactivex:rxnetty-servo:jar:0.4.9:runtime" ; 
+[INFO] 	"com.netflix.hystrix:hystrix-core:jar:1.5.18:runtime" -> "org.hdrhistogram:HdrHistogram:jar:2.1.9:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-core:jar:2.3.0:compile" -> "commons-lang:commons-lang:jar:2.6:compile" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-httpclient:jar:2.3.0:compile" -> "commons-collections:commons-collections:jar:3.2.2:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-httpclient:jar:2.3.0:compile" -> "com.netflix.netflix-commons:netflix-commons-util:jar:0.3.0:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile" -> "com.netflix.netflix-commons:netflix-statistics:jar:0.1.1:runtime" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "com.alibaba.msha:client-bridge-rpc-base:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "org.springframework.boot:spring-boot:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "org.aspectj:aspectjrt:jar:1.8.13:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "io.github.openfeign:feign-java8:jar:9.5.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "org.springframework.cloud:spring-cloud-openfeign-core:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "com.google.guava:guava:jar:28.1-jre:test" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-openfeign-core:jar:2.2.9.RELEASE:compile" -> "io.github.openfeign.form:feign-form-spring:jar:3.8.0:compile" ; 
+[INFO] 	"io.github.openfeign.form:feign-form-spring:jar:3.8.0:compile" -> "io.github.openfeign.form:feign-form:jar:3.8.0:compile" ; 
+[INFO] 	"io.github.openfeign.form:feign-form-spring:jar:3.8.0:compile" -> "commons-fileupload:commons-fileupload:jar:1.4:compile" ; 
+[INFO] 	"commons-fileupload:commons-fileupload:jar:1.4:compile" -> "commons-io:commons-io:jar:2.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.code.findbugs:jsr305:jar:3.0.2:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "org.checkerframework:checker-qual:jar:2.8.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.3.2:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:1.3:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.1-jre:test" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.18:test" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-commons:jar:2.2.9.RELEASE:compile" -> "org.springframework.security:spring-security-crypto:jar:5.3.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:3.0.5.RELEASE:compile" -> "org.springframework:spring-aop:jar:3.0.5.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:3.0.5.RELEASE:compile" -> "org.springframework:spring-core:jar:3.0.5.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:3.0.5.RELEASE:compile" -> "org.springframework:spring-expression:jar:3.0.5.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:3.0.5.RELEASE:compile" -> "org.springframework:spring-asm:jar:3.0.5.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-aop:jar:3.0.5.RELEASE:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:3.0.5.RELEASE:compile" -> "commons-logging:commons-logging:jar:1.1.1:compile" ; 
+[INFO] 	"com.alibaba.msha:appactive-java-api:jar:0.2.1:compile" -> "javax.validation:validation-api:jar:2.0.1.Final:compile" ; 
+[INFO] 	"com.alibaba.msha:client-rule:jar:0.2.1:compile" -> "com.alibaba.msha:client-channel:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-channel:jar:0.2.1:compile" -> "com.alibaba.msha:client-support:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-channel:jar:0.2.1:compile" -> "com.alibaba.nacos:nacos-client:jar:2.0.3:compile" ; 
+[INFO] 	"com.alibaba.msha:client-support:jar:0.2.1:compile" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"com.alibaba.msha:client-support:jar:0.2.1:compile" -> "com.alibaba:fastjson:jar:1.2.83:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "org.reflections:reflections:jar:0.9.11:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "io.prometheus:simpleclient:jar:0.5.0:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.3:compile" -> "org.apache.httpcomponents:httpcore-nio:jar:4.4.6:compile" ; 
+[INFO] 	"org.reflections:reflections:jar:0.9.11:compile" -> "org.javassist:javassist:jar:3.21.0-GA:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< com.alibaba.msha:client-spi-metainfo >----------------
+[INFO] Building client-spi-metainfo 0.2.1                               [20/25]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ client-spi-metainfo ---
+[INFO] digraph "com.alibaba.msha:client-spi-metainfo:jar:0.2.1" { 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< com.alibaba.msha:appactive-demo >-------------------
+[INFO] Building appactive-demo-0.2.1 0.2.1                              [21/25]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ appactive-demo ---
+[INFO] digraph "com.alibaba.msha:appactive-demo:pom:0.2.1" { 
+[INFO] 	"com.alibaba.msha:appactive-demo:pom:0.2.1" -> "com.alibaba.spring:spring-context-support:jar:1.0.11:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< io.appactive.demo:common >----------------------
+[INFO] Building common 0.2.1                                            [22/25]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ common ---
+[INFO] digraph "io.appactive.demo:common:jar:0.2.1" { 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1" -> "org.springframework.boot:spring-boot-starter-data-jpa:jar:2.6.8:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1" -> "org.apache.dubbo:dubbo-spring-boot-starter:jar:2.7.13:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1" -> "org.apache.dubbo:dubbo:jar:2.7.13:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1" -> "org.springframework.boot:spring-boot-starter-web:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1" -> "org.springframework:spring-beans:jar:5.3.18:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1" -> "com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:jar:2.2.7.RELEASE:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1" -> "org.springframework.cloud:spring-cloud-starter-openfeign:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1" -> "com.alibaba.nacos:nacos-client:jar:2.0.3:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1" -> "org.hibernate:hibernate-validator:jar:5.1.0.Final:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1" -> "com.alibaba.msha:client-bridge-rpc-apache-dubbo2:jar:0.2.1:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1" -> "com.alibaba.msha:client-bridge-rpc-apache-dubbo2-metainfo:jar:0.2.1:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1" -> "com.alibaba.msha:client-spi-metainfo:jar:0.2.1:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1" -> "com.alibaba.msha:client-rule:jar:0.2.1:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1" -> "com.alibaba.msha:client-bridge-rpc-springcloud-nacos:jar:0.2.1:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1" -> "com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1" -> "com.alibaba.spring:spring-context-support:jar:1.0.11:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.6.8:compile" -> "org.springframework.boot:spring-boot-starter-aop:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.6.8:compile" -> "org.springframework.boot:spring-boot-starter-jdbc:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.6.8:compile" -> "jakarta.transaction:jakarta.transaction-api:jar:1.3.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.6.8:compile" -> "jakarta.persistence:jakarta.persistence-api:jar:2.2.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.6.8:compile" -> "org.hibernate:hibernate-core:jar:5.4.32.Final:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.6.8:compile" -> "org.springframework.data:spring-data-jpa:jar:2.3.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.6.8:compile" -> "org.springframework:spring-aspects:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.3.12.RELEASE:compile" -> "org.springframework:spring-aop:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.3.12.RELEASE:compile" -> "org.aspectj:aspectjweaver:jar:1.9.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:2.3.12.RELEASE:compile" -> "com.zaxxer:HikariCP:jar:3.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:2.3.12.RELEASE:compile" -> "org.springframework:spring-jdbc:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.4.32.Final:compile" -> "net.bytebuddy:byte-buddy:jar:1.10.22:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.4.32.Final:compile" -> "antlr:antlr:jar:2.7.7:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.4.32.Final:compile" -> "org.jboss:jandex:jar:2.2.3.Final:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.4.32.Final:compile" -> "org.dom4j:dom4j:jar:2.1.3:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.4.32.Final:compile" -> "org.hibernate.common:hibernate-commons-annotations:jar:5.1.2.Final:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.4.32.Final:compile" -> "org.glassfish.jaxb:jaxb-runtime:jar:2.3.4:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.4:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.4:compile" -> "org.glassfish.jaxb:txw2:jar:2.3.4:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.4:compile" -> "com.sun.istack:istack-commons-runtime:jar:3.0.12:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.4:compile" -> "com.sun.activation:jakarta.activation:jar:1.2.2:runtime" ; 
+[INFO] 	"org.springframework.data:spring-data-jpa:jar:2.3.9.RELEASE:compile" -> "org.springframework.data:spring-data-commons:jar:2.3.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-jpa:jar:2.3.9.RELEASE:compile" -> "org.springframework:spring-orm:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-jpa:jar:2.3.9.RELEASE:compile" -> "org.springframework:spring-tx:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-jpa:jar:2.3.9.RELEASE:compile" -> "org.slf4j:slf4j-api:jar:1.7.30:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo-spring-boot-starter:jar:2.7.13:compile" -> "org.apache.dubbo:dubbo-spring-boot-autoconfigure:jar:2.7.13:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo-spring-boot-autoconfigure:jar:2.7.13:compile" -> "org.apache.dubbo:dubbo-spring-boot-autoconfigure-compatible:jar:2.7.13:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:compile" -> "org.springframework:spring-context:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:compile" -> "org.javassist:javassist:jar:3.23.1-GA:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:compile" -> "io.netty:netty-all:jar:4.1.65.Final:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:compile" -> "com.google.code.gson:gson:jar:2.8.7:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:compile" -> "org.yaml:snakeyaml:jar:1.26:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:compile" -> "com.alibaba:fastjson:jar:1.2.70:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.2.15.RELEASE:compile" -> "org.springframework:spring-expression:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.3.12.RELEASE:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.3.12.RELEASE:compile" -> "org.springframework.boot:spring-boot-starter-json:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.3.12.RELEASE:compile" -> "org.springframework.boot:spring-boot-starter-tomcat:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.3.12.RELEASE:compile" -> "org.springframework:spring-web:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.3.12.RELEASE:compile" -> "org.springframework:spring-webmvc:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.3.12.RELEASE:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.3.12.RELEASE:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.3.12.RELEASE:compile" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.3.12.RELEASE:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.13.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.3.12.RELEASE:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.30:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.13.3:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.13.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.3.12.RELEASE:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.11.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.3.12.RELEASE:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.11.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.3.12.RELEASE:compile" -> "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.11.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.3.12.RELEASE:compile" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.46:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.3.12.RELEASE:compile" -> "org.glassfish:jakarta.el:jar:3.0.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.3.12.RELEASE:compile" -> "org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.46:compile" ; 
+[INFO] 	"org.springframework:spring-beans:jar:5.3.18:compile" -> "org.springframework:spring-core:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.2.15.RELEASE:compile" -> "org.springframework:spring-jcl:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:jar:2.2.7.RELEASE:compile" -> "com.alibaba.cloud:spring-cloud-alibaba-commons:jar:2.2.7.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:jar:2.2.7.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-commons:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:jar:2.2.7.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-context:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:jar:2.2.7.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-commons:jar:2.2.9.RELEASE:compile" -> "org.springframework.security:spring-security-crypto:jar:5.3.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-netflix-ribbon:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-starter-netflix-archaius:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "com.netflix.ribbon:ribbon:jar:2.3.0:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "com.netflix.ribbon:ribbon-core:jar:2.3.0:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "com.netflix.ribbon:ribbon-httpclient:jar:2.3.0:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "io.reactivex:rxjava:jar:1.3.8:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-netflix-archaius:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-archaius:jar:2.2.9.RELEASE:compile" -> "commons-configuration:commons-configuration:jar:1.8:compile" ; 
+[INFO] 	"com.netflix.ribbon:ribbon:jar:2.3.0:compile" -> "com.netflix.ribbon:ribbon-transport:jar:2.3.0:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon:jar:2.3.0:compile" -> "javax.inject:javax.inject:jar:1:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon:jar:2.3.0:compile" -> "io.reactivex:rxnetty:jar:0.4.9:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-transport:jar:2.3.0:runtime" -> "io.reactivex:rxnetty-contexts:jar:0.4.9:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-transport:jar:2.3.0:runtime" -> "io.reactivex:rxnetty-servo:jar:0.4.9:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-core:jar:2.3.0:compile" -> "commons-lang:commons-lang:jar:2.6:compile" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-httpclient:jar:2.3.0:compile" -> "commons-collections:commons-collections:jar:3.2.2:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-httpclient:jar:2.3.0:compile" -> "com.sun.jersey:jersey-client:jar:1.19.1:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-httpclient:jar:2.3.0:compile" -> "com.sun.jersey.contribs:jersey-apache-client4:jar:1.19.1:runtime" ; 
+[INFO] 	"com.sun.jersey:jersey-client:jar:1.19.1:runtime" -> "com.sun.jersey:jersey-core:jar:1.19.1:runtime" ; 
+[INFO] 	"com.sun.jersey:jersey-core:jar:1.19.1:runtime" -> "javax.ws.rs:jsr311-api:jar:1.1.1:runtime" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-openfeign:jar:2.2.9.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-starter:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-openfeign:jar:2.2.9.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-openfeign-core:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-openfeign:jar:2.2.9.RELEASE:compile" -> "io.github.openfeign:feign-core:jar:10.12:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-openfeign:jar:2.2.9.RELEASE:compile" -> "io.github.openfeign:feign-slf4j:jar:10.12:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-openfeign:jar:2.2.9.RELEASE:compile" -> "io.github.openfeign:feign-hystrix:jar:10.12:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter:jar:2.2.9.RELEASE:compile" -> "org.springframework.security:spring-security-rsa:jar:1.0.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-rsa:jar:1.0.9.RELEASE:compile" -> "org.bouncycastle:bcpkix-jdk15on:jar:1.64:compile" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk15on:jar:1.64:compile" -> "org.bouncycastle:bcprov-jdk15on:jar:1.64:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-openfeign-core:jar:2.2.9.RELEASE:compile" -> "io.github.openfeign.form:feign-form-spring:jar:3.8.0:compile" ; 
+[INFO] 	"io.github.openfeign.form:feign-form-spring:jar:3.8.0:compile" -> "io.github.openfeign.form:feign-form:jar:3.8.0:compile" ; 
+[INFO] 	"io.github.openfeign.form:feign-form-spring:jar:3.8.0:compile" -> "commons-fileupload:commons-fileupload:jar:1.4:compile" ; 
+[INFO] 	"commons-fileupload:commons-fileupload:jar:1.4:compile" -> "commons-io:commons-io:jar:2.2:compile" ; 
+[INFO] 	"io.github.openfeign:feign-hystrix:jar:10.12:compile" -> "com.netflix.archaius:archaius-core:jar:0.7.7:compile" ; 
+[INFO] 	"io.github.openfeign:feign-hystrix:jar:10.12:compile" -> "com.netflix.hystrix:hystrix-core:jar:1.5.18:compile" ; 
+[INFO] 	"com.netflix.hystrix:hystrix-core:jar:1.5.18:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.9:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "commons-codec:commons-codec:jar:1.14:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.11.4:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "org.apache.httpcomponents:httpasyncclient:jar:4.1.4:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "org.reflections:reflections:jar:0.9.11:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "io.prometheus:simpleclient:jar:0.5.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.11.4:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.4:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.14:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.4:compile" -> "org.apache.httpcomponents:httpcore-nio:jar:4.4.14:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.4:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"org.hibernate:hibernate-validator:jar:5.1.0.Final:compile" -> "javax.validation:validation-api:jar:2.0.1.Final:compile" ; 
+[INFO] 	"org.hibernate:hibernate-validator:jar:5.1.0.Final:compile" -> "org.jboss.logging:jboss-logging:jar:3.4.2.Final:compile" ; 
+[INFO] 	"org.hibernate:hibernate-validator:jar:5.1.0.Final:compile" -> "com.fasterxml:classmate:jar:1.5.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-apache-dubbo2:jar:0.2.1:compile" -> "com.alibaba.msha:client-bridge-rpc-base:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-rule:jar:0.2.1:compile" -> "com.alibaba.msha:client-channel:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-channel:jar:0.2.1:compile" -> "com.alibaba.msha:client-support:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-nacos:jar:0.2.1:compile" -> "com.alibaba.msha:appactive-java-api:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "org.springframework.boot:spring-boot:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "org.aspectj:aspectjrt:jar:1.9.6:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "io.github.openfeign:feign-java8:jar:9.5.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "com.google.guava:guava:jar:30.0-jre:compile" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile" -> "com.netflix.netflix-commons:netflix-statistics:jar:0.1.1:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile" -> "com.netflix.servo:servo-core:jar:0.12.21:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile" -> "com.netflix.netflix-commons:netflix-commons-util:jar:0.3.0:runtime" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:compile" -> "org.checkerframework:checker-qual:jar:3.5.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.3.4:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< io.appactive.demo:frontend >---------------------
+[INFO] Building frontend 0.2.1                                          [23/25]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/springframework/boot/spring-boot-maven-plugin/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ frontend ---
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/appactive/demo/common/0.2.1/common-0.2.1.jar
+[INFO] digraph "io.appactive.demo:frontend:jar:0.2.1" { 
+[INFO] 	"io.appactive.demo:frontend:jar:0.2.1" -> "io.appactive.demo:common:jar:0.2.1:compile" ; 
+[INFO] 	"io.appactive.demo:frontend:jar:0.2.1" -> "org.springframework.boot:spring-boot-starter-aop:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"io.appactive.demo:frontend:jar:0.2.1" -> "org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"io.appactive.demo:frontend:jar:0.2.1" -> "com.alibaba.msha:client-bridge-servlet:jar:0.2.1:compile" ; 
+[INFO] 	"io.appactive.demo:frontend:jar:0.2.1" -> "com.alibaba.spring:spring-context-support:jar:1.0.11:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "org.apache.dubbo:dubbo-spring-boot-starter:jar:2.7.13:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "org.apache.dubbo:dubbo:jar:2.7.13:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "org.springframework.boot:spring-boot-starter-web:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "org.springframework:spring-beans:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:jar:2.2.7.RELEASE:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "org.springframework.cloud:spring-cloud-starter-openfeign:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "com.alibaba.nacos:nacos-client:jar:2.0.3:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "org.hibernate:hibernate-validator:jar:5.1.0.Final:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "com.alibaba.msha:client-bridge-rpc-apache-dubbo2:jar:0.2.1:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "com.alibaba.msha:client-bridge-rpc-apache-dubbo2-metainfo:jar:0.2.1:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "com.alibaba.msha:client-spi-metainfo:jar:0.2.1:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "com.alibaba.msha:client-rule:jar:0.2.1:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "com.alibaba.msha:client-bridge-rpc-springcloud-nacos:jar:0.2.1:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo-spring-boot-starter:jar:2.7.13:compile" -> "org.apache.dubbo:dubbo-spring-boot-autoconfigure:jar:2.7.13:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo-spring-boot-autoconfigure:jar:2.7.13:compile" -> "org.apache.dubbo:dubbo-spring-boot-autoconfigure-compatible:jar:2.7.13:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:compile" -> "org.springframework:spring-context:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:compile" -> "org.javassist:javassist:jar:3.23.1-GA:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:compile" -> "io.netty:netty-all:jar:4.1.65.Final:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:compile" -> "com.google.code.gson:gson:jar:2.8.7:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:compile" -> "org.yaml:snakeyaml:jar:1.26:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:compile" -> "com.alibaba:fastjson:jar:1.2.70:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.2.15.RELEASE:compile" -> "org.springframework:spring-expression:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.3.12.RELEASE:compile" -> "org.springframework.boot:spring-boot-starter-json:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.3.12.RELEASE:compile" -> "org.springframework.boot:spring-boot-starter-tomcat:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.3.12.RELEASE:compile" -> "org.springframework:spring-web:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.3.12.RELEASE:compile" -> "org.springframework:spring-webmvc:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.3.12.RELEASE:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.11.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.3.12.RELEASE:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.11.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.3.12.RELEASE:compile" -> "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.11.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.3.12.RELEASE:compile" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.46:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.3.12.RELEASE:compile" -> "org.glassfish:jakarta.el:jar:3.0.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.3.12.RELEASE:compile" -> "org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.46:compile" ; 
+[INFO] 	"org.springframework:spring-beans:jar:5.2.15.RELEASE:compile" -> "org.springframework:spring-core:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.2.15.RELEASE:compile" -> "org.springframework:spring-jcl:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:jar:2.2.7.RELEASE:compile" -> "com.alibaba.cloud:spring-cloud-alibaba-commons:jar:2.2.7.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:jar:2.2.7.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-commons:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:jar:2.2.7.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-context:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:jar:2.2.7.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-commons:jar:2.2.9.RELEASE:compile" -> "org.springframework.security:spring-security-crypto:jar:5.3.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-netflix-ribbon:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-starter-netflix-archaius:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "com.netflix.ribbon:ribbon:jar:2.3.0:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "com.netflix.ribbon:ribbon-core:jar:2.3.0:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "com.netflix.ribbon:ribbon-httpclient:jar:2.3.0:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "io.reactivex:rxjava:jar:1.3.8:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-netflix-archaius:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-archaius:jar:2.2.9.RELEASE:compile" -> "commons-configuration:commons-configuration:jar:1.8:compile" ; 
+[INFO] 	"com.netflix.ribbon:ribbon:jar:2.3.0:compile" -> "com.netflix.ribbon:ribbon-transport:jar:2.3.0:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon:jar:2.3.0:compile" -> "javax.inject:javax.inject:jar:1:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon:jar:2.3.0:compile" -> "io.reactivex:rxnetty:jar:0.4.9:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-transport:jar:2.3.0:runtime" -> "io.reactivex:rxnetty-contexts:jar:0.4.9:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-transport:jar:2.3.0:runtime" -> "io.reactivex:rxnetty-servo:jar:0.4.9:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-core:jar:2.3.0:compile" -> "commons-lang:commons-lang:jar:2.6:compile" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-httpclient:jar:2.3.0:compile" -> "commons-collections:commons-collections:jar:3.2.2:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-httpclient:jar:2.3.0:compile" -> "com.sun.jersey:jersey-client:jar:1.19.1:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-httpclient:jar:2.3.0:compile" -> "com.sun.jersey.contribs:jersey-apache-client4:jar:1.19.1:runtime" ; 
+[INFO] 	"com.sun.jersey:jersey-client:jar:1.19.1:runtime" -> "com.sun.jersey:jersey-core:jar:1.19.1:runtime" ; 
+[INFO] 	"com.sun.jersey:jersey-core:jar:1.19.1:runtime" -> "javax.ws.rs:jsr311-api:jar:1.1.1:runtime" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-openfeign:jar:2.2.9.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-starter:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-openfeign:jar:2.2.9.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-openfeign-core:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-openfeign:jar:2.2.9.RELEASE:compile" -> "io.github.openfeign:feign-core:jar:10.12:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-openfeign:jar:2.2.9.RELEASE:compile" -> "io.github.openfeign:feign-slf4j:jar:10.12:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-openfeign:jar:2.2.9.RELEASE:compile" -> "io.github.openfeign:feign-hystrix:jar:10.12:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter:jar:2.2.9.RELEASE:compile" -> "org.springframework.security:spring-security-rsa:jar:1.0.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-rsa:jar:1.0.9.RELEASE:compile" -> "org.bouncycastle:bcpkix-jdk15on:jar:1.64:compile" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk15on:jar:1.64:compile" -> "org.bouncycastle:bcprov-jdk15on:jar:1.64:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-openfeign-core:jar:2.2.9.RELEASE:compile" -> "io.github.openfeign.form:feign-form-spring:jar:3.8.0:compile" ; 
+[INFO] 	"io.github.openfeign.form:feign-form-spring:jar:3.8.0:compile" -> "io.github.openfeign.form:feign-form:jar:3.8.0:compile" ; 
+[INFO] 	"io.github.openfeign.form:feign-form-spring:jar:3.8.0:compile" -> "commons-fileupload:commons-fileupload:jar:1.4:compile" ; 
+[INFO] 	"commons-fileupload:commons-fileupload:jar:1.4:compile" -> "commons-io:commons-io:jar:2.2:compile" ; 
+[INFO] 	"io.github.openfeign:feign-hystrix:jar:10.12:compile" -> "com.netflix.archaius:archaius-core:jar:0.7.7:compile" ; 
+[INFO] 	"io.github.openfeign:feign-hystrix:jar:10.12:compile" -> "com.netflix.hystrix:hystrix-core:jar:1.5.18:compile" ; 
+[INFO] 	"com.netflix.hystrix:hystrix-core:jar:1.5.18:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.9:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "commons-codec:commons-codec:jar:1.14:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.11.4:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "org.apache.httpcomponents:httpasyncclient:jar:4.1.4:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "org.reflections:reflections:jar:0.9.11:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "io.prometheus:simpleclient:jar:0.5.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.11.4:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.4:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.14:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.4:compile" -> "org.apache.httpcomponents:httpcore-nio:jar:4.4.14:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.4:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"org.hibernate:hibernate-validator:jar:5.1.0.Final:compile" -> "javax.validation:validation-api:jar:2.0.1.Final:compile" ; 
+[INFO] 	"org.hibernate:hibernate-validator:jar:5.1.0.Final:compile" -> "org.jboss.logging:jboss-logging:jar:3.4.2.Final:compile" ; 
+[INFO] 	"org.hibernate:hibernate-validator:jar:5.1.0.Final:compile" -> "com.fasterxml:classmate:jar:1.5.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-apache-dubbo2:jar:0.2.1:compile" -> "com.alibaba.msha:client-bridge-rpc-base:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-rule:jar:0.2.1:compile" -> "com.alibaba.msha:client-channel:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-nacos:jar:0.2.1:compile" -> "com.alibaba.msha:appactive-java-api:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "org.springframework.boot:spring-boot:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "org.aspectj:aspectjrt:jar:1.9.6:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "io.github.openfeign:feign-java8:jar:9.5.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "com.google.guava:guava:jar:30.0-jre:compile" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile" -> "com.netflix.netflix-commons:netflix-statistics:jar:0.1.1:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile" -> "com.netflix.servo:servo-core:jar:0.12.21:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile" -> "com.netflix.netflix-commons:netflix-commons-util:jar:0.3.0:runtime" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:compile" -> "org.checkerframework:checker-qual:jar:3.5.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.3.4:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.3.12.RELEASE:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.3.12.RELEASE:compile" -> "org.springframework:spring-aop:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.3.12.RELEASE:compile" -> "org.aspectj:aspectjweaver:jar:1.9.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.3.12.RELEASE:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.3.12.RELEASE:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.3.12.RELEASE:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.13.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.3.12.RELEASE:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.30:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.13.3:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.13.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.3.12.RELEASE:compile" -> "org.thymeleaf:thymeleaf-spring5:jar:3.0.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.3.12.RELEASE:compile" -> "org.thymeleaf.extras:thymeleaf-extras-java8time:jar:3.0.4.RELEASE:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf-spring5:jar:3.0.12.RELEASE:compile" -> "org.thymeleaf:thymeleaf:jar:3.0.12.RELEASE:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf-spring5:jar:3.0.12.RELEASE:compile" -> "org.slf4j:slf4j-api:jar:1.7.30:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.0.12.RELEASE:compile" -> "org.attoparser:attoparser:jar:2.0.5.RELEASE:compile" ; 
+[INFO] 	"org.thymeleaf:thymeleaf:jar:3.0.12.RELEASE:compile" -> "org.unbescape:unbescape:jar:1.1.6.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-servlet:jar:0.2.1:compile" -> "com.alibaba.msha:client-support:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-support:jar:0.2.1:compile" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< io.appactive.demo:product >----------------------
+[INFO] Building product 0.2.1                                           [24/25]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ product ---
+[INFO] digraph "io.appactive.demo:product:jar:0.2.1" { 
+[INFO] 	"io.appactive.demo:product:jar:0.2.1" -> "io.appactive.demo:common:jar:0.2.1:compile" ; 
+[INFO] 	"io.appactive.demo:product:jar:0.2.1" -> "mysql:mysql-connector-java:jar:5.1.40:compile" ; 
+[INFO] 	"io.appactive.demo:product:jar:0.2.1" -> "com.alibaba.msha:client-bridge-servlet:jar:0.2.1:compile" ; 
+[INFO] 	"io.appactive.demo:product:jar:0.2.1" -> "com.alibaba.spring:spring-context-support:jar:1.0.11:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "org.springframework.boot:spring-boot-starter-data-jpa:jar:2.6.8:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "org.apache.dubbo:dubbo-spring-boot-starter:jar:2.7.13:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "org.apache.dubbo:dubbo:jar:2.7.13:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "org.springframework.boot:spring-boot-starter-web:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "org.springframework:spring-beans:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:jar:2.2.7.RELEASE:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "org.springframework.cloud:spring-cloud-starter-openfeign:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "com.alibaba.nacos:nacos-client:jar:2.0.3:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "org.hibernate:hibernate-validator:jar:5.1.0.Final:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "com.alibaba.msha:client-bridge-rpc-apache-dubbo2:jar:0.2.1:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "com.alibaba.msha:client-bridge-rpc-apache-dubbo2-metainfo:jar:0.2.1:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "com.alibaba.msha:client-spi-metainfo:jar:0.2.1:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "com.alibaba.msha:client-rule:jar:0.2.1:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "com.alibaba.msha:client-bridge-rpc-springcloud-nacos:jar:0.2.1:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.6.8:compile" -> "org.springframework.boot:spring-boot-starter-aop:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.6.8:compile" -> "org.springframework.boot:spring-boot-starter-jdbc:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.6.8:compile" -> "jakarta.transaction:jakarta.transaction-api:jar:1.3.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.6.8:compile" -> "jakarta.persistence:jakarta.persistence-api:jar:2.2.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.6.8:compile" -> "org.hibernate:hibernate-core:jar:5.4.32.Final:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.6.8:compile" -> "org.springframework.data:spring-data-jpa:jar:2.3.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.6.8:compile" -> "org.springframework:spring-aspects:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.3.12.RELEASE:compile" -> "org.springframework:spring-aop:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.3.12.RELEASE:compile" -> "org.aspectj:aspectjweaver:jar:1.9.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:2.3.12.RELEASE:compile" -> "com.zaxxer:HikariCP:jar:3.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:2.3.12.RELEASE:compile" -> "org.springframework:spring-jdbc:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.4.32.Final:compile" -> "net.bytebuddy:byte-buddy:jar:1.10.22:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.4.32.Final:compile" -> "antlr:antlr:jar:2.7.7:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.4.32.Final:compile" -> "org.jboss:jandex:jar:2.2.3.Final:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.4.32.Final:compile" -> "org.dom4j:dom4j:jar:2.1.3:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.4.32.Final:compile" -> "org.hibernate.common:hibernate-commons-annotations:jar:5.1.2.Final:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.4.32.Final:compile" -> "org.glassfish.jaxb:jaxb-runtime:jar:2.3.4:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.4:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.4:compile" -> "org.glassfish.jaxb:txw2:jar:2.3.4:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.4:compile" -> "com.sun.istack:istack-commons-runtime:jar:3.0.12:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.4:compile" -> "com.sun.activation:jakarta.activation:jar:1.2.2:runtime" ; 
+[INFO] 	"org.springframework.data:spring-data-jpa:jar:2.3.9.RELEASE:compile" -> "org.springframework.data:spring-data-commons:jar:2.3.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-jpa:jar:2.3.9.RELEASE:compile" -> "org.springframework:spring-orm:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-jpa:jar:2.3.9.RELEASE:compile" -> "org.springframework:spring-tx:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-jpa:jar:2.3.9.RELEASE:compile" -> "org.slf4j:slf4j-api:jar:1.7.30:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo-spring-boot-starter:jar:2.7.13:compile" -> "org.apache.dubbo:dubbo-spring-boot-autoconfigure:jar:2.7.13:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo-spring-boot-autoconfigure:jar:2.7.13:compile" -> "org.apache.dubbo:dubbo-spring-boot-autoconfigure-compatible:jar:2.7.13:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:compile" -> "org.springframework:spring-context:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:compile" -> "org.javassist:javassist:jar:3.23.1-GA:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:compile" -> "io.netty:netty-all:jar:4.1.65.Final:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:compile" -> "com.google.code.gson:gson:jar:2.8.7:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:compile" -> "org.yaml:snakeyaml:jar:1.26:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:compile" -> "com.alibaba:fastjson:jar:1.2.70:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.2.15.RELEASE:compile" -> "org.springframework:spring-expression:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.3.12.RELEASE:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.3.12.RELEASE:compile" -> "org.springframework.boot:spring-boot-starter-json:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.3.12.RELEASE:compile" -> "org.springframework.boot:spring-boot-starter-tomcat:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.3.12.RELEASE:compile" -> "org.springframework:spring-web:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.3.12.RELEASE:compile" -> "org.springframework:spring-webmvc:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.3.12.RELEASE:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.3.12.RELEASE:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.3.12.RELEASE:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.13.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.3.12.RELEASE:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.30:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.13.3:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.13.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.3.12.RELEASE:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.11.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.3.12.RELEASE:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.11.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.3.12.RELEASE:compile" -> "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.11.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.3.12.RELEASE:compile" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.46:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.3.12.RELEASE:compile" -> "org.glassfish:jakarta.el:jar:3.0.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.3.12.RELEASE:compile" -> "org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.46:compile" ; 
+[INFO] 	"org.springframework:spring-beans:jar:5.2.15.RELEASE:compile" -> "org.springframework:spring-core:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.2.15.RELEASE:compile" -> "org.springframework:spring-jcl:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:jar:2.2.7.RELEASE:compile" -> "com.alibaba.cloud:spring-cloud-alibaba-commons:jar:2.2.7.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:jar:2.2.7.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-commons:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:jar:2.2.7.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-context:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:jar:2.2.7.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-commons:jar:2.2.9.RELEASE:compile" -> "org.springframework.security:spring-security-crypto:jar:5.3.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-netflix-ribbon:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-starter-netflix-archaius:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "com.netflix.ribbon:ribbon:jar:2.3.0:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "com.netflix.ribbon:ribbon-core:jar:2.3.0:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "com.netflix.ribbon:ribbon-httpclient:jar:2.3.0:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "io.reactivex:rxjava:jar:1.3.8:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-netflix-archaius:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-archaius:jar:2.2.9.RELEASE:compile" -> "commons-configuration:commons-configuration:jar:1.8:compile" ; 
+[INFO] 	"com.netflix.ribbon:ribbon:jar:2.3.0:compile" -> "com.netflix.ribbon:ribbon-transport:jar:2.3.0:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon:jar:2.3.0:compile" -> "javax.inject:javax.inject:jar:1:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon:jar:2.3.0:compile" -> "io.reactivex:rxnetty:jar:0.4.9:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-transport:jar:2.3.0:runtime" -> "io.reactivex:rxnetty-contexts:jar:0.4.9:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-transport:jar:2.3.0:runtime" -> "io.reactivex:rxnetty-servo:jar:0.4.9:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-core:jar:2.3.0:compile" -> "commons-lang:commons-lang:jar:2.6:compile" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-httpclient:jar:2.3.0:compile" -> "commons-collections:commons-collections:jar:3.2.2:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-httpclient:jar:2.3.0:compile" -> "com.sun.jersey:jersey-client:jar:1.19.1:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-httpclient:jar:2.3.0:compile" -> "com.sun.jersey.contribs:jersey-apache-client4:jar:1.19.1:runtime" ; 
+[INFO] 	"com.sun.jersey:jersey-client:jar:1.19.1:runtime" -> "com.sun.jersey:jersey-core:jar:1.19.1:runtime" ; 
+[INFO] 	"com.sun.jersey:jersey-core:jar:1.19.1:runtime" -> "javax.ws.rs:jsr311-api:jar:1.1.1:runtime" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-openfeign:jar:2.2.9.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-starter:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-openfeign:jar:2.2.9.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-openfeign-core:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-openfeign:jar:2.2.9.RELEASE:compile" -> "io.github.openfeign:feign-core:jar:10.12:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-openfeign:jar:2.2.9.RELEASE:compile" -> "io.github.openfeign:feign-slf4j:jar:10.12:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-openfeign:jar:2.2.9.RELEASE:compile" -> "io.github.openfeign:feign-hystrix:jar:10.12:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter:jar:2.2.9.RELEASE:compile" -> "org.springframework.security:spring-security-rsa:jar:1.0.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-rsa:jar:1.0.9.RELEASE:compile" -> "org.bouncycastle:bcpkix-jdk15on:jar:1.64:compile" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk15on:jar:1.64:compile" -> "org.bouncycastle:bcprov-jdk15on:jar:1.64:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-openfeign-core:jar:2.2.9.RELEASE:compile" -> "io.github.openfeign.form:feign-form-spring:jar:3.8.0:compile" ; 
+[INFO] 	"io.github.openfeign.form:feign-form-spring:jar:3.8.0:compile" -> "io.github.openfeign.form:feign-form:jar:3.8.0:compile" ; 
+[INFO] 	"io.github.openfeign.form:feign-form-spring:jar:3.8.0:compile" -> "commons-fileupload:commons-fileupload:jar:1.4:compile" ; 
+[INFO] 	"commons-fileupload:commons-fileupload:jar:1.4:compile" -> "commons-io:commons-io:jar:2.2:compile" ; 
+[INFO] 	"io.github.openfeign:feign-hystrix:jar:10.12:compile" -> "com.netflix.archaius:archaius-core:jar:0.7.7:compile" ; 
+[INFO] 	"io.github.openfeign:feign-hystrix:jar:10.12:compile" -> "com.netflix.hystrix:hystrix-core:jar:1.5.18:compile" ; 
+[INFO] 	"com.netflix.hystrix:hystrix-core:jar:1.5.18:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.9:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "commons-codec:commons-codec:jar:1.14:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.11.4:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "org.apache.httpcomponents:httpasyncclient:jar:4.1.4:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "org.reflections:reflections:jar:0.9.11:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "io.prometheus:simpleclient:jar:0.5.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.11.4:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.4:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.14:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.4:compile" -> "org.apache.httpcomponents:httpcore-nio:jar:4.4.14:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.4:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"org.hibernate:hibernate-validator:jar:5.1.0.Final:compile" -> "javax.validation:validation-api:jar:2.0.1.Final:compile" ; 
+[INFO] 	"org.hibernate:hibernate-validator:jar:5.1.0.Final:compile" -> "org.jboss.logging:jboss-logging:jar:3.4.2.Final:compile" ; 
+[INFO] 	"org.hibernate:hibernate-validator:jar:5.1.0.Final:compile" -> "com.fasterxml:classmate:jar:1.5.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-apache-dubbo2:jar:0.2.1:compile" -> "com.alibaba.msha:client-bridge-rpc-base:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-rule:jar:0.2.1:compile" -> "com.alibaba.msha:client-channel:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-nacos:jar:0.2.1:compile" -> "com.alibaba.msha:appactive-java-api:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "org.springframework.boot:spring-boot:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "org.aspectj:aspectjrt:jar:1.9.6:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "io.github.openfeign:feign-java8:jar:9.5.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "com.google.guava:guava:jar:30.0-jre:compile" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile" -> "com.netflix.netflix-commons:netflix-statistics:jar:0.1.1:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile" -> "com.netflix.servo:servo-core:jar:0.12.21:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile" -> "com.netflix.netflix-commons:netflix-commons-util:jar:0.3.0:runtime" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:compile" -> "org.checkerframework:checker-qual:jar:3.5.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.3.4:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-servlet:jar:0.2.1:compile" -> "com.alibaba.msha:client-support:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-support:jar:0.2.1:compile" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< io.appactive.demo:storage >----------------------
+[INFO] Building storage 0.2.1                                           [25/25]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ storage ---
+[INFO] digraph "io.appactive.demo:storage:jar:0.2.1" { 
+[INFO] 	"io.appactive.demo:storage:jar:0.2.1" -> "io.appactive.demo:common:jar:0.2.1:compile" ; 
+[INFO] 	"io.appactive.demo:storage:jar:0.2.1" -> "mysql:mysql-connector-java:jar:5.1.40:compile" ; 
+[INFO] 	"io.appactive.demo:storage:jar:0.2.1" -> "com.alibaba.msha:client-bridge-servlet:jar:0.2.1:compile" ; 
+[INFO] 	"io.appactive.demo:storage:jar:0.2.1" -> "com.alibaba.msha:client-bridge-db-mysql:jar:0.2.1:compile" ; 
+[INFO] 	"io.appactive.demo:storage:jar:0.2.1" -> "com.alibaba.spring:spring-context-support:jar:1.0.11:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "org.springframework.boot:spring-boot-starter-data-jpa:jar:2.6.8:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "org.apache.dubbo:dubbo-spring-boot-starter:jar:2.7.13:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "org.apache.dubbo:dubbo:jar:2.7.13:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "org.springframework.boot:spring-boot-starter-web:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "org.springframework:spring-beans:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:jar:2.2.7.RELEASE:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "org.springframework.cloud:spring-cloud-starter-openfeign:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "com.alibaba.nacos:nacos-client:jar:2.0.3:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "org.hibernate:hibernate-validator:jar:5.1.0.Final:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "com.alibaba.msha:client-bridge-rpc-apache-dubbo2:jar:0.2.1:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "com.alibaba.msha:client-bridge-rpc-apache-dubbo2-metainfo:jar:0.2.1:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "com.alibaba.msha:client-spi-metainfo:jar:0.2.1:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "com.alibaba.msha:client-rule:jar:0.2.1:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "com.alibaba.msha:client-bridge-rpc-springcloud-nacos:jar:0.2.1:compile" ; 
+[INFO] 	"io.appactive.demo:common:jar:0.2.1:compile" -> "com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.6.8:compile" -> "org.springframework.boot:spring-boot-starter-aop:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.6.8:compile" -> "org.springframework.boot:spring-boot-starter-jdbc:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.6.8:compile" -> "jakarta.transaction:jakarta.transaction-api:jar:1.3.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.6.8:compile" -> "jakarta.persistence:jakarta.persistence-api:jar:2.2.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.6.8:compile" -> "org.hibernate:hibernate-core:jar:5.4.32.Final:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.6.8:compile" -> "org.springframework.data:spring-data-jpa:jar:2.3.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.6.8:compile" -> "org.springframework:spring-aspects:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.3.12.RELEASE:compile" -> "org.springframework:spring-aop:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.3.12.RELEASE:compile" -> "org.aspectj:aspectjweaver:jar:1.9.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:2.3.12.RELEASE:compile" -> "com.zaxxer:HikariCP:jar:3.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:2.3.12.RELEASE:compile" -> "org.springframework:spring-jdbc:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.4.32.Final:compile" -> "net.bytebuddy:byte-buddy:jar:1.10.22:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.4.32.Final:compile" -> "antlr:antlr:jar:2.7.7:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.4.32.Final:compile" -> "org.jboss:jandex:jar:2.2.3.Final:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.4.32.Final:compile" -> "org.dom4j:dom4j:jar:2.1.3:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.4.32.Final:compile" -> "org.hibernate.common:hibernate-commons-annotations:jar:5.1.2.Final:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.4.32.Final:compile" -> "org.glassfish.jaxb:jaxb-runtime:jar:2.3.4:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.4:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.4:compile" -> "org.glassfish.jaxb:txw2:jar:2.3.4:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.4:compile" -> "com.sun.istack:istack-commons-runtime:jar:3.0.12:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.4:compile" -> "com.sun.activation:jakarta.activation:jar:1.2.2:runtime" ; 
+[INFO] 	"org.springframework.data:spring-data-jpa:jar:2.3.9.RELEASE:compile" -> "org.springframework.data:spring-data-commons:jar:2.3.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-jpa:jar:2.3.9.RELEASE:compile" -> "org.springframework:spring-orm:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-jpa:jar:2.3.9.RELEASE:compile" -> "org.springframework:spring-tx:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-jpa:jar:2.3.9.RELEASE:compile" -> "org.slf4j:slf4j-api:jar:1.7.30:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo-spring-boot-starter:jar:2.7.13:compile" -> "org.apache.dubbo:dubbo-spring-boot-autoconfigure:jar:2.7.13:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo-spring-boot-autoconfigure:jar:2.7.13:compile" -> "org.apache.dubbo:dubbo-spring-boot-autoconfigure-compatible:jar:2.7.13:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:compile" -> "org.springframework:spring-context:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:compile" -> "org.javassist:javassist:jar:3.23.1-GA:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:compile" -> "io.netty:netty-all:jar:4.1.65.Final:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:compile" -> "com.google.code.gson:gson:jar:2.8.7:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:compile" -> "org.yaml:snakeyaml:jar:1.26:compile" ; 
+[INFO] 	"org.apache.dubbo:dubbo:jar:2.7.13:compile" -> "com.alibaba:fastjson:jar:1.2.70:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.2.15.RELEASE:compile" -> "org.springframework:spring-expression:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.3.12.RELEASE:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.3.12.RELEASE:compile" -> "org.springframework.boot:spring-boot-starter-json:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.3.12.RELEASE:compile" -> "org.springframework.boot:spring-boot-starter-tomcat:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.3.12.RELEASE:compile" -> "org.springframework:spring-web:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.3.12.RELEASE:compile" -> "org.springframework:spring-webmvc:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.3.12.RELEASE:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.3.12.RELEASE:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.3.12.RELEASE:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.13.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.3.12.RELEASE:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.30:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.13.3:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.13.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.3.12.RELEASE:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.11.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.3.12.RELEASE:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.11.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.3.12.RELEASE:compile" -> "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.11.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.3.12.RELEASE:compile" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.46:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.3.12.RELEASE:compile" -> "org.glassfish:jakarta.el:jar:3.0.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.3.12.RELEASE:compile" -> "org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.46:compile" ; 
+[INFO] 	"org.springframework:spring-beans:jar:5.2.15.RELEASE:compile" -> "org.springframework:spring-core:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.2.15.RELEASE:compile" -> "org.springframework:spring-jcl:jar:5.2.15.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:jar:2.2.7.RELEASE:compile" -> "com.alibaba.cloud:spring-cloud-alibaba-commons:jar:2.2.7.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:jar:2.2.7.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-commons:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:jar:2.2.7.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-context:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:jar:2.2.7.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-commons:jar:2.2.9.RELEASE:compile" -> "org.springframework.security:spring-security-crypto:jar:5.3.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-netflix-ribbon:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-starter-netflix-archaius:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "com.netflix.ribbon:ribbon:jar:2.3.0:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "com.netflix.ribbon:ribbon-core:jar:2.3.0:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "com.netflix.ribbon:ribbon-httpclient:jar:2.3.0:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "io.reactivex:rxjava:jar:1.3.8:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-netflix-ribbon:jar:2.2.9.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-netflix-archaius:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-netflix-archaius:jar:2.2.9.RELEASE:compile" -> "commons-configuration:commons-configuration:jar:1.8:compile" ; 
+[INFO] 	"com.netflix.ribbon:ribbon:jar:2.3.0:compile" -> "com.netflix.ribbon:ribbon-transport:jar:2.3.0:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon:jar:2.3.0:compile" -> "javax.inject:javax.inject:jar:1:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon:jar:2.3.0:compile" -> "io.reactivex:rxnetty:jar:0.4.9:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-transport:jar:2.3.0:runtime" -> "io.reactivex:rxnetty-contexts:jar:0.4.9:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-transport:jar:2.3.0:runtime" -> "io.reactivex:rxnetty-servo:jar:0.4.9:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-core:jar:2.3.0:compile" -> "commons-lang:commons-lang:jar:2.6:compile" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-httpclient:jar:2.3.0:compile" -> "commons-collections:commons-collections:jar:3.2.2:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-httpclient:jar:2.3.0:compile" -> "com.sun.jersey:jersey-client:jar:1.19.1:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-httpclient:jar:2.3.0:compile" -> "com.sun.jersey.contribs:jersey-apache-client4:jar:1.19.1:runtime" ; 
+[INFO] 	"com.sun.jersey:jersey-client:jar:1.19.1:runtime" -> "com.sun.jersey:jersey-core:jar:1.19.1:runtime" ; 
+[INFO] 	"com.sun.jersey:jersey-core:jar:1.19.1:runtime" -> "javax.ws.rs:jsr311-api:jar:1.1.1:runtime" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-openfeign:jar:2.2.9.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-starter:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-openfeign:jar:2.2.9.RELEASE:compile" -> "org.springframework.cloud:spring-cloud-openfeign-core:jar:2.2.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-openfeign:jar:2.2.9.RELEASE:compile" -> "io.github.openfeign:feign-core:jar:10.12:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-openfeign:jar:2.2.9.RELEASE:compile" -> "io.github.openfeign:feign-slf4j:jar:10.12:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter-openfeign:jar:2.2.9.RELEASE:compile" -> "io.github.openfeign:feign-hystrix:jar:10.12:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-starter:jar:2.2.9.RELEASE:compile" -> "org.springframework.security:spring-security-rsa:jar:1.0.9.RELEASE:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-rsa:jar:1.0.9.RELEASE:compile" -> "org.bouncycastle:bcpkix-jdk15on:jar:1.64:compile" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk15on:jar:1.64:compile" -> "org.bouncycastle:bcprov-jdk15on:jar:1.64:compile" ; 
+[INFO] 	"org.springframework.cloud:spring-cloud-openfeign-core:jar:2.2.9.RELEASE:compile" -> "io.github.openfeign.form:feign-form-spring:jar:3.8.0:compile" ; 
+[INFO] 	"io.github.openfeign.form:feign-form-spring:jar:3.8.0:compile" -> "io.github.openfeign.form:feign-form:jar:3.8.0:compile" ; 
+[INFO] 	"io.github.openfeign.form:feign-form-spring:jar:3.8.0:compile" -> "commons-fileupload:commons-fileupload:jar:1.4:compile" ; 
+[INFO] 	"commons-fileupload:commons-fileupload:jar:1.4:compile" -> "commons-io:commons-io:jar:2.2:compile" ; 
+[INFO] 	"io.github.openfeign:feign-hystrix:jar:10.12:compile" -> "com.netflix.archaius:archaius-core:jar:0.7.7:compile" ; 
+[INFO] 	"io.github.openfeign:feign-hystrix:jar:10.12:compile" -> "com.netflix.hystrix:hystrix-core:jar:1.5.18:compile" ; 
+[INFO] 	"com.netflix.hystrix:hystrix-core:jar:1.5.18:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.9:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "commons-codec:commons-codec:jar:1.14:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.11.4:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "org.apache.httpcomponents:httpasyncclient:jar:4.1.4:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "org.reflections:reflections:jar:0.9.11:compile" ; 
+[INFO] 	"com.alibaba.nacos:nacos-client:jar:2.0.3:compile" -> "io.prometheus:simpleclient:jar:0.5.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.11.4:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.4:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.14:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.4:compile" -> "org.apache.httpcomponents:httpcore-nio:jar:4.4.14:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpasyncclient:jar:4.1.4:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"org.hibernate:hibernate-validator:jar:5.1.0.Final:compile" -> "javax.validation:validation-api:jar:2.0.1.Final:compile" ; 
+[INFO] 	"org.hibernate:hibernate-validator:jar:5.1.0.Final:compile" -> "org.jboss.logging:jboss-logging:jar:3.4.2.Final:compile" ; 
+[INFO] 	"org.hibernate:hibernate-validator:jar:5.1.0.Final:compile" -> "com.fasterxml:classmate:jar:1.5.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-apache-dubbo2:jar:0.2.1:compile" -> "com.alibaba.msha:client-bridge-rpc-base:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-rule:jar:0.2.1:compile" -> "com.alibaba.msha:client-channel:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-nacos:jar:0.2.1:compile" -> "com.alibaba.msha:appactive-java-api:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "org.springframework.boot:spring-boot:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "org.aspectj:aspectjrt:jar:1.9.6:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.3.12.RELEASE:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "io.github.openfeign:feign-java8:jar:9.5.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-rpc-springcloud-common:jar:0.2.1:compile" -> "com.google.guava:guava:jar:30.0-jre:compile" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile" -> "com.netflix.netflix-commons:netflix-statistics:jar:0.1.1:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile" -> "com.netflix.servo:servo-core:jar:0.12.21:runtime" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.3.0:compile" -> "com.netflix.netflix-commons:netflix-commons-util:jar:0.3.0:runtime" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:compile" -> "org.checkerframework:checker-qual:jar:3.5.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.3.4:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"com.alibaba.msha:client-bridge-servlet:jar:0.2.1:compile" -> "com.alibaba.msha:client-support:jar:0.2.1:compile" ; 
+[INFO] 	"com.alibaba.msha:client-support:jar:0.2.1:compile" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for msha-appactive-0.2.1 0.2.1:
+[INFO] 
+[INFO] msha-appactive-0.2.1 ............................... SUCCESS [  4.485 s]
+[INFO] appactive-portal-0.2.1 ............................. SUCCESS [  0.229 s]
+[INFO] appactive-gateway-0.2.1 ............................ SUCCESS [  0.040 s]
+[INFO] appactive-java-api-0.2.1 ........................... SUCCESS [  0.223 s]
+[INFO] appactive-java-client-0.2.1 ........................ SUCCESS [  0.084 s]
+[INFO] client-support ..................................... SUCCESS [  0.171 s]
+[INFO] client-channel ..................................... SUCCESS [  0.574 s]
+[INFO] client-rule ........................................ SUCCESS [  0.137 s]
+[INFO] client-bridge ...................................... SUCCESS [  0.023 s]
+[INFO] client-bridge-servlet .............................. SUCCESS [  0.124 s]
+[INFO] client-bridge-rpc-base ............................. SUCCESS [  0.144 s]
+[INFO] client-bridge-rpc-apache-dubbo ..................... SUCCESS [  0.028 s]
+[INFO] client-bridge-rpc-apache-dubbo2-metainfo ........... SUCCESS [  0.041 s]
+[INFO] client-bridge-rpc-apache-dubbo2 .................... SUCCESS [  0.236 s]
+[INFO] client-bridge-db-mysql ............................. SUCCESS [  0.168 s]
+[INFO] client-bridge-rpc-springcloud ...................... SUCCESS [  0.675 s]
+[INFO] client-bridge-rpc-springcloud-common ............... SUCCESS [  0.835 s]
+[INFO] client-bridge-rpc-springcloud-nacos ................ SUCCESS [  0.775 s]
+[INFO] client-bridge-rpc-springcloud-eureka ............... SUCCESS [  0.868 s]
+[INFO] client-spi-metainfo ................................ SUCCESS [  0.047 s]
+[INFO] appactive-demo-0.2.1 ............................... SUCCESS [  0.087 s]
+[INFO] common ............................................. SUCCESS [  1.499 s]
+[INFO] frontend ........................................... SUCCESS [  3.854 s]
+[INFO] product ............................................ SUCCESS [  0.492 s]
+[INFO] storage ............................................ SUCCESS [  0.642 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  21.659 s
+[INFO] Finished at: 2023-12-28T09:02:35+01:00
+[INFO] ------------------------------------------------------------------------

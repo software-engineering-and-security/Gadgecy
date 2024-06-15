@@ -1,0 +1,163 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.nanohttpd:nanohttpd-websocket:jar:2.3.2-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 14, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] NanoHttpd-Project                                                  [pom]
+[INFO] NanoHttpd-Core                                                     [jar]
+[INFO] NanoHttpd-Webserver                                                [jar]
+[INFO] NanoHttpd-Samples                                                  [jar]
+[INFO] NanoHttpd-Websocket                                                [jar]
+[INFO] NanoHttpd-Webserver-Markdown-Plugin                                [jar]
+[INFO] NanoHttpd-nano application server                                  [jar]
+[INFO] NanoHttpd-apache file upload integration                           [jar]
+[INFO] 
+[INFO] ------------------< org.nanohttpd:nanohttpd-project >-------------------
+[INFO] Building NanoHttpd-Project 2.3.2-SNAPSHOT                          [1/8]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ nanohttpd-project ---
+[INFO] digraph "org.nanohttpd:nanohttpd-project:pom:2.3.2-SNAPSHOT" { 
+[INFO] 	"org.nanohttpd:nanohttpd-project:pom:2.3.2-SNAPSHOT" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< org.nanohttpd:nanohttpd >-----------------------
+[INFO] Building NanoHttpd-Core 2.3.2-SNAPSHOT                             [2/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ nanohttpd ---
+[INFO] digraph "org.nanohttpd:nanohttpd:jar:2.3.2-SNAPSHOT" { 
+[INFO] 	"org.nanohttpd:nanohttpd:jar:2.3.2-SNAPSHOT" -> "org.apache.httpcomponents:httpclient:jar:4.2.5:test" ; 
+[INFO] 	"org.nanohttpd:nanohttpd:jar:2.3.2-SNAPSHOT" -> "org.apache.httpcomponents:httpmime:jar:4.2.5:test" ; 
+[INFO] 	"org.nanohttpd:nanohttpd:jar:2.3.2-SNAPSHOT" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.2.5:test" -> "org.apache.httpcomponents:httpcore:jar:4.2.4:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.2.5:test" -> "commons-logging:commons-logging:jar:1.1.1:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.2.5:test" -> "commons-codec:commons-codec:jar:1.6:test" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.nanohttpd:nanohttpd-webserver >------------------
+[INFO] Building NanoHttpd-Webserver 2.3.2-SNAPSHOT                        [3/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/nanohttpd/nanohttpd/2.3.2-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/nanohttpd/nanohttpd/2.3.2-SNAPSHOT/maven-metadata.xml (990 B at 554 B/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ nanohttpd-webserver ---
+[INFO] digraph "org.nanohttpd:nanohttpd-webserver:jar:2.3.2-SNAPSHOT" { 
+[INFO] 	"org.nanohttpd:nanohttpd-webserver:jar:2.3.2-SNAPSHOT" -> "org.nanohttpd:nanohttpd:jar:2.3.2-SNAPSHOT:compile" ; 
+[INFO] 	"org.nanohttpd:nanohttpd-webserver:jar:2.3.2-SNAPSHOT" -> "org.apache.httpcomponents:httpclient:jar:4.4.1:test" ; 
+[INFO] 	"org.nanohttpd:nanohttpd-webserver:jar:2.3.2-SNAPSHOT" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.4.1:test" -> "org.apache.httpcomponents:httpcore:jar:4.4.1:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.4.1:test" -> "commons-logging:commons-logging:jar:1.2:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.4.1:test" -> "commons-codec:commons-codec:jar:1.9:test" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< org.nanohttpd:nanohttpd-samples >-------------------
+[INFO] Building NanoHttpd-Samples 2.3.2-SNAPSHOT                          [4/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/nanohttpd/nanohttpd-webserver/2.3.2-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/nanohttpd/nanohttpd-webserver/2.3.2-SNAPSHOT/maven-metadata.xml (1.2 kB at 3.9 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ nanohttpd-samples ---
+[INFO] digraph "org.nanohttpd:nanohttpd-samples:jar:2.3.2-SNAPSHOT" { 
+[INFO] 	"org.nanohttpd:nanohttpd-samples:jar:2.3.2-SNAPSHOT" -> "org.nanohttpd:nanohttpd:jar:2.3.2-SNAPSHOT:compile" ; 
+[INFO] 	"org.nanohttpd:nanohttpd-samples:jar:2.3.2-SNAPSHOT" -> "org.nanohttpd:nanohttpd-webserver:jar:2.3.2-SNAPSHOT:compile" ; 
+[INFO] 	"org.nanohttpd:nanohttpd-samples:jar:2.3.2-SNAPSHOT" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.nanohttpd:nanohttpd-websocket >------------------
+[INFO] Building NanoHttpd-Websocket 2.3.2-SNAPSHOT                        [5/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ nanohttpd-websocket ---
+[INFO] digraph "org.nanohttpd:nanohttpd-websocket:jar:2.3.2-SNAPSHOT" { 
+[INFO] 	"org.nanohttpd:nanohttpd-websocket:jar:2.3.2-SNAPSHOT" -> "org.nanohttpd:nanohttpd:jar:2.3.2-SNAPSHOT:compile" ; 
+[INFO] 	"org.nanohttpd:nanohttpd-websocket:jar:2.3.2-SNAPSHOT" -> "org.mockito:mockito-all:jar:1.9.5:test" ; 
+[INFO] 	"org.nanohttpd:nanohttpd-websocket:jar:2.3.2-SNAPSHOT" -> "org.eclipse.jetty.websocket:websocket-client:jar:9.3.0.M2:test" ; 
+[INFO] 	"org.nanohttpd:nanohttpd-websocket:jar:2.3.2-SNAPSHOT" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-client:jar:9.3.0.M2:test" -> "org.eclipse.jetty:jetty-util:jar:9.3.0.M2:test" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-client:jar:9.3.0.M2:test" -> "org.eclipse.jetty:jetty-io:jar:9.3.0.M2:test" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-client:jar:9.3.0.M2:test" -> "org.eclipse.jetty.websocket:websocket-common:jar:9.3.0.M2:test" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-common:jar:9.3.0.M2:test" -> "org.eclipse.jetty.websocket:websocket-api:jar:9.3.0.M2:test" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------< org.nanohttpd:nanohttpd-webserver-markdown-plugin >----------
+[INFO] Building NanoHttpd-Webserver-Markdown-Plugin 2.3.2-SNAPSHOT        [6/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ nanohttpd-webserver-markdown-plugin ---
+[INFO] digraph "org.nanohttpd:nanohttpd-webserver-markdown-plugin:jar:2.3.2-SNAPSHOT" { 
+[INFO] 	"org.nanohttpd:nanohttpd-webserver-markdown-plugin:jar:2.3.2-SNAPSHOT" -> "org.nanohttpd:nanohttpd:jar:2.3.2-SNAPSHOT:provided" ; 
+[INFO] 	"org.nanohttpd:nanohttpd-webserver-markdown-plugin:jar:2.3.2-SNAPSHOT" -> "org.nanohttpd:nanohttpd-webserver:jar:2.3.2-SNAPSHOT:provided" ; 
+[INFO] 	"org.nanohttpd:nanohttpd-webserver-markdown-plugin:jar:2.3.2-SNAPSHOT" -> "org.pegdown:pegdown:jar:1.4.1:compile" ; 
+[INFO] 	"org.nanohttpd:nanohttpd-webserver-markdown-plugin:jar:2.3.2-SNAPSHOT" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"org.pegdown:pegdown:jar:1.4.1:compile" -> "org.parboiled:parboiled-java:jar:1.1.5:compile" ; 
+[INFO] 	"org.parboiled:parboiled-java:jar:1.1.5:compile" -> "org.parboiled:parboiled-core:jar:1.1.5:compile" ; 
+[INFO] 	"org.parboiled:parboiled-java:jar:1.1.5:compile" -> "org.ow2.asm:asm:jar:4.1:compile" ; 
+[INFO] 	"org.parboiled:parboiled-java:jar:1.1.5:compile" -> "org.ow2.asm:asm-tree:jar:4.1:compile" ; 
+[INFO] 	"org.parboiled:parboiled-java:jar:1.1.5:compile" -> "org.ow2.asm:asm-analysis:jar:4.1:compile" ; 
+[INFO] 	"org.parboiled:parboiled-java:jar:1.1.5:compile" -> "org.ow2.asm:asm-util:jar:4.1:compile" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< org.nanohttpd:nanohttpd-nanolets >------------------
+[INFO] Building NanoHttpd-nano application server 2.3.2-SNAPSHOT          [7/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ nanohttpd-nanolets ---
+[INFO] digraph "org.nanohttpd:nanohttpd-nanolets:jar:2.3.2-SNAPSHOT" { 
+[INFO] 	"org.nanohttpd:nanohttpd-nanolets:jar:2.3.2-SNAPSHOT" -> "org.nanohttpd:nanohttpd:jar:2.3.2-SNAPSHOT:compile" ; 
+[INFO] 	"org.nanohttpd:nanohttpd-nanolets:jar:2.3.2-SNAPSHOT" -> "org.apache.httpcomponents:httpclient:jar:4.4.1:test" ; 
+[INFO] 	"org.nanohttpd:nanohttpd-nanolets:jar:2.3.2-SNAPSHOT" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.4.1:test" -> "org.apache.httpcomponents:httpcore:jar:4.4.1:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.4.1:test" -> "commons-logging:commons-logging:jar:1.2:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.4.1:test" -> "commons-codec:commons-codec:jar:1.9:test" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< org.nanohttpd:nanohttpd-apache-fileupload >--------------
+[INFO] Building NanoHttpd-apache file upload integration 2.3.2-SNAPSHOT   [8/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ nanohttpd-apache-fileupload ---
+[INFO] digraph "org.nanohttpd:nanohttpd-apache-fileupload:jar:2.3.2-SNAPSHOT" { 
+[INFO] 	"org.nanohttpd:nanohttpd-apache-fileupload:jar:2.3.2-SNAPSHOT" -> "org.nanohttpd:nanohttpd:jar:2.3.2-SNAPSHOT:provided" ; 
+[INFO] 	"org.nanohttpd:nanohttpd-apache-fileupload:jar:2.3.2-SNAPSHOT" -> "commons-fileupload:commons-fileupload:jar:1.3.1:compile" ; 
+[INFO] 	"org.nanohttpd:nanohttpd-apache-fileupload:jar:2.3.2-SNAPSHOT" -> "javax.servlet:servlet-api:jar:2.5:provided" ; 
+[INFO] 	"org.nanohttpd:nanohttpd-apache-fileupload:jar:2.3.2-SNAPSHOT" -> "org.apache.httpcomponents:httpclient:jar:4.4.1:test" ; 
+[INFO] 	"org.nanohttpd:nanohttpd-apache-fileupload:jar:2.3.2-SNAPSHOT" -> "org.apache.httpcomponents:httpmime:jar:4.4.1:test" ; 
+[INFO] 	"org.nanohttpd:nanohttpd-apache-fileupload:jar:2.3.2-SNAPSHOT" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"commons-fileupload:commons-fileupload:jar:1.3.1:compile" -> "commons-io:commons-io:jar:2.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.4.1:test" -> "org.apache.httpcomponents:httpcore:jar:4.4.1:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.4.1:test" -> "commons-logging:commons-logging:jar:1.2:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.4.1:test" -> "commons-codec:commons-codec:jar:1.9:test" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for NanoHttpd-Project 2.3.2-SNAPSHOT:
+[INFO] 
+[INFO] NanoHttpd-Project .................................. SUCCESS [  3.065 s]
+[INFO] NanoHttpd-Core ..................................... SUCCESS [  0.197 s]
+[INFO] NanoHttpd-Webserver ................................ SUCCESS [  3.466 s]
+[INFO] NanoHttpd-Samples .................................. SUCCESS [  0.350 s]
+[INFO] NanoHttpd-Websocket ................................ SUCCESS [  0.111 s]
+[INFO] NanoHttpd-Webserver-Markdown-Plugin ................ SUCCESS [  0.146 s]
+[INFO] NanoHttpd-nano application server .................. SUCCESS [  0.076 s]
+[INFO] NanoHttpd-apache file upload integration ........... SUCCESS [  0.132 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.827 s
+[INFO] Finished at: 2023-12-28T09:03:19+01:00
+[INFO] ------------------------------------------------------------------------

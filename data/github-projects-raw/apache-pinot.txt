@@ -1,0 +1,222 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Detecting the operating system and CPU architecture
+[INFO] ------------------------------------------------------------------------
+[INFO] os.detected.name: linux
+[INFO] os.detected.arch: x86_64
+[INFO] os.detected.version: 5.10
+[INFO] os.detected.version.major: 5
+[INFO] os.detected.version.minor: 10
+[INFO] os.detected.release: debian
+[INFO] os.detected.release.version: 11
+[INFO] os.detected.release.like.debian: true
+[INFO] os.detected.classifier: linux-x86_64
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Pinot                                                              [pom]
+[INFO] Pinot Service Provider Interface                                   [jar]
+[INFO] Pinot Segment Service Provider Interface                           [jar]
+[INFO] Pinot Plugins                                                      [pom]
+[INFO] Pinot Metrics                                                      [pom]
+[INFO] Pinot Yammer Metrics                                               [jar]
+[INFO] Pinot FMPP plugin                                         [maven-plugin]
+[INFO] Pinot Common                                                       [jar]
+[INFO] Pinot Input Format                                                 [pom]
+[INFO] Pinot Avro Base                                                    [jar]
+[INFO] Pinot Avro                                                         [jar]
+[INFO] Pinot Csv                                                          [jar]
+[INFO] Pinot JSON                                                         [jar]
+[INFO] Pinot local segment implementations                                [jar]
+[INFO] Pinot Core                                                         [jar]
+[INFO] Pinot Query Planner                                                [jar]
+[INFO] Pinot Query Runtime                                                [jar]
+[INFO] Pinot Server                                                       [jar]
+[INFO] Pinot Segment Uploader                                             [pom]
+[INFO] Pinot Segment Uploader Default                                     [jar]
+[INFO] Pinot Controller                                                   [jar]
+[INFO] Pinot Broker                                                       [jar]
+[INFO] Pinot Clients                                                      [pom]
+[INFO] Pinot Java Client                                                  [jar]
+[INFO] Pinot JDBC Client                                                  [jar]
+[INFO] Pinot Batch Ingestion                                              [pom]
+[INFO] Pinot Batch Ingestion Common                                       [jar]
+[INFO] Pinot Minion                                                       [jar]
+[INFO] Pinot CLP Log                                                      [jar]
+[INFO] Pinot Confluent Avro                                               [jar]
+[INFO] Pinot ORC                                                          [jar]
+[INFO] Pinot Parquet                                                      [jar]
+[INFO] Pinot Thrift                                                       [jar]
+[INFO] Pinot Protocol Buffers                                             [jar]
+[INFO] Pluggable Pinot file system                                        [pom]
+[INFO] Pinot Azure Data Lake Storage                                      [jar]
+[INFO] Pinot Hadoop Filesystem                                            [jar]
+[INFO] Pinot Google Cloud Storage                                         [jar]
+[INFO] Pinot Amazon S3                                                    [jar]
+[INFO] Pinot Batch Ingestion for Spark 2.4                                [jar]
+[INFO] Pinot Batch Ingestion for Spark 3                                  [jar]
+[INFO] Pinot Batch Ingestion for Hadoop                                   [jar]
+[INFO] Pinot Batch Ingestion Standalone                                   [jar]
+[INFO] Pinot Stream Ingestion                                             [pom]
+[INFO] Pinot Kafka Base                                                   [jar]
+[INFO] Pinot Kafka 2.x                                                    [jar]
+[INFO] Pinot Kinesis                                                      [jar]
+[INFO] Pinot Pulsar                                                       [jar]
+[INFO] Pinot Minion Tasks                                                 [pom]
+[INFO] Pinot Minion Built-In Tasks                                        [jar]
+[INFO] Pinot Dropwizard Metrics                                           [jar]
+[INFO] Pinot Segment Writer                                               [pom]
+[INFO] Pinot Segment Writer File Based                                    [jar]
+[INFO] Pluggable Pinot Environment Provider                               [pom]
+[INFO] Pinot Azure Environment                                            [jar]
+[INFO] Pinot Tools                                                        [jar]
+[INFO] Pinot Test Utils                                                   [jar]
+[INFO] Pinot Integration Tests                                            [jar]
+[INFO] Pinot Perf                                                         [jar]
+[INFO] Pinot Distribution                                                 [jar]
+[INFO] Pinot Connectors                                                   [pom]
+[INFO] Pinot Spark Common                                                 [jar]
+[INFO] Pinot Spark 2 Connector                                            [jar]
+[INFO] Pinot Spark 3 Connector                                            [jar]
+[INFO] Pinot Flink Connector                                              [jar]
+[INFO] Pinot Compatibility Verifier                                       [jar]
+[INFO] 
+[INFO] -----------------------< org.apache.pinot:pinot >-----------------------
+[INFO] Building Pinot 1.1.0-SNAPSHOT                                     [1/66]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ pinot ---
+[INFO] digraph "org.apache.pinot:pinot:pom:1.1.0-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< org.apache.pinot:pinot-spi >---------------------
+[INFO] Building Pinot Service Provider Interface 1.1.0-SNAPSHOT          [2/66]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ pinot-spi ---
+[INFO] digraph "org.apache.pinot:pinot-spi:jar:1.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.pinot:pinot-spi:jar:1.1.0-SNAPSHOT" -> "commons-configuration:commons-configuration:jar:1.10:compile" ; 
+[INFO] 	"org.apache.pinot:pinot-spi:jar:1.1.0-SNAPSHOT" -> "org.apache.commons:commons-configuration2:jar:2.9.0:compile" ; 
+[INFO] 	"org.apache.pinot:pinot-spi:jar:1.1.0-SNAPSHOT" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"org.apache.pinot:pinot-spi:jar:1.1.0-SNAPSHOT" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"org.apache.pinot:pinot-spi:jar:1.1.0-SNAPSHOT" -> "commons-lang:commons-lang:jar:2.6:compile" ; 
+[INFO] 	"org.apache.pinot:pinot-spi:jar:1.1.0-SNAPSHOT" -> "org.slf4j:jcl-over-slf4j:jar:2.0.9:compile" ; 
+[INFO] 	"org.apache.pinot:pinot-spi:jar:1.1.0-SNAPSHOT" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.pinot:pinot-spi:jar:1.1.0-SNAPSHOT" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"org.apache.pinot:pinot-spi:jar:1.1.0-SNAPSHOT" -> "com.google.guava:guava:jar:32.0.1-jre:compile" ; 
+[INFO] 	"org.apache.pinot:pinot-spi:jar:1.1.0-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"org.apache.pinot:pinot-spi:jar:1.1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.pinot:pinot-spi:jar:1.1.0-SNAPSHOT" -> "com.lmax:disruptor:jar:3.3.4:compile" ; 
+[INFO] 	"org.apache.pinot:pinot-spi:jar:1.1.0-SNAPSHOT" -> "org.apache.logging.log4j:log4j-1.2-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.pinot:pinot-spi:jar:1.1.0-SNAPSHOT" -> "joda-time:joda-time:jar:2.12.5:compile" ; 
+[INFO] 	"org.apache.pinot:pinot-spi:jar:1.1.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.12.7:compile" ; 
+[INFO] 	"org.apache.pinot:pinot-spi:jar:1.1.0-SNAPSHOT" -> "org.yaml:snakeyaml:jar:2.2:compile" ; 
+[INFO] 	"org.apache.pinot:pinot-spi:jar:1.1.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.12.7.1:compile" ; 
+[INFO] 	"org.apache.pinot:pinot-spi:jar:1.1.0-SNAPSHOT" -> "org.apache.avro:avro:jar:1.10.2:compile" ; 
+[INFO] 	"org.apache.pinot:pinot-spi:jar:1.1.0-SNAPSHOT" -> "org.codehaus.groovy:groovy-all:jar:2.4.21:compile" ; 
+[INFO] 	"org.apache.pinot:pinot-spi:jar:1.1.0-SNAPSHOT" -> "org.testng:testng:jar:7.8.0:test" ; 
+[INFO] 	"org.apache.pinot:pinot-spi:jar:1.1.0-SNAPSHOT" -> "org.reflections:reflections:jar:0.9.11:compile" ; 
+[INFO] 	"org.apache.commons:commons-configuration2:jar:2.9.0:compile" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"org.slf4j:jcl-over-slf4j:jar:2.0.9:compile" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.20.0:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.20.0:compile" -> "org.apache.logging.log4j:log4j-core:jar:2.20.0:runtime" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.12.7.1:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.12.7:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.10.2:compile" -> "org.apache.commons:commons-compress:jar:1.21:compile" ; 
+[INFO] 	"org.testng:testng:jar:7.8.0:test" -> "com.beust:jcommander:jar:1.82:test" ; 
+[INFO] 	"org.testng:testng:jar:7.8.0:test" -> "org.webjars:jquery:jar:3.6.1:test" ; 
+[INFO] 	"org.reflections:reflections:jar:0.9.11:compile" -> "org.javassist:javassist:jar:3.19.0-GA:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.apache.pinot:pinot-segment-spi >-----------------
+[INFO] Building Pinot Segment Service Provider Interface 1.1.0-SNAPSHOT  [3/66]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/pinot/pinot-spi/1.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/pinot/pinot-spi/1.1.0-SNAPSHOT/pinot-spi-1.1.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Pinot 1.1.0-SNAPSHOT:
+[INFO] 
+[INFO] Pinot .............................................. SUCCESS [  4.067 s]
+[INFO] Pinot Service Provider Interface ................... SUCCESS [  1.057 s]
+[INFO] Pinot Segment Service Provider Interface ........... FAILURE [  4.029 s]
+[INFO] Pinot Plugins ...................................... SKIPPED
+[INFO] Pinot Metrics ...................................... SKIPPED
+[INFO] Pinot Yammer Metrics ............................... SKIPPED
+[INFO] Pinot FMPP plugin .................................. SKIPPED
+[INFO] Pinot Common ....................................... SKIPPED
+[INFO] Pinot Input Format ................................. SKIPPED
+[INFO] Pinot Avro Base .................................... SKIPPED
+[INFO] Pinot Avro ......................................... SKIPPED
+[INFO] Pinot Csv .......................................... SKIPPED
+[INFO] Pinot JSON ......................................... SKIPPED
+[INFO] Pinot local segment implementations ................ SKIPPED
+[INFO] Pinot Core ......................................... SKIPPED
+[INFO] Pinot Query Planner ................................ SKIPPED
+[INFO] Pinot Query Runtime ................................ SKIPPED
+[INFO] Pinot Server ....................................... SKIPPED
+[INFO] Pinot Segment Uploader ............................. SKIPPED
+[INFO] Pinot Segment Uploader Default ..................... SKIPPED
+[INFO] Pinot Controller ................................... SKIPPED
+[INFO] Pinot Broker ....................................... SKIPPED
+[INFO] Pinot Clients ...................................... SKIPPED
+[INFO] Pinot Java Client .................................. SKIPPED
+[INFO] Pinot JDBC Client .................................. SKIPPED
+[INFO] Pinot Batch Ingestion .............................. SKIPPED
+[INFO] Pinot Batch Ingestion Common ....................... SKIPPED
+[INFO] Pinot Minion ....................................... SKIPPED
+[INFO] Pinot CLP Log ...................................... SKIPPED
+[INFO] Pinot Confluent Avro ............................... SKIPPED
+[INFO] Pinot ORC .......................................... SKIPPED
+[INFO] Pinot Parquet ...................................... SKIPPED
+[INFO] Pinot Thrift ....................................... SKIPPED
+[INFO] Pinot Protocol Buffers ............................. SKIPPED
+[INFO] Pluggable Pinot file system ........................ SKIPPED
+[INFO] Pinot Azure Data Lake Storage ...................... SKIPPED
+[INFO] Pinot Hadoop Filesystem ............................ SKIPPED
+[INFO] Pinot Google Cloud Storage ......................... SKIPPED
+[INFO] Pinot Amazon S3 .................................... SKIPPED
+[INFO] Pinot Batch Ingestion for Spark 2.4 ................ SKIPPED
+[INFO] Pinot Batch Ingestion for Spark 3 .................. SKIPPED
+[INFO] Pinot Batch Ingestion for Hadoop ................... SKIPPED
+[INFO] Pinot Batch Ingestion Standalone ................... SKIPPED
+[INFO] Pinot Stream Ingestion ............................. SKIPPED
+[INFO] Pinot Kafka Base ................................... SKIPPED
+[INFO] Pinot Kafka 2.x .................................... SKIPPED
+[INFO] Pinot Kinesis ...................................... SKIPPED
+[INFO] Pinot Pulsar ....................................... SKIPPED
+[INFO] Pinot Minion Tasks ................................. SKIPPED
+[INFO] Pinot Minion Built-In Tasks ........................ SKIPPED
+[INFO] Pinot Dropwizard Metrics ........................... SKIPPED
+[INFO] Pinot Segment Writer ............................... SKIPPED
+[INFO] Pinot Segment Writer File Based .................... SKIPPED
+[INFO] Pluggable Pinot Environment Provider ............... SKIPPED
+[INFO] Pinot Azure Environment ............................ SKIPPED
+[INFO] Pinot Tools ........................................ SKIPPED
+[INFO] Pinot Test Utils ................................... SKIPPED
+[INFO] Pinot Integration Tests ............................ SKIPPED
+[INFO] Pinot Perf ......................................... SKIPPED
+[INFO] Pinot Distribution ................................. SKIPPED
+[INFO] Pinot Connectors ................................... SKIPPED
+[INFO] Pinot Spark Common ................................. SKIPPED
+[INFO] Pinot Spark 2 Connector ............................ SKIPPED
+[INFO] Pinot Spark 3 Connector ............................ SKIPPED
+[INFO] Pinot Flink Connector .............................. SKIPPED
+[INFO] Pinot Compatibility Verifier ....................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  17.949 s
+[INFO] Finished at: 2023-12-28T09:02:33+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project pinot-segment-spi: Could not resolve dependencies for project org.apache.pinot:pinot-segment-spi:jar:1.1.0-SNAPSHOT: Could not find artifact org.apache.pinot:pinot-spi:jar:1.1.0-SNAPSHOT in apache.snapshots (https://repository.apache.org/snapshots) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :pinot-segment-spi

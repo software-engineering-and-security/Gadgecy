@@ -1,0 +1,19 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.squareup:gifencoder >-----------------------
+[INFO] Building GIF Encoder 0.10.2-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ gifencoder ---
+[INFO] digraph "com.squareup:gifencoder:jar:0.10.2-SNAPSHOT" { 
+[INFO] 	"com.squareup:gifencoder:jar:0.10.2-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"com.squareup:gifencoder:jar:0.10.2-SNAPSHOT" -> "org.assertj:assertj-core:jar:2.0.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:2.0.0:test" -> "com.github.marschall:memoryfilesystem:jar:0.6.4:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.131 s
+[INFO] Finished at: 2023-12-28T09:03:23+01:00
+[INFO] ------------------------------------------------------------------------

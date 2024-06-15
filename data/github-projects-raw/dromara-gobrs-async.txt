@@ -1,0 +1,636 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for io.github.memorydoc:gobrs-async-common:jar:1.3.1-RELEASE
+[WARNING] 'build.plugins.plugin.(groupId:artifactId)' must be unique but found duplicate declaration of plugin org.apache.maven.plugins:maven-source-plugin @ io.github.memorydoc:gobrs-async:${revision}, /home/brunok/apache-ysoserial-vuln/pom/dromara-gobrs-async/pom.xml, line 183, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for io.github.memorydoc:gobrs-async:pom:1.3.1-RELEASE
+[WARNING] 'build.plugins.plugin.(groupId:artifactId)' must be unique but found duplicate declaration of plugin org.apache.maven.plugins:maven-source-plugin @ io.github.memorydoc:gobrs-async:${revision}, /home/brunok/Gadgecy/../apache-ysoserial-vuln/pom/dromara-gobrs-async/pom.xml, line 183, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] gobrs-async                                                        [pom]
+[INFO] gobrs-async-spi                                                    [jar]
+[INFO] gobrs-async-plugin                                                 [pom]
+[INFO] gobrs-async-plugin-base                                            [jar]
+[INFO] gobrs-async-common                                                 [jar]
+[INFO] gobrs-async-core                                                   [jar]
+[INFO] gobrs-async-starter                                                [jar]
+[INFO] gobrs-async-monitor-plugin                                         [pom]
+[INFO] gobrs-async-skywalking-plugin                                      [jar]
+[INFO] gobrs-async-test                                                   [jar]
+[INFO] gobrs-async-example                                                [jar]
+[INFO] gobrs-async-hippo4j-plugin                                         [jar]
+[INFO] gobrs-async-trace-plugin                                           [jar]
+[INFO] 
+[INFO] ------------------< io.github.memorydoc:gobrs-async >-------------------
+[INFO] Building gobrs-async 1.3.1-RELEASE                                [1/13]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ gobrs-async ---
+[INFO] digraph "io.github.memorydoc:gobrs-async:pom:1.3.1-RELEASE" { 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< io.github.memorydoc:gobrs-async-spi >-----------------
+[INFO] Building gobrs-async-spi 1.3.1-RELEASE                            [2/13]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ gobrs-async-spi ---
+[INFO] digraph "io.github.memorydoc:gobrs-async-spi:jar:1.3.1-RELEASE" { 
+[INFO] 	"io.github.memorydoc:gobrs-async-spi:jar:1.3.1-RELEASE" -> "org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-spi:jar:1.3.1-RELEASE" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-test:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "com.jayway.jsonpath:json-path:jar:2.5.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.assertj:assertj-core:jar:3.19.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.hamcrest:hamcrest:jar:2.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.junit.jupiter:junit-jupiter:jar:5.7.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.mockito:mockito-core:jar:3.9.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.mockito:mockito-junit-jupiter:jar:3.9.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.skyscreamer:jsonassert:jar:1.5.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.springframework:spring-core:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.springframework:spring-test:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.xmlunit:xmlunit-core:jar:2.8.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.yaml:snakeyaml:jar:1.28:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.5.8:compile" -> "org.springframework:spring-context:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.14:compile" -> "org.springframework:spring-aop:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.14:compile" -> "org.springframework:spring-beans:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.14:compile" -> "org.springframework:spring-expression:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.8:compile" -> "ch.qos.logback:logback-classic:jar:1.2.9:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.8:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.8:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.32:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.9:compile" -> "ch.qos.logback:logback-core:jar:1.2.9:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.0:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.0:compile" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.5.0:compile" -> "net.minidev:json-smart:jar:2.4.7:compile" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.5.0:compile" -> "org.slf4j:slf4j-api:jar:1.7.32:compile" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.7:compile" -> "net.minidev:accessors-smart:jar:2.4.7:compile" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.7:compile" -> "org.ow2.asm:asm:jar:9.1:compile" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.2:compile" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.2:compile" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.2:compile" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.2:runtime" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.2:compile" -> "org.apiguardian:apiguardian-api:jar:1.1.0:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.2:compile" -> "org.opentest4j:opentest4j:jar:1.2.0:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.2:compile" -> "org.junit.platform:junit-platform-commons:jar:1.7.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.7.2:runtime" -> "org.junit.platform:junit-platform-engine:jar:1.7.2:runtime" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.9.0:compile" -> "net.bytebuddy:byte-buddy:jar:1.10.22:compile" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.9.0:compile" -> "net.bytebuddy:byte-buddy-agent:jar:1.10.22:compile" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.9.0:compile" -> "org.objenesis:objenesis:jar:3.2:compile" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.0:compile" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.14:compile" -> "org.springframework:spring-jcl:jar:5.3.14:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< io.github.memorydoc:gobrs-async-plugin >---------------
+[INFO] Building gobrs-async-plugin 1.3.1-RELEASE                         [3/13]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ gobrs-async-plugin ---
+[INFO] digraph "io.github.memorydoc:gobrs-async-plugin:pom:1.3.1-RELEASE" { 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< io.github.memorydoc:gobrs-async-plugin-base >-------------
+[INFO] Building gobrs-async-plugin-base 1.3.1-RELEASE                    [4/13]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ gobrs-async-plugin-base ---
+[INFO] digraph "io.github.memorydoc:gobrs-async-plugin-base:jar:1.3.1-RELEASE" { 
+[INFO] 	"io.github.memorydoc:gobrs-async-plugin-base:jar:1.3.1-RELEASE" -> "io.github.memorydoc:gobrs-async-spi:jar:1.3.1-RELEASE:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-spi:jar:1.3.1-RELEASE:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< io.github.memorydoc:gobrs-async-common >---------------
+[INFO] Building gobrs-async-common 1.3.1-RELEASE                         [5/13]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ gobrs-async-common ---
+[INFO] digraph "io.github.memorydoc:gobrs-async-common:jar:1.3.1-RELEASE" { 
+[INFO] 	"io.github.memorydoc:gobrs-async-common:jar:1.3.1-RELEASE" -> "org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-common:jar:1.3.1-RELEASE" -> "org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-common:jar:1.3.1-RELEASE" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.12.6:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-common:jar:1.3.1-RELEASE" -> "org.projectlombok:lombok:jar:1.18.22:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-common:jar:1.3.1-RELEASE" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-common:jar:1.3.1-RELEASE" -> "io.github.memorydoc:gobrs-async-plugin-base:jar:1.3.1-RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.springframework:spring-core:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.yaml:snakeyaml:jar:1.28:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.5.8:compile" -> "org.springframework:spring-context:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.14:compile" -> "org.springframework:spring-aop:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.14:compile" -> "org.springframework:spring-beans:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.14:compile" -> "org.springframework:spring-expression:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.8:compile" -> "ch.qos.logback:logback-classic:jar:1.2.9:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.8:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.8:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.32:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.9:compile" -> "ch.qos.logback:logback-core:jar:1.2.9:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.0:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.0:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.14:compile" -> "org.springframework:spring-jcl:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-test:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "com.jayway.jsonpath:json-path:jar:2.5.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.assertj:assertj-core:jar:3.19.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.hamcrest:hamcrest:jar:2.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.junit.jupiter:junit-jupiter:jar:5.7.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.mockito:mockito-core:jar:3.9.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.mockito:mockito-junit-jupiter:jar:3.9.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.skyscreamer:jsonassert:jar:1.5.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.springframework:spring-test:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.xmlunit:xmlunit-core:jar:2.8.4:compile" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.5.0:compile" -> "net.minidev:json-smart:jar:2.4.7:compile" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.5.0:compile" -> "org.slf4j:slf4j-api:jar:1.7.32:compile" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.7:compile" -> "net.minidev:accessors-smart:jar:2.4.7:compile" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.7:compile" -> "org.ow2.asm:asm:jar:9.1:compile" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.2:compile" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.2:compile" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.2:compile" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.2:runtime" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.2:compile" -> "org.apiguardian:apiguardian-api:jar:1.1.0:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.2:compile" -> "org.opentest4j:opentest4j:jar:1.2.0:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.2:compile" -> "org.junit.platform:junit-platform-commons:jar:1.7.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.7.2:runtime" -> "org.junit.platform:junit-platform-engine:jar:1.7.2:runtime" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.9.0:compile" -> "net.bytebuddy:byte-buddy:jar:1.10.22:compile" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.9.0:compile" -> "net.bytebuddy:byte-buddy-agent:jar:1.10.22:compile" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.9.0:compile" -> "org.objenesis:objenesis:jar:3.2:compile" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.0:compile" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.12.6:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.12.6:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.12.6:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.12.6:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-plugin-base:jar:1.3.1-RELEASE:compile" -> "io.github.memorydoc:gobrs-async-spi:jar:1.3.1-RELEASE:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< io.github.memorydoc:gobrs-async-core >----------------
+[INFO] Building gobrs-async-core 1.3.1-RELEASE                           [6/13]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ gobrs-async-core ---
+[INFO] digraph "io.github.memorydoc:gobrs-async-core:jar:1.3.1-RELEASE" { 
+[INFO] 	"io.github.memorydoc:gobrs-async-core:jar:1.3.1-RELEASE" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.12.6:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-core:jar:1.3.1-RELEASE" -> "com.alibaba:transmittable-thread-local:jar:2.11.2:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-core:jar:1.3.1-RELEASE" -> "io.github.memorydoc:gobrs-async-common:jar:1.3.1-RELEASE:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-core:jar:1.3.1-RELEASE" -> "io.github.memorydoc:gobrs-async-plugin-base:jar:1.3.1-RELEASE:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.12.6:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.12.6:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.12.6:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.12.6:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-common:jar:1.3.1-RELEASE:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-common:jar:1.3.1-RELEASE:compile" -> "org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-common:jar:1.3.1-RELEASE:compile" -> "org.projectlombok:lombok:jar:1.18.22:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-common:jar:1.3.1-RELEASE:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.springframework:spring-core:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.yaml:snakeyaml:jar:1.28:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.5.8:compile" -> "org.springframework:spring-context:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.14:compile" -> "org.springframework:spring-aop:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.14:compile" -> "org.springframework:spring-beans:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.14:compile" -> "org.springframework:spring-expression:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.8:compile" -> "ch.qos.logback:logback-classic:jar:1.2.9:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.8:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.8:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.32:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.9:compile" -> "ch.qos.logback:logback-core:jar:1.2.9:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.0:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.0:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.14:compile" -> "org.springframework:spring-jcl:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-test:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "com.jayway.jsonpath:json-path:jar:2.5.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.assertj:assertj-core:jar:3.19.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.hamcrest:hamcrest:jar:2.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.junit.jupiter:junit-jupiter:jar:5.7.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.mockito:mockito-core:jar:3.9.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.mockito:mockito-junit-jupiter:jar:3.9.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.skyscreamer:jsonassert:jar:1.5.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.springframework:spring-test:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.xmlunit:xmlunit-core:jar:2.8.4:compile" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.5.0:compile" -> "net.minidev:json-smart:jar:2.4.7:compile" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.5.0:compile" -> "org.slf4j:slf4j-api:jar:1.7.32:compile" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.7:compile" -> "net.minidev:accessors-smart:jar:2.4.7:compile" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.7:compile" -> "org.ow2.asm:asm:jar:9.1:compile" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.2:compile" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.2:compile" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.2:compile" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.2:runtime" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.2:compile" -> "org.apiguardian:apiguardian-api:jar:1.1.0:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.2:compile" -> "org.opentest4j:opentest4j:jar:1.2.0:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.2:compile" -> "org.junit.platform:junit-platform-commons:jar:1.7.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.7.2:runtime" -> "org.junit.platform:junit-platform-engine:jar:1.7.2:runtime" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.9.0:compile" -> "net.bytebuddy:byte-buddy:jar:1.10.22:compile" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.9.0:compile" -> "net.bytebuddy:byte-buddy-agent:jar:1.10.22:compile" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.9.0:compile" -> "org.objenesis:objenesis:jar:3.2:compile" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.0:compile" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-plugin-base:jar:1.3.1-RELEASE:compile" -> "io.github.memorydoc:gobrs-async-spi:jar:1.3.1-RELEASE:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< io.github.memorydoc:gobrs-async-starter >---------------
+[INFO] Building gobrs-async-starter 1.3.1-RELEASE                        [7/13]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ gobrs-async-starter ---
+[INFO] digraph "io.github.memorydoc:gobrs-async-starter:jar:1.3.1-RELEASE" { 
+[INFO] 	"io.github.memorydoc:gobrs-async-starter:jar:1.3.1-RELEASE" -> "org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-starter:jar:1.3.1-RELEASE" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.5.8:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-starter:jar:1.3.1-RELEASE" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.12.6:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-starter:jar:1.3.1-RELEASE" -> "com.alibaba:transmittable-thread-local:jar:2.11.2:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-starter:jar:1.3.1-RELEASE" -> "io.github.memorydoc:gobrs-async-core:jar:1.3.1-RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.springframework:spring-core:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.yaml:snakeyaml:jar:1.28:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.5.8:compile" -> "org.springframework:spring-context:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.14:compile" -> "org.springframework:spring-aop:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.14:compile" -> "org.springframework:spring-beans:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.14:compile" -> "org.springframework:spring-expression:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.8:compile" -> "ch.qos.logback:logback-classic:jar:1.2.9:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.8:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.8:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.32:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.9:compile" -> "ch.qos.logback:logback-core:jar:1.2.9:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.9:compile" -> "org.slf4j:slf4j-api:jar:1.7.32:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.0:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.0:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.14:compile" -> "org.springframework:spring-jcl:jar:5.3.14:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.12.6:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.12.6:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.12.6:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.12.6:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-core:jar:1.3.1-RELEASE:compile" -> "io.github.memorydoc:gobrs-async-common:jar:1.3.1-RELEASE:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-core:jar:1.3.1-RELEASE:compile" -> "io.github.memorydoc:gobrs-async-plugin-base:jar:1.3.1-RELEASE:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-common:jar:1.3.1-RELEASE:compile" -> "org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-common:jar:1.3.1-RELEASE:compile" -> "org.projectlombok:lombok:jar:1.18.22:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-common:jar:1.3.1-RELEASE:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-test:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "com.jayway.jsonpath:json-path:jar:2.5.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.assertj:assertj-core:jar:3.19.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.hamcrest:hamcrest:jar:2.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.junit.jupiter:junit-jupiter:jar:5.7.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.mockito:mockito-core:jar:3.9.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.mockito:mockito-junit-jupiter:jar:3.9.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.skyscreamer:jsonassert:jar:1.5.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.springframework:spring-test:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.xmlunit:xmlunit-core:jar:2.8.4:compile" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.5.0:compile" -> "net.minidev:json-smart:jar:2.4.7:compile" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.7:compile" -> "net.minidev:accessors-smart:jar:2.4.7:compile" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.7:compile" -> "org.ow2.asm:asm:jar:9.1:compile" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.2:compile" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.2:compile" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.2:compile" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.2:runtime" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.2:compile" -> "org.apiguardian:apiguardian-api:jar:1.1.0:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.2:compile" -> "org.opentest4j:opentest4j:jar:1.2.0:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.2:compile" -> "org.junit.platform:junit-platform-commons:jar:1.7.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.7.2:runtime" -> "org.junit.platform:junit-platform-engine:jar:1.7.2:runtime" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.9.0:compile" -> "net.bytebuddy:byte-buddy:jar:1.10.22:compile" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.9.0:compile" -> "net.bytebuddy:byte-buddy-agent:jar:1.10.22:compile" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.9.0:compile" -> "org.objenesis:objenesis:jar:3.2:compile" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.0:compile" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-plugin-base:jar:1.3.1-RELEASE:compile" -> "io.github.memorydoc:gobrs-async-spi:jar:1.3.1-RELEASE:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------< io.github.memorydoc:gobrs-async-monitor-plugin >-----------
+[INFO] Building gobrs-async-monitor-plugin 1.3.1-RELEASE                 [8/13]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ gobrs-async-monitor-plugin ---
+[INFO] digraph "io.github.memorydoc:gobrs-async-monitor-plugin:pom:1.3.1-RELEASE" { 
+[INFO]  } 
+[INFO] 
+[INFO] ---------< io.github.memorydoc:gobrs-async-skywalking-plugin >----------
+[INFO] Building gobrs-async-skywalking-plugin 1.3.1-RELEASE              [9/13]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ gobrs-async-skywalking-plugin ---
+[INFO] digraph "io.github.memorydoc:gobrs-async-skywalking-plugin:jar:1.3.1-RELEASE" { 
+[INFO] 	"io.github.memorydoc:gobrs-async-skywalking-plugin:jar:1.3.1-RELEASE" -> "io.github.memorydoc:gobrs-async-plugin-base:jar:1.3.1-RELEASE:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-skywalking-plugin:jar:1.3.1-RELEASE" -> "org.apache.skywalking:apm-toolkit-trace:jar:8.4.0:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-plugin-base:jar:1.3.1-RELEASE:compile" -> "io.github.memorydoc:gobrs-async-spi:jar:1.3.1-RELEASE:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-spi:jar:1.3.1-RELEASE:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< io.github.memorydoc:gobrs-async-test >----------------
+[INFO] Building gobrs-async-test 1.3.1-RELEASE                          [10/13]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ gobrs-async-test ---
+[INFO] digraph "io.github.memorydoc:gobrs-async-test:jar:1.3.1-RELEASE" { 
+[INFO] 	"io.github.memorydoc:gobrs-async-test:jar:1.3.1-RELEASE" -> "org.projectlombok:lombok:jar:1.18.22:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-test:jar:1.3.1-RELEASE" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.12.6:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-test:jar:1.3.1-RELEASE" -> "org.springframework.boot:spring-boot-starter-web:jar:2.5.8:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-test:jar:1.3.1-RELEASE" -> "io.github.memorydoc:gobrs-async-starter:jar:1.3.1-RELEASE:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-test:jar:1.3.1-RELEASE" -> "io.github.memorydoc:gobrs-async-skywalking-plugin:jar:1.3.1-RELEASE:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.12.6:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.12.6:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.12.6:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.12.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-starter-json:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-starter-tomcat:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.5.8:compile" -> "org.springframework:spring-web:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.5.8:compile" -> "org.springframework:spring-webmvc:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.springframework:spring-core:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.yaml:snakeyaml:jar:1.28:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.8:compile" -> "ch.qos.logback:logback-classic:jar:1.2.9:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.8:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.8:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.32:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.9:compile" -> "ch.qos.logback:logback-core:jar:1.2.9:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.9:compile" -> "org.slf4j:slf4j-api:jar:1.7.32:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.0:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.0:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.14:compile" -> "org.springframework:spring-jcl:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.5.8:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.12.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.5.8:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.12.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.5.8:compile" -> "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.12.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.5.8:compile" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.56:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.5.8:compile" -> "org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.56:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.5.8:compile" -> "org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.56:compile" ; 
+[INFO] 	"org.springframework:spring-web:jar:5.3.14:compile" -> "org.springframework:spring-beans:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.14:compile" -> "org.springframework:spring-aop:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.14:compile" -> "org.springframework:spring-context:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.14:compile" -> "org.springframework:spring-expression:jar:5.3.14:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-starter:jar:1.3.1-RELEASE:compile" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.5.8:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-starter:jar:1.3.1-RELEASE:compile" -> "com.alibaba:transmittable-thread-local:jar:2.11.2:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-starter:jar:1.3.1-RELEASE:compile" -> "io.github.memorydoc:gobrs-async-core:jar:1.3.1-RELEASE:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-core:jar:1.3.1-RELEASE:compile" -> "io.github.memorydoc:gobrs-async-common:jar:1.3.1-RELEASE:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-common:jar:1.3.1-RELEASE:compile" -> "org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-common:jar:1.3.1-RELEASE:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-test:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "com.jayway.jsonpath:json-path:jar:2.5.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.assertj:assertj-core:jar:3.19.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.hamcrest:hamcrest:jar:2.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.junit.jupiter:junit-jupiter:jar:5.7.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.mockito:mockito-core:jar:3.9.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.mockito:mockito-junit-jupiter:jar:3.9.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.skyscreamer:jsonassert:jar:1.5.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.springframework:spring-test:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.xmlunit:xmlunit-core:jar:2.8.4:compile" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.5.0:compile" -> "net.minidev:json-smart:jar:2.4.7:compile" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.7:compile" -> "net.minidev:accessors-smart:jar:2.4.7:compile" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.7:compile" -> "org.ow2.asm:asm:jar:9.1:compile" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.2:compile" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.2:compile" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.2:compile" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.2:runtime" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.2:compile" -> "org.apiguardian:apiguardian-api:jar:1.1.0:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.2:compile" -> "org.opentest4j:opentest4j:jar:1.2.0:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.2:compile" -> "org.junit.platform:junit-platform-commons:jar:1.7.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.7.2:runtime" -> "org.junit.platform:junit-platform-engine:jar:1.7.2:runtime" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.9.0:compile" -> "net.bytebuddy:byte-buddy:jar:1.10.22:compile" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.9.0:compile" -> "net.bytebuddy:byte-buddy-agent:jar:1.10.22:compile" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.9.0:compile" -> "org.objenesis:objenesis:jar:3.2:compile" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.0:compile" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-skywalking-plugin:jar:1.3.1-RELEASE:compile" -> "io.github.memorydoc:gobrs-async-plugin-base:jar:1.3.1-RELEASE:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-skywalking-plugin:jar:1.3.1-RELEASE:compile" -> "org.apache.skywalking:apm-toolkit-trace:jar:8.4.0:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-plugin-base:jar:1.3.1-RELEASE:compile" -> "io.github.memorydoc:gobrs-async-spi:jar:1.3.1-RELEASE:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< io.github.memorydoc:gobrs-async-example >---------------
+[INFO] Building gobrs-async-example 1.3.1-RELEASE                       [11/13]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ gobrs-async-example ---
+[INFO] digraph "io.github.memorydoc:gobrs-async-example:jar:1.3.1-RELEASE" { 
+[INFO] 	"io.github.memorydoc:gobrs-async-example:jar:1.3.1-RELEASE" -> "org.springframework.boot:spring-boot-starter-web:jar:2.5.8:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-example:jar:1.3.1-RELEASE" -> "org.projectlombok:lombok:jar:1.18.22:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-example:jar:1.3.1-RELEASE" -> "org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-example:jar:1.3.1-RELEASE" -> "io.github.memorydoc:gobrs-async-test:jar:1.3.1-RELEASE:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-example:jar:1.3.1-RELEASE" -> "io.github.memorydoc:gobrs-async-starter:jar:1.3.1-RELEASE:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-example:jar:1.3.1-RELEASE" -> "io.github.memorydoc:gobrs-async-trace-plugin:jar:1.2.9-RELEASE:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-starter-json:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-starter-tomcat:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.5.8:compile" -> "org.springframework:spring-web:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.5.8:compile" -> "org.springframework:spring-webmvc:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.yaml:snakeyaml:jar:1.28:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.8:compile" -> "ch.qos.logback:logback-classic:jar:1.2.9:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.8:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.8:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.32:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.9:compile" -> "ch.qos.logback:logback-core:jar:1.2.9:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.0:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.5.8:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.12.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.5.8:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.12.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.5.8:compile" -> "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.12.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.5.8:compile" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.56:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.5.8:compile" -> "org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.56:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.5.8:compile" -> "org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.56:compile" ; 
+[INFO] 	"org.springframework:spring-web:jar:5.3.14:compile" -> "org.springframework:spring-beans:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.14:compile" -> "org.springframework:spring-aop:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.14:compile" -> "org.springframework:spring-context:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.14:compile" -> "org.springframework:spring-expression:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-test:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "com.jayway.jsonpath:json-path:jar:2.5.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.assertj:assertj-core:jar:3.19.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.hamcrest:hamcrest:jar:2.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.junit.jupiter:junit-jupiter:jar:5.7.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.mockito:mockito-core:jar:3.9.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.mockito:mockito-junit-jupiter:jar:3.9.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.skyscreamer:jsonassert:jar:1.5.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.springframework:spring-core:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.springframework:spring-test:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.5.8:compile" -> "org.xmlunit:xmlunit-core:jar:2.8.4:compile" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.5.0:compile" -> "net.minidev:json-smart:jar:2.4.7:compile" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.5.0:compile" -> "org.slf4j:slf4j-api:jar:1.7.32:compile" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.7:compile" -> "net.minidev:accessors-smart:jar:2.4.7:compile" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.7:compile" -> "org.ow2.asm:asm:jar:9.1:compile" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.2:compile" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.2:compile" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.2:compile" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.2:runtime" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.2:compile" -> "org.apiguardian:apiguardian-api:jar:1.1.0:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.2:compile" -> "org.opentest4j:opentest4j:jar:1.2.0:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.2:compile" -> "org.junit.platform:junit-platform-commons:jar:1.7.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.7.2:runtime" -> "org.junit.platform:junit-platform-engine:jar:1.7.2:runtime" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.9.0:compile" -> "net.bytebuddy:byte-buddy:jar:1.10.22:compile" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.9.0:compile" -> "net.bytebuddy:byte-buddy-agent:jar:1.10.22:compile" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.9.0:compile" -> "org.objenesis:objenesis:jar:3.2:compile" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.0:compile" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.14:compile" -> "org.springframework:spring-jcl:jar:5.3.14:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-test:jar:1.3.1-RELEASE:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.12.6:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-test:jar:1.3.1-RELEASE:compile" -> "io.github.memorydoc:gobrs-async-skywalking-plugin:jar:1.3.1-RELEASE:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.12.6:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.12.6:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.12.6:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.12.6:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-skywalking-plugin:jar:1.3.1-RELEASE:compile" -> "org.apache.skywalking:apm-toolkit-trace:jar:8.4.0:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-starter:jar:1.3.1-RELEASE:compile" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.5.8:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-starter:jar:1.3.1-RELEASE:compile" -> "com.alibaba:transmittable-thread-local:jar:2.11.2:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-starter:jar:1.3.1-RELEASE:compile" -> "io.github.memorydoc:gobrs-async-core:jar:1.3.1-RELEASE:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-core:jar:1.3.1-RELEASE:compile" -> "io.github.memorydoc:gobrs-async-common:jar:1.3.1-RELEASE:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-common:jar:1.3.1-RELEASE:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-trace-plugin:jar:1.2.9-RELEASE:compile" -> "com.yomahub:tlog-all-spring-boot-starter:jar:1.5.0:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-trace-plugin:jar:1.2.9-RELEASE:compile" -> "io.github.memorydoc:gobrs-async-plugin-base:jar:1.3.1-RELEASE:compile" ; 
+[INFO] 	"com.yomahub:tlog-all-spring-boot-starter:jar:1.5.0:compile" -> "com.yomahub:tlog-spring-boot-configuration:jar:1.5.0:compile" ; 
+[INFO] 	"com.yomahub:tlog-all-spring-boot-starter:jar:1.5.0:compile" -> "com.yomahub:tlog-dubbo:jar:1.5.0:compile" ; 
+[INFO] 	"com.yomahub:tlog-all-spring-boot-starter:jar:1.5.0:compile" -> "com.yomahub:tlog-dubbox:jar:1.5.0:compile" ; 
+[INFO] 	"com.yomahub:tlog-all-spring-boot-starter:jar:1.5.0:compile" -> "com.yomahub:tlog-feign:jar:1.5.0:compile" ; 
+[INFO] 	"com.yomahub:tlog-all-spring-boot-starter:jar:1.5.0:compile" -> "com.yomahub:tlog-webroot:jar:1.5.0:compile" ; 
+[INFO] 	"com.yomahub:tlog-all-spring-boot-starter:jar:1.5.0:compile" -> "com.yomahub:tlog-gateway:jar:1.5.0:compile" ; 
+[INFO] 	"com.yomahub:tlog-all-spring-boot-starter:jar:1.5.0:compile" -> "com.yomahub:tlog-webflux:jar:1.5.0:compile" ; 
+[INFO] 	"com.yomahub:tlog-all-spring-boot-starter:jar:1.5.0:compile" -> "com.yomahub:tlog-httpclient:jar:1.5.0:compile" ; 
+[INFO] 	"com.yomahub:tlog-all-spring-boot-starter:jar:1.5.0:compile" -> "com.yomahub:tlog-okhttp:jar:1.5.0:compile" ; 
+[INFO] 	"com.yomahub:tlog-all-spring-boot-starter:jar:1.5.0:compile" -> "com.yomahub:tlog-hutool-http:jar:1.5.0:compile" ; 
+[INFO] 	"com.yomahub:tlog-all-spring-boot-starter:jar:1.5.0:compile" -> "com.yomahub:tlog-forest:jar:1.5.0:compile" ; 
+[INFO] 	"com.yomahub:tlog-all-spring-boot-starter:jar:1.5.0:compile" -> "com.yomahub:tlog-rest-template:jar:1.5.0:compile" ; 
+[INFO] 	"com.yomahub:tlog-all-spring-boot-starter:jar:1.5.0:compile" -> "com.yomahub:tlog-task:jar:1.5.0:compile" ; 
+[INFO] 	"com.yomahub:tlog-all-spring-boot-starter:jar:1.5.0:compile" -> "com.yomahub:tlog-xxl-job:jar:1.5.0:compile" ; 
+[INFO] 	"com.yomahub:tlog-dubbo:jar:1.5.0:compile" -> "com.yomahub:tlog-core:jar:1.5.0:compile" ; 
+[INFO] 	"com.yomahub:tlog-core:jar:1.5.0:compile" -> "org.dom4j:dom4j:jar:2.1.3:compile" ; 
+[INFO] 	"com.yomahub:tlog-core:jar:1.5.0:compile" -> "org.javassist:javassist:jar:3.22.0-GA:compile" ; 
+[INFO] 	"com.yomahub:tlog-core:jar:1.5.0:compile" -> "org.aspectj:aspectjweaver:jar:1.9.7:compile" ; 
+[INFO] 	"com.yomahub:tlog-core:jar:1.5.0:compile" -> "com.alibaba:fastjson:jar:1.2.83:compile" ; 
+[INFO] 	"com.yomahub:tlog-core:jar:1.5.0:compile" -> "com.alibaba:QLExpress:jar:3.2.0:compile" ; 
+[INFO] 	"com.alibaba:QLExpress:jar:3.2.0:compile" -> "commons-beanutils:commons-beanutils:jar:1.8.2:compile" ; 
+[INFO] 	"com.alibaba:QLExpress:jar:3.2.0:compile" -> "commons-logging:commons-logging:jar:1.1.1:compile" ; 
+[INFO] 	"com.alibaba:QLExpress:jar:3.2.0:compile" -> "commons-lang:commons-lang:jar:2.4:compile" ; 
+[INFO] 	"com.yomahub:tlog-webflux:jar:1.5.0:compile" -> "com.yomahub:tlog-common:jar:1.5.0:compile" ; 
+[INFO] 	"com.yomahub:tlog-common:jar:1.5.0:compile" -> "cn.hutool:hutool-core:jar:5.8.6:compile" ; 
+[INFO] 	"com.yomahub:tlog-okhttp:jar:1.5.0:compile" -> "com.squareup.okhttp3:okhttp:jar:3.14.9:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.14.9:compile" -> "com.squareup.okio:okio:jar:1.17.2:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-plugin-base:jar:1.3.1-RELEASE:compile" -> "io.github.memorydoc:gobrs-async-spi:jar:1.3.1-RELEASE:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------< io.github.memorydoc:gobrs-async-hippo4j-plugin >-----------
+[INFO] Building gobrs-async-hippo4j-plugin 1.3.1-RELEASE                [12/13]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ gobrs-async-hippo4j-plugin ---
+[INFO] digraph "io.github.memorydoc:gobrs-async-hippo4j-plugin:jar:1.3.1-RELEASE" { 
+[INFO] 	"io.github.memorydoc:gobrs-async-hippo4j-plugin:jar:1.3.1-RELEASE" -> "io.github.memorydoc:gobrs-async-plugin-base:jar:1.3.1-RELEASE:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-hippo4j-plugin:jar:1.3.1-RELEASE" -> "cn.hippo4j:hippo4j-config-spring-boot-starter:jar:1.4.3-upgrade:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-plugin-base:jar:1.3.1-RELEASE:compile" -> "io.github.memorydoc:gobrs-async-spi:jar:1.3.1-RELEASE:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-spi:jar:1.3.1-RELEASE:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"cn.hippo4j:hippo4j-config-spring-boot-starter:jar:1.4.3-upgrade:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" ; 
+[INFO] 	"cn.hippo4j:hippo4j-config-spring-boot-starter:jar:1.4.3-upgrade:compile" -> "cn.hippo4j:hippo4j-core:jar:1.4.3-upgrade:compile" ; 
+[INFO] 	"cn.hippo4j:hippo4j-config-spring-boot-starter:jar:1.4.3-upgrade:compile" -> "cn.hippo4j:hippo4j-message:jar:1.4.3-upgrade:compile" ; 
+[INFO] 	"cn.hippo4j:hippo4j-config-spring-boot-starter:jar:1.4.3-upgrade:compile" -> "cn.hippo4j:hippo4j-adapter-base:jar:1.4.3-upgrade:compile" ; 
+[INFO] 	"cn.hippo4j:hippo4j-config-spring-boot-starter:jar:1.4.3-upgrade:compile" -> "cn.hippo4j:hippo4j-spring-boot-starter-adapter-web:jar:1.4.3-upgrade:compile" ; 
+[INFO] 	"cn.hippo4j:hippo4j-config-spring-boot-starter:jar:1.4.3-upgrade:compile" -> "cn.hippo4j:hippo4j-spring-boot-starter-monitor-local-log:jar:1.4.3-upgrade:compile" ; 
+[INFO] 	"cn.hippo4j:hippo4j-config-spring-boot-starter:jar:1.4.3-upgrade:compile" -> "cn.hippo4j:hippo4j-spring-boot-starter-monitor-micrometer:jar:1.4.3-upgrade:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.5.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.springframework:spring-core:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.5.8:compile" -> "org.yaml:snakeyaml:jar:1.28:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.5.8:compile" -> "org.springframework:spring-context:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.14:compile" -> "org.springframework:spring-aop:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.14:compile" -> "org.springframework:spring-expression:jar:5.3.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.8:compile" -> "ch.qos.logback:logback-classic:jar:1.2.9:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.8:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.5.8:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.32:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.9:compile" -> "ch.qos.logback:logback-core:jar:1.2.9:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.9:compile" -> "org.slf4j:slf4j-api:jar:1.7.32:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.0:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.0:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.14:compile" -> "org.springframework:spring-jcl:jar:5.3.14:compile" ; 
+[INFO] 	"cn.hippo4j:hippo4j-core:jar:1.4.3-upgrade:compile" -> "cn.hippo4j:hippo4j-common:jar:1.4.3-upgrade:compile" ; 
+[INFO] 	"cn.hippo4j:hippo4j-common:jar:1.4.3-upgrade:compile" -> "org.springframework:spring-web:jar:5.3.14:compile" ; 
+[INFO] 	"cn.hippo4j:hippo4j-common:jar:1.4.3-upgrade:compile" -> "org.springframework:spring-beans:jar:5.3.14:compile" ; 
+[INFO] 	"cn.hippo4j:hippo4j-common:jar:1.4.3-upgrade:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.12.6:compile" ; 
+[INFO] 	"cn.hippo4j:hippo4j-common:jar:1.4.3-upgrade:compile" -> "org.projectlombok:lombok:jar:1.18.22:compile" ; 
+[INFO] 	"cn.hippo4j:hippo4j-common:jar:1.4.3-upgrade:compile" -> "com.github.ben-manes.caffeine:caffeine:jar:2.9.3:compile" ; 
+[INFO] 	"cn.hippo4j:hippo4j-common:jar:1.4.3-upgrade:compile" -> "com.github.dozermapper:dozer-core:jar:6.5.0:compile" ; 
+[INFO] 	"cn.hippo4j:hippo4j-common:jar:1.4.3-upgrade:compile" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.5.8:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.12.6:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.12.6:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.12.6:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.12.6:compile" ; 
+[INFO] 	"com.github.ben-manes.caffeine:caffeine:jar:2.9.3:compile" -> "org.checkerframework:checker-qual:jar:3.19.0:compile" ; 
+[INFO] 	"com.github.ben-manes.caffeine:caffeine:jar:2.9.3:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.10.0:compile" ; 
+[INFO] 	"com.github.dozermapper:dozer-core:jar:6.5.0:compile" -> "commons-beanutils:commons-beanutils:jar:1.9.3:compile" ; 
+[INFO] 	"com.github.dozermapper:dozer-core:jar:6.5.0:compile" -> "commons-io:commons-io:jar:2.5:compile" ; 
+[INFO] 	"com.github.dozermapper:dozer-core:jar:6.5.0:compile" -> "org.slf4j:jcl-over-slf4j:jar:1.7.32:compile" ; 
+[INFO] 	"com.github.dozermapper:dozer-core:jar:6.5.0:compile" -> "org.objenesis:objenesis:jar:2.6:compile" ; 
+[INFO] 	"com.github.dozermapper:dozer-core:jar:6.5.0:compile" -> "org.glassfish.jaxb:jaxb-runtime:jar:2.3.5:compile" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.3:compile" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.5:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.5:compile" -> "org.glassfish.jaxb:txw2:jar:2.3.5:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.5:compile" -> "com.sun.istack:istack-commons-runtime:jar:3.0.12:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.5:compile" -> "com.sun.activation:jakarta.activation:jar:1.2.2:runtime" ; 
+[INFO] 	"cn.hippo4j:hippo4j-message:jar:1.4.3-upgrade:compile" -> "com.aliyun:alibaba-dingtalk-service-sdk:jar:2.0.0:compile" ; 
+[INFO] 	"cn.hippo4j:hippo4j-message:jar:1.4.3-upgrade:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"com.aliyun:alibaba-dingtalk-service-sdk:jar:2.0.0:compile" -> "commons-logging:commons-logging:jar:1.1.1:compile" ; 
+[INFO] 	"cn.hippo4j:hippo4j-spring-boot-starter-adapter-web:jar:1.4.3-upgrade:compile" -> "cn.hippo4j:hippo4j-adapter-web:jar:1.4.3-upgrade:compile" ; 
+[INFO] 	"cn.hippo4j:hippo4j-spring-boot-starter-monitor-local-log:jar:1.4.3-upgrade:compile" -> "cn.hippo4j:hippo4j-monitor-local-log:jar:1.4.3-upgrade:compile" ; 
+[INFO] 	"cn.hippo4j:hippo4j-monitor-local-log:jar:1.4.3-upgrade:compile" -> "cn.hippo4j:hippo4j-monitor-base:jar:1.4.3-upgrade:compile" ; 
+[INFO] 	"cn.hippo4j:hippo4j-spring-boot-starter-monitor-micrometer:jar:1.4.3-upgrade:compile" -> "cn.hippo4j:hippo4j-monitor-micrometer:jar:1.4.3-upgrade:compile" ; 
+[INFO] 	"cn.hippo4j:hippo4j-monitor-micrometer:jar:1.4.3-upgrade:compile" -> "io.micrometer:micrometer-core:jar:1.7.7:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.7.7:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.7.7:compile" -> "org.latencyutils:LatencyUtils:jar:2.0.3:runtime" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< io.github.memorydoc:gobrs-async-trace-plugin >------------
+[INFO] Building gobrs-async-trace-plugin 1.3.1-RELEASE                  [13/13]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ gobrs-async-trace-plugin ---
+[INFO] digraph "io.github.memorydoc:gobrs-async-trace-plugin:jar:1.3.1-RELEASE" { 
+[INFO] 	"io.github.memorydoc:gobrs-async-trace-plugin:jar:1.3.1-RELEASE" -> "com.yomahub:tlog-all-spring-boot-starter:jar:1.5.0:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-trace-plugin:jar:1.3.1-RELEASE" -> "io.github.memorydoc:gobrs-async-plugin-base:jar:1.3.1-RELEASE:compile" ; 
+[INFO] 	"com.yomahub:tlog-all-spring-boot-starter:jar:1.5.0:compile" -> "com.yomahub:tlog-spring-boot-configuration:jar:1.5.0:compile" ; 
+[INFO] 	"com.yomahub:tlog-all-spring-boot-starter:jar:1.5.0:compile" -> "com.yomahub:tlog-dubbo:jar:1.5.0:compile" ; 
+[INFO] 	"com.yomahub:tlog-all-spring-boot-starter:jar:1.5.0:compile" -> "com.yomahub:tlog-dubbox:jar:1.5.0:compile" ; 
+[INFO] 	"com.yomahub:tlog-all-spring-boot-starter:jar:1.5.0:compile" -> "com.yomahub:tlog-feign:jar:1.5.0:compile" ; 
+[INFO] 	"com.yomahub:tlog-all-spring-boot-starter:jar:1.5.0:compile" -> "com.yomahub:tlog-webroot:jar:1.5.0:compile" ; 
+[INFO] 	"com.yomahub:tlog-all-spring-boot-starter:jar:1.5.0:compile" -> "com.yomahub:tlog-gateway:jar:1.5.0:compile" ; 
+[INFO] 	"com.yomahub:tlog-all-spring-boot-starter:jar:1.5.0:compile" -> "com.yomahub:tlog-webflux:jar:1.5.0:compile" ; 
+[INFO] 	"com.yomahub:tlog-all-spring-boot-starter:jar:1.5.0:compile" -> "com.yomahub:tlog-httpclient:jar:1.5.0:compile" ; 
+[INFO] 	"com.yomahub:tlog-all-spring-boot-starter:jar:1.5.0:compile" -> "com.yomahub:tlog-okhttp:jar:1.5.0:compile" ; 
+[INFO] 	"com.yomahub:tlog-all-spring-boot-starter:jar:1.5.0:compile" -> "com.yomahub:tlog-hutool-http:jar:1.5.0:compile" ; 
+[INFO] 	"com.yomahub:tlog-all-spring-boot-starter:jar:1.5.0:compile" -> "com.yomahub:tlog-forest:jar:1.5.0:compile" ; 
+[INFO] 	"com.yomahub:tlog-all-spring-boot-starter:jar:1.5.0:compile" -> "com.yomahub:tlog-rest-template:jar:1.5.0:compile" ; 
+[INFO] 	"com.yomahub:tlog-all-spring-boot-starter:jar:1.5.0:compile" -> "com.yomahub:tlog-task:jar:1.5.0:compile" ; 
+[INFO] 	"com.yomahub:tlog-all-spring-boot-starter:jar:1.5.0:compile" -> "com.yomahub:tlog-xxl-job:jar:1.5.0:compile" ; 
+[INFO] 	"com.yomahub:tlog-dubbo:jar:1.5.0:compile" -> "com.yomahub:tlog-core:jar:1.5.0:compile" ; 
+[INFO] 	"com.yomahub:tlog-core:jar:1.5.0:compile" -> "org.dom4j:dom4j:jar:2.1.3:compile" ; 
+[INFO] 	"com.yomahub:tlog-core:jar:1.5.0:compile" -> "org.javassist:javassist:jar:3.22.0-GA:compile" ; 
+[INFO] 	"com.yomahub:tlog-core:jar:1.5.0:compile" -> "org.aspectj:aspectjweaver:jar:1.9.7:compile" ; 
+[INFO] 	"com.yomahub:tlog-core:jar:1.5.0:compile" -> "com.alibaba:fastjson:jar:1.2.83:compile" ; 
+[INFO] 	"com.yomahub:tlog-core:jar:1.5.0:compile" -> "com.alibaba:QLExpress:jar:3.2.0:compile" ; 
+[INFO] 	"com.alibaba:QLExpress:jar:3.2.0:compile" -> "commons-beanutils:commons-beanutils:jar:1.8.2:compile" ; 
+[INFO] 	"com.alibaba:QLExpress:jar:3.2.0:compile" -> "commons-logging:commons-logging:jar:1.1.1:compile" ; 
+[INFO] 	"com.alibaba:QLExpress:jar:3.2.0:compile" -> "commons-lang:commons-lang:jar:2.4:compile" ; 
+[INFO] 	"com.yomahub:tlog-webflux:jar:1.5.0:compile" -> "com.yomahub:tlog-common:jar:1.5.0:compile" ; 
+[INFO] 	"com.yomahub:tlog-common:jar:1.5.0:compile" -> "org.slf4j:slf4j-api:jar:1.7.32:compile" ; 
+[INFO] 	"com.yomahub:tlog-common:jar:1.5.0:compile" -> "cn.hutool:hutool-core:jar:5.8.6:compile" ; 
+[INFO] 	"com.yomahub:tlog-common:jar:1.5.0:compile" -> "com.alibaba:transmittable-thread-local:jar:2.11.2:compile" ; 
+[INFO] 	"com.yomahub:tlog-okhttp:jar:1.5.0:compile" -> "com.squareup.okhttp3:okhttp:jar:3.14.9:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.14.9:compile" -> "com.squareup.okio:okio:jar:1.17.2:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-plugin-base:jar:1.3.1-RELEASE:compile" -> "io.github.memorydoc:gobrs-async-spi:jar:1.3.1-RELEASE:compile" ; 
+[INFO] 	"io.github.memorydoc:gobrs-async-spi:jar:1.3.1-RELEASE:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for gobrs-async 1.3.1-RELEASE:
+[INFO] 
+[INFO] gobrs-async ........................................ SUCCESS [  3.835 s]
+[INFO] gobrs-async-spi .................................... SUCCESS [  0.680 s]
+[INFO] gobrs-async-plugin ................................. SUCCESS [  0.079 s]
+[INFO] gobrs-async-plugin-base ............................ SUCCESS [  0.092 s]
+[INFO] gobrs-async-common ................................. SUCCESS [  0.270 s]
+[INFO] gobrs-async-core ................................... SUCCESS [  0.114 s]
+[INFO] gobrs-async-starter ................................ SUCCESS [  0.148 s]
+[INFO] gobrs-async-monitor-plugin ......................... SUCCESS [  0.011 s]
+[INFO] gobrs-async-skywalking-plugin ...................... SUCCESS [  0.041 s]
+[INFO] gobrs-async-test ................................... SUCCESS [  0.369 s]
+[INFO] gobrs-async-example ................................ SUCCESS [  1.288 s]
+[INFO] gobrs-async-hippo4j-plugin ......................... SUCCESS [  0.667 s]
+[INFO] gobrs-async-trace-plugin ........................... SUCCESS [  0.115 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.129 s
+[INFO] Finished at: 2023-12-28T09:02:42+01:00
+[INFO] ------------------------------------------------------------------------

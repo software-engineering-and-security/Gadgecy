@@ -1,0 +1,226 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] druid-parent                                                       [pom]
+[INFO] druid                                                              [jar]
+[INFO] druid-spring-boot-starter                                          [jar]
+[INFO] druid-wrapper                                                      [jar]
+[INFO] druid-demo-petclinic                                               [jar]
+[INFO] druid-spring-boot-3-starter                                        [jar]
+[INFO] 
+[INFO] ----------------------< com.alibaba:druid-parent >----------------------
+[INFO] Building druid-parent 1.2.21-SNAPSHOT                              [1/6]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ druid-parent ---
+[INFO] digraph "com.alibaba:druid-parent:pom:1.2.21-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------------< com.alibaba:druid >--------------------------
+[INFO] Building druid 1.2.21-SNAPSHOT                                     [2/6]
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The artifact mysql:mysql-connector-java:jar:8.0.32 has been relocated to com.mysql:mysql-connector-j:jar:8.0.32
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ druid ---
+[WARNING] The artifact mysql:mysql-connector-java:jar:8.0.32 has been relocated to com.mysql:mysql-connector-j:jar:8.0.32
+[INFO] digraph "com.alibaba:druid:jar:1.2.21-SNAPSHOT" { 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "simple-jndi:simple-jndi:jar:0.11.4.1:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "javax.transaction:jta:jar:1.1:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "javax.servlet:javax.servlet-api:jar:3.1.0:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "commons-logging:commons-logging:jar:1.2:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "jakarta.servlet:jakarta.servlet-api:jar:5.0.0:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.springframework:spring-core:jar:4.3.20.RELEASE:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.springframework:spring-beans:jar:4.3.20.RELEASE:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.springframework:spring-orm:jar:4.3.20.RELEASE:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.springframework:spring-webmvc:jar:4.3.20.RELEASE:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.springframework:spring-ibatis:jar:2.0.8:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.mybatis:mybatis:jar:3.4.0:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.mybatis:mybatis-spring:jar:1.3.0:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "log4j:log4j:jar:1.2.17:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.9:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.slf4j:slf4j-log4j12:jar:1.7.9:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.apache.logging.log4j:log4j-api:jar:2.13.2:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.apache.logging.log4j:log4j-core:jar:2.17.0:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "com.mysql:mysql-connector-j:jar:8.0.32:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "net.sourceforge.jtds:jtds:jar:1.3.0:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.postgresql:postgresql:jar:42.2.18:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "com.oracle.ojdbc:ojdbc8:jar:19.3.0.0:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "com.dameng:DmJdbcDriver18:jar:8.1.3.62:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.apache.kylin:kylin-jdbc:jar:2.0.0:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "io.trino:trino-jdbc:jar:352:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.quartz-scheduler:quartz:jar:2.3.2:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.apache.ibatis:ibatis-sqlmap:jar:2.3.4.726:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "com.h2database:h2:jar:1.4.199:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.hibernate:hibernate-core:jar:5.6.9.Final:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.hibernate:hibernate-c3p0:jar:5.6.9.Final:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "com.aliyun.odps:odps-sdk-udf:jar:0.43.3-public:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.apache.calcite:calcite-core:jar:1.26.0:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "com.google.guava:guava:jar:30.1-jre:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "com.alibaba:dubbo:jar:2.5.3:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.apache.curator:curator-recipes:jar:4.2.0:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "com.alibaba.fastjson2:fastjson2:jar:2.0.29:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "ru.yandex.clickhouse:clickhouse-jdbc:jar:0.2.4:provided" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.springframework:spring-test:jar:4.3.20.RELEASE:test" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "com.aliyun.odps:odps-jdbc:jar:3.4.2:test" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.apache.derby:derby:jar:10.12.1.1:test" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "commons-dbcp:commons-dbcp:jar:1.4:test" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.apache.commons:commons-dbcp2:jar:2.5.0:test" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "com.jolbox:bonecp:jar:0.8.0.RELEASE:test" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "com.jolbox:bonecp-spring:jar:0.8.0.RELEASE:test" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "c3p0:c3p0:jar:0.9.1.2:test" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.apache.tomcat:tomcat-jdbc:jar:8.0.32:test" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.nutz:nutz:jar:1.r.55:test" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.javasimon:javasimon-spring:jar:4.1.1:test" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.javasimon:javasimon-jdbc41:jar:4.1.1:test" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.javasimon:javasimon-javaee:jar:4.1.1:test" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.apache.calcite:calcite-druid:jar:1.26.0:test" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "commons-dbutils:commons-dbutils:jar:1.6:test" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.antlr:antlr4:jar:4.11.1:test" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.openjdk.jmh:jmh-core:jar:1.19:test" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.openjdk.jmh:jmh-generator-annprocess:jar:1.19:test" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.mariadb.jdbc:mariadb-java-client:jar:2.4.0:test" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "org.apache.curator:curator-test:jar:4.2.0:test" ; 
+[INFO] 	"com.alibaba:druid:jar:1.2.21-SNAPSHOT" -> "com.github.housepower:clickhouse-native-jdbc-shaded:jar:2.5.6:provided" ; 
+[INFO] 	"org.springframework:spring-orm:jar:4.3.20.RELEASE:provided" -> "org.springframework:spring-jdbc:jar:4.3.20.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-orm:jar:4.3.20.RELEASE:provided" -> "org.springframework:spring-tx:jar:4.3.20.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:4.3.20.RELEASE:provided" -> "org.springframework:spring-aop:jar:4.3.20.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:4.3.20.RELEASE:provided" -> "org.springframework:spring-context:jar:4.3.20.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:4.3.20.RELEASE:provided" -> "org.springframework:spring-expression:jar:4.3.20.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:4.3.20.RELEASE:provided" -> "org.springframework:spring-web:jar:4.3.20.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-ibatis:jar:2.0.8:provided" -> "org.springframework:spring-dao:jar:2.0.8:provided" ; 
+[INFO] 	"org.springframework:spring-dao:jar:2.0.8:provided" -> "aopalliance:aopalliance:jar:1.0:provided" ; 
+[INFO] 	"com.mysql:mysql-connector-j:jar:8.0.32:provided" -> "com.google.protobuf:protobuf-java:jar:3.21.9:provided" ; 
+[INFO] 	"org.postgresql:postgresql:jar:42.2.18:provided" -> "org.checkerframework:checker-qual:jar:3.5.0:provided" ; 
+[INFO] 	"com.oracle.ojdbc:ojdbc8:jar:19.3.0.0:provided" -> "com.oracle.ojdbc:ucp:jar:19.3.0.0:provided" ; 
+[INFO] 	"com.oracle.ojdbc:ojdbc8:jar:19.3.0.0:provided" -> "com.oracle.ojdbc:oraclepki:jar:19.3.0.0:provided" ; 
+[INFO] 	"com.oracle.ojdbc:ojdbc8:jar:19.3.0.0:provided" -> "com.oracle.ojdbc:osdt_cert:jar:19.3.0.0:provided" ; 
+[INFO] 	"com.oracle.ojdbc:ojdbc8:jar:19.3.0.0:provided" -> "com.oracle.ojdbc:osdt_core:jar:19.3.0.0:provided" ; 
+[INFO] 	"com.oracle.ojdbc:ojdbc8:jar:19.3.0.0:provided" -> "com.oracle.ojdbc:simplefan:jar:19.3.0.0:provided" ; 
+[INFO] 	"com.oracle.ojdbc:ojdbc8:jar:19.3.0.0:provided" -> "com.oracle.ojdbc:ons:jar:19.3.0.0:provided" ; 
+[INFO] 	"org.apache.kylin:kylin-jdbc:jar:2.0.0:provided" -> "org.apache.httpcomponents:httpclient:jar:4.2.5:provided" ; 
+[INFO] 	"org.apache.kylin:kylin-jdbc:jar:2.0.0:provided" -> "org.apache.calcite.avatica:avatica-core:jar:1.9.0:provided" ; 
+[INFO] 	"org.apache.kylin:kylin-jdbc:jar:2.0.0:provided" -> "org.slf4j:jcl-over-slf4j:jar:1.7.21:provided" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.2.5:provided" -> "org.apache.httpcomponents:httpcore:jar:4.2.4:provided" ; 
+[INFO] 	"org.apache.calcite.avatica:avatica-core:jar:1.9.0:provided" -> "org.apache.calcite.avatica:avatica-metrics:jar:1.9.0:provided" ; 
+[INFO] 	"org.quartz-scheduler:quartz:jar:2.3.2:provided" -> "com.mchange:c3p0:jar:0.9.5.4:provided" ; 
+[INFO] 	"org.quartz-scheduler:quartz:jar:2.3.2:provided" -> "com.mchange:mchange-commons-java:jar:0.2.15:provided" ; 
+[INFO] 	"org.quartz-scheduler:quartz:jar:2.3.2:provided" -> "com.zaxxer:HikariCP-java7:jar:2.4.13:provided" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.6.9.Final:provided" -> "org.jboss.logging:jboss-logging:jar:3.4.3.Final:provided" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.6.9.Final:provided" -> "javax.persistence:javax.persistence-api:jar:2.2:provided" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.6.9.Final:provided" -> "net.bytebuddy:byte-buddy:jar:1.12.9:provided" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.6.9.Final:provided" -> "antlr:antlr:jar:2.7.7:provided" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.6.9.Final:provided" -> "org.jboss.spec.javax.transaction:jboss-transaction-api_1.2_spec:jar:1.1.1.Final:provided" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.6.9.Final:provided" -> "org.jboss:jandex:jar:2.4.2.Final:provided" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.6.9.Final:provided" -> "com.fasterxml:classmate:jar:1.5.1:provided" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.6.9.Final:provided" -> "javax.activation:javax.activation-api:jar:1.2.0:provided" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.6.9.Final:provided" -> "org.hibernate.common:hibernate-commons-annotations:jar:5.1.2.Final:provided" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.6.9.Final:provided" -> "javax.xml.bind:jaxb-api:jar:2.3.1:provided" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.6.9.Final:provided" -> "org.glassfish.jaxb:jaxb-runtime:jar:2.3.1:provided" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.1:provided" -> "org.glassfish.jaxb:txw2:jar:2.3.1:provided" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.1:provided" -> "com.sun.istack:istack-commons-runtime:jar:3.0.7:provided" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.1:provided" -> "org.jvnet.staxex:stax-ex:jar:1.8:provided" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.1:provided" -> "com.sun.xml.fastinfoset:FastInfoset:jar:1.2.15:provided" ; 
+[INFO] 	"com.aliyun.odps:odps-sdk-udf:jar:0.43.3-public:provided" -> "com.aliyun.odps:odps-sdk-commons:jar:0.43.3-public:provided" ; 
+[INFO] 	"com.aliyun.odps:odps-sdk-udf:jar:0.43.3-public:provided" -> "com.google.code.gson:gson:jar:2.2.4:provided" ; 
+[INFO] 	"com.aliyun.odps:odps-sdk-commons:jar:0.43.3-public:provided" -> "org.aspectj:aspectjrt:jar:1.8.9:provided" ; 
+[INFO] 	"org.apache.calcite:calcite-core:jar:1.26.0:provided" -> "org.apache.calcite:calcite-linq4j:jar:1.26.0:provided" ; 
+[INFO] 	"org.apache.calcite:calcite-core:jar:1.26.0:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.10.0:provided" ; 
+[INFO] 	"org.apache.calcite:calcite-core:jar:1.26.0:provided" -> "org.apiguardian:apiguardian-api:jar:1.1.0:provided" ; 
+[INFO] 	"org.apache.calcite:calcite-core:jar:1.26.0:provided" -> "com.esri.geometry:esri-geometry-api:jar:2.2.0:provided" ; 
+[INFO] 	"org.apache.calcite:calcite-core:jar:1.26.0:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.10.0:provided" ; 
+[INFO] 	"org.apache.calcite:calcite-core:jar:1.26.0:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.10.0:provided" ; 
+[INFO] 	"org.apache.calcite:calcite-core:jar:1.26.0:provided" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.10.0:provided" ; 
+[INFO] 	"org.apache.calcite:calcite-core:jar:1.26.0:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"org.apache.calcite:calcite-core:jar:1.26.0:provided" -> "com.google.uzaygezen:uzaygezen-core:jar:0.2:provided" ; 
+[INFO] 	"org.apache.calcite:calcite-core:jar:1.26.0:provided" -> "com.jayway.jsonpath:json-path:jar:2.4.0:provided" ; 
+[INFO] 	"org.apache.calcite:calcite-core:jar:1.26.0:provided" -> "com.yahoo.datasketches:sketches-core:jar:0.9.0:provided" ; 
+[INFO] 	"org.apache.calcite:calcite-core:jar:1.26.0:provided" -> "commons-codec:commons-codec:jar:1.12:provided" ; 
+[INFO] 	"org.apache.calcite:calcite-core:jar:1.26.0:provided" -> "net.hydromatic:aggdesigner-algorithm:jar:6.0:provided" ; 
+[INFO] 	"org.apache.calcite:calcite-core:jar:1.26.0:provided" -> "org.apache.commons:commons-lang3:jar:3.8:provided" ; 
+[INFO] 	"org.apache.calcite:calcite-core:jar:1.26.0:provided" -> "commons-io:commons-io:jar:2.4:provided" ; 
+[INFO] 	"org.apache.calcite:calcite-core:jar:1.26.0:provided" -> "org.codehaus.janino:commons-compiler:jar:3.0.11:provided" ; 
+[INFO] 	"org.apache.calcite:calcite-core:jar:1.26.0:provided" -> "org.codehaus.janino:janino:jar:3.0.11:provided" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.10.0:provided" -> "org.yaml:snakeyaml:jar:1.24:provided" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.4.0:provided" -> "net.minidev:json-smart:jar:2.3:provided" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.3:provided" -> "net.minidev:accessors-smart:jar:1.2:provided" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:1.2:provided" -> "org.ow2.asm:asm:jar:5.0.4:provided" ; 
+[INFO] 	"com.yahoo.datasketches:sketches-core:jar:0.9.0:provided" -> "com.yahoo.datasketches:memory:jar:0.9.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1-jre:provided" -> "com.google.guava:failureaccess:jar:1.0.1:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1-jre:provided" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1-jre:provided" -> "com.google.errorprone:error_prone_annotations:jar:2.3.4:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1-jre:provided" -> "com.google.j2objc:j2objc-annotations:jar:1.3:provided" ; 
+[INFO] 	"com.alibaba:dubbo:jar:2.5.3:provided" -> "org.springframework:spring:jar:2.5.6.SEC03:provided" ; 
+[INFO] 	"com.alibaba:dubbo:jar:2.5.3:provided" -> "org.javassist:javassist:jar:3.15.0-GA:provided" ; 
+[INFO] 	"com.alibaba:dubbo:jar:2.5.3:provided" -> "org.jboss.netty:netty:jar:3.2.5.Final:provided" ; 
+[INFO] 	"org.apache.curator:curator-recipes:jar:4.2.0:provided" -> "org.apache.curator:curator-framework:jar:4.2.0:provided" ; 
+[INFO] 	"org.apache.curator:curator-framework:jar:4.2.0:provided" -> "org.apache.curator:curator-client:jar:4.2.0:provided" ; 
+[INFO] 	"ru.yandex.clickhouse:clickhouse-jdbc:jar:0.2.4:provided" -> "org.apache.httpcomponents:httpmime:jar:4.5.2:provided" ; 
+[INFO] 	"ru.yandex.clickhouse:clickhouse-jdbc:jar:0.2.4:provided" -> "net.jpountz.lz4:lz4:jar:1.3.0:provided" ; 
+[INFO] 	"com.aliyun.odps:odps-jdbc:jar:3.4.2:test" -> "com.aliyun.odps:odps-sdk-core:jar:shaded:0.43.3-public:test" ; 
+[INFO] 	"com.aliyun.odps:odps-jdbc:jar:3.4.2:test" -> "commons-lang:commons-lang:jar:2.6:provided" ; 
+[INFO] 	"com.aliyun.odps:odps-sdk-core:jar:shaded:0.43.3-public:test" -> "org.codehaus.jackson:jackson-mapper-asl:jar:1.9.13:test" ; 
+[INFO] 	"com.aliyun.odps:odps-sdk-core:jar:shaded:0.43.3-public:test" -> "net.sourceforge.javacsv:javacsv:jar:2.0:test" ; 
+[INFO] 	"com.aliyun.odps:odps-sdk-core:jar:shaded:0.43.3-public:test" -> "org.xerial.snappy:snappy-java:jar:1.1.1.6:test" ; 
+[INFO] 	"com.aliyun.odps:odps-sdk-core:jar:shaded:0.43.3-public:test" -> "org.lz4:lz4-pure-java:jar:1.8.0:test" ; 
+[INFO] 	"com.aliyun.odps:odps-sdk-core:jar:shaded:0.43.3-public:test" -> "javax.mail:mail:jar:1.4.7:test" ; 
+[INFO] 	"com.aliyun.odps:odps-sdk-core:jar:shaded:0.43.3-public:test" -> "stax:stax-api:jar:1.0.1:test" ; 
+[INFO] 	"com.aliyun.odps:odps-sdk-core:jar:shaded:0.43.3-public:test" -> "stax:stax:jar:1.2.0:test" ; 
+[INFO] 	"com.aliyun.odps:odps-sdk-core:jar:shaded:0.43.3-public:test" -> "xpp3:xpp3:jar:1.1.3.3:test" ; 
+[INFO] 	"com.aliyun.odps:odps-sdk-core:jar:shaded:0.43.3-public:test" -> "org.apache.arrow:arrow-vector:jar:4.0.0:test" ; 
+[INFO] 	"com.aliyun.odps:odps-sdk-core:jar:shaded:0.43.3-public:test" -> "io.netty:netty-all:jar:4.1.51.Final:test" ; 
+[INFO] 	"org.codehaus.jackson:jackson-mapper-asl:jar:1.9.13:test" -> "org.codehaus.jackson:jackson-core-asl:jar:1.9.13:test" ; 
+[INFO] 	"javax.mail:mail:jar:1.4.7:test" -> "javax.activation:activation:jar:1.1:test" ; 
+[INFO] 	"org.apache.arrow:arrow-vector:jar:4.0.0:test" -> "org.apache.arrow:arrow-format:jar:4.0.0:test" ; 
+[INFO] 	"org.apache.arrow:arrow-vector:jar:4.0.0:test" -> "org.apache.arrow:arrow-memory-core:jar:4.0.0:test" ; 
+[INFO] 	"org.apache.arrow:arrow-vector:jar:4.0.0:test" -> "io.netty:netty-common:jar:4.1.48.Final:test" ; 
+[INFO] 	"org.apache.arrow:arrow-vector:jar:4.0.0:test" -> "com.google.flatbuffers:flatbuffers-java:jar:1.12.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"commons-dbcp:commons-dbcp:jar:1.4:test" -> "commons-pool:commons-pool:jar:1.5.4:test" ; 
+[INFO] 	"org.apache.commons:commons-dbcp2:jar:2.5.0:test" -> "org.apache.commons:commons-pool2:jar:2.6.0:test" ; 
+[INFO] 	"org.apache.tomcat:tomcat-jdbc:jar:8.0.32:test" -> "org.apache.tomcat:tomcat-juli:jar:8.0.32:test" ; 
+[INFO] 	"org.javasimon:javasimon-spring:jar:4.1.1:test" -> "org.javasimon:javasimon-core:jar:4.1.1:test" ; 
+[INFO] 	"org.apache.calcite:calcite-druid:jar:1.26.0:test" -> "joda-time:joda-time:jar:2.8.1:test" ; 
+[INFO] 	"org.antlr:antlr4:jar:4.11.1:test" -> "org.antlr:antlr4-runtime:jar:4.11.1:test" ; 
+[INFO] 	"org.antlr:antlr4:jar:4.11.1:test" -> "org.antlr:antlr-runtime:jar:3.5.3:test" ; 
+[INFO] 	"org.antlr:antlr4:jar:4.11.1:test" -> "org.antlr:ST4:jar:4.3.4:test" ; 
+[INFO] 	"org.antlr:antlr4:jar:4.11.1:test" -> "org.abego.treelayout:org.abego.treelayout.core:jar:1.0.3:test" ; 
+[INFO] 	"org.antlr:antlr4:jar:4.11.1:test" -> "org.glassfish:javax.json:jar:1.1.4:test" ; 
+[INFO] 	"org.antlr:antlr4:jar:4.11.1:test" -> "com.ibm.icu:icu4j:jar:71.1:test" ; 
+[INFO] 	"org.openjdk.jmh:jmh-core:jar:1.19:test" -> "net.sf.jopt-simple:jopt-simple:jar:4.6:test" ; 
+[INFO] 	"org.openjdk.jmh:jmh-core:jar:1.19:test" -> "org.apache.commons:commons-math3:jar:3.2:test" ; 
+[INFO] 	"org.apache.curator:curator-test:jar:4.2.0:test" -> "org.apache.zookeeper:zookeeper:jar:3.5.4-beta:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.4-beta:provided" -> "commons-cli:commons-cli:jar:1.2:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.4-beta:provided" -> "org.apache.yetus:audience-annotations:jar:0.5.0:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.5.4-beta:provided" -> "io.netty:netty:jar:3.10.6.Final:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< com.alibaba:druid-spring-boot-starter >----------------
+[INFO] Building druid-spring-boot-starter 1.2.21-SNAPSHOT                 [3/6]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] druid-parent 1.2.21-SNAPSHOT ....................... SUCCESS [  4.071 s]
+[INFO] druid 1.2.21-SNAPSHOT .............................. SUCCESS [  4.036 s]
+[INFO] druid-spring-boot-starter 1.2.21-SNAPSHOT .......... FAILURE [  1.168 s]
+[INFO] druid-wrapper 1.2.21-SNAPSHOT ...................... SKIPPED
+[INFO] druid-demo-petclinic 2.7.3 ......................... SKIPPED
+[INFO] druid-spring-boot-3-starter 1.2.21-SNAPSHOT ........ SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.866 s
+[INFO] Finished at: 2023-12-28T09:02:26+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project druid-spring-boot-starter: Could not resolve dependencies for project com.alibaba:druid-spring-boot-starter:jar:1.2.21-SNAPSHOT: Could not find artifact com.alibaba:druid:jar:1.2.21-SNAPSHOT -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :druid-spring-boot-starter

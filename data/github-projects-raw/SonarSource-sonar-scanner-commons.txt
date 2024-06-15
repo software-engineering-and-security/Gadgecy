@@ -1,0 +1,113 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] SonarQube Scanner Commons - Parent                                 [pom]
+[INFO] SonarQube Scanner Commons - Batch Interface                        [jar]
+[INFO] SonarQube Scanner Commons - Batch                                  [jar]
+[INFO] SonarQube Scanner Commons                                          [jar]
+[INFO] 
+[INFO] ----< org.sonarsource.scanner.commons:sonar-scanner-commons-parent >----
+[INFO] Building SonarQube Scanner Commons - Parent 2.17-SNAPSHOT          [1/4]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ sonar-scanner-commons-parent ---
+[INFO] digraph "org.sonarsource.scanner.commons:sonar-scanner-commons-parent:pom:2.17-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] --< org.sonarsource.scanner.commons:sonar-scanner-commons-batch-interface >--
+[INFO] Building SonarQube Scanner Commons - Batch Interface 2.17-SNAPSHOT [2/4]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ sonar-scanner-commons-batch-interface ---
+[INFO] digraph "org.sonarsource.scanner.commons:sonar-scanner-commons-batch-interface:jar:2.17-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ----< org.sonarsource.scanner.commons:sonar-scanner-commons-batch >-----
+[INFO] Building SonarQube Scanner Commons - Batch 2.17-SNAPSHOT           [3/4]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ sonar-scanner-commons-batch ---
+[INFO] digraph "org.sonarsource.scanner.commons:sonar-scanner-commons-batch:jar:2.17-SNAPSHOT" { 
+[INFO] 	"org.sonarsource.scanner.commons:sonar-scanner-commons-batch:jar:2.17-SNAPSHOT" -> "org.sonarsource.scanner.commons:sonar-scanner-commons-batch-interface:jar:2.17-SNAPSHOT:provided" ; 
+[INFO] 	"org.sonarsource.scanner.commons:sonar-scanner-commons-batch:jar:2.17-SNAPSHOT" -> "org.sonarsource.sonarqube:sonar-scanner-engine:jar:6.6:provided" ; 
+[INFO] 	"org.sonarsource.scanner.commons:sonar-scanner-commons-batch:jar:2.17-SNAPSHOT" -> "org.sonarsource.sonarqube:sonar-testing-harness:jar:6.6:test" ; 
+[INFO] 	"org.sonarsource.scanner.commons:sonar-scanner-commons-batch:jar:2.17-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"org.sonarsource.scanner.commons:sonar-scanner-commons-batch:jar:2.17-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.11.1:test" ; 
+[INFO] 	"org.sonarsource.scanner.commons:sonar-scanner-commons-batch:jar:2.17-SNAPSHOT" -> "org.mockito:mockito-core:jar:3.12.4:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-scanner-engine:jar:6.6:provided" -> "commons-beanutils:commons-beanutils:jar:1.8.3:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-scanner-engine:jar:6.6:provided" -> "org.sonarsource:sonar-persistit:jar:3.3.2:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-scanner-engine:jar:6.6:provided" -> "com.google.guava:guava:jar:18.0:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-scanner-engine:jar:6.6:provided" -> "org.sonarsource.sonarqube:sonar-core:jar:6.6:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-scanner-engine:jar:6.6:provided" -> "org.sonarsource.sonarqube:sonar-scanner-protocol:jar:6.6:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-scanner-engine:jar:6.6:provided" -> "org.sonarsource.sonarqube:sonar-ws:jar:6.6:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-scanner-engine:jar:6.6:provided" -> "org.sonarsource.sonarqube:sonar-home:jar:6.6:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-scanner-engine:jar:6.6:provided" -> "org.sonarsource.sonarqube:sonar-plugin-api:jar:6.6:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-scanner-engine:jar:6.6:provided" -> "org.slf4j:slf4j-api:jar:1.7.24:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-scanner-engine:jar:6.6:provided" -> "org.slf4j:jcl-over-slf4j:jar:1.7.24:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-scanner-engine:jar:6.6:provided" -> "org.slf4j:log4j-over-slf4j:jar:1.7.24:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-scanner-engine:jar:6.6:provided" -> "org.slf4j:jul-to-slf4j:jar:1.7.24:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-scanner-engine:jar:6.6:provided" -> "commons-lang:commons-lang:jar:2.6:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-scanner-engine:jar:6.6:provided" -> "commons-codec:commons-codec:jar:1.11:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-scanner-engine:jar:6.6:provided" -> "com.google.code.gson:gson:jar:2.3.1:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-scanner-engine:jar:6.6:provided" -> "org.apache.commons:commons-csv:jar:1.4:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-scanner-engine:jar:6.6:provided" -> "org.freemarker:freemarker:jar:2.3.20:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-core:jar:6.6:provided" -> "org.picocontainer:picocontainer:jar:2.15:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-core:jar:6.6:provided" -> "com.google.protobuf:protobuf-java:jar:3.0.0-beta-2:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-core:jar:6.6:provided" -> "org.codehaus.sonar:sonar-classloader:jar:1.0:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-core:jar:6.6:provided" -> "org.sonarsource.update-center:sonar-update-center-common:jar:1.18.0.487:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-core:jar:6.6:provided" -> "ch.qos.logback:logback-classic:jar:1.1.7:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-core:jar:6.6:provided" -> "ch.qos.logback:logback-core:jar:1.1.7:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-scanner-protocol:jar:6.6:provided" -> "net.jpountz.lz4:lz4:jar:1.3.0:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-ws:jar:6.6:provided" -> "com.squareup.okhttp3:okhttp:jar:3.14.2:provided" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.14.2:provided" -> "com.squareup.okio:okio:jar:1.17.2:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-plugin-api:jar:6.6:provided" -> "org.codehaus.woodstox:woodstox-core-lgpl:jar:4.4.0:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-plugin-api:jar:6.6:provided" -> "org.codehaus.woodstox:stax2-api:jar:3.1.4:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-plugin-api:jar:6.6:provided" -> "org.codehaus.staxmate:staxmate:jar:2.0.1:provided" ; 
+[INFO] 	"org.codehaus.woodstox:woodstox-core-lgpl:jar:4.4.0:provided" -> "javax.xml.stream:stax-api:jar:1.0-2:provided" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-testing-harness:jar:6.6:test" -> "com.googlecode.json-simple:json-simple:jar:1.1.1:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-testing-harness:jar:6.6:test" -> "commons-io:commons-io:jar:2.8.0:provided" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.12.4:test" -> "net.bytebuddy:byte-buddy:jar:1.11.13:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.12.4:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.11.13:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.12.4:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------< org.sonarsource.scanner.commons:sonar-scanner-commons >--------
+[INFO] Building SonarQube Scanner Commons 2.17-SNAPSHOT                   [4/4]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ sonar-scanner-commons ---
+[INFO] digraph "org.sonarsource.scanner.commons:sonar-scanner-commons:jar:2.17-SNAPSHOT" { 
+[INFO] 	"org.sonarsource.scanner.commons:sonar-scanner-commons:jar:2.17-SNAPSHOT" -> "com.squareup.okhttp3:okhttp:jar:3.14.2:compile" ; 
+[INFO] 	"org.sonarsource.scanner.commons:sonar-scanner-commons:jar:2.17-SNAPSHOT" -> "com.squareup.okhttp3:okhttp-urlconnection:jar:3.14.2:compile" ; 
+[INFO] 	"org.sonarsource.scanner.commons:sonar-scanner-commons:jar:2.17-SNAPSHOT" -> "com.eclipsesource.minimal-json:minimal-json:jar:0.9.5:compile" ; 
+[INFO] 	"org.sonarsource.scanner.commons:sonar-scanner-commons:jar:2.17-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"org.sonarsource.scanner.commons:sonar-scanner-commons:jar:2.17-SNAPSHOT" -> "org.sonarsource.scanner.commons:sonar-scanner-commons-batch:jar:2.17-SNAPSHOT:provided" ; 
+[INFO] 	"org.sonarsource.scanner.commons:sonar-scanner-commons:jar:2.17-SNAPSHOT" -> "org.sonarsource.scanner.commons:sonar-scanner-commons-batch-interface:jar:2.17-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.scanner.commons:sonar-scanner-commons:jar:2.17-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"org.sonarsource.scanner.commons:sonar-scanner-commons:jar:2.17-SNAPSHOT" -> "org.mockito:mockito-core:jar:3.12.4:test" ; 
+[INFO] 	"org.sonarsource.scanner.commons:sonar-scanner-commons:jar:2.17-SNAPSHOT" -> "org.mockito:mockito-inline:jar:3.12.4:test" ; 
+[INFO] 	"org.sonarsource.scanner.commons:sonar-scanner-commons:jar:2.17-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.11.1:test" ; 
+[INFO] 	"org.sonarsource.scanner.commons:sonar-scanner-commons:jar:2.17-SNAPSHOT" -> "com.squareup.okhttp3:mockwebserver:jar:3.14.2:test" ; 
+[INFO] 	"org.sonarsource.scanner.commons:sonar-scanner-commons:jar:2.17-SNAPSHOT" -> "commons-lang:commons-lang:jar:2.6:test" ; 
+[INFO] 	"org.sonarsource.scanner.commons:sonar-scanner-commons:jar:2.17-SNAPSHOT" -> "commons-codec:commons-codec:jar:1.11:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.14.2:compile" -> "com.squareup.okio:okio:jar:1.17.2:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.12.4:test" -> "net.bytebuddy:byte-buddy:jar:1.11.13:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.12.4:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.11.13:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.12.4:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for SonarQube Scanner Commons - Parent 2.17-SNAPSHOT:
+[INFO] 
+[INFO] SonarQube Scanner Commons - Parent ................. SUCCESS [  2.023 s]
+[INFO] SonarQube Scanner Commons - Batch Interface ........ SUCCESS [  0.062 s]
+[INFO] SonarQube Scanner Commons - Batch .................. SUCCESS [  0.534 s]
+[INFO] SonarQube Scanner Commons .......................... SUCCESS [  0.099 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.651 s
+[INFO] Finished at: 2023-12-28T09:03:21+01:00
+[INFO] ------------------------------------------------------------------------

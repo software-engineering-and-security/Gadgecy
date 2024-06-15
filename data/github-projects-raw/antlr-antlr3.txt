@@ -1,0 +1,74 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.antlr:antlr3-maven-plugin:maven-plugin:3.5.4-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.antlr:antlr:jar -> version 3.5.4-SNAPSHOT vs ${project.version} @ line 211, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[WARNING] The project org.antlr:antlr-master:pom:3.5.4-SNAPSHOT uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] ANTLR 3 Master build control POM                                   [pom]
+[INFO] ANTLR 3 Runtime                                                    [jar]
+[INFO] ANTLR 3 Tool                                                       [jar]
+[INFO] ANTLR 3 Maven plugin                                      [maven-plugin]
+[INFO] ANTLR 3 gUnit                                                      [jar]
+[INFO] ANTLR 3 gUnit Maven plugin                                [maven-plugin]
+[INFO] ANTLR 3 Maven Archetype                                [maven-archetype]
+[INFO] ANTLR 3 Complete                                                   [jar]
+[INFO] 
+[INFO] -----------------------< org.antlr:antlr-master >-----------------------
+[INFO] Building ANTLR 3 Master build control POM 3.5.4-SNAPSHOT           [1/8]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ antlr-master ---
+[INFO] digraph "org.antlr:antlr-master:pom:3.5.4-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< org.antlr:antlr-runtime >-----------------------
+[INFO] Building ANTLR 3 Runtime 3.5.4-SNAPSHOT                            [2/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ antlr-runtime ---
+[INFO] digraph "org.antlr:antlr-runtime:jar:3.5.4-SNAPSHOT" { 
+[INFO] 	"org.antlr:antlr-runtime:jar:3.5.4-SNAPSHOT" -> "org.antlr:stringtemplate:jar:3.2.1:compile" ; 
+[INFO] 	"org.antlr:antlr-runtime:jar:3.5.4-SNAPSHOT" -> "junit:junit:jar:4.13:test" ; 
+[INFO] 	"org.antlr:stringtemplate:jar:3.2.1:compile" -> "antlr:antlr:jar:2.7.7:compile" ; 
+[INFO] 	"junit:junit:jar:4.13:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------------< org.antlr:antlr >---------------------------
+[INFO] Building ANTLR 3 Tool 3.5.4-SNAPSHOT                               [3/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/antlr/antlr-runtime/3.5.4-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/antlr/antlr-runtime/3.5.4-SNAPSHOT/antlr-runtime-3.5.4-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for ANTLR 3 Master build control POM 3.5.4-SNAPSHOT:
+[INFO] 
+[INFO] ANTLR 3 Master build control POM ................... SUCCESS [  3.283 s]
+[INFO] ANTLR 3 Runtime .................................... SUCCESS [  0.397 s]
+[INFO] ANTLR 3 Tool ....................................... FAILURE [  4.562 s]
+[INFO] ANTLR 3 Maven plugin ............................... SKIPPED
+[INFO] ANTLR 3 gUnit ...................................... SKIPPED
+[INFO] ANTLR 3 gUnit Maven plugin ......................... SKIPPED
+[INFO] ANTLR 3 Maven Archetype ............................ SKIPPED
+[INFO] ANTLR 3 Complete ................................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.112 s
+[INFO] Finished at: 2023-12-28T09:02:26+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project antlr: Could not resolve dependencies for project org.antlr:antlr:jar:3.5.4-SNAPSHOT: Could not find artifact org.antlr:antlr-runtime:jar:3.5.4-SNAPSHOT in sonatype-nexus-snapshots (https://oss.sonatype.org/content/repositories/snapshots) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :antlr

@@ -1,0 +1,838 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] myth                                                               [pom]
+[INFO] myth-annotation                                                    [jar]
+[INFO] myth-common                                                        [jar]
+[INFO] myth-core                                                          [jar]
+[INFO] myth-rpc                                                           [pom]
+[INFO] myth-dubbo                                                         [jar]
+[INFO] myth-springcloud                                                   [jar]
+[INFO] myth-motan                                                         [jar]
+[INFO] myth-mq                                                            [pom]
+[INFO] myth-jms                                                           [jar]
+[INFO] myth-rabbitmq                                                      [jar]
+[INFO] myth-kafka                                                         [jar]
+[INFO] myth-rocketmq                                                      [jar]
+[INFO] myth-aliyunmq                                                      [jar]
+[INFO] myth-spring-boot-starter                                           [pom]
+[INFO] myth-spring-boot-starter-parent                                    [jar]
+[INFO] myth-spring-boot-starter-dubbo                                     [jar]
+[INFO] myth-spring-boot-starter-springcloud                               [jar]
+[INFO] 
+[INFO] --------------------------< org.dromara:myth >--------------------------
+[INFO] Building myth 2.0.2-RELEASE                                       [1/18]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ myth ---
+[INFO] digraph "org.dromara:myth:pom:2.0.2-RELEASE" { 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< org.dromara:myth-annotation >---------------------
+[INFO] Building myth-annotation 2.0.2-RELEASE                            [2/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ myth-annotation ---
+[INFO] digraph "org.dromara:myth-annotation:jar:2.0.2-RELEASE" { 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< org.dromara:myth-common >-----------------------
+[INFO] Building myth-common 2.0.2-RELEASE                                [3/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ myth-common ---
+[INFO] digraph "org.dromara:myth-common:jar:2.0.2-RELEASE" { 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE" -> "org.dromara:myth-annotation:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE" -> "org.apache.commons:commons-lang3:jar:3.3.2:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE" -> "commons-beanutils:commons-beanutils:jar:1.9.4:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE" -> "com.google.code.gson:gson:jar:2.8.9:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE" -> "com.squareup.okhttp3:okhttp:jar:3.7.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE" -> "com.google.guava:guava:jar:21.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE" -> "redis.clients:jedis:jar:2.9.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE" -> "org.projectlombok:lombok:jar:1.16.20:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE" -> "com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE" -> "com.dyuproject.protostuff:protostuff-core:jar:1.0.8:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE" -> "com.dyuproject.protostuff:protostuff-runtime:jar:1.0.8:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE" -> "com.caucho:hessian:jar:4.0.38:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE" -> "org.mongodb:mongo-java-driver:jar:3.5.0:compile" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:compile" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.7.0:compile" -> "com.squareup.okio:okio:jar:1.12.0:compile" ; 
+[INFO] 	"redis.clients:jedis:jar:2.9.0:compile" -> "org.apache.commons:commons-pool2:jar:2.6.0:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" -> "com.esotericsoftware:minlog:jar:1.3.0:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" -> "org.objenesis:objenesis:jar:2.2:compile" ; 
+[INFO] 	"com.dyuproject.protostuff:protostuff-core:jar:1.0.8:compile" -> "com.dyuproject.protostuff:protostuff-api:jar:1.0.8:compile" ; 
+[INFO] 	"com.dyuproject.protostuff:protostuff-runtime:jar:1.0.8:compile" -> "com.dyuproject.protostuff:protostuff-collectionschema:jar:1.0.8:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------------< org.dromara:myth-core >------------------------
+[INFO] Building myth-core 2.0.2-RELEASE                                  [4/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The POM for com.alibaba:druid:jar:1.0.29 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ myth-core ---
+[INFO] digraph "org.dromara:myth-core:jar:2.0.2-RELEASE" { 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE" -> "org.dromara:myth-common:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE" -> "org.dromara:myth-annotation:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE" -> "org.springframework:spring-jdbc:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE" -> "org.springframework:spring-aop:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE" -> "org.springframework:spring-aspects:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE" -> "org.springframework:spring-beans:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE" -> "org.springframework:spring-context:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE" -> "org.springframework:spring-context-support:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE" -> "org.springframework:spring-core:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE" -> "org.springframework:spring-tx:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE" -> "org.springframework.data:spring-data-mongodb:jar:3.3.5:provided" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE" -> "org.aspectj:aspectjweaver:jar:1.8.9:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE" -> "com.lmax:disruptor:jar:3.4.0:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE" -> "com.zaxxer:HikariCP:jar:3.2.0:provided" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE" -> "com.alibaba:druid:jar:1.0.29:provided" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE" -> "org.apache.zookeeper:zookeeper:jar:3.4.14:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.apache.commons:commons-lang3:jar:3.3.2:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "commons-beanutils:commons-beanutils:jar:1.9.4:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.google.code.gson:gson:jar:2.8.9:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.squareup.okhttp3:okhttp:jar:3.7.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.google.guava:guava:jar:21.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "redis.clients:jedis:jar:2.9.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.projectlombok:lombok:jar:1.16.20:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.dyuproject.protostuff:protostuff-core:jar:1.0.8:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.dyuproject.protostuff:protostuff-runtime:jar:1.0.8:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.caucho:hessian:jar:4.0.38:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.mongodb:mongo-java-driver:jar:3.5.0:compile" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:compile" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.7.0:compile" -> "com.squareup.okio:okio:jar:1.12.0:compile" ; 
+[INFO] 	"redis.clients:jedis:jar:2.9.0:compile" -> "org.apache.commons:commons-pool2:jar:2.6.0:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" -> "com.esotericsoftware:minlog:jar:1.3.0:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" -> "org.objenesis:objenesis:jar:2.2:compile" ; 
+[INFO] 	"com.dyuproject.protostuff:protostuff-core:jar:1.0.8:compile" -> "com.dyuproject.protostuff:protostuff-api:jar:1.0.8:compile" ; 
+[INFO] 	"com.dyuproject.protostuff:protostuff-runtime:jar:1.0.8:compile" -> "com.dyuproject.protostuff:protostuff-collectionschema:jar:1.0.8:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-expression:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-jcl:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:3.3.5:provided" -> "org.springframework.data:spring-data-commons:jar:2.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:3.3.5:provided" -> "org.mongodb:mongodb-driver-core:jar:3.8.2:provided" ; 
+[INFO] 	"org.mongodb:mongodb-driver-core:jar:3.8.2:provided" -> "org.mongodb:bson:jar:3.8.2:provided" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "com.github.spotbugs:spotbugs-annotations:jar:3.1.9:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "log4j:log4j:jar:1.2.17:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "jline:jline:jar:0.9.94:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "org.apache.yetus:audience-annotations:jar:0.5.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "io.netty:netty:jar:3.10.6.Final:compile" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:3.1.9:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------------< org.dromara:myth-rpc >------------------------
+[INFO] Building myth-rpc 2.0.2-RELEASE                                   [5/18]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ myth-rpc ---
+[INFO] digraph "org.dromara:myth-rpc:pom:2.0.2-RELEASE" { 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------------< org.dromara:myth-dubbo >-----------------------
+[INFO] Building myth-dubbo 2.0.2-RELEASE                                 [6/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ myth-dubbo ---
+[INFO] digraph "org.dromara:myth-dubbo:jar:2.0.2-RELEASE" { 
+[INFO] 	"org.dromara:myth-dubbo:jar:2.0.2-RELEASE" -> "org.dromara:myth-core:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-dubbo:jar:2.0.2-RELEASE" -> "org.apache.commons:commons-lang3:jar:3.3.2:compile" ; 
+[INFO] 	"org.dromara:myth-dubbo:jar:2.0.2-RELEASE" -> "com.alibaba:dubbo:jar:2.6.2:provided" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.dromara:myth-common:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.dromara:myth-annotation:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.aspectj:aspectjweaver:jar:1.8.9:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "com.lmax:disruptor:jar:3.4.0:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.apache.zookeeper:zookeeper:jar:3.4.14:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "commons-beanutils:commons-beanutils:jar:1.9.4:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.google.code.gson:gson:jar:2.8.9:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.squareup.okhttp3:okhttp:jar:3.7.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.google.guava:guava:jar:21.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "redis.clients:jedis:jar:2.9.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.projectlombok:lombok:jar:1.16.20:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.dyuproject.protostuff:protostuff-core:jar:1.0.8:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.dyuproject.protostuff:protostuff-runtime:jar:1.0.8:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.caucho:hessian:jar:4.0.38:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.mongodb:mongo-java-driver:jar:3.5.0:compile" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:compile" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.7.0:compile" -> "com.squareup.okio:okio:jar:1.12.0:compile" ; 
+[INFO] 	"redis.clients:jedis:jar:2.9.0:compile" -> "org.apache.commons:commons-pool2:jar:2.6.0:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" -> "com.esotericsoftware:minlog:jar:1.3.0:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" -> "org.objenesis:objenesis:jar:2.2:compile" ; 
+[INFO] 	"com.dyuproject.protostuff:protostuff-core:jar:1.0.8:compile" -> "com.dyuproject.protostuff:protostuff-api:jar:1.0.8:compile" ; 
+[INFO] 	"com.dyuproject.protostuff:protostuff-runtime:jar:1.0.8:compile" -> "com.dyuproject.protostuff:protostuff-collectionschema:jar:1.0.8:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "com.github.spotbugs:spotbugs-annotations:jar:3.1.9:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "log4j:log4j:jar:1.2.17:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "jline:jline:jar:0.9.94:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "org.apache.yetus:audience-annotations:jar:0.5.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "io.netty:netty:jar:3.10.6.Final:compile" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:3.1.9:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.alibaba:dubbo:jar:2.6.2:provided" -> "org.springframework:spring-context:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"com.alibaba:dubbo:jar:2.6.2:provided" -> "org.javassist:javassist:jar:3.20.0-GA:provided" ; 
+[INFO] 	"com.alibaba:dubbo:jar:2.6.2:provided" -> "org.jboss.netty:netty:jar:3.2.5.Final:provided" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-aop:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-beans:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-core:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-expression:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-jcl:jar:5.1.3.RELEASE:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< org.dromara:myth-springcloud >--------------------
+[INFO] Building myth-springcloud 2.0.2-RELEASE                           [7/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ myth-springcloud ---
+[INFO] digraph "org.dromara:myth-springcloud:jar:2.0.2-RELEASE" { 
+[INFO] 	"org.dromara:myth-springcloud:jar:2.0.2-RELEASE" -> "org.dromara:myth-core:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-springcloud:jar:2.0.2-RELEASE" -> "org.apache.commons:commons-lang3:jar:3.3.2:compile" ; 
+[INFO] 	"org.dromara:myth-springcloud:jar:2.0.2-RELEASE" -> "com.netflix.feign:feign-core:jar:8.18.0:provided" ; 
+[INFO] 	"org.dromara:myth-springcloud:jar:2.0.2-RELEASE" -> "com.netflix.ribbon:ribbon-loadbalancer:jar:2.2.2:provided" ; 
+[INFO] 	"org.dromara:myth-springcloud:jar:2.0.2-RELEASE" -> "com.netflix.hystrix:hystrix-core:jar:1.5.12:provided" ; 
+[INFO] 	"org.dromara:myth-springcloud:jar:2.0.2-RELEASE" -> "org.springframework.boot:spring-boot-starter-actuator:jar:2.1.1.RELEASE:provided" ; 
+[INFO] 	"org.dromara:myth-springcloud:jar:2.0.2-RELEASE" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:7.0.107:provided" ; 
+[INFO] 	"org.dromara:myth-springcloud:jar:2.0.2-RELEASE" -> "org.springframework:spring-web:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.dromara:myth-common:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.dromara:myth-annotation:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.aspectj:aspectjweaver:jar:1.8.9:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "com.lmax:disruptor:jar:3.4.0:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.apache.zookeeper:zookeeper:jar:3.4.14:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "commons-beanutils:commons-beanutils:jar:1.9.4:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.google.code.gson:gson:jar:2.8.9:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.squareup.okhttp3:okhttp:jar:3.7.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "redis.clients:jedis:jar:2.9.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.projectlombok:lombok:jar:1.16.20:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.dyuproject.protostuff:protostuff-core:jar:1.0.8:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.dyuproject.protostuff:protostuff-runtime:jar:1.0.8:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.caucho:hessian:jar:4.0.38:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.mongodb:mongo-java-driver:jar:3.5.0:compile" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:compile" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.7.0:compile" -> "com.squareup.okio:okio:jar:1.12.0:compile" ; 
+[INFO] 	"redis.clients:jedis:jar:2.9.0:compile" -> "org.apache.commons:commons-pool2:jar:2.6.0:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" -> "com.esotericsoftware:minlog:jar:1.3.0:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" -> "org.objenesis:objenesis:jar:2.2:compile" ; 
+[INFO] 	"com.dyuproject.protostuff:protostuff-core:jar:1.0.8:compile" -> "com.dyuproject.protostuff:protostuff-api:jar:1.0.8:compile" ; 
+[INFO] 	"com.dyuproject.protostuff:protostuff-runtime:jar:1.0.8:compile" -> "com.dyuproject.protostuff:protostuff-collectionschema:jar:1.0.8:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "com.github.spotbugs:spotbugs-annotations:jar:3.1.9:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "log4j:log4j:jar:1.2.17:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "jline:jline:jar:0.9.94:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "org.apache.yetus:audience-annotations:jar:0.5.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "io.netty:netty:jar:3.10.6.Final:compile" ; 
+[INFO] 	"com.netflix.feign:feign-core:jar:8.18.0:provided" -> "org.jvnet:animal-sniffer-annotation:jar:1.0:provided" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.2.2:provided" -> "com.netflix.ribbon:ribbon-core:jar:2.2.2:provided" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.2.2:provided" -> "com.netflix.netflix-commons:netflix-statistics:jar:0.1.1:provided" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.2.2:provided" -> "io.reactivex:rxjava:jar:1.3.8:provided" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.2.2:provided" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.2.2:provided" -> "com.netflix.servo:servo-core:jar:0.10.1:provided" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.2.2:provided" -> "com.google.guava:guava:jar:21.0:compile" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.2.2:provided" -> "com.netflix.archaius:archaius-core:jar:0.7.4:provided" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-loadbalancer:jar:2.2.2:provided" -> "com.netflix.netflix-commons:netflix-commons-util:jar:0.1.1:provided" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-core:jar:2.2.2:provided" -> "commons-configuration:commons-configuration:jar:1.8:provided" ; 
+[INFO] 	"com.netflix.ribbon:ribbon-core:jar:2.2.2:provided" -> "commons-lang:commons-lang:jar:2.6:provided" ; 
+[INFO] 	"commons-configuration:commons-configuration:jar:1.8:provided" -> "commons-logging:commons-logging:jar:1.1.1:provided" ; 
+[INFO] 	"com.netflix.servo:servo-core:jar:0.10.1:provided" -> "com.netflix.servo:servo-internal:jar:0.10.1:provided" ; 
+[INFO] 	"com.netflix.archaius:archaius-core:jar:0.7.4:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.1:compile" ; 
+[INFO] 	"com.netflix.archaius:archaius-core:jar:0.7.4:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.9.0:provided" ; 
+[INFO] 	"com.netflix.archaius:archaius-core:jar:0.7.4:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.9.7:provided" ; 
+[INFO] 	"com.netflix.archaius:archaius-core:jar:0.7.4:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.9.7:provided" ; 
+[INFO] 	"com.netflix.hystrix:hystrix-core:jar:1.5.12:provided" -> "org.hdrhistogram:HdrHistogram:jar:2.1.9:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-actuator:jar:2.1.1.RELEASE:provided" -> "org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-actuator:jar:2.1.1.RELEASE:provided" -> "org.springframework.boot:spring-boot-actuator-autoconfigure:jar:2.1.1.RELEASE:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-actuator:jar:2.1.1.RELEASE:provided" -> "io.micrometer:micrometer-core:jar:1.1.1:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" -> "org.springframework.boot:spring-boot:jar:2.1.1.RELEASE:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.1.1.RELEASE:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.1.1.RELEASE:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" -> "javax.annotation:javax.annotation-api:jar:1.3.2:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" -> "org.yaml:snakeyaml:jar:1.23:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.1.1.RELEASE:provided" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.11.1:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.1.1.RELEASE:provided" -> "org.slf4j:jul-to-slf4j:jar:1.7.25:provided" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.11.1:provided" -> "org.apache.logging.log4j:log4j-api:jar:2.11.1:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-actuator-autoconfigure:jar:2.1.1.RELEASE:provided" -> "org.springframework.boot:spring-boot-actuator:jar:2.1.1.RELEASE:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-actuator-autoconfigure:jar:2.1.1.RELEASE:provided" -> "org.springframework:spring-context:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-actuator-autoconfigure:jar:2.1.1.RELEASE:provided" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.9.7:provided" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-aop:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-expression:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.1.1:provided" -> "org.latencyutils:LatencyUtils:jar:2.0.3:provided" ; 
+[INFO] 	"org.apache.tomcat.embed:tomcat-embed-core:jar:7.0.107:provided" -> "org.apache.tomcat:tomcat-annotations-api:jar:9.0.13:provided" ; 
+[INFO] 	"org.springframework:spring-web:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-beans:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-web:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-core:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-jcl:jar:5.1.3.RELEASE:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------------< org.dromara:myth-motan >-----------------------
+[INFO] Building myth-motan 2.0.2-RELEASE                                 [8/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ myth-motan ---
+[INFO] digraph "org.dromara:myth-motan:jar:2.0.2-RELEASE" { 
+[INFO] 	"org.dromara:myth-motan:jar:2.0.2-RELEASE" -> "org.dromara:myth-core:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-motan:jar:2.0.2-RELEASE" -> "org.apache.commons:commons-lang3:jar:3.3.2:compile" ; 
+[INFO] 	"org.dromara:myth-motan:jar:2.0.2-RELEASE" -> "org.springframework:spring-context:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.dromara:myth-motan:jar:2.0.2-RELEASE" -> "com.weibo:motan-core:jar:1.0.0:provided" ; 
+[INFO] 	"org.dromara:myth-motan:jar:2.0.2-RELEASE" -> "com.weibo:motan-springsupport:jar:1.0.0:provided" ; 
+[INFO] 	"org.dromara:myth-motan:jar:2.0.2-RELEASE" -> "com.weibo:motan-transport-netty:jar:1.0.0:provided" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.dromara:myth-common:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.dromara:myth-annotation:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.aspectj:aspectjweaver:jar:1.8.9:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "com.lmax:disruptor:jar:3.4.0:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.apache.zookeeper:zookeeper:jar:3.4.14:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "commons-beanutils:commons-beanutils:jar:1.9.4:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.google.code.gson:gson:jar:2.8.9:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.squareup.okhttp3:okhttp:jar:3.7.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "redis.clients:jedis:jar:2.9.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.projectlombok:lombok:jar:1.16.20:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.dyuproject.protostuff:protostuff-core:jar:1.0.8:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.dyuproject.protostuff:protostuff-runtime:jar:1.0.8:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.mongodb:mongo-java-driver:jar:3.5.0:compile" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:compile" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.7.0:compile" -> "com.squareup.okio:okio:jar:1.12.0:compile" ; 
+[INFO] 	"redis.clients:jedis:jar:2.9.0:compile" -> "org.apache.commons:commons-pool2:jar:2.6.0:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" -> "com.esotericsoftware:minlog:jar:1.3.0:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" -> "org.objenesis:objenesis:jar:2.2:compile" ; 
+[INFO] 	"com.dyuproject.protostuff:protostuff-core:jar:1.0.8:compile" -> "com.dyuproject.protostuff:protostuff-api:jar:1.0.8:compile" ; 
+[INFO] 	"com.dyuproject.protostuff:protostuff-runtime:jar:1.0.8:compile" -> "com.dyuproject.protostuff:protostuff-collectionschema:jar:1.0.8:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "com.github.spotbugs:spotbugs-annotations:jar:3.1.9:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "jline:jline:jar:0.9.94:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "org.apache.yetus:audience-annotations:jar:0.5.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "io.netty:netty:jar:3.10.6.Final:compile" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:3.1.9:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-aop:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-beans:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-core:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-expression:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-jcl:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"com.weibo:motan-core:jar:1.0.0:provided" -> "commons-pool:commons-pool:jar:1.6:provided" ; 
+[INFO] 	"com.weibo:motan-core:jar:1.0.0:provided" -> "com.caucho:hessian:jar:4.0.38:compile" ; 
+[INFO] 	"com.weibo:motan-core:jar:1.0.0:provided" -> "com.alibaba:fastjson:jar:1.1.30:provided" ; 
+[INFO] 	"com.weibo:motan-core:jar:1.0.0:provided" -> "com.codahale.metrics:metrics-core:jar:3.0.1:provided" ; 
+[INFO] 	"com.weibo:motan-core:jar:1.0.0:provided" -> "com.google.guava:guava:jar:21.0:compile" ; 
+[INFO] 	"com.weibo:motan-core:jar:1.0.0:provided" -> "com.squareup:javapoet:jar:1.8.0:provided" ; 
+[INFO] 	"com.weibo:motan-core:jar:1.0.0:provided" -> "org.slf4j:slf4j-api:jar:1.5.8:compile" ; 
+[INFO] 	"com.weibo:motan-core:jar:1.0.0:provided" -> "org.slf4j:slf4j-log4j12:jar:1.7.25:provided" ; 
+[INFO] 	"com.weibo:motan-core:jar:1.0.0:provided" -> "log4j:log4j:jar:1.2.14:compile" ; 
+[INFO] 	"com.weibo:motan-core:jar:1.0.0:provided" -> "commons-codec:commons-codec:jar:1.11:provided" ; 
+[INFO] 	"com.weibo:motan-transport-netty:jar:1.0.0:provided" -> "org.jboss.netty:netty:jar:3.2.5.Final:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------------< org.dromara:myth-mq >-------------------------
+[INFO] Building myth-mq 2.0.2-RELEASE                                    [9/18]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ myth-mq ---
+[INFO] digraph "org.dromara:myth-mq:pom:2.0.2-RELEASE" { 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------------< org.dromara:myth-jms >------------------------
+[INFO] Building myth-jms 2.0.2-RELEASE                                  [10/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ myth-jms ---
+[INFO] digraph "org.dromara:myth-jms:jar:2.0.2-RELEASE" { 
+[INFO] 	"org.dromara:myth-jms:jar:2.0.2-RELEASE" -> "org.dromara:myth-core:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-jms:jar:2.0.2-RELEASE" -> "org.springframework:spring-jms:jar:5.1.3.RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-jms:jar:2.0.2-RELEASE" -> "javax.jms:javax.jms-api:jar:2.0.1:compile" ; 
+[INFO] 	"org.dromara:myth-jms:jar:2.0.2-RELEASE" -> "org.apache.xbean:xbean-spring:jar:3.16:compile" ; 
+[INFO] 	"org.dromara:myth-jms:jar:2.0.2-RELEASE" -> "org.apache.activemq:activemq-core:jar:5.7.0:compile" ; 
+[INFO] 	"org.dromara:myth-jms:jar:2.0.2-RELEASE" -> "org.apache.activemq:activemq-pool:jar:5.12.1:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.dromara:myth-common:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.dromara:myth-annotation:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.aspectj:aspectjweaver:jar:1.8.9:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "com.lmax:disruptor:jar:3.4.0:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.apache.zookeeper:zookeeper:jar:3.4.14:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.apache.commons:commons-lang3:jar:3.3.2:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "commons-beanutils:commons-beanutils:jar:1.9.4:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.google.code.gson:gson:jar:2.8.9:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.squareup.okhttp3:okhttp:jar:3.7.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.google.guava:guava:jar:21.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "redis.clients:jedis:jar:2.9.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.projectlombok:lombok:jar:1.16.20:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.dyuproject.protostuff:protostuff-core:jar:1.0.8:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.dyuproject.protostuff:protostuff-runtime:jar:1.0.8:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.caucho:hessian:jar:4.0.38:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.mongodb:mongo-java-driver:jar:3.5.0:compile" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:compile" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.7.0:compile" -> "com.squareup.okio:okio:jar:1.12.0:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" -> "com.esotericsoftware:minlog:jar:1.3.0:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" -> "org.objenesis:objenesis:jar:2.2:compile" ; 
+[INFO] 	"com.dyuproject.protostuff:protostuff-core:jar:1.0.8:compile" -> "com.dyuproject.protostuff:protostuff-api:jar:1.0.8:compile" ; 
+[INFO] 	"com.dyuproject.protostuff:protostuff-runtime:jar:1.0.8:compile" -> "com.dyuproject.protostuff:protostuff-collectionschema:jar:1.0.8:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "com.github.spotbugs:spotbugs-annotations:jar:3.1.9:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "log4j:log4j:jar:1.2.17:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "jline:jline:jar:0.9.94:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "org.apache.yetus:audience-annotations:jar:0.5.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "io.netty:netty:jar:3.10.6.Final:compile" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:3.1.9:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"org.springframework:spring-jms:jar:5.1.3.RELEASE:compile" -> "org.springframework:spring-beans:jar:5.1.3.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-jms:jar:5.1.3.RELEASE:compile" -> "org.springframework:spring-core:jar:5.1.3.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-jms:jar:5.1.3.RELEASE:compile" -> "org.springframework:spring-messaging:jar:5.1.3.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-jms:jar:5.1.3.RELEASE:compile" -> "org.springframework:spring-tx:jar:5.1.3.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.1.3.RELEASE:compile" -> "org.springframework:spring-jcl:jar:5.1.3.RELEASE:compile" ; 
+[INFO] 	"org.apache.xbean:xbean-spring:jar:3.16:compile" -> "commons-logging:commons-logging:jar:1.0.3:compile" ; 
+[INFO] 	"org.apache.activemq:activemq-core:jar:5.7.0:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"org.apache.activemq:activemq-core:jar:5.7.0:compile" -> "org.apache.activemq:kahadb:jar:5.7.0:compile" ; 
+[INFO] 	"org.apache.activemq:activemq-core:jar:5.7.0:compile" -> "org.apache.activemq.protobuf:activemq-protobuf:jar:1.1:compile" ; 
+[INFO] 	"org.apache.activemq:activemq-core:jar:5.7.0:compile" -> "org.fusesource.mqtt-client:mqtt-client:jar:1.3:compile" ; 
+[INFO] 	"org.apache.activemq:activemq-core:jar:5.7.0:compile" -> "org.apache.geronimo.specs:geronimo-j2ee-management_1.1_spec:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.activemq:activemq-core:jar:5.7.0:compile" -> "commons-net:commons-net:jar:3.1:compile" ; 
+[INFO] 	"org.apache.activemq:activemq-core:jar:5.7.0:compile" -> "org.jasypt:jasypt:jar:1.9.0:compile" ; 
+[INFO] 	"org.fusesource.mqtt-client:mqtt-client:jar:1.3:compile" -> "org.fusesource.hawtdispatch:hawtdispatch-transport:jar:1.11:compile" ; 
+[INFO] 	"org.fusesource.mqtt-client:mqtt-client:jar:1.3:compile" -> "org.fusesource.hawtbuf:hawtbuf:jar:1.9:compile" ; 
+[INFO] 	"org.fusesource.hawtdispatch:hawtdispatch-transport:jar:1.11:compile" -> "org.fusesource.hawtdispatch:hawtdispatch:jar:1.11:compile" ; 
+[INFO] 	"org.apache.activemq:activemq-pool:jar:5.12.1:compile" -> "org.apache.activemq:activemq-jms-pool:jar:5.15.8:compile" ; 
+[INFO] 	"org.apache.activemq:activemq-pool:jar:5.12.1:compile" -> "org.apache.activemq:activemq-client:jar:5.15.8:compile" ; 
+[INFO] 	"org.apache.activemq:activemq-pool:jar:5.12.1:compile" -> "org.apache.geronimo.specs:geronimo-jta_1.0.1B_spec:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.activemq:activemq-pool:jar:5.12.1:compile" -> "org.apache.commons:commons-pool2:jar:2.6.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< org.dromara:myth-rabbitmq >----------------------
+[INFO] Building myth-rabbitmq 2.0.2-RELEASE                             [11/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ myth-rabbitmq ---
+[INFO] digraph "org.dromara:myth-rabbitmq:jar:2.0.2-RELEASE" { 
+[INFO] 	"org.dromara:myth-rabbitmq:jar:2.0.2-RELEASE" -> "org.dromara:myth-core:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-rabbitmq:jar:2.0.2-RELEASE" -> "org.springframework.amqp:spring-rabbit:jar:1.7.4.RELEASE:provided" ; 
+[INFO] 	"org.dromara:myth-rabbitmq:jar:2.0.2-RELEASE" -> "org.springframework.amqp:spring-amqp:jar:2.3.11:provided" ; 
+[INFO] 	"org.dromara:myth-rabbitmq:jar:2.0.2-RELEASE" -> "com.rabbitmq:amqp-client:jar:4.0.3:provided" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.dromara:myth-common:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.dromara:myth-annotation:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.aspectj:aspectjweaver:jar:1.8.9:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "com.lmax:disruptor:jar:3.4.0:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.apache.zookeeper:zookeeper:jar:3.4.14:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.apache.commons:commons-lang3:jar:3.3.2:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "commons-beanutils:commons-beanutils:jar:1.9.4:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.google.code.gson:gson:jar:2.8.9:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.squareup.okhttp3:okhttp:jar:3.7.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.google.guava:guava:jar:21.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "redis.clients:jedis:jar:2.9.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.projectlombok:lombok:jar:1.16.20:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.dyuproject.protostuff:protostuff-core:jar:1.0.8:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.dyuproject.protostuff:protostuff-runtime:jar:1.0.8:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.caucho:hessian:jar:4.0.38:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.mongodb:mongo-java-driver:jar:3.5.0:compile" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:compile" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.7.0:compile" -> "com.squareup.okio:okio:jar:1.12.0:compile" ; 
+[INFO] 	"redis.clients:jedis:jar:2.9.0:compile" -> "org.apache.commons:commons-pool2:jar:2.6.0:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" -> "com.esotericsoftware:minlog:jar:1.3.0:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" -> "org.objenesis:objenesis:jar:2.2:compile" ; 
+[INFO] 	"com.dyuproject.protostuff:protostuff-core:jar:1.0.8:compile" -> "com.dyuproject.protostuff:protostuff-api:jar:1.0.8:compile" ; 
+[INFO] 	"com.dyuproject.protostuff:protostuff-runtime:jar:1.0.8:compile" -> "com.dyuproject.protostuff:protostuff-collectionschema:jar:1.0.8:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "com.github.spotbugs:spotbugs-annotations:jar:3.1.9:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "log4j:log4j:jar:1.2.17:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "jline:jline:jar:0.9.94:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "org.apache.yetus:audience-annotations:jar:0.5.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "io.netty:netty:jar:3.10.6.Final:compile" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:3.1.9:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"org.springframework.amqp:spring-rabbit:jar:1.7.4.RELEASE:provided" -> "org.springframework:spring-messaging:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework.amqp:spring-rabbit:jar:1.7.4.RELEASE:provided" -> "org.springframework:spring-web:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework.amqp:spring-rabbit:jar:1.7.4.RELEASE:provided" -> "org.springframework:spring-context:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework.amqp:spring-rabbit:jar:1.7.4.RELEASE:provided" -> "com.rabbitmq:http-client:jar:1.1.1.RELEASE:provided" ; 
+[INFO] 	"org.springframework.amqp:spring-rabbit:jar:1.7.4.RELEASE:provided" -> "org.springframework.retry:spring-retry:jar:1.2.2.RELEASE:provided" ; 
+[INFO] 	"org.springframework.amqp:spring-rabbit:jar:1.7.4.RELEASE:provided" -> "org.springframework:spring-tx:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-messaging:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-beans:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-aop:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-expression:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"com.rabbitmq:http-client:jar:1.1.1.RELEASE:provided" -> "org.apache.httpcomponents:httpclient:jar:4.5.1:provided" ; 
+[INFO] 	"com.rabbitmq:http-client:jar:1.1.1.RELEASE:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.9.7:provided" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.1:provided" -> "org.apache.httpcomponents:httpcore:jar:4.4.10:provided" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.1:provided" -> "commons-logging:commons-logging:jar:1.2:provided" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.1:provided" -> "commons-codec:commons-codec:jar:1.11:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.9.7:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.9.0:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.9.7:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.9.7:provided" ; 
+[INFO] 	"org.springframework.amqp:spring-amqp:jar:2.3.11:provided" -> "org.springframework:spring-core:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-jcl:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"com.rabbitmq:amqp-client:jar:4.0.3:provided" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------------< org.dromara:myth-kafka >-----------------------
+[INFO] Building myth-kafka 2.0.2-RELEASE                                [12/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ myth-kafka ---
+[INFO] digraph "org.dromara:myth-kafka:jar:2.0.2-RELEASE" { 
+[INFO] 	"org.dromara:myth-kafka:jar:2.0.2-RELEASE" -> "org.dromara:myth-core:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-kafka:jar:2.0.2-RELEASE" -> "org.springframework.kafka:spring-kafka:jar:1.1.2.RELEASE:provided" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.dromara:myth-common:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.dromara:myth-annotation:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.aspectj:aspectjweaver:jar:1.8.9:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "com.lmax:disruptor:jar:3.4.0:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.apache.zookeeper:zookeeper:jar:3.4.14:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.apache.commons:commons-lang3:jar:3.3.2:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "commons-beanutils:commons-beanutils:jar:1.9.4:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.google.code.gson:gson:jar:2.8.9:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.squareup.okhttp3:okhttp:jar:3.7.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.google.guava:guava:jar:21.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "redis.clients:jedis:jar:2.9.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.projectlombok:lombok:jar:1.16.20:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.dyuproject.protostuff:protostuff-core:jar:1.0.8:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.dyuproject.protostuff:protostuff-runtime:jar:1.0.8:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.caucho:hessian:jar:4.0.38:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.mongodb:mongo-java-driver:jar:3.5.0:compile" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:compile" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.7.0:compile" -> "com.squareup.okio:okio:jar:1.12.0:compile" ; 
+[INFO] 	"redis.clients:jedis:jar:2.9.0:compile" -> "org.apache.commons:commons-pool2:jar:2.6.0:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" -> "com.esotericsoftware:minlog:jar:1.3.0:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" -> "org.objenesis:objenesis:jar:2.2:compile" ; 
+[INFO] 	"com.dyuproject.protostuff:protostuff-core:jar:1.0.8:compile" -> "com.dyuproject.protostuff:protostuff-api:jar:1.0.8:compile" ; 
+[INFO] 	"com.dyuproject.protostuff:protostuff-runtime:jar:1.0.8:compile" -> "com.dyuproject.protostuff:protostuff-collectionschema:jar:1.0.8:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "com.github.spotbugs:spotbugs-annotations:jar:3.1.9:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "log4j:log4j:jar:1.2.17:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "jline:jline:jar:0.9.94:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "org.apache.yetus:audience-annotations:jar:0.5.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "io.netty:netty:jar:3.10.6.Final:compile" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:3.1.9:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"org.springframework.kafka:spring-kafka:jar:1.1.2.RELEASE:provided" -> "org.springframework:spring-messaging:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework.kafka:spring-kafka:jar:1.1.2.RELEASE:provided" -> "org.springframework.retry:spring-retry:jar:1.2.2.RELEASE:provided" ; 
+[INFO] 	"org.springframework.kafka:spring-kafka:jar:1.1.2.RELEASE:provided" -> "org.apache.kafka:kafka-clients:jar:2.0.1:provided" ; 
+[INFO] 	"org.springframework:spring-messaging:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-beans:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-messaging:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-core:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-jcl:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.apache.kafka:kafka-clients:jar:2.0.1:provided" -> "org.lz4:lz4-java:jar:1.4.1:provided" ; 
+[INFO] 	"org.apache.kafka:kafka-clients:jar:2.0.1:provided" -> "org.xerial.snappy:snappy-java:jar:1.1.7.1:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< org.dromara:myth-rocketmq >----------------------
+[INFO] Building myth-rocketmq 2.0.2-RELEASE                             [13/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ myth-rocketmq ---
+[INFO] digraph "org.dromara:myth-rocketmq:jar:2.0.2-RELEASE" { 
+[INFO] 	"org.dromara:myth-rocketmq:jar:2.0.2-RELEASE" -> "org.dromara:myth-core:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-rocketmq:jar:2.0.2-RELEASE" -> "org.apache.rocketmq:rocketmq-client:jar:4.1.0-incubating:provided" ; 
+[INFO] 	"org.dromara:myth-rocketmq:jar:2.0.2-RELEASE" -> "org.apache.rocketmq:rocketmq-common:jar:4.1.0-incubating:provided" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.dromara:myth-common:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.dromara:myth-annotation:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.aspectj:aspectjweaver:jar:1.8.9:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "com.lmax:disruptor:jar:3.4.0:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.apache.zookeeper:zookeeper:jar:3.4.14:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "commons-beanutils:commons-beanutils:jar:1.9.4:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.google.code.gson:gson:jar:2.8.9:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.squareup.okhttp3:okhttp:jar:3.7.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.google.guava:guava:jar:21.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "redis.clients:jedis:jar:2.9.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.projectlombok:lombok:jar:1.16.20:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.dyuproject.protostuff:protostuff-core:jar:1.0.8:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.dyuproject.protostuff:protostuff-runtime:jar:1.0.8:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.caucho:hessian:jar:4.0.38:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.mongodb:mongo-java-driver:jar:3.5.0:compile" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:compile" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.7.0:compile" -> "com.squareup.okio:okio:jar:1.12.0:compile" ; 
+[INFO] 	"redis.clients:jedis:jar:2.9.0:compile" -> "org.apache.commons:commons-pool2:jar:2.6.0:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" -> "com.esotericsoftware:minlog:jar:1.3.0:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" -> "org.objenesis:objenesis:jar:2.2:compile" ; 
+[INFO] 	"com.dyuproject.protostuff:protostuff-core:jar:1.0.8:compile" -> "com.dyuproject.protostuff:protostuff-api:jar:1.0.8:compile" ; 
+[INFO] 	"com.dyuproject.protostuff:protostuff-runtime:jar:1.0.8:compile" -> "com.dyuproject.protostuff:protostuff-collectionschema:jar:1.0.8:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "com.github.spotbugs:spotbugs-annotations:jar:3.1.9:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "log4j:log4j:jar:1.2.17:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "jline:jline:jar:0.9.94:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "org.apache.yetus:audience-annotations:jar:0.5.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "io.netty:netty:jar:3.10.6.Final:compile" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:3.1.9:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"org.apache.rocketmq:rocketmq-client:jar:4.1.0-incubating:provided" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"org.apache.rocketmq:rocketmq-client:jar:4.1.0-incubating:provided" -> "org.apache.commons:commons-lang3:jar:3.3.2:compile" ; 
+[INFO] 	"org.apache.rocketmq:rocketmq-common:jar:4.1.0-incubating:provided" -> "org.apache.rocketmq:rocketmq-remoting:jar:4.1.0-incubating:provided" ; 
+[INFO] 	"org.apache.rocketmq:rocketmq-remoting:jar:4.1.0-incubating:provided" -> "com.alibaba:fastjson:jar:1.2.29:provided" ; 
+[INFO] 	"org.apache.rocketmq:rocketmq-remoting:jar:4.1.0-incubating:provided" -> "io.netty:netty-all:jar:4.1.42.Final:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< org.dromara:myth-aliyunmq >----------------------
+[INFO] Building myth-aliyunmq 2.0.2-RELEASE                             [14/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ myth-aliyunmq ---
+[INFO] digraph "org.dromara:myth-aliyunmq:jar:2.0.2-RELEASE" { 
+[INFO] 	"org.dromara:myth-aliyunmq:jar:2.0.2-RELEASE" -> "org.dromara:myth-core:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-aliyunmq:jar:2.0.2-RELEASE" -> "com.aliyun.openservices:ons-client:jar:1.7.1.Final:provided" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.dromara:myth-common:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.dromara:myth-annotation:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.aspectj:aspectjweaver:jar:1.8.9:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "com.lmax:disruptor:jar:3.4.0:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.apache.zookeeper:zookeeper:jar:3.4.14:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.apache.commons:commons-lang3:jar:3.3.2:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "commons-beanutils:commons-beanutils:jar:1.9.4:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.google.code.gson:gson:jar:2.8.9:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.squareup.okhttp3:okhttp:jar:3.7.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.google.guava:guava:jar:21.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "redis.clients:jedis:jar:2.9.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.projectlombok:lombok:jar:1.16.20:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.dyuproject.protostuff:protostuff-core:jar:1.0.8:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.dyuproject.protostuff:protostuff-runtime:jar:1.0.8:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.caucho:hessian:jar:4.0.38:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.mongodb:mongo-java-driver:jar:3.5.0:compile" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:compile" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.7.0:compile" -> "com.squareup.okio:okio:jar:1.12.0:compile" ; 
+[INFO] 	"redis.clients:jedis:jar:2.9.0:compile" -> "org.apache.commons:commons-pool2:jar:2.6.0:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" -> "com.esotericsoftware:minlog:jar:1.3.0:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" -> "org.objenesis:objenesis:jar:2.2:compile" ; 
+[INFO] 	"com.dyuproject.protostuff:protostuff-core:jar:1.0.8:compile" -> "com.dyuproject.protostuff:protostuff-api:jar:1.0.8:compile" ; 
+[INFO] 	"com.dyuproject.protostuff:protostuff-runtime:jar:1.0.8:compile" -> "com.dyuproject.protostuff:protostuff-collectionschema:jar:1.0.8:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "com.github.spotbugs:spotbugs-annotations:jar:3.1.9:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "log4j:log4j:jar:1.2.17:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "jline:jline:jar:0.9.94:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "org.apache.yetus:audience-annotations:jar:0.5.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "io.netty:netty:jar:3.10.6.Final:compile" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:3.1.9:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.aliyun.openservices:ons-client:jar:1.7.1.Final:provided" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< org.dromara:myth-spring-boot-starter >----------------
+[INFO] Building myth-spring-boot-starter 2.0.2-RELEASE                  [15/18]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ myth-spring-boot-starter ---
+[INFO] digraph "org.dromara:myth-spring-boot-starter:pom:2.0.2-RELEASE" { 
+[INFO] 	"org.dromara:myth-spring-boot-starter:pom:2.0.2-RELEASE" -> "org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" ; 
+[INFO] 	"org.dromara:myth-spring-boot-starter:pom:2.0.2-RELEASE" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.1.1.RELEASE:provided (optional) " ; 
+[INFO] 	"org.dromara:myth-spring-boot-starter:pom:2.0.2-RELEASE" -> "org.projectlombok:lombok:jar:1.16.20:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" -> "org.springframework.boot:spring-boot:jar:2.1.1.RELEASE:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.1.1.RELEASE:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.1.1.RELEASE:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" -> "javax.annotation:javax.annotation-api:jar:1.3.2:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" -> "org.springframework:spring-core:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" -> "org.yaml:snakeyaml:jar:1.23:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.1.1.RELEASE:provided" -> "org.springframework:spring-context:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-aop:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-beans:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-expression:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.1.1.RELEASE:provided" -> "ch.qos.logback:logback-classic:jar:1.2.3:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.1.1.RELEASE:provided" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.11.1:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.1.1.RELEASE:provided" -> "org.slf4j:jul-to-slf4j:jar:1.7.25:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:provided" -> "ch.qos.logback:logback-core:jar:1.2.3:provided" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:provided" -> "org.slf4j:slf4j-api:jar:1.7.25:provided" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.11.1:provided" -> "org.apache.logging.log4j:log4j-api:jar:2.11.1:provided" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-jcl:jar:5.1.3.RELEASE:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< org.dromara:myth-spring-boot-starter-parent >-------------
+[INFO] Building myth-spring-boot-starter-parent 2.0.2-RELEASE           [16/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ myth-spring-boot-starter-parent ---
+[INFO] digraph "org.dromara:myth-spring-boot-starter-parent:jar:2.0.2-RELEASE" { 
+[INFO] 	"org.dromara:myth-spring-boot-starter-parent:jar:2.0.2-RELEASE" -> "org.dromara:myth-core:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-spring-boot-starter-parent:jar:2.0.2-RELEASE" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.1.1.RELEASE:compile (optional) " ; 
+[INFO] 	"org.dromara:myth-spring-boot-starter-parent:jar:2.0.2-RELEASE" -> "org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" ; 
+[INFO] 	"org.dromara:myth-spring-boot-starter-parent:jar:2.0.2-RELEASE" -> "org.projectlombok:lombok:jar:1.16.20:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.dromara:myth-common:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.dromara:myth-annotation:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.aspectj:aspectjweaver:jar:1.8.9:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "com.lmax:disruptor:jar:3.4.0:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.apache.zookeeper:zookeeper:jar:3.4.14:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.apache.commons:commons-lang3:jar:3.3.2:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "commons-beanutils:commons-beanutils:jar:1.9.4:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.google.code.gson:gson:jar:2.8.9:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.squareup.okhttp3:okhttp:jar:3.7.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.google.guava:guava:jar:21.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "redis.clients:jedis:jar:2.9.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.dyuproject.protostuff:protostuff-core:jar:1.0.8:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.dyuproject.protostuff:protostuff-runtime:jar:1.0.8:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.caucho:hessian:jar:4.0.38:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.mongodb:mongo-java-driver:jar:3.5.0:compile" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:compile" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.7.0:compile" -> "com.squareup.okio:okio:jar:1.12.0:compile" ; 
+[INFO] 	"redis.clients:jedis:jar:2.9.0:compile" -> "org.apache.commons:commons-pool2:jar:2.6.0:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" -> "com.esotericsoftware:minlog:jar:1.3.0:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" -> "org.objenesis:objenesis:jar:2.2:compile" ; 
+[INFO] 	"com.dyuproject.protostuff:protostuff-core:jar:1.0.8:compile" -> "com.dyuproject.protostuff:protostuff-api:jar:1.0.8:compile" ; 
+[INFO] 	"com.dyuproject.protostuff:protostuff-runtime:jar:1.0.8:compile" -> "com.dyuproject.protostuff:protostuff-collectionschema:jar:1.0.8:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "com.github.spotbugs:spotbugs-annotations:jar:3.1.9:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "log4j:log4j:jar:1.2.17:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "jline:jline:jar:0.9.94:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "org.apache.yetus:audience-annotations:jar:0.5.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "io.netty:netty:jar:3.10.6.Final:compile" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:3.1.9:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" -> "org.springframework.boot:spring-boot:jar:2.1.1.RELEASE:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.1.1.RELEASE:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.1.1.RELEASE:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" -> "javax.annotation:javax.annotation-api:jar:1.3.2:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" -> "org.springframework:spring-core:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" -> "org.yaml:snakeyaml:jar:1.23:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.1.1.RELEASE:provided" -> "org.springframework:spring-context:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-aop:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-beans:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-expression:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.1.1.RELEASE:provided" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.11.1:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.1.1.RELEASE:provided" -> "org.slf4j:jul-to-slf4j:jar:1.7.25:provided" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.11.1:provided" -> "org.apache.logging.log4j:log4j-api:jar:2.11.1:provided" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-jcl:jar:5.1.3.RELEASE:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< org.dromara:myth-spring-boot-starter-dubbo >-------------
+[INFO] Building myth-spring-boot-starter-dubbo 2.0.2-RELEASE            [17/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ myth-spring-boot-starter-dubbo ---
+[INFO] digraph "org.dromara:myth-spring-boot-starter-dubbo:jar:2.0.2-RELEASE" { 
+[INFO] 	"org.dromara:myth-spring-boot-starter-dubbo:jar:2.0.2-RELEASE" -> "org.dromara:myth-spring-boot-starter-parent:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-spring-boot-starter-dubbo:jar:2.0.2-RELEASE" -> "org.dromara:myth-dubbo:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-spring-boot-starter-dubbo:jar:2.0.2-RELEASE" -> "org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" ; 
+[INFO] 	"org.dromara:myth-spring-boot-starter-dubbo:jar:2.0.2-RELEASE" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.1.1.RELEASE:provided (optional) " ; 
+[INFO] 	"org.dromara:myth-spring-boot-starter-dubbo:jar:2.0.2-RELEASE" -> "org.projectlombok:lombok:jar:1.16.20:compile" ; 
+[INFO] 	"org.dromara:myth-spring-boot-starter-parent:jar:2.0.2-RELEASE:compile" -> "org.dromara:myth-core:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.dromara:myth-common:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.dromara:myth-annotation:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.aspectj:aspectjweaver:jar:1.8.9:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "com.lmax:disruptor:jar:3.4.0:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.apache.zookeeper:zookeeper:jar:3.4.14:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "commons-beanutils:commons-beanutils:jar:1.9.4:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.google.code.gson:gson:jar:2.8.9:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.squareup.okhttp3:okhttp:jar:3.7.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.google.guava:guava:jar:21.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "redis.clients:jedis:jar:2.9.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.dyuproject.protostuff:protostuff-core:jar:1.0.8:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.dyuproject.protostuff:protostuff-runtime:jar:1.0.8:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.caucho:hessian:jar:4.0.38:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.mongodb:mongo-java-driver:jar:3.5.0:compile" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:compile" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.7.0:compile" -> "com.squareup.okio:okio:jar:1.12.0:compile" ; 
+[INFO] 	"redis.clients:jedis:jar:2.9.0:compile" -> "org.apache.commons:commons-pool2:jar:2.6.0:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" -> "com.esotericsoftware:minlog:jar:1.3.0:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" -> "org.objenesis:objenesis:jar:2.2:compile" ; 
+[INFO] 	"com.dyuproject.protostuff:protostuff-core:jar:1.0.8:compile" -> "com.dyuproject.protostuff:protostuff-api:jar:1.0.8:compile" ; 
+[INFO] 	"com.dyuproject.protostuff:protostuff-runtime:jar:1.0.8:compile" -> "com.dyuproject.protostuff:protostuff-collectionschema:jar:1.0.8:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "com.github.spotbugs:spotbugs-annotations:jar:3.1.9:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "log4j:log4j:jar:1.2.17:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "jline:jline:jar:0.9.94:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "org.apache.yetus:audience-annotations:jar:0.5.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "io.netty:netty:jar:3.10.6.Final:compile" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:3.1.9:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"org.dromara:myth-dubbo:jar:2.0.2-RELEASE:compile" -> "org.apache.commons:commons-lang3:jar:3.3.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" -> "org.springframework.boot:spring-boot:jar:2.1.1.RELEASE:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.1.1.RELEASE:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.1.1.RELEASE:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" -> "javax.annotation:javax.annotation-api:jar:1.3.2:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" -> "org.springframework:spring-core:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" -> "org.yaml:snakeyaml:jar:1.23:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.1.1.RELEASE:provided" -> "org.springframework:spring-context:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-aop:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-beans:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-expression:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.1.1.RELEASE:provided" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.1.1.RELEASE:provided" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.11.1:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.1.1.RELEASE:provided" -> "org.slf4j:jul-to-slf4j:jar:1.7.25:provided" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.11.1:provided" -> "org.apache.logging.log4j:log4j-api:jar:2.11.1:provided" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-jcl:jar:5.1.3.RELEASE:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------< org.dromara:myth-spring-boot-starter-springcloud >----------
+[INFO] Building myth-spring-boot-starter-springcloud 2.0.2-RELEASE      [18/18]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ myth-spring-boot-starter-springcloud ---
+[INFO] digraph "org.dromara:myth-spring-boot-starter-springcloud:jar:2.0.2-RELEASE" { 
+[INFO] 	"org.dromara:myth-spring-boot-starter-springcloud:jar:2.0.2-RELEASE" -> "org.dromara:myth-spring-boot-starter-parent:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-spring-boot-starter-springcloud:jar:2.0.2-RELEASE" -> "org.dromara:myth-springcloud:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-spring-boot-starter-springcloud:jar:2.0.2-RELEASE" -> "org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" ; 
+[INFO] 	"org.dromara:myth-spring-boot-starter-springcloud:jar:2.0.2-RELEASE" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.1.1.RELEASE:provided (optional) " ; 
+[INFO] 	"org.dromara:myth-spring-boot-starter-springcloud:jar:2.0.2-RELEASE" -> "org.projectlombok:lombok:jar:1.16.20:compile" ; 
+[INFO] 	"org.dromara:myth-spring-boot-starter-parent:jar:2.0.2-RELEASE:compile" -> "org.dromara:myth-core:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.dromara:myth-common:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.dromara:myth-annotation:jar:2.0.2-RELEASE:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.aspectj:aspectjweaver:jar:1.8.9:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "com.lmax:disruptor:jar:3.4.0:compile" ; 
+[INFO] 	"org.dromara:myth-core:jar:2.0.2-RELEASE:compile" -> "org.apache.zookeeper:zookeeper:jar:3.4.14:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "commons-beanutils:commons-beanutils:jar:1.9.4:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.google.code.gson:gson:jar:2.8.9:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.squareup.okhttp3:okhttp:jar:3.7.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.google.guava:guava:jar:21.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "redis.clients:jedis:jar:2.9.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.dyuproject.protostuff:protostuff-core:jar:1.0.8:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.dyuproject.protostuff:protostuff-runtime:jar:1.0.8:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "com.caucho:hessian:jar:4.0.38:compile" ; 
+[INFO] 	"org.dromara:myth-common:jar:2.0.2-RELEASE:compile" -> "org.mongodb:mongo-java-driver:jar:3.5.0:compile" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:compile" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.7.0:compile" -> "com.squareup.okio:okio:jar:1.12.0:compile" ; 
+[INFO] 	"redis.clients:jedis:jar:2.9.0:compile" -> "org.apache.commons:commons-pool2:jar:2.6.0:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" -> "com.esotericsoftware:minlog:jar:1.3.0:compile" ; 
+[INFO] 	"com.esotericsoftware:kryo-shaded:jar:4.0.0:compile" -> "org.objenesis:objenesis:jar:2.2:compile" ; 
+[INFO] 	"com.dyuproject.protostuff:protostuff-core:jar:1.0.8:compile" -> "com.dyuproject.protostuff:protostuff-api:jar:1.0.8:compile" ; 
+[INFO] 	"com.dyuproject.protostuff:protostuff-runtime:jar:1.0.8:compile" -> "com.dyuproject.protostuff:protostuff-collectionschema:jar:1.0.8:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "com.github.spotbugs:spotbugs-annotations:jar:3.1.9:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "log4j:log4j:jar:1.2.17:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "jline:jline:jar:0.9.94:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "org.apache.yetus:audience-annotations:jar:0.5.0:compile" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.4.14:compile" -> "io.netty:netty:jar:3.10.6.Final:compile" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:3.1.9:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"org.dromara:myth-springcloud:jar:2.0.2-RELEASE:compile" -> "org.apache.commons:commons-lang3:jar:3.3.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" -> "org.springframework.boot:spring-boot:jar:2.1.1.RELEASE:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.1.1.RELEASE:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.1.1.RELEASE:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" -> "javax.annotation:javax.annotation-api:jar:1.3.2:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" -> "org.springframework:spring-core:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:provided" -> "org.yaml:snakeyaml:jar:1.23:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.1.1.RELEASE:provided" -> "org.springframework:spring-context:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-aop:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-beans:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-expression:jar:5.1.3.RELEASE:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.1.1.RELEASE:provided" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.1.1.RELEASE:provided" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.11.1:provided" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.1.1.RELEASE:provided" -> "org.slf4j:jul-to-slf4j:jar:1.7.25:provided" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.11.1:provided" -> "org.apache.logging.log4j:log4j-api:jar:2.11.1:provided" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.1.3.RELEASE:provided" -> "org.springframework:spring-jcl:jar:5.1.3.RELEASE:provided" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for myth 2.0.2-RELEASE:
+[INFO] 
+[INFO] myth ............................................... SUCCESS [  4.031 s]
+[INFO] myth-annotation .................................... SUCCESS [  0.129 s]
+[INFO] myth-common ........................................ SUCCESS [  0.483 s]
+[INFO] myth-core .......................................... SUCCESS [  0.452 s]
+[INFO] myth-rpc ........................................... SUCCESS [  0.033 s]
+[INFO] myth-dubbo ......................................... SUCCESS [  0.163 s]
+[INFO] myth-springcloud ................................... SUCCESS [  0.408 s]
+[INFO] myth-motan ......................................... SUCCESS [  0.163 s]
+[INFO] myth-mq ............................................ SUCCESS [  0.058 s]
+[INFO] myth-jms ........................................... SUCCESS [  0.282 s]
+[INFO] myth-rabbitmq ...................................... SUCCESS [  0.206 s]
+[INFO] myth-kafka ......................................... SUCCESS [  0.077 s]
+[INFO] myth-rocketmq ...................................... SUCCESS [  0.107 s]
+[INFO] myth-aliyunmq ...................................... SUCCESS [  0.087 s]
+[INFO] myth-spring-boot-starter ........................... SUCCESS [  0.073 s]
+[INFO] myth-spring-boot-starter-parent .................... SUCCESS [  0.150 s]
+[INFO] myth-spring-boot-starter-dubbo ..................... SUCCESS [  0.138 s]
+[INFO] myth-spring-boot-starter-springcloud ............... SUCCESS [  0.117 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.917 s
+[INFO] Finished at: 2023-12-28T09:02:45+01:00
+[INFO] ------------------------------------------------------------------------

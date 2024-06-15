@@ -1,0 +1,4 @@
+.idea/**
+Pipfile.lock
+hash.json
+src/__pycache__/**

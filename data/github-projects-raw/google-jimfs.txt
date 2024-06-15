@@ -1,0 +1,59 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.google.jimfs:jimfs:bundle:HEAD-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ com.google.jimfs:jimfs-parent:HEAD-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/google-jimfs/pom.xml, line 236, column 15
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.google.jimfs:jimfs-parent:pom:HEAD-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 236, column 15
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Jimfs Parent                                                       [pom]
+[INFO] Jimfs                                                           [bundle]
+[INFO] 
+[INFO] -------------------< com.google.jimfs:jimfs-parent >--------------------
+[INFO] Building Jimfs Parent HEAD-SNAPSHOT                                [1/2]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ jimfs-parent ---
+[INFO] digraph "com.google.jimfs:jimfs-parent:pom:HEAD-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------------< com.google.jimfs:jimfs >-----------------------
+[INFO] Building Jimfs HEAD-SNAPSHOT                                       [2/2]
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ jimfs ---
+[INFO] digraph "com.google.jimfs:jimfs:bundle:HEAD-SNAPSHOT" { 
+[INFO] 	"com.google.jimfs:jimfs:bundle:HEAD-SNAPSHOT" -> "com.google.guava:guava:jar:32.1.3-jre:compile" ; 
+[INFO] 	"com.google.jimfs:jimfs:bundle:HEAD-SNAPSHOT" -> "com.ibm.icu:icu4j:jar:74.1:compile" ; 
+[INFO] 	"com.google.jimfs:jimfs:bundle:HEAD-SNAPSHOT" -> "com.google.auto.service:auto-service-annotations:jar:1.1.1:compile" ; 
+[INFO] 	"com.google.jimfs:jimfs:bundle:HEAD-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.jimfs:jimfs:bundle:HEAD-SNAPSHOT" -> "org.checkerframework:checker-qual:jar:3.41.0:compile" ; 
+[INFO] 	"com.google.jimfs:jimfs:bundle:HEAD-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.google.jimfs:jimfs:bundle:HEAD-SNAPSHOT" -> "com.google.guava:guava-testlib:jar:32.1.3-jre:test" ; 
+[INFO] 	"com.google.jimfs:jimfs:bundle:HEAD-SNAPSHOT" -> "com.google.truth:truth:jar:1.1.5:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.21.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.1.5:test" -> "com.google.auto.value:auto-value-annotations:jar:1.10.1:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.1.5:test" -> "org.ow2.asm:asm:jar:9.5:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Jimfs Parent HEAD-SNAPSHOT:
+[INFO] 
+[INFO] Jimfs Parent ....................................... SUCCESS [  1.821 s]
+[INFO] Jimfs .............................................. SUCCESS [  1.659 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.418 s
+[INFO] Finished at: 2023-12-28T09:02:49+01:00
+[INFO] ------------------------------------------------------------------------

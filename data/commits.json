@@ -1,0 +1,1202 @@
+[
+    {
+        "apache-dubbo": "e583187aac96760860af5d67c965d3391ff2ff4d"
+    },
+    {
+        "apache-incubator-seata": "2363715c05529ddd6d5aa6c2472bd550e4c7cabf"
+    },
+    {
+        "apache-skywalking": "00eb71a1de5e0e12e97269fe578953f797226dbe"
+    },
+    {
+        "apache-flink": "4a852fee28f2d87529dc05f5ba2e79202a0e00b6"
+    },
+    {
+        "apache-rocketmq": "6fce427e109d905530b17e64aa5dc9bc19795c5d"
+    },
+    {
+        "apache-shardingsphere": "55065b7e94f03a36953da6e6bf516039c0c548e2"
+    },
+    {
+        "apache-hadoop": "661c784662cd755463e709f2f1ea96d0df3de70d"
+    },
+    {
+        "apache-pulsar": "67eb3c463a535941e1f7996d827dab294925c018"
+    },
+    {
+        "apache-druid": "c41e99e10ccabf008bf4031a2fca98126c7ba3cc"
+    },
+    {
+        "apache-zookeeper": "9e40464d98319b4553d93b12c6d7db4d240bbce9"
+    },
+    {
+        "apache-dolphinscheduler": "e5a512803ec6f8728fe05f4a5433231ab1d13c7e"
+    },
+    {
+        "apache-shenyu": "442deec40401a635f28a7fa0c49d83981a4ccbf1"
+    },
+    {
+        "apache-shardingsphere-elasticjob": "9fe902a36d54af51c59b4677b6b37cb03abb9a87"
+    },
+    {
+        "apache-seatunnel": "fd971b92edbac0d304049e7d145073dd2f34eadc"
+    },
+    {
+        "apache-storm": "0a7618368e71cb4e230ba36835992a64f64e2ca8"
+    },
+    {
+        "apache-zeppelin": "56da029ffe413c55ba34f46e4e4b91b8d20d9ce2"
+    },
+    {
+        "apache-incubator-kie-drools": "74c602f68d98843803aa1b697fb1f26df0fe855d"
+    },
+    {
+        "apache-dubbo-spring-boot-project": "feb1783a182370e4bfacd903f4bd90f94ff1a550"
+    },
+    {
+        "apache-hive": "b7cf4ffb41a02b326cf51e3b3d3dc2cbe201e620"
+    },
+    {
+        "apache-camel": "3457a7c6e3361f99813b7e31621d5ec3b78ca24c"
+    },
+    {
+        "apache-hbase": "119885415c2f1770d95fdf832d249cbf7a0c80f4"
+    },
+    {
+        "apache-pinot": "298e8d9191c831e7dc564a0184aa935b36ec3a3c"
+    },
+    {
+        "apache-hudi": "397a2fdc5d92689080feb5feb4a015e4e83a9f40"
+    },
+    {
+        "apache-ignite": "79b2c4127ff5a0f4e5cfb111b53ab396263a1f12"
+    },
+    {
+        "apache-shiro": "6e59168e94cf888ae47ea8653713b81c9df71a17"
+    },
+    {
+        "apache-iotdb": "39cd8180bc82f32737892f309e4d27cd4425e252"
+    },
+    {
+        "apache-nifi": "56eb3a46c4d51d85a7f03012a4a3d874892aebd3"
+    },
+    {
+        "apache-maven": "23d13fb322b8d66f03f02ece57d75e154f847367"
+    },
+    {
+        "apache-dubbo-admin": "cbc5a530663db12fb19526cdcaa6831a511d9ca2"
+    },
+    {
+        "apache-incubator-streampark": "063756b7f7508a95aa3ab89f5ac6a900a3e2f4ab"
+    },
+    {
+        "apache-kylin": "8118afb44988b9bda4723689997e6e045c1053be"
+    },
+    {
+        "apache-logging-log4j2": "bb1e4f887abe4ae43f236a570bec4d6e22b7cbbe"
+    },
+    {
+        "apache-incubator-kie-optaplanner": "8db384c44cdedefdbc228196ee06d808c1b2f848"
+    },
+    {
+        "apache-linkis": "be7b820519e593e9f0ba9c03910fe117101b7d5a"
+    },
+    {
+        "apache-curator": "74ff333500b8e9ea6b299f4759303aad53877636"
+    },
+    {
+        "apache-maven-mvnd": "9ee1cf5cad3dce60a29593c3bbb06c89d0cd13f0"
+    },
+    {
+        "apache-avro": "530fe071b0a278232267b4f9f6ac29b8134644b9"
+    },
+    {
+        "apache-commons-lang": "adc70c15ce3d19f4d9d6c60956038e2aa14a60bd"
+    },
+    {
+        "apache-incubator-hugegraph": "7965aac70dee6c412e29d5fb88acb484ff4c48bc"
+    },
+    {
+        "apache-flume": "c6f8e7f42fc504db8e8a7bd3d5cbc667b7f7468c"
+    },
+    {
+        "apache-parquet-mr": "8418b8b60ba8990f476e2d1c07b23aeb9614652a"
+    },
+    {
+        "apache-pdfbox": "2fb17063f3c07abbfa2574f3f0a8c424c3562874"
+    },
+    {
+        "apache-activemq": "343e3de5559971691fa20ca71cbe5225a4f7dfe4"
+    },
+    {
+        "apache-incubator-seata-samples": "071c9b98efb2312a5fdb25874fae6b7b7193dce6"
+    },
+    {
+        "apache-mahout": "343fc71f5338a627a6949a812b7ca76573981fef"
+    },
+    {
+        "apache-dubbo-samples": "1707b36b8b2d3eb196e0016ed698490d6000d47c"
+    },
+    {
+        "apache-ambari": "39bda71b43c5572f057fd6c3cb6cbd91fcefa698"
+    },
+    {
+        "apache-rocketmq-spring": "bc96d490073b5ccb607db00cb08e2932d4a3903e"
+    },
+    {
+        "apache-tika": "a21c9d2815075782e4ca154a10e7f08e87898c69"
+    },
+    {
+        "apache-servicecomb-pack": "1730008286ef6f0d3c5e451165b51acbbb9e68cd"
+    },
+    {
+        "apache-servicecomb-java-chassis": "c83e4fcfc95d74e47bcd545a82ba423071e15de7"
+    },
+    {
+        "apache-tinkerpop": "e8b9532fc0ec811460e97ebf5e00b8b9ec9192ac"
+    },
+    {
+        "apache-drill": "75c04107d460ce0f134b16749eec33ea73f4d919"
+    },
+    {
+        "apache-bookkeeper": "f88f4378727a107a524c60812f12c5fa4076839b"
+    },
+    {
+        "apache-atlas": "d8cf1e34a696da6100127c38cf42b922e177a314"
+    },
+    {
+        "apache-sedona": "433fa150d5e9c96b63b7ab4f46786cea8a6bde40"
+    },
+    {
+        "apache-incubator-paimon": "e856f3bd310714dc0960afc7485d6a0ee003c4ec"
+    },
+    {
+        "apache-cloudstack": "3f9dd4dc07ff40a4e0216014715e4fe37fc46d28"
+    },
+    {
+        "apache-parquet-format": "eb4b31c1d64a01088d02a2f9aefc6c17c54cc6fc"
+    },
+    {
+        "apache-httpcomponents-client": "f24c8010bbff1ba23063152a3bcd5089d8d3a954"
+    },
+    {
+        "apache-opennlp": "78b87dbcd2c1eb70ae7a463e08a2efbed824cc1d"
+    },
+    {
+        "apache-cassandra-java-driver": "8d5849cb38995b312f29314d18256c0c3e94cf07"
+    },
+    {
+        "apache-inlong": "b7ea9d55b44effebeb9a1c4178dcb98bd71b1fe4"
+    },
+    {
+        "apache-struts": "5e9dd3d690e1ddffca74fd67a6af367fb8705181"
+    },
+    {
+        "apache-guacamole-client": "ddf9e723e324583b82c1617555052792341c0206"
+    },
+    {
+        "apache-ratis": "c2dacbd013a96a8cfb23e60dc09373fe0e32a28c"
+    },
+    {
+        "apache-jena": "752e9463f3aa51f36f863ad77f1e541f0e39c8ab"
+    },
+    {
+        "apache-phoenix": "a90b87deec6a70078f5fdc9b8c564913b170dfc3"
+    },
+    {
+        "apache-accumulo": "6dc1bcfa559be2fe8cab1b8e28552b44f7008957"
+    },
+    {
+        "apache-systemds": "8a52a6832cbb4b0cefab8c96d0776c9b089f17f3"
+    },
+    {
+        "apache-commons-io": "c54c044227038b18b1eac935d741dee2633e34e9"
+    },
+    {
+        "apache-plc4x": "05a326392f55177f4bf93cb4a8120de6ca45e1b9"
+    },
+    {
+        "apache-rocketmq-dashboard": "6456630324e3ff22217a6da221a64c09bea82a72"
+    },
+    {
+        "apache-activemq-artemis": "0b51bcfa52fde03e8e7ac8f56c3169083c62b473"
+    },
+    {
+        "google-guava": "1de7270043e71ff155005cd1354ab07fe8726cc0"
+    },
+    {
+        "google-gson": "ce8cab63e56dcb30a7e81dd5ef2ca5660750de24"
+    },
+    {
+        "google-guice": "e23d3b4369fbacfd7f077022c4dead4030e15f22"
+    },
+    {
+        "google-error-prone": "34141a87b12e8f5174058250337210e4da1bff76"
+    },
+    {
+        "google-google-java-format": "d157ec879b43c4837f71eaafb45a6e6d58071a9a"
+    },
+    {
+        "google-rejoiner": "9c51c9d28baf6b77d8484d558d1a60ec897c7c68"
+    },
+    {
+        "google-truth": "e63bac0c5ca8ac22fa8a338ce786087ea5b5df69"
+    },
+    {
+        "google-jimfs": "0747ba74502a867ade48c6deee152268ae6ecc1e"
+    },
+    {
+        "google-caliper": "8b7a2135888926bbd8d5bb8a44acc78d72f64833"
+    },
+    {
+        "google-compile-testing": "25adc2714c52073e3e156db559f1b7063d03a342"
+    },
+    {
+        "google-closure-templates": "5200ab5566a7fb6b6da17b64e6e49bf8ac3f8e84"
+    },
+    {
+        "google-graphicsfuzz": "aa32d4cb556647ddaaf2048815bd6bca07d1bdab"
+    },
+    {
+        "google-s2-geometry-library-java": "5a90565bb18e1973c60010f0941be4965c92fcc8"
+    },
+    {
+        "google-TestParameterInjector": "468611d306e5f4a55aec5971fee39197410316cd"
+    },
+    {
+        "google-mug": "480984c8debac41667a37434ca84c5d1dfe40360"
+    },
+    {
+        "google-mail-importer": "c1cde748ed5139f2d556280b656f0644c168645a"
+    },
+    {
+        "google-gwtmockito": "a6ea4b597dbaf16f78575f114c21667dc09753d0"
+    },
+    {
+        "google-fhir-data-pipes": "f57ca3441650336b5ded784b754fcb1e9e65899b"
+    },
+    {
+        "facebook-facebook-java-business-sdk": "87c547911dc2d68334022c23235f30f1482b0631"
+    },
+    {
+        "spring-projects-spring-data-examples": "529fc71c33ba7dee0ea9250e8693537d051c8e4d"
+    },
+    {
+        "spring-projects-spring-data-elasticsearch": "c16024d7791e148d06edfcf3f1d5058704211e78"
+    },
+    {
+        "spring-projects-spring-data-jpa": "5f924440b78f85862d83f978fdbeda10973b42eb"
+    },
+    {
+        "spring-projects-spring-batch": "21555c093e4c9b97a066878c9e392afcf9a58531"
+    },
+    {
+        "spring-projects-spring-retry": "6656151fa7c254821fb0e1cd7401bc26ef5e3b58"
+    },
+    {
+        "spring-projects-spring-data-redis": "7f48b752eb2e59910b6faa75a0a6042a2fbe293e"
+    },
+    {
+        "spring-projects-spring-data-mongodb": "48777564c9a6385d394a3b004c5badec15226c2f"
+    },
+    {
+        "spring-projects-spring-hateoas": "5efed04f630cac69ed6375249708e7609730ba5a"
+    },
+    {
+        "spring-projects-spring-data-rest": "ae851d878f0b97818164ebb97e830ee0a920b668"
+    },
+    {
+        "spring-projects-spring-data-neo4j": "bb97a751d7384b8b00764ac71d0023f469508fc4"
+    },
+    {
+        "spring-projects-spring-data-commons": "98d265f91c6d65653da5f6830928ce06dbbea2a8"
+    },
+    {
+        "spring-projects-spring-data-relational": "5647835c945ad0ce7b582832d5941f5a14bffcda"
+    },
+    {
+        "spring-projects-spring-ai": "d3d1736f5c8fc2ec2cfdc95cfc7192d448794ef1"
+    },
+    {
+        "spring-projects-spring-modulith": "88f65f18cb1a1e2252239ddceabebd9e29a3b35e"
+    },
+    {
+        "spring-projects-spring-amqp-samples": "92a97f9fb753d8b0349d3537b3dcaae68b89cd93"
+    },
+    {
+        "spring-projects-spring-plugin": "e39fd453e102e0dabcba483bbb6391e4066e0057"
+    },
+    {
+        "spring-projects-spring-data-cassandra": "9b930ed4ffe476ba75f974e975dc588e1bb1ab30"
+    },
+    {
+        "spring-projects-spring-hateoas-examples": "c100c56982473c60e8042f14e6052333a3ae1b55"
+    },
+    {
+        "spring-projects-spring-ws": "adba7272f85114288da45339133d5d7371930d9d"
+    },
+    {
+        "spring-projects-spring-vault": "27a755851e8d2b342f66d15e661635640547d4f0"
+    },
+    {
+        "spring-projects-spring-data-couchbase": "359ade2e7b59f8b638a97f36369363a595887851"
+    },
+    {
+        "spring-projects-spring-guice": "5dac92281eb4f0846e8c8f7d35417238fa735fdc"
+    },
+    {
+        "spring-projects-spring-ws-samples": "52e75b393af8bf51f022bae3ce4621365cef552a"
+    },
+    {
+        "spring-projects-spring-data-keyvalue": "a0e3ffc04310ffa2ac52d6669bf490c8d563595e"
+    },
+    {
+        "elastic-apm-agent-java": "d728615ffa46cc6520b0a674ea342c7b7abb9198"
+    },
+    {
+        "elastic-support-diagnostics": "5b8cf1769d8cf1f6690667d8e606c61f90f54e4c"
+    },
+    {
+        "elastic-elasticsearch-metrics-reporter-java": "4018eaef6fc7721312f7440b2bf5a19699a6cb56"
+    },
+    {
+        "elastic-elasticsearch-river-rabbitmq": "05e886103918949d3c329ce803bdfb9de74dea51"
+    },
+    {
+        "elastic-ecs-logging-java": "7dbf50e9021725cc53cd75fc7b4de170aeca2c11"
+    },
+    {
+        "TheAlgorithms-Java": "1ea95ffa928e42bda532380233a9667764dafdf5"
+    },
+    {
+        "alibaba-arthas": "57d8b62589d8008db1654f3097fab188b89152b7"
+    },
+    {
+        "alibaba-easyexcel": "a16984862b5ac4447460b2810246f4401464abc1"
+    },
+    {
+        "alibaba-nacos": "dbb1b65fcb4fbad267298d1d096e3f94a910973f"
+    },
+    {
+        "alibaba-druid": "8c125eb08a304844c98d8a662f6d4801f7b007fc"
+    },
+    {
+        "alibaba-canal": "04c11ec8eb13f8c24611cf927a93bdedd22bbd8e"
+    },
+    {
+        "alibaba-spring-cloud-alibaba": "18e912d2a727a459b5ce5b8c10ba8fe375460590"
+    },
+    {
+        "alibaba-fastjson": "c942c83443117b73af5ad278cc780270998ba3e1"
+    },
+    {
+        "alibaba-Sentinel": "a524ab3bb3364818e292e1255480d20845e77c89"
+    },
+    {
+        "alibaba-DataX": "86b7935bb4c0570895e6ab97d4e2fe50435f50cb"
+    },
+    {
+        "alibaba-COLA": "ca12d5fb8a84c580c38e0a74f300720a2962f8db"
+    },
+    {
+        "alibaba-otter": "47327389943d416628d311c2287b64dc1a123fc3"
+    },
+    {
+        "alibaba-transmittable-thread-local": "fcb140a5a7fc47680242ab4d1a9ceaba9684112e"
+    },
+    {
+        "alibaba-jvm-sandbox": "c01c28ab5d7d97a64071a2aca261804c47a5347e"
+    },
+    {
+        "alibaba-jetcache": "8c94503d3955520e0a54699ab15600feb3103413"
+    },
+    {
+        "alibaba-QLExpress": "4004bef0aa78c9026c6cbafa731f1789eb4ff37b"
+    },
+    {
+        "alibaba-Alink": "2c55f96abb2a83687324e9b0f13163eed82e8a7f"
+    },
+    {
+        "alibaba-fastjson2": "06d49f25fbeee1f948dedfeda55f27565d63b575"
+    },
+    {
+        "alibaba-yugong": "94a5888688415510a20bd72d246cbf93eb1d43f0"
+    },
+    {
+        "alibaba-TProfiler": "8344d1ae2d4a83f6c7ead16fec392b5fce95bba5"
+    },
+    {
+        "alibaba-jvm-sandbox-repeater": "0635a6a9aae9fdc20e0ec3f197aed5519b15fc1e"
+    },
+    {
+        "alibaba-testable-mock": "30570ae69dcbfd1851d81ee2c934614762e45e95"
+    },
+    {
+        "alibaba-compileflow": "c7f50f7dd2a4f5e8bad687341a9fe9f55a0fa735"
+    },
+    {
+        "alibaba-taokeeper": "a8a0ccb147036830ac7463efd52c6fddb1d44794"
+    },
+    {
+        "alibaba-simpleimage": "aabe559c267402b754c2ad606b796c4c6570788c"
+    },
+    {
+        "alibaba-java-dns-cache-manipulator": "c33981a67522702f5b2a805ba44cc5c0bcbe9257"
+    },
+    {
+        "alibaba-alibaba-rsocket-broker": "46940d7754614c69156db2c6fdb0f7e7e5cb585c"
+    },
+    {
+        "alibaba-bulbasaur": "aaba4219a46b1cb4e9012f78c758f0b4313d3ca4"
+    },
+    {
+        "alibaba-asyncload": "9891e7086bff81ebdd4991435d21b549e48e874d"
+    },
+    {
+        "alibaba-SmartEngine": "56eb8f68a8544d7c357a63a3fe7d90baa348f315"
+    },
+    {
+        "alibaba-AGEIPort": "dc363f07aec8622f4eddbae68e348dd863c4f858"
+    },
+    {
+        "alibaba-cobarclient": "46396017857e213c537b0fc88cae7e8ea3a798db"
+    },
+    {
+        "alibaba-metrics": "aeed56ee4bc1ddb1682d2d8df0847dca112176d7"
+    },
+    {
+        "alibaba-one-java-agent": "ba26a45c7b263c927a67306ca5a2163d9aa4b9c4"
+    },
+    {
+        "alibaba-Appactive": "7f549dff64af5f86497b1470941e740bb6cd36f0"
+    },
+    {
+        "alibaba-aliyun-spring-boot": "425a36d149f082919fb3c41bd042c8615b426ad9"
+    },
+    {
+        "alibaba-innodb-java-reader": "9866b27eefdc61ed6f3282a68ce1948d462d6751"
+    },
+    {
+        "alibaba-bytekit": "b4e33587d07170b50756da056ed9342cd7133ebd"
+    },
+    {
+        "alibaba-velocity-spring-boot-project": "e5bd4ad55bac1f2bc0889a14cff9eeae2b2e8433"
+    },
+    {
+        "alibaba-tac": "80f8f6126ed652ac2b4ee353ccbe88496c9a882a"
+    },
+    {
+        "alibaba-tamper": "781c159496991705e273fb8538024dfa687235a5"
+    },
+    {
+        "alibaba-cloud-native-app-initializer": "a41000d12ab2947060ab25b60a089f2989c0fbfb"
+    },
+    {
+        "alibaba-simplehbase": "e70ffb49196491d075797becec0b5c57372401b9"
+    },
+    {
+        "alibaba-wasp": "b2593d8e4b31ca6da0cd2f3e18356338d9b6dace"
+    },
+    {
+        "alibaba-cooma": "deed753219ce4396b0470a2f300f7788484a8d64"
+    },
+    {
+        "alibaba-easy-retry": "33b4311ea57f6620e0f33426cc24bb86ce4ed1fe"
+    },
+    {
+        "alibaba-spring-context-support": "184df1c8cd0b4c11e0c582039eddb308e8ef1761"
+    },
+    {
+        "alibaba-termd": "4d0301be8d4d7cfd8385fdd2a7b52355c2367a03"
+    },
+    {
+        "alibaba-simpleel": "9f203b3cde91c60791041a6f7cf737d398b3ee8f"
+    },
+    {
+        "alibaba-mpich2-yarn": "2c38d35404038d20312887272111383362003a51"
+    },
+    {
+        "alibaba-fastFFI": "467bf235b46df3534c0b01c482ce63db6f55a624"
+    },
+    {
+        "dbeaver-dbeaver": "17bd89a97baa3d9eda180ae12b55ba78caf4bacc"
+    },
+    {
+        "netty-netty": "78639fa5ec1da3271dbe79eac28cbf02171c0b73"
+    },
+    {
+        "netty-netty-incubator-codec-quic": "bdf113dd297993e7402555403badce60afe4b0fa"
+    },
+    {
+        "netty-netty-incubator-transport-io_uring": "cdfcb8aff46e3646216a11fb5ae1f635b095cbcb"
+    },
+    {
+        "netty-netty-incubator-codec-http3": "572300d5bcfb889265d2a7be84ad94c8b83f58dd"
+    },
+    {
+        "zxing-zxing": "0b9959afb70b67771d09ad7488a5378c678f189f"
+    },
+    {
+        "SeleniumHQ-htmlunit-driver": "97d59192a698dd85fc577c5305b96d724528f66f"
+    },
+    {
+        "apolloconfig-apollo": "6657a58831a544606f78177b61d92bb959ccce94"
+    },
+    {
+        "apolloconfig-apollo-use-cases": "a70077ffa52bec2335889fd4829fd4bf9650c4fa"
+    },
+    {
+        "dromara-hutool": "6f9279a3132155896994dab078ba90d822334ca4"
+    },
+    {
+        "dromara-Sa-Token": "562c369cf22190ba65166cd1686eed23895a785b"
+    },
+    {
+        "dromara-lamp-cloud": "db458c03bc32e751a4a3f99067594fb5297fea06"
+    },
+    {
+        "dromara-hmily": "52dc6ba3a44f9ade8d49bcc6ad49485ef9879c49"
+    },
+    {
+        "dromara-hertzbeat": "8bd5f5a76c4677a9a0904523a109dc8d110280c3"
+    },
+    {
+        "dromara-dynamic-tp": "e967f802507f407e47edf693216c0e66c6b7007e"
+    },
+    {
+        "dromara-liteflow": "195fcfa3c074c0eac4332d3475db957a078c409a"
+    },
+    {
+        "dromara-raincat": "9336dd0a0f04a22eebfbaf29db6cd5b0ddcc3ab0"
+    },
+    {
+        "dromara-forest": "127cc5548956c87e9702f71910dc1700aad6764c"
+    },
+    {
+        "dromara-myth": "02b1b86abba1fed4a0a536a8a955d6e1be02b74c"
+    },
+    {
+        "dromara-easy-es": "617bea1aa314cadef573111a8e455958b4fe67b9"
+    },
+    {
+        "dromara-Jpom": "6a1f09eeef6c68c8998d8878fec1d3d321e3c260"
+    },
+    {
+        "dromara-x-file-storage": "933683a927e51983e796d550d668332c9a3b12b8"
+    },
+    {
+        "dromara-sureness": "26d7d258e7cedade28513b946192350abe98b2d4"
+    },
+    {
+        "dromara-mendmix-cloud": "eaabb2f3809f98accd40bb6642211455272d5862"
+    },
+    {
+        "dromara-RuoYi-Vue-Plus": "b4710edc18da717129b069b2d98c9e67a3600fe8"
+    },
+    {
+        "dromara-dante-cloud": "633caad2f8a525fd5c2465e5335553d02abe3eca"
+    },
+    {
+        "dromara-TLog": "bf91c19ecae6bf875a15548e192894c9e0e2bada"
+    },
+    {
+        "dromara-cubic": "f8bde2e67dd48fafd1b40f1c801697af016683dc"
+    },
+    {
+        "dromara-SMS4J": "ec7588b5816d00df356e0a332e51962a11be0118"
+    },
+    {
+        "dromara-RuoYi-Cloud-Plus": "cc57fb9571b3b0183a60a201ab6de7e08801aad8"
+    },
+    {
+        "dromara-gobrs-async": "d3c60395faa6e14ba15724ed563889827433f830"
+    },
+    {
+        "dromara-neutrino-proxy": "66e803d14e118f6002bc841d6ac881ead14bffe4"
+    },
+    {
+        "dromara-CloudEon": "36f25a1a0ac0b1bbcaeb225bba695ed8d82bf24c"
+    },
+    {
+        "dromara-disjob": "ecacd41cb4d9f2d7357d5de75bc3f73d014e372d"
+    },
+    {
+        "dromara-Jinx": "75af5cf7009a258511cf2dc6bf7dbe7895b644ff"
+    },
+    {
+        "dromara-tianai-captcha": "db2f4097832dceecb4e0cab826d4488a5d30819e"
+    },
+    {
+        "dromara-dataCompare": "ca709e10a8e5e6333231d5ac68cfdbc3f897e7cb"
+    },
+    {
+        "dromara-hodor": "67a6d378dd28dcfe93ad5082d7a399ce63b0ce1e"
+    },
+    {
+        "dromara-northstar": "841471c19eeb9ac697efd295d67a4a50be5e4017"
+    },
+    {
+        "signalapp-Signal-Server": "4e3b1509a8908747bfcfef371c8ee2361aa0c378"
+    },
+    {
+        "Netflix-curator": "7fa8c085f45977be1db980731f4faf580925db08"
+    },
+    {
+        "Netflix-Surus": "05659af43697f6dae5743fd0a1931c210757e1e7"
+    },
+    {
+        "Netflix-CassJMeter": "a9539f8baa17af19f249b4f34f0331fcd2c9a414"
+    },
+    {
+        "redisson-redisson": "ed433091e989a3bd7624b4aa195eb3597532a6a4"
+    },
+    {
+        "redisson-redisson-examples": "3c723e262d54f8dfb3944ffc0a5a42e0f9a3c9fc"
+    },
+    {
+        "jenkinsci-jenkins": "78cdaa9f29df4a407b12973b9db04ff322e49db8"
+    },
+    {
+        "jenkinsci-blueocean-plugin": "29eb2027480e257a83416e6dd98eacff14f56f00"
+    },
+    {
+        "jenkinsci-configuration-as-code-plugin": "90855cf8ccbb8e4fe4dc1be91ce7d59dc4a36611"
+    },
+    {
+        "jenkinsci-kubernetes-plugin": "4230d0ccd951f44657b16fd8f867defb03180fc6"
+    },
+    {
+        "jenkinsci-gitlab-plugin": "d38e95e166e43d1e1a87fc4e6dbff838a34a164f"
+    },
+    {
+        "jenkinsci-jenkinsfile-runner": "d7197ff3120cf323c99b765239af5ce54e6d6422"
+    },
+    {
+        "jenkinsci-java-client-api": "ddf6a850beacf79480280c0c3c067bf73d84bca5"
+    },
+    {
+        "jenkinsci-build-monitor-plugin": "bac11536174d577f0966d12b83f35e654db83b80"
+    },
+    {
+        "jenkinsci-slack-plugin": "4220f39d06c0e63ba99d0663cf5e047f904cff09"
+    },
+    {
+        "jenkinsci-git-plugin": "df8ef2e79fee11f3b9ed2879594375b76d7547a3"
+    },
+    {
+        "jenkinsci-ghprb-plugin": "ebd6df7b593865c65ae87ef78a0d8255cc90fada"
+    },
+    {
+        "jenkinsci-docker-workflow-plugin": "dc3cf1327f1b8c9967a56aa0e1a1f3f0ff79b57c"
+    },
+    {
+        "jenkinsci-docker-plugin": "20f21b3c22a5af417ff20d054290feee696cfc55"
+    },
+    {
+        "jenkinsci-pipeline-aws-plugin": "693f49f51bda7a8738060eba2e90da8b7033c645"
+    },
+    {
+        "jenkinsci-generic-webhook-trigger-plugin": "8d66d67dd7f4e7035bc5a8428c601e6f8e648b2f"
+    },
+    {
+        "jenkinsci-plugin-installation-manager-tool": "57dbb4622abe1a285d4967804e73e0738efcbded"
+    },
+    {
+        "jenkinsci-dingtalk-plugin": "46b7dca86f564186df0f90e43522d21e3bbd33c6"
+    },
+    {
+        "jenkinsci-email-ext-plugin": "4e04aa4576efd780e960ce425fe520d7a5fe3bcd"
+    },
+    {
+        "jenkinsci-warnings-ng-plugin": "26b23a5d9a9f0eacf819e669aad542c9d1831866"
+    },
+    {
+        "jenkinsci-github-plugin": "e723bd709697867cd8a70f6423f3b8af6db9194a"
+    },
+    {
+        "jenkinsci-ssh-steps-plugin": "50fdfda7a4476409a6d3adcf56d260522ab0c799"
+    },
+    {
+        "jenkinsci-ec2-plugin": "f3d852e00486f625d24fac71fe7e798f476e3cbe"
+    },
+    {
+        "jenkinsci-ansicolor-plugin": "d7dbc9d466e1fd6b4338b79994478e6c83d44bef"
+    },
+    {
+        "jenkinsci-pipeline-utility-steps-plugin": "544b97e06041d4d4681516ccee0efb6c40eccc6f"
+    },
+    {
+        "jenkinsci-lib-file-leak-detector": "800114972067b6991b2e5ab073da51639ad7c893"
+    },
+    {
+        "jenkinsci-workflow-cps-global-lib-plugin": "d95673f149bbc39d418df4c2dcd1806bfb06c06d"
+    },
+    {
+        "jenkinsci-ansible-plugin": "a33b64629b09874313287ac0e4ed4afc919b761a"
+    },
+    {
+        "jenkinsci-remoting": "cd91eea5dc25cee827a502d0b40423312f5bb114"
+    },
+    {
+        "jenkinsci-bitbucket-branch-source-plugin": "ef13e0c9ae0fe0a383c73feec127a1742a435af4"
+    },
+    {
+        "jenkinsci-hashicorp-vault-plugin": "f5d54b3dc313b540011887dc420e6cd0488fe24d"
+    },
+    {
+        "jenkinsci-gerrit-trigger-plugin": "c563987e2cb994ec5099664477f025249b745109"
+    },
+    {
+        "jenkinsci-android-emulator-plugin": "db2addf6e7d487b84f032f23048de08e3c275551"
+    },
+    {
+        "jenkinsci-docker-slaves-plugin": "edec729b20d4dd6b35a798886e36912451ac0b07"
+    },
+    {
+        "jenkinsci-cucumber-reports-plugin": "ce6958570abf202a11cf607af6b3b1598252e69c"
+    },
+    {
+        "jenkinsci-trilead-ssh2": "ed6136ab5d55f96aac606e9817ea4bfad6a25777"
+    },
+    {
+        "jenkinsci-docker-build-publish-plugin": "666a9d65a5b49c1a5d727e558dc67a6e24cec7a0"
+    },
+    {
+        "jenkinsci-amazon-ecs-plugin": "6a54954b6fe866c4d98f364955ce994d166cf210"
+    },
+    {
+        "jenkinsci-performance-plugin": "42d4b1a566d7ec6524e5d6d92dbe2f64b07a8212"
+    },
+    {
+        "jenkinsci-gitea-plugin": "2b53751e02ccaf4de053f4b7e11d31f936a4eb42"
+    },
+    {
+        "jenkinsci-github-branch-source-plugin": "a7d01eac7256b8210f5dff0a36253cc905439921"
+    },
+    {
+        "jenkinsci-workflow-cps-plugin": "c43e04d6d68c0f1a08e80e30afcc167aa878786c"
+    },
+    {
+        "jenkinsci-jira-plugin": "4c7280517bc8db73a5c6a886b0f01fc824e5a022"
+    },
+    {
+        "jenkinsci-embeddable-build-status-plugin": "4a954796e45d9bba8602ff102565cad1668f65d5"
+    },
+    {
+        "jenkinsci-stashnotifier-plugin": "f4f547f0fe39f2aaf6f4b65f3c0b9c3462568209"
+    },
+    {
+        "jenkinsci-stapler": "aed13a7ea58fceb306d8293b7b52fb58ff1ca6c3"
+    },
+    {
+        "jenkinsci-http-request-plugin": "ab620ea30cd4920e0b7a80c172e339c807e6c4cd"
+    },
+    {
+        "jenkinsci-kubernetes-pipeline-plugin": "6e59f0d8d4417fe69b2153c85cc676dfece95da3"
+    },
+    {
+        "jenkinsci-tfs-plugin": "aea4ce0f1fd82668b1ead7e2aade2ffe36a32a10"
+    },
+    {
+        "jenkinsci-kubernetes-cd-plugin": "e275fa3ed9efb584f2a54669aee5f509626ac296"
+    },
+    {
+        "jenkinsci-qy-wechat-notification-plugin": "acbb0b836648f066bc2cded45c2d2b64cf987afc"
+    },
+    {
+        "jenkinsci-jacoco-plugin": "f5ea36e9aff4db394bb88944139bb7bb8f55187d"
+    },
+    {
+        "jenkinsci-swarm-plugin": "324af5642992856b91c67e711850e9aca7a2af74"
+    },
+    {
+        "jenkinsci-git-client-plugin": "3ae560c5fab96d548b40f825d910649e87f48281"
+    },
+    {
+        "jenkinsci-subversion-plugin": "ff80157fb7312817f237f26463ae4376337d9816"
+    },
+    {
+        "jenkinsci-role-strategy-plugin": "7a542b2e84905438e4da056727eff2bfe668adc4"
+    },
+    {
+        "jenkinsci-dependency-check-plugin": "8ab19facdf1c792ee4aa86512afafaecb491f95d"
+    },
+    {
+        "jenkinsci-pipeline-as-yaml-plugin": "c72d50cbc258e65078716f45649ffabcc4c2332e"
+    },
+    {
+        "jenkinsci-groovy-sandbox": "a59c3fe59d5017511b3f92859a72787869239571"
+    },
+    {
+        "jenkinsci-acceptance-test-harness": "184666868a446afc5036d831081769f2c2d4ee67"
+    },
+    {
+        "jenkinsci-gitlab-branch-source-plugin": "cf04dfb789ca3c33e9832a5f972452238c2baa06"
+    },
+    {
+        "jenkinsci-scm-sync-configuration-plugin": "16e5593cd1f866c68ec9a8d4a62db2c8e0bfe23b"
+    },
+    {
+        "jenkinsci-git-parameter-plugin": "014a2cf1bf9e3b5530bf44531692c73992573d68"
+    },
+    {
+        "jenkinsci-publish-over-ssh-plugin": "d6d29fda86b3db5e19d9130ca80ad7915eb1197c"
+    },
+    {
+        "jenkinsci-selenium-plugin": "63e2d642d480810a43c6d8bf93bfb4a6d7704567"
+    },
+    {
+        "jenkinsci-docker-build-step-plugin": "9888e65707e0587c1b1559e4b04659413dd53ef4"
+    },
+    {
+        "jenkinsci-cobertura-plugin": "ff0973461f60c28dbc0bf5ab4853a5aec4798210"
+    },
+    {
+        "jenkinsci-credentials-plugin": "cf0a900b37c29359c89e0d85fdc48361ef4c0eb1"
+    },
+    {
+        "jenkinsci-code-coverage-api-plugin": "c7849cd1b80b5f6db89ee7a3885c7fc40edb1b3c"
+    },
+    {
+        "jenkinsci-artifactory-plugin": "e2bc38ec1a250e4914593fcec7d7579373b885ae"
+    },
+    {
+        "jenkinsci-jira-steps-plugin": "23b6026d0730b8d1205bcd276d1bf85795052d88"
+    },
+    {
+        "jenkinsci-throttle-concurrent-builds-plugin": "7eccfc460758977ae9bdf0772517420c557eb2c2"
+    },
+    {
+        "oracle-opengrok": "af79198bcb193096a3c7e451c0c5f21b0b8b602e"
+    },
+    {
+        "oracle-tribuo": "ecab35767da382b7efea481f7a17fd0e6909133e"
+    },
+    {
+        "oracle-weblogic-kubernetes-operator": "c8c0be7d5fb7ea807fec5f87ea3a461dfe20ae38"
+    },
+    {
+        "oracle-oracle-r2dbc": "f290557090cf086a64cbe475f83f0601d24c23ce"
+    },
+    {
+        "mybatis-mybatis-3": "609a153e0283000f6e4f0979906bc26e3bfbabfe"
+    },
+    {
+        "mybatis-spring-boot-starter": "cc64f7a11a1a51500f613be0cdab4035a1eba2ea"
+    },
+    {
+        "mybatis-spring": "443d75c65e9671236891e5fd0b1a901559dabe3a"
+    },
+    {
+        "mybatis-mybatis-dynamic-sql": "32724fcb8e96f0951d7756a0e8b627ba2b8c7f79"
+    },
+    {
+        "mybatis-jpetstore-6": "4a2e7b8895fef5f53d30c2c2a15b77aee4c8d787"
+    },
+    {
+        "mybatis-redis-cache": "de622e47a93a0a24c1427862bd364450e5b88810"
+    },
+    {
+        "mybatis-migrations": "3b3bec9ca0099bc67461e42cecba2819e52446b3"
+    },
+    {
+        "mybatis-guice": "487f30a9cbba93a755456d597b18510f95a38f9f"
+    },
+    {
+        "mybatis-ehcache-cache": "fb9d51f068724c506fa6bd1c32ee4a98b192df00"
+    },
+    {
+        "keycloak-keycloak": "986b6af4f5589ec1577ccba9b1d71b5e189ba9e3"
+    },
+    {
+        "keycloak-keycloak-quickstarts": "38f54159e312f0f3a2be4a89559a30beda3ed6c7"
+    },
+    {
+        "keycloak-keycloak-benchmark": "0598144ef9f3ef31f2edf48a5bb0accd334a0bc7"
+    },
+    {
+        "Tencent-spring-cloud-tencent": "0fa2d8b756e931cc9460a0334ce9c76cc69f5ba5"
+    },
+    {
+        "Tencent-Firestorm": "c74cc848329e013694796097a8b5c6416a3929ac"
+    },
+    {
+        "openzipkin-zipkin": "a67a366c20ebaecc9d1c1956ad0f469ded39e518"
+    },
+    {
+        "openzipkin-brave": "70600a5b035d5f83a184ba9db897d4656edd61fa"
+    },
+    {
+        "openzipkin-zipkin-dependencies": "88d5b4460cec96a540d0dfea72a36b8a671be99b"
+    },
+    {
+        "openzipkin-zipkin-reporter-java": "4496b76fe5300c40564c3fb76777f47279e20c4a"
+    },
+    {
+        "antlr-antlr4": "28eb03612f6fff900d240e51b90c251e4357d4e3"
+    },
+    {
+        "antlr-stringtemplate4": "bb92568f7f0ce3d3bc115db567ad9067640cd6d1"
+    },
+    {
+        "antlr-codebuff": "909c04b386c6d384344cd0d060dd1e3b4bde77a2"
+    },
+    {
+        "antlr-antlr3": "7bd56e65a5662ddef458dacdf2202189521aef41"
+    },
+    {
+        "thingsboard-thingsboard": "c43a265868a24f6b0849dea7c00fb24dcacf1e72"
+    },
+    {
+        "thingsboard-tbmq": "2f2d75308125378936315e774ead4c9165d53ab7"
+    },
+    {
+        "deeplearning4j-deeplearning4j": "f9c1faaaf968d6f0e5a5add2627908f7a2565f96"
+    },
+    {
+        "pinpoint-apm-pinpoint": "c751f04ba58d08d6c4353a4d014daff2d246909f"
+    },
+    {
+        "questdb-questdb": "26d5d3804ddb9e816ab6ee25456b5e582ec29441"
+    },
+    {
+        "questdb-rust-maven-plugin": "09774104b468fcd925445b9b15a4b6e9ba9c444f"
+    },
+    {
+        "quarkusio-quarkus": "09e25183f4bcd0e1fce5d9046832318b5d9fec76"
+    },
+    {
+        "quarkusio-quarkus-quickstarts": "f93d5e420945f9561a8868ca7a9729b45ac0a47a"
+    },
+    {
+        "quarkusio-quarkus-platform": "671921be1c71275c6c516910ee4e04b7f32b4388"
+    },
+    {
+        "quarkusio-quarkus-images": "4ffb4bcfd906c3e7452321161fff45165fded225"
+    },
+    {
+        "quarkusio-code.quarkus.io": "91a51e2168c85f426744d7b4037f1a87fd3e337a"
+    },
+    {
+        "neo4j-neo4j": "60f235e37443d4820c5c5c2a251a4096cf18a430"
+    },
+    {
+        "neo4j-neo4j-java-driver": "92b7df696c42a261ebcf91d39f5aa4f492181154"
+    },
+    {
+        "neo4j-neo4j-ogm": "210f533bab8454bccb6e8f4f69c8bdfbcd7d4249"
+    },
+    {
+        "redis-jedis": "66bc3b380c50224707f30b2f979296fb4d8786f9"
+    },
+    {
+        "redis-redis-om-spring": "ad88b466d58bb713615d29d87cb22303cbbdeef7"
+    },
+    {
+        "square-javapoet": "aaebc488320bd11aab1a6248d6b8058a255c92df"
+    },
+    {
+        "square-seismic": "e077406386cfbeda72ea9e489227ca03b4fdf5af"
+    },
+    {
+        "square-gifencoder": "408019f4bfdb90b16a9812fa35ab264bfa002bf5"
+    },
+    {
+        "clojure-clojure": "08a2d9bdd013143a87e50fa82e9740e2ab4ee2c2"
+    },
+    {
+        "clojure-data.int-map": "c0c7f0a1b7bf8e25a93b203b1e634d27d0e6146e"
+    },
+    {
+        "OpenRefine-OpenRefine": "94cfe81f00808b5655a4e50a18e921fc898f057d"
+    },
+    {
+        "languagetool-org-languagetool": "cdbb7860f6270bd7ac2db77e6fb5945dbcf83473"
+    },
+    {
+        "Activiti-Activiti": "fb2e972b641a8426c2628dbaa442b89164d3d7a6"
+    },
+    {
+        "jwtk-jjwt": "917ffbb5d92d70b261159572a4e6bad39fe972e8"
+    },
+    {
+        "SonarSource-sonar-java": "0d3165c6aebe18052b1d97893a2e3da85e6d9b41"
+    },
+    {
+        "SonarSource-sonar-php": "fe1a810bd601ffe6c3018e3d00d69cef79dbc70b"
+    },
+    {
+        "SonarSource-sonar-scanner-cli": "1916b066c40da58b17dcbefc75d3a727028f3572"
+    },
+    {
+        "SonarSource-sonarlint-eclipse": "7ff5e4d6f4d933947a73ddad5866478472dcb547"
+    },
+    {
+        "SonarSource-sonar-python": "37df2d42f406d8a037e8de70809ae518080f070b"
+    },
+    {
+        "SonarSource-sonarlint-core": "a5c92c1a6b12eaba8ed7fea9dab1ac8b9b52d116"
+    },
+    {
+        "SonarSource-sonar-scanner-jenkins": "d5416682571f02af82bd2c7216377141aa664ccb"
+    },
+    {
+        "SonarSource-sonar-scanner-maven": "0ef77906ef2878996bb8c06a0b50b6fda5c3359a"
+    },
+    {
+        "SonarSource-sonar-scanner-commons": "4c3df775f7a1a61e3f0bfa11295e12ea2289f49c"
+    },
+    {
+        "flyway-flyway": "a7c071afa67d7e3fd88e042bae69d888d0c8e3c3"
+    },
+    {
+        "provectus-kafka-ui": "53a6553765a806eda9905c43bfcfe09da6812035"
+    },
+    {
+        "NanoHttpd-nanohttpd": "efb2ebf85a2b06f7c508aba9eaad5377e3a01e81"
+    },
+    {
+        "Alluxio-alluxio": "726f812ee6d7f0fea864b1a350ce0398c7b4b683"
+    },
+    {
+        "zendesk-maxwell": "aa73236768cff10ae2f0beb3af27d159cd718cd8"
+    },
+    {
+        "processing-processing-sound": "75e4d7b41d6eb83119dd991e3aef47cf4569acad"
+    },
+    {
+        "junit-team-junit4": "16228f3ccea3c6f1170488e0e268f3601d130f75"
+    },
+    {
+        "StarRocks-starrocks-connector-for-apache-flink": "7fe8cd2a4d347807737d692f40d70618ec4fcb7b"
+    },
+    {
+        "hazelcast-hazelcast": "408a4fcffa5bc9ef0c925df1a910acdd40bcba1a"
+    },
+    {
+        "hazelcast-hazelcast-jet": "60c713a718df89fdccedbf34aadcdcb953ae92a6"
+    },
+    {
+        "hazelcast-hazelcast-code-samples": "19975008f91286c815cbac44bd2229ad63b1e148"
+    },
+    {
+        "hazelcast-hazelcast-kubernetes": "3f3d1bc1df461b938947dd50722bba5ad8efe42e"
+    },
+    {
+        "hazelcast-hazelcast-jet-demos": "5015148fb6d77ca080c61c1386bf942533a6fca2"
+    },
+    {
+        "hibernate-hibernate-validator": "6e73c5f45d81a74b4f51754a80c629ef5ffc42cb"
+    },
+    {
+        "hibernate-hibernate-search": "dfe7d0316bac61fc42cabca6af2e470bbfe41f0b"
+    },
+    {
+        "hibernate-hibernate-ogm": "7773e663c6c5178d73c467a525f928ce4f940eb7"
+    },
+    {
+        "hibernate-hibernate-tools": "0302825a80239cbdb6826dc013a9e01fad0f9ef0"
+    },
+    {
+        "lettuce-io-lettuce-core": "1f0130f4db6045993275bb8b9315a0dc080686f9"
+    },
+    {
+        "eclipse-paho.mqtt.android": "3cb8af72f21b56ba72a6a6ddf3066d07d42f80b5"
+    },
+    {
+        "eclipse-eclipse-collections": "47466402f3cad9238572bcd0a3e0b32c76e50e28"
+    },
+    {
+        "eclipse-paho.mqtt.java": "f4e0db802a4433645ef011e711646a09ec9fae89"
+    },
+    {
+        "eclipse-milo": "cd80e2e18a3d05791734a0c70f337919199c01ca"
+    },
+    {
+        "eclipse-microprofile": "235812dd93b1a2b1318687e63e6b5a8434a53141"
+    },
+    {
+        "eclipse-paho.mqtt-spy": "41f477215fa54d6db31499eb3b2dc3dc539503c1"
+    },
+    {
+        "eclipse-jkube": "e43ae68205a0f1d0fad6a2b88207d47f826e1e61"
+    },
+    {
+        "eclipse-steady": "8c216f1dd4d77e2bfab10e9892fe11a2f0c4ed69"
+    },
+    {
+        "eclipse-eclipse-collections-kata": "484419fab0ab059804514cf605469e6ef596d8fb"
+    },
+    {
+        "eclipse-hawkbit": "ba496a0f527ca5bab5d6016b85372391d1f4ca28"
+    },
+    {
+        "eclipse-repairnator": "69c2b854215cbe5a30854271a81dfe686e0e628d"
+    },
+    {
+        "eclipse-lemminx": "ef5d223a96a9390819b8f9f9378092d7eeeaa021"
+    },
+    {
+        "eclipse-vorto": "23a386ec472a057d2be871e258084a214982849c"
+    },
+    {
+        "eclipse-jnosql": "dd89a06c8488a56b31ea3815e0072ff2950d267f"
+    },
+    {
+        "eclipse-kapua": "4dd0f73cbbe00ac34086c6309240f82195977650"
+    },
+    {
+        "eclipse-microprofile-config": "dec67388113ceee797ffbd3d2f004d6133df889c"
+    },
+    {
+        "eclipse-capella": "7b65b4234043136c3729048d573aac38e575ef83"
+    },
+    {
+        "eclipse-microprofile-rest-client": "b6eb2f651c0cbb19f0300eba5c6a3242e9e46019"
+    },
+    {
+        "eclipse-microprofile-open-api": "0649b7f6d299a33c58fef56e19e17786227a0560"
+    },
+    {
+        "eclipse-microprofile-fault-tolerance": "10975edccb95a1c4ec69863a5f2f95d6c6e7ed47"
+    },
+    {
+        "eclipse-microprofile-conference": "298d25bdf111e61de6adc0dc7598b5408b22b7e6"
+    },
+    {
+        "eclipse-microprofile-samples": "1abb2da2c7ae963c9ab178dc47dc5a69b4be433d"
+    },
+    {
+        "eclipse-microprofile-health": "25d470c0e7962b8cee768241490755b895e99297"
+    },
+    {
+        "eclipse-jbom": "107a35c0c710d601afbfb4f19aaa6dcf5f41604f"
+    },
+    {
+        "sonatype-nexus-public": "5202fe4c551f97c2ec5fc65441f40e20dafd8177"
+    },
+    {
+        "jitsi-jitsi": "0e3663266598092f8b86fbed0568af137542264f"
+    },
+    {
+        "jitsi-libjitsi": "2a5a817162727fa0ed571453d0e9fba361a5d3f4"
+    },
+    {
+        "jitsi-jigasi": "de5e08f44bf162e13fe5e4b89b30e1c851eab6ae"
+    },
+    {
+        "jitsi-ice4j": "d289f125a4396aecc7720b04acbab5039e50763a"
+    },
+    {
+        "jitsi-jitsi-meet-torture": "7c0e13757e1e1f5c5413e3394887ce5905e44361"
+    },
+    {
+        "strongbox-strongbox": "8aecf0d65b6aa2c92310471051f8e54a1110c4de"
+    },
+    {
+        "xwiki-xwiki-platform": "7882a630702bfc7794a8853910fb4434bf7e24b0"
+    },
+    {
+        "greenrobot-essentials": "a129506eb62ea6d68d248b02e9617d925e510b76"
+    }
+]

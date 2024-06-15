@@ -1,0 +1,96 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for matrix.cubic:cubic-agent-core:jar:1.4.5.release
+[WARNING] 'dependencies.dependency.systemPath' for com.sun:tools:jar refers to a non-existing file /usr/lib/jvm/java-17-openjdk-amd64/../lib/tools.jar. Please verify that you run Maven using a JDK and not just a JRE. @ line 57, column 25
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for matrix.cubic:cubic-proxy:jar:1.4.5.release
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-resources-plugin is missing. @ line 128, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] cubic                                                              [pom]
+[INFO] cubic-serialization-protobuf                                       [jar]
+[INFO] cubic-agent-core                                                   [jar]
+[INFO] cubic-proxy-common                                                 [jar]
+[INFO] cubic-proxy-websocket                                              [jar]
+[INFO] cubic-proxy                                                        [jar]
+[INFO] cubic-agent                                                        [jar]
+[INFO] 
+[INFO] -------------------------< matrix.cubic:cubic >-------------------------
+[INFO] Building cubic 1.4.5.release                                       [1/7]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ cubic ---
+[INFO] digraph "matrix.cubic:cubic:pom:1.4.5.release" { 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< matrix.cubic:cubic-serialization-protobuf >--------------
+[INFO] Building cubic-serialization-protobuf 1.4.5.release                [2/7]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ cubic-serialization-protobuf ---
+[INFO] digraph "matrix.cubic:cubic-serialization-protobuf:jar:1.4.5.release" { 
+[INFO] 	"matrix.cubic:cubic-serialization-protobuf:jar:1.4.5.release" -> "io.grpc:grpc-netty:jar:1.32.1:compile" ; 
+[INFO] 	"matrix.cubic:cubic-serialization-protobuf:jar:1.4.5.release" -> "io.grpc:grpc-protobuf:jar:1.32.1:compile" ; 
+[INFO] 	"matrix.cubic:cubic-serialization-protobuf:jar:1.4.5.release" -> "io.grpc:grpc-stub:jar:1.32.1:compile" ; 
+[INFO] 	"matrix.cubic:cubic-serialization-protobuf:jar:1.4.5.release" -> "com.googlecode.protobuf-java-format:protobuf-java-format:jar:1.4:compile" ; 
+[INFO] 	"io.grpc:grpc-netty:jar:1.32.1:compile" -> "io.grpc:grpc-core:jar:1.32.1:compile (version selected from constraint [1.32.1,1.32.1])" ; 
+[INFO] 	"io.grpc:grpc-netty:jar:1.32.1:compile" -> "io.netty:netty-codec-http2:jar:4.1.53.Final:compile" ; 
+[INFO] 	"io.grpc:grpc-netty:jar:1.32.1:compile" -> "io.netty:netty-handler-proxy:jar:4.1.53.Final:runtime" ; 
+[INFO] 	"io.grpc:grpc-netty:jar:1.32.1:compile" -> "com.google.guava:guava:jar:20.0:compile" ; 
+[INFO] 	"io.grpc:grpc-netty:jar:1.32.1:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.3.4:compile" ; 
+[INFO] 	"io.grpc:grpc-netty:jar:1.32.1:compile" -> "io.perfmark:perfmark-api:jar:0.19.0:runtime" ; 
+[INFO] 	"io.grpc:grpc-netty:jar:1.32.1:compile" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.18:runtime" ; 
+[INFO] 	"io.grpc:grpc-netty:jar:1.32.1:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.32.1:compile (version selected from constraint [1.32.1,1.32.1])" -> "com.google.code.gson:gson:jar:2.8.6:runtime" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.32.1:compile (version selected from constraint [1.32.1,1.32.1])" -> "com.google.android:annotations:jar:4.1.1.4:runtime" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.53.Final:compile" -> "io.netty:netty-common:jar:4.1.53.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.53.Final:compile" -> "io.netty:netty-buffer:jar:4.1.53.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.53.Final:compile" -> "io.netty:netty-transport:jar:4.1.53.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.53.Final:compile" -> "io.netty:netty-codec:jar:4.1.53.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.53.Final:compile" -> "io.netty:netty-handler:jar:4.1.53.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.53.Final:compile" -> "io.netty:netty-codec-http:jar:4.1.53.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.53.Final:compile" -> "io.netty:netty-resolver:jar:4.1.53.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler-proxy:jar:4.1.53.Final:runtime" -> "io.netty:netty-codec-socks:jar:4.1.53.Final:runtime" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.32.1:compile" -> "io.grpc:grpc-api:jar:1.32.1:compile" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.32.1:compile" -> "com.google.protobuf:protobuf-java:jar:3.12.0:compile" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.32.1:compile" -> "com.google.api.grpc:proto-google-common-protos:jar:1.17.0:compile" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.32.1:compile" -> "io.grpc:grpc-protobuf-lite:jar:1.32.1:compile" ; 
+[INFO] 	"io.grpc:grpc-api:jar:1.32.1:compile" -> "io.grpc:grpc-context:jar:1.32.1:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< matrix.cubic:cubic-agent-core >--------------------
+[INFO] Building cubic-agent-core 1.4.5.release                            [3/7]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/matrix/cubic/cubic-serialization-protobuf/1.4.5.release/cubic-serialization-protobuf-1.4.5.release.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for cubic 1.4.5.release:
+[INFO] 
+[INFO] cubic .............................................. SUCCESS [  4.807 s]
+[INFO] cubic-serialization-protobuf ....................... SUCCESS [  0.755 s]
+[INFO] cubic-agent-core ................................... FAILURE [  3.646 s]
+[INFO] cubic-proxy-common ................................. SKIPPED
+[INFO] cubic-proxy-websocket .............................. SKIPPED
+[INFO] cubic-proxy ........................................ SKIPPED
+[INFO] cubic-agent ........................................ SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  13.573 s
+[INFO] Finished at: 2023-12-28T09:02:41+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project cubic-agent-core: Could not resolve dependencies for project matrix.cubic:cubic-agent-core:jar:1.4.5.release: The following artifacts could not be resolved: matrix.cubic:cubic-serialization-protobuf:jar:1.4.5.release, com.sun:tools:jar:1.8: Could not find artifact matrix.cubic:cubic-serialization-protobuf:jar:1.4.5.release in central (https://repo.maven.apache.org/maven2) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :cubic-agent-core

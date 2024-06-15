@@ -1,0 +1,226 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] easy-retry                                                         [pom]
+[INFO] easy-retry-common                                                  [jar]
+[INFO] easy-retry-core                                                    [jar]
+[INFO] easy-retry-extensions                                              [pom]
+[INFO] easy-retry-spring-extension                                        [jar]
+[INFO] easy-retry-mybatis-extension                                       [jar]
+[INFO] easy-retry-guava-extension                                         [jar]
+[INFO] easy-retry-starters                                                [pom]
+[INFO] easy-retry-starter-common                                          [jar]
+[INFO] easy-retry-memory-starter                                          [jar]
+[INFO] easy-retry-mybatis-starter                                         [jar]
+[INFO] 
+[INFO] -----------------------< com.alibaba:easy-retry >-----------------------
+[INFO] Building easy-retry 1.0.0                                         [1/11]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ easy-retry ---
+[INFO] digraph "com.alibaba:easy-retry:pom:1.0.0" { 
+[INFO] 	"com.alibaba:easy-retry:pom:1.0.0" -> "org.junit.jupiter:junit-jupiter:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.7.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.7.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< com.alibaba:easy-retry-common >--------------------
+[INFO] Building easy-retry-common 1.0.0                                  [2/11]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ easy-retry-common ---
+[INFO] digraph "com.alibaba:easy-retry-common:jar:1.0.0" { 
+[INFO] 	"com.alibaba:easy-retry-common:jar:1.0.0" -> "org.projectlombok:lombok:jar:1.18.18:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-common:jar:1.0.0" -> "org.apache.commons:commons-lang3:jar:3.11:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-common:jar:1.0.0" -> "com.google.guava:guava:jar:16.0:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-common:jar:1.0.0" -> "org.slf4j:slf4j-api:jar:1.7.30:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-common:jar:1.0.0" -> "org.junit.jupiter:junit-jupiter:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.7.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.7.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< com.alibaba:easy-retry-core >---------------------
+[INFO] Building easy-retry-core 1.0.0                                    [3/11]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ easy-retry-core ---
+[INFO] digraph "com.alibaba:easy-retry-core:jar:1.0.0" { 
+[INFO] 	"com.alibaba:easy-retry-core:jar:1.0.0" -> "com.alibaba:easy-retry-common:jar:1.0.0:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-core:jar:1.0.0" -> "org.apache.commons:commons-lang3:jar:3.11:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-core:jar:1.0.0" -> "com.google.guava:guava:jar:16.0:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-core:jar:1.0.0" -> "com.caucho:hessian:jar:4.0.60:provided" ; 
+[INFO] 	"com.alibaba:easy-retry-core:jar:1.0.0" -> "org.slf4j:slf4j-api:jar:1.7.30:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-core:jar:1.0.0" -> "com.alibaba:fastjson:jar:1.2.73:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-core:jar:1.0.0" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-core:jar:1.0.0" -> "org.junit.jupiter:junit-jupiter:jar:5.7.1:test" ; 
+[INFO] 	"com.alibaba:easy-retry-common:jar:1.0.0:compile" -> "org.projectlombok:lombok:jar:1.18.18:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.7.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.7.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< com.alibaba:easy-retry-extensions >------------------
+[INFO] Building easy-retry-extensions 1.0.0                              [4/11]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ easy-retry-extensions ---
+[INFO] digraph "com.alibaba:easy-retry-extensions:pom:1.0.0" { 
+[INFO] 	"com.alibaba:easy-retry-extensions:pom:1.0.0" -> "org.junit.jupiter:junit-jupiter:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.7.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.7.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< com.alibaba:easy-retry-spring-extension >---------------
+[INFO] Building easy-retry-spring-extension 1.0.0                        [5/11]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ easy-retry-spring-extension ---
+[INFO] digraph "com.alibaba:easy-retry-spring-extension:jar:1.0.0" { 
+[INFO] 	"com.alibaba:easy-retry-spring-extension:jar:1.0.0" -> "com.alibaba:easy-retry-common:jar:1.0.0:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-spring-extension:jar:1.0.0" -> "com.alibaba:easy-retry-core:jar:1.0.0:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-spring-extension:jar:1.0.0" -> "com.google.guava:guava:jar:16.0:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-spring-extension:jar:1.0.0" -> "org.springframework:spring-context:jar:5.1.12.RELEASE:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-spring-extension:jar:1.0.0" -> "org.springframework:spring-core:jar:5.1.12.RELEASE:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-spring-extension:jar:1.0.0" -> "org.aspectj:aspectjweaver:jar:1.9.5:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-spring-extension:jar:1.0.0" -> "org.junit.jupiter:junit-jupiter:jar:5.7.1:test" ; 
+[INFO] 	"com.alibaba:easy-retry-common:jar:1.0.0:compile" -> "org.projectlombok:lombok:jar:1.18.18:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-common:jar:1.0.0:compile" -> "org.apache.commons:commons-lang3:jar:3.11:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-common:jar:1.0.0:compile" -> "org.slf4j:slf4j-api:jar:1.7.30:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-core:jar:1.0.0:compile" -> "com.alibaba:fastjson:jar:1.2.73:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-core:jar:1.0.0:compile" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.1.12.RELEASE:compile" -> "org.springframework:spring-aop:jar:5.1.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.1.12.RELEASE:compile" -> "org.springframework:spring-beans:jar:5.1.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.1.12.RELEASE:compile" -> "org.springframework:spring-expression:jar:5.1.12.RELEASE:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.1.12.RELEASE:compile" -> "org.springframework:spring-jcl:jar:5.1.12.RELEASE:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.7.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.7.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< com.alibaba:easy-retry-mybatis-extension >--------------
+[INFO] Building easy-retry-mybatis-extension 1.0.0                       [6/11]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ easy-retry-mybatis-extension ---
+[INFO] digraph "com.alibaba:easy-retry-mybatis-extension:jar:1.0.0" { 
+[INFO] 	"com.alibaba:easy-retry-mybatis-extension:jar:1.0.0" -> "com.alibaba:easy-retry-common:jar:1.0.0:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-mybatis-extension:jar:1.0.0" -> "org.mybatis:mybatis:jar:3.5.6:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-mybatis-extension:jar:1.0.0" -> "com.google.guava:guava:jar:16.0:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-mybatis-extension:jar:1.0.0" -> "com.alibaba:fastjson:jar:1.2.73:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-mybatis-extension:jar:1.0.0" -> "com.h2database:h2:jar:1.4.200:test" ; 
+[INFO] 	"com.alibaba:easy-retry-mybatis-extension:jar:1.0.0" -> "com.zaxxer:HikariCP:jar:4.0.3:test" ; 
+[INFO] 	"com.alibaba:easy-retry-mybatis-extension:jar:1.0.0" -> "org.slf4j:slf4j-api:jar:1.7.30:test" ; 
+[INFO] 	"com.alibaba:easy-retry-mybatis-extension:jar:1.0.0" -> "ch.qos.logback:logback-classic:jar:1.2.3:test" ; 
+[INFO] 	"com.alibaba:easy-retry-mybatis-extension:jar:1.0.0" -> "org.junit.jupiter:junit-jupiter:jar:5.7.1:test" ; 
+[INFO] 	"com.alibaba:easy-retry-common:jar:1.0.0:compile" -> "org.projectlombok:lombok:jar:1.18.18:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-common:jar:1.0.0:compile" -> "org.apache.commons:commons-lang3:jar:3.11:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "ch.qos.logback:logback-core:jar:1.2.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.7.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.7.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< com.alibaba:easy-retry-guava-extension >---------------
+[INFO] Building easy-retry-guava-extension 1.0.0                         [7/11]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ easy-retry-guava-extension ---
+[INFO] digraph "com.alibaba:easy-retry-guava-extension:jar:1.0.0" { 
+[INFO] 	"com.alibaba:easy-retry-guava-extension:jar:1.0.0" -> "com.alibaba:easy-retry-common:jar:1.0.0:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-guava-extension:jar:1.0.0" -> "com.alibaba:easy-retry-core:jar:1.0.0:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-guava-extension:jar:1.0.0" -> "com.google.guava:guava:jar:16.0:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-guava-extension:jar:1.0.0" -> "com.github.rholder:guava-retrying:jar:2.0.0:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-guava-extension:jar:1.0.0" -> "org.junit.jupiter:junit-jupiter:jar:5.7.1:test" ; 
+[INFO] 	"com.alibaba:easy-retry-common:jar:1.0.0:compile" -> "org.projectlombok:lombok:jar:1.18.18:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-common:jar:1.0.0:compile" -> "org.apache.commons:commons-lang3:jar:3.11:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-common:jar:1.0.0:compile" -> "org.slf4j:slf4j-api:jar:1.7.30:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-core:jar:1.0.0:compile" -> "com.alibaba:fastjson:jar:1.2.73:compile" ; 
+[INFO] 	"com.alibaba:easy-retry-core:jar:1.0.0:compile" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"com.github.rholder:guava-retrying:jar:2.0.0:compile" -> "com.google.code.findbugs:jsr305:jar:2.0.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.7.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.7.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< com.alibaba:easy-retry-starters >-------------------
+[INFO] Building easy-retry-starters 1.0.0                                [8/11]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ easy-retry-starters ---
+[INFO] digraph "com.alibaba:easy-retry-starters:pom:1.0.0" { 
+[INFO] 	"com.alibaba:easy-retry-starters:pom:1.0.0" -> "org.junit.jupiter:junit-jupiter:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.7.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.7.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< com.alibaba:easy-retry-starter-common >----------------
+[INFO] Building easy-retry-starter-common 1.0.0                          [9/11]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/alibaba/easy-retry-guava-extension/1.0.0/easy-retry-guava-extension-1.0.0.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for easy-retry 1.0.0:
+[INFO] 
+[INFO] easy-retry ......................................... SUCCESS [  4.195 s]
+[INFO] easy-retry-common .................................. SUCCESS [  0.186 s]
+[INFO] easy-retry-core .................................... SUCCESS [  0.186 s]
+[INFO] easy-retry-extensions .............................. SUCCESS [  0.071 s]
+[INFO] easy-retry-spring-extension ........................ SUCCESS [  0.221 s]
+[INFO] easy-retry-mybatis-extension ....................... SUCCESS [  0.218 s]
+[INFO] easy-retry-guava-extension ......................... SUCCESS [  0.275 s]
+[INFO] easy-retry-starters ................................ SUCCESS [  0.055 s]
+[INFO] easy-retry-starter-common .......................... FAILURE [  3.499 s]
+[INFO] easy-retry-memory-starter .......................... SKIPPED
+[INFO] easy-retry-mybatis-starter ......................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.596 s
+[INFO] Finished at: 2023-12-28T09:02:24+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project easy-retry-starter-common: Could not resolve dependencies for project com.alibaba:easy-retry-starter-common:jar:1.0.0: Could not find artifact com.alibaba:easy-retry-guava-extension:jar:1.0.0 in central (https://repo.maven.apache.org/maven2) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :easy-retry-starter-common

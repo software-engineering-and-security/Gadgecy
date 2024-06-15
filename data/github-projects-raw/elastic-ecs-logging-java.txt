@@ -1,0 +1,97 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] co.elastic.logging:ecs-logging-java-parent                         [pom]
+[INFO] ecs-logging-core                                                   [jar]
+[INFO] co.elastic.logging:log4j-ecs-layout                                [jar]
+[INFO] co.elastic.logging:log4j2-ecs-layout                               [jar]
+[INFO] co.elastic.logging:logback-ecs-encoder                             [jar]
+[INFO] co.elastic.logging:jul-ecs-formatter                               [jar]
+[INFO] co.elastic.logging:jboss-logmanager-ecs-formatter                  [jar]
+[INFO] log4j2-legacy-tests                                                [jar]
+[INFO] log4j-legacy-tests                                                 [jar]
+[INFO] logback-legacy-tests                                               [jar]
+[INFO] 
+[INFO] -------------< co.elastic.logging:ecs-logging-java-parent >-------------
+[INFO] Building co.elastic.logging:ecs-logging-java-parent 1.5.1-SNAPSHOT [1/10]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/maven-metadata.xml
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/maven-metadata.xml (6.5 kB at 6.5 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.16.1/jackson-databind-2.16.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.16.1/jackson-databind-2.16.1.pom (21 kB at 152 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-base/2.16.1/jackson-base-2.16.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-base/2.16.1/jackson-base-2.16.1.pom (11 kB at 218 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-bom/2.16.1/jackson-bom-2.16.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-bom/2.16.1/jackson-bom-2.16.1.pom (18 kB at 222 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.16.1/jackson-annotations-2.16.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.16.1/jackson-annotations-2.16.1.pom (7.1 kB at 105 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.16.1/jackson-core-2.16.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.16.1/jackson-core-2.16.1.pom (9.9 kB at 199 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.16.1/jackson-databind-2.16.1.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.16.1/jackson-annotations-2.16.1.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.16.1/jackson-core-2.16.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.16.1/jackson-annotations-2.16.1.jar (78 kB at 402 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.16.1/jackson-core-2.16.1.jar (578 kB at 1.9 MB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.16.1/jackson-databind-2.16.1.jar (1.6 MB at 4.3 MB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ ecs-logging-java-parent ---
+[INFO] digraph "co.elastic.logging:ecs-logging-java-parent:pom:1.5.1-SNAPSHOT" { 
+[INFO] 	"co.elastic.logging:ecs-logging-java-parent:pom:1.5.1-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.5.1:test" ; 
+[INFO] 	"co.elastic.logging:ecs-logging-java-parent:pom:1.5.1-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.12.2:test" ; 
+[INFO] 	"co.elastic.logging:ecs-logging-java-parent:pom:1.5.1-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.5.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.5.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.5.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.5.1:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.1:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.1:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.1:test" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< co.elastic.logging:ecs-logging-core >-----------------
+[INFO] Building ecs-logging-core 1.5.1-SNAPSHOT                          [2/10]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ ecs-logging-core ---
+[INFO] digraph "co.elastic.logging:ecs-logging-core:jar:1.5.1-SNAPSHOT" { 
+[INFO] 	"co.elastic.logging:ecs-logging-core:jar:1.5.1-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.5.1:test" ; 
+[INFO] 	"co.elastic.logging:ecs-logging-core:jar:1.5.1-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.12.2:test" ; 
+[INFO] 	"co.elastic.logging:ecs-logging-core:jar:1.5.1-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.5.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.5.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.5.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.5.1:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.1:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.1:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.1:test" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< co.elastic.logging:log4j-ecs-layout >-----------------
+[INFO] Building co.elastic.logging:log4j-ecs-layout 1.5.1-SNAPSHOT       [3/10]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for co.elastic.logging:ecs-logging-java-parent 1.5.1-SNAPSHOT:
+[INFO] 
+[INFO] co.elastic.logging:ecs-logging-java-parent ......... SUCCESS [  8.168 s]
+[INFO] ecs-logging-core ................................... SUCCESS [  0.090 s]
+[INFO] co.elastic.logging:log4j-ecs-layout ................ FAILURE [  0.059 s]
+[INFO] co.elastic.logging:log4j2-ecs-layout ............... SKIPPED
+[INFO] co.elastic.logging:logback-ecs-encoder ............. SKIPPED
+[INFO] co.elastic.logging:jul-ecs-formatter ............... SKIPPED
+[INFO] co.elastic.logging:jboss-logmanager-ecs-formatter .. SKIPPED
+[INFO] log4j2-legacy-tests ................................ SKIPPED
+[INFO] log4j-legacy-tests ................................. SKIPPED
+[INFO] logback-legacy-tests ............................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.246 s
+[INFO] Finished at: 2023-12-28T09:02:46+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project log4j-ecs-layout: Could not resolve dependencies for project co.elastic.logging:log4j-ecs-layout:jar:1.5.1-SNAPSHOT: The following artifacts could not be resolved: co.elastic.logging:ecs-logging-core:jar:1.5.1-SNAPSHOT, co.elastic.logging:ecs-logging-core:jar:tests:1.5.1-SNAPSHOT: Could not find artifact co.elastic.logging:ecs-logging-core:jar:1.5.1-SNAPSHOT -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :log4j-ecs-layout

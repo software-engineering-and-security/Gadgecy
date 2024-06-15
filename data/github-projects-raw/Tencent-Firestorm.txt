@@ -1,0 +1,135 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Detecting the operating system and CPU architecture
+[INFO] ------------------------------------------------------------------------
+[INFO] os.detected.name: linux
+[INFO] os.detected.arch: x86_64
+[INFO] os.detected.version: 5.10
+[INFO] os.detected.version.major: 5
+[INFO] os.detected.version.minor: 10
+[INFO] os.detected.release: debian
+[INFO] os.detected.release.version: 11
+[INFO] os.detected.release.like.debian: true
+[INFO] os.detected.classifier: linux-x86_64
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Remote Shuffle Service Project Parent POM                          [pom]
+[INFO] Remote Shuffle Service Protocols                                   [jar]
+[INFO] Remote Shuffle Service Common                                      [jar]
+[INFO] Coordinator                                                        [jar]
+[INFO] rss-internal-client                                                [jar]
+[INFO] Shuffle Storage                                                    [jar]
+[INFO] Shuffle Server                                                     [jar]
+[INFO] rss-client                                                         [jar]
+[INFO] rss-integration-common-test                                        [jar]
+[INFO] 
+[INFO] ----------------------< com.tencent.rss:rss-main >----------------------
+[INFO] Building Remote Shuffle Service Project Parent POM 0.6.0-snapshot  [1/9]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:tree (default-cli) @ rss-main ---
+[INFO] digraph "com.tencent.rss:rss-main:pom:0.6.0-snapshot" { 
+[INFO] 	"com.tencent.rss:rss-main:pom:0.6.0-snapshot" -> "org.slf4j:slf4j-log4j12:jar:1.7.25:compile" ; 
+[INFO] 	"com.tencent.rss:rss-main:pom:0.6.0-snapshot" -> "com.google.errorprone:error_prone_annotations:jar:2.3.4:compile" ; 
+[INFO] 	"com.tencent.rss:rss-main:pom:0.6.0-snapshot" -> "org.junit.jupiter:junit-jupiter:jar:5.8.2:test" ; 
+[INFO] 	"com.tencent.rss:rss-main:pom:0.6.0-snapshot" -> "org.junit.platform:junit-platform-launcher:jar:1.8.2:test" ; 
+[INFO] 	"com.tencent.rss:rss-main:pom:0.6.0-snapshot" -> "uk.org.webcompere:system-stubs-jupiter:jar:2.0.1:test" ; 
+[INFO] 	"org.slf4j:slf4j-log4j12:jar:1.7.25:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"org.slf4j:slf4j-log4j12:jar:1.7.25:compile" -> "log4j:log4j:jar:1.2.17:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.8.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-launcher:jar:1.8.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.8.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-launcher:jar:1.8.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"uk.org.webcompere:system-stubs-jupiter:jar:2.0.1:test" -> "uk.org.webcompere:system-stubs-core:jar:2.0.1:test" ; 
+[INFO] 	"uk.org.webcompere:system-stubs-jupiter:jar:2.0.1:test" -> "org.mockito:mockito-inline:jar:3.12.4:test" ; 
+[INFO] 	"org.mockito:mockito-inline:jar:3.12.4:test" -> "org.mockito:mockito-core:jar:3.12.4:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.12.4:test" -> "net.bytebuddy:byte-buddy:jar:1.11.13:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.12.4:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.11.13:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.12.4:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< com.tencent.rss:rss-proto >----------------------
+[INFO] Building Remote Shuffle Service Protocols 0.6.0-snapshot           [2/9]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:tree (default-cli) @ rss-proto ---
+[INFO] digraph "com.tencent.rss:rss-proto:jar:0.6.0-snapshot" { 
+[INFO] 	"com.tencent.rss:rss-proto:jar:0.6.0-snapshot" -> "com.google.protobuf:protobuf-java-util:jar:3.12.0:compile" ; 
+[INFO] 	"com.tencent.rss:rss-proto:jar:0.6.0-snapshot" -> "io.grpc:grpc-netty-shaded:jar:1.33.0:runtime" ; 
+[INFO] 	"com.tencent.rss:rss-proto:jar:0.6.0-snapshot" -> "io.grpc:grpc-protobuf:jar:1.33.0:compile" ; 
+[INFO] 	"com.tencent.rss:rss-proto:jar:0.6.0-snapshot" -> "io.grpc:grpc-stub:jar:1.33.0:compile" ; 
+[INFO] 	"com.tencent.rss:rss-proto:jar:0.6.0-snapshot" -> "org.slf4j:slf4j-log4j12:jar:1.7.25:compile" ; 
+[INFO] 	"com.tencent.rss:rss-proto:jar:0.6.0-snapshot" -> "com.google.errorprone:error_prone_annotations:jar:2.3.4:compile" ; 
+[INFO] 	"com.tencent.rss:rss-proto:jar:0.6.0-snapshot" -> "org.junit.jupiter:junit-jupiter:jar:5.8.2:test" ; 
+[INFO] 	"com.tencent.rss:rss-proto:jar:0.6.0-snapshot" -> "org.junit.platform:junit-platform-launcher:jar:1.8.2:test" ; 
+[INFO] 	"com.tencent.rss:rss-proto:jar:0.6.0-snapshot" -> "uk.org.webcompere:system-stubs-jupiter:jar:2.0.1:test" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.12.0:compile" -> "com.google.protobuf:protobuf-java:jar:3.12.0:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.12.0:compile" -> "com.google.guava:guava:jar:30.0-jre:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.12.0:compile" -> "com.google.code.gson:gson:jar:2.8.6:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:compile" -> "org.checkerframework:checker-qual:jar:3.5.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"io.grpc:grpc-netty-shaded:jar:1.33.0:runtime" -> "io.grpc:grpc-core:jar:1.33.0:runtime (version selected from constraint [1.33.0,1.33.0])" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.33.0:runtime (version selected from constraint [1.33.0,1.33.0])" -> "com.google.android:annotations:jar:4.1.1.4:runtime" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.33.0:runtime (version selected from constraint [1.33.0,1.33.0])" -> "io.perfmark:perfmark-api:jar:0.19.0:runtime" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.33.0:compile" -> "io.grpc:grpc-api:jar:1.33.0:compile" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.33.0:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.33.0:compile" -> "com.google.api.grpc:proto-google-common-protos:jar:1.17.0:compile" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.33.0:compile" -> "io.grpc:grpc-protobuf-lite:jar:1.33.0:compile" ; 
+[INFO] 	"io.grpc:grpc-protobuf:jar:1.33.0:compile" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.18:runtime" ; 
+[INFO] 	"io.grpc:grpc-api:jar:1.33.0:compile" -> "io.grpc:grpc-context:jar:1.33.0:compile" ; 
+[INFO] 	"org.slf4j:slf4j-log4j12:jar:1.7.25:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"org.slf4j:slf4j-log4j12:jar:1.7.25:compile" -> "log4j:log4j:jar:1.2.17:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.8.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-launcher:jar:1.8.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.8.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-launcher:jar:1.8.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"uk.org.webcompere:system-stubs-jupiter:jar:2.0.1:test" -> "uk.org.webcompere:system-stubs-core:jar:2.0.1:test" ; 
+[INFO] 	"uk.org.webcompere:system-stubs-jupiter:jar:2.0.1:test" -> "org.mockito:mockito-inline:jar:3.12.4:test" ; 
+[INFO] 	"org.mockito:mockito-inline:jar:3.12.4:test" -> "org.mockito:mockito-core:jar:3.12.4:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.12.4:test" -> "net.bytebuddy:byte-buddy:jar:1.11.13:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.12.4:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.11.13:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.12.4:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< com.tencent.rss:rss-common >---------------------
+[INFO] Building Remote Shuffle Service Common 0.6.0-snapshot              [3/9]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from central: https://repo1.maven.org/maven2/com/tencent/rss/rss-proto/0.6.0-snapshot/rss-proto-0.6.0-snapshot.jar
+[INFO] Downloading from apache-repo: https://repository.apache.org/content/repositories/releases/com/tencent/rss/rss-proto/0.6.0-snapshot/rss-proto-0.6.0-snapshot.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Remote Shuffle Service Project Parent POM 0.6.0-snapshot:
+[INFO] 
+[INFO] Remote Shuffle Service Project Parent POM .......... SUCCESS [  2.634 s]
+[INFO] Remote Shuffle Service Protocols ................... SUCCESS [  0.810 s]
+[INFO] Remote Shuffle Service Common ...................... FAILURE [  1.434 s]
+[INFO] Coordinator ........................................ SKIPPED
+[INFO] rss-internal-client ................................ SKIPPED
+[INFO] Shuffle Storage .................................... SKIPPED
+[INFO] Shuffle Server ..................................... SKIPPED
+[INFO] rss-client ......................................... SKIPPED
+[INFO] rss-integration-common-test ........................ SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.489 s
+[INFO] Finished at: 2023-12-28T09:03:28+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project rss-common: Could not resolve dependencies for project com.tencent.rss:rss-common:jar:0.6.0-snapshot: Could not find artifact com.tencent.rss:rss-proto:jar:0.6.0-snapshot in central (https://repo1.maven.org/maven2) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :rss-common

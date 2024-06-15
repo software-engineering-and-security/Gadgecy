@@ -1,0 +1,368 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Hibernate OGM Bill of Materials                                    [pom]
+[INFO] Hibernate OGM Aggregator                                           [pom]
+[INFO] Hibernate OGM Core                                                 [jar]
+[INFO] Hibernate OGM for MongoDB                                          [jar]
+[INFO] Hibernate OGM for Neo4j                                            [jar]
+[INFO] JipiJapa integration for Hibernate OGM                             [jar]
+[INFO] Hibernate OGM Performance tests                                    [jar]
+[INFO] 
+[INFO] ----------------< org.hibernate.ogm:hibernate-ogm-bom >-----------------
+[INFO] Building Hibernate OGM Bill of Materials 5.4.2-SNAPSHOT            [1/7]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ hibernate-ogm-bom ---
+[INFO] digraph "org.hibernate.ogm:hibernate-ogm-bom:pom:5.4.2-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.hibernate.ogm:hibernate-ogm-parent >---------------
+[INFO] Building Hibernate OGM Aggregator 5.4.2-SNAPSHOT                   [2/7]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.0.2:tree (default-cli) @ hibernate-ogm-parent ---
+[INFO] digraph "org.hibernate.ogm:hibernate-ogm-parent:pom:5.4.2-SNAPSHOT" { 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-parent:pom:5.4.2-SNAPSHOT" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< org.hibernate.ogm:hibernate-ogm-core >----------------
+[INFO] Building Hibernate OGM Core 5.4.2-SNAPSHOT                         [3/7]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.0.2:tree (default-cli) @ hibernate-ogm-core ---
+[INFO] digraph "org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT" { 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT" -> "org.hibernate:hibernate-core:jar:5.3.6.Final:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT" -> "org.hibernate.common:hibernate-commons-annotations:jar:5.0.3.Final:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT" -> "org.hibernate.hql:hibernate-hql-parser:jar:1.5.0.Final:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT" -> "org.hibernate.hql:hibernate-hql-lucene:jar:1.5.0.Final:compile (optional) " ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT" -> "org.hibernate:hibernate-search-orm:jar:5.10.4.Final:compile (optional) " ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT" -> "org.hibernate:hibernate-search-engine:jar:5.10.4.Final:compile (optional) " ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT" -> "org.jboss.spec.javax.transaction:jboss-transaction-api_1.2_spec:jar:1.0.1.Final:provided (optional) " ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT" -> "com.fasterxml:classmate:jar:1.3.3:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT" -> "org.jboss.logging:jboss-logging-processor:jar:2.1.0.Final:provided" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT" -> "org.jboss.narayana.jta:narayana-jta:jar:5.5.30.Final:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT" -> "org.jboss:jboss-transaction-spi:jar:7.6.0.Final:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT" -> "org.easytesting:fest-assert:jar:1.4:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT" -> "org.jboss.shrinkwrap:shrinkwrap-impl-base:jar:1.2.2:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT" -> "log4j:log4j:jar:1.2.16:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT" -> "com.google.guava:guava:jar:18.0:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT" -> "org.jboss.byteman:byteman:jar:4.0.2:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT" -> "org.jboss.byteman:byteman-bmunit:jar:4.0.2:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT" -> "org.jboss.byteman:byteman-install:jar:4.0.2:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "org.jboss.logging:jboss-logging:jar:3.3.2.Final:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "javax.persistence:javax.persistence-api:jar:2.2:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "org.javassist:javassist:jar:3.23.1-GA:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "net.bytebuddy:byte-buddy:jar:1.8.17:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "antlr:antlr:jar:2.7.7:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "org.jboss:jandex:jar:2.0.5.Final:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "javax.activation:javax.activation-api:jar:1.2.0:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "dom4j:dom4j:jar:1.6.1:compile" ; 
+[INFO] 	"org.hibernate.hql:hibernate-hql-parser:jar:1.5.0.Final:compile" -> "org.antlr:antlr-runtime:jar:3.4:compile" ; 
+[INFO] 	"org.antlr:antlr-runtime:jar:3.4:compile" -> "org.antlr:stringtemplate:jar:3.2.1:compile" ; 
+[INFO] 	"org.hibernate:hibernate-search-engine:jar:5.10.4.Final:compile (optional) " -> "org.apache.lucene:lucene-core:jar:5.5.5:compile (optional) " ; 
+[INFO] 	"org.hibernate:hibernate-search-engine:jar:5.10.4.Final:compile (optional) " -> "org.apache.lucene:lucene-misc:jar:5.5.5:compile (optional) " ; 
+[INFO] 	"org.hibernate:hibernate-search-engine:jar:5.10.4.Final:compile (optional) " -> "org.apache.lucene:lucene-analyzers-common:jar:5.5.5:compile (optional) " ; 
+[INFO] 	"org.hibernate:hibernate-search-engine:jar:5.10.4.Final:compile (optional) " -> "org.apache.lucene:lucene-facet:jar:5.5.5:compile (optional) " ; 
+[INFO] 	"org.hibernate:hibernate-search-engine:jar:5.10.4.Final:compile (optional) " -> "org.apache.lucene:lucene-queryparser:jar:5.5.5:compile (optional) " ; 
+[INFO] 	"org.apache.lucene:lucene-facet:jar:5.5.5:compile (optional) " -> "org.apache.lucene:lucene-queries:jar:5.5.5:compile (optional) " ; 
+[INFO] 	"org.jboss.logging:jboss-logging-processor:jar:2.1.0.Final:provided" -> "org.jboss.logging:jboss-logging-annotations:jar:2.1.0.Final:provided" ; 
+[INFO] 	"org.jboss.logging:jboss-logging-processor:jar:2.1.0.Final:provided" -> "org.jboss.jdeparser:jdeparser:jar:2.0.2.Final:provided" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.jboss:jboss-transaction-spi:jar:7.6.0.Final:test" -> "org.jboss.spec.javax.resource:jboss-connector-api_1.7_spec:jar:1.0.0.Final:test" ; 
+[INFO] 	"org.easytesting:fest-assert:jar:1.4:test" -> "org.easytesting:fest-util:jar:1.1.6:test" ; 
+[INFO] 	"org.jboss.shrinkwrap:shrinkwrap-impl-base:jar:1.2.2:test" -> "org.jboss.shrinkwrap:shrinkwrap-api:jar:1.2.2:test" ; 
+[INFO] 	"org.jboss.shrinkwrap:shrinkwrap-impl-base:jar:1.2.2:test" -> "org.jboss.shrinkwrap:shrinkwrap-spi:jar:1.2.2:test" ; 
+[INFO] 	"org.jboss.byteman:byteman-bmunit:jar:4.0.2:test" -> "org.jboss.byteman:byteman-submit:jar:4.0.2:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< org.hibernate.ogm:hibernate-ogm-mongodb >---------------
+[INFO] Building Hibernate OGM for MongoDB 5.4.2-SNAPSHOT                  [4/7]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.0.2:tree (default-cli) @ hibernate-ogm-mongodb ---
+[INFO] digraph "org.hibernate.ogm:hibernate-ogm-mongodb:jar:5.4.2-SNAPSHOT" { 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-mongodb:jar:5.4.2-SNAPSHOT" -> "org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-mongodb:jar:5.4.2-SNAPSHOT" -> "org.hibernate.common:hibernate-commons-annotations:jar:5.0.3.Final:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-mongodb:jar:5.4.2-SNAPSHOT" -> "org.hibernate.hql:hibernate-hql-parser:jar:1.5.0.Final:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-mongodb:jar:5.4.2-SNAPSHOT" -> "org.mongodb:mongo-java-driver:jar:3.11.2:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-mongodb:jar:5.4.2-SNAPSHOT" -> "org.parboiled:parboiled-java:jar:1.1.8:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-mongodb:jar:5.4.2-SNAPSHOT" -> "org.jboss.logging:jboss-logging-processor:jar:2.1.0.Final:provided" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-mongodb:jar:5.4.2-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-mongodb:jar:5.4.2-SNAPSHOT" -> "org.hibernate:hibernate-search-orm:jar:5.10.4.Final:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-mongodb:jar:5.4.2-SNAPSHOT" -> "org.hibernate.ogm:hibernate-ogm-core:test-jar:tests:5.4.2-SNAPSHOT:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-mongodb:jar:5.4.2-SNAPSHOT" -> "log4j:log4j:jar:1.2.16:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-mongodb:jar:5.4.2-SNAPSHOT" -> "org.easytesting:fest-assert:jar:1.4:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-mongodb:jar:5.4.2-SNAPSHOT" -> "org.jboss.spec.javax.transaction:jboss-transaction-api_1.2_spec:jar:1.0.1.Final:provided" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-mongodb:jar:5.4.2-SNAPSHOT" -> "org.jboss.shrinkwrap:shrinkwrap-impl-base:jar:1.2.2:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-mongodb:jar:5.4.2-SNAPSHOT" -> "org.mockito:mockito-core:jar:1.9.5:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-mongodb:jar:5.4.2-SNAPSHOT" -> "com.google.guava:guava:jar:18.0:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-mongodb:jar:5.4.2-SNAPSHOT" -> "io.takari.junit:takari-cpsuite:jar:1.2.7:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-mongodb:jar:5.4.2-SNAPSHOT" -> "org.skyscreamer:jsonassert:jar:1.2.3:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-mongodb:jar:5.4.2-SNAPSHOT" -> "org.jboss.byteman:byteman:jar:4.0.2:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-mongodb:jar:5.4.2-SNAPSHOT" -> "org.jboss.byteman:byteman-bmunit:jar:4.0.2:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-mongodb:jar:5.4.2-SNAPSHOT" -> "org.jboss.byteman:byteman-install:jar:4.0.2:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-mongodb:jar:5.4.2-SNAPSHOT" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT:compile" -> "org.hibernate:hibernate-core:jar:5.3.6.Final:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT:compile" -> "com.fasterxml:classmate:jar:1.3.3:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "javax.persistence:javax.persistence-api:jar:2.2:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "org.javassist:javassist:jar:3.23.1-GA:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "net.bytebuddy:byte-buddy:jar:1.8.17:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "antlr:antlr:jar:2.7.7:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "org.jboss:jandex:jar:2.0.5.Final:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "javax.activation:javax.activation-api:jar:1.2.0:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "dom4j:dom4j:jar:1.6.1:compile" ; 
+[INFO] 	"org.hibernate.common:hibernate-commons-annotations:jar:5.0.3.Final:compile" -> "org.jboss.logging:jboss-logging:jar:3.3.2.Final:compile" ; 
+[INFO] 	"org.hibernate.hql:hibernate-hql-parser:jar:1.5.0.Final:compile" -> "org.antlr:antlr-runtime:jar:3.4:compile" ; 
+[INFO] 	"org.antlr:antlr-runtime:jar:3.4:compile" -> "org.antlr:stringtemplate:jar:3.2.1:compile" ; 
+[INFO] 	"org.parboiled:parboiled-java:jar:1.1.8:compile" -> "org.parboiled:parboiled-core:jar:1.1.8:compile" ; 
+[INFO] 	"org.parboiled:parboiled-java:jar:1.1.8:compile" -> "org.ow2.asm:asm:jar:6.0:compile" ; 
+[INFO] 	"org.parboiled:parboiled-java:jar:1.1.8:compile" -> "org.ow2.asm:asm-tree:jar:6.0:compile" ; 
+[INFO] 	"org.parboiled:parboiled-java:jar:1.1.8:compile" -> "org.ow2.asm:asm-analysis:jar:6.0:compile" ; 
+[INFO] 	"org.parboiled:parboiled-java:jar:1.1.8:compile" -> "org.ow2.asm:asm-util:jar:6.0:compile" ; 
+[INFO] 	"org.jboss.logging:jboss-logging-processor:jar:2.1.0.Final:provided" -> "org.jboss.logging:jboss-logging-annotations:jar:2.1.0.Final:provided" ; 
+[INFO] 	"org.jboss.logging:jboss-logging-processor:jar:2.1.0.Final:provided" -> "org.jboss.jdeparser:jdeparser:jar:2.0.2.Final:provided" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.hibernate:hibernate-search-orm:jar:5.10.4.Final:test" -> "org.hibernate:hibernate-search-engine:jar:5.10.4.Final:test" ; 
+[INFO] 	"org.hibernate:hibernate-search-engine:jar:5.10.4.Final:test" -> "org.apache.lucene:lucene-core:jar:5.5.5:test" ; 
+[INFO] 	"org.hibernate:hibernate-search-engine:jar:5.10.4.Final:test" -> "org.apache.lucene:lucene-misc:jar:5.5.5:test" ; 
+[INFO] 	"org.hibernate:hibernate-search-engine:jar:5.10.4.Final:test" -> "org.apache.lucene:lucene-analyzers-common:jar:5.5.5:test" ; 
+[INFO] 	"org.hibernate:hibernate-search-engine:jar:5.10.4.Final:test" -> "org.apache.lucene:lucene-facet:jar:5.5.5:test" ; 
+[INFO] 	"org.hibernate:hibernate-search-engine:jar:5.10.4.Final:test" -> "org.apache.lucene:lucene-queryparser:jar:5.5.5:test" ; 
+[INFO] 	"org.apache.lucene:lucene-facet:jar:5.5.5:test" -> "org.apache.lucene:lucene-queries:jar:5.5.5:test" ; 
+[INFO] 	"org.easytesting:fest-assert:jar:1.4:test" -> "org.easytesting:fest-util:jar:1.1.6:test" ; 
+[INFO] 	"org.jboss.shrinkwrap:shrinkwrap-impl-base:jar:1.2.2:test" -> "org.jboss.shrinkwrap:shrinkwrap-api:jar:1.2.2:test" ; 
+[INFO] 	"org.jboss.shrinkwrap:shrinkwrap-impl-base:jar:1.2.2:test" -> "org.jboss.shrinkwrap:shrinkwrap-spi:jar:1.2.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:1.9.5:test" -> "org.objenesis:objenesis:jar:1.0:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.2.3:test" -> "org.json:json:jar:20090211:test" ; 
+[INFO] 	"org.jboss.byteman:byteman-bmunit:jar:4.0.2:test" -> "org.jboss.byteman:byteman-submit:jar:4.0.2:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.hibernate.ogm:hibernate-ogm-neo4j >----------------
+[INFO] Building Hibernate OGM for Neo4j 5.4.2-SNAPSHOT                    [5/7]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.0.2:tree (default-cli) @ hibernate-ogm-neo4j ---
+[INFO] digraph "org.hibernate.ogm:hibernate-ogm-neo4j:jar:5.4.2-SNAPSHOT" { 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-neo4j:jar:5.4.2-SNAPSHOT" -> "org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-neo4j:jar:5.4.2-SNAPSHOT" -> "org.jboss.logging:jboss-logging-processor:jar:2.1.0.Final:provided" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-neo4j:jar:5.4.2-SNAPSHOT" -> "org.neo4j:neo4j:jar:3.4.11:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-neo4j:jar:5.4.2-SNAPSHOT" -> "org.apache.commons:commons-lang3:jar:3.5:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-neo4j:jar:5.4.2-SNAPSHOT" -> "org.parboiled:parboiled-scala_2.11:jar:1.1.8:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-neo4j:jar:5.4.2-SNAPSHOT" -> "org.neo4j.driver:neo4j-java-driver:jar:1.7.2:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-neo4j:jar:5.4.2-SNAPSHOT" -> "org.hibernate:hibernate-search-orm:jar:5.10.4.Final:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-neo4j:jar:5.4.2-SNAPSHOT" -> "org.jboss.resteasy:resteasy-client:jar:3.0.24.Final:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-neo4j:jar:5.4.2-SNAPSHOT" -> "org.jboss.resteasy:resteasy-jaxrs:jar:3.0.24.Final:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-neo4j:jar:5.4.2-SNAPSHOT" -> "org.jboss.resteasy:resteasy-jackson2-provider:jar:3.0.24.Final:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-neo4j:jar:5.4.2-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.10.1:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-neo4j:jar:5.4.2-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.10.1:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-neo4j:jar:5.4.2-SNAPSHOT" -> "org.parboiled:parboiled-java:jar:1.1.8:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-neo4j:jar:5.4.2-SNAPSHOT" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-neo4j:jar:5.4.2-SNAPSHOT" -> "org.hibernate.ogm:hibernate-ogm-core:test-jar:tests:5.4.2-SNAPSHOT:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-neo4j:jar:5.4.2-SNAPSHOT" -> "org.jboss.narayana.jta:narayana-jta:jar:5.5.30.Final:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-neo4j:jar:5.4.2-SNAPSHOT" -> "org.jboss:jboss-transaction-spi:jar:7.6.0.Final:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-neo4j:jar:5.4.2-SNAPSHOT" -> "org.jboss.spec.javax.transaction:jboss-transaction-api_1.2_spec:jar:1.0.1.Final:provided" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-neo4j:jar:5.4.2-SNAPSHOT" -> "log4j:log4j:jar:1.2.16:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-neo4j:jar:5.4.2-SNAPSHOT" -> "org.easytesting:fest-assert:jar:1.4:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-neo4j:jar:5.4.2-SNAPSHOT" -> "org.jboss.shrinkwrap:shrinkwrap-impl-base:jar:1.2.2:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-neo4j:jar:5.4.2-SNAPSHOT" -> "org.mockito:mockito-core:jar:1.9.5:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-neo4j:jar:5.4.2-SNAPSHOT" -> "com.google.guava:guava:jar:18.0:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-neo4j:jar:5.4.2-SNAPSHOT" -> "io.takari.junit:takari-cpsuite:jar:1.2.7:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-neo4j:jar:5.4.2-SNAPSHOT" -> "org.jboss.byteman:byteman:jar:4.0.2:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-neo4j:jar:5.4.2-SNAPSHOT" -> "org.jboss.byteman:byteman-bmunit:jar:4.0.2:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-neo4j:jar:5.4.2-SNAPSHOT" -> "org.jboss.byteman:byteman-install:jar:4.0.2:test" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-neo4j:jar:5.4.2-SNAPSHOT" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT:compile" -> "org.hibernate:hibernate-core:jar:5.3.6.Final:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT:compile" -> "org.hibernate.common:hibernate-commons-annotations:jar:5.0.3.Final:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT:compile" -> "org.hibernate.hql:hibernate-hql-parser:jar:1.5.0.Final:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT:compile" -> "com.fasterxml:classmate:jar:1.3.3:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "javax.persistence:javax.persistence-api:jar:2.2:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "org.javassist:javassist:jar:3.23.1-GA:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "net.bytebuddy:byte-buddy:jar:1.8.17:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "antlr:antlr:jar:2.7.7:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "org.jboss:jandex:jar:2.0.5.Final:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "javax.activation:javax.activation-api:jar:1.2.0:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "dom4j:dom4j:jar:1.6.1:compile" ; 
+[INFO] 	"org.hibernate.hql:hibernate-hql-parser:jar:1.5.0.Final:compile" -> "org.antlr:antlr-runtime:jar:3.4:compile" ; 
+[INFO] 	"org.antlr:antlr-runtime:jar:3.4:compile" -> "org.antlr:stringtemplate:jar:3.2.1:compile" ; 
+[INFO] 	"org.jboss.logging:jboss-logging-processor:jar:2.1.0.Final:provided" -> "org.jboss.logging:jboss-logging-annotations:jar:2.1.0.Final:provided" ; 
+[INFO] 	"org.jboss.logging:jboss-logging-processor:jar:2.1.0.Final:provided" -> "org.jboss.jdeparser:jdeparser:jar:2.0.2.Final:provided" ; 
+[INFO] 	"org.neo4j:neo4j:jar:3.4.11:compile" -> "org.neo4j:neo4j-kernel:jar:3.4.11:compile" ; 
+[INFO] 	"org.neo4j:neo4j:jar:3.4.11:compile" -> "org.neo4j:neo4j-lucene-index:jar:3.4.11:compile" ; 
+[INFO] 	"org.neo4j:neo4j:jar:3.4.11:compile" -> "org.neo4j:neo4j-graph-algo:jar:3.4.11:compile" ; 
+[INFO] 	"org.neo4j:neo4j:jar:3.4.11:compile" -> "org.neo4j:neo4j-udc:jar:3.4.11:compile" ; 
+[INFO] 	"org.neo4j:neo4j:jar:3.4.11:compile" -> "org.neo4j:neo4j-cypher:jar:3.4.11:compile" ; 
+[INFO] 	"org.neo4j:neo4j:jar:3.4.11:compile" -> "org.neo4j:neo4j-jmx:jar:3.4.11:compile" ; 
+[INFO] 	"org.neo4j:neo4j-kernel:jar:3.4.11:compile" -> "org.neo4j:neo4j-graphdb-api:jar:3.4.11:compile" ; 
+[INFO] 	"org.neo4j:neo4j-kernel:jar:3.4.11:compile" -> "org.neo4j:neo4j-procedure-api:jar:3.4.11:compile" ; 
+[INFO] 	"org.neo4j:neo4j-kernel:jar:3.4.11:compile" -> "org.neo4j:neo4j-kernel-api:jar:3.4.11:compile" ; 
+[INFO] 	"org.neo4j:neo4j-kernel:jar:3.4.11:compile" -> "org.neo4j:neo4j-common:jar:3.4.11:compile" ; 
+[INFO] 	"org.neo4j:neo4j-kernel:jar:3.4.11:compile" -> "org.neo4j:neo4j-values:jar:3.4.11:compile" ; 
+[INFO] 	"org.neo4j:neo4j-kernel:jar:3.4.11:compile" -> "org.neo4j:neo4j-collections:jar:3.4.11:compile" ; 
+[INFO] 	"org.neo4j:neo4j-kernel:jar:3.4.11:compile" -> "org.neo4j:neo4j-primitive-collections:jar:3.4.11:compile" ; 
+[INFO] 	"org.neo4j:neo4j-kernel:jar:3.4.11:compile" -> "org.neo4j:neo4j-io:jar:3.4.11:compile" ; 
+[INFO] 	"org.neo4j:neo4j-kernel:jar:3.4.11:compile" -> "org.neo4j:neo4j-logging:jar:3.4.11:compile" ; 
+[INFO] 	"org.neo4j:neo4j-kernel:jar:3.4.11:compile" -> "org.neo4j:neo4j-lucene-upgrade:jar:3.4.11:compile" ; 
+[INFO] 	"org.neo4j:neo4j-kernel:jar:3.4.11:compile" -> "org.neo4j:neo4j-configuration:jar:3.4.11:compile" ; 
+[INFO] 	"org.neo4j:neo4j-kernel:jar:3.4.11:compile" -> "org.neo4j:neo4j-index:jar:3.4.11:compile" ; 
+[INFO] 	"org.neo4j:neo4j-kernel:jar:3.4.11:compile" -> "org.neo4j:neo4j-spatial-index:jar:3.4.11:compile" ; 
+[INFO] 	"org.neo4j:neo4j-kernel:jar:3.4.11:compile" -> "org.neo4j:neo4j-ssl:jar:3.4.11:compile" ; 
+[INFO] 	"org.neo4j:neo4j-graphdb-api:jar:3.4.11:compile" -> "org.neo4j:neo4j-resource:jar:3.4.11:compile" ; 
+[INFO] 	"org.neo4j:neo4j-primitive-collections:jar:3.4.11:compile" -> "org.neo4j:neo4j-unsafe:jar:3.4.11:compile" ; 
+[INFO] 	"org.neo4j:neo4j-lucene-upgrade:jar:3.4.11:compile" -> "org.apache.lucene:lucene-backward-codecs:jar:5.5.5:compile" ; 
+[INFO] 	"org.neo4j:neo4j-ssl:jar:3.4.11:compile" -> "io.netty:netty-all:jar:4.1.24.Final:compile" ; 
+[INFO] 	"org.neo4j:neo4j-ssl:jar:3.4.11:compile" -> "org.bouncycastle:bcpkix-jdk15on:jar:1.60:compile" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk15on:jar:1.60:compile" -> "org.bouncycastle:bcprov-jdk15on:jar:1.60:compile" ; 
+[INFO] 	"org.neo4j:neo4j-lucene-index:jar:3.4.11:compile" -> "org.apache.lucene:lucene-analyzers-common:jar:5.5.5:compile" ; 
+[INFO] 	"org.neo4j:neo4j-lucene-index:jar:3.4.11:compile" -> "org.apache.lucene:lucene-core:jar:5.5.5:compile" ; 
+[INFO] 	"org.neo4j:neo4j-lucene-index:jar:3.4.11:compile" -> "org.apache.lucene:lucene-queryparser:jar:5.5.5:compile" ; 
+[INFO] 	"org.neo4j:neo4j-lucene-index:jar:3.4.11:compile" -> "org.apache.lucene:lucene-codecs:jar:5.5.5:compile" ; 
+[INFO] 	"org.neo4j:neo4j-cypher:jar:3.4.11:compile" -> "org.scala-lang:scala-reflect:jar:2.11.11:compile" ; 
+[INFO] 	"org.neo4j:neo4j-cypher:jar:3.4.11:compile" -> "org.neo4j:neo4j-graph-matching:jar:3.1.9:compile" ; 
+[INFO] 	"org.neo4j:neo4j-cypher:jar:3.4.11:compile" -> "org.neo4j:neo4j-codegen:jar:3.4.11:compile" ; 
+[INFO] 	"org.neo4j:neo4j-cypher:jar:3.4.11:compile" -> "org.neo4j:neo4j-cypher-compiler-2.3:jar:2.3.12:compile" ; 
+[INFO] 	"org.neo4j:neo4j-cypher:jar:3.4.11:compile" -> "org.neo4j:neo4j-cypher-compiler-3.1:jar:3.1.9:compile" ; 
+[INFO] 	"org.neo4j:neo4j-cypher:jar:3.4.11:compile" -> "org.neo4j:neo4j-cypher-compiler-3.3:jar:3.3.9:compile" ; 
+[INFO] 	"org.neo4j:neo4j-cypher:jar:3.4.11:compile" -> "org.neo4j:neo4j-cypher-util-3.4:jar:3.4.11:compile" ; 
+[INFO] 	"org.neo4j:neo4j-cypher:jar:3.4.11:compile" -> "org.neo4j:neo4j-cypher-planner-3.4:jar:3.4.11:compile" ; 
+[INFO] 	"org.neo4j:neo4j-cypher:jar:3.4.11:compile" -> "org.neo4j:neo4j-cypher-planner-spi-3.4:jar:3.4.11:compile" ; 
+[INFO] 	"org.neo4j:neo4j-cypher:jar:3.4.11:compile" -> "org.neo4j:neo4j-cypher-runtime-util:jar:3.4.11:compile" ; 
+[INFO] 	"org.neo4j:neo4j-cypher:jar:3.4.11:compile" -> "org.neo4j:neo4j-cypher-interpreted-runtime:jar:3.4.11:compile" ; 
+[INFO] 	"org.neo4j:neo4j-cypher-compiler-2.3:jar:2.3.12:compile" -> "org.neo4j:neo4j-cypher-frontend-2.3:jar:2.3.12:compile" ; 
+[INFO] 	"org.neo4j:neo4j-cypher-compiler-2.3:jar:2.3.12:compile" -> "com.googlecode.concurrentlinkedhashmap:concurrentlinkedhashmap-lru:jar:1.4.2:compile" ; 
+[INFO] 	"org.neo4j:neo4j-cypher-compiler-3.1:jar:3.1.9:compile" -> "org.neo4j:neo4j-cypher-frontend-3.1:jar:3.1.9:compile" ; 
+[INFO] 	"org.neo4j:neo4j-cypher-compiler-3.1:jar:3.1.9:compile" -> "com.github.ben-manes.caffeine:caffeine:jar:2.6.2:compile" ; 
+[INFO] 	"org.neo4j:neo4j-cypher-compiler-3.3:jar:3.3.9:compile" -> "org.neo4j:neo4j-cypher-frontend-3.3:jar:3.3.9:compile" ; 
+[INFO] 	"org.neo4j:neo4j-cypher-compiler-3.3:jar:3.3.9:compile" -> "org.neo4j:neo4j-cypher-ir-3.3:jar:3.3.9:compile" ; 
+[INFO] 	"org.neo4j:neo4j-cypher-compiler-3.3:jar:3.3.9:compile" -> "org.neo4j:neo4j-cypher-logical-plans-3.3:jar:3.3.9:compile" ; 
+[INFO] 	"org.neo4j:neo4j-cypher-planner-3.4:jar:3.4.11:compile" -> "org.neo4j:openCypher-frontend-1:jar:3.4.11:compile" ; 
+[INFO] 	"org.neo4j:neo4j-cypher-planner-3.4:jar:3.4.11:compile" -> "org.neo4j:neo4j-cypher-ir-3.4:jar:3.4.11:compile" ; 
+[INFO] 	"org.neo4j:neo4j-cypher-planner-3.4:jar:3.4.11:compile" -> "org.neo4j:neo4j-cypher-logical-plans-3.4:jar:3.4.11:compile" ; 
+[INFO] 	"org.neo4j:openCypher-frontend-1:jar:3.4.11:compile" -> "org.neo4j:neo4j-cypher-expression-3.4:jar:3.4.11:compile" ; 
+[INFO] 	"org.parboiled:parboiled-scala_2.11:jar:1.1.8:compile" -> "org.scala-lang:scala-library:jar:2.11.11:compile" ; 
+[INFO] 	"org.parboiled:parboiled-scala_2.11:jar:1.1.8:compile" -> "org.parboiled:parboiled-core:jar:1.1.8:compile" ; 
+[INFO] 	"org.hibernate:hibernate-search-orm:jar:5.10.4.Final:test" -> "org.hibernate:hibernate-search-engine:jar:5.10.4.Final:test" ; 
+[INFO] 	"org.hibernate:hibernate-search-engine:jar:5.10.4.Final:test" -> "org.apache.lucene:lucene-misc:jar:5.5.5:test" ; 
+[INFO] 	"org.hibernate:hibernate-search-engine:jar:5.10.4.Final:test" -> "org.apache.lucene:lucene-facet:jar:5.5.5:test" ; 
+[INFO] 	"org.apache.lucene:lucene-facet:jar:5.5.5:test" -> "org.apache.lucene:lucene-queries:jar:5.5.5:test" ; 
+[INFO] 	"org.jboss.resteasy:resteasy-client:jar:3.0.24.Final:compile" -> "org.jboss.logging:jboss-logging:jar:3.3.2.Final:compile" ; 
+[INFO] 	"org.jboss.resteasy:resteasy-jaxrs:jar:3.0.24.Final:compile" -> "org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.0_spec:jar:1.0.1.Beta1:compile" ; 
+[INFO] 	"org.jboss.resteasy:resteasy-jaxrs:jar:3.0.24.Final:compile" -> "org.jboss.spec.javax.annotation:jboss-annotations-api_1.2_spec:jar:1.0.0.Final:compile" ; 
+[INFO] 	"org.jboss.resteasy:resteasy-jaxrs:jar:3.0.24.Final:compile" -> "javax.activation:activation:jar:1.1.1:compile" ; 
+[INFO] 	"org.jboss.resteasy:resteasy-jaxrs:jar:3.0.24.Final:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.2:compile" ; 
+[INFO] 	"org.jboss.resteasy:resteasy-jaxrs:jar:3.0.24.Final:compile" -> "commons-io:commons-io:jar:2.5:compile" ; 
+[INFO] 	"org.jboss.resteasy:resteasy-jaxrs:jar:3.0.24.Final:compile" -> "net.jcip:jcip-annotations:jar:1.0:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.2:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.4:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.2:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.2:compile" -> "commons-codec:commons-codec:jar:1.9:compile" ; 
+[INFO] 	"org.jboss.resteasy:resteasy-jackson2-provider:jar:3.0.24.Final:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.10.1:compile" ; 
+[INFO] 	"org.jboss.resteasy:resteasy-jackson2-provider:jar:3.0.24.Final:compile" -> "com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.8.9:compile" ; 
+[INFO] 	"com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.8.9:compile" -> "com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:jar:2.8.9:compile" ; 
+[INFO] 	"com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.8.9:compile" -> "com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.8.9:compile" ; 
+[INFO] 	"org.parboiled:parboiled-java:jar:1.1.8:compile" -> "org.ow2.asm:asm:jar:6.0:compile" ; 
+[INFO] 	"org.parboiled:parboiled-java:jar:1.1.8:compile" -> "org.ow2.asm:asm-tree:jar:6.0:compile" ; 
+[INFO] 	"org.parboiled:parboiled-java:jar:1.1.8:compile" -> "org.ow2.asm:asm-analysis:jar:6.0:compile" ; 
+[INFO] 	"org.parboiled:parboiled-java:jar:1.1.8:compile" -> "org.ow2.asm:asm-util:jar:6.0:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.1:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.jboss:jboss-transaction-spi:jar:7.6.0.Final:test" -> "org.jboss.spec.javax.resource:jboss-connector-api_1.7_spec:jar:1.0.0.Final:test" ; 
+[INFO] 	"org.easytesting:fest-assert:jar:1.4:test" -> "org.easytesting:fest-util:jar:1.1.6:test" ; 
+[INFO] 	"org.jboss.shrinkwrap:shrinkwrap-impl-base:jar:1.2.2:test" -> "org.jboss.shrinkwrap:shrinkwrap-api:jar:1.2.2:test" ; 
+[INFO] 	"org.jboss.shrinkwrap:shrinkwrap-impl-base:jar:1.2.2:test" -> "org.jboss.shrinkwrap:shrinkwrap-spi:jar:1.2.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:1.9.5:test" -> "org.objenesis:objenesis:jar:1.0:test" ; 
+[INFO] 	"org.jboss.byteman:byteman-bmunit:jar:4.0.2:test" -> "org.jboss.byteman:byteman-submit:jar:4.0.2:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< org.hibernate.ogm:hibernate-ogm-jipijapa >--------------
+[INFO] Building JipiJapa integration for Hibernate OGM 5.4.2-SNAPSHOT     [6/7]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.0.2:tree (default-cli) @ hibernate-ogm-jipijapa ---
+[INFO] digraph "org.hibernate.ogm:hibernate-ogm-jipijapa:jar:5.4.2-SNAPSHOT" { 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-jipijapa:jar:5.4.2-SNAPSHOT" -> "org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-jipijapa:jar:5.4.2-SNAPSHOT" -> "org.wildfly:jipijapa-hibernate5:jar:14.0.1.Final:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-jipijapa:jar:5.4.2-SNAPSHOT" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT:compile" -> "org.hibernate:hibernate-core:jar:5.3.6.Final:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT:compile" -> "org.hibernate.common:hibernate-commons-annotations:jar:5.0.3.Final:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT:compile" -> "org.hibernate.hql:hibernate-hql-parser:jar:1.5.0.Final:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT:compile" -> "com.fasterxml:classmate:jar:1.3.3:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "org.javassist:javassist:jar:3.23.1-GA:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "net.bytebuddy:byte-buddy:jar:1.8.17:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "antlr:antlr:jar:2.7.7:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "javax.activation:javax.activation-api:jar:1.2.0:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "dom4j:dom4j:jar:1.6.1:compile" ; 
+[INFO] 	"org.hibernate.hql:hibernate-hql-parser:jar:1.5.0.Final:compile" -> "org.antlr:antlr-runtime:jar:3.4:compile" ; 
+[INFO] 	"org.antlr:antlr-runtime:jar:3.4:compile" -> "org.antlr:stringtemplate:jar:3.2.1:compile" ; 
+[INFO] 	"org.wildfly:jipijapa-hibernate5:jar:14.0.1.Final:compile" -> "org.wildfly:jipijapa-spi:jar:14.0.1.Final:compile" ; 
+[INFO] 	"org.wildfly:jipijapa-hibernate5:jar:14.0.1.Final:compile" -> "org.jboss.logging:jboss-logging:jar:3.3.2.Final:compile" ; 
+[INFO] 	"org.wildfly:jipijapa-hibernate5:jar:14.0.1.Final:compile" -> "javax.persistence:javax.persistence-api:jar:2.2:compile" ; 
+[INFO] 	"org.wildfly:jipijapa-hibernate5:jar:14.0.1.Final:compile" -> "org.jboss:jboss-vfs:jar:3.2.14.Final:compile" ; 
+[INFO] 	"org.wildfly:jipijapa-hibernate5:jar:14.0.1.Final:compile" -> "org.jboss.spec.javax.annotation:jboss-annotations-api_1.3_spec:jar:1.0.1.Final:compile" ; 
+[INFO] 	"org.wildfly:jipijapa-hibernate5:jar:14.0.1.Final:compile" -> "org.jboss.spec.javax.transaction:jboss-transaction-api_1.2_spec:jar:1.0.1.Final:compile" ; 
+[INFO] 	"org.wildfly:jipijapa-spi:jar:14.0.1.Final:compile" -> "javax.enterprise:cdi-api:jar:2.0.SP1:compile" ; 
+[INFO] 	"javax.enterprise:cdi-api:jar:2.0.SP1:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------< org.hibernate.ogm:hibernate-ogm-performancetest >-----------
+[INFO] Building Hibernate OGM Performance tests 5.4.2-SNAPSHOT            [7/7]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.0.2:tree (default-cli) @ hibernate-ogm-performancetest ---
+[INFO] digraph "org.hibernate.ogm:hibernate-ogm-performancetest:jar:5.4.2-SNAPSHOT" { 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-performancetest:jar:5.4.2-SNAPSHOT" -> "org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-performancetest:jar:5.4.2-SNAPSHOT" -> "org.hibernate.ogm:hibernate-ogm-mongodb:jar:5.4.2-SNAPSHOT:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-performancetest:jar:5.4.2-SNAPSHOT" -> "org.jboss.narayana.jta:narayana-jta:jar:5.5.30.Final:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-performancetest:jar:5.4.2-SNAPSHOT" -> "org.jboss:jboss-transaction-spi:jar:7.6.0.Final:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-performancetest:jar:5.4.2-SNAPSHOT" -> "org.jboss.spec.javax.transaction:jboss-transaction-api_1.2_spec:jar:1.0.1.Final:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-performancetest:jar:5.4.2-SNAPSHOT" -> "org.openjdk.jmh:jmh-core:jar:1.21:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-performancetest:jar:5.4.2-SNAPSHOT" -> "org.openjdk.jmh:jmh-generator-annprocess:jar:1.21:provided" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-performancetest:jar:5.4.2-SNAPSHOT" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT:compile" -> "org.hibernate:hibernate-core:jar:5.3.6.Final:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT:compile" -> "org.hibernate.common:hibernate-commons-annotations:jar:5.0.3.Final:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT:compile" -> "org.hibernate.hql:hibernate-hql-parser:jar:1.5.0.Final:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-core:jar:5.4.2-SNAPSHOT:compile" -> "com.fasterxml:classmate:jar:1.3.3:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "org.jboss.logging:jboss-logging:jar:3.3.2.Final:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "javax.persistence:javax.persistence-api:jar:2.2:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "org.javassist:javassist:jar:3.23.1-GA:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "net.bytebuddy:byte-buddy:jar:1.8.17:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "antlr:antlr:jar:2.7.7:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "org.jboss:jandex:jar:2.0.5.Final:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "javax.activation:javax.activation-api:jar:1.2.0:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.3.6.Final:compile" -> "dom4j:dom4j:jar:1.6.1:compile" ; 
+[INFO] 	"org.hibernate.hql:hibernate-hql-parser:jar:1.5.0.Final:compile" -> "org.antlr:antlr-runtime:jar:3.4:compile" ; 
+[INFO] 	"org.antlr:antlr-runtime:jar:3.4:compile" -> "org.antlr:stringtemplate:jar:3.2.1:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-mongodb:jar:5.4.2-SNAPSHOT:compile" -> "org.mongodb:mongo-java-driver:jar:3.11.2:compile" ; 
+[INFO] 	"org.hibernate.ogm:hibernate-ogm-mongodb:jar:5.4.2-SNAPSHOT:compile" -> "org.parboiled:parboiled-java:jar:1.1.8:compile" ; 
+[INFO] 	"org.parboiled:parboiled-java:jar:1.1.8:compile" -> "org.parboiled:parboiled-core:jar:1.1.8:compile" ; 
+[INFO] 	"org.parboiled:parboiled-java:jar:1.1.8:compile" -> "org.ow2.asm:asm:jar:6.0:compile" ; 
+[INFO] 	"org.parboiled:parboiled-java:jar:1.1.8:compile" -> "org.ow2.asm:asm-tree:jar:6.0:compile" ; 
+[INFO] 	"org.parboiled:parboiled-java:jar:1.1.8:compile" -> "org.ow2.asm:asm-analysis:jar:6.0:compile" ; 
+[INFO] 	"org.parboiled:parboiled-java:jar:1.1.8:compile" -> "org.ow2.asm:asm-util:jar:6.0:compile" ; 
+[INFO] 	"org.jboss:jboss-transaction-spi:jar:7.6.0.Final:compile" -> "org.jboss.spec.javax.resource:jboss-connector-api_1.7_spec:jar:1.0.0.Final:compile" ; 
+[INFO] 	"org.openjdk.jmh:jmh-core:jar:1.21:compile" -> "net.sf.jopt-simple:jopt-simple:jar:4.6:compile" ; 
+[INFO] 	"org.openjdk.jmh:jmh-core:jar:1.21:compile" -> "org.apache.commons:commons-math3:jar:3.2:compile" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:compile" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Hibernate OGM Aggregator 5.4.2-SNAPSHOT:
+[INFO] 
+[INFO] Hibernate OGM Bill of Materials .................... SUCCESS [  3.568 s]
+[INFO] Hibernate OGM Aggregator ........................... SUCCESS [  2.659 s]
+[INFO] Hibernate OGM Core ................................. SUCCESS [  0.775 s]
+[INFO] Hibernate OGM for MongoDB .......................... SUCCESS [  0.268 s]
+[INFO] Hibernate OGM for Neo4j ............................ SUCCESS [  1.415 s]
+[INFO] JipiJapa integration for Hibernate OGM ............. SUCCESS [  0.190 s]
+[INFO] Hibernate OGM Performance tests .................... SUCCESS [  0.085 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.599 s
+[INFO] Finished at: 2023-12-28T09:02:54+01:00
+[INFO] ------------------------------------------------------------------------

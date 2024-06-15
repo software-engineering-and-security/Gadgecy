@@ -1,0 +1,28 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< org.kohsuke:file-leak-detector >-------------------
+[INFO] Building File Leak Detector 1.18-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ file-leak-detector ---
+[INFO] digraph "org.kohsuke:file-leak-detector:jar:1.18-SNAPSHOT" { 
+[INFO] 	"org.kohsuke:file-leak-detector:jar:1.18-SNAPSHOT" -> "args4j:args4j:jar:2.33:compile" ; 
+[INFO] 	"org.kohsuke:file-leak-detector:jar:1.18-SNAPSHOT" -> "org.ow2.asm:asm:jar:9.6:compile" ; 
+[INFO] 	"org.kohsuke:file-leak-detector:jar:1.18-SNAPSHOT" -> "org.ow2.asm:asm-analysis:jar:9.6:compile" ; 
+[INFO] 	"org.kohsuke:file-leak-detector:jar:1.18-SNAPSHOT" -> "org.ow2.asm:asm-commons:jar:9.6:compile" ; 
+[INFO] 	"org.kohsuke:file-leak-detector:jar:1.18-SNAPSHOT" -> "org.ow2.asm:asm-tree:jar:9.6:compile" ; 
+[INFO] 	"org.kohsuke:file-leak-detector:jar:1.18-SNAPSHOT" -> "org.ow2.asm:asm-util:jar:9.6:compile" ; 
+[INFO] 	"org.kohsuke:file-leak-detector:jar:1.18-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.kohsuke:file-leak-detector:jar:1.18-SNAPSHOT" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.kohsuke:file-leak-detector:jar:1.18-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.6.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.6.0:test" -> "net.bytebuddy:byte-buddy:jar:1.14.8:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.6.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.8:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.6.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.784 s
+[INFO] Finished at: 2023-12-28T09:03:02+01:00
+[INFO] ------------------------------------------------------------------------

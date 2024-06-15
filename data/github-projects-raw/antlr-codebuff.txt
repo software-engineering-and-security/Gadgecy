@@ -1,0 +1,31 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.antlr:codebuff:jar:1.5.1
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 191, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-source-plugin is missing. @ line 212, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-deploy-plugin is missing. @ line 233, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[WARNING] The project org.antlr:codebuff:jar:1.5.1 uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[INFO] 
+[INFO] -------------------------< org.antlr:codebuff >-------------------------
+[INFO] Building CodeBuff Computer Language Formatter 1.5.1
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ codebuff ---
+[INFO] digraph "org.antlr:codebuff:jar:1.5.1" { 
+[INFO] 	"org.antlr:codebuff:jar:1.5.1" -> "org.antlr:antlr4-runtime:jar:4.5.3:compile" ; 
+[INFO] 	"org.antlr:codebuff:jar:1.5.1" -> "org.apache.commons:commons-lang3:jar:3.4:compile" ; 
+[INFO] 	"org.antlr:codebuff:jar:1.5.1" -> "com.google.guava:guava:jar:19.0:compile" ; 
+[INFO] 	"org.antlr:codebuff:jar:1.5.1" -> "org.antlr:ST4:jar:4.0.8:compile" ; 
+[INFO] 	"org.antlr:ST4:jar:4.0.8:compile" -> "org.antlr:antlr-runtime:jar:3.5.2:compile" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.006 s
+[INFO] Finished at: 2023-12-28T09:02:20+01:00
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,15 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------< org.keycloak.quickstarts:keycloak-quickstart-parent >---------
+[INFO] Building Keycloak Quickstart: parent 23.0.1
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ keycloak-quickstart-parent ---
+[INFO] digraph "org.keycloak.quickstarts:keycloak-quickstart-parent:pom:23.0.1" { 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.908 s
+[INFO] Finished at: 2023-12-28T09:03:11+01:00
+[INFO] ------------------------------------------------------------------------

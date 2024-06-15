@@ -1,0 +1,577 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] northstar                                                          [pom]
+[INFO] northstar-external-archetype                           [maven-archetype]
+[INFO] northstar-monitor                                                  [jar]
+[INFO] northstar-api                                                      [jar]
+[INFO] northstar-gateway-sim                                              [jar]
+[INFO] northstar-gateway-playback                                         [jar]
+[INFO] northstar-rl                                                       [jar]
+[INFO] northstar-strategy-example                                         [jar]
+[INFO] northstar-main                                                     [jar]
+[INFO] 
+[INFO] -----------------------< org.dromara:northstar >------------------------
+[INFO] Building northstar 6.2.2.Final                                     [1/9]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ northstar ---
+[INFO] digraph "org.dromara:northstar:pom:6.2.2.Final" { 
+[INFO] 	"org.dromara:northstar:pom:6.2.2.Final" -> "org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework.boot:spring-boot-starter:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework.boot:spring-boot-test:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "com.jayway.jsonpath:json-path:jar:2.6.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.assertj:assertj-core:jar:3.21.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.junit.jupiter:junit-jupiter:jar:5.8.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.mockito:mockito-core:jar:4.0.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.mockito:mockito-junit-jupiter:jar:4.0.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework:spring-core:jar:5.3.24:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework:spring-test:jar:5.3.24:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.xmlunit:xmlunit-core:jar:2.8.4:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:test" -> "org.springframework.boot:spring-boot:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:test" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:test" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:test" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:test" -> "org.yaml:snakeyaml:jar:1.29:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.6.14:test" -> "org.springframework:spring-context:jar:5.3.24:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.24:test" -> "org.springframework:spring-aop:jar:5.3.24:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.24:test" -> "org.springframework:spring-beans:jar:5.3.24:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.24:test" -> "org.springframework:spring-expression:jar:5.3.24:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.14:test" -> "ch.qos.logback:logback-classic:jar:1.2.11:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.14:test" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.14:test" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.11:test" -> "ch.qos.logback:logback-core:jar:1.2.11:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:test" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.6.0:test" -> "net.minidev:json-smart:jar:2.4.7:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.6.0:test" -> "org.slf4j:slf4j-api:jar:1.7.25:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.7:test" -> "net.minidev:accessors-smart:jar:2.4.7:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.7:test" -> "org.ow2.asm:asm:jar:9.1:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.8.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "net.bytebuddy:byte-buddy:jar:1.10.20:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.10.20:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.24:test" -> "org.springframework:spring-jcl:jar:5.3.24:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< org.dromara:northstar-external-archetype >--------------
+[INFO] Building northstar-external-archetype 6.2.2.Final                  [2/9]
+[INFO] --------------------------[ maven-archetype ]---------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ northstar-external-archetype ---
+[INFO] digraph "org.dromara:northstar-external-archetype:maven-archetype:6.2.2.Final" { 
+[INFO] 	"org.dromara:northstar-external-archetype:maven-archetype:6.2.2.Final" -> "org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework.boot:spring-boot-starter:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework.boot:spring-boot-test:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "com.jayway.jsonpath:json-path:jar:2.6.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.assertj:assertj-core:jar:3.21.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.junit.jupiter:junit-jupiter:jar:5.8.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.mockito:mockito-core:jar:4.0.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.mockito:mockito-junit-jupiter:jar:4.0.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework:spring-core:jar:5.3.24:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework:spring-test:jar:5.3.24:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.xmlunit:xmlunit-core:jar:2.8.4:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:test" -> "org.springframework.boot:spring-boot:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:test" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:test" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:test" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:test" -> "org.yaml:snakeyaml:jar:1.29:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.6.14:test" -> "org.springframework:spring-context:jar:5.3.24:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.24:test" -> "org.springframework:spring-aop:jar:5.3.24:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.24:test" -> "org.springframework:spring-beans:jar:5.3.24:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.24:test" -> "org.springframework:spring-expression:jar:5.3.24:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.14:test" -> "ch.qos.logback:logback-classic:jar:1.2.11:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.14:test" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.14:test" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.11:test" -> "ch.qos.logback:logback-core:jar:1.2.11:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:test" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.6.0:test" -> "net.minidev:json-smart:jar:2.4.7:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.6.0:test" -> "org.slf4j:slf4j-api:jar:1.7.25:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.7:test" -> "net.minidev:accessors-smart:jar:2.4.7:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.7:test" -> "org.ow2.asm:asm:jar:9.1:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.8.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "net.bytebuddy:byte-buddy:jar:1.10.20:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.10.20:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.24:test" -> "org.springframework:spring-jcl:jar:5.3.24:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< org.dromara:northstar-monitor >--------------------
+[INFO] Building northstar-monitor 6.2.2.Final                             [3/9]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ northstar-monitor ---
+[INFO] digraph "org.dromara:northstar-monitor:jar:6.2.2.Final" { 
+[INFO] 	"org.dromara:northstar-monitor:jar:6.2.2.Final" -> "org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework.boot:spring-boot-starter:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework.boot:spring-boot-test:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "com.jayway.jsonpath:json-path:jar:2.6.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.assertj:assertj-core:jar:3.21.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.junit.jupiter:junit-jupiter:jar:5.8.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.mockito:mockito-core:jar:4.0.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.mockito:mockito-junit-jupiter:jar:4.0.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework:spring-core:jar:5.3.24:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework:spring-test:jar:5.3.24:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.xmlunit:xmlunit-core:jar:2.8.4:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:test" -> "org.springframework.boot:spring-boot:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:test" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:test" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:test" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:test" -> "org.yaml:snakeyaml:jar:1.29:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.6.14:test" -> "org.springframework:spring-context:jar:5.3.24:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.24:test" -> "org.springframework:spring-aop:jar:5.3.24:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.24:test" -> "org.springframework:spring-beans:jar:5.3.24:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.24:test" -> "org.springframework:spring-expression:jar:5.3.24:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.14:test" -> "ch.qos.logback:logback-classic:jar:1.2.11:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.14:test" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.14:test" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.11:test" -> "ch.qos.logback:logback-core:jar:1.2.11:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:test" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.6.0:test" -> "net.minidev:json-smart:jar:2.4.7:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.6.0:test" -> "org.slf4j:slf4j-api:jar:1.7.25:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.7:test" -> "net.minidev:accessors-smart:jar:2.4.7:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.7:test" -> "org.ow2.asm:asm:jar:9.1:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.8.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "net.bytebuddy:byte-buddy:jar:1.10.20:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.10.20:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.24:test" -> "org.springframework:spring-jcl:jar:5.3.24:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< org.dromara:northstar-api >----------------------
+[INFO] Building northstar-api 6.2.2.Final                                 [4/9]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ northstar-api ---
+[INFO] digraph "org.dromara:northstar-api:jar:6.2.2.Final" { 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final" -> "org.projectlombok:lombok:jar:1.18.26:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final" -> "cn.hutool:hutool-core:jar:5.7.22:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final" -> "com.alibaba:fastjson:jar:2.0.4:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final" -> "com.lmax:disruptor:jar:3.4.2:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final" -> "org.apache.commons:commons-math3:jar:3.6.1:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final" -> "com.google.protobuf:protobuf-java:jar:3.19.1:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final" -> "com.google.protobuf:protobuf-java-util:jar:3.19.1:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final" -> "org.apache.commons:commons-lang3:jar:3.7:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final" -> "commons-io:commons-io:jar:2.6:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final" -> "org.springframework.boot:spring-boot-starter:jar:2.6.14:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final" -> "com.googlecode.protobuf-java-format:protobuf-java-format:jar:1.4:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final" -> "org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" ; 
+[INFO] 	"com.alibaba:fastjson:jar:2.0.4:compile" -> "com.alibaba.fastjson2:fastjson2-extension:jar:2.0.4:compile" ; 
+[INFO] 	"com.alibaba:fastjson:jar:2.0.4:compile" -> "org.json:json:jar:20220320:compile" ; 
+[INFO] 	"com.alibaba.fastjson2:fastjson2-extension:jar:2.0.4:compile" -> "com.alibaba.fastjson2:fastjson2:jar:2.0.4:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.19.1:compile" -> "com.google.guava:guava:jar:30.1-jre:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.19.1:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.5.1:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.19.1:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.19.1:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.19.1:compile" -> "com.google.code.gson:gson:jar:2.8.6:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.5.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:compile" -> "org.springframework.boot:spring-boot:jar:2.6.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.6.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.6.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:compile" -> "org.springframework:spring-core:jar:5.3.24:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:compile" -> "org.yaml:snakeyaml:jar:1.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.6.14:compile" -> "org.springframework:spring-context:jar:5.3.24:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.24:compile" -> "org.springframework:spring-aop:jar:5.3.24:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.24:compile" -> "org.springframework:spring-beans:jar:5.3.24:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.24:compile" -> "org.springframework:spring-expression:jar:5.3.24:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.14:compile" -> "ch.qos.logback:logback-classic:jar:1.2.11:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.14:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.14:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.11:compile" -> "ch.qos.logback:logback-core:jar:1.2.11:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.24:compile" -> "org.springframework:spring-jcl:jar:5.3.24:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework.boot:spring-boot-test:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "com.jayway.jsonpath:json-path:jar:2.6.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.assertj:assertj-core:jar:3.21.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.junit.jupiter:junit-jupiter:jar:5.8.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.mockito:mockito-core:jar:4.0.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.mockito:mockito-junit-jupiter:jar:4.0.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework:spring-test:jar:5.3.24:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.xmlunit:xmlunit-core:jar:2.8.4:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.6.0:test" -> "net.minidev:json-smart:jar:2.4.7:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.7:test" -> "net.minidev:accessors-smart:jar:2.4.7:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.7:test" -> "org.ow2.asm:asm:jar:9.1:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.8.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "net.bytebuddy:byte-buddy:jar:1.10.20:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.10.20:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.dromara:northstar-gateway-sim >------------------
+[INFO] Building northstar-gateway-sim 6.2.2.Final                         [5/9]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ northstar-gateway-sim ---
+[INFO] digraph "org.dromara:northstar-gateway-sim:jar:6.2.2.Final" { 
+[INFO] 	"org.dromara:northstar-gateway-sim:jar:6.2.2.Final" -> "org.dromara:northstar-api:jar:6.2.2.Final:compile" ; 
+[INFO] 	"org.dromara:northstar-gateway-sim:jar:6.2.2.Final" -> "com.alibaba:fastjson:jar:2.0.4:compile" ; 
+[INFO] 	"org.dromara:northstar-gateway-sim:jar:6.2.2.Final" -> "commons-io:commons-io:jar:2.6:compile" ; 
+[INFO] 	"org.dromara:northstar-gateway-sim:jar:6.2.2.Final" -> "org.apache.commons:commons-lang3:jar:3.7:compile" ; 
+[INFO] 	"org.dromara:northstar-gateway-sim:jar:6.2.2.Final" -> "org.projectlombok:lombok:jar:1.18.26:compile" ; 
+[INFO] 	"org.dromara:northstar-gateway-sim:jar:6.2.2.Final" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"org.dromara:northstar-gateway-sim:jar:6.2.2.Final" -> "org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final:compile" -> "cn.hutool:hutool-core:jar:5.7.22:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final:compile" -> "com.lmax:disruptor:jar:3.4.2:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final:compile" -> "org.apache.commons:commons-math3:jar:3.6.1:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final:compile" -> "com.google.protobuf:protobuf-java:jar:3.19.1:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final:compile" -> "com.google.protobuf:protobuf-java-util:jar:3.19.1:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.6.14:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final:compile" -> "com.googlecode.protobuf-java-format:protobuf-java-format:jar:1.4:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.19.1:compile" -> "com.google.guava:guava:jar:30.1-jre:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.19.1:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.5.1:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.19.1:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.19.1:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.19.1:compile" -> "com.google.code.gson:gson:jar:2.8.6:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.5.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:compile" -> "org.springframework.boot:spring-boot:jar:2.6.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.6.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.6.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:compile" -> "org.yaml:snakeyaml:jar:1.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.6.14:compile" -> "org.springframework:spring-context:jar:5.3.24:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.24:compile" -> "org.springframework:spring-aop:jar:5.3.24:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.24:compile" -> "org.springframework:spring-beans:jar:5.3.24:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.24:compile" -> "org.springframework:spring-expression:jar:5.3.24:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.14:compile" -> "ch.qos.logback:logback-classic:jar:1.2.11:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.14:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.14:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.11:compile" -> "ch.qos.logback:logback-core:jar:1.2.11:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:compile" ; 
+[INFO] 	"com.alibaba:fastjson:jar:2.0.4:compile" -> "com.alibaba.fastjson2:fastjson2-extension:jar:2.0.4:compile" ; 
+[INFO] 	"com.alibaba:fastjson:jar:2.0.4:compile" -> "org.json:json:jar:20220320:compile" ; 
+[INFO] 	"com.alibaba.fastjson2:fastjson2-extension:jar:2.0.4:compile" -> "com.alibaba.fastjson2:fastjson2:jar:2.0.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework.boot:spring-boot-test:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "com.jayway.jsonpath:json-path:jar:2.6.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.assertj:assertj-core:jar:3.21.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.junit.jupiter:junit-jupiter:jar:5.8.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.mockito:mockito-core:jar:4.0.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.mockito:mockito-junit-jupiter:jar:4.0.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework:spring-core:jar:5.3.24:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework:spring-test:jar:5.3.24:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.xmlunit:xmlunit-core:jar:2.8.4:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.6.0:test" -> "net.minidev:json-smart:jar:2.4.7:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.7:test" -> "net.minidev:accessors-smart:jar:2.4.7:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.7:test" -> "org.ow2.asm:asm:jar:9.1:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.8.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "net.bytebuddy:byte-buddy:jar:1.10.20:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.10.20:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.24:compile" -> "org.springframework:spring-jcl:jar:5.3.24:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.dromara:northstar-gateway-playback >---------------
+[INFO] Building northstar-gateway-playback 6.2.2.Final                    [6/9]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ northstar-gateway-playback ---
+[INFO] digraph "org.dromara:northstar-gateway-playback:jar:6.2.2.Final" { 
+[INFO] 	"org.dromara:northstar-gateway-playback:jar:6.2.2.Final" -> "org.dromara:northstar-api:jar:6.2.2.Final:compile" ; 
+[INFO] 	"org.dromara:northstar-gateway-playback:jar:6.2.2.Final" -> "com.alibaba:fastjson:jar:2.0.4:compile" ; 
+[INFO] 	"org.dromara:northstar-gateway-playback:jar:6.2.2.Final" -> "org.springframework.retry:spring-retry:jar:2.0.1:compile" ; 
+[INFO] 	"org.dromara:northstar-gateway-playback:jar:6.2.2.Final" -> "org.springframework.boot:spring-boot-starter-aop:jar:2.6.14:compile" ; 
+[INFO] 	"org.dromara:northstar-gateway-playback:jar:6.2.2.Final" -> "org.springframework.boot:spring-boot-starter-cache:jar:2.6.14:compile" ; 
+[INFO] 	"org.dromara:northstar-gateway-playback:jar:6.2.2.Final" -> "commons-io:commons-io:jar:2.6:compile" ; 
+[INFO] 	"org.dromara:northstar-gateway-playback:jar:6.2.2.Final" -> "org.apache.commons:commons-lang3:jar:3.7:compile" ; 
+[INFO] 	"org.dromara:northstar-gateway-playback:jar:6.2.2.Final" -> "org.projectlombok:lombok:jar:1.18.26:compile" ; 
+[INFO] 	"org.dromara:northstar-gateway-playback:jar:6.2.2.Final" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"org.dromara:northstar-gateway-playback:jar:6.2.2.Final" -> "org.springframework:spring-web:jar:5.3.27:compile" ; 
+[INFO] 	"org.dromara:northstar-gateway-playback:jar:6.2.2.Final" -> "cn.hutool:hutool-core:jar:5.7.22:compile" ; 
+[INFO] 	"org.dromara:northstar-gateway-playback:jar:6.2.2.Final" -> "org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final:compile" -> "com.lmax:disruptor:jar:3.4.2:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final:compile" -> "org.apache.commons:commons-math3:jar:3.6.1:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final:compile" -> "com.google.protobuf:protobuf-java:jar:3.19.1:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final:compile" -> "com.google.protobuf:protobuf-java-util:jar:3.19.1:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.6.14:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final:compile" -> "com.googlecode.protobuf-java-format:protobuf-java-format:jar:1.4:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.19.1:compile" -> "com.google.guava:guava:jar:30.1-jre:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.19.1:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.5.1:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.19.1:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.19.1:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.19.1:compile" -> "com.google.code.gson:gson:jar:2.8.6:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.5.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:compile" -> "org.springframework.boot:spring-boot:jar:2.6.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.6.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.6.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:compile" -> "org.yaml:snakeyaml:jar:1.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.14:compile" -> "ch.qos.logback:logback-classic:jar:1.2.11:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.14:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.14:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.11:compile" -> "ch.qos.logback:logback-core:jar:1.2.11:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:compile" ; 
+[INFO] 	"com.alibaba:fastjson:jar:2.0.4:compile" -> "com.alibaba.fastjson2:fastjson2-extension:jar:2.0.4:compile" ; 
+[INFO] 	"com.alibaba:fastjson:jar:2.0.4:compile" -> "org.json:json:jar:20220320:compile" ; 
+[INFO] 	"com.alibaba.fastjson2:fastjson2-extension:jar:2.0.4:compile" -> "com.alibaba.fastjson2:fastjson2:jar:2.0.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.6.14:compile" -> "org.springframework:spring-aop:jar:5.3.24:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.6.14:compile" -> "org.aspectj:aspectjweaver:jar:1.9.7:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-cache:jar:2.6.14:compile" -> "org.springframework:spring-context-support:jar:5.3.24:compile" ; 
+[INFO] 	"org.springframework:spring-context-support:jar:5.3.24:compile" -> "org.springframework:spring-context:jar:5.3.24:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.24:compile" -> "org.springframework:spring-expression:jar:5.3.24:compile" ; 
+[INFO] 	"org.springframework:spring-web:jar:5.3.27:compile" -> "org.springframework:spring-beans:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-web:jar:5.3.27:compile" -> "org.springframework:spring-core:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.27:compile" -> "org.springframework:spring-jcl:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework.boot:spring-boot-test:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "com.jayway.jsonpath:json-path:jar:2.6.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.assertj:assertj-core:jar:3.21.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.junit.jupiter:junit-jupiter:jar:5.8.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.mockito:mockito-core:jar:4.0.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.mockito:mockito-junit-jupiter:jar:4.0.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework:spring-test:jar:5.3.24:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.xmlunit:xmlunit-core:jar:2.8.4:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.6.0:test" -> "net.minidev:json-smart:jar:2.4.7:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.7:test" -> "net.minidev:accessors-smart:jar:2.4.7:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.7:test" -> "org.ow2.asm:asm:jar:9.1:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.8.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "net.bytebuddy:byte-buddy:jar:1.10.20:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.10.20:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< org.dromara:northstar-rl >----------------------
+[INFO] Building northstar-rl 6.2.2.Final                                  [7/9]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ northstar-rl ---
+[INFO] digraph "org.dromara:northstar-rl:jar:6.2.2.Final" { 
+[INFO] 	"org.dromara:northstar-rl:jar:6.2.2.Final" -> "com.alibaba:fastjson:jar:2.0.4:compile" ; 
+[INFO] 	"org.dromara:northstar-rl:jar:6.2.2.Final" -> "org.junit.jupiter:junit-jupiter:jar:5.8.2:test" ; 
+[INFO] 	"org.dromara:northstar-rl:jar:6.2.2.Final" -> "org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" ; 
+[INFO] 	"com.alibaba:fastjson:jar:2.0.4:compile" -> "com.alibaba.fastjson2:fastjson2-extension:jar:2.0.4:compile" ; 
+[INFO] 	"com.alibaba:fastjson:jar:2.0.4:compile" -> "org.json:json:jar:20220320:compile" ; 
+[INFO] 	"com.alibaba.fastjson2:fastjson2-extension:jar:2.0.4:compile" -> "com.alibaba.fastjson2:fastjson2:jar:2.0.4:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.8.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework.boot:spring-boot-starter:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework.boot:spring-boot-test:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "com.jayway.jsonpath:json-path:jar:2.6.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.assertj:assertj-core:jar:3.21.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.mockito:mockito-core:jar:4.0.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.mockito:mockito-junit-jupiter:jar:4.0.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework:spring-core:jar:5.3.24:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework:spring-test:jar:5.3.24:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.xmlunit:xmlunit-core:jar:2.8.4:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:test" -> "org.springframework.boot:spring-boot:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:test" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:test" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:test" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:test" -> "org.yaml:snakeyaml:jar:1.29:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.6.14:test" -> "org.springframework:spring-context:jar:5.3.24:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.24:test" -> "org.springframework:spring-aop:jar:5.3.24:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.24:test" -> "org.springframework:spring-beans:jar:5.3.24:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.24:test" -> "org.springframework:spring-expression:jar:5.3.24:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.14:test" -> "ch.qos.logback:logback-classic:jar:1.2.11:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.14:test" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.14:test" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.11:test" -> "ch.qos.logback:logback-core:jar:1.2.11:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:test" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.6.0:test" -> "net.minidev:json-smart:jar:2.4.7:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.6.0:test" -> "org.slf4j:slf4j-api:jar:1.7.25:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.7:test" -> "net.minidev:accessors-smart:jar:2.4.7:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.7:test" -> "org.ow2.asm:asm:jar:9.1:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "net.bytebuddy:byte-buddy:jar:1.10.20:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.10.20:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.24:test" -> "org.springframework:spring-jcl:jar:5.3.24:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.dromara:northstar-strategy-example >---------------
+[INFO] Building northstar-strategy-example 6.2.2.Final                    [8/9]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ northstar-strategy-example ---
+[INFO] digraph "org.dromara:northstar-strategy-example:jar:6.2.2.Final" { 
+[INFO] 	"org.dromara:northstar-strategy-example:jar:6.2.2.Final" -> "org.dromara:northstar-api:jar:6.2.2.Final:compile" ; 
+[INFO] 	"org.dromara:northstar-strategy-example:jar:6.2.2.Final" -> "org.junit.jupiter:junit-jupiter:jar:5.8.2:test" ; 
+[INFO] 	"org.dromara:northstar-strategy-example:jar:6.2.2.Final" -> "org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final:compile" -> "org.projectlombok:lombok:jar:1.18.26:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final:compile" -> "org.slf4j:slf4j-api:jar:1.7.25:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final:compile" -> "cn.hutool:hutool-core:jar:5.7.22:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final:compile" -> "com.alibaba:fastjson:jar:2.0.4:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final:compile" -> "com.lmax:disruptor:jar:3.4.2:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final:compile" -> "org.apache.commons:commons-math3:jar:3.6.1:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final:compile" -> "com.google.protobuf:protobuf-java:jar:3.19.1:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final:compile" -> "com.google.protobuf:protobuf-java-util:jar:3.19.1:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final:compile" -> "org.apache.commons:commons-lang3:jar:3.7:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final:compile" -> "commons-io:commons-io:jar:2.6:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.6.14:compile" ; 
+[INFO] 	"org.dromara:northstar-api:jar:6.2.2.Final:compile" -> "com.googlecode.protobuf-java-format:protobuf-java-format:jar:1.4:compile" ; 
+[INFO] 	"com.alibaba:fastjson:jar:2.0.4:compile" -> "com.alibaba.fastjson2:fastjson2-extension:jar:2.0.4:compile" ; 
+[INFO] 	"com.alibaba:fastjson:jar:2.0.4:compile" -> "org.json:json:jar:20220320:compile" ; 
+[INFO] 	"com.alibaba.fastjson2:fastjson2-extension:jar:2.0.4:compile" -> "com.alibaba.fastjson2:fastjson2:jar:2.0.4:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.19.1:compile" -> "com.google.guava:guava:jar:30.1-jre:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.19.1:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.5.1:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.19.1:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.19.1:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.protobuf:protobuf-java-util:jar:3.19.1:compile" -> "com.google.code.gson:gson:jar:2.8.6:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.5.0:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:compile" -> "org.springframework.boot:spring-boot:jar:2.6.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.6.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.6.14:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.6.14:compile" -> "org.yaml:snakeyaml:jar:1.29:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.6.14:compile" -> "org.springframework:spring-context:jar:5.3.24:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.24:compile" -> "org.springframework:spring-aop:jar:5.3.24:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.24:compile" -> "org.springframework:spring-beans:jar:5.3.24:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.24:compile" -> "org.springframework:spring-expression:jar:5.3.24:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.14:compile" -> "ch.qos.logback:logback-classic:jar:1.2.11:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.14:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.6.14:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.11:compile" -> "ch.qos.logback:logback-core:jar:1.2.11:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.8.2:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.8.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.8.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework.boot:spring-boot-test:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.6.14:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "com.jayway.jsonpath:json-path:jar:2.6.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.assertj:assertj-core:jar:3.21.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.mockito:mockito-core:jar:4.0.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.mockito:mockito-junit-jupiter:jar:4.0.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework:spring-core:jar:5.3.24:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.springframework:spring-test:jar:5.3.24:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.6.14:test" -> "org.xmlunit:xmlunit-core:jar:2.8.4:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.6.0:test" -> "net.minidev:json-smart:jar:2.4.7:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.7:test" -> "net.minidev:accessors-smart:jar:2.4.7:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.7:test" -> "org.ow2.asm:asm:jar:9.1:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "net.bytebuddy:byte-buddy:jar:1.10.20:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.10.20:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.24:compile" -> "org.springframework:spring-jcl:jar:5.3.24:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< org.dromara:northstar-main >---------------------
+[INFO] Building northstar-main 6.2.2.Final                                [9/9]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/dromara/northstar-gateway-sim/6.2.2.Final/northstar-gateway-sim-6.2.2.Final.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/dromara/northstar-gateway-playback/6.2.2.Final/northstar-gateway-playback-6.2.2.Final.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/dromara/northstar-strategy-example/6.2.2.Final/northstar-strategy-example-6.2.2.Final.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for northstar 6.2.2.Final:
+[INFO] 
+[INFO] northstar .......................................... SUCCESS [  5.131 s]
+[INFO] northstar-external-archetype ....................... SUCCESS [  0.643 s]
+[INFO] northstar-monitor .................................. SUCCESS [  0.100 s]
+[INFO] northstar-api ...................................... SUCCESS [  0.348 s]
+[INFO] northstar-gateway-sim .............................. SUCCESS [  0.101 s]
+[INFO] northstar-gateway-playback ......................... SUCCESS [  0.237 s]
+[INFO] northstar-rl ....................................... SUCCESS [  0.079 s]
+[INFO] northstar-strategy-example ......................... SUCCESS [  0.123 s]
+[INFO] northstar-main ..................................... FAILURE [  1.896 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.539 s
+[INFO] Finished at: 2023-12-28T09:02:42+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project northstar-main: Could not resolve dependencies for project org.dromara:northstar-main:jar:6.2.2.Final: The following artifacts could not be resolved: org.dromara:northstar-gateway-sim:jar:6.2.2.Final, org.dromara:northstar-gateway-playback:jar:6.2.2.Final, org.dromara:northstar-strategy-example:jar:6.2.2.Final: Could not find artifact org.dromara:northstar-gateway-sim:jar:6.2.2.Final in central (https://repo.maven.apache.org/maven2) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :northstar-main

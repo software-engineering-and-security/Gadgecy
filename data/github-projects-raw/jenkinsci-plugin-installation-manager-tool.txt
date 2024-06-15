@@ -1,0 +1,180 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] plugin-management-parent-pom                                       [pom]
+[INFO] plugin-management-library                                          [jar]
+[INFO] plugin-management-cli                                              [jar]
+[INFO] 
+[INFO] -----< io.jenkins.plugin-management:plugin-management-parent-pom >------
+[INFO] Building plugin-management-parent-pom 2.12.14-SNAPSHOT             [1/3]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ plugin-management-parent-pom ---
+[INFO] digraph "io.jenkins.plugin-management:plugin-management-parent-pom:pom:2.12.14-SNAPSHOT" { 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-parent-pom:pom:2.12.14-SNAPSHOT" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-parent-pom:pom:2.12.14-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-parent-pom:pom:2.12.14-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-parent-pom:pom:2.12.14-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.6.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.6.0:test" -> "net.bytebuddy:byte-buddy:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.6.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.8:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.6.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------< io.jenkins.plugin-management:plugin-management-library >-------
+[INFO] Building plugin-management-library 2.12.14-SNAPSHOT                [2/3]
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The artifact com.github.tomakehurst:wiremock-jre8:jar:3.0.1 has been relocated to org.wiremock:wiremock:jar:3.0.1
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ plugin-management-library ---
+[WARNING] The artifact com.github.tomakehurst:wiremock-jre8:jar:3.0.1 has been relocated to org.wiremock:wiremock:jar:3.0.1
+[INFO] digraph "io.jenkins.plugin-management:plugin-management-library:jar:2.12.14-SNAPSHOT" { 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-library:jar:2.12.14-SNAPSHOT" -> "org.jenkins-ci:version-number:jar:1.11:compile" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-library:jar:2.12.14-SNAPSHOT" -> "commons-io:commons-io:jar:2.15.1:compile" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-library:jar:2.12.14-SNAPSHOT" -> "org.apache.commons:commons-lang3:jar:3.14.0:compile" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-library:jar:2.12.14-SNAPSHOT" -> "commons-validator:commons-validator:jar:1.7:compile" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-library:jar:2.12.14-SNAPSHOT" -> "org.apache.httpcomponents:httpclient:jar:4.5.14:compile" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-library:jar:2.12.14-SNAPSHOT" -> "commons-codec:commons-codec:jar:1.16.0:compile" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-library:jar:2.12.14-SNAPSHOT" -> "org.json:json:jar:20231013:compile" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-library:jar:2.12.14-SNAPSHOT" -> "com.github.stefanbirkner:system-lambda:jar:1.2.1:test" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-library:jar:2.12.14-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-library:jar:2.12.14-SNAPSHOT" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.16.0:compile" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-library:jar:2.12.14-SNAPSHOT" -> "org.yaml:snakeyaml:jar:2.2:compile" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-library:jar:2.12.14-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.8.0:compile" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-library:jar:2.12.14-SNAPSHOT" -> "org.wiremock:wiremock:jar:3.0.1:test" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-library:jar:2.12.14-SNAPSHOT" -> "com.github.stefanbirkner:system-rules:jar:1.19.0:test" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-library:jar:2.12.14-SNAPSHOT" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-library:jar:2.12.14-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-library:jar:2.12.14-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-library:jar:2.12.14-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.6.0:test" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:compile" -> "commons-beanutils:commons-beanutils:jar:1.9.4:compile" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:compile" -> "commons-digester:commons-digester:jar:2.1:compile" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:compile" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.14:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.16:compile" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.14.10:test" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:compile" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:4.8.0:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"org.wiremock:wiremock:jar:3.0.1:test" -> "org.eclipse.jetty:jetty-server:jar:11.0.15:test" ; 
+[INFO] 	"org.wiremock:wiremock:jar:3.0.1:test" -> "org.eclipse.jetty:jetty-servlet:jar:11.0.15:test" ; 
+[INFO] 	"org.wiremock:wiremock:jar:3.0.1:test" -> "org.eclipse.jetty:jetty-servlets:jar:11.0.15:test" ; 
+[INFO] 	"org.wiremock:wiremock:jar:3.0.1:test" -> "org.eclipse.jetty:jetty-webapp:jar:11.0.15:test" ; 
+[INFO] 	"org.wiremock:wiremock:jar:3.0.1:test" -> "org.eclipse.jetty:jetty-proxy:jar:11.0.15:test" ; 
+[INFO] 	"org.wiremock:wiremock:jar:3.0.1:test" -> "org.eclipse.jetty.http2:http2-server:jar:11.0.15:test" ; 
+[INFO] 	"org.wiremock:wiremock:jar:3.0.1:test" -> "org.eclipse.jetty:jetty-alpn-server:jar:11.0.15:test" ; 
+[INFO] 	"org.wiremock:wiremock:jar:3.0.1:test" -> "org.eclipse.jetty:jetty-alpn-java-server:jar:11.0.15:test" ; 
+[INFO] 	"org.wiremock:wiremock:jar:3.0.1:test" -> "org.eclipse.jetty:jetty-alpn-java-client:jar:11.0.15:test" ; 
+[INFO] 	"org.wiremock:wiremock:jar:3.0.1:test" -> "org.eclipse.jetty:jetty-alpn-client:jar:11.0.15:test" ; 
+[INFO] 	"org.wiremock:wiremock:jar:3.0.1:test" -> "com.google.guava:guava:jar:32.1.2-jre:test" ; 
+[INFO] 	"org.wiremock:wiremock:jar:3.0.1:test" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.15.2:test" ; 
+[INFO] 	"org.wiremock:wiremock:jar:3.0.1:test" -> "org.apache.httpcomponents.client5:httpclient5:jar:5.2.1:test" ; 
+[INFO] 	"org.wiremock:wiremock:jar:3.0.1:test" -> "org.xmlunit:xmlunit-core:jar:2.9.1:test" ; 
+[INFO] 	"org.wiremock:wiremock:jar:3.0.1:test" -> "org.xmlunit:xmlunit-legacy:jar:2.9.1:test" ; 
+[INFO] 	"org.wiremock:wiremock:jar:3.0.1:test" -> "org.xmlunit:xmlunit-placeholders:jar:2.9.1:test" ; 
+[INFO] 	"org.wiremock:wiremock:jar:3.0.1:test" -> "net.javacrumbs.json-unit:json-unit-core:jar:2.38.0:test" ; 
+[INFO] 	"org.wiremock:wiremock:jar:3.0.1:test" -> "com.jayway.jsonpath:json-path:jar:2.8.0:test" ; 
+[INFO] 	"org.wiremock:wiremock:jar:3.0.1:test" -> "org.ow2.asm:asm:jar:9.5:test" ; 
+[INFO] 	"org.wiremock:wiremock:jar:3.0.1:test" -> "net.sf.jopt-simple:jopt-simple:jar:5.0.4:test" ; 
+[INFO] 	"org.wiremock:wiremock:jar:3.0.1:test" -> "com.github.jknack:handlebars:jar:4.3.1:test" ; 
+[INFO] 	"org.wiremock:wiremock:jar:3.0.1:test" -> "com.github.jknack:handlebars-helpers:jar:4.3.1:test" ; 
+[INFO] 	"org.wiremock:wiremock:jar:3.0.1:test" -> "commons-fileupload:commons-fileupload:jar:1.5:test" ; 
+[INFO] 	"org.wiremock:wiremock:jar:3.0.1:test" -> "com.networknt:json-schema-validator:jar:1.0.86:test" ; 
+[INFO] 	"org.wiremock:wiremock:jar:3.0.1:test" -> "org.slf4j:slf4j-api:jar:1.7.36:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:11.0.15:test" -> "org.eclipse.jetty.toolchain:jetty-jakarta-servlet-api:jar:5.0.2:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:11.0.15:test" -> "org.eclipse.jetty:jetty-http:jar:11.0.15:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:11.0.15:test" -> "org.eclipse.jetty:jetty-io:jar:11.0.15:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:11.0.15:test" -> "org.eclipse.jetty:jetty-security:jar:11.0.15:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:11.0.15:test" -> "org.eclipse.jetty:jetty-util:jar:11.0.15:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-webapp:jar:11.0.15:test" -> "org.eclipse.jetty:jetty-xml:jar:11.0.15:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-proxy:jar:11.0.15:test" -> "org.eclipse.jetty:jetty-client:jar:11.0.15:test" ; 
+[INFO] 	"org.eclipse.jetty.http2:http2-server:jar:11.0.15:test" -> "org.eclipse.jetty.http2:http2-common:jar:11.0.15:test" ; 
+[INFO] 	"org.eclipse.jetty.http2:http2-common:jar:11.0.15:test" -> "org.eclipse.jetty.http2:http2-hpack:jar:11.0.15:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.2-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.2-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.2-jre:test" -> "org.checkerframework:checker-qual:jar:3.33.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.2-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.18.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.2-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:2.8:test" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.1:test" -> "org.apache.httpcomponents.core5:httpcore5:jar:5.2:test" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.1:test" -> "org.apache.httpcomponents.core5:httpcore5-h2:jar:5.2:test" ; 
+[INFO] 	"org.xmlunit:xmlunit-core:jar:2.9.1:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:test" ; 
+[INFO] 	"net.javacrumbs.json-unit:json-unit-core:jar:2.38.0:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.8.0:test" -> "net.minidev:json-smart:jar:2.4.10:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.10:test" -> "net.minidev:accessors-smart:jar:2.4.9:test" ; 
+[INFO] 	"com.networknt:json-schema-validator:jar:1.0.86:test" -> "com.ethlo.time:itu:jar:1.7.0:test" ; 
+[INFO] 	"com.github.stefanbirkner:system-rules:jar:1.19.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.6.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.8:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.6.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------< io.jenkins.plugin-management:plugin-management-cli >---------
+[INFO] Building plugin-management-cli 2.12.14-SNAPSHOT                    [3/3]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/io/jenkins/plugin-management/plugin-management-library/2.12.14-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ plugin-management-cli ---
+[INFO] digraph "io.jenkins.plugin-management:plugin-management-cli:jar:2.12.14-SNAPSHOT" { 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-cli:jar:2.12.14-SNAPSHOT" -> "io.jenkins.plugin-management:plugin-management-library:jar:2.12.14-SNAPSHOT:compile" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-cli:jar:2.12.14-SNAPSHOT" -> "args4j:args4j:jar:2.33:compile" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-cli:jar:2.12.14-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.8.0:compile" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-cli:jar:2.12.14-SNAPSHOT" -> "com.github.stefanbirkner:system-lambda:jar:1.2.1:test" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-cli:jar:2.12.14-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-cli:jar:2.12.14-SNAPSHOT" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-cli:jar:2.12.14-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-cli:jar:2.12.14-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-cli:jar:2.12.14-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.6.0:test" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-library:jar:2.12.14-SNAPSHOT:compile" -> "org.jenkins-ci:version-number:jar:1.11:compile" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-library:jar:2.12.14-SNAPSHOT:compile" -> "commons-io:commons-io:jar:2.15.1:compile" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-library:jar:2.12.14-SNAPSHOT:compile" -> "org.apache.commons:commons-lang3:jar:3.14.0:compile" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-library:jar:2.12.14-SNAPSHOT:compile" -> "commons-validator:commons-validator:jar:1.7:compile" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-library:jar:2.12.14-SNAPSHOT:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.14:compile" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-library:jar:2.12.14-SNAPSHOT:compile" -> "commons-codec:commons-codec:jar:1.16.0:compile" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-library:jar:2.12.14-SNAPSHOT:compile" -> "org.json:json:jar:20231013:compile" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-library:jar:2.12.14-SNAPSHOT:compile" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.16.0:compile" ; 
+[INFO] 	"io.jenkins.plugin-management:plugin-management-library:jar:2.12.14-SNAPSHOT:compile" -> "org.yaml:snakeyaml:jar:2.2:compile" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:compile" -> "commons-beanutils:commons-beanutils:jar:1.9.4:compile" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:compile" -> "commons-digester:commons-digester:jar:2.1:compile" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:compile" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.14:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.16:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:compile" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:4.8.0:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.14.10:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.6.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.8:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.6.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for plugin-management-parent-pom 2.12.14-SNAPSHOT:
+[INFO] 
+[INFO] plugin-management-parent-pom ....................... SUCCESS [  6.629 s]
+[INFO] plugin-management-library .......................... SUCCESS [  2.014 s]
+[INFO] plugin-management-cli .............................. SUCCESS [  3.431 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.573 s
+[INFO] Finished at: 2023-12-28T09:03:08+01:00
+[INFO] ------------------------------------------------------------------------

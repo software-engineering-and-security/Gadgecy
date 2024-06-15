@@ -1,0 +1,858 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] parent-all                                                         [pom]
+[INFO] shaders                                                            [pom]
+[INFO] checkstyle-config                                                  [jar]
+[INFO] parent-checkstyle                                                  [pom]
+[INFO] zip-helper                                                         [jar]
+[INFO] assembly-binaries                                                  [pom]
+[INFO] test-util                                                          [jar]
+[INFO] util                                                               [jar]
+[INFO] ast                                                                [jar]
+[INFO] thrift                                                             [pom]
+[INFO] server-thrift-gen                                                  [jar]
+[INFO] fuzzerserver                                                       [jar]
+[INFO] alphanum-comparator                                                [jar]
+[INFO] compare-asts                                                       [jar]
+[INFO] gif-sequence-writer                                                [jar]
+[INFO] common                                                             [jar]
+[INFO] reducer                                                            [jar]
+[INFO] server                                                             [jar]
+[INFO] client-tests                                                       [jar]
+[INFO] generator                                                          [jar]
+[INFO] gles-worker-dependencies                                           [jar]
+[INFO] tool                                                               [jar]
+[INFO] python                                                             [pom]
+[INFO] thrift-py                                                          [pom]
+[INFO] thrift-js                                                          [pom]
+[INFO] server-static-public                                               [pom]
+[INFO] tester                                                             [jar]
+[INFO] semantic-ui                                                        [pom]
+[INFO] jquery-js                                                          [pom]
+[INFO] python-six                                                         [pom]
+[INFO] graphicsfuzz                                                       [pom]
+[INFO] server-public                                                      [jar]
+[INFO] graphicsfuzz-root                                                  [pom]
+[INFO] 
+[INFO] --------------------< com.graphicsfuzz:parent-all >---------------------
+[INFO] Building parent-all 1.0                                           [1/33]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ parent-all ---
+[INFO] digraph "com.graphicsfuzz:parent-all:pom:1.0" { 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< com.graphicsfuzz:shaders >----------------------
+[INFO] Building shaders 1.0                                              [2/33]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ shaders ---
+[INFO] digraph "com.graphicsfuzz:shaders:pom:1.0" { 
+[INFO] 	"com.graphicsfuzz:shaders:pom:1.0" -> "ant-contrib:ant-contrib:jar:1.0b3:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< com.graphicsfuzz:checkstyle-config >-----------------
+[INFO] Building checkstyle-config 1.0                                    [3/33]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ checkstyle-config ---
+[INFO] digraph "com.graphicsfuzz:checkstyle-config:jar:1.0" { 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< com.graphicsfuzz:parent-checkstyle >-----------------
+[INFO] Building parent-checkstyle 1.0                                    [4/33]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ parent-checkstyle ---
+[INFO] digraph "com.graphicsfuzz:parent-checkstyle:pom:1.0" { 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< com.graphicsfuzz:zip-helper >---------------------
+[INFO] Building zip-helper 1.0                                           [5/33]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ zip-helper ---
+[INFO] digraph "com.graphicsfuzz:zip-helper:jar:1.0" { 
+[INFO] 	"com.graphicsfuzz:zip-helper:jar:1.0" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:zip-helper:jar:1.0" -> "org.apache.commons:commons-compress:jar:1.21:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< com.graphicsfuzz:assembly-binaries >-----------------
+[INFO] Building assembly-binaries 1.0                                    [6/33]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ assembly-binaries ---
+[INFO] Downloading from build-angle: https://github.com/paulthomson/build-angle/releases/download/com/graphicsfuzz/shaders/1.0/shaders-1.0.zip
+[INFO] Downloading from build-swiftshader: https://github.com/paulthomson/build-swiftshader/releases/download/com/graphicsfuzz/shaders/1.0/shaders-1.0.zip
+[INFO] Downloading from build-glslang: https://github.com/paulthomson/build-glslang/releases/download/com/graphicsfuzz/shaders/1.0/shaders-1.0.zip
+[INFO] Downloading from get-image-glsl: https://github.com/mc-imperial/get-image-glsl/releases/download/com/graphicsfuzz/shaders/1.0/shaders-1.0.zip
+[INFO] Downloading from gfbuild-SPIRV-Tools: https://github.com/google/gfbuild-SPIRV-Tools/releases/download/com/graphicsfuzz/shaders/1.0/shaders-1.0.zip
+[INFO] Downloading from jitpack.io: https://www.jitpack.io/com/graphicsfuzz/shaders/1.0/shaders-1.0.zip
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/graphicsfuzz/shaders/1.0/shaders-1.0.zip
+[INFO] digraph "com.graphicsfuzz:assembly-binaries:pom:1.0" { 
+[INFO] 	"com.graphicsfuzz:assembly-binaries:pom:1.0" -> "github.paulthomson:build-angle:zip:Linux_x64_Release:9d3202492d78aae5ced08ff14679b81c98d71c15:compile" ; 
+[INFO] 	"com.graphicsfuzz:assembly-binaries:pom:1.0" -> "github.paulthomson:build-angle:zip:Mac_x64_Release:9d3202492d78aae5ced08ff14679b81c98d71c15:compile" ; 
+[INFO] 	"com.graphicsfuzz:assembly-binaries:pom:1.0" -> "github.paulthomson:build-angle:zip:Windows_x64_Release:9d3202492d78aae5ced08ff14679b81c98d71c15:compile" ; 
+[INFO] 	"com.graphicsfuzz:assembly-binaries:pom:1.0" -> "github.paulthomson:build-swiftshader:zip:Linux_x64_Release:0565d5aee279a4782689297ada0aa2489e24ad3e:compile" ; 
+[INFO] 	"com.graphicsfuzz:assembly-binaries:pom:1.0" -> "github.paulthomson:build-swiftshader:zip:Mac_x64_Release:0565d5aee279a4782689297ada0aa2489e24ad3e:compile" ; 
+[INFO] 	"com.graphicsfuzz:assembly-binaries:pom:1.0" -> "github.paulthomson:build-swiftshader:zip:Windows_x64_Release:0565d5aee279a4782689297ada0aa2489e24ad3e:compile" ; 
+[INFO] 	"com.graphicsfuzz:assembly-binaries:pom:1.0" -> "github.paulthomson:build-glslang:zip:Linux_x64_Release:0f167ce7125795df62ae5893f553e5608c9652f4:compile" ; 
+[INFO] 	"com.graphicsfuzz:assembly-binaries:pom:1.0" -> "github.paulthomson:build-glslang:zip:Mac_x64_Release:0f167ce7125795df62ae5893f553e5608c9652f4:compile" ; 
+[INFO] 	"com.graphicsfuzz:assembly-binaries:pom:1.0" -> "github.paulthomson:build-glslang:zip:Windows_x64_Release:0f167ce7125795df62ae5893f553e5608c9652f4:compile" ; 
+[INFO] 	"com.graphicsfuzz:assembly-binaries:pom:1.0" -> "github.mc-imperial:get-image-glsl:zip:Linux_x64_Release:d987dc0e5f8aeae0dc2f5aac2013e9a3edd54465:compile" ; 
+[INFO] 	"com.graphicsfuzz:assembly-binaries:pom:1.0" -> "github.mc-imperial:get-image-glsl:zip:Mac_x64_Release:d987dc0e5f8aeae0dc2f5aac2013e9a3edd54465:compile" ; 
+[INFO] 	"com.graphicsfuzz:assembly-binaries:pom:1.0" -> "github.mc-imperial:get-image-glsl:zip:Windows_x64_Release:d987dc0e5f8aeae0dc2f5aac2013e9a3edd54465:compile" ; 
+[INFO] 	"com.graphicsfuzz:assembly-binaries:pom:1.0" -> "github.google:gfbuild-SPIRV-Tools:zip:Linux_x64_Release:bd2a9ea85210d3bb474bc5adb9ff4b0bb536b4fc:compile" ; 
+[INFO] 	"com.graphicsfuzz:assembly-binaries:pom:1.0" -> "github.google:gfbuild-SPIRV-Tools:zip:Mac_x64_Release:bd2a9ea85210d3bb474bc5adb9ff4b0bb536b4fc:compile" ; 
+[INFO] 	"com.graphicsfuzz:assembly-binaries:pom:1.0" -> "github.google:gfbuild-SPIRV-Tools:zip:Windows_x64_Release:bd2a9ea85210d3bb474bc5adb9ff4b0bb536b4fc:compile" ; 
+[INFO] 	"com.graphicsfuzz:assembly-binaries:pom:1.0" -> "com.graphicsfuzz:shaders:zip:1.0:provided" ; 
+[INFO] 	"com.graphicsfuzz:assembly-binaries:pom:1.0" -> "ant-contrib:ant-contrib:jar:1.0b3:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< com.graphicsfuzz:test-util >---------------------
+[INFO] Building test-util 1.0                                            [7/33]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ test-util ---
+[INFO] digraph "com.graphicsfuzz:test-util:jar:1.0" { 
+[INFO] 	"com.graphicsfuzz:test-util:jar:1.0" -> "junit:junit:jar:4.13.2:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:compile" -> "org.hamcrest:hamcrest-core:jar:1.3:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------------< com.graphicsfuzz:util >------------------------
+[INFO] Building util 1.0                                                 [8/33]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ util ---
+[INFO] digraph "com.graphicsfuzz:util:jar:1.0" { 
+[INFO] 	"com.graphicsfuzz:util:jar:1.0" -> "org.slf4j:slf4j-api:jar:1.7.32:compile" ; 
+[INFO] 	"com.graphicsfuzz:util:jar:1.0" -> "net.sourceforge.argparse4j:argparse4j:jar:0.8.1:compile" ; 
+[INFO] 	"com.graphicsfuzz:util:jar:1.0" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:util:jar:1.0" -> "org.apache.commons:commons-rng-simple:jar:1.4:compile" ; 
+[INFO] 	"org.apache.commons:commons-rng-simple:jar:1.4:compile" -> "org.apache.commons:commons-rng-core:jar:1.4:compile" ; 
+[INFO] 	"org.apache.commons:commons-rng-core:jar:1.4:compile" -> "org.apache.commons:commons-rng-client-api:jar:1.4:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------------< com.graphicsfuzz:ast >------------------------
+[INFO] Building ast 1.0                                                  [9/33]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ ast ---
+[INFO] Downloading from jitpack.io: https://www.jitpack.io/com/graphicsfuzz/test-util/1.0/test-util-1.0.jar
+[INFO] Downloading from jitpack.io: https://www.jitpack.io/com/graphicsfuzz/util/1.0/util-1.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/graphicsfuzz/test-util/1.0/test-util-1.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/graphicsfuzz/util/1.0/util-1.0.jar
+[INFO] digraph "com.graphicsfuzz:ast:jar:1.0" { 
+[INFO] 	"com.graphicsfuzz:ast:jar:1.0" -> "com.graphicsfuzz:test-util:jar:1.0:test" ; 
+[INFO] 	"com.graphicsfuzz:ast:jar:1.0" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.graphicsfuzz:ast:jar:1.0" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:test" ; 
+[INFO] 	"com.graphicsfuzz:ast:jar:1.0" -> "org.apache.logging.log4j:log4j-core:jar:2.17.1:test" ; 
+[INFO] 	"com.graphicsfuzz:ast:jar:1.0" -> "com.graphicsfuzz:util:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:ast:jar:1.0" -> "org.antlr:antlr4-runtime:jar:4.9.1:compile" ; 
+[INFO] 	"com.graphicsfuzz:ast:jar:1.0" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:ast:jar:1.0" -> "net.sourceforge.argparse4j:argparse4j:jar:0.8.1:compile" ; 
+[INFO] 	"com.graphicsfuzz:ast:jar:1.0" -> "org.apache.commons:commons-lang3:jar:3.1:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:test" -> "org.slf4j:slf4j-api:jar:1.7.32:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:test" -> "org.apache.logging.log4j:log4j-api:jar:2.17.1:test" ; 
+[INFO] 	"com.graphicsfuzz:util:jar:1.0:compile" -> "org.apache.commons:commons-rng-simple:jar:1.4:compile" ; 
+[INFO] 	"org.apache.commons:commons-rng-simple:jar:1.4:compile" -> "org.apache.commons:commons-rng-core:jar:1.4:compile" ; 
+[INFO] 	"org.apache.commons:commons-rng-core:jar:1.4:compile" -> "org.apache.commons:commons-rng-client-api:jar:1.4:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< com.graphicsfuzz:thrift >-----------------------
+[INFO] Building thrift 1.0                                              [10/33]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ thrift ---
+[INFO] digraph "com.graphicsfuzz:thrift:pom:1.0" { 
+[INFO] 	"com.graphicsfuzz:thrift:pom:1.0" -> "com.github.mc-imperial:thrift-compiler-binary:zip:6e3ee39:provided" ; 
+[INFO] 	"com.graphicsfuzz:thrift:pom:1.0" -> "ant-contrib:ant-contrib:jar:1.0b3:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< com.graphicsfuzz:server-thrift-gen >-----------------
+[INFO] Building server-thrift-gen 1.0                                   [11/33]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ server-thrift-gen ---
+[INFO] Downloading from jitpack.io: https://www.jitpack.io/com/graphicsfuzz/thrift/1.0/thrift-1.0-java.zip
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/graphicsfuzz/thrift/1.0/thrift-1.0-java.zip
+[INFO] digraph "com.graphicsfuzz:server-thrift-gen:jar:1.0" { 
+[INFO] 	"com.graphicsfuzz:server-thrift-gen:jar:1.0" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.graphicsfuzz:server-thrift-gen:jar:1.0" -> "org.apache.thrift:libthrift:jar:0.13.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:server-thrift-gen:jar:1.0" -> "ant-contrib:ant-contrib:jar:1.0b3:provided" ; 
+[INFO] 	"com.graphicsfuzz:server-thrift-gen:jar:1.0" -> "com.graphicsfuzz:thrift:zip:java:1.0:provided" ; 
+[INFO] 	"com.graphicsfuzz:server-thrift-gen:jar:1.0" -> "org.slf4j:slf4j-api:jar:1.7.32:compile" ; 
+[INFO] 	"com.graphicsfuzz:server-thrift-gen:jar:1.0" -> "javax.annotation:javax.annotation-api:jar:1.3.2:provided" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< com.graphicsfuzz:fuzzerserver >--------------------
+[INFO] Building fuzzerserver 1.0                                        [12/33]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ fuzzerserver ---
+[INFO] Downloading from jitpack.io: https://www.jitpack.io/com/graphicsfuzz/server-thrift-gen/1.0/server-thrift-gen-1.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/graphicsfuzz/server-thrift-gen/1.0/server-thrift-gen-1.0.jar
+[INFO] digraph "com.graphicsfuzz:fuzzerserver:jar:1.0" { 
+[INFO] 	"com.graphicsfuzz:fuzzerserver:jar:1.0" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.graphicsfuzz:fuzzerserver:jar:1.0" -> "com.graphicsfuzz:server-thrift-gen:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:fuzzerserver:jar:1.0" -> "org.slf4j:slf4j-api:jar:1.7.32:compile" ; 
+[INFO] 	"com.graphicsfuzz:fuzzerserver:jar:1.0" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:test" ; 
+[INFO] 	"com.graphicsfuzz:fuzzerserver:jar:1.0" -> "org.apache.logging.log4j:log4j-core:jar:2.17.1:test" ; 
+[INFO] 	"com.graphicsfuzz:fuzzerserver:jar:1.0" -> "com.google.code.gson:gson:jar:2.8.6:compile" ; 
+[INFO] 	"com.graphicsfuzz:fuzzerserver:jar:1.0" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:fuzzerserver:jar:1.0" -> "com.graphicsfuzz:util:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:fuzzerserver:jar:1.0" -> "javax.servlet:javax.servlet-api:jar:4.0.1:compile" ; 
+[INFO] 	"com.graphicsfuzz:fuzzerserver:jar:1.0" -> "org.apache.thrift:libthrift:jar:0.13.0:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:test" -> "org.apache.logging.log4j:log4j-api:jar:2.17.1:test" ; 
+[INFO] 	"com.graphicsfuzz:util:jar:1.0:compile" -> "net.sourceforge.argparse4j:argparse4j:jar:0.8.1:compile" ; 
+[INFO] 	"com.graphicsfuzz:util:jar:1.0:compile" -> "org.apache.commons:commons-rng-simple:jar:1.4:compile" ; 
+[INFO] 	"org.apache.commons:commons-rng-simple:jar:1.4:compile" -> "org.apache.commons:commons-rng-core:jar:1.4:compile" ; 
+[INFO] 	"org.apache.commons:commons-rng-core:jar:1.4:compile" -> "org.apache.commons:commons-rng-client-api:jar:1.4:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.13.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------< com.graphicsfuzz.thirdparty:alphanum-comparator >-----------
+[INFO] Building alphanum-comparator 1.0                                 [13/33]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ alphanum-comparator ---
+[INFO] digraph "com.graphicsfuzz.thirdparty:alphanum-comparator:jar:1.0" { 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< com.graphicsfuzz:compare-asts >--------------------
+[INFO] Building compare-asts 1.0                                        [14/33]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ compare-asts ---
+[INFO] Downloading from jitpack.io: https://www.jitpack.io/com/graphicsfuzz/ast/1.0/ast-1.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/graphicsfuzz/ast/1.0/ast-1.0.jar
+[INFO] digraph "com.graphicsfuzz:compare-asts:jar:1.0" { 
+[INFO] 	"com.graphicsfuzz:compare-asts:jar:1.0" -> "com.graphicsfuzz:ast:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:compare-asts:jar:1.0" -> "junit:junit:jar:4.13.2:compile" ; 
+[INFO] 	"com.graphicsfuzz:ast:jar:1.0:compile" -> "com.graphicsfuzz:util:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:ast:jar:1.0:compile" -> "org.antlr:antlr4-runtime:jar:4.9.1:compile" ; 
+[INFO] 	"com.graphicsfuzz:ast:jar:1.0:compile" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:ast:jar:1.0:compile" -> "net.sourceforge.argparse4j:argparse4j:jar:0.8.1:compile" ; 
+[INFO] 	"com.graphicsfuzz:ast:jar:1.0:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:util:jar:1.0:compile" -> "org.slf4j:slf4j-api:jar:1.7.32:compile" ; 
+[INFO] 	"com.graphicsfuzz:util:jar:1.0:compile" -> "org.apache.commons:commons-rng-simple:jar:1.4:compile" ; 
+[INFO] 	"org.apache.commons:commons-rng-simple:jar:1.4:compile" -> "org.apache.commons:commons-rng-core:jar:1.4:compile" ; 
+[INFO] 	"org.apache.commons:commons-rng-core:jar:1.4:compile" -> "org.apache.commons:commons-rng-client-api:jar:1.4:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:compile" -> "org.hamcrest:hamcrest-core:jar:1.3:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------< com.graphicsfuzz.thirdparty:gif-sequence-writer >-----------
+[INFO] Building gif-sequence-writer 1.0                                 [15/33]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ gif-sequence-writer ---
+[INFO] digraph "com.graphicsfuzz.thirdparty:gif-sequence-writer:jar:1.0" { 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< com.graphicsfuzz:common >-----------------------
+[INFO] Building common 1.0                                              [16/33]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ common ---
+[INFO] Downloading from jitpack.io: https://www.jitpack.io/com/graphicsfuzz/thirdparty/alphanum-comparator/1.0/alphanum-comparator-1.0.jar
+[INFO] Downloading from jitpack.io: https://www.jitpack.io/com/graphicsfuzz/compare-asts/1.0/compare-asts-1.0.jar
+[INFO] Downloading from jitpack.io: https://www.jitpack.io/com/graphicsfuzz/thirdparty/gif-sequence-writer/1.0/gif-sequence-writer-1.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/graphicsfuzz/thirdparty/alphanum-comparator/1.0/alphanum-comparator-1.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/graphicsfuzz/compare-asts/1.0/compare-asts-1.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/graphicsfuzz/thirdparty/gif-sequence-writer/1.0/gif-sequence-writer-1.0.jar
+[INFO] digraph "com.graphicsfuzz:common:jar:1.0" { 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:test" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0" -> "org.apache.logging.log4j:log4j-core:jar:2.17.1:test" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0" -> "org.apache.commons:commons-rng-simple:jar:1.4:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0" -> "org.apache.commons:commons-rng-client-api:jar:1.4:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0" -> "com.google.code.gson:gson:jar:2.8.6:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0" -> "com.graphicsfuzz.thirdparty:alphanum-comparator:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0" -> "com.graphicsfuzz:ast:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0" -> "com.graphicsfuzz:compare-asts:jar:1.0:test" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0" -> "com.graphicsfuzz:test-util:jar:1.0:test" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0" -> "org.slf4j:slf4j-api:jar:1.7.32:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0" -> "com.graphicsfuzz:util:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0" -> "com.graphicsfuzz:server-thrift-gen:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0" -> "com.graphicsfuzz.thirdparty:gif-sequence-writer:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0" -> "org.bytedeco.javacpp-presets:opencv:jar:4.0.1-1.4.4:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0" -> "org.bytedeco:javacpp:jar:1.5.4:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0" -> "org.bytedeco.javacpp-presets:opencv:jar:linux-x86_64:4.0.1-1.4.4:runtime" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0" -> "org.bytedeco.javacpp-presets:opencv:jar:macosx-x86_64:4.0.1-1.4.4:runtime" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0" -> "org.bytedeco.javacpp-presets:opencv:jar:windows-x86_64:4.0.1-1.4.4:runtime" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0" -> "org.apache.thrift:libthrift:jar:0.13.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0" -> "net.sourceforge.argparse4j:argparse4j:jar:0.8.1:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:test" -> "org.apache.logging.log4j:log4j-api:jar:2.17.1:test" ; 
+[INFO] 	"org.apache.commons:commons-rng-simple:jar:1.4:compile" -> "org.apache.commons:commons-rng-core:jar:1.4:compile" ; 
+[INFO] 	"com.graphicsfuzz:ast:jar:1.0:compile" -> "org.antlr:antlr4-runtime:jar:4.9.1:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.14:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.13.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< com.graphicsfuzz:reducer >----------------------
+[INFO] Building reducer 1.0                                             [17/33]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ reducer ---
+[INFO] Downloading from jitpack.io: https://www.jitpack.io/com/graphicsfuzz/common/1.0/common-1.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/graphicsfuzz/common/1.0/common-1.0.jar
+[INFO] digraph "com.graphicsfuzz:reducer:jar:1.0" { 
+[INFO] 	"com.graphicsfuzz:reducer:jar:1.0" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.graphicsfuzz:reducer:jar:1.0" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:test" ; 
+[INFO] 	"com.graphicsfuzz:reducer:jar:1.0" -> "org.apache.logging.log4j:log4j-core:jar:2.17.1:test" ; 
+[INFO] 	"com.graphicsfuzz:reducer:jar:1.0" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:reducer:jar:1.0" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:reducer:jar:1.0" -> "com.graphicsfuzz:common:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:reducer:jar:1.0" -> "com.graphicsfuzz:compare-asts:jar:1.0:test" ; 
+[INFO] 	"com.graphicsfuzz:reducer:jar:1.0" -> "com.graphicsfuzz:ast:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:reducer:jar:1.0" -> "com.graphicsfuzz:util:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:reducer:jar:1.0" -> "org.slf4j:slf4j-api:jar:1.7.32:compile" ; 
+[INFO] 	"com.graphicsfuzz:reducer:jar:1.0" -> "com.graphicsfuzz:server-thrift-gen:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:reducer:jar:1.0" -> "net.sourceforge.argparse4j:argparse4j:jar:0.8.1:compile" ; 
+[INFO] 	"com.graphicsfuzz:reducer:jar:1.0" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:test" -> "org.apache.logging.log4j:log4j-api:jar:2.17.1:test" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.apache.commons:commons-rng-simple:jar:1.4:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.apache.commons:commons-rng-client-api:jar:1.4:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "com.google.code.gson:gson:jar:2.8.6:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "com.graphicsfuzz.thirdparty:alphanum-comparator:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "com.graphicsfuzz.thirdparty:gif-sequence-writer:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.bytedeco.javacpp-presets:opencv:jar:4.0.1-1.4.4:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.bytedeco:javacpp:jar:1.5.4:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.bytedeco.javacpp-presets:opencv:jar:linux-x86_64:4.0.1-1.4.4:runtime" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.bytedeco.javacpp-presets:opencv:jar:macosx-x86_64:4.0.1-1.4.4:runtime" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.bytedeco.javacpp-presets:opencv:jar:windows-x86_64:4.0.1-1.4.4:runtime" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.apache.thrift:libthrift:jar:0.13.0:compile" ; 
+[INFO] 	"org.apache.commons:commons-rng-simple:jar:1.4:compile" -> "org.apache.commons:commons-rng-core:jar:1.4:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.14:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.13.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"com.graphicsfuzz:ast:jar:1.0:compile" -> "org.antlr:antlr4-runtime:jar:4.9.1:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< com.graphicsfuzz:server >-----------------------
+[INFO] Building server 1.0                                              [18/33]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ server ---
+[INFO] Downloading from jitpack.io: https://www.jitpack.io/com/graphicsfuzz/fuzzerserver/1.0/fuzzerserver-1.0.jar
+[INFO] Downloading from jitpack.io: https://www.jitpack.io/com/graphicsfuzz/reducer/1.0/reducer-1.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/graphicsfuzz/fuzzerserver/1.0/fuzzerserver-1.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/graphicsfuzz/reducer/1.0/reducer-1.0.jar
+[INFO] digraph "com.graphicsfuzz:server:jar:1.0" { 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0" -> "com.graphicsfuzz:server-thrift-gen:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0" -> "org.eclipse.jetty:jetty-server:jar:9.4.36.v20210114:compile" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0" -> "org.eclipse.jetty:jetty-servlet:jar:9.4.36.v20210114:compile" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0" -> "org.slf4j:slf4j-api:jar:1.7.32:compile" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:runtime" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0" -> "org.apache.logging.log4j:log4j-core:jar:2.17.1:runtime" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0" -> "com.graphicsfuzz:fuzzerserver:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0" -> "com.graphicsfuzz:reducer:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0" -> "com.graphicsfuzz:util:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0" -> "com.graphicsfuzz:ast:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0" -> "com.graphicsfuzz:common:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0" -> "com.graphicsfuzz.thirdparty:alphanum-comparator:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0" -> "org.apache.thrift:libthrift:jar:0.13.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0" -> "javax.servlet:javax.servlet-api:jar:4.0.1:compile" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0" -> "com.google.code.gson:gson:jar:2.8.6:compile" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0" -> "net.sourceforge.argparse4j:argparse4j:jar:0.8.1:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.36.v20210114:compile" -> "org.eclipse.jetty:jetty-http:jar:9.4.36.v20210114:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.36.v20210114:compile" -> "org.eclipse.jetty:jetty-io:jar:9.4.36.v20210114:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-http:jar:9.4.36.v20210114:compile" -> "org.eclipse.jetty:jetty-util:jar:9.4.36.v20210114:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.36.v20210114:compile" -> "org.eclipse.jetty:jetty-security:jar:9.4.36.v20210114:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.36.v20210114:compile" -> "org.eclipse.jetty:jetty-util-ajax:jar:9.4.36.v20210114:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:runtime" -> "org.apache.logging.log4j:log4j-api:jar:2.17.1:runtime" ; 
+[INFO] 	"com.graphicsfuzz:reducer:jar:1.0:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:reducer:jar:1.0:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"com.graphicsfuzz:util:jar:1.0:compile" -> "org.apache.commons:commons-rng-simple:jar:1.4:compile" ; 
+[INFO] 	"org.apache.commons:commons-rng-simple:jar:1.4:compile" -> "org.apache.commons:commons-rng-core:jar:1.4:compile" ; 
+[INFO] 	"com.graphicsfuzz:ast:jar:1.0:compile" -> "org.antlr:antlr4-runtime:jar:4.9.1:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.apache.commons:commons-rng-client-api:jar:1.4:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "com.graphicsfuzz.thirdparty:gif-sequence-writer:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.bytedeco.javacpp-presets:opencv:jar:4.0.1-1.4.4:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.bytedeco:javacpp:jar:1.5.4:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.bytedeco.javacpp-presets:opencv:jar:linux-x86_64:4.0.1-1.4.4:runtime" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.bytedeco.javacpp-presets:opencv:jar:macosx-x86_64:4.0.1-1.4.4:runtime" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.bytedeco.javacpp-presets:opencv:jar:windows-x86_64:4.0.1-1.4.4:runtime" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.14:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.13.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< com.graphicsfuzz:client-tests >--------------------
+[INFO] Building client-tests 1.0                                        [19/33]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ client-tests ---
+[INFO] Downloading from jitpack.io: https://www.jitpack.io/com/graphicsfuzz/server/1.0/server-1.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/graphicsfuzz/server/1.0/server-1.0.jar
+[INFO] digraph "com.graphicsfuzz:client-tests:jar:1.0" { 
+[INFO] 	"com.graphicsfuzz:client-tests:jar:1.0" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.graphicsfuzz:client-tests:jar:1.0" -> "com.graphicsfuzz:server:jar:1.0:test" ; 
+[INFO] 	"com.graphicsfuzz:client-tests:jar:1.0" -> "commons-io:commons-io:jar:2.11.0:test" ; 
+[INFO] 	"com.graphicsfuzz:client-tests:jar:1.0" -> "com.graphicsfuzz:util:jar:1.0:test" ; 
+[INFO] 	"com.graphicsfuzz:client-tests:jar:1.0" -> "com.google.code.gson:gson:jar:2.8.6:test" ; 
+[INFO] 	"com.graphicsfuzz:client-tests:jar:1.0" -> "com.graphicsfuzz:server-thrift-gen:jar:1.0:test" ; 
+[INFO] 	"com.graphicsfuzz:client-tests:jar:1.0" -> "net.sourceforge.argparse4j:argparse4j:jar:0.8.1:test" ; 
+[INFO] 	"com.graphicsfuzz:client-tests:jar:1.0" -> "org.bytedeco.javacpp-presets:opencv:jar:4.0.1-1.4.4:test" ; 
+[INFO] 	"com.graphicsfuzz:client-tests:jar:1.0" -> "org.bytedeco.javacpp-presets:opencv:jar:linux-x86_64:4.0.1-1.4.4:test" ; 
+[INFO] 	"com.graphicsfuzz:client-tests:jar:1.0" -> "org.bytedeco.javacpp-presets:opencv:jar:macosx-x86_64:4.0.1-1.4.4:test" ; 
+[INFO] 	"com.graphicsfuzz:client-tests:jar:1.0" -> "org.bytedeco.javacpp-presets:opencv:jar:windows-x86_64:4.0.1-1.4.4:test" ; 
+[INFO] 	"com.graphicsfuzz:client-tests:jar:1.0" -> "com.graphicsfuzz:common:jar:1.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0:test" -> "org.eclipse.jetty:jetty-server:jar:9.4.36.v20210114:test" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0:test" -> "org.eclipse.jetty:jetty-servlet:jar:9.4.36.v20210114:test" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0:test" -> "org.slf4j:slf4j-api:jar:1.7.32:test" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0:test" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:test" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0:test" -> "org.apache.logging.log4j:log4j-core:jar:2.17.1:test" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0:test" -> "com.graphicsfuzz:fuzzerserver:jar:1.0:test" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0:test" -> "com.graphicsfuzz:reducer:jar:1.0:test" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0:test" -> "com.graphicsfuzz:ast:jar:1.0:test" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0:test" -> "com.graphicsfuzz.thirdparty:alphanum-comparator:jar:1.0:test" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0:test" -> "org.apache.thrift:libthrift:jar:0.13.0:test" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0:test" -> "javax.servlet:javax.servlet-api:jar:4.0.1:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.36.v20210114:test" -> "org.eclipse.jetty:jetty-http:jar:9.4.36.v20210114:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.36.v20210114:test" -> "org.eclipse.jetty:jetty-io:jar:9.4.36.v20210114:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-http:jar:9.4.36.v20210114:test" -> "org.eclipse.jetty:jetty-util:jar:9.4.36.v20210114:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.36.v20210114:test" -> "org.eclipse.jetty:jetty-security:jar:9.4.36.v20210114:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.36.v20210114:test" -> "org.eclipse.jetty:jetty-util-ajax:jar:9.4.36.v20210114:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:test" -> "org.apache.logging.log4j:log4j-api:jar:2.17.1:test" ; 
+[INFO] 	"com.graphicsfuzz:ast:jar:1.0:test" -> "org.antlr:antlr4-runtime:jar:4.9.1:test" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.13.0:test" -> "javax.annotation:javax.annotation-api:jar:1.3.2:test" ; 
+[INFO] 	"com.graphicsfuzz:util:jar:1.0:test" -> "org.apache.commons:commons-rng-simple:jar:1.4:test" ; 
+[INFO] 	"org.apache.commons:commons-rng-simple:jar:1.4:test" -> "org.apache.commons:commons-rng-core:jar:1.4:test" ; 
+[INFO] 	"org.bytedeco.javacpp-presets:opencv:jar:4.0.1-1.4.4:test" -> "org.bytedeco:javacpp:jar:1.5.4:test" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:test" -> "org.apache.commons:commons-lang3:jar:3.12.0:test" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:test" -> "org.apache.commons:commons-rng-client-api:jar:1.4:test" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:test" -> "com.graphicsfuzz.thirdparty:gif-sequence-writer:jar:1.0:test" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:test" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:test" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:test" -> "commons-codec:commons-codec:jar:1.15:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:test" -> "org.apache.httpcomponents:httpcore:jar:4.4.14:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:test" -> "commons-logging:commons-logging:jar:1.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< com.graphicsfuzz:generator >---------------------
+[INFO] Building generator 1.0                                           [20/33]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ generator ---
+[INFO] digraph "com.graphicsfuzz:generator:jar:1.0" { 
+[INFO] 	"com.graphicsfuzz:generator:jar:1.0" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.graphicsfuzz:generator:jar:1.0" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:generator:jar:1.0" -> "com.graphicsfuzz:common:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:generator:jar:1.0" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:test" ; 
+[INFO] 	"com.graphicsfuzz:generator:jar:1.0" -> "org.apache.logging.log4j:log4j-core:jar:2.17.1:test" ; 
+[INFO] 	"com.graphicsfuzz:generator:jar:1.0" -> "net.sourceforge.argparse4j:argparse4j:jar:0.8.1:compile" ; 
+[INFO] 	"com.graphicsfuzz:generator:jar:1.0" -> "com.graphicsfuzz:ast:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:generator:jar:1.0" -> "com.graphicsfuzz:util:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:generator:jar:1.0" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:generator:jar:1.0" -> "org.slf4j:slf4j-api:jar:1.7.32:compile" ; 
+[INFO] 	"com.graphicsfuzz:generator:jar:1.0" -> "com.google.code.gson:gson:jar:2.8.6:compile" ; 
+[INFO] 	"com.graphicsfuzz:generator:jar:1.0" -> "com.graphicsfuzz:compare-asts:jar:1.0:test" ; 
+[INFO] 	"com.graphicsfuzz:generator:jar:1.0" -> "com.graphicsfuzz:server-thrift-gen:jar:1.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.apache.commons:commons-rng-simple:jar:1.4:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.apache.commons:commons-rng-client-api:jar:1.4:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "com.graphicsfuzz.thirdparty:alphanum-comparator:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "com.graphicsfuzz.thirdparty:gif-sequence-writer:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.bytedeco.javacpp-presets:opencv:jar:4.0.1-1.4.4:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.bytedeco:javacpp:jar:1.5.4:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.bytedeco.javacpp-presets:opencv:jar:linux-x86_64:4.0.1-1.4.4:runtime" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.bytedeco.javacpp-presets:opencv:jar:macosx-x86_64:4.0.1-1.4.4:runtime" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.bytedeco.javacpp-presets:opencv:jar:windows-x86_64:4.0.1-1.4.4:runtime" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.apache.thrift:libthrift:jar:0.13.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"org.apache.commons:commons-rng-simple:jar:1.4:compile" -> "org.apache.commons:commons-rng-core:jar:1.4:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.14:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.13.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:test" -> "org.apache.logging.log4j:log4j-api:jar:2.17.1:test" ; 
+[INFO] 	"com.graphicsfuzz:ast:jar:1.0:compile" -> "org.antlr:antlr4-runtime:jar:4.9.1:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< com.graphicsfuzz:gles-worker-dependencies >--------------
+[INFO] Building gles-worker-dependencies 1.0                            [21/33]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ gles-worker-dependencies ---
+[INFO] digraph "com.graphicsfuzz:gles-worker-dependencies:jar:1.0" { 
+[INFO] 	"com.graphicsfuzz:gles-worker-dependencies:jar:1.0" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.graphicsfuzz:gles-worker-dependencies:jar:1.0" -> "com.graphicsfuzz:server-thrift-gen:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:gles-worker-dependencies:jar:1.0" -> "org.slf4j:slf4j-simple:jar:1.7.32:compile" ; 
+[INFO] 	"com.graphicsfuzz:gles-worker-dependencies:jar:1.0" -> "org.apache.httpcomponents:httpmime:jar:4.5.13:compile" ; 
+[INFO] 	"com.graphicsfuzz:gles-worker-dependencies:jar:1.0" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"com.graphicsfuzz:gles-worker-dependencies:jar:1.0" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:gles-worker-dependencies:jar:1.0" -> "com.google.code.gson:gson:jar:2.8.6:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"com.graphicsfuzz:server-thrift-gen:jar:1.0:compile" -> "org.apache.thrift:libthrift:jar:0.13.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:server-thrift-gen:jar:1.0:compile" -> "org.slf4j:slf4j-api:jar:1.7.32:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.13.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.14:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------------< com.graphicsfuzz:tool >------------------------
+[INFO] Building tool 1.0                                                [22/33]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ tool ---
+[INFO] Downloading from jitpack.io: https://www.jitpack.io/com/graphicsfuzz/generator/1.0/generator-1.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/graphicsfuzz/generator/1.0/generator-1.0.jar
+[INFO] digraph "com.graphicsfuzz:tool:jar:1.0" { 
+[INFO] 	"com.graphicsfuzz:tool:jar:1.0" -> "com.graphicsfuzz:common:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:tool:jar:1.0" -> "com.graphicsfuzz:generator:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:tool:jar:1.0" -> "com.graphicsfuzz:reducer:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:tool:jar:1.0" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:compile" ; 
+[INFO] 	"com.graphicsfuzz:tool:jar:1.0" -> "org.apache.logging.log4j:log4j-core:jar:2.17.1:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.apache.commons:commons-rng-simple:jar:1.4:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.apache.commons:commons-rng-client-api:jar:1.4:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "com.google.code.gson:gson:jar:2.8.6:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "com.graphicsfuzz.thirdparty:alphanum-comparator:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "com.graphicsfuzz:ast:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.slf4j:slf4j-api:jar:1.7.32:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "com.graphicsfuzz:util:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "com.graphicsfuzz:server-thrift-gen:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "com.graphicsfuzz.thirdparty:gif-sequence-writer:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.bytedeco.javacpp-presets:opencv:jar:4.0.1-1.4.4:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.bytedeco:javacpp:jar:1.5.4:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.bytedeco.javacpp-presets:opencv:jar:linux-x86_64:4.0.1-1.4.4:runtime" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.bytedeco.javacpp-presets:opencv:jar:macosx-x86_64:4.0.1-1.4.4:runtime" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.bytedeco.javacpp-presets:opencv:jar:windows-x86_64:4.0.1-1.4.4:runtime" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.apache.thrift:libthrift:jar:0.13.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "net.sourceforge.argparse4j:argparse4j:jar:0.8.1:compile" ; 
+[INFO] 	"org.apache.commons:commons-rng-simple:jar:1.4:compile" -> "org.apache.commons:commons-rng-core:jar:1.4:compile" ; 
+[INFO] 	"com.graphicsfuzz:ast:jar:1.0:compile" -> "org.antlr:antlr4-runtime:jar:4.9.1:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.14:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.13.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.1:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< com.graphicsfuzz:python >-----------------------
+[INFO] Building python 1.0                                              [23/33]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ python ---
+[INFO] digraph "com.graphicsfuzz:python:pom:1.0" { 
+[INFO] 	"com.graphicsfuzz:python:pom:1.0" -> "ant-contrib:ant-contrib:jar:1.0b3:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< com.graphicsfuzz.thirdparty:thrift-py >----------------
+[INFO] Building thrift-py 1.0                                           [24/33]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ thrift-py ---
+[INFO] digraph "com.graphicsfuzz.thirdparty:thrift-py:pom:1.0" { 
+[INFO] 	"com.graphicsfuzz.thirdparty:thrift-py:pom:1.0" -> "ant-contrib:ant-contrib:jar:1.0b3:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< com.graphicsfuzz.thirdparty:thrift-js >----------------
+[INFO] Building thrift-js 1.0                                           [25/33]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ thrift-js ---
+[INFO] digraph "com.graphicsfuzz.thirdparty:thrift-js:pom:1.0" { 
+[INFO] 	"com.graphicsfuzz.thirdparty:thrift-js:pom:1.0" -> "ant-contrib:ant-contrib:jar:1.0b3:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< com.graphicsfuzz:server-static-public >----------------
+[INFO] Building server-static-public 1.0                                [26/33]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ server-static-public ---
+[INFO] digraph "com.graphicsfuzz:server-static-public:pom:1.0" { 
+[INFO] 	"com.graphicsfuzz:server-static-public:pom:1.0" -> "ant-contrib:ant-contrib:jar:1.0b3:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< com.graphicsfuzz:tester >-----------------------
+[INFO] Building tester 1.0                                              [27/33]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ tester ---
+[INFO] digraph "com.graphicsfuzz:tester:jar:1.0" { 
+[INFO] 	"com.graphicsfuzz:tester:jar:1.0" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.graphicsfuzz:tester:jar:1.0" -> "com.graphicsfuzz:ast:jar:1.0:test" ; 
+[INFO] 	"com.graphicsfuzz:tester:jar:1.0" -> "com.graphicsfuzz:common:jar:1.0:test" ; 
+[INFO] 	"com.graphicsfuzz:tester:jar:1.0" -> "com.graphicsfuzz:reducer:jar:1.0:test" ; 
+[INFO] 	"com.graphicsfuzz:tester:jar:1.0" -> "com.graphicsfuzz:generator:jar:1.0:test" ; 
+[INFO] 	"com.graphicsfuzz:tester:jar:1.0" -> "com.graphicsfuzz:server-thrift-gen:jar:1.0:test" ; 
+[INFO] 	"com.graphicsfuzz:tester:jar:1.0" -> "com.graphicsfuzz:util:jar:1.0:test" ; 
+[INFO] 	"com.graphicsfuzz:tester:jar:1.0" -> "commons-io:commons-io:jar:2.11.0:test" ; 
+[INFO] 	"com.graphicsfuzz:tester:jar:1.0" -> "org.slf4j:slf4j-api:jar:1.7.32:test" ; 
+[INFO] 	"com.graphicsfuzz:tester:jar:1.0" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:runtime" ; 
+[INFO] 	"com.graphicsfuzz:tester:jar:1.0" -> "org.apache.logging.log4j:log4j-core:jar:2.17.1:runtime" ; 
+[INFO] 	"com.graphicsfuzz:tester:jar:1.0" -> "org.apache.commons:commons-lang3:jar:3.12.0:test" ; 
+[INFO] 	"com.graphicsfuzz:tester:jar:1.0" -> "org.bytedeco:javacpp:jar:1.5.4:test" ; 
+[INFO] 	"com.graphicsfuzz:tester:jar:1.0" -> "org.bytedeco.javacpp-presets:opencv:jar:4.0.1-1.4.4:test" ; 
+[INFO] 	"com.graphicsfuzz:tester:jar:1.0" -> "org.bytedeco.javacpp-presets:opencv:jar:linux-x86_64:4.0.1-1.4.4:test" ; 
+[INFO] 	"com.graphicsfuzz:tester:jar:1.0" -> "org.bytedeco.javacpp-presets:opencv:jar:macosx-x86_64:4.0.1-1.4.4:test" ; 
+[INFO] 	"com.graphicsfuzz:tester:jar:1.0" -> "org.bytedeco.javacpp-presets:opencv:jar:windows-x86_64:4.0.1-1.4.4:test" ; 
+[INFO] 	"com.graphicsfuzz:tester:jar:1.0" -> "ant-contrib:ant-contrib:jar:1.0b3:provided" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"com.graphicsfuzz:ast:jar:1.0:test" -> "org.antlr:antlr4-runtime:jar:4.9.1:test" ; 
+[INFO] 	"com.graphicsfuzz:ast:jar:1.0:test" -> "net.sourceforge.argparse4j:argparse4j:jar:0.8.1:test" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:test" -> "org.apache.commons:commons-rng-simple:jar:1.4:test" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:test" -> "org.apache.commons:commons-rng-client-api:jar:1.4:test" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:test" -> "com.google.code.gson:gson:jar:2.8.6:test" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:test" -> "com.graphicsfuzz.thirdparty:alphanum-comparator:jar:1.0:test" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:test" -> "com.graphicsfuzz.thirdparty:gif-sequence-writer:jar:1.0:test" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:test" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:test" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:test" -> "org.apache.thrift:libthrift:jar:0.13.0:test" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:test" -> "commons-codec:commons-codec:jar:1.15:test" ; 
+[INFO] 	"org.apache.commons:commons-rng-simple:jar:1.4:test" -> "org.apache.commons:commons-rng-core:jar:1.4:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:test" -> "org.apache.httpcomponents:httpcore:jar:4.4.14:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:test" -> "commons-logging:commons-logging:jar:1.2:test" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.13.0:test" -> "javax.annotation:javax.annotation-api:jar:1.3.2:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:runtime" -> "org.apache.logging.log4j:log4j-api:jar:2.17.1:runtime" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< com.graphicsfuzz.thirdparty:semantic-ui >---------------
+[INFO] Building semantic-ui 2.0.7                                       [28/33]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ semantic-ui ---
+[INFO] digraph "com.graphicsfuzz.thirdparty:semantic-ui:pom:2.0.7" { 
+[INFO] 	"com.graphicsfuzz.thirdparty:semantic-ui:pom:2.0.7" -> "ant-contrib:ant-contrib:jar:1.0b3:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< com.graphicsfuzz.thirdparty:jquery-js >----------------
+[INFO] Building jquery-js 1.0                                           [29/33]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ jquery-js ---
+[INFO] digraph "com.graphicsfuzz.thirdparty:jquery-js:pom:1.0" { 
+[INFO] 	"com.graphicsfuzz.thirdparty:jquery-js:pom:1.0" -> "ant-contrib:ant-contrib:jar:1.0b3:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< com.graphicsfuzz.thirdparty:python-six >---------------
+[INFO] Building python-six 1.0                                          [30/33]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ python-six ---
+[INFO] digraph "com.graphicsfuzz.thirdparty:python-six:pom:1.0" { 
+[INFO] 	"com.graphicsfuzz.thirdparty:python-six:pom:1.0" -> "ant-contrib:ant-contrib:jar:1.0b3:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< com.graphicsfuzz:graphicsfuzz >--------------------
+[INFO] Building graphicsfuzz 1.0                                        [31/33]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ graphicsfuzz ---
+[INFO] Downloading from jitpack.io: https://www.jitpack.io/com/graphicsfuzz/tool/1.0/tool-1.0.jar
+[INFO] Downloading from jitpack.io: https://www.jitpack.io/com/graphicsfuzz/python/1.0/python-1.0.zip
+[INFO] Downloading from jitpack.io: https://www.jitpack.io/com/graphicsfuzz/thirdparty/thrift-py/1.0/thrift-py-1.0.zip
+[INFO] Downloading from jitpack.io: https://www.jitpack.io/com/graphicsfuzz/thirdparty/thrift-js/1.0/thrift-js-1.0.zip
+[INFO] Downloading from jitpack.io: https://www.jitpack.io/com/graphicsfuzz/server-static-public/1.0/server-static-public-1.0.zip
+[INFO] Downloading from jitpack.io: https://www.jitpack.io/com/graphicsfuzz/assembly-binaries/1.0/assembly-binaries-1.0.zip
+[INFO] Downloading from jitpack.io: https://www.jitpack.io/com/graphicsfuzz/thrift/1.0/thrift-1.0-python.zip
+[INFO] Downloading from jitpack.io: https://www.jitpack.io/com/graphicsfuzz/thrift/1.0/thrift-1.0-js.zip
+[INFO] Downloading from jitpack.io: https://www.jitpack.io/com/graphicsfuzz/tester/1.0/tester-1.0.jar
+[INFO] Downloading from jitpack.io: https://www.jitpack.io/com/graphicsfuzz/tester/1.0/tester-1.0-shaders.zip
+[INFO] Downloading from jitpack.io: https://www.jitpack.io/com/graphicsfuzz/thirdparty/semantic-ui/2.0.7/semantic-ui-2.0.7.zip
+[INFO] Downloading from jitpack.io: https://www.jitpack.io/com/graphicsfuzz/thirdparty/jquery-js/1.0/jquery-js-1.0.zip
+[INFO] Downloading from jitpack.io: https://www.jitpack.io/com/graphicsfuzz/thirdparty/python-six/1.0/python-six-1.0.zip
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/graphicsfuzz/tool/1.0/tool-1.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/graphicsfuzz/python/1.0/python-1.0.zip
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/graphicsfuzz/thirdparty/thrift-py/1.0/thrift-py-1.0.zip
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/graphicsfuzz/thirdparty/thrift-js/1.0/thrift-js-1.0.zip
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/graphicsfuzz/server-static-public/1.0/server-static-public-1.0.zip
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/graphicsfuzz/assembly-binaries/1.0/assembly-binaries-1.0.zip
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/graphicsfuzz/thrift/1.0/thrift-1.0-python.zip
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/graphicsfuzz/thrift/1.0/thrift-1.0-js.zip
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/graphicsfuzz/tester/1.0/tester-1.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/graphicsfuzz/tester/1.0/tester-1.0-shaders.zip
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/graphicsfuzz/thirdparty/semantic-ui/2.0.7/semantic-ui-2.0.7.zip
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/graphicsfuzz/thirdparty/jquery-js/1.0/jquery-js-1.0.zip
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/graphicsfuzz/thirdparty/python-six/1.0/python-six-1.0.zip
+[INFO] digraph "com.graphicsfuzz:graphicsfuzz:pom:1.0" { 
+[INFO] 	"com.graphicsfuzz:graphicsfuzz:pom:1.0" -> "com.graphicsfuzz:server:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:graphicsfuzz:pom:1.0" -> "com.graphicsfuzz:tool:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:graphicsfuzz:pom:1.0" -> "com.graphicsfuzz:python:zip:1.0:provided" ; 
+[INFO] 	"com.graphicsfuzz:graphicsfuzz:pom:1.0" -> "com.graphicsfuzz.thirdparty:thrift-py:zip:1.0:provided" ; 
+[INFO] 	"com.graphicsfuzz:graphicsfuzz:pom:1.0" -> "com.graphicsfuzz.thirdparty:thrift-js:zip:1.0:provided" ; 
+[INFO] 	"com.graphicsfuzz:graphicsfuzz:pom:1.0" -> "com.graphicsfuzz:server-static-public:zip:1.0:provided" ; 
+[INFO] 	"com.graphicsfuzz:graphicsfuzz:pom:1.0" -> "com.graphicsfuzz:assembly-binaries:zip:1.0:provided" ; 
+[INFO] 	"com.graphicsfuzz:graphicsfuzz:pom:1.0" -> "com.graphicsfuzz:thrift:zip:python:1.0:provided" ; 
+[INFO] 	"com.graphicsfuzz:graphicsfuzz:pom:1.0" -> "com.graphicsfuzz:thrift:zip:js:1.0:provided" ; 
+[INFO] 	"com.graphicsfuzz:graphicsfuzz:pom:1.0" -> "com.graphicsfuzz:tester:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:graphicsfuzz:pom:1.0" -> "com.graphicsfuzz:tester:zip:shaders:1.0:provided" ; 
+[INFO] 	"com.graphicsfuzz:graphicsfuzz:pom:1.0" -> "com.graphicsfuzz.thirdparty:semantic-ui:zip:2.0.7:provided" ; 
+[INFO] 	"com.graphicsfuzz:graphicsfuzz:pom:1.0" -> "com.graphicsfuzz.thirdparty:jquery-js:zip:1.0:provided" ; 
+[INFO] 	"com.graphicsfuzz:graphicsfuzz:pom:1.0" -> "com.graphicsfuzz.thirdparty:python-six:zip:1.0:provided" ; 
+[INFO] 	"com.graphicsfuzz:graphicsfuzz:pom:1.0" -> "ant-contrib:ant-contrib:jar:1.0b3:provided" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0:compile" -> "com.graphicsfuzz:server-thrift-gen:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0:compile" -> "org.eclipse.jetty:jetty-server:jar:9.4.36.v20210114:compile" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0:compile" -> "org.eclipse.jetty:jetty-servlet:jar:9.4.36.v20210114:compile" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0:compile" -> "org.slf4j:slf4j-api:jar:1.7.32:compile" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0:compile" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:compile" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0:compile" -> "org.apache.logging.log4j:log4j-core:jar:2.17.1:compile" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0:compile" -> "com.graphicsfuzz:fuzzerserver:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0:compile" -> "com.graphicsfuzz:reducer:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0:compile" -> "com.graphicsfuzz:util:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0:compile" -> "com.graphicsfuzz:ast:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0:compile" -> "com.graphicsfuzz:common:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0:compile" -> "com.graphicsfuzz.thirdparty:alphanum-comparator:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0:compile" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0:compile" -> "org.apache.thrift:libthrift:jar:0.13.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0:compile" -> "javax.servlet:javax.servlet-api:jar:4.0.1:compile" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0:compile" -> "com.google.code.gson:gson:jar:2.8.6:compile" ; 
+[INFO] 	"com.graphicsfuzz:server:jar:1.0:compile" -> "net.sourceforge.argparse4j:argparse4j:jar:0.8.1:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.36.v20210114:compile" -> "org.eclipse.jetty:jetty-http:jar:9.4.36.v20210114:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.36.v20210114:compile" -> "org.eclipse.jetty:jetty-io:jar:9.4.36.v20210114:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-http:jar:9.4.36.v20210114:compile" -> "org.eclipse.jetty:jetty-util:jar:9.4.36.v20210114:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.36.v20210114:compile" -> "org.eclipse.jetty:jetty-security:jar:9.4.36.v20210114:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.36.v20210114:compile" -> "org.eclipse.jetty:jetty-util-ajax:jar:9.4.36.v20210114:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.17.1:compile" ; 
+[INFO] 	"com.graphicsfuzz:reducer:jar:1.0:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:reducer:jar:1.0:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"com.graphicsfuzz:util:jar:1.0:compile" -> "org.apache.commons:commons-rng-simple:jar:1.4:compile" ; 
+[INFO] 	"org.apache.commons:commons-rng-simple:jar:1.4:compile" -> "org.apache.commons:commons-rng-core:jar:1.4:compile" ; 
+[INFO] 	"com.graphicsfuzz:ast:jar:1.0:compile" -> "org.antlr:antlr4-runtime:jar:4.9.1:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.apache.commons:commons-rng-client-api:jar:1.4:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "com.graphicsfuzz.thirdparty:gif-sequence-writer:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.bytedeco.javacpp-presets:opencv:jar:4.0.1-1.4.4:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.bytedeco:javacpp:jar:1.5.4:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.bytedeco.javacpp-presets:opencv:jar:linux-x86_64:4.0.1-1.4.4:runtime" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.bytedeco.javacpp-presets:opencv:jar:macosx-x86_64:4.0.1-1.4.4:runtime" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.bytedeco.javacpp-presets:opencv:jar:windows-x86_64:4.0.1-1.4.4:runtime" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.14:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.13.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"com.graphicsfuzz:tool:jar:1.0:compile" -> "com.graphicsfuzz:generator:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:assembly-binaries:zip:1.0:provided" -> "github.paulthomson:build-angle:zip:Linux_x64_Release:9d3202492d78aae5ced08ff14679b81c98d71c15:provided" ; 
+[INFO] 	"com.graphicsfuzz:assembly-binaries:zip:1.0:provided" -> "github.paulthomson:build-angle:zip:Mac_x64_Release:9d3202492d78aae5ced08ff14679b81c98d71c15:provided" ; 
+[INFO] 	"com.graphicsfuzz:assembly-binaries:zip:1.0:provided" -> "github.paulthomson:build-angle:zip:Windows_x64_Release:9d3202492d78aae5ced08ff14679b81c98d71c15:provided" ; 
+[INFO] 	"com.graphicsfuzz:assembly-binaries:zip:1.0:provided" -> "github.paulthomson:build-swiftshader:zip:Linux_x64_Release:0565d5aee279a4782689297ada0aa2489e24ad3e:provided" ; 
+[INFO] 	"com.graphicsfuzz:assembly-binaries:zip:1.0:provided" -> "github.paulthomson:build-swiftshader:zip:Mac_x64_Release:0565d5aee279a4782689297ada0aa2489e24ad3e:provided" ; 
+[INFO] 	"com.graphicsfuzz:assembly-binaries:zip:1.0:provided" -> "github.paulthomson:build-swiftshader:zip:Windows_x64_Release:0565d5aee279a4782689297ada0aa2489e24ad3e:provided" ; 
+[INFO] 	"com.graphicsfuzz:assembly-binaries:zip:1.0:provided" -> "github.paulthomson:build-glslang:zip:Linux_x64_Release:0f167ce7125795df62ae5893f553e5608c9652f4:provided" ; 
+[INFO] 	"com.graphicsfuzz:assembly-binaries:zip:1.0:provided" -> "github.paulthomson:build-glslang:zip:Mac_x64_Release:0f167ce7125795df62ae5893f553e5608c9652f4:provided" ; 
+[INFO] 	"com.graphicsfuzz:assembly-binaries:zip:1.0:provided" -> "github.paulthomson:build-glslang:zip:Windows_x64_Release:0f167ce7125795df62ae5893f553e5608c9652f4:provided" ; 
+[INFO] 	"com.graphicsfuzz:assembly-binaries:zip:1.0:provided" -> "github.mc-imperial:get-image-glsl:zip:Linux_x64_Release:d987dc0e5f8aeae0dc2f5aac2013e9a3edd54465:provided" ; 
+[INFO] 	"com.graphicsfuzz:assembly-binaries:zip:1.0:provided" -> "github.mc-imperial:get-image-glsl:zip:Mac_x64_Release:d987dc0e5f8aeae0dc2f5aac2013e9a3edd54465:provided" ; 
+[INFO] 	"com.graphicsfuzz:assembly-binaries:zip:1.0:provided" -> "github.mc-imperial:get-image-glsl:zip:Windows_x64_Release:d987dc0e5f8aeae0dc2f5aac2013e9a3edd54465:provided" ; 
+[INFO] 	"com.graphicsfuzz:assembly-binaries:zip:1.0:provided" -> "github.google:gfbuild-SPIRV-Tools:zip:Linux_x64_Release:bd2a9ea85210d3bb474bc5adb9ff4b0bb536b4fc:provided" ; 
+[INFO] 	"com.graphicsfuzz:assembly-binaries:zip:1.0:provided" -> "github.google:gfbuild-SPIRV-Tools:zip:Mac_x64_Release:bd2a9ea85210d3bb474bc5adb9ff4b0bb536b4fc:provided" ; 
+[INFO] 	"com.graphicsfuzz:assembly-binaries:zip:1.0:provided" -> "github.google:gfbuild-SPIRV-Tools:zip:Windows_x64_Release:bd2a9ea85210d3bb474bc5adb9ff4b0bb536b4fc:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< com.graphicsfuzz:server-public >-------------------
+[INFO] Building server-public 1.0                                       [32/33]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ server-public ---
+[INFO] digraph "com.graphicsfuzz:server-public:jar:1.0" { 
+[INFO] 	"com.graphicsfuzz:server-public:jar:1.0" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.graphicsfuzz:server-public:jar:1.0" -> "com.graphicsfuzz:server-thrift-gen:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:server-public:jar:1.0" -> "com.graphicsfuzz:util:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:server-public:jar:1.0" -> "org.apache.thrift:libthrift:jar:0.13.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:server-public:jar:1.0" -> "net.sourceforge.argparse4j:argparse4j:jar:0.8.1:compile" ; 
+[INFO] 	"com.graphicsfuzz:server-public:jar:1.0" -> "org.eclipse.jetty:jetty-server:jar:9.4.36.v20210114:compile" ; 
+[INFO] 	"com.graphicsfuzz:server-public:jar:1.0" -> "org.eclipse.jetty:jetty-servlet:jar:9.4.36.v20210114:compile" ; 
+[INFO] 	"com.graphicsfuzz:server-public:jar:1.0" -> "org.slf4j:slf4j-api:jar:1.7.32:compile" ; 
+[INFO] 	"com.graphicsfuzz:server-public:jar:1.0" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:runtime" ; 
+[INFO] 	"com.graphicsfuzz:server-public:jar:1.0" -> "org.apache.logging.log4j:log4j-core:jar:2.17.1:runtime" ; 
+[INFO] 	"com.graphicsfuzz:server-public:jar:1.0" -> "com.graphicsfuzz:fuzzerserver:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:server-public:jar:1.0" -> "com.graphicsfuzz:common:jar:1.0:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"com.graphicsfuzz:util:jar:1.0:compile" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:util:jar:1.0:compile" -> "org.apache.commons:commons-rng-simple:jar:1.4:compile" ; 
+[INFO] 	"org.apache.commons:commons-rng-simple:jar:1.4:compile" -> "org.apache.commons:commons-rng-core:jar:1.4:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.13.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.36.v20210114:compile" -> "javax.servlet:javax.servlet-api:jar:4.0.1:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.36.v20210114:compile" -> "org.eclipse.jetty:jetty-http:jar:9.4.36.v20210114:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.36.v20210114:compile" -> "org.eclipse.jetty:jetty-io:jar:9.4.36.v20210114:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-http:jar:9.4.36.v20210114:compile" -> "org.eclipse.jetty:jetty-util:jar:9.4.36.v20210114:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.36.v20210114:compile" -> "org.eclipse.jetty:jetty-security:jar:9.4.36.v20210114:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.36.v20210114:compile" -> "org.eclipse.jetty:jetty-util-ajax:jar:9.4.36.v20210114:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:runtime" -> "org.apache.logging.log4j:log4j-api:jar:2.17.1:runtime" ; 
+[INFO] 	"com.graphicsfuzz:fuzzerserver:jar:1.0:compile" -> "com.google.code.gson:gson:jar:2.8.6:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.apache.commons:commons-rng-client-api:jar:1.4:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "com.graphicsfuzz.thirdparty:alphanum-comparator:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "com.graphicsfuzz:ast:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "com.graphicsfuzz.thirdparty:gif-sequence-writer:jar:1.0:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.bytedeco.javacpp-presets:opencv:jar:4.0.1-1.4.4:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.bytedeco:javacpp:jar:1.5.4:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.bytedeco.javacpp-presets:opencv:jar:linux-x86_64:4.0.1-1.4.4:runtime" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.bytedeco.javacpp-presets:opencv:jar:macosx-x86_64:4.0.1-1.4.4:runtime" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.bytedeco.javacpp-presets:opencv:jar:windows-x86_64:4.0.1-1.4.4:runtime" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"com.graphicsfuzz:common:jar:1.0:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"com.graphicsfuzz:ast:jar:1.0:compile" -> "org.antlr:antlr4-runtime:jar:4.9.1:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.14:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< com.graphicsfuzz:graphicsfuzz-root >-----------------
+[INFO] Building graphicsfuzz-root 1.0                                   [33/33]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ graphicsfuzz-root ---
+[INFO] digraph "com.graphicsfuzz:graphicsfuzz-root:pom:1.0" { 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] parent-all 1.0 ..................................... SUCCESS [  3.994 s]
+[INFO] shaders 1.0 ........................................ SUCCESS [  0.134 s]
+[INFO] checkstyle-config 1.0 .............................. SUCCESS [  0.100 s]
+[INFO] parent-checkstyle 1.0 .............................. SUCCESS [  0.022 s]
+[INFO] zip-helper 1.0 ..................................... SUCCESS [  0.127 s]
+[INFO] assembly-binaries 1.0 .............................. SUCCESS [  5.651 s]
+[INFO] test-util 1.0 ...................................... SUCCESS [  0.082 s]
+[INFO] util 1.0 ........................................... SUCCESS [  0.298 s]
+[INFO] ast 1.0 ............................................ SUCCESS [  1.161 s]
+[INFO] thrift 1.0 ......................................... SUCCESS [  0.021 s]
+[INFO] server-thrift-gen 1.0 .............................. SUCCESS [  0.726 s]
+[INFO] fuzzerserver 1.0 ................................... SUCCESS [  0.799 s]
+[INFO] alphanum-comparator 1.0 ............................ SUCCESS [  0.057 s]
+[INFO] compare-asts 1.0 ................................... SUCCESS [  1.000 s]
+[INFO] gif-sequence-writer 1.0 ............................ SUCCESS [  0.005 s]
+[INFO] common 1.0 ......................................... SUCCESS [  1.448 s]
+[INFO] reducer 1.0 ........................................ SUCCESS [  0.803 s]
+[INFO] server 1.0 ......................................... SUCCESS [  1.140 s]
+[INFO] client-tests 1.0 ................................... SUCCESS [  0.974 s]
+[INFO] generator 1.0 ...................................... SUCCESS [  0.263 s]
+[INFO] gles-worker-dependencies 1.0 ....................... SUCCESS [  0.155 s]
+[INFO] tool 1.0 ........................................... SUCCESS [  0.913 s]
+[INFO] python 1.0 ......................................... SUCCESS [  0.039 s]
+[INFO] thrift-py 1.0 ...................................... SUCCESS [  0.041 s]
+[INFO] thrift-js 1.0 ...................................... SUCCESS [  0.063 s]
+[INFO] server-static-public 1.0 ........................... SUCCESS [  0.018 s]
+[INFO] tester 1.0 ......................................... SUCCESS [  0.114 s]
+[INFO] semantic-ui 2.0.7 .................................. SUCCESS [  0.056 s]
+[INFO] jquery-js 1.0 ...................................... SUCCESS [  0.053 s]
+[INFO] python-six 1.0 ..................................... SUCCESS [  0.109 s]
+[INFO] graphicsfuzz 1.0 ................................... SUCCESS [  2.339 s]
+[INFO] server-public 1.0 .................................. SUCCESS [  0.121 s]
+[INFO] graphicsfuzz-root 1.0 .............................. SUCCESS [  2.188 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  28.276 s
+[INFO] Finished at: 2023-12-28T09:03:05+01:00
+[INFO] ------------------------------------------------------------------------

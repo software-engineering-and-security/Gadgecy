@@ -1,0 +1,104 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] ZXing                                                              [pom]
+[INFO] ZXing Core                                                         [jar]
+[INFO] ZXing Java SE extensions                                           [jar]
+[INFO] ZXing zxing.org web app                                            [war]
+[INFO] 
+[INFO] -------------------< com.google.zxing:zxing-parent >--------------------
+[INFO] Building ZXing 3.5.3-SNAPSHOT                                      [1/4]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ zxing-parent ---
+[INFO] digraph "com.google.zxing:zxing-parent:pom:3.5.3-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------------< com.google.zxing:core >------------------------
+[INFO] Building ZXing Core 3.5.3-SNAPSHOT                                 [2/4]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ core ---
+[INFO] digraph "com.google.zxing:core:jar:3.5.3-SNAPSHOT" { 
+[INFO] 	"com.google.zxing:core:jar:3.5.3-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< com.google.zxing:javase >-----------------------
+[INFO] Building ZXing Java SE extensions 3.5.3-SNAPSHOT                   [3/4]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from google-maven-central: https://maven-central.storage-download.googleapis.com/maven2/com/google/zxing/core/3.5.3-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ javase ---
+[INFO] digraph "com.google.zxing:javase:jar:3.5.3-SNAPSHOT" { 
+[INFO] 	"com.google.zxing:javase:jar:3.5.3-SNAPSHOT" -> "com.google.zxing:core:jar:3.5.3-SNAPSHOT:compile" ; 
+[INFO] 	"com.google.zxing:javase:jar:3.5.3-SNAPSHOT" -> "com.beust:jcommander:jar:1.82:compile" ; 
+[INFO] 	"com.google.zxing:javase:jar:3.5.3-SNAPSHOT" -> "com.github.jai-imageio:jai-imageio-core:jar:1.4.0:runtime" ; 
+[INFO] 	"com.google.zxing:javase:jar:3.5.3-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< com.google.zxing:zxingorg >----------------------
+[INFO] Building ZXing zxing.org web app 3.5.3-SNAPSHOT                    [4/4]
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] Downloading from google-maven-central: https://maven-central.storage-download.googleapis.com/maven2/com/google/zxing/javase/3.5.3-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ zxingorg ---
+[INFO] digraph "com.google.zxing:zxingorg:war:3.5.3-SNAPSHOT" { 
+[INFO] 	"com.google.zxing:zxingorg:war:3.5.3-SNAPSHOT" -> "com.google.zxing:core:jar:3.5.3-SNAPSHOT:compile" ; 
+[INFO] 	"com.google.zxing:zxingorg:war:3.5.3-SNAPSHOT" -> "com.google.zxing:javase:jar:3.5.3-SNAPSHOT:compile" ; 
+[INFO] 	"com.google.zxing:zxingorg:war:3.5.3-SNAPSHOT" -> "jakarta.platform:jakarta.jakartaee-web-api:jar:10.0.0:provided" ; 
+[INFO] 	"com.google.zxing:zxingorg:war:3.5.3-SNAPSHOT" -> "com.google.guava:guava:jar:32.1.3-android:compile" ; 
+[INFO] 	"com.google.zxing:zxingorg:war:3.5.3-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"com.google.zxing:zxingorg:war:3.5.3-SNAPSHOT" -> "org.springframework:spring-test:jar:6.1.1:test" ; 
+[INFO] 	"com.google.zxing:zxingorg:war:3.5.3-SNAPSHOT" -> "org.springframework:spring-web:jar:6.1.1:test" ; 
+[INFO] 	"com.google.zxing:javase:jar:3.5.3-SNAPSHOT:compile" -> "com.beust:jcommander:jar:1.82:compile" ; 
+[INFO] 	"com.google.zxing:javase:jar:3.5.3-SNAPSHOT:compile" -> "com.github.jai-imageio:jai-imageio-core:jar:1.4.0:runtime" ; 
+[INFO] 	"jakarta.platform:jakarta.jakartaee-web-api:jar:10.0.0:provided" -> "jakarta.servlet:jakarta.servlet-api:jar:6.0.0:provided" ; 
+[INFO] 	"jakarta.platform:jakarta.jakartaee-web-api:jar:10.0.0:provided" -> "jakarta.servlet.jsp:jakarta.servlet.jsp-api:jar:3.1.0:provided" ; 
+[INFO] 	"jakarta.platform:jakarta.jakartaee-web-api:jar:10.0.0:provided" -> "jakarta.el:jakarta.el-api:jar:5.0.1:provided" ; 
+[INFO] 	"jakarta.platform:jakarta.jakartaee-web-api:jar:10.0.0:provided" -> "jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:jar:3.0.0:provided" ; 
+[INFO] 	"jakarta.platform:jakarta.jakartaee-web-api:jar:10.0.0:provided" -> "jakarta.faces:jakarta.faces-api:jar:4.0.1:provided" ; 
+[INFO] 	"jakarta.platform:jakarta.jakartaee-web-api:jar:10.0.0:provided" -> "jakarta.ws.rs:jakarta.ws.rs-api:jar:3.1.0:provided" ; 
+[INFO] 	"jakarta.platform:jakarta.jakartaee-web-api:jar:10.0.0:provided" -> "jakarta.websocket:jakarta.websocket-api:jar:2.1.0:provided" ; 
+[INFO] 	"jakarta.platform:jakarta.jakartaee-web-api:jar:10.0.0:provided" -> "jakarta.websocket:jakarta.websocket-client-api:jar:2.1.0:provided" ; 
+[INFO] 	"jakarta.platform:jakarta.jakartaee-web-api:jar:10.0.0:provided" -> "jakarta.json:jakarta.json-api:jar:2.1.0:provided" ; 
+[INFO] 	"jakarta.platform:jakarta.jakartaee-web-api:jar:10.0.0:provided" -> "jakarta.json.bind:jakarta.json.bind-api:jar:3.0.0:provided" ; 
+[INFO] 	"jakarta.platform:jakarta.jakartaee-web-api:jar:10.0.0:provided" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:provided" ; 
+[INFO] 	"jakarta.platform:jakarta.jakartaee-web-api:jar:10.0.0:provided" -> "jakarta.ejb:jakarta.ejb-api:jar:4.0.1:provided" ; 
+[INFO] 	"jakarta.platform:jakarta.jakartaee-web-api:jar:10.0.0:provided" -> "jakarta.transaction:jakarta.transaction-api:jar:2.0.1:provided" ; 
+[INFO] 	"jakarta.platform:jakarta.jakartaee-web-api:jar:10.0.0:provided" -> "jakarta.persistence:jakarta.persistence-api:jar:3.1.0:provided" ; 
+[INFO] 	"jakarta.platform:jakarta.jakartaee-web-api:jar:10.0.0:provided" -> "jakarta.validation:jakarta.validation-api:jar:3.0.2:provided" ; 
+[INFO] 	"jakarta.platform:jakarta.jakartaee-web-api:jar:10.0.0:provided" -> "jakarta.interceptor:jakarta.interceptor-api:jar:2.1.0:provided" ; 
+[INFO] 	"jakarta.platform:jakarta.jakartaee-web-api:jar:10.0.0:provided" -> "jakarta.enterprise:jakarta.enterprise.cdi-api:jar:4.0.1:provided" ; 
+[INFO] 	"jakarta.platform:jakarta.jakartaee-web-api:jar:10.0.0:provided" -> "jakarta.enterprise:jakarta.enterprise.lang-model:jar:4.0.1:provided" ; 
+[INFO] 	"jakarta.platform:jakarta.jakartaee-web-api:jar:10.0.0:provided" -> "jakarta.inject:jakarta.inject-api:jar:2.0.1:provided" ; 
+[INFO] 	"jakarta.platform:jakarta.jakartaee-web-api:jar:10.0.0:provided" -> "jakarta.authentication:jakarta.authentication-api:jar:3.0.0:provided" ; 
+[INFO] 	"jakarta.platform:jakarta.jakartaee-web-api:jar:10.0.0:provided" -> "jakarta.security.enterprise:jakarta.security.enterprise-api:jar:3.0.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-android:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-android:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-android:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-android:compile" -> "org.checkerframework:checker-qual:jar:3.37.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-android:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.21.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-android:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.springframework:spring-test:jar:6.1.1:test" -> "org.springframework:spring-core:jar:6.1.1:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.1.1:test" -> "org.springframework:spring-jcl:jar:6.1.1:test" ; 
+[INFO] 	"org.springframework:spring-web:jar:6.1.1:test" -> "org.springframework:spring-beans:jar:6.1.1:test" ; 
+[INFO] 	"org.springframework:spring-web:jar:6.1.1:test" -> "io.micrometer:micrometer-observation:jar:1.12.0:test" ; 
+[INFO] 	"io.micrometer:micrometer-observation:jar:1.12.0:test" -> "io.micrometer:micrometer-commons:jar:1.12.0:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for ZXing 3.5.3-SNAPSHOT:
+[INFO] 
+[INFO] ZXing .............................................. SUCCESS [  2.686 s]
+[INFO] ZXing Core ......................................... SUCCESS [  0.083 s]
+[INFO] ZXing Java SE extensions ........................... SUCCESS [  1.098 s]
+[INFO] ZXing zxing.org web app ............................ SUCCESS [  0.337 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.972 s
+[INFO] Finished at: 2023-12-28T09:03:28+01:00
+[INFO] ------------------------------------------------------------------------

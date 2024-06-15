@@ -1,0 +1,73 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Neo4j-OGM                                                          [pom]
+[INFO] Neo4j-OGM Api                                                      [jar]
+[INFO] Neo4j-OGM Core                                                     [jar]
+[INFO] Neo4j-OGM Bolt transport                                           [jar]
+[INFO] Neo4j-OGM Tests                                                    [pom]
+[INFO] Neo4j-OGM Integration tests                                        [jar]
+[INFO] Neo4j-OGM Tests Report                                             [pom]
+[INFO] 
+[INFO] ------------------------< org.neo4j:neo4j-ogm >-------------------------
+[INFO] Building Neo4j-OGM 4.0.9-SNAPSHOT                                  [1/7]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ neo4j-ogm ---
+[INFO] digraph "org.neo4j:neo4j-ogm:pom:4.0.9-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< org.neo4j:neo4j-ogm-api >-----------------------
+[INFO] Building Neo4j-OGM Api 4.0.9-SNAPSHOT                              [2/7]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ neo4j-ogm-api ---
+[INFO] digraph "org.neo4j:neo4j-ogm-api:jar:4.0.9-SNAPSHOT" { 
+[INFO] 	"org.neo4j:neo4j-ogm-api:jar:4.0.9-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" ; 
+[INFO] 	"org.neo4j:neo4j-ogm-api:jar:4.0.9-SNAPSHOT" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.16.0:compile" ; 
+[INFO] 	"org.neo4j:neo4j-ogm-api:jar:4.0.9-SNAPSHOT" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.16.0:compile" ; 
+[INFO] 	"org.neo4j:neo4j-ogm-api:jar:4.0.9-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"org.neo4j:neo4j-ogm-api:jar:4.0.9-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"org.neo4j:neo4j-ogm-api:jar:4.0.9-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.16.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.16.0:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.16.0:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.14.10:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< org.neo4j:neo4j-ogm-core >----------------------
+[INFO] Building Neo4j-OGM Core 4.0.9-SNAPSHOT                             [3/7]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Neo4j-OGM 4.0.9-SNAPSHOT:
+[INFO] 
+[INFO] Neo4j-OGM .......................................... SUCCESS [  2.518 s]
+[INFO] Neo4j-OGM Api ...................................... SUCCESS [  0.331 s]
+[INFO] Neo4j-OGM Core ..................................... FAILURE [  0.401 s]
+[INFO] Neo4j-OGM Bolt transport ........................... SKIPPED
+[INFO] Neo4j-OGM Tests .................................... SKIPPED
+[INFO] Neo4j-OGM Integration tests ........................ SKIPPED
+[INFO] Neo4j-OGM Tests Report ............................. SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.733 s
+[INFO] Finished at: 2023-12-28T09:03:15+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project neo4j-ogm-core: Could not resolve dependencies for project org.neo4j:neo4j-ogm-core:jar:4.0.9-SNAPSHOT: Could not find artifact org.neo4j:neo4j-ogm-api:jar:4.0.9-SNAPSHOT -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :neo4j-ogm-core

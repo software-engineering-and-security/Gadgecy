@@ -1,0 +1,296 @@
+[INFO] Scanning for projects...
+[INFO] Downloading from spring-snapshot: https://repo.spring.io/snapshot/org/springframework/data/build/spring-data-parent/3.3.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/org/springframework/data/build/spring-data-parent/3.3.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from spring-snapshot: https://repo.spring.io/snapshot/org/springframework/data/build/spring-data-parent/3.3.0-SNAPSHOT/maven-metadata.xml (0 B at 0 B/s)
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/io/micrometer/micrometer-tracing-bom/1.2.1/micrometer-tracing-bom-1.2.1.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-tracing-bom/1.2.1/micrometer-tracing-bom-1.2.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-tracing-bom/1.2.1/micrometer-tracing-bom-1.2.1.pom (0 B at 0 B/s)
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/org/springframework/spring-framework-bom/6.1.2/spring-framework-bom-6.1.2.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/6.1.2/spring-framework-bom-6.1.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/6.1.2/spring-framework-bom-6.1.2.pom (0 B at 0 B/s)
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Spring Data MongoDB                                                [pom]
+[INFO] Spring Data MongoDB - Core                                         [jar]
+[INFO] Spring Data MongoDB - Distribution                                 [pom]
+[INFO] 
+[INFO] --------< org.springframework.data:spring-data-mongodb-parent >---------
+[INFO] Building Spring Data MongoDB 4.3.0-SNAPSHOT                        [1/3]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.5.0:tree (default-cli) @ spring-data-mongodb-parent ---
+[INFO] digraph "org.springframework.data:spring-data-mongodb-parent:pom:4.3.0-SNAPSHOT" { 
+[INFO] 	"org.springframework.data:spring-data-mongodb-parent:pom:4.3.0-SNAPSHOT" -> "org.mongodb:mongodb-driver-core:jar:4.11.1:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb-parent:pom:4.3.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb-parent:pom:4.3.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb-parent:pom:4.3.0-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.5.0:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb-parent:pom:4.3.0-SNAPSHOT" -> "org.mockito:mockito-junit-jupiter:jar:5.5.0:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb-parent:pom:4.3.0-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb-parent:pom:4.3.0-SNAPSHOT" -> "org.springframework:spring-test:jar:6.1.2:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb-parent:pom:4.3.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.2:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb-parent:pom:4.3.0-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.4.13:test" ; 
+[INFO] 	"org.mongodb:mongodb-driver-core:jar:4.11.1:compile" -> "org.mongodb:bson:jar:4.11.1:compile" ; 
+[INFO] 	"org.mongodb:mongodb-driver-core:jar:4.11.1:compile" -> "org.mongodb:bson-record-codec:jar:4.11.1:runtime" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.5.0:test" -> "net.bytebuddy:byte-buddy:jar:1.14.6:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.5.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.6:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.5.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.springframework:spring-test:jar:6.1.2:test" -> "org.springframework:spring-core:jar:6.1.2:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.1.2:test" -> "org.springframework:spring-jcl:jar:6.1.2:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.13:test" -> "ch.qos.logback:logback-core:jar:1.4.13:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< org.springframework.data:spring-data-mongodb >------------
+[INFO] Building Spring Data MongoDB - Core 4.3.0-SNAPSHOT                 [2/3]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from spring-snapshot: https://repo.spring.io/snapshot/org/mongodb/bson/maven-metadata.xml
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/mongodb/bson/maven-metadata.xml
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/org/mongodb/bson/maven-metadata.xml
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/mongodb/bson/maven-metadata.xml (6.2 kB at 62 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-tracing/1.2.1/micrometer-tracing-1.2.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-tracing/1.2.1/micrometer-tracing-1.2.1.pom (0 B at 0 B/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-test/1.12.1/micrometer-test-1.12.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-test/1.12.1/micrometer-test-1.12.1.pom (0 B at 0 B/s)
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/io/micrometer/micrometer-core/1.12.1/micrometer-core-1.12.1.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-core/1.12.1/micrometer-core-1.12.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-core/1.12.1/micrometer-core-1.12.1.pom (0 B at 0 B/s)
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/io/micrometer/micrometer-observation-test/1.12.1/micrometer-observation-test-1.12.1.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation-test/1.12.1/micrometer-observation-test-1.12.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation-test/1.12.1/micrometer-observation-test-1.12.1.pom (0 B at 0 B/s)
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/io/micrometer/micrometer-tracing-test/1.2.1/micrometer-tracing-test-1.2.1.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-tracing-test/1.2.1/micrometer-tracing-test-1.2.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-tracing-test/1.2.1/micrometer-tracing-test-1.2.1.pom (0 B at 0 B/s)
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/io/micrometer/micrometer-tracing-integration-test/1.2.1/micrometer-tracing-integration-test-1.2.1.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-tracing-integration-test/1.2.1/micrometer-tracing-integration-test-1.2.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-tracing-integration-test/1.2.1/micrometer-tracing-integration-test-1.2.1.pom (0 B at 0 B/s)
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/io/micrometer/micrometer-tracing-reporter-wavefront/1.2.1/micrometer-tracing-reporter-wavefront-1.2.1.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-tracing-reporter-wavefront/1.2.1/micrometer-tracing-reporter-wavefront-1.2.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-tracing-reporter-wavefront/1.2.1/micrometer-tracing-reporter-wavefront-1.2.1.pom (0 B at 0 B/s)
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/io/micrometer/micrometer-tracing-bridge-brave/1.2.1/micrometer-tracing-bridge-brave-1.2.1.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-tracing-bridge-brave/1.2.1/micrometer-tracing-bridge-brave-1.2.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-tracing-bridge-brave/1.2.1/micrometer-tracing-bridge-brave-1.2.1.pom (0 B at 0 B/s)
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/io/micrometer/micrometer-tracing-bridge-otel/1.2.1/micrometer-tracing-bridge-otel-1.2.1.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-tracing-bridge-otel/1.2.1/micrometer-tracing-bridge-otel-1.2.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-tracing-bridge-otel/1.2.1/micrometer-tracing-bridge-otel-1.2.1.pom (0 B at 0 B/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.5.0:tree (default-cli) @ spring-data-mongodb ---
+[INFO] digraph "org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" { 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "org.springframework:spring-tx:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "org.springframework:spring-context:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "org.springframework:spring-beans:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "org.springframework:spring-core:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "org.springframework:spring-expression:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "org.springframework.data:spring-data-commons:jar:3.3.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "com.querydsl:querydsl-mongodb:jar:5.0.0:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "com.querydsl:querydsl-apt:jar:5.0.0:provided" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "javax.annotation:jsr250-api:jar:1.0:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "org.mongodb:mongodb-driver-sync:jar:4.11.1:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "org.mongodb:mongodb-driver-reactivestreams:jar:4.11.1:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "org.mongodb:mongodb-crypt:jar:1.8.0:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "io.projectreactor:reactor-core:jar:3.6.1:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "io.projectreactor:reactor-test:jar:3.6.1:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "io.reactivex.rxjava3:rxjava:jar:3.1.8:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "javax.interceptor:javax.interceptor-api:jar:1.2.1:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "jakarta.enterprise:jakarta.enterprise.cdi-api:jar:4.0.1:provided" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "jakarta.annotation:jakarta.annotation-api:jar:2.0.0:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "org.apache.openwebbeans:openwebbeans-se:jar:4.0.0:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "jakarta.validation:jakarta.validation-api:jar:3.0.2:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "org.objenesis:objenesis:jar:1.3:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "io.micrometer:micrometer-observation:jar:1.12.1:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "io.micrometer:micrometer-tracing:jar:1.2.1:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "org.hibernate.validator:hibernate-validator:jar:7.0.1.Final:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "jakarta.el:jakarta.el-api:jar:4.0.0:provided" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "org.glassfish:jakarta.el:jar:4.0.2:provided" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "nl.jqno.equalsverifier:equalsverifier:jar:1.7.8:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "org.springframework:spring-webmvc:jar:6.1.2:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "de.schauderhaft.degraph:degraph-check:jar:0.1.4:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "edu.umd.cs.mtc:multithreadedtc:jar:1.01:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "org.junit-pioneer:junit-pioneer:jar:0.5.3:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "jakarta.transaction:jakarta.transaction-api:jar:2.0.0:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.9.20:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "org.jetbrains.kotlin:kotlin-reflect:jar:1.9.20:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:1.7.3:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "org.jetbrains.kotlinx:kotlinx-coroutines-reactor:jar:1.7.3:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "io.mockk:mockk-jvm:jar:1.13.7:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "io.micrometer:micrometer-test:jar:1.12.1:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "io.micrometer:micrometer-tracing-test:jar:1.2.1:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "io.micrometer:micrometer-tracing-integration-test:jar:1.2.1:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "org.jmolecules:jmolecules-ddd:jar:1.9.0:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "org.mongodb:mongodb-driver-core:jar:4.11.1:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.5.0:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "org.mockito:mockito-junit-jupiter:jar:5.5.0:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "org.springframework:spring-test:jar:6.1.2:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.2:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.3.0-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.4.13:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.2:compile" -> "org.springframework:spring-aop:jar:6.1.2:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.1.2:compile" -> "org.springframework:spring-jcl:jar:6.1.2:compile" ; 
+[INFO] 	"com.querydsl:querydsl-mongodb:jar:5.0.0:compile" -> "com.querydsl:querydsl-core:jar:5.0.0:compile" ; 
+[INFO] 	"com.querydsl:querydsl-core:jar:5.0.0:compile" -> "com.mysema.commons:mysema-commons-lang:jar:0.2.4:compile" ; 
+[INFO] 	"com.querydsl:querydsl-apt:jar:5.0.0:provided" -> "com.querydsl:querydsl-codegen:jar:5.0.0:provided" ; 
+[INFO] 	"com.querydsl:querydsl-codegen:jar:5.0.0:provided" -> "com.querydsl:codegen-utils:jar:5.0.0:provided" ; 
+[INFO] 	"com.querydsl:querydsl-codegen:jar:5.0.0:provided" -> "javax.inject:javax.inject:jar:1:provided" ; 
+[INFO] 	"com.querydsl:querydsl-codegen:jar:5.0.0:provided" -> "io.github.classgraph:classgraph:jar:4.8.108:provided" ; 
+[INFO] 	"com.querydsl:codegen-utils:jar:5.0.0:provided" -> "org.eclipse.jdt:ecj:jar:3.26.0:provided" ; 
+[INFO] 	"org.mongodb:mongodb-driver-sync:jar:4.11.1:compile" -> "org.mongodb:bson:jar:4.11.1:compile" ; 
+[INFO] 	"org.mongodb:mongodb-driver-reactivestreams:jar:4.11.1:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.4:compile" ; 
+[INFO] 	"org.mongodb:mongodb-crypt:jar:1.8.0:compile" -> "net.java.dev.jna:jna:jar:5.11.0:compile" ; 
+[INFO] 	"jakarta.enterprise:jakarta.enterprise.cdi-api:jar:4.0.1:provided" -> "jakarta.enterprise:jakarta.enterprise.lang-model:jar:4.0.1:provided" ; 
+[INFO] 	"jakarta.enterprise:jakarta.enterprise.cdi-api:jar:4.0.1:provided" -> "jakarta.interceptor:jakarta.interceptor-api:jar:2.1.0:provided" ; 
+[INFO] 	"jakarta.enterprise:jakarta.enterprise.cdi-api:jar:4.0.1:provided" -> "jakarta.inject:jakarta.inject-api:jar:2.0.1:provided" ; 
+[INFO] 	"org.apache.openwebbeans:openwebbeans-se:jar:4.0.0:test" -> "org.apache.openwebbeans:openwebbeans-impl:jar:4.0.0:test" ; 
+[INFO] 	"org.apache.openwebbeans:openwebbeans-impl:jar:4.0.0:test" -> "org.apache.xbean:xbean-finder-shaded:jar:4.22:test" ; 
+[INFO] 	"org.apache.openwebbeans:openwebbeans-impl:jar:4.0.0:test" -> "org.apache.xbean:xbean-asm9-shaded:jar:4.22:test" ; 
+[INFO] 	"org.apache.openwebbeans:openwebbeans-impl:jar:4.0.0:test" -> "org.apache.openwebbeans:openwebbeans-spi:jar:4.0.0:test" ; 
+[INFO] 	"io.micrometer:micrometer-observation:jar:1.12.1:compile" -> "io.micrometer:micrometer-commons:jar:1.12.1:compile" ; 
+[INFO] 	"io.micrometer:micrometer-tracing:jar:1.2.1:compile" -> "io.micrometer:context-propagation:jar:1.1.0:compile" ; 
+[INFO] 	"io.micrometer:micrometer-tracing:jar:1.2.1:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"org.hibernate.validator:hibernate-validator:jar:7.0.1.Final:test" -> "org.jboss.logging:jboss-logging:jar:3.4.1.Final:test" ; 
+[INFO] 	"org.hibernate.validator:hibernate-validator:jar:7.0.1.Final:test" -> "com.fasterxml:classmate:jar:1.5.1:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.3:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.3:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:6.1.2:test" -> "org.springframework:spring-web:jar:6.1.2:test" ; 
+[INFO] 	"de.schauderhaft.degraph:degraph-check:jar:0.1.4:test" -> "org.scala-lang:scala-library:jar:2.11.7:test" ; 
+[INFO] 	"de.schauderhaft.degraph:degraph-check:jar:0.1.4:test" -> "de.schauderhaft.degraph:degraph-core:jar:0.1.4:test" ; 
+[INFO] 	"de.schauderhaft.degraph:degraph-check:jar:0.1.4:test" -> "org.scalatest:scalatest_2.11:jar:2.2.4:test" ; 
+[INFO] 	"de.schauderhaft.degraph:degraph-check:jar:0.1.4:test" -> "org.hamcrest:hamcrest-all:jar:1.3:test" ; 
+[INFO] 	"de.schauderhaft.degraph:degraph-core:jar:0.1.4:test" -> "org.scala-lang.modules:scala-xml_2.11:jar:1.0.3:test" ; 
+[INFO] 	"de.schauderhaft.degraph:degraph-core:jar:0.1.4:test" -> "org.scala-lang.modules:scala-parser-combinators_2.11:jar:1.0.3:test" ; 
+[INFO] 	"de.schauderhaft.degraph:degraph-core:jar:0.1.4:test" -> "org.ow2.asm:asm:jar:5.1:test" ; 
+[INFO] 	"de.schauderhaft.degraph:degraph-core:jar:0.1.4:test" -> "com.assembla.scala-incubator:graph-core_2.11:jar:1.9.1:test" ; 
+[INFO] 	"org.scalatest:scalatest_2.11:jar:2.2.4:test" -> "org.scala-lang:scala-reflect:jar:2.11.2:test" ; 
+[INFO] 	"org.junit-pioneer:junit-pioneer:jar:0.5.3:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit-pioneer:junit-pioneer:jar:0.5.3:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.9.20:compile" -> "org.jetbrains:annotations:jar:13.0:compile" ; 
+[INFO] 	"org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:1.7.3:compile" -> "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:1.7.3:compile" ; 
+[INFO] 	"org.jetbrains.kotlinx:kotlinx-coroutines-reactor:jar:1.7.3:compile" -> "org.jetbrains.kotlinx:kotlinx-coroutines-reactive:jar:1.7.3:compile" ; 
+[INFO] 	"org.jetbrains.kotlinx:kotlinx-coroutines-reactor:jar:1.7.3:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.9.20:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.9.20:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.9.20:compile" ; 
+[INFO] 	"io.mockk:mockk-jvm:jar:1.13.7:test" -> "io.mockk:mockk-dsl-jvm:jar:1.13.7:test" ; 
+[INFO] 	"io.mockk:mockk-jvm:jar:1.13.7:test" -> "io.mockk:mockk-agent-jvm:jar:1.13.7:test" ; 
+[INFO] 	"io.mockk:mockk-jvm:jar:1.13.7:test" -> "io.mockk:mockk-agent-api-jvm:jar:1.13.7:test" ; 
+[INFO] 	"io.mockk:mockk-jvm:jar:1.13.7:test" -> "io.mockk:mockk-core-jvm:jar:1.13.7:test" ; 
+[INFO] 	"io.mockk:mockk-jvm:jar:1.13.7:test" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.9.20:compile" ; 
+[INFO] 	"io.mockk:mockk-jvm:jar:1.13.7:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"io.micrometer:micrometer-test:jar:1.12.1:test" -> "io.micrometer:micrometer-core:jar:1.12.1:test" ; 
+[INFO] 	"io.micrometer:micrometer-test:jar:1.12.1:test" -> "io.micrometer:micrometer-observation-test:jar:1.12.1:test" ; 
+[INFO] 	"io.micrometer:micrometer-test:jar:1.12.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"io.micrometer:micrometer-test:jar:1.12.1:test" -> "ru.lanwen.wiremock:wiremock-junit5:jar:1.3.1:test" ; 
+[INFO] 	"io.micrometer:micrometer-test:jar:1.12.1:test" -> "org.awaitility:awaitility:jar:4.2.0:test" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.12.1:test" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:test" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.12.1:test" -> "org.latencyutils:LatencyUtils:jar:2.0.3:test" ; 
+[INFO] 	"org.awaitility:awaitility:jar:4.2.0:test" -> "org.hamcrest:hamcrest:jar:2.1:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.1:test" -> "io.micrometer:micrometer-tracing-reporter-wavefront:jar:1.2.1:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.1:test" -> "io.micrometer:micrometer-tracing-bridge-brave:jar:1.2.1:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.1:test" -> "io.zipkin.brave:brave:jar:5.16.0:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.1:test" -> "io.zipkin.brave:brave-context-slf4j:jar:5.16.0:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.1:test" -> "io.zipkin.brave:brave-instrumentation-http:jar:5.16.0:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.1:test" -> "io.zipkin.brave:brave-tests:jar:5.16.0:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.1:test" -> "io.zipkin.aws:brave-propagation-aws:jar:0.23.5:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.1:test" -> "io.zipkin.reporter2:zipkin-reporter-brave:jar:2.16.3:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.1:test" -> "io.micrometer:micrometer-tracing-bridge-otel:jar:1.2.1:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.1:test" -> "io.opentelemetry:opentelemetry-exporter-zipkin:jar:1.31.0:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.1:test" -> "io.opentelemetry:opentelemetry-sdk-trace:jar:1.31.0:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.1:test" -> "io.opentelemetry:opentelemetry-extension-trace-propagators:jar:1.31.0:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.1:test" -> "io.opentelemetry.instrumentation:opentelemetry-instrumentation-api-semconv:jar:1.31.0-alpha:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.1:test" -> "io.zipkin.zipkin2:zipkin:jar:2.23.2:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.1:test" -> "io.zipkin.reporter2:zipkin-reporter:jar:2.16.3:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.1:test" -> "io.zipkin.reporter2:zipkin-sender-urlconnection:jar:2.16.3:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.1:test" -> "io.zipkin.reporter2:zipkin-sender-kafka:jar:2.16.3:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.1:test" -> "io.zipkin.reporter2:zipkin-sender-activemq-client:jar:2.16.3:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.1:test" -> "io.zipkin.reporter2:zipkin-sender-amqp-client:jar:2.16.3:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.1:test" -> "com.wavefront:wavefront-internal-reporter-java:jar:1.7.16:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-bridge-otel:jar:1.2.1:test" -> "io.opentelemetry:opentelemetry-api:jar:1.31.0:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-bridge-otel:jar:1.2.1:test" -> "io.opentelemetry.semconv:opentelemetry-semconv:jar:1.21.0-alpha:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-bridge-otel:jar:1.2.1:test" -> "io.opentelemetry:opentelemetry-sdk-common:jar:1.31.0:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-bridge-otel:jar:1.2.1:test" -> "io.opentelemetry:opentelemetry-sdk:jar:1.31.0:test" ; 
+[INFO] 	"io.opentelemetry:opentelemetry-api:jar:1.31.0:test" -> "io.opentelemetry:opentelemetry-context:jar:1.31.0:test" ; 
+[INFO] 	"io.opentelemetry:opentelemetry-sdk:jar:1.31.0:test" -> "io.opentelemetry:opentelemetry-sdk-metrics:jar:1.31.0:test" ; 
+[INFO] 	"io.opentelemetry:opentelemetry-sdk:jar:1.31.0:test" -> "io.opentelemetry:opentelemetry-sdk-logs:jar:1.31.0:test" ; 
+[INFO] 	"io.opentelemetry:opentelemetry-sdk-logs:jar:1.31.0:test" -> "io.opentelemetry:opentelemetry-api-events:jar:1.31.0-alpha:test" ; 
+[INFO] 	"io.opentelemetry:opentelemetry-exporter-zipkin:jar:1.31.0:test" -> "io.opentelemetry:opentelemetry-exporter-common:jar:1.31.0:test" ; 
+[INFO] 	"io.opentelemetry:opentelemetry-exporter-zipkin:jar:1.31.0:test" -> "io.opentelemetry:opentelemetry-sdk-extension-autoconfigure-spi:jar:1.31.0:test" ; 
+[INFO] 	"io.opentelemetry:opentelemetry-exporter-zipkin:jar:1.31.0:test" -> "io.zipkin.reporter2:zipkin-sender-okhttp3:jar:2.16.3:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-okhttp3:jar:2.16.3:test" -> "com.squareup.okhttp3:okhttp:jar:3.14.9:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.14.9:test" -> "com.squareup.okio:okio:jar:1.17.2:test" ; 
+[INFO] 	"io.opentelemetry.instrumentation:opentelemetry-instrumentation-api-semconv:jar:1.31.0-alpha:test" -> "io.opentelemetry.instrumentation:opentelemetry-instrumentation-api:jar:1.31.0:test" ; 
+[INFO] 	"io.opentelemetry.instrumentation:opentelemetry-instrumentation-api-semconv:jar:1.31.0-alpha:test" -> "io.opentelemetry:opentelemetry-extension-incubator:jar:1.31.0-alpha:test" ; 
+[INFO] 	"com.wavefront:wavefront-internal-reporter-java:jar:1.7.16:test" -> "com.wavefront:wavefront-sdk-java:jar:3.0.4:test" ; 
+[INFO] 	"com.wavefront:wavefront-internal-reporter-java:jar:1.7.16:test" -> "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.15.3:test" ; 
+[INFO] 	"com.wavefront:wavefront-sdk-java:jar:3.0.4:test" -> "com.tdunning:t-digest:jar:3.2:test" ; 
+[INFO] 	"com.wavefront:wavefront-sdk-java:jar:3.0.4:test" -> "com.google.guava:guava:jar:31.1-jre:test" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:test" -> "org.checkerframework:checker-qual:jar:3.12.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.11.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:1.3:test" ; 
+[INFO] 	"com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.15.3:test" -> "org.yaml:snakeyaml:jar:2.1:test" ; 
+[INFO] 	"org.mongodb:mongodb-driver-core:jar:4.11.1:compile" -> "org.mongodb:bson-record-codec:jar:4.11.1:runtime" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.5.0:test" -> "net.bytebuddy:byte-buddy:jar:1.14.6:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.5.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.6:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.13:test" -> "ch.qos.logback:logback-core:jar:1.4.13:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----< org.springframework.data:spring-data-mongodb-distribution >------
+[INFO] Building Spring Data MongoDB - Distribution 4.3.0-SNAPSHOT         [3/3]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.5.0:tree (default-cli) @ spring-data-mongodb-distribution ---
+[INFO] digraph "org.springframework.data:spring-data-mongodb-distribution:pom:4.3.0-SNAPSHOT" { 
+[INFO] 	"org.springframework.data:spring-data-mongodb-distribution:pom:4.3.0-SNAPSHOT" -> "org.mongodb:mongodb-driver-core:jar:4.11.1:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb-distribution:pom:4.3.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb-distribution:pom:4.3.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb-distribution:pom:4.3.0-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.5.0:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb-distribution:pom:4.3.0-SNAPSHOT" -> "org.mockito:mockito-junit-jupiter:jar:5.5.0:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb-distribution:pom:4.3.0-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb-distribution:pom:4.3.0-SNAPSHOT" -> "org.springframework:spring-test:jar:6.1.2:test" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb-distribution:pom:4.3.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.2:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb-distribution:pom:4.3.0-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.4.13:test" ; 
+[INFO] 	"org.mongodb:mongodb-driver-core:jar:4.11.1:compile" -> "org.mongodb:bson:jar:4.11.1:compile" ; 
+[INFO] 	"org.mongodb:mongodb-driver-core:jar:4.11.1:compile" -> "org.mongodb:bson-record-codec:jar:4.11.1:runtime" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.5.0:test" -> "net.bytebuddy:byte-buddy:jar:1.14.6:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.5.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.6:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.5.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.springframework:spring-test:jar:6.1.2:test" -> "org.springframework:spring-core:jar:6.1.2:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.1.2:test" -> "org.springframework:spring-jcl:jar:6.1.2:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.13:test" -> "ch.qos.logback:logback-core:jar:1.4.13:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Spring Data MongoDB 4.3.0-SNAPSHOT:
+[INFO] 
+[INFO] Spring Data MongoDB ................................ SUCCESS [  3.427 s]
+[INFO] Spring Data MongoDB - Core ......................... SUCCESS [  5.436 s]
+[INFO] Spring Data MongoDB - Distribution ................. SUCCESS [  0.015 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  14.002 s
+[INFO] Finished at: 2023-12-28T09:03:32+01:00
+[INFO] ------------------------------------------------------------------------

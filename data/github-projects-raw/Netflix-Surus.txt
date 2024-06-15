@@ -1,0 +1,70 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------------< netflix:surus >----------------------------
+[INFO] Building surus 0.1.4
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ surus ---
+[INFO] digraph "netflix:surus:jar:0.1.4" { 
+[INFO] 	"netflix:surus:jar:0.1.4" -> "org.jpmml:pmml-evaluator:jar:1.0.19:compile" ; 
+[INFO] 	"netflix:surus:jar:0.1.4" -> "junit:junit-dep:jar:4.8.2:test" ; 
+[INFO] 	"netflix:surus:jar:0.1.4" -> "org.apache.hadoop:hadoop-core:jar:1.0.3:provided" ; 
+[INFO] 	"netflix:surus:jar:0.1.4" -> "org.apache.pig:pig:jar:0.14.0:provided" ; 
+[INFO] 	"org.jpmml:pmml-evaluator:jar:1.0.19:compile" -> "org.jpmml:pmml-manager:jar:1.0.19:compile" ; 
+[INFO] 	"org.jpmml:pmml-evaluator:jar:1.0.19:compile" -> "org.jpmml:pmml-model:jar:1.0.19:compile" ; 
+[INFO] 	"org.jpmml:pmml-evaluator:jar:1.0.19:compile" -> "com.google.guava:guava:jar:15.0:compile" ; 
+[INFO] 	"org.jpmml:pmml-evaluator:jar:1.0.19:compile" -> "org.apache.commons:commons-math3:jar:3.2:compile" ; 
+[INFO] 	"org.jpmml:pmml-evaluator:jar:1.0.19:compile" -> "joda-time:joda-time:jar:2.2:compile" ; 
+[INFO] 	"org.jpmml:pmml-model:jar:1.0.19:compile" -> "org.jpmml:pmml-schema:jar:1.0.19:compile" ; 
+[INFO] 	"org.jpmml:pmml-model:jar:1.0.19:compile" -> "com.sun.xml.bind:jaxb-impl:jar:2.2.6:compile" ; 
+[INFO] 	"junit:junit-dep:jar:4.8.2:test" -> "org.hamcrest:hamcrest-core:jar:1.1:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-core:jar:1.0.3:provided" -> "commons-cli:commons-cli:jar:1.2:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-core:jar:1.0.3:provided" -> "xmlenc:xmlenc:jar:0.52:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-core:jar:1.0.3:provided" -> "commons-httpclient:commons-httpclient:jar:3.0.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-core:jar:1.0.3:provided" -> "commons-codec:commons-codec:jar:1.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-core:jar:1.0.3:provided" -> "org.apache.commons:commons-math:jar:2.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-core:jar:1.0.3:provided" -> "commons-configuration:commons-configuration:jar:1.6:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-core:jar:1.0.3:provided" -> "commons-net:commons-net:jar:1.4.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-core:jar:1.0.3:provided" -> "org.mortbay.jetty:jetty:jar:6.1.26:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-core:jar:1.0.3:provided" -> "org.mortbay.jetty:jetty-util:jar:6.1.26:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-core:jar:1.0.3:provided" -> "tomcat:jasper-runtime:jar:5.5.12:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-core:jar:1.0.3:provided" -> "tomcat:jasper-compiler:jar:5.5.12:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-core:jar:1.0.3:provided" -> "org.mortbay.jetty:jsp-api-2.1:jar:6.1.14:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-core:jar:1.0.3:provided" -> "org.mortbay.jetty:jsp-2.1:jar:6.1.14:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-core:jar:1.0.3:provided" -> "commons-el:commons-el:jar:1.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-core:jar:1.0.3:provided" -> "net.java.dev.jets3t:jets3t:jar:0.7.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-core:jar:1.0.3:provided" -> "net.sf.kosmosfs:kfs:jar:0.3:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-core:jar:1.0.3:provided" -> "hsqldb:hsqldb:jar:1.8.0.10:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-core:jar:1.0.3:provided" -> "oro:oro:jar:2.0.8:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-core:jar:1.0.3:provided" -> "org.eclipse.jdt:core:jar:3.1.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-core:jar:1.0.3:provided" -> "org.codehaus.jackson:jackson-mapper-asl:jar:1.0.1:provided" ; 
+[INFO] 	"commons-httpclient:commons-httpclient:jar:3.0.1:provided" -> "commons-logging:commons-logging:jar:1.0.3:provided" ; 
+[INFO] 	"commons-configuration:commons-configuration:jar:1.6:provided" -> "commons-collections:commons-collections:jar:3.2.1:provided" ; 
+[INFO] 	"commons-configuration:commons-configuration:jar:1.6:provided" -> "commons-lang:commons-lang:jar:2.4:provided" ; 
+[INFO] 	"commons-configuration:commons-configuration:jar:1.6:provided" -> "commons-digester:commons-digester:jar:1.8:provided" ; 
+[INFO] 	"commons-configuration:commons-configuration:jar:1.6:provided" -> "commons-beanutils:commons-beanutils-core:jar:1.8.0:provided" ; 
+[INFO] 	"commons-digester:commons-digester:jar:1.8:provided" -> "commons-beanutils:commons-beanutils:jar:1.7.0:provided" ; 
+[INFO] 	"org.mortbay.jetty:jetty:jar:6.1.26:provided" -> "org.mortbay.jetty:servlet-api:jar:2.5-20081211:provided" ; 
+[INFO] 	"org.mortbay.jetty:jsp-2.1:jar:6.1.14:provided" -> "ant:ant:jar:1.6.5:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:0.14.0:provided" -> "org.mortbay.jetty:servlet-api-2.5:jar:6.1.14:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:0.14.0:provided" -> "junit:junit:jar:4.8.1:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:0.14.0:provided" -> "jline:jline:jar:1.0:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:0.14.0:provided" -> "org.antlr:ST4:jar:4.0.4:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:0.14.0:provided" -> "org.antlr:antlr-runtime:jar:3.4:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:0.14.0:provided" -> "dk.brics.automaton:automaton:jar:1.11-8:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:0.14.0:provided" -> "org.codehaus.jackson:jackson-core-asl:jar:1.8.8:provided" ; 
+[INFO] 	"org.apache.pig:pig:jar:0.14.0:provided" -> "org.apache.avro:avro:jar:1.7.4:provided" ; 
+[INFO] 	"org.antlr:antlr-runtime:jar:3.4:provided" -> "org.antlr:stringtemplate:jar:3.2.1:provided" ; 
+[INFO] 	"org.antlr:antlr-runtime:jar:3.4:provided" -> "antlr:antlr:jar:2.7.7:provided" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.7.4:provided" -> "com.thoughtworks.paranamer:paranamer:jar:2.3:provided" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.7.4:provided" -> "org.xerial.snappy:snappy-java:jar:1.0.4.1:provided" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.7.4:provided" -> "org.apache.commons:commons-compress:jar:1.4.1:provided" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.7.4:provided" -> "org.slf4j:slf4j-api:jar:1.6.4:provided" ; 
+[INFO] 	"org.apache.commons:commons-compress:jar:1.4.1:provided" -> "org.tukaani:xz:jar:1.0:provided" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.585 s
+[INFO] Finished at: 2023-12-28T09:03:16+01:00
+[INFO] ------------------------------------------------------------------------

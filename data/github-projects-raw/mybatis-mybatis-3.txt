@@ -1,0 +1,79 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.mybatis:mybatis:jar:3.5.15-SNAPSHOT
+[WARNING] 'profiles.profile[format].activation.file.exists' Failed to interpolate file location ${project.basedir}/format.xml for profile format: ${project.basedir} expression not supported during profile activation, use ${basedir} instead @ org.mybatis:mybatis-parent:41
+[WARNING] 'profiles.profile[license].activation.file.exists' Failed to interpolate file location ${project.basedir}/LICENSE_HEADER for profile license: ${project.basedir} expression not supported during profile activation, use ${basedir} instead @ org.mybatis:mybatis-parent:41
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ------------------------< org.mybatis:mybatis >-------------------------
+[INFO] Building mybatis 3.5.15-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ mybatis ---
+[INFO] digraph "org.mybatis:mybatis:jar:3.5.15-SNAPSHOT" { 
+[INFO] 	"org.mybatis:mybatis:jar:3.5.15-SNAPSHOT" -> "ognl:ognl:jar:3.3.4:compile" ; 
+[INFO] 	"org.mybatis:mybatis:jar:3.5.15-SNAPSHOT" -> "org.javassist:javassist:jar:3.29.2-GA:compile" ; 
+[INFO] 	"org.mybatis:mybatis:jar:3.5.15-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"org.mybatis:mybatis:jar:3.5.15-SNAPSHOT" -> "ch.qos.reload4j:reload4j:jar:1.2.25:compile" ; 
+[INFO] 	"org.mybatis:mybatis:jar:3.5.15-SNAPSHOT" -> "org.apache.logging.log4j:log4j-api:jar:2.22.0:compile" ; 
+[INFO] 	"org.mybatis:mybatis:jar:3.5.15-SNAPSHOT" -> "commons-logging:commons-logging:jar:1.3.0:compile" ; 
+[INFO] 	"org.mybatis:mybatis:jar:3.5.15-SNAPSHOT" -> "cglib:cglib:jar:3.3.0:compile" ; 
+[INFO] 	"org.mybatis:mybatis:jar:3.5.15-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.mybatis:mybatis:jar:3.5.15-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.mybatis:mybatis:jar:3.5.15-SNAPSHOT" -> "org.hsqldb:hsqldb:jar:2.6.1:test" ; 
+[INFO] 	"org.mybatis:mybatis:jar:3.5.15-SNAPSHOT" -> "org.apache.derby:derby:jar:10.16.1.1:test" ; 
+[INFO] 	"org.mybatis:mybatis:jar:3.5.15-SNAPSHOT" -> "org.apache.derby:derbyshared:jar:10.16.1.1:test" ; 
+[INFO] 	"org.mybatis:mybatis:jar:3.5.15-SNAPSHOT" -> "org.apache.derby:derbyoptionaltools:jar:10.16.1.1:test" ; 
+[INFO] 	"org.mybatis:mybatis:jar:3.5.15-SNAPSHOT" -> "com.h2database:h2:jar:2.2.224:test" ; 
+[INFO] 	"org.mybatis:mybatis:jar:3.5.15-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.8.0:test" ; 
+[INFO] 	"org.mybatis:mybatis:jar:3.5.15-SNAPSHOT" -> "org.mockito:mockito-subclass:jar:5.8.0:test" ; 
+[INFO] 	"org.mybatis:mybatis:jar:3.5.15-SNAPSHOT" -> "org.mockito:mockito-junit-jupiter:jar:5.8.0:test" ; 
+[INFO] 	"org.mybatis:mybatis:jar:3.5.15-SNAPSHOT" -> "org.apache.velocity:velocity-engine-core:jar:2.3:test" ; 
+[INFO] 	"org.mybatis:mybatis:jar:3.5.15-SNAPSHOT" -> "org.postgresql:postgresql:jar:42.7.0:test" ; 
+[INFO] 	"org.mybatis:mybatis:jar:3.5.15-SNAPSHOT" -> "com.mysql:mysql-connector-j:jar:8.2.0:test" ; 
+[INFO] 	"org.mybatis:mybatis:jar:3.5.15-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"org.mybatis:mybatis:jar:3.5.15-SNAPSHOT" -> "eu.codearte.catch-exception:catch-exception:jar:2.0:test" ; 
+[INFO] 	"org.mybatis:mybatis:jar:3.5.15-SNAPSHOT" -> "org.testcontainers:junit-jupiter:jar:1.19.3:test" ; 
+[INFO] 	"org.mybatis:mybatis:jar:3.5.15-SNAPSHOT" -> "org.testcontainers:postgresql:jar:1.19.3:test" ; 
+[INFO] 	"org.mybatis:mybatis:jar:3.5.15-SNAPSHOT" -> "org.testcontainers:mysql:jar:1.19.3:test" ; 
+[INFO] 	"org.mybatis:mybatis:jar:3.5.15-SNAPSHOT" -> "com.microsoft.sqlserver:mssql-jdbc:jar:12.4.2.jre11:provided" ; 
+[INFO] 	"org.mybatis:mybatis:jar:3.5.15-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.4.14:test" ; 
+[INFO] 	"org.mybatis:mybatis:jar:3.5.15-SNAPSHOT" -> "org.apache.logging.log4j:log4j-core:jar:2.22.0:test" ; 
+[INFO] 	"cglib:cglib:jar:3.3.0:compile" -> "org.ow2.asm:asm:jar:7.1:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.apache.derby:derbyoptionaltools:jar:10.16.1.1:test" -> "org.apache.derby:derbytools:jar:10.16.1.1:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "net.bytebuddy:byte-buddy:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.apache.velocity:velocity-engine-core:jar:2.3:test" -> "org.apache.commons:commons-lang3:jar:3.11:test" ; 
+[INFO] 	"org.postgresql:postgresql:jar:42.7.0:test" -> "org.checkerframework:checker-qual:jar:3.31.0:test" ; 
+[INFO] 	"com.mysql:mysql-connector-j:jar:8.2.0:test" -> "com.google.protobuf:protobuf-java:jar:3.21.9:test" ; 
+[INFO] 	"org.testcontainers:junit-jupiter:jar:1.19.3:test" -> "org.testcontainers:testcontainers:jar:1.19.3:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "org.apache.commons:commons-compress:jar:1.24.0:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "com.github.docker-java:docker-java-api:jar:3.3.4:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" -> "org.jetbrains:annotations:jar:17.0.0:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-api:jar:3.3.4:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.10.3:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" -> "com.github.docker-java:docker-java-transport:jar:3.3.4:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" -> "net.java.dev.jna:jna:jar:5.13.0:test" ; 
+[INFO] 	"org.testcontainers:postgresql:jar:1.19.3:test" -> "org.testcontainers:jdbc:jar:1.19.3:test" ; 
+[INFO] 	"org.testcontainers:jdbc:jar:1.19.3:test" -> "org.testcontainers:database-commons:jar:1.19.3:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.4.14:test" -> "ch.qos.logback:logback-core:jar:1.4.14:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.028 s
+[INFO] Finished at: 2023-12-28T09:03:15+01:00
+[INFO] ------------------------------------------------------------------------

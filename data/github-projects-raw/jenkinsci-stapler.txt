@@ -1,0 +1,264 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Stapler Parent                                                     [pom]
+[INFO] Stapler                                                            [jar]
+[INFO] Stapler JSP module                                                 [jar]
+[INFO] Stapler Jelly module                                               [jar]
+[INFO] Stapler Groovy module                                              [jar]
+[INFO] Stapler JRebel module                                              [jar]
+[INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/codehaus/mojo/animal-sniffer-maven-plugin/maven-metadata.xml
+[INFO] 
+[INFO] -----------------< org.kohsuke.stapler:stapler-parent >-----------------
+[INFO] Building Stapler Parent 999999-SNAPSHOT                            [1/6]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ stapler-parent ---
+[INFO] digraph "org.kohsuke.stapler:stapler-parent:pom:999999-SNAPSHOT" { 
+[INFO] 	"org.kohsuke.stapler:stapler-parent:pom:999999-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.8.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< org.kohsuke.stapler:stapler >---------------------
+[INFO] Building Stapler 999999-SNAPSHOT                                   [2/6]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ stapler ---
+[INFO] digraph "org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT" { 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT" -> "com.jcraft:jzlib:jar:1.1.3-kohsuke-1:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT" -> "com.sun.xml.txw2:txw2:jar:20110809:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT" -> "commons-beanutils:commons-beanutils:jar:1.9.4:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT" -> "commons-codec:commons-codec:jar:1.16.0:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT" -> "commons-discovery:commons-discovery:jar:0.5:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT" -> "commons-fileupload:commons-fileupload:jar:1.5:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT" -> "commons-io:commons-io:jar:2.15.1:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT" -> "org.codehaus.groovy:groovy-all:jar:2.4.21:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT" -> "org.jenkins-ci:annotation-indexer:jar:1.17:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT" -> "org.jvnet:tiger-types:jar:2.2:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT" -> "org.jvnet.localizer:localizer:jar:1.31:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT" -> "org.kohsuke.metainf-services:metainf-services:jar:1.11:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT" -> "org.kohsuke.stapler:json-lib:jar:2.4-jenkins-3:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT" -> "jakarta.servlet:jakarta.servlet-api:jar:4.0.4:provided" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT" -> "com.karuslabs:elementary:jar:2.0.0:test" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT" -> "org.apache.httpcomponents:httpmime:jar:4.5.14:test" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT" -> "org.eclipse.jetty:jetty-server:jar:10.0.18:test" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT" -> "org.eclipse.jetty:jetty-servlet:jar:10.0.18:test" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT" -> "org.eclipse.jetty:jetty-util:jar:10.0.18:test" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT" -> "org.eclipse.jetty:jetty-webapp:jar:10.0.18:test" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT" -> "org.jenkins-ci:test-annotations:jar:1.4:test" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT" -> "org.jenkins-ci.main:jenkins-test-harness-htmlunit:jar:164.v87e5a_1809c10:test" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.6.0:test" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.8.0:compile" ; 
+[INFO] 	"com.sun.xml.txw2:txw2:jar:20110809:compile" -> "javax.xml.stream:stax-api:jar:1.0-2:compile" ; 
+[INFO] 	"com.sun.xml.txw2:txw2:jar:20110809:compile" -> "relaxngDatatype:relaxngDatatype:jar:20020414:compile" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:compile" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"org.kohsuke.stapler:json-lib:jar:2.4-jenkins-3:compile" -> "commons-lang:commons-lang:jar:2.5:compile" ; 
+[INFO] 	"org.kohsuke.stapler:json-lib:jar:2.4-jenkins-3:compile" -> "net.sf.ezmorph:ezmorph:jar:1.0.6:compile" ; 
+[INFO] 	"com.karuslabs:elementary:jar:2.0.0:test" -> "org.checkerframework:checker-qual:jar:3.35.0:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpmime:jar:4.5.14:test" -> "org.apache.httpcomponents:httpclient:jar:4.5.14:test" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.14:test" -> "org.apache.httpcomponents:httpcore:jar:4.4.16:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:10.0.18:test" -> "org.eclipse.jetty.toolchain:jetty-servlet-api:jar:4.0.6:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:10.0.18:test" -> "org.eclipse.jetty:jetty-http:jar:10.0.18:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:10.0.18:test" -> "org.eclipse.jetty:jetty-io:jar:10.0.18:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:10.0.18:test" -> "org.slf4j:slf4j-api:jar:2.0.5:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:10.0.18:test" -> "org.eclipse.jetty:jetty-security:jar:10.0.18:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-webapp:jar:10.0.18:test" -> "org.eclipse.jetty:jetty-xml:jar:10.0.18:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.6.0:test" -> "net.bytebuddy:byte-buddy:jar:1.14.8:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.6.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.8:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.6.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< org.kohsuke.stapler:stapler-jsp >-------------------
+[INFO] Building Stapler JSP module 999999-SNAPSHOT                        [3/6]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/kohsuke/stapler/stapler/999999-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ stapler-jsp ---
+[INFO] digraph "org.kohsuke.stapler:stapler-jsp:jar:999999-SNAPSHOT" { 
+[INFO] 	"org.kohsuke.stapler:stapler-jsp:jar:999999-SNAPSHOT" -> "org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jsp:jar:999999-SNAPSHOT" -> "org.kohsuke.metainf-services:metainf-services:jar:1.11:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jsp:jar:999999-SNAPSHOT" -> "jakarta.servlet:jakarta.servlet-api:jar:4.0.4:provided" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jsp:jar:999999-SNAPSHOT" -> "jakarta.servlet.jsp:jakarta.servlet.jsp-api:jar:2.3.6:provided" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jsp:jar:999999-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.8.0:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "com.jcraft:jzlib:jar:1.1.3-kohsuke-1:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "commons-beanutils:commons-beanutils:jar:1.9.4:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "commons-codec:commons-codec:jar:1.16.0:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "commons-discovery:commons-discovery:jar:0.5:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "commons-fileupload:commons-fileupload:jar:1.5:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "commons-io:commons-io:jar:2.15.1:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "org.jvnet:tiger-types:jar:2.2:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "org.jvnet.localizer:localizer:jar:1.31:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "org.kohsuke.stapler:json-lib:jar:2.4-jenkins-3:compile" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:compile" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"org.kohsuke.stapler:json-lib:jar:2.4-jenkins-3:compile" -> "commons-lang:commons-lang:jar:2.5:compile" ; 
+[INFO] 	"org.kohsuke.stapler:json-lib:jar:2.4-jenkins-3:compile" -> "net.sf.ezmorph:ezmorph:jar:1.0.6:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.kohsuke.stapler:stapler-jelly >------------------
+[INFO] Building Stapler Jelly module 999999-SNAPSHOT                      [4/6]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ stapler-jelly ---
+[INFO] digraph "org.kohsuke.stapler:stapler-jelly:jar:999999-SNAPSHOT" { 
+[INFO] 	"org.kohsuke.stapler:stapler-jelly:jar:999999-SNAPSHOT" -> "org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jelly:jar:999999-SNAPSHOT" -> "org.dom4j:dom4j:jar:2.1.4:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jelly:jar:999999-SNAPSHOT" -> "org.jenkins-ci:commons-jelly:jar:1.1-jenkins-20230713:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jelly:jar:999999-SNAPSHOT" -> "io.jenkins.tools.maven:jellydoc-annotations:jar:137.v803fea_a_fb_c75:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jelly:jar:999999-SNAPSHOT" -> "org.kohsuke.metainf-services:metainf-services:jar:1.11:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jelly:jar:999999-SNAPSHOT" -> "jakarta.servlet:jakarta.servlet-api:jar:4.0.4:provided" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jelly:jar:999999-SNAPSHOT" -> "org.kohsuke.stapler:stapler:jar:tests:999999-SNAPSHOT:test" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jelly:jar:999999-SNAPSHOT" -> "org.eclipse.jetty:jetty-server:jar:10.0.18:test" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jelly:jar:999999-SNAPSHOT" -> "org.eclipse.jetty:jetty-servlet:jar:10.0.18:test" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jelly:jar:999999-SNAPSHOT" -> "org.eclipse.jetty:jetty-util:jar:10.0.18:test" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jelly:jar:999999-SNAPSHOT" -> "org.eclipse.jetty:jetty-webapp:jar:10.0.18:test" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jelly:jar:999999-SNAPSHOT" -> "org.jenkins-ci:version-number:jar:1.11:test" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jelly:jar:999999-SNAPSHOT" -> "org.jenkins-ci.main:jenkins-test-harness-htmlunit:jar:164.v87e5a_1809c10:test" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jelly:jar:999999-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jelly:jar:999999-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jelly:jar:999999-SNAPSHOT" -> "org.jvnet.hudson:commons-jelly-tags-define:jar:1.1-jenkins-20230713:test" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jelly:jar:999999-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.8.0:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "com.jcraft:jzlib:jar:1.1.3-kohsuke-1:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "commons-beanutils:commons-beanutils:jar:1.9.4:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "commons-codec:commons-codec:jar:1.16.0:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "commons-discovery:commons-discovery:jar:0.5:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "commons-fileupload:commons-fileupload:jar:1.5:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "commons-io:commons-io:jar:2.15.1:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "org.jvnet:tiger-types:jar:2.2:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "org.jvnet.localizer:localizer:jar:1.31:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "org.kohsuke.stapler:json-lib:jar:2.4-jenkins-3:compile" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.kohsuke.stapler:json-lib:jar:2.4-jenkins-3:compile" -> "commons-lang:commons-lang:jar:2.5:compile" ; 
+[INFO] 	"org.kohsuke.stapler:json-lib:jar:2.4-jenkins-3:compile" -> "net.sf.ezmorph:ezmorph:jar:1.0.6:compile" ; 
+[INFO] 	"org.jenkins-ci:commons-jelly:jar:1.1-jenkins-20230713:compile" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"org.jenkins-ci:commons-jelly:jar:1.1-jenkins-20230713:compile" -> "org.jenkins-ci:commons-jexl:jar:1.1-jenkins-20111212:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:10.0.18:test" -> "org.eclipse.jetty.toolchain:jetty-servlet-api:jar:4.0.6:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:10.0.18:test" -> "org.eclipse.jetty:jetty-http:jar:10.0.18:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:10.0.18:test" -> "org.eclipse.jetty:jetty-io:jar:10.0.18:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:10.0.18:test" -> "org.slf4j:slf4j-api:jar:2.0.5:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:10.0.18:test" -> "org.eclipse.jetty:jetty-security:jar:10.0.18:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-webapp:jar:10.0.18:test" -> "org.eclipse.jetty:jetty-xml:jar:10.0.18:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.kohsuke.stapler:stapler-groovy >-----------------
+[INFO] Building Stapler Groovy module 999999-SNAPSHOT                     [5/6]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/kohsuke/stapler/stapler-jelly/999999-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ stapler-groovy ---
+[INFO] digraph "org.kohsuke.stapler:stapler-groovy:jar:999999-SNAPSHOT" { 
+[INFO] 	"org.kohsuke.stapler:stapler-groovy:jar:999999-SNAPSHOT" -> "org.kohsuke.stapler:stapler-jelly:jar:999999-SNAPSHOT:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-groovy:jar:999999-SNAPSHOT" -> "org.codehaus.groovy:groovy-all:jar:2.4.21:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-groovy:jar:999999-SNAPSHOT" -> "org.kohsuke.metainf-services:metainf-services:jar:1.11:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-groovy:jar:999999-SNAPSHOT" -> "jakarta.servlet:jakarta.servlet-api:jar:4.0.4:provided" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-groovy:jar:999999-SNAPSHOT" -> "org.kohsuke.stapler:stapler:jar:tests:999999-SNAPSHOT:test" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-groovy:jar:999999-SNAPSHOT" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-groovy:jar:999999-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-groovy:jar:999999-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-groovy:jar:999999-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.6.0:test" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-groovy:jar:999999-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.8.0:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jelly:jar:999999-SNAPSHOT:compile" -> "org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jelly:jar:999999-SNAPSHOT:compile" -> "org.dom4j:dom4j:jar:2.1.4:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jelly:jar:999999-SNAPSHOT:compile" -> "org.jenkins-ci:commons-jelly:jar:1.1-jenkins-20230713:compile" ; 
+[INFO] 	"org.jenkins-ci:commons-jelly:jar:1.1-jenkins-20230713:compile" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"org.jenkins-ci:commons-jelly:jar:1.1-jenkins-20230713:compile" -> "org.jenkins-ci:commons-jexl:jar:1.1-jenkins-20111212:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:tests:999999-SNAPSHOT:test" -> "com.jcraft:jzlib:jar:1.1.3-kohsuke-1:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:tests:999999-SNAPSHOT:test" -> "commons-beanutils:commons-beanutils:jar:1.9.4:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:tests:999999-SNAPSHOT:test" -> "commons-codec:commons-codec:jar:1.16.0:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:tests:999999-SNAPSHOT:test" -> "commons-discovery:commons-discovery:jar:0.5:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:tests:999999-SNAPSHOT:test" -> "commons-fileupload:commons-fileupload:jar:1.5:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:tests:999999-SNAPSHOT:test" -> "commons-io:commons-io:jar:2.15.1:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:tests:999999-SNAPSHOT:test" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:tests:999999-SNAPSHOT:test" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:tests:999999-SNAPSHOT:test" -> "org.jvnet:tiger-types:jar:2.2:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:tests:999999-SNAPSHOT:test" -> "org.jvnet.localizer:localizer:jar:1.31:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:tests:999999-SNAPSHOT:test" -> "org.kohsuke.stapler:json-lib:jar:2.4-jenkins-3:compile" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.kohsuke.stapler:json-lib:jar:2.4-jenkins-3:compile" -> "commons-lang:commons-lang:jar:2.5:compile" ; 
+[INFO] 	"org.kohsuke.stapler:json-lib:jar:2.4-jenkins-3:compile" -> "net.sf.ezmorph:ezmorph:jar:1.0.6:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.6.0:test" -> "net.bytebuddy:byte-buddy:jar:1.14.8:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.6.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.8:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.6.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.kohsuke.stapler:stapler-jrebel >-----------------
+[INFO] Building Stapler JRebel module 999999-SNAPSHOT                     [6/6]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ stapler-jrebel ---
+[INFO] digraph "org.kohsuke.stapler:stapler-jrebel:jar:999999-SNAPSHOT" { 
+[INFO] 	"org.kohsuke.stapler:stapler-jrebel:jar:999999-SNAPSHOT" -> "org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jrebel:jar:999999-SNAPSHOT" -> "org.kohsuke.metainf-services:metainf-services:jar:1.11:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jrebel:jar:999999-SNAPSHOT" -> "jakarta.servlet:jakarta.servlet-api:jar:4.0.4:provided" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jrebel:jar:999999-SNAPSHOT" -> "org.zeroturnaround:jr-sdk:jar:2.1.1:provided" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jrebel:jar:999999-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.8.0:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "com.jcraft:jzlib:jar:1.1.3-kohsuke-1:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "commons-beanutils:commons-beanutils:jar:1.9.4:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "commons-codec:commons-codec:jar:1.16.0:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "commons-discovery:commons-discovery:jar:0.5:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "commons-fileupload:commons-fileupload:jar:1.5:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "commons-io:commons-io:jar:2.15.1:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "org.jvnet:tiger-types:jar:2.2:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "org.jvnet.localizer:localizer:jar:1.31:compile" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:999999-SNAPSHOT:compile" -> "org.kohsuke.stapler:json-lib:jar:2.4-jenkins-3:compile" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:compile" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"org.kohsuke.stapler:json-lib:jar:2.4-jenkins-3:compile" -> "commons-lang:commons-lang:jar:2.5:compile" ; 
+[INFO] 	"org.kohsuke.stapler:json-lib:jar:2.4-jenkins-3:compile" -> "net.sf.ezmorph:ezmorph:jar:1.0.6:compile" ; 
+[INFO] 	"org.zeroturnaround:jr-sdk:jar:2.1.1:provided" -> "org.zeroturnaround:jr-javassist:jar:3.8.0.GA:provided" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Stapler Parent 999999-SNAPSHOT:
+[INFO] 
+[INFO] Stapler Parent ..................................... SUCCESS [  4.120 s]
+[INFO] Stapler ............................................ SUCCESS [  0.747 s]
+[INFO] Stapler JSP module ................................. SUCCESS [  0.967 s]
+[INFO] Stapler Jelly module ............................... SUCCESS [  0.195 s]
+[INFO] Stapler Groovy module .............................. SUCCESS [  0.844 s]
+[INFO] Stapler JRebel module .............................. SUCCESS [  0.104 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.268 s
+[INFO] Finished at: 2023-12-28T09:03:15+01:00
+[INFO] ------------------------------------------------------------------------

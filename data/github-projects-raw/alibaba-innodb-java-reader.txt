@@ -1,0 +1,146 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] innodb-java-reader-parent                                          [pom]
+[INFO] innodb-java-reader                                                 [jar]
+[INFO] innodb-heatmap                                                     [jar]
+[INFO] innodb-java-reader-demo                                            [jar]
+[INFO] innodb-java-reader-cli                                             [jar]
+[INFO] 
+[INFO] -----------< com.alibaba.database:innodb-java-reader-parent >-----------
+[INFO] Building innodb-java-reader-parent 1.0.10                          [1/5]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ innodb-java-reader-parent ---
+[INFO] digraph "com.alibaba.database:innodb-java-reader-parent:pom:1.0.10" { 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< com.alibaba.database:innodb-java-reader >---------------
+[INFO] Building innodb-java-reader 1.0.10                                 [2/5]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ innodb-java-reader ---
+[INFO] digraph "com.alibaba.database:innodb-java-reader:jar:1.0.10" { 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10" -> "org.apache.commons:commons-lang3:jar:3.8.1:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10" -> "com.google.guava:guava:jar:23.0:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10" -> "org.codehaus.jackson:jackson-mapper-asl:jar:1.9.11:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10" -> "org.projectlombok:lombok:jar:1.18.10:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10" -> "org.slf4j:slf4j-api:jar:1.7.28:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10" -> "org.slf4j:slf4j-log4j12:jar:1.7.28:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10" -> "com.github.jsqlparser:jsqlparser:jar:3.1:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10" -> "org.hamcrest:hamcrest-library:jar:1.3:test" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10" -> "joda-time:joda-time:jar:2.10.4:test" ; 
+[INFO] 	"com.google.guava:guava:jar:23.0:compile" -> "com.google.code.findbugs:jsr305:jar:1.3.9:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:23.0:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.0.18:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:23.0:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:23.0:compile" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.14:compile" ; 
+[INFO] 	"org.codehaus.jackson:jackson-mapper-asl:jar:1.9.11:compile" -> "org.codehaus.jackson:jackson-core-asl:jar:1.9.11:compile" ; 
+[INFO] 	"org.slf4j:slf4j-log4j12:jar:1.7.28:compile" -> "log4j:log4j:jar:1.2.17:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< com.alibaba.database:innodb-heatmap >-----------------
+[INFO] Building innodb-heatmap 1.0.10                                     [3/5]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ innodb-heatmap ---
+[INFO] digraph "com.alibaba.database:innodb-heatmap:jar:1.0.10" { 
+[INFO] 	"com.alibaba.database:innodb-heatmap:jar:1.0.10" -> "com.alibaba.database:innodb-java-reader:jar:1.0.10:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-heatmap:jar:1.0.10" -> "org.freemarker:freemarker:jar:2.3.23:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-heatmap:jar:1.0.10" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"com.alibaba.database:innodb-heatmap:jar:1.0.10" -> "org.hamcrest:hamcrest-library:jar:1.3:test" ; 
+[INFO] 	"com.alibaba.database:innodb-heatmap:jar:1.0.10" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"com.alibaba.database:innodb-heatmap:jar:1.0.10" -> "joda-time:joda-time:jar:2.10.4:test" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10:compile" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10:compile" -> "org.apache.commons:commons-lang3:jar:3.8.1:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10:compile" -> "com.google.guava:guava:jar:23.0:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10:compile" -> "org.codehaus.jackson:jackson-mapper-asl:jar:1.9.11:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10:compile" -> "org.projectlombok:lombok:jar:1.18.10:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10:compile" -> "org.slf4j:slf4j-api:jar:1.7.28:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10:compile" -> "org.slf4j:slf4j-log4j12:jar:1.7.28:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10:compile" -> "com.github.jsqlparser:jsqlparser:jar:3.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:23.0:compile" -> "com.google.code.findbugs:jsr305:jar:1.3.9:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:23.0:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.0.18:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:23.0:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:23.0:compile" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.14:compile" ; 
+[INFO] 	"org.codehaus.jackson:jackson-mapper-asl:jar:1.9.11:compile" -> "org.codehaus.jackson:jackson-core-asl:jar:1.9.11:compile" ; 
+[INFO] 	"org.slf4j:slf4j-log4j12:jar:1.7.28:compile" -> "log4j:log4j:jar:1.2.17:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< com.alibaba.database:innodb-java-reader-demo >------------
+[INFO] Building innodb-java-reader-demo 1.0.10                            [4/5]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ innodb-java-reader-demo ---
+[INFO] digraph "com.alibaba.database:innodb-java-reader-demo:jar:1.0.10" { 
+[INFO] 	"com.alibaba.database:innodb-java-reader-demo:jar:1.0.10" -> "com.alibaba.database:innodb-java-reader:jar:1.0.10:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader-demo:jar:1.0.10" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader-demo:jar:1.0.10" -> "org.hamcrest:hamcrest-library:jar:1.3:test" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader-demo:jar:1.0.10" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader-demo:jar:1.0.10" -> "joda-time:joda-time:jar:2.10.4:test" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10:compile" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10:compile" -> "org.apache.commons:commons-lang3:jar:3.8.1:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10:compile" -> "com.google.guava:guava:jar:23.0:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10:compile" -> "org.codehaus.jackson:jackson-mapper-asl:jar:1.9.11:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10:compile" -> "org.projectlombok:lombok:jar:1.18.10:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10:compile" -> "org.slf4j:slf4j-api:jar:1.7.28:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10:compile" -> "org.slf4j:slf4j-log4j12:jar:1.7.28:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10:compile" -> "com.github.jsqlparser:jsqlparser:jar:3.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:23.0:compile" -> "com.google.code.findbugs:jsr305:jar:1.3.9:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:23.0:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.0.18:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:23.0:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:23.0:compile" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.14:compile" ; 
+[INFO] 	"org.codehaus.jackson:jackson-mapper-asl:jar:1.9.11:compile" -> "org.codehaus.jackson:jackson-core-asl:jar:1.9.11:compile" ; 
+[INFO] 	"org.slf4j:slf4j-log4j12:jar:1.7.28:compile" -> "log4j:log4j:jar:1.2.17:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< com.alibaba.database:innodb-java-reader-cli >-------------
+[INFO] Building innodb-java-reader-cli 1.0.10                             [5/5]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ innodb-java-reader-cli ---
+[INFO] digraph "com.alibaba.database:innodb-java-reader-cli:jar:1.0.10" { 
+[INFO] 	"com.alibaba.database:innodb-java-reader-cli:jar:1.0.10" -> "com.alibaba.database:innodb-java-reader:jar:1.0.10:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader-cli:jar:1.0.10" -> "com.alibaba.database:innodb-heatmap:jar:1.0.10:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader-cli:jar:1.0.10" -> "commons-cli:commons-cli:jar:1.3.1:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader-cli:jar:1.0.10" -> "org.apache.commons:commons-csv:jar:1.8:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader-cli:jar:1.0.10" -> "net.smacke:jaydio:jar:0.1:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader-cli:jar:1.0.10" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader-cli:jar:1.0.10" -> "org.hamcrest:hamcrest-library:jar:1.3:test" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader-cli:jar:1.0.10" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader-cli:jar:1.0.10" -> "joda-time:joda-time:jar:2.10.4:test" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader-cli:jar:1.0.10" -> "commons-codec:commons-codec:jar:1.13:test" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10:compile" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10:compile" -> "org.apache.commons:commons-lang3:jar:3.8.1:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10:compile" -> "com.google.guava:guava:jar:23.0:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10:compile" -> "org.codehaus.jackson:jackson-mapper-asl:jar:1.9.11:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10:compile" -> "org.projectlombok:lombok:jar:1.18.10:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10:compile" -> "org.slf4j:slf4j-api:jar:1.7.28:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10:compile" -> "org.slf4j:slf4j-log4j12:jar:1.7.28:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-java-reader:jar:1.0.10:compile" -> "com.github.jsqlparser:jsqlparser:jar:3.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:23.0:compile" -> "com.google.code.findbugs:jsr305:jar:1.3.9:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:23.0:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.0.18:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:23.0:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:23.0:compile" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.14:compile" ; 
+[INFO] 	"org.codehaus.jackson:jackson-mapper-asl:jar:1.9.11:compile" -> "org.codehaus.jackson:jackson-core-asl:jar:1.9.11:compile" ; 
+[INFO] 	"com.alibaba.database:innodb-heatmap:jar:1.0.10:compile" -> "org.freemarker:freemarker:jar:2.3.23:compile" ; 
+[INFO] 	"net.smacke:jaydio:jar:0.1:compile" -> "net.java.dev.jna:jna:jar:4.0.0:compile" ; 
+[INFO] 	"net.smacke:jaydio:jar:0.1:compile" -> "log4j:log4j:jar:1.2.17:compile" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for innodb-java-reader-parent 1.0.10:
+[INFO] 
+[INFO] innodb-java-reader-parent .......................... SUCCESS [  4.133 s]
+[INFO] innodb-java-reader ................................. SUCCESS [  0.465 s]
+[INFO] innodb-heatmap ..................................... SUCCESS [  0.072 s]
+[INFO] innodb-java-reader-demo ............................ SUCCESS [  0.093 s]
+[INFO] innodb-java-reader-cli ............................. SUCCESS [  0.235 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.351 s
+[INFO] Finished at: 2023-12-28T09:02:20+01:00
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,1092 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 12 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 12 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] OpenRefine                                                         [pom]
+[INFO] OpenRefine - main                                                  [jar]
+[INFO] OpenRefine - server                                                [jar]
+[INFO] OpenRefine - extensions                                            [pom]
+[INFO] OpenRefine - Jython extension                                      [jar]
+[INFO] OpenRefine - Wikibase extension                                    [jar]
+[INFO] OpenRefine - Database extension                                    [jar]
+[INFO] OpenRefine - Gdata extension                                       [jar]
+[INFO] OpenRefine - PC-axis extension                                     [jar]
+[INFO] OpenRefine - Phonetic clustering extension                         [jar]
+[INFO] OpenRefine - packaging                                             [pom]
+[INFO] OpenRefine Java JMH benchmarks                                     [jar]
+[INFO] 
+[INFO] ---------------------< org.openrefine:openrefine >----------------------
+[INFO] Building OpenRefine 3.8-SNAPSHOT                                  [1/12]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ openrefine ---
+[INFO] digraph "org.openrefine:openrefine:pom:3.8-SNAPSHOT" { 
+[INFO] 	"org.openrefine:openrefine:pom:3.8-SNAPSHOT" -> "org.jvnet.localizer:localizer:jar:1.31:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------------< org.openrefine:main >-------------------------
+[INFO] Building OpenRefine - main 3.8-SNAPSHOT                           [2/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ main ---
+[INFO] digraph "org.openrefine:main:jar:3.8-SNAPSHOT" { 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "javax.servlet:javax.servlet-api:jar:4.0.1:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "org.openrefine.dependencies:butterfly:jar:1.2.5:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.9:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "org.apache.commons:commons-lang3:jar:3.14.0:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "commons-fileupload:commons-fileupload:jar:1.5:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "org.apache.commons:commons-text:jar:1.11.0:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "commons-validator:commons-validator:jar:1.7:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "org.apache.velocity:velocity-engine-core:jar:2.3:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "org.marc4j:marc4j:jar:2.9.5:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "org.apache.commons:commons-compress:jar:1.25.0:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "org.jsoup:jsoup:jar:1.15.3:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "com.univocity:univocity-parsers:jar:2.9.1:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "org.apache.poi:poi:jar:5.2.5:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "org.apache.poi:poi-ooxml:jar:5.2.5:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "org.odftoolkit:odfdom-java:jar:0.9.0:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "org.openrefine.dependencies:vicino:jar:1.2:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "org.clojure:clojure:jar:1.11.1:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "org.apache.httpcomponents.client5:httpclient5:jar:5.2.3:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "org.apache.httpcomponents:httpcore:jar:4.4.16:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "org.apache.jena:jena-arq:jar:4.10.0:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "org.apache.jena:jena-core:jar:4.10.0:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "commons-codec:commons-codec:jar:1.16.0:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "commons-io:commons-io:jar:2.15.1:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "com.google.guava:guava:jar:31.1-jre:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "javax.xml.bind:jaxb-api:jar:2.3.1:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "com.github.albfernandez:juniversalchardet:jar:2.4.0:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "org.eclipse.jetty:jetty-servlets:jar:10.0.16:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "com.optimaize.languagedetector:language-detector:jar:0.6:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "org.testng:testng:jar:7.7.1:test" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "com.squareup.okhttp3:mockwebserver:jar:4.10.0:test" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.8.0:test" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "org.apache.httpcomponents:httpmime:jar:4.5.14:test" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "org.apache.logging.log4j:log4j-core:jar:2.22.0:test" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.22.0:test" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT" -> "org.jvnet.localizer:localizer:jar:1.31:compile" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:compile" -> "commons-lang:commons-lang:jar:2.6:compile" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:compile" -> "org.apache.velocity:velocity:jar:1.6.3:compile" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:compile" -> "org.mozilla:rhino:jar:1.7.14:compile" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:compile" -> "com.metaweb:lessen:jar:1.0:compile" ; 
+[INFO] 	"org.apache.velocity:velocity:jar:1.6.3:compile" -> "oro:oro:jar:2.0.8:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:compile" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:compile" -> "commons-beanutils:commons-beanutils:jar:1.9.4:compile" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:compile" -> "commons-digester:commons-digester:jar:2.1:compile" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.poi:poi:jar:5.2.5:compile" -> "org.apache.commons:commons-collections4:jar:4.4:compile" ; 
+[INFO] 	"org.apache.poi:poi:jar:5.2.5:compile" -> "org.apache.commons:commons-math3:jar:3.6.1:compile" ; 
+[INFO] 	"org.apache.poi:poi:jar:5.2.5:compile" -> "com.zaxxer:SparseBitSet:jar:1.3:compile" ; 
+[INFO] 	"org.apache.poi:poi-ooxml:jar:5.2.5:compile" -> "org.apache.poi:poi-ooxml-lite:jar:5.2.5:compile" ; 
+[INFO] 	"org.apache.poi:poi-ooxml:jar:5.2.5:compile" -> "org.apache.xmlbeans:xmlbeans:jar:5.2.0:compile" ; 
+[INFO] 	"org.apache.poi:poi-ooxml:jar:5.2.5:compile" -> "com.github.virtuald:curvesapi:jar:1.08:compile" ; 
+[INFO] 	"org.odftoolkit:odfdom-java:jar:0.9.0:compile" -> "xerces:xercesImpl:jar:2.12.1:compile" ; 
+[INFO] 	"org.odftoolkit:odfdom-java:jar:0.9.0:compile" -> "net.rootdev:java-rdfa:jar:0.4.2:compile" ; 
+[INFO] 	"org.openrefine.dependencies:vicino:jar:1.2:compile" -> "com.wcohen:com.wcohen.secondstring:jar:0.1:compile" ; 
+[INFO] 	"org.openrefine.dependencies:vicino:jar:1.2:compile" -> "org.openrefine.dependencies:arithcode:jar:1.2:compile" ; 
+[INFO] 	"org.openrefine.dependencies:vicino:jar:1.2:compile" -> "commons-compress:commons-compress:jar:20050911:compile" ; 
+[INFO] 	"org.clojure:clojure:jar:1.11.1:compile" -> "org.clojure:spec.alpha:jar:0.3.218:compile" ; 
+[INFO] 	"org.clojure:clojure:jar:1.11.1:compile" -> "org.clojure:core.specs.alpha:jar:0.2.62:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.3:compile" -> "org.apache.httpcomponents.core5:httpcore5:jar:5.2.4:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.3:compile" -> "org.apache.httpcomponents.core5:httpcore5-h2:jar:5.2.4:compile" ; 
+[INFO] 	"org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:compile" -> "xtc:rats-runtime:jar:1.15.0:compile" ; 
+[INFO] 	"org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:compile" -> "de.fau.cs.osr.utils:utils:jar:3.0.8:compile" ; 
+[INFO] 	"org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:compile" -> "de.fau.cs.osr.ptk:ptk-common:jar:3.0.8:compile" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:compile" -> "com.github.jsonld-java:jsonld-java:jar:0.13.4:compile" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:compile" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:compile" -> "org.apache.httpcomponents:httpclient-cache:jar:4.5.14:compile" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.14:compile" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:compile" -> "org.slf4j:jcl-over-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:compile" -> "com.apicatalog:titanium-json-ld:jar:1.3.2:compile" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:compile" -> "org.glassfish:jakarta.json:jar:2.0.1:compile" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:compile" -> "com.google.protobuf:protobuf-java:jar:3.24.3:compile" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:compile" -> "org.apache.thrift:libthrift:jar:0.19.0:compile" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:compile" -> "org.apache.jena:jena-base:jar:4.10.0:compile" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:compile" -> "org.apache.jena:jena-iri:jar:4.10.0:compile" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:compile" -> "commons-cli:commons-cli:jar:1.5.0:compile" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:compile" -> "org.roaringbitmap:RoaringBitmap:jar:1.0.0:compile" ; 
+[INFO] 	"org.apache.jena:jena-base:jar:4.10.0:compile" -> "org.apache.commons:commons-csv:jar:1.10.0:compile" ; 
+[INFO] 	"org.apache.jena:jena-base:jar:4.10.0:compile" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.8:compile" ; 
+[INFO] 	"org.apache.jena:jena-base:jar:4.10.0:compile" -> "com.github.andrewoma.dexx:collection:jar:0.7:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.12.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.11.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"javax.xml.bind:jaxb-api:jar:2.3.1:compile" -> "javax.activation:javax.activation-api:jar:1.2.0:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:10.0.16:compile" -> "org.eclipse.jetty:jetty-http:jar:10.0.16:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:10.0.16:compile" -> "org.eclipse.jetty:jetty-util:jar:10.0.16:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:10.0.16:compile" -> "org.eclipse.jetty:jetty-io:jar:10.0.16:compile" ; 
+[INFO] 	"com.optimaize.languagedetector:language-detector:jar:0.6:compile" -> "net.arnx:jsonic:jar:1.2.11:compile" ; 
+[INFO] 	"com.optimaize.languagedetector:language-detector:jar:0.6:compile" -> "com.intellij:annotations:jar:12.0:compile" ; 
+[INFO] 	"org.testng:testng:jar:7.7.1:test" -> "com.beust:jcommander:jar:1.82:test" ; 
+[INFO] 	"org.testng:testng:jar:7.7.1:test" -> "org.webjars:jquery:jar:3.6.1:test" ; 
+[INFO] 	"com.squareup.okhttp3:mockwebserver:jar:4.10.0:test" -> "com.squareup.okhttp3:okhttp:jar:4.10.0:test" ; 
+[INFO] 	"com.squareup.okhttp3:mockwebserver:jar:4.10.0:test" -> "junit:junit:jar:4.13:test" ; 
+[INFO] 	"com.squareup.okhttp3:mockwebserver:jar:4.10.0:test" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.6.10:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:4.10.0:test" -> "com.squareup.okio:okio-jvm:jar:3.0.0:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:4.10.0:test" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.6.20:test" ; 
+[INFO] 	"com.squareup.okio:okio-jvm:jar:3.0.0:test" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.5.31:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.6.20:test" -> "org.jetbrains:annotations:jar:13.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.6.10:test" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.6.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "net.bytebuddy:byte-buddy:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-core:jar:2.22.0:test" -> "org.apache.logging.log4j:log4j-api:jar:2.22.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------------< org.openrefine:server >------------------------
+[INFO] Building OpenRefine - server 3.8-SNAPSHOT                         [3/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ server ---
+[INFO] digraph "org.openrefine:server:jar:3.8-SNAPSHOT" { 
+[INFO] 	"org.openrefine:server:jar:3.8-SNAPSHOT" -> "org.openrefine:main:pom:3.8-SNAPSHOT:provided" ; 
+[INFO] 	"org.openrefine:server:jar:3.8-SNAPSHOT" -> "javax.servlet:javax.servlet-api:jar:4.0.1:compile" ; 
+[INFO] 	"org.openrefine:server:jar:3.8-SNAPSHOT" -> "org.eclipse.jetty:jetty-server:jar:10.0.16:compile" ; 
+[INFO] 	"org.openrefine:server:jar:3.8-SNAPSHOT" -> "org.eclipse.jetty:jetty-servlet:jar:10.0.16:compile" ; 
+[INFO] 	"org.openrefine:server:jar:3.8-SNAPSHOT" -> "org.eclipse.jetty:jetty-webapp:jar:10.0.16:compile" ; 
+[INFO] 	"org.openrefine:server:jar:3.8-SNAPSHOT" -> "org.openrefine.dependencies:butterfly:jar:1.2.5:compile" ; 
+[INFO] 	"org.openrefine:server:jar:3.8-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.22.0:compile" ; 
+[INFO] 	"org.openrefine:server:jar:3.8-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"org.openrefine:server:jar:3.8-SNAPSHOT" -> "org.apache.logging.log4j:log4j-core:jar:2.22.0:compile" ; 
+[INFO] 	"org.openrefine:server:jar:3.8-SNAPSHOT" -> "org.apache.logging.log4j:log4j-1.2-api:jar:2.22.0:compile" ; 
+[INFO] 	"org.openrefine:server:jar:3.8-SNAPSHOT" -> "org.jvnet.localizer:localizer:jar:1.31:compile" ; 
+[INFO] 	"org.openrefine:main:pom:3.8-SNAPSHOT:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4:provided" ; 
+[INFO] 	"org.openrefine:main:pom:3.8-SNAPSHOT:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:provided" ; 
+[INFO] 	"org.openrefine:main:pom:3.8-SNAPSHOT:provided" -> "org.apache.commons:commons-lang3:jar:3.14.0:provided" ; 
+[INFO] 	"org.openrefine:main:pom:3.8-SNAPSHOT:provided" -> "commons-fileupload:commons-fileupload:jar:1.5:provided" ; 
+[INFO] 	"org.openrefine:main:pom:3.8-SNAPSHOT:provided" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"org.openrefine:main:pom:3.8-SNAPSHOT:provided" -> "org.apache.commons:commons-text:jar:1.11.0:provided" ; 
+[INFO] 	"org.openrefine:main:pom:3.8-SNAPSHOT:provided" -> "commons-validator:commons-validator:jar:1.7:provided" ; 
+[INFO] 	"org.openrefine:main:pom:3.8-SNAPSHOT:provided" -> "org.apache.velocity:velocity-engine-core:jar:2.3:provided" ; 
+[INFO] 	"org.openrefine:main:pom:3.8-SNAPSHOT:provided" -> "org.marc4j:marc4j:jar:2.9.5:provided" ; 
+[INFO] 	"org.openrefine:main:pom:3.8-SNAPSHOT:provided" -> "org.apache.commons:commons-compress:jar:1.25.0:provided" ; 
+[INFO] 	"org.openrefine:main:pom:3.8-SNAPSHOT:provided" -> "org.jsoup:jsoup:jar:1.15.3:provided" ; 
+[INFO] 	"org.openrefine:main:pom:3.8-SNAPSHOT:provided" -> "com.univocity:univocity-parsers:jar:2.9.1:provided" ; 
+[INFO] 	"org.openrefine:main:pom:3.8-SNAPSHOT:provided" -> "org.apache.poi:poi:jar:5.2.5:provided" ; 
+[INFO] 	"org.openrefine:main:pom:3.8-SNAPSHOT:provided" -> "org.apache.poi:poi-ooxml:jar:5.2.5:provided" ; 
+[INFO] 	"org.openrefine:main:pom:3.8-SNAPSHOT:provided" -> "org.odftoolkit:odfdom-java:jar:0.9.0:provided" ; 
+[INFO] 	"org.openrefine:main:pom:3.8-SNAPSHOT:provided" -> "org.openrefine.dependencies:vicino:jar:1.2:provided" ; 
+[INFO] 	"org.openrefine:main:pom:3.8-SNAPSHOT:provided" -> "org.clojure:clojure:jar:1.11.1:provided" ; 
+[INFO] 	"org.openrefine:main:pom:3.8-SNAPSHOT:provided" -> "org.apache.httpcomponents.client5:httpclient5:jar:5.2.3:provided" ; 
+[INFO] 	"org.openrefine:main:pom:3.8-SNAPSHOT:provided" -> "org.apache.httpcomponents:httpcore:jar:4.4.16:provided" ; 
+[INFO] 	"org.openrefine:main:pom:3.8-SNAPSHOT:provided" -> "org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:provided" ; 
+[INFO] 	"org.openrefine:main:pom:3.8-SNAPSHOT:provided" -> "org.apache.jena:jena-arq:jar:4.10.0:provided" ; 
+[INFO] 	"org.openrefine:main:pom:3.8-SNAPSHOT:provided" -> "org.apache.jena:jena-core:jar:4.10.0:provided" ; 
+[INFO] 	"org.openrefine:main:pom:3.8-SNAPSHOT:provided" -> "commons-codec:commons-codec:jar:1.16.0:provided" ; 
+[INFO] 	"org.openrefine:main:pom:3.8-SNAPSHOT:provided" -> "commons-io:commons-io:jar:2.15.1:compile" ; 
+[INFO] 	"org.openrefine:main:pom:3.8-SNAPSHOT:provided" -> "com.google.guava:guava:jar:31.1-jre:provided" ; 
+[INFO] 	"org.openrefine:main:pom:3.8-SNAPSHOT:provided" -> "javax.xml.bind:jaxb-api:jar:2.3.1:provided" ; 
+[INFO] 	"org.openrefine:main:pom:3.8-SNAPSHOT:provided" -> "com.github.albfernandez:juniversalchardet:jar:2.4.0:provided" ; 
+[INFO] 	"org.openrefine:main:pom:3.8-SNAPSHOT:provided" -> "org.eclipse.jetty:jetty-servlets:jar:10.0.16:provided" ; 
+[INFO] 	"org.openrefine:main:pom:3.8-SNAPSHOT:provided" -> "com.optimaize.languagedetector:language-detector:jar:0.6:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:provided" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:provided" -> "commons-beanutils:commons-beanutils:jar:1.9.4:provided" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:provided" -> "commons-digester:commons-digester:jar:2.1:provided" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:provided" -> "commons-logging:commons-logging:jar:1.2:provided" ; 
+[INFO] 	"org.apache.poi:poi:jar:5.2.5:provided" -> "org.apache.commons:commons-collections4:jar:4.4:provided" ; 
+[INFO] 	"org.apache.poi:poi:jar:5.2.5:provided" -> "org.apache.commons:commons-math3:jar:3.6.1:provided" ; 
+[INFO] 	"org.apache.poi:poi:jar:5.2.5:provided" -> "com.zaxxer:SparseBitSet:jar:1.3:provided" ; 
+[INFO] 	"org.apache.poi:poi-ooxml:jar:5.2.5:provided" -> "org.apache.poi:poi-ooxml-lite:jar:5.2.5:provided" ; 
+[INFO] 	"org.apache.poi:poi-ooxml:jar:5.2.5:provided" -> "org.apache.xmlbeans:xmlbeans:jar:5.2.0:provided" ; 
+[INFO] 	"org.apache.poi:poi-ooxml:jar:5.2.5:provided" -> "com.github.virtuald:curvesapi:jar:1.08:provided" ; 
+[INFO] 	"org.odftoolkit:odfdom-java:jar:0.9.0:provided" -> "xerces:xercesImpl:jar:2.12.1:provided" ; 
+[INFO] 	"org.odftoolkit:odfdom-java:jar:0.9.0:provided" -> "net.rootdev:java-rdfa:jar:0.4.2:provided" ; 
+[INFO] 	"org.openrefine.dependencies:vicino:jar:1.2:provided" -> "com.wcohen:com.wcohen.secondstring:jar:0.1:provided" ; 
+[INFO] 	"org.openrefine.dependencies:vicino:jar:1.2:provided" -> "org.openrefine.dependencies:arithcode:jar:1.2:provided" ; 
+[INFO] 	"org.openrefine.dependencies:vicino:jar:1.2:provided" -> "commons-compress:commons-compress:jar:20050911:provided" ; 
+[INFO] 	"org.clojure:clojure:jar:1.11.1:provided" -> "org.clojure:spec.alpha:jar:0.3.218:provided" ; 
+[INFO] 	"org.clojure:clojure:jar:1.11.1:provided" -> "org.clojure:core.specs.alpha:jar:0.2.62:provided" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.3:provided" -> "org.apache.httpcomponents.core5:httpcore5:jar:5.2.4:provided" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.3:provided" -> "org.apache.httpcomponents.core5:httpcore5-h2:jar:5.2.4:provided" ; 
+[INFO] 	"org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:provided" -> "xtc:rats-runtime:jar:1.15.0:provided" ; 
+[INFO] 	"org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:provided" -> "de.fau.cs.osr.utils:utils:jar:3.0.8:provided" ; 
+[INFO] 	"org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:provided" -> "de.fau.cs.osr.ptk:ptk-common:jar:3.0.8:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "com.github.jsonld-java:jsonld-java:jar:0.13.4:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "com.google.code.gson:gson:jar:2.10.1:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.apache.httpcomponents:httpclient-cache:jar:4.5.14:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.apache.httpcomponents:httpclient:jar:4.5.14:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.slf4j:jcl-over-slf4j:jar:1.7.36:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "com.apicatalog:titanium-json-ld:jar:1.3.2:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.glassfish:jakarta.json:jar:2.0.1:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "com.google.protobuf:protobuf-java:jar:3.24.3:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.apache.thrift:libthrift:jar:0.19.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:provided" -> "org.apache.jena:jena-base:jar:4.10.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:provided" -> "org.apache.jena:jena-iri:jar:4.10.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:provided" -> "commons-cli:commons-cli:jar:1.5.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:provided" -> "org.roaringbitmap:RoaringBitmap:jar:1.0.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-base:jar:4.10.0:provided" -> "org.apache.commons:commons-csv:jar:1.10.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-base:jar:4.10.0:provided" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.8:provided" ; 
+[INFO] 	"org.apache.jena:jena-base:jar:4.10.0:provided" -> "com.github.andrewoma.dexx:collection:jar:0.7:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.guava:failureaccess:jar:1.0.1:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "org.checkerframework:checker-qual:jar:3.12.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.errorprone:error_prone_annotations:jar:2.11.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.j2objc:j2objc-annotations:jar:1.3:provided" ; 
+[INFO] 	"javax.xml.bind:jaxb-api:jar:2.3.1:provided" -> "javax.activation:javax.activation-api:jar:1.2.0:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:10.0.16:provided" -> "org.eclipse.jetty:jetty-util:jar:10.0.16:compile" ; 
+[INFO] 	"com.optimaize.languagedetector:language-detector:jar:0.6:provided" -> "net.arnx:jsonic:jar:1.2.11:provided" ; 
+[INFO] 	"com.optimaize.languagedetector:language-detector:jar:0.6:provided" -> "com.intellij:annotations:jar:12.0:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:10.0.16:compile" -> "org.eclipse.jetty.toolchain:jetty-servlet-api:jar:4.0.6:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:10.0.16:compile" -> "org.eclipse.jetty:jetty-http:jar:10.0.16:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:10.0.16:compile" -> "org.eclipse.jetty:jetty-io:jar:10.0.16:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:10.0.16:compile" -> "org.eclipse.jetty:jetty-security:jar:10.0.16:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-webapp:jar:10.0.16:compile" -> "org.eclipse.jetty:jetty-xml:jar:10.0.16:compile" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:compile" -> "commons-lang:commons-lang:jar:2.6:compile" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:compile" -> "org.apache.velocity:velocity:jar:1.6.3:compile" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:compile" -> "org.mozilla:rhino:jar:1.7.14:compile" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:compile" -> "com.metaweb:lessen:jar:1.0:compile" ; 
+[INFO] 	"org.apache.velocity:velocity:jar:1.6.3:compile" -> "oro:oro:jar:2.0.8:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.22.0:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.22.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< org.openrefine:extensions >----------------------
+[INFO] Building OpenRefine - extensions 3.8-SNAPSHOT                     [4/12]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ extensions ---
+[INFO] digraph "org.openrefine:extensions:pom:3.8-SNAPSHOT" { 
+[INFO] 	"org.openrefine:extensions:pom:3.8-SNAPSHOT" -> "org.jvnet.localizer:localizer:jar:1.31:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------------< org.openrefine:jython >------------------------
+[INFO] Building OpenRefine - Jython extension 3.8-SNAPSHOT               [5/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/openrefine/main/3.8-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from jenkins-repo: https://repo.jenkins-ci.org/releases/org/openrefine/main/3.8-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/openrefine/main/3.8-SNAPSHOT/maven-metadata.xml (2.4 kB at 2.1 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ jython ---
+[INFO] digraph "org.openrefine:jython:jar:3.8-SNAPSHOT" { 
+[INFO] 	"org.openrefine:jython:jar:3.8-SNAPSHOT" -> "org.openrefine:main:jar:3.8-SNAPSHOT:provided" ; 
+[INFO] 	"org.openrefine:jython:jar:3.8-SNAPSHOT" -> "javax.servlet:javax.servlet-api:jar:4.0.1:provided" ; 
+[INFO] 	"org.openrefine:jython:jar:3.8-SNAPSHOT" -> "org.python:jython-standalone:jar:2.7.3:compile" ; 
+[INFO] 	"org.openrefine:jython:jar:3.8-SNAPSHOT" -> "org.testng:testng:jar:7.7.1:test" ; 
+[INFO] 	"org.openrefine:jython:jar:3.8-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.22.0:test" ; 
+[INFO] 	"org.openrefine:jython:jar:3.8-SNAPSHOT" -> "org.jvnet.localizer:localizer:jar:1.31:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.openrefine.dependencies:butterfly:jar:1.2.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.commons:commons-lang3:jar:3.14.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-fileupload:commons-fileupload:jar:1.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-collections:commons-collections:jar:3.2.2:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.commons:commons-text:jar:1.11.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-validator:commons-validator:jar:1.7:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.velocity:velocity-engine-core:jar:2.3:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.marc4j:marc4j:jar:2.9.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.commons:commons-compress:jar:1.25.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.jsoup:jsoup:jar:1.15.3:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.univocity:univocity-parsers:jar:2.9.1:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.poi:poi:jar:5.2.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.poi:poi-ooxml:jar:5.2.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.odftoolkit:odfdom-java:jar:0.9.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.openrefine.dependencies:vicino:jar:1.2:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.clojure:clojure:jar:1.11.1:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.httpcomponents.client5:httpclient5:jar:5.2.3:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.httpcomponents:httpcore:jar:4.4.16:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.jena:jena-arq:jar:4.10.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.jena:jena-core:jar:4.10.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-codec:commons-codec:jar:1.16.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-io:commons-io:jar:2.15.1:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.google.guava:guava:jar:31.1-jre:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "javax.xml.bind:jaxb-api:jar:2.3.1:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.github.albfernandez:juniversalchardet:jar:2.4.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.eclipse.jetty:jetty-servlets:jar:10.0.16:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.optimaize.languagedetector:language-detector:jar:0.6:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "commons-lang:commons-lang:jar:2.6:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "org.apache.velocity:velocity:jar:1.6.3:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "org.mozilla:rhino:jar:1.7.14:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "com.metaweb:lessen:jar:1.0:provided" ; 
+[INFO] 	"org.apache.velocity:velocity:jar:1.6.3:provided" -> "oro:oro:jar:2.0.8:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:provided" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:provided" -> "commons-beanutils:commons-beanutils:jar:1.9.4:provided" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:provided" -> "commons-digester:commons-digester:jar:2.1:provided" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:provided" -> "commons-logging:commons-logging:jar:1.2:provided" ; 
+[INFO] 	"org.apache.poi:poi:jar:5.2.5:provided" -> "org.apache.commons:commons-collections4:jar:4.4:provided" ; 
+[INFO] 	"org.apache.poi:poi:jar:5.2.5:provided" -> "org.apache.commons:commons-math3:jar:3.6.1:provided" ; 
+[INFO] 	"org.apache.poi:poi:jar:5.2.5:provided" -> "com.zaxxer:SparseBitSet:jar:1.3:provided" ; 
+[INFO] 	"org.apache.poi:poi-ooxml:jar:5.2.5:provided" -> "org.apache.poi:poi-ooxml-lite:jar:5.2.5:provided" ; 
+[INFO] 	"org.apache.poi:poi-ooxml:jar:5.2.5:provided" -> "org.apache.xmlbeans:xmlbeans:jar:5.2.0:provided" ; 
+[INFO] 	"org.apache.poi:poi-ooxml:jar:5.2.5:provided" -> "com.github.virtuald:curvesapi:jar:1.08:provided" ; 
+[INFO] 	"org.odftoolkit:odfdom-java:jar:0.9.0:provided" -> "xerces:xercesImpl:jar:2.12.1:provided" ; 
+[INFO] 	"org.odftoolkit:odfdom-java:jar:0.9.0:provided" -> "net.rootdev:java-rdfa:jar:0.4.2:provided" ; 
+[INFO] 	"org.openrefine.dependencies:vicino:jar:1.2:provided" -> "com.wcohen:com.wcohen.secondstring:jar:0.1:provided" ; 
+[INFO] 	"org.openrefine.dependencies:vicino:jar:1.2:provided" -> "org.openrefine.dependencies:arithcode:jar:1.2:provided" ; 
+[INFO] 	"org.openrefine.dependencies:vicino:jar:1.2:provided" -> "commons-compress:commons-compress:jar:20050911:provided" ; 
+[INFO] 	"org.clojure:clojure:jar:1.11.1:provided" -> "org.clojure:spec.alpha:jar:0.3.218:provided" ; 
+[INFO] 	"org.clojure:clojure:jar:1.11.1:provided" -> "org.clojure:core.specs.alpha:jar:0.2.62:provided" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.3:provided" -> "org.apache.httpcomponents.core5:httpcore5:jar:5.2.4:provided" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.3:provided" -> "org.apache.httpcomponents.core5:httpcore5-h2:jar:5.2.4:provided" ; 
+[INFO] 	"org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:provided" -> "xtc:rats-runtime:jar:1.15.0:provided" ; 
+[INFO] 	"org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:provided" -> "de.fau.cs.osr.utils:utils:jar:3.0.8:provided" ; 
+[INFO] 	"org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:provided" -> "de.fau.cs.osr.ptk:ptk-common:jar:3.0.8:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "com.github.jsonld-java:jsonld-java:jar:0.13.4:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "com.google.code.gson:gson:jar:2.10.1:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.apache.httpcomponents:httpclient-cache:jar:4.5.14:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.apache.httpcomponents:httpclient:jar:4.5.14:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.slf4j:jcl-over-slf4j:jar:1.7.36:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "com.apicatalog:titanium-json-ld:jar:1.3.2:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.glassfish:jakarta.json:jar:2.0.1:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "com.google.protobuf:protobuf-java:jar:3.24.3:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.apache.thrift:libthrift:jar:0.19.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:provided" -> "org.apache.jena:jena-base:jar:4.10.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:provided" -> "org.apache.jena:jena-iri:jar:4.10.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:provided" -> "commons-cli:commons-cli:jar:1.5.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:provided" -> "org.roaringbitmap:RoaringBitmap:jar:1.0.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-base:jar:4.10.0:provided" -> "org.apache.commons:commons-csv:jar:1.10.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-base:jar:4.10.0:provided" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.8:provided" ; 
+[INFO] 	"org.apache.jena:jena-base:jar:4.10.0:provided" -> "com.github.andrewoma.dexx:collection:jar:0.7:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.guava:failureaccess:jar:1.0.1:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "org.checkerframework:checker-qual:jar:3.12.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.errorprone:error_prone_annotations:jar:2.11.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.j2objc:j2objc-annotations:jar:1.3:provided" ; 
+[INFO] 	"javax.xml.bind:jaxb-api:jar:2.3.1:provided" -> "javax.activation:javax.activation-api:jar:1.2.0:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:10.0.16:provided" -> "org.eclipse.jetty:jetty-http:jar:10.0.16:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:10.0.16:provided" -> "org.eclipse.jetty:jetty-util:jar:10.0.16:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:10.0.16:provided" -> "org.eclipse.jetty:jetty-io:jar:10.0.16:provided" ; 
+[INFO] 	"com.optimaize.languagedetector:language-detector:jar:0.6:provided" -> "net.arnx:jsonic:jar:1.2.11:provided" ; 
+[INFO] 	"com.optimaize.languagedetector:language-detector:jar:0.6:provided" -> "com.intellij:annotations:jar:12.0:provided" ; 
+[INFO] 	"org.testng:testng:jar:7.7.1:test" -> "org.slf4j:slf4j-api:jar:1.7.36:provided" ; 
+[INFO] 	"org.testng:testng:jar:7.7.1:test" -> "com.beust:jcommander:jar:1.82:test" ; 
+[INFO] 	"org.testng:testng:jar:7.7.1:test" -> "org.webjars:jquery:jar:3.6.1:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.22.0:test" -> "org.apache.logging.log4j:log4j-api:jar:2.22.0:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.22.0:test" -> "org.apache.logging.log4j:log4j-core:jar:2.22.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< org.openrefine:wikibase >-----------------------
+[INFO] Building OpenRefine - Wikibase extension 3.8-SNAPSHOT             [6/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ wikibase ---
+[INFO] digraph "org.openrefine:wikibase:jar:3.8-SNAPSHOT" { 
+[INFO] 	"org.openrefine:wikibase:jar:3.8-SNAPSHOT" -> "org.openrefine:main:jar:3.8-SNAPSHOT:provided" ; 
+[INFO] 	"org.openrefine:wikibase:jar:3.8-SNAPSHOT" -> "javax.servlet:javax.servlet-api:jar:4.0.1:provided" ; 
+[INFO] 	"org.openrefine:wikibase:jar:3.8-SNAPSHOT" -> "org.wikidata.wdtk:wdtk-wikibaseapi:jar:0.14.6:compile" ; 
+[INFO] 	"org.openrefine:wikibase:jar:3.8-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:compile" ; 
+[INFO] 	"org.openrefine:wikibase:jar:3.8-SNAPSHOT" -> "org.wikidata.wdtk:wdtk-datamodel:jar:0.14.6:compile" ; 
+[INFO] 	"org.openrefine:wikibase:jar:3.8-SNAPSHOT" -> "org.wikidata.wdtk:wdtk-util:jar:0.14.6:compile" ; 
+[INFO] 	"org.openrefine:wikibase:jar:3.8-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.9:provided" ; 
+[INFO] 	"org.openrefine:wikibase:jar:3.8-SNAPSHOT" -> "com.squareup.okhttp3:okhttp-urlconnection:jar:4.10.0:compile" ; 
+[INFO] 	"org.openrefine:wikibase:jar:3.8-SNAPSHOT" -> "org.openrefine:main:test-jar:tests:3.8-SNAPSHOT:test" ; 
+[INFO] 	"org.openrefine:wikibase:jar:3.8-SNAPSHOT" -> "org.testng:testng:jar:7.7.1:test" ; 
+[INFO] 	"org.openrefine:wikibase:jar:3.8-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.8.0:test" ; 
+[INFO] 	"org.openrefine:wikibase:jar:3.8-SNAPSHOT" -> "com.squareup.okhttp3:mockwebserver:jar:4.10.0:test" ; 
+[INFO] 	"org.openrefine:wikibase:jar:3.8-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.22.0:test" ; 
+[INFO] 	"org.openrefine:wikibase:jar:3.8-SNAPSHOT" -> "org.apache.logging.log4j:log4j-core:jar:2.22.0:test" ; 
+[INFO] 	"org.openrefine:wikibase:jar:3.8-SNAPSHOT" -> "org.jvnet.localizer:localizer:jar:1.31:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.openrefine.dependencies:butterfly:jar:1.2.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.commons:commons-lang3:jar:3.14.0:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-fileupload:commons-fileupload:jar:1.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-collections:commons-collections:jar:3.2.2:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.commons:commons-text:jar:1.11.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-validator:commons-validator:jar:1.7:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.velocity:velocity-engine-core:jar:2.3:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.marc4j:marc4j:jar:2.9.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.commons:commons-compress:jar:1.25.0:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.jsoup:jsoup:jar:1.15.3:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.univocity:univocity-parsers:jar:2.9.1:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.poi:poi:jar:5.2.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.poi:poi-ooxml:jar:5.2.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.odftoolkit:odfdom-java:jar:0.9.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.openrefine.dependencies:vicino:jar:1.2:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.clojure:clojure:jar:1.11.1:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.httpcomponents.client5:httpclient5:jar:5.2.3:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.httpcomponents:httpcore:jar:4.4.16:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.jena:jena-arq:jar:4.10.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.jena:jena-core:jar:4.10.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-codec:commons-codec:jar:1.16.0:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-io:commons-io:jar:2.15.1:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.google.guava:guava:jar:31.1-jre:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "javax.xml.bind:jaxb-api:jar:2.3.1:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.github.albfernandez:juniversalchardet:jar:2.4.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.eclipse.jetty:jetty-servlets:jar:10.0.16:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.optimaize.languagedetector:language-detector:jar:0.6:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "commons-lang:commons-lang:jar:2.6:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "org.apache.velocity:velocity:jar:1.6.3:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "org.mozilla:rhino:jar:1.7.14:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "com.metaweb:lessen:jar:1.0:provided" ; 
+[INFO] 	"org.apache.velocity:velocity:jar:1.6.3:provided" -> "oro:oro:jar:2.0.8:provided" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:provided" -> "commons-beanutils:commons-beanutils:jar:1.9.4:provided" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:provided" -> "commons-digester:commons-digester:jar:2.1:provided" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:provided" -> "commons-logging:commons-logging:jar:1.2:provided" ; 
+[INFO] 	"org.apache.poi:poi:jar:5.2.5:provided" -> "org.apache.commons:commons-collections4:jar:4.4:provided" ; 
+[INFO] 	"org.apache.poi:poi:jar:5.2.5:provided" -> "org.apache.commons:commons-math3:jar:3.6.1:provided" ; 
+[INFO] 	"org.apache.poi:poi:jar:5.2.5:provided" -> "com.zaxxer:SparseBitSet:jar:1.3:provided" ; 
+[INFO] 	"org.apache.poi:poi-ooxml:jar:5.2.5:provided" -> "org.apache.poi:poi-ooxml-lite:jar:5.2.5:provided" ; 
+[INFO] 	"org.apache.poi:poi-ooxml:jar:5.2.5:provided" -> "org.apache.xmlbeans:xmlbeans:jar:5.2.0:provided" ; 
+[INFO] 	"org.apache.poi:poi-ooxml:jar:5.2.5:provided" -> "com.github.virtuald:curvesapi:jar:1.08:provided" ; 
+[INFO] 	"org.odftoolkit:odfdom-java:jar:0.9.0:provided" -> "xerces:xercesImpl:jar:2.12.1:provided" ; 
+[INFO] 	"org.odftoolkit:odfdom-java:jar:0.9.0:provided" -> "net.rootdev:java-rdfa:jar:0.4.2:provided" ; 
+[INFO] 	"org.openrefine.dependencies:vicino:jar:1.2:provided" -> "com.wcohen:com.wcohen.secondstring:jar:0.1:provided" ; 
+[INFO] 	"org.openrefine.dependencies:vicino:jar:1.2:provided" -> "org.openrefine.dependencies:arithcode:jar:1.2:provided" ; 
+[INFO] 	"org.openrefine.dependencies:vicino:jar:1.2:provided" -> "commons-compress:commons-compress:jar:20050911:provided" ; 
+[INFO] 	"org.clojure:clojure:jar:1.11.1:provided" -> "org.clojure:spec.alpha:jar:0.3.218:provided" ; 
+[INFO] 	"org.clojure:clojure:jar:1.11.1:provided" -> "org.clojure:core.specs.alpha:jar:0.2.62:provided" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.3:provided" -> "org.apache.httpcomponents.core5:httpcore5:jar:5.2.4:provided" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.3:provided" -> "org.apache.httpcomponents.core5:httpcore5-h2:jar:5.2.4:provided" ; 
+[INFO] 	"org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:provided" -> "xtc:rats-runtime:jar:1.15.0:provided" ; 
+[INFO] 	"org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:provided" -> "de.fau.cs.osr.utils:utils:jar:3.0.8:provided" ; 
+[INFO] 	"org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:provided" -> "de.fau.cs.osr.ptk:ptk-common:jar:3.0.8:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "com.github.jsonld-java:jsonld-java:jar:0.13.4:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "com.google.code.gson:gson:jar:2.10.1:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.apache.httpcomponents:httpclient-cache:jar:4.5.14:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.apache.httpcomponents:httpclient:jar:4.5.14:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.slf4j:jcl-over-slf4j:jar:1.7.36:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "com.apicatalog:titanium-json-ld:jar:1.3.2:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.glassfish:jakarta.json:jar:2.0.1:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "com.google.protobuf:protobuf-java:jar:3.24.3:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.apache.thrift:libthrift:jar:0.19.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:provided" -> "org.apache.jena:jena-base:jar:4.10.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:provided" -> "org.apache.jena:jena-iri:jar:4.10.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:provided" -> "commons-cli:commons-cli:jar:1.5.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:provided" -> "org.roaringbitmap:RoaringBitmap:jar:1.0.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-base:jar:4.10.0:provided" -> "org.apache.commons:commons-csv:jar:1.10.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-base:jar:4.10.0:provided" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.8:provided" ; 
+[INFO] 	"org.apache.jena:jena-base:jar:4.10.0:provided" -> "com.github.andrewoma.dexx:collection:jar:0.7:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.guava:failureaccess:jar:1.0.1:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "org.checkerframework:checker-qual:jar:3.12.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.errorprone:error_prone_annotations:jar:2.11.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.j2objc:j2objc-annotations:jar:1.3:provided" ; 
+[INFO] 	"javax.xml.bind:jaxb-api:jar:2.3.1:provided" -> "javax.activation:javax.activation-api:jar:1.2.0:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:10.0.16:provided" -> "org.eclipse.jetty:jetty-http:jar:10.0.16:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:10.0.16:provided" -> "org.eclipse.jetty:jetty-util:jar:10.0.16:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:10.0.16:provided" -> "org.eclipse.jetty:jetty-io:jar:10.0.16:provided" ; 
+[INFO] 	"com.optimaize.languagedetector:language-detector:jar:0.6:provided" -> "net.arnx:jsonic:jar:1.2.11:provided" ; 
+[INFO] 	"com.optimaize.languagedetector:language-detector:jar:0.6:provided" -> "com.intellij:annotations:jar:12.0:provided" ; 
+[INFO] 	"org.wikidata.wdtk:wdtk-wikibaseapi:jar:0.14.6:compile" -> "com.squareup.okhttp3:okhttp:jar:4.11.0:compile" ; 
+[INFO] 	"org.wikidata.wdtk:wdtk-wikibaseapi:jar:0.14.6:compile" -> "se.akerfeldt:okhttp-signpost:jar:1.1.0:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:4.11.0:compile" -> "com.squareup.okio:okio:jar:3.2.0:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:4.11.0:compile" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.6.20:compile" ; 
+[INFO] 	"com.squareup.okio:okio:jar:3.2.0:compile" -> "com.squareup.okio:okio-jvm:jar:3.2.0:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.6.20:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.6.20:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.6.20:compile" -> "org.jetbrains:annotations:jar:13.0:compile" ; 
+[INFO] 	"se.akerfeldt:okhttp-signpost:jar:1.1.0:compile" -> "oauth.signpost:signpost-core:jar:1.2.1.2:compile" ; 
+[INFO] 	"org.wikidata.wdtk:wdtk-datamodel:jar:0.14.6:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.15.2:compile" ; 
+[INFO] 	"org.wikidata.wdtk:wdtk-datamodel:jar:0.14.6:compile" -> "org.threeten:threeten-extra:jar:1.7.2:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp-urlconnection:jar:4.10.0:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.6.10:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.6.10:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.6.10:compile" ; 
+[INFO] 	"org.testng:testng:jar:7.7.1:test" -> "com.beust:jcommander:jar:1.82:test" ; 
+[INFO] 	"org.testng:testng:jar:7.7.1:test" -> "org.webjars:jquery:jar:3.6.1:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "net.bytebuddy:byte-buddy:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"com.squareup.okhttp3:mockwebserver:jar:4.10.0:test" -> "junit:junit:jar:4.13:test" ; 
+[INFO] 	"junit:junit:jar:4.13:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.22.0:test" -> "org.apache.logging.log4j:log4j-api:jar:2.22.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< org.openrefine:database >-----------------------
+[INFO] Building OpenRefine - Database extension 3.8-SNAPSHOT             [7/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ database ---
+[INFO] digraph "org.openrefine:database:jar:3.8-SNAPSHOT" { 
+[INFO] 	"org.openrefine:database:jar:3.8-SNAPSHOT" -> "org.openrefine:main:jar:3.8-SNAPSHOT:provided" ; 
+[INFO] 	"org.openrefine:database:jar:3.8-SNAPSHOT" -> "javax.servlet:javax.servlet-api:jar:4.0.1:provided" ; 
+[INFO] 	"org.openrefine:database:jar:3.8-SNAPSHOT" -> "org.postgresql:postgresql:jar:42.5.1:compile" ; 
+[INFO] 	"org.openrefine:database:jar:3.8-SNAPSHOT" -> "org.apache.httpcomponents.client5:httpclient5:jar:5.2.3:compile" ; 
+[INFO] 	"org.openrefine:database:jar:3.8-SNAPSHOT" -> "com.google.http-client:google-http-client-jackson2:jar:1.42.2:compile" ; 
+[INFO] 	"org.openrefine:database:jar:3.8-SNAPSHOT" -> "mysql:mysql-connector-java:jar:8.0.30:compile" ; 
+[INFO] 	"org.openrefine:database:jar:3.8-SNAPSHOT" -> "org.jasypt:jasypt:jar:1.9.3:compile" ; 
+[INFO] 	"org.openrefine:database:jar:3.8-SNAPSHOT" -> "org.mariadb.jdbc:mariadb-java-client:jar:3.0.8:compile" ; 
+[INFO] 	"org.openrefine:database:jar:3.8-SNAPSHOT" -> "org.xerial:sqlite-jdbc:jar:3.41.2.2:compile" ; 
+[INFO] 	"org.openrefine:database:jar:3.8-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:provided" ; 
+[INFO] 	"org.openrefine:database:jar:3.8-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:compile" ; 
+[INFO] 	"org.openrefine:database:jar:3.8-SNAPSHOT" -> "org.apache.commons:commons-lang3:jar:3.14.0:compile" ; 
+[INFO] 	"org.openrefine:database:jar:3.8-SNAPSHOT" -> "org.owasp.encoder:encoder:jar:1.2.3:compile" ; 
+[INFO] 	"org.openrefine:database:jar:3.8-SNAPSHOT" -> "org.testng:testng:jar:7.7.1:test" ; 
+[INFO] 	"org.openrefine:database:jar:3.8-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.8.0:test" ; 
+[INFO] 	"org.openrefine:database:jar:3.8-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.22.0:test" ; 
+[INFO] 	"org.openrefine:database:jar:3.8-SNAPSHOT" -> "org.jvnet.localizer:localizer:jar:1.31:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.openrefine.dependencies:butterfly:jar:1.2.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-fileupload:commons-fileupload:jar:1.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-collections:commons-collections:jar:3.2.2:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.commons:commons-text:jar:1.11.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-validator:commons-validator:jar:1.7:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.velocity:velocity-engine-core:jar:2.3:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.marc4j:marc4j:jar:2.9.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.commons:commons-compress:jar:1.25.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.jsoup:jsoup:jar:1.15.3:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.univocity:univocity-parsers:jar:2.9.1:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.poi:poi:jar:5.2.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.poi:poi-ooxml:jar:5.2.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.odftoolkit:odfdom-java:jar:0.9.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.openrefine.dependencies:vicino:jar:1.2:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.clojure:clojure:jar:1.11.1:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.httpcomponents:httpcore:jar:4.4.16:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.jena:jena-arq:jar:4.10.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.jena:jena-core:jar:4.10.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-codec:commons-codec:jar:1.16.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-io:commons-io:jar:2.15.1:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.google.guava:guava:jar:31.1-jre:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "javax.xml.bind:jaxb-api:jar:2.3.1:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.github.albfernandez:juniversalchardet:jar:2.4.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.eclipse.jetty:jetty-servlets:jar:10.0.16:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.optimaize.languagedetector:language-detector:jar:0.6:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "commons-lang:commons-lang:jar:2.6:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "org.apache.velocity:velocity:jar:1.6.3:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "org.mozilla:rhino:jar:1.7.14:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "com.metaweb:lessen:jar:1.0:provided" ; 
+[INFO] 	"org.apache.velocity:velocity:jar:1.6.3:provided" -> "oro:oro:jar:2.0.8:provided" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:provided" -> "commons-beanutils:commons-beanutils:jar:1.9.4:provided" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:provided" -> "commons-digester:commons-digester:jar:2.1:provided" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:provided" -> "commons-logging:commons-logging:jar:1.2:provided" ; 
+[INFO] 	"org.apache.poi:poi:jar:5.2.5:provided" -> "org.apache.commons:commons-collections4:jar:4.4:provided" ; 
+[INFO] 	"org.apache.poi:poi:jar:5.2.5:provided" -> "org.apache.commons:commons-math3:jar:3.6.1:provided" ; 
+[INFO] 	"org.apache.poi:poi:jar:5.2.5:provided" -> "com.zaxxer:SparseBitSet:jar:1.3:provided" ; 
+[INFO] 	"org.apache.poi:poi-ooxml:jar:5.2.5:provided" -> "org.apache.poi:poi-ooxml-lite:jar:5.2.5:provided" ; 
+[INFO] 	"org.apache.poi:poi-ooxml:jar:5.2.5:provided" -> "org.apache.xmlbeans:xmlbeans:jar:5.2.0:provided" ; 
+[INFO] 	"org.apache.poi:poi-ooxml:jar:5.2.5:provided" -> "com.github.virtuald:curvesapi:jar:1.08:provided" ; 
+[INFO] 	"org.odftoolkit:odfdom-java:jar:0.9.0:provided" -> "xerces:xercesImpl:jar:2.12.1:provided" ; 
+[INFO] 	"org.odftoolkit:odfdom-java:jar:0.9.0:provided" -> "net.rootdev:java-rdfa:jar:0.4.2:provided" ; 
+[INFO] 	"org.openrefine.dependencies:vicino:jar:1.2:provided" -> "com.wcohen:com.wcohen.secondstring:jar:0.1:provided" ; 
+[INFO] 	"org.openrefine.dependencies:vicino:jar:1.2:provided" -> "org.openrefine.dependencies:arithcode:jar:1.2:provided" ; 
+[INFO] 	"org.openrefine.dependencies:vicino:jar:1.2:provided" -> "commons-compress:commons-compress:jar:20050911:provided" ; 
+[INFO] 	"org.clojure:clojure:jar:1.11.1:provided" -> "org.clojure:spec.alpha:jar:0.3.218:provided" ; 
+[INFO] 	"org.clojure:clojure:jar:1.11.1:provided" -> "org.clojure:core.specs.alpha:jar:0.2.62:provided" ; 
+[INFO] 	"org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:provided" -> "xtc:rats-runtime:jar:1.15.0:provided" ; 
+[INFO] 	"org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:provided" -> "de.fau.cs.osr.utils:utils:jar:3.0.8:provided" ; 
+[INFO] 	"org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:provided" -> "de.fau.cs.osr.ptk:ptk-common:jar:3.0.8:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "com.github.jsonld-java:jsonld-java:jar:0.13.4:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "com.google.code.gson:gson:jar:2.10.1:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.apache.httpcomponents:httpclient-cache:jar:4.5.14:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.apache.httpcomponents:httpclient:jar:4.5.14:compile" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.slf4j:jcl-over-slf4j:jar:1.7.36:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "com.apicatalog:titanium-json-ld:jar:1.3.2:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.glassfish:jakarta.json:jar:2.0.1:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.apache.thrift:libthrift:jar:0.19.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:provided" -> "org.apache.jena:jena-base:jar:4.10.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:provided" -> "org.apache.jena:jena-iri:jar:4.10.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:provided" -> "commons-cli:commons-cli:jar:1.5.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:provided" -> "org.roaringbitmap:RoaringBitmap:jar:1.0.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-base:jar:4.10.0:provided" -> "org.apache.commons:commons-csv:jar:1.10.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-base:jar:4.10.0:provided" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.8:provided" ; 
+[INFO] 	"org.apache.jena:jena-base:jar:4.10.0:provided" -> "com.github.andrewoma.dexx:collection:jar:0.7:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.11.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"javax.xml.bind:jaxb-api:jar:2.3.1:provided" -> "javax.activation:javax.activation-api:jar:1.2.0:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:10.0.16:provided" -> "org.eclipse.jetty:jetty-http:jar:10.0.16:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:10.0.16:provided" -> "org.eclipse.jetty:jetty-util:jar:10.0.16:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:10.0.16:provided" -> "org.eclipse.jetty:jetty-io:jar:10.0.16:provided" ; 
+[INFO] 	"com.optimaize.languagedetector:language-detector:jar:0.6:provided" -> "net.arnx:jsonic:jar:1.2.11:provided" ; 
+[INFO] 	"com.optimaize.languagedetector:language-detector:jar:0.6:provided" -> "com.intellij:annotations:jar:12.0:provided" ; 
+[INFO] 	"org.postgresql:postgresql:jar:42.5.1:compile" -> "org.checkerframework:checker-qual:jar:3.5.0:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.3:compile" -> "org.apache.httpcomponents.core5:httpcore5:jar:5.2.4:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.3:compile" -> "org.apache.httpcomponents.core5:httpcore5-h2:jar:5.2.4:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.3:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"com.google.http-client:google-http-client-jackson2:jar:1.42.2:compile" -> "com.google.http-client:google-http-client:jar:1.42.2:compile" ; 
+[INFO] 	"com.google.http-client:google-http-client:jar:1.42.2:compile" -> "io.opencensus:opencensus-api:jar:0.31.1:compile" ; 
+[INFO] 	"com.google.http-client:google-http-client:jar:1.42.2:compile" -> "io.opencensus:opencensus-contrib-http-util:jar:0.31.1:compile" ; 
+[INFO] 	"io.opencensus:opencensus-api:jar:0.31.1:compile" -> "io.grpc:grpc-context:jar:1.27.2:compile" ; 
+[INFO] 	"mysql:mysql-connector-java:jar:8.0.30:compile" -> "com.google.protobuf:protobuf-java:jar:3.19.4:compile" ; 
+[INFO] 	"org.testng:testng:jar:7.7.1:test" -> "com.beust:jcommander:jar:1.82:test" ; 
+[INFO] 	"org.testng:testng:jar:7.7.1:test" -> "org.webjars:jquery:jar:3.6.1:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "net.bytebuddy:byte-buddy:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.22.0:test" -> "org.apache.logging.log4j:log4j-api:jar:2.22.0:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.22.0:test" -> "org.apache.logging.log4j:log4j-core:jar:2.22.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------------< org.openrefine:gdata >------------------------
+[INFO] Building OpenRefine - Gdata extension 3.8-SNAPSHOT                [8/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ gdata ---
+[INFO] digraph "org.openrefine:gdata:jar:3.8-SNAPSHOT" { 
+[INFO] 	"org.openrefine:gdata:jar:3.8-SNAPSHOT" -> "org.openrefine:main:jar:3.8-SNAPSHOT:provided" ; 
+[INFO] 	"org.openrefine:gdata:jar:3.8-SNAPSHOT" -> "javax.servlet:javax.servlet-api:jar:4.0.1:provided" ; 
+[INFO] 	"org.openrefine:gdata:jar:3.8-SNAPSHOT" -> "org.apache.httpcomponents.client5:httpclient5:jar:5.2.3:compile" ; 
+[INFO] 	"org.openrefine:gdata:jar:3.8-SNAPSHOT" -> "com.google.apis:google-api-services-drive:jar:v3-rev20231120-2.0.0:compile" ; 
+[INFO] 	"org.openrefine:gdata:jar:3.8-SNAPSHOT" -> "com.google.apis:google-api-services-sheets:jar:v4-rev20230815-2.0.0:compile" ; 
+[INFO] 	"org.openrefine:gdata:jar:3.8-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:provided" ; 
+[INFO] 	"org.openrefine:gdata:jar:3.8-SNAPSHOT" -> "org.testng:testng:jar:7.7.1:test" ; 
+[INFO] 	"org.openrefine:gdata:jar:3.8-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.8.0:test" ; 
+[INFO] 	"org.openrefine:gdata:jar:3.8-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.22.0:test" ; 
+[INFO] 	"org.openrefine:gdata:jar:3.8-SNAPSHOT" -> "org.jvnet.localizer:localizer:jar:1.31:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.openrefine.dependencies:butterfly:jar:1.2.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.commons:commons-lang3:jar:3.14.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-fileupload:commons-fileupload:jar:1.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-collections:commons-collections:jar:3.2.2:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.commons:commons-text:jar:1.11.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-validator:commons-validator:jar:1.7:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.velocity:velocity-engine-core:jar:2.3:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.marc4j:marc4j:jar:2.9.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.commons:commons-compress:jar:1.25.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.jsoup:jsoup:jar:1.15.3:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.univocity:univocity-parsers:jar:2.9.1:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.poi:poi:jar:5.2.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.poi:poi-ooxml:jar:5.2.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.odftoolkit:odfdom-java:jar:0.9.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.openrefine.dependencies:vicino:jar:1.2:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.clojure:clojure:jar:1.11.1:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.httpcomponents:httpcore:jar:4.4.16:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.jena:jena-arq:jar:4.10.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.jena:jena-core:jar:4.10.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-codec:commons-codec:jar:1.16.0:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-io:commons-io:jar:2.15.1:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.google.guava:guava:jar:31.1-jre:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "javax.xml.bind:jaxb-api:jar:2.3.1:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.github.albfernandez:juniversalchardet:jar:2.4.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.eclipse.jetty:jetty-servlets:jar:10.0.16:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.optimaize.languagedetector:language-detector:jar:0.6:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "commons-lang:commons-lang:jar:2.6:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "org.apache.velocity:velocity:jar:1.6.3:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "org.mozilla:rhino:jar:1.7.14:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "com.metaweb:lessen:jar:1.0:provided" ; 
+[INFO] 	"org.apache.velocity:velocity:jar:1.6.3:provided" -> "oro:oro:jar:2.0.8:provided" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:provided" -> "commons-beanutils:commons-beanutils:jar:1.9.4:provided" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:provided" -> "commons-digester:commons-digester:jar:2.1:provided" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:provided" -> "commons-logging:commons-logging:jar:1.2:provided" ; 
+[INFO] 	"org.apache.poi:poi:jar:5.2.5:provided" -> "org.apache.commons:commons-collections4:jar:4.4:provided" ; 
+[INFO] 	"org.apache.poi:poi:jar:5.2.5:provided" -> "org.apache.commons:commons-math3:jar:3.6.1:provided" ; 
+[INFO] 	"org.apache.poi:poi:jar:5.2.5:provided" -> "com.zaxxer:SparseBitSet:jar:1.3:provided" ; 
+[INFO] 	"org.apache.poi:poi-ooxml:jar:5.2.5:provided" -> "org.apache.poi:poi-ooxml-lite:jar:5.2.5:provided" ; 
+[INFO] 	"org.apache.poi:poi-ooxml:jar:5.2.5:provided" -> "org.apache.xmlbeans:xmlbeans:jar:5.2.0:provided" ; 
+[INFO] 	"org.apache.poi:poi-ooxml:jar:5.2.5:provided" -> "com.github.virtuald:curvesapi:jar:1.08:provided" ; 
+[INFO] 	"org.odftoolkit:odfdom-java:jar:0.9.0:provided" -> "xerces:xercesImpl:jar:2.12.1:provided" ; 
+[INFO] 	"org.odftoolkit:odfdom-java:jar:0.9.0:provided" -> "net.rootdev:java-rdfa:jar:0.4.2:provided" ; 
+[INFO] 	"org.openrefine.dependencies:vicino:jar:1.2:provided" -> "com.wcohen:com.wcohen.secondstring:jar:0.1:provided" ; 
+[INFO] 	"org.openrefine.dependencies:vicino:jar:1.2:provided" -> "org.openrefine.dependencies:arithcode:jar:1.2:provided" ; 
+[INFO] 	"org.openrefine.dependencies:vicino:jar:1.2:provided" -> "commons-compress:commons-compress:jar:20050911:provided" ; 
+[INFO] 	"org.clojure:clojure:jar:1.11.1:provided" -> "org.clojure:spec.alpha:jar:0.3.218:provided" ; 
+[INFO] 	"org.clojure:clojure:jar:1.11.1:provided" -> "org.clojure:core.specs.alpha:jar:0.2.62:provided" ; 
+[INFO] 	"org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:provided" -> "xtc:rats-runtime:jar:1.15.0:provided" ; 
+[INFO] 	"org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:provided" -> "de.fau.cs.osr.utils:utils:jar:3.0.8:provided" ; 
+[INFO] 	"org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:provided" -> "de.fau.cs.osr.ptk:ptk-common:jar:3.0.8:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "com.github.jsonld-java:jsonld-java:jar:0.13.4:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.apache.httpcomponents:httpclient-cache:jar:4.5.14:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.apache.httpcomponents:httpclient:jar:4.5.14:compile" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.slf4j:jcl-over-slf4j:jar:1.7.36:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "com.apicatalog:titanium-json-ld:jar:1.3.2:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.glassfish:jakarta.json:jar:2.0.1:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "com.google.protobuf:protobuf-java:jar:3.24.3:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.apache.thrift:libthrift:jar:0.19.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:provided" -> "org.apache.jena:jena-base:jar:4.10.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:provided" -> "org.apache.jena:jena-iri:jar:4.10.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:provided" -> "commons-cli:commons-cli:jar:1.5.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:provided" -> "org.roaringbitmap:RoaringBitmap:jar:1.0.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-base:jar:4.10.0:provided" -> "org.apache.commons:commons-csv:jar:1.10.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-base:jar:4.10.0:provided" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.8:provided" ; 
+[INFO] 	"org.apache.jena:jena-base:jar:4.10.0:provided" -> "com.github.andrewoma.dexx:collection:jar:0.7:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.12.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.11.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"javax.xml.bind:jaxb-api:jar:2.3.1:provided" -> "javax.activation:javax.activation-api:jar:1.2.0:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:10.0.16:provided" -> "org.eclipse.jetty:jetty-http:jar:10.0.16:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:10.0.16:provided" -> "org.eclipse.jetty:jetty-util:jar:10.0.16:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:10.0.16:provided" -> "org.eclipse.jetty:jetty-io:jar:10.0.16:provided" ; 
+[INFO] 	"com.optimaize.languagedetector:language-detector:jar:0.6:provided" -> "net.arnx:jsonic:jar:1.2.11:provided" ; 
+[INFO] 	"com.optimaize.languagedetector:language-detector:jar:0.6:provided" -> "com.intellij:annotations:jar:12.0:provided" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.3:compile" -> "org.apache.httpcomponents.core5:httpcore5:jar:5.2.4:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.3:compile" -> "org.apache.httpcomponents.core5:httpcore5-h2:jar:5.2.4:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.3:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"com.google.apis:google-api-services-drive:jar:v3-rev20231120-2.0.0:compile" -> "com.google.api-client:google-api-client:jar:2.2.0:compile" ; 
+[INFO] 	"com.google.api-client:google-api-client:jar:2.2.0:compile" -> "com.google.oauth-client:google-oauth-client:jar:1.34.1:compile" ; 
+[INFO] 	"com.google.api-client:google-api-client:jar:2.2.0:compile" -> "com.google.http-client:google-http-client-gson:jar:1.42.3:compile" ; 
+[INFO] 	"com.google.api-client:google-api-client:jar:2.2.0:compile" -> "com.google.http-client:google-http-client-apache-v2:jar:1.42.3:compile" ; 
+[INFO] 	"com.google.api-client:google-api-client:jar:2.2.0:compile" -> "com.google.http-client:google-http-client:jar:1.42.3:compile" ; 
+[INFO] 	"com.google.http-client:google-http-client:jar:1.42.3:compile" -> "io.opencensus:opencensus-api:jar:0.31.1:compile" ; 
+[INFO] 	"com.google.http-client:google-http-client:jar:1.42.3:compile" -> "io.opencensus:opencensus-contrib-http-util:jar:0.31.1:compile" ; 
+[INFO] 	"io.opencensus:opencensus-api:jar:0.31.1:compile" -> "io.grpc:grpc-context:jar:1.27.2:compile" ; 
+[INFO] 	"org.testng:testng:jar:7.7.1:test" -> "com.beust:jcommander:jar:1.82:test" ; 
+[INFO] 	"org.testng:testng:jar:7.7.1:test" -> "org.webjars:jquery:jar:3.6.1:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "net.bytebuddy:byte-buddy:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.8.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.22.0:test" -> "org.apache.logging.log4j:log4j-api:jar:2.22.0:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.22.0:test" -> "org.apache.logging.log4j:log4j-core:jar:2.22.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------------< org.openrefine:pc-axis >-----------------------
+[INFO] Building OpenRefine - PC-axis extension 3.8-SNAPSHOT              [9/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ pc-axis ---
+[INFO] digraph "org.openrefine:pc-axis:jar:3.8-SNAPSHOT" { 
+[INFO] 	"org.openrefine:pc-axis:jar:3.8-SNAPSHOT" -> "org.openrefine:main:jar:3.8-SNAPSHOT:provided" ; 
+[INFO] 	"org.openrefine:pc-axis:jar:3.8-SNAPSHOT" -> "javax.servlet:javax.servlet-api:jar:4.0.1:provided" ; 
+[INFO] 	"org.openrefine:pc-axis:jar:3.8-SNAPSHOT" -> "org.testng:testng:jar:7.7.1:test" ; 
+[INFO] 	"org.openrefine:pc-axis:jar:3.8-SNAPSHOT" -> "org.jvnet.localizer:localizer:jar:1.31:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.openrefine.dependencies:butterfly:jar:1.2.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.commons:commons-lang3:jar:3.14.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-fileupload:commons-fileupload:jar:1.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-collections:commons-collections:jar:3.2.2:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.commons:commons-text:jar:1.11.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-validator:commons-validator:jar:1.7:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.velocity:velocity-engine-core:jar:2.3:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.marc4j:marc4j:jar:2.9.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.commons:commons-compress:jar:1.25.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.jsoup:jsoup:jar:1.15.3:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.univocity:univocity-parsers:jar:2.9.1:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.poi:poi:jar:5.2.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.poi:poi-ooxml:jar:5.2.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.odftoolkit:odfdom-java:jar:0.9.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.openrefine.dependencies:vicino:jar:1.2:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.clojure:clojure:jar:1.11.1:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.httpcomponents.client5:httpclient5:jar:5.2.3:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.httpcomponents:httpcore:jar:4.4.16:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.jena:jena-arq:jar:4.10.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.jena:jena-core:jar:4.10.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-codec:commons-codec:jar:1.16.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-io:commons-io:jar:2.15.1:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.google.guava:guava:jar:31.1-jre:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "javax.xml.bind:jaxb-api:jar:2.3.1:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.github.albfernandez:juniversalchardet:jar:2.4.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.eclipse.jetty:jetty-servlets:jar:10.0.16:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.optimaize.languagedetector:language-detector:jar:0.6:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "commons-lang:commons-lang:jar:2.6:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "org.apache.velocity:velocity:jar:1.6.3:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "org.mozilla:rhino:jar:1.7.14:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "com.metaweb:lessen:jar:1.0:provided" ; 
+[INFO] 	"org.apache.velocity:velocity:jar:1.6.3:provided" -> "oro:oro:jar:2.0.8:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:provided" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:provided" -> "commons-beanutils:commons-beanutils:jar:1.9.4:provided" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:provided" -> "commons-digester:commons-digester:jar:2.1:provided" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:provided" -> "commons-logging:commons-logging:jar:1.2:provided" ; 
+[INFO] 	"org.apache.poi:poi:jar:5.2.5:provided" -> "org.apache.commons:commons-collections4:jar:4.4:provided" ; 
+[INFO] 	"org.apache.poi:poi:jar:5.2.5:provided" -> "org.apache.commons:commons-math3:jar:3.6.1:provided" ; 
+[INFO] 	"org.apache.poi:poi:jar:5.2.5:provided" -> "com.zaxxer:SparseBitSet:jar:1.3:provided" ; 
+[INFO] 	"org.apache.poi:poi-ooxml:jar:5.2.5:provided" -> "org.apache.poi:poi-ooxml-lite:jar:5.2.5:provided" ; 
+[INFO] 	"org.apache.poi:poi-ooxml:jar:5.2.5:provided" -> "org.apache.xmlbeans:xmlbeans:jar:5.2.0:provided" ; 
+[INFO] 	"org.apache.poi:poi-ooxml:jar:5.2.5:provided" -> "com.github.virtuald:curvesapi:jar:1.08:provided" ; 
+[INFO] 	"org.odftoolkit:odfdom-java:jar:0.9.0:provided" -> "xerces:xercesImpl:jar:2.12.1:provided" ; 
+[INFO] 	"org.odftoolkit:odfdom-java:jar:0.9.0:provided" -> "net.rootdev:java-rdfa:jar:0.4.2:provided" ; 
+[INFO] 	"org.openrefine.dependencies:vicino:jar:1.2:provided" -> "com.wcohen:com.wcohen.secondstring:jar:0.1:provided" ; 
+[INFO] 	"org.openrefine.dependencies:vicino:jar:1.2:provided" -> "org.openrefine.dependencies:arithcode:jar:1.2:provided" ; 
+[INFO] 	"org.openrefine.dependencies:vicino:jar:1.2:provided" -> "commons-compress:commons-compress:jar:20050911:provided" ; 
+[INFO] 	"org.clojure:clojure:jar:1.11.1:provided" -> "org.clojure:spec.alpha:jar:0.3.218:provided" ; 
+[INFO] 	"org.clojure:clojure:jar:1.11.1:provided" -> "org.clojure:core.specs.alpha:jar:0.2.62:provided" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.3:provided" -> "org.apache.httpcomponents.core5:httpcore5:jar:5.2.4:provided" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.3:provided" -> "org.apache.httpcomponents.core5:httpcore5-h2:jar:5.2.4:provided" ; 
+[INFO] 	"org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:provided" -> "xtc:rats-runtime:jar:1.15.0:provided" ; 
+[INFO] 	"org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:provided" -> "de.fau.cs.osr.utils:utils:jar:3.0.8:provided" ; 
+[INFO] 	"org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:provided" -> "de.fau.cs.osr.ptk:ptk-common:jar:3.0.8:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "com.github.jsonld-java:jsonld-java:jar:0.13.4:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "com.google.code.gson:gson:jar:2.10.1:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.apache.httpcomponents:httpclient-cache:jar:4.5.14:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.apache.httpcomponents:httpclient:jar:4.5.14:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.slf4j:jcl-over-slf4j:jar:1.7.36:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "com.apicatalog:titanium-json-ld:jar:1.3.2:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.glassfish:jakarta.json:jar:2.0.1:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "com.google.protobuf:protobuf-java:jar:3.24.3:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.apache.thrift:libthrift:jar:0.19.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:provided" -> "org.apache.jena:jena-base:jar:4.10.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:provided" -> "org.apache.jena:jena-iri:jar:4.10.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:provided" -> "commons-cli:commons-cli:jar:1.5.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:provided" -> "org.roaringbitmap:RoaringBitmap:jar:1.0.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-base:jar:4.10.0:provided" -> "org.apache.commons:commons-csv:jar:1.10.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-base:jar:4.10.0:provided" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.8:provided" ; 
+[INFO] 	"org.apache.jena:jena-base:jar:4.10.0:provided" -> "com.github.andrewoma.dexx:collection:jar:0.7:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.guava:failureaccess:jar:1.0.1:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "org.checkerframework:checker-qual:jar:3.12.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.errorprone:error_prone_annotations:jar:2.11.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.j2objc:j2objc-annotations:jar:1.3:provided" ; 
+[INFO] 	"javax.xml.bind:jaxb-api:jar:2.3.1:provided" -> "javax.activation:javax.activation-api:jar:1.2.0:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:10.0.16:provided" -> "org.eclipse.jetty:jetty-http:jar:10.0.16:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:10.0.16:provided" -> "org.eclipse.jetty:jetty-util:jar:10.0.16:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:10.0.16:provided" -> "org.eclipse.jetty:jetty-io:jar:10.0.16:provided" ; 
+[INFO] 	"com.optimaize.languagedetector:language-detector:jar:0.6:provided" -> "net.arnx:jsonic:jar:1.2.11:provided" ; 
+[INFO] 	"com.optimaize.languagedetector:language-detector:jar:0.6:provided" -> "com.intellij:annotations:jar:12.0:provided" ; 
+[INFO] 	"org.testng:testng:jar:7.7.1:test" -> "org.slf4j:slf4j-api:jar:1.7.36:provided" ; 
+[INFO] 	"org.testng:testng:jar:7.7.1:test" -> "com.beust:jcommander:jar:1.82:test" ; 
+[INFO] 	"org.testng:testng:jar:7.7.1:test" -> "org.webjars:jquery:jar:3.6.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< org.openrefine:phonetic >-----------------------
+[INFO] Building OpenRefine - Phonetic clustering extension 3.8-SNAPSHOT [10/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ phonetic ---
+[INFO] digraph "org.openrefine:phonetic:jar:3.8-SNAPSHOT" { 
+[INFO] 	"org.openrefine:phonetic:jar:3.8-SNAPSHOT" -> "org.openrefine:main:jar:3.8-SNAPSHOT:provided" ; 
+[INFO] 	"org.openrefine:phonetic:jar:3.8-SNAPSHOT" -> "javax.servlet:javax.servlet-api:jar:4.0.1:provided" ; 
+[INFO] 	"org.openrefine:phonetic:jar:3.8-SNAPSHOT" -> "org.testng:testng:jar:7.7.1:test" ; 
+[INFO] 	"org.openrefine:phonetic:jar:3.8-SNAPSHOT" -> "org.apache.logging.log4j:log4j-slf4j-impl:jar:2.22.0:test" ; 
+[INFO] 	"org.openrefine:phonetic:jar:3.8-SNAPSHOT" -> "org.jvnet.localizer:localizer:jar:1.31:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.openrefine.dependencies:butterfly:jar:1.2.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.commons:commons-lang3:jar:3.14.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-fileupload:commons-fileupload:jar:1.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-collections:commons-collections:jar:3.2.2:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.commons:commons-text:jar:1.11.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-validator:commons-validator:jar:1.7:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.velocity:velocity-engine-core:jar:2.3:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.marc4j:marc4j:jar:2.9.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.commons:commons-compress:jar:1.25.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.jsoup:jsoup:jar:1.15.3:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.univocity:univocity-parsers:jar:2.9.1:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.poi:poi:jar:5.2.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.poi:poi-ooxml:jar:5.2.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.odftoolkit:odfdom-java:jar:0.9.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.openrefine.dependencies:vicino:jar:1.2:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.clojure:clojure:jar:1.11.1:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.httpcomponents.client5:httpclient5:jar:5.2.3:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.httpcomponents:httpcore:jar:4.4.16:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.jena:jena-arq:jar:4.10.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.jena:jena-core:jar:4.10.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-codec:commons-codec:jar:1.16.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-io:commons-io:jar:2.15.1:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.google.guava:guava:jar:31.1-jre:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "javax.xml.bind:jaxb-api:jar:2.3.1:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.github.albfernandez:juniversalchardet:jar:2.4.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.eclipse.jetty:jetty-servlets:jar:10.0.16:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.optimaize.languagedetector:language-detector:jar:0.6:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "commons-lang:commons-lang:jar:2.6:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "org.apache.velocity:velocity:jar:1.6.3:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "org.mozilla:rhino:jar:1.7.14:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "com.metaweb:lessen:jar:1.0:provided" ; 
+[INFO] 	"org.apache.velocity:velocity:jar:1.6.3:provided" -> "oro:oro:jar:2.0.8:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:provided" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:provided" -> "commons-beanutils:commons-beanutils:jar:1.9.4:provided" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:provided" -> "commons-digester:commons-digester:jar:2.1:provided" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:provided" -> "commons-logging:commons-logging:jar:1.2:provided" ; 
+[INFO] 	"org.apache.poi:poi:jar:5.2.5:provided" -> "org.apache.commons:commons-collections4:jar:4.4:provided" ; 
+[INFO] 	"org.apache.poi:poi:jar:5.2.5:provided" -> "org.apache.commons:commons-math3:jar:3.6.1:provided" ; 
+[INFO] 	"org.apache.poi:poi:jar:5.2.5:provided" -> "com.zaxxer:SparseBitSet:jar:1.3:provided" ; 
+[INFO] 	"org.apache.poi:poi-ooxml:jar:5.2.5:provided" -> "org.apache.poi:poi-ooxml-lite:jar:5.2.5:provided" ; 
+[INFO] 	"org.apache.poi:poi-ooxml:jar:5.2.5:provided" -> "org.apache.xmlbeans:xmlbeans:jar:5.2.0:provided" ; 
+[INFO] 	"org.apache.poi:poi-ooxml:jar:5.2.5:provided" -> "com.github.virtuald:curvesapi:jar:1.08:provided" ; 
+[INFO] 	"org.odftoolkit:odfdom-java:jar:0.9.0:provided" -> "xerces:xercesImpl:jar:2.12.1:provided" ; 
+[INFO] 	"org.odftoolkit:odfdom-java:jar:0.9.0:provided" -> "net.rootdev:java-rdfa:jar:0.4.2:provided" ; 
+[INFO] 	"org.openrefine.dependencies:vicino:jar:1.2:provided" -> "com.wcohen:com.wcohen.secondstring:jar:0.1:provided" ; 
+[INFO] 	"org.openrefine.dependencies:vicino:jar:1.2:provided" -> "org.openrefine.dependencies:arithcode:jar:1.2:provided" ; 
+[INFO] 	"org.openrefine.dependencies:vicino:jar:1.2:provided" -> "commons-compress:commons-compress:jar:20050911:provided" ; 
+[INFO] 	"org.clojure:clojure:jar:1.11.1:provided" -> "org.clojure:spec.alpha:jar:0.3.218:provided" ; 
+[INFO] 	"org.clojure:clojure:jar:1.11.1:provided" -> "org.clojure:core.specs.alpha:jar:0.2.62:provided" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.3:provided" -> "org.apache.httpcomponents.core5:httpcore5:jar:5.2.4:provided" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.3:provided" -> "org.apache.httpcomponents.core5:httpcore5-h2:jar:5.2.4:provided" ; 
+[INFO] 	"org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:provided" -> "xtc:rats-runtime:jar:1.15.0:provided" ; 
+[INFO] 	"org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:provided" -> "de.fau.cs.osr.utils:utils:jar:3.0.8:provided" ; 
+[INFO] 	"org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:provided" -> "de.fau.cs.osr.ptk:ptk-common:jar:3.0.8:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "com.github.jsonld-java:jsonld-java:jar:0.13.4:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "com.google.code.gson:gson:jar:2.10.1:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.apache.httpcomponents:httpclient-cache:jar:4.5.14:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.apache.httpcomponents:httpclient:jar:4.5.14:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.slf4j:jcl-over-slf4j:jar:1.7.36:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "com.apicatalog:titanium-json-ld:jar:1.3.2:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.glassfish:jakarta.json:jar:2.0.1:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "com.google.protobuf:protobuf-java:jar:3.24.3:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.apache.thrift:libthrift:jar:0.19.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:provided" -> "org.apache.jena:jena-base:jar:4.10.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:provided" -> "org.apache.jena:jena-iri:jar:4.10.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:provided" -> "commons-cli:commons-cli:jar:1.5.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:provided" -> "org.roaringbitmap:RoaringBitmap:jar:1.0.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-base:jar:4.10.0:provided" -> "org.apache.commons:commons-csv:jar:1.10.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-base:jar:4.10.0:provided" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.8:provided" ; 
+[INFO] 	"org.apache.jena:jena-base:jar:4.10.0:provided" -> "com.github.andrewoma.dexx:collection:jar:0.7:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.guava:failureaccess:jar:1.0.1:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "org.checkerframework:checker-qual:jar:3.12.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.errorprone:error_prone_annotations:jar:2.11.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.j2objc:j2objc-annotations:jar:1.3:provided" ; 
+[INFO] 	"javax.xml.bind:jaxb-api:jar:2.3.1:provided" -> "javax.activation:javax.activation-api:jar:1.2.0:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:10.0.16:provided" -> "org.eclipse.jetty:jetty-http:jar:10.0.16:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:10.0.16:provided" -> "org.eclipse.jetty:jetty-util:jar:10.0.16:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:10.0.16:provided" -> "org.eclipse.jetty:jetty-io:jar:10.0.16:provided" ; 
+[INFO] 	"com.optimaize.languagedetector:language-detector:jar:0.6:provided" -> "net.arnx:jsonic:jar:1.2.11:provided" ; 
+[INFO] 	"com.optimaize.languagedetector:language-detector:jar:0.6:provided" -> "com.intellij:annotations:jar:12.0:provided" ; 
+[INFO] 	"org.testng:testng:jar:7.7.1:test" -> "org.slf4j:slf4j-api:jar:1.7.36:provided" ; 
+[INFO] 	"org.testng:testng:jar:7.7.1:test" -> "com.beust:jcommander:jar:1.82:test" ; 
+[INFO] 	"org.testng:testng:jar:7.7.1:test" -> "org.webjars:jquery:jar:3.6.1:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.22.0:test" -> "org.apache.logging.log4j:log4j-api:jar:2.22.0:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j-impl:jar:2.22.0:test" -> "org.apache.logging.log4j:log4j-core:jar:2.22.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< org.openrefine:packaging >----------------------
+[INFO] Building OpenRefine - packaging 3.8-SNAPSHOT                     [11/12]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] Downloading from snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/openrefine/server/3.8-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from jenkins-repo: https://repo.jenkins-ci.org/releases/org/openrefine/server/3.8-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ packaging ---
+[INFO] digraph "org.openrefine:packaging:pom:3.8-SNAPSHOT" { 
+[INFO] 	"org.openrefine:packaging:pom:3.8-SNAPSHOT" -> "org.openrefine:server:jar:3.8-SNAPSHOT:provided" ; 
+[INFO] 	"org.openrefine:packaging:pom:3.8-SNAPSHOT" -> "org.jvnet.localizer:localizer:jar:1.31:compile" ; 
+[INFO] 	"org.openrefine:server:jar:3.8-SNAPSHOT:provided" -> "javax.servlet:javax.servlet-api:jar:4.0.1:provided" ; 
+[INFO] 	"org.openrefine:server:jar:3.8-SNAPSHOT:provided" -> "org.eclipse.jetty:jetty-server:jar:10.0.16:provided" ; 
+[INFO] 	"org.openrefine:server:jar:3.8-SNAPSHOT:provided" -> "org.eclipse.jetty:jetty-servlet:jar:10.0.16:provided" ; 
+[INFO] 	"org.openrefine:server:jar:3.8-SNAPSHOT:provided" -> "org.eclipse.jetty:jetty-webapp:jar:10.0.16:provided" ; 
+[INFO] 	"org.openrefine:server:jar:3.8-SNAPSHOT:provided" -> "org.openrefine.dependencies:butterfly:jar:1.2.5:provided" ; 
+[INFO] 	"org.openrefine:server:jar:3.8-SNAPSHOT:provided" -> "org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.22.0:provided" ; 
+[INFO] 	"org.openrefine:server:jar:3.8-SNAPSHOT:provided" -> "org.slf4j:slf4j-api:jar:2.0.9:provided" ; 
+[INFO] 	"org.openrefine:server:jar:3.8-SNAPSHOT:provided" -> "org.apache.logging.log4j:log4j-core:jar:2.22.0:provided" ; 
+[INFO] 	"org.openrefine:server:jar:3.8-SNAPSHOT:provided" -> "org.apache.logging.log4j:log4j-1.2-api:jar:2.22.0:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:10.0.16:provided" -> "org.eclipse.jetty.toolchain:jetty-servlet-api:jar:4.0.6:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:10.0.16:provided" -> "org.eclipse.jetty:jetty-http:jar:10.0.16:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:10.0.16:provided" -> "org.eclipse.jetty:jetty-io:jar:10.0.16:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-http:jar:10.0.16:provided" -> "org.eclipse.jetty:jetty-util:jar:10.0.16:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:10.0.16:provided" -> "org.eclipse.jetty:jetty-security:jar:10.0.16:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-webapp:jar:10.0.16:provided" -> "org.eclipse.jetty:jetty-xml:jar:10.0.16:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "commons-collections:commons-collections:jar:3.2.2:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "commons-io:commons-io:jar:2.11.0:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "commons-lang:commons-lang:jar:2.6:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "org.apache.velocity:velocity:jar:1.6.3:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "org.mozilla:rhino:jar:1.7.14:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "com.metaweb:lessen:jar:1.0:provided" ; 
+[INFO] 	"org.apache.velocity:velocity:jar:1.6.3:provided" -> "oro:oro:jar:2.0.8:provided" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.22.0:provided" -> "org.apache.logging.log4j:log4j-api:jar:2.22.0:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< org.openrefine:benchmark >----------------------
+[INFO] Building OpenRefine Java JMH benchmarks 3.8-SNAPSHOT             [12/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ benchmark ---
+[INFO] digraph "org.openrefine:benchmark:jar:3.8-SNAPSHOT" { 
+[INFO] 	"org.openrefine:benchmark:jar:3.8-SNAPSHOT" -> "org.openrefine:main:jar:3.8-SNAPSHOT:provided" ; 
+[INFO] 	"org.openrefine:benchmark:jar:3.8-SNAPSHOT" -> "javax.servlet:javax.servlet-api:jar:4.0.1:provided" ; 
+[INFO] 	"org.openrefine:benchmark:jar:3.8-SNAPSHOT" -> "org.openjdk.jmh:jmh-core:jar:1.37:compile" ; 
+[INFO] 	"org.openrefine:benchmark:jar:3.8-SNAPSHOT" -> "org.openjdk.jmh:jmh-generator-annprocess:jar:1.37:provided" ; 
+[INFO] 	"org.openrefine:benchmark:jar:3.8-SNAPSHOT" -> "org.testng:testng:jar:7.7.1:test" ; 
+[INFO] 	"org.openrefine:benchmark:jar:3.8-SNAPSHOT" -> "org.jvnet.localizer:localizer:jar:1.31:compile" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.openrefine.dependencies:butterfly:jar:1.2.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.commons:commons-lang3:jar:3.14.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-fileupload:commons-fileupload:jar:1.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-collections:commons-collections:jar:3.2.2:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.commons:commons-text:jar:1.11.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-validator:commons-validator:jar:1.7:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.velocity:velocity-engine-core:jar:2.3:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.marc4j:marc4j:jar:2.9.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.commons:commons-compress:jar:1.25.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.jsoup:jsoup:jar:1.15.3:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.univocity:univocity-parsers:jar:2.9.1:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.poi:poi:jar:5.2.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.poi:poi-ooxml:jar:5.2.5:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.odftoolkit:odfdom-java:jar:0.9.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.openrefine.dependencies:vicino:jar:1.2:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.clojure:clojure:jar:1.11.1:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.httpcomponents.client5:httpclient5:jar:5.2.3:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.httpcomponents:httpcore:jar:4.4.16:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.jena:jena-arq:jar:4.10.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.apache.jena:jena-core:jar:4.10.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-codec:commons-codec:jar:1.16.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "commons-io:commons-io:jar:2.15.1:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.google.guava:guava:jar:31.1-jre:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "javax.xml.bind:jaxb-api:jar:2.3.1:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.github.albfernandez:juniversalchardet:jar:2.4.0:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "org.eclipse.jetty:jetty-servlets:jar:10.0.16:provided" ; 
+[INFO] 	"org.openrefine:main:jar:3.8-SNAPSHOT:provided" -> "com.optimaize.languagedetector:language-detector:jar:0.6:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "commons-lang:commons-lang:jar:2.6:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "org.apache.velocity:velocity:jar:1.6.3:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "org.mozilla:rhino:jar:1.7.14:provided" ; 
+[INFO] 	"org.openrefine.dependencies:butterfly:jar:1.2.5:provided" -> "com.metaweb:lessen:jar:1.0:provided" ; 
+[INFO] 	"org.apache.velocity:velocity:jar:1.6.3:provided" -> "oro:oro:jar:2.0.8:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4:provided" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:provided" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:provided" -> "commons-beanutils:commons-beanutils:jar:1.9.4:provided" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:provided" -> "commons-digester:commons-digester:jar:2.1:provided" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:provided" -> "commons-logging:commons-logging:jar:1.2:provided" ; 
+[INFO] 	"org.apache.poi:poi:jar:5.2.5:provided" -> "org.apache.commons:commons-collections4:jar:4.4:provided" ; 
+[INFO] 	"org.apache.poi:poi:jar:5.2.5:provided" -> "com.zaxxer:SparseBitSet:jar:1.3:provided" ; 
+[INFO] 	"org.apache.poi:poi-ooxml:jar:5.2.5:provided" -> "org.apache.poi:poi-ooxml-lite:jar:5.2.5:provided" ; 
+[INFO] 	"org.apache.poi:poi-ooxml:jar:5.2.5:provided" -> "org.apache.xmlbeans:xmlbeans:jar:5.2.0:provided" ; 
+[INFO] 	"org.apache.poi:poi-ooxml:jar:5.2.5:provided" -> "com.github.virtuald:curvesapi:jar:1.08:provided" ; 
+[INFO] 	"org.odftoolkit:odfdom-java:jar:0.9.0:provided" -> "xerces:xercesImpl:jar:2.12.1:provided" ; 
+[INFO] 	"org.odftoolkit:odfdom-java:jar:0.9.0:provided" -> "net.rootdev:java-rdfa:jar:0.4.2:provided" ; 
+[INFO] 	"org.openrefine.dependencies:vicino:jar:1.2:provided" -> "com.wcohen:com.wcohen.secondstring:jar:0.1:provided" ; 
+[INFO] 	"org.openrefine.dependencies:vicino:jar:1.2:provided" -> "org.openrefine.dependencies:arithcode:jar:1.2:provided" ; 
+[INFO] 	"org.openrefine.dependencies:vicino:jar:1.2:provided" -> "commons-compress:commons-compress:jar:20050911:provided" ; 
+[INFO] 	"org.clojure:clojure:jar:1.11.1:provided" -> "org.clojure:spec.alpha:jar:0.3.218:provided" ; 
+[INFO] 	"org.clojure:clojure:jar:1.11.1:provided" -> "org.clojure:core.specs.alpha:jar:0.2.62:provided" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.3:provided" -> "org.apache.httpcomponents.core5:httpcore5:jar:5.2.4:provided" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.3:provided" -> "org.apache.httpcomponents.core5:httpcore5-h2:jar:5.2.4:provided" ; 
+[INFO] 	"org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:provided" -> "xtc:rats-runtime:jar:1.15.0:provided" ; 
+[INFO] 	"org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:provided" -> "de.fau.cs.osr.utils:utils:jar:3.0.8:provided" ; 
+[INFO] 	"org.sweble.wikitext:swc-parser-lazy:jar:3.1.9:provided" -> "de.fau.cs.osr.ptk:ptk-common:jar:3.0.8:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "com.github.jsonld-java:jsonld-java:jar:0.13.4:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "com.google.code.gson:gson:jar:2.10.1:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.apache.httpcomponents:httpclient-cache:jar:4.5.14:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.apache.httpcomponents:httpclient:jar:4.5.14:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.slf4j:jcl-over-slf4j:jar:1.7.36:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "com.apicatalog:titanium-json-ld:jar:1.3.2:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.glassfish:jakarta.json:jar:2.0.1:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "com.google.protobuf:protobuf-java:jar:3.24.3:provided" ; 
+[INFO] 	"org.apache.jena:jena-arq:jar:4.10.0:provided" -> "org.apache.thrift:libthrift:jar:0.19.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:provided" -> "org.apache.jena:jena-base:jar:4.10.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:provided" -> "org.apache.jena:jena-iri:jar:4.10.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:provided" -> "commons-cli:commons-cli:jar:1.5.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-core:jar:4.10.0:provided" -> "org.roaringbitmap:RoaringBitmap:jar:1.0.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-base:jar:4.10.0:provided" -> "org.apache.commons:commons-csv:jar:1.10.0:provided" ; 
+[INFO] 	"org.apache.jena:jena-base:jar:4.10.0:provided" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.8:provided" ; 
+[INFO] 	"org.apache.jena:jena-base:jar:4.10.0:provided" -> "com.github.andrewoma.dexx:collection:jar:0.7:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.guava:failureaccess:jar:1.0.1:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "org.checkerframework:checker-qual:jar:3.12.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.errorprone:error_prone_annotations:jar:2.11.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.j2objc:j2objc-annotations:jar:1.3:provided" ; 
+[INFO] 	"javax.xml.bind:jaxb-api:jar:2.3.1:provided" -> "javax.activation:javax.activation-api:jar:1.2.0:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:10.0.16:provided" -> "org.eclipse.jetty:jetty-http:jar:10.0.16:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:10.0.16:provided" -> "org.eclipse.jetty:jetty-util:jar:10.0.16:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:10.0.16:provided" -> "org.eclipse.jetty:jetty-io:jar:10.0.16:provided" ; 
+[INFO] 	"com.optimaize.languagedetector:language-detector:jar:0.6:provided" -> "net.arnx:jsonic:jar:1.2.11:provided" ; 
+[INFO] 	"com.optimaize.languagedetector:language-detector:jar:0.6:provided" -> "com.intellij:annotations:jar:12.0:provided" ; 
+[INFO] 	"org.openjdk.jmh:jmh-core:jar:1.37:compile" -> "net.sf.jopt-simple:jopt-simple:jar:5.0.4:compile" ; 
+[INFO] 	"org.openjdk.jmh:jmh-core:jar:1.37:compile" -> "org.apache.commons:commons-math3:jar:3.6.1:compile" ; 
+[INFO] 	"org.testng:testng:jar:7.7.1:test" -> "org.slf4j:slf4j-api:jar:1.7.36:provided" ; 
+[INFO] 	"org.testng:testng:jar:7.7.1:test" -> "com.beust:jcommander:jar:1.82:test" ; 
+[INFO] 	"org.testng:testng:jar:7.7.1:test" -> "org.webjars:jquery:jar:3.6.1:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for OpenRefine 3.8-SNAPSHOT:
+[INFO] 
+[INFO] OpenRefine ......................................... SUCCESS [  1.939 s]
+[INFO] OpenRefine - main .................................. SUCCESS [  1.069 s]
+[INFO] OpenRefine - server ................................ SUCCESS [  0.351 s]
+[INFO] OpenRefine - extensions ............................ SUCCESS [  0.029 s]
+[INFO] OpenRefine - Jython extension ...................... SUCCESS [  2.308 s]
+[INFO] OpenRefine - Wikibase extension .................... SUCCESS [  0.419 s]
+[INFO] OpenRefine - Database extension .................... SUCCESS [  0.241 s]
+[INFO] OpenRefine - Gdata extension ....................... SUCCESS [  0.256 s]
+[INFO] OpenRefine - PC-axis extension ..................... SUCCESS [  0.048 s]
+[INFO] OpenRefine - Phonetic clustering extension ......... SUCCESS [  0.089 s]
+[INFO] OpenRefine - packaging ............................. SUCCESS [  0.536 s]
+[INFO] OpenRefine Java JMH benchmarks ..................... SUCCESS [  0.103 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  11.079 s
+[INFO] Finished at: 2023-12-28T09:03:20+01:00
+[INFO] ------------------------------------------------------------------------

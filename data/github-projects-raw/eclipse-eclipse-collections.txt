@@ -1,0 +1,256 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Eclipse Collections Parent Project                                 [pom]
+[INFO] Eclipse Collections Code Generator                                 [jar]
+[INFO] Eclipse Collections Code Generator Maven Plugin           [maven-plugin]
+[INFO] Eclipse Collections API                                            [jar]
+[INFO] Eclipse Collections Main Library                                   [jar]
+[INFO] Eclipse Collections Test Utilities                                 [jar]
+[INFO] Eclipse Collections Fork Join Utilities                            [jar]
+[INFO] Eclipse Collections Unit Test Suite                                [jar]
+[INFO] Eclipse Collections Serialization Test Suite                       [jar]
+[INFO] Eclipse Collections JCStress Test Suite                            [jar]
+[INFO] Eclipse Collections Test Trait JUnit Runner                        [jar]
+[INFO] Eclipse Collections Java 8 Unit Test Suite                         [jar]
+[INFO] Eclipse Collections Test Coverage Aggregation                      [pom]
+[INFO] Eclipse Collections p2 Repository Build                            [pom]
+[INFO] Eclipse Collections OSGi Bundle                  [eclipse-bundle-recipe]
+[INFO] 
+[INFO] ---------< org.eclipse.collections:eclipse-collections-parent >---------
+[INFO] Building Eclipse Collections Parent Project 12.0.0-SNAPSHOT       [1/15]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ eclipse-collections-parent ---
+[INFO] digraph "org.eclipse.collections:eclipse-collections-parent:pom:12.0.0-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] -----< org.eclipse.collections:eclipse-collections-code-generator >-----
+[INFO] Building Eclipse Collections Code Generator 12.0.0-SNAPSHOT       [2/15]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ eclipse-collections-code-generator ---
+[INFO] digraph "org.eclipse.collections:eclipse-collections-code-generator:jar:12.0.0-SNAPSHOT" { 
+[INFO] 	"org.eclipse.collections:eclipse-collections-code-generator:jar:12.0.0-SNAPSHOT" -> "org.antlr:ST4:jar:4.3.4:compile" ; 
+[INFO] 	"org.antlr:ST4:jar:4.3.4:compile" -> "org.antlr:antlr-runtime:jar:3.5.3:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --< org.eclipse.collections:eclipse-collections-code-generator-maven-plugin >--
+[INFO] Building Eclipse Collections Code Generator Maven Plugin 12.0.0-SNAPSHOT [3/15]
+[INFO] ----------------------------[ maven-plugin ]----------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ eclipse-collections-code-generator-maven-plugin ---
+[INFO] digraph "org.eclipse.collections:eclipse-collections-code-generator-maven-plugin:maven-plugin:12.0.0-SNAPSHOT" { 
+[INFO] 	"org.eclipse.collections:eclipse-collections-code-generator-maven-plugin:maven-plugin:12.0.0-SNAPSHOT" -> "org.eclipse.collections:eclipse-collections-code-generator:jar:12.0.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.eclipse.collections:eclipse-collections-code-generator-maven-plugin:maven-plugin:12.0.0-SNAPSHOT" -> "org.apache.maven:maven-plugin-api:jar:3.9.0:provided" ; 
+[INFO] 	"org.eclipse.collections:eclipse-collections-code-generator-maven-plugin:maven-plugin:12.0.0-SNAPSHOT" -> "org.apache.maven:maven-model:jar:3.9.0:provided" ; 
+[INFO] 	"org.eclipse.collections:eclipse-collections-code-generator-maven-plugin:maven-plugin:12.0.0-SNAPSHOT" -> "org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.9.0:provided" ; 
+[INFO] 	"org.eclipse.collections:eclipse-collections-code-generator-maven-plugin:maven-plugin:12.0.0-SNAPSHOT" -> "org.apache.maven:maven-core:jar:3.8.1:provided" ; 
+[INFO] 	"org.eclipse.collections:eclipse-collections-code-generator:jar:12.0.0-SNAPSHOT:compile" -> "org.antlr:ST4:jar:4.3.4:compile" ; 
+[INFO] 	"org.antlr:ST4:jar:4.3.4:compile" -> "org.antlr:antlr-runtime:jar:3.5.3:compile" ; 
+[INFO] 	"org.apache.maven:maven-plugin-api:jar:3.9.0:provided" -> "org.apache.maven:maven-artifact:jar:3.9.0:provided" ; 
+[INFO] 	"org.apache.maven:maven-plugin-api:jar:3.9.0:provided" -> "org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.3.5:provided" ; 
+[INFO] 	"org.apache.maven:maven-plugin-api:jar:3.9.0:provided" -> "org.codehaus.plexus:plexus-utils:jar:3.4.2:provided" ; 
+[INFO] 	"org.apache.maven:maven-plugin-api:jar:3.9.0:provided" -> "org.codehaus.plexus:plexus-classworlds:jar:2.6.0:provided" ; 
+[INFO] 	"org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.3.5:provided" -> "javax.annotation:javax.annotation-api:jar:1.2:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.8.1:provided" -> "org.apache.maven:maven-settings:jar:3.8.1:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.8.1:provided" -> "org.apache.maven:maven-settings-builder:jar:3.8.1:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.8.1:provided" -> "org.apache.maven:maven-builder-support:jar:3.8.1:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.8.1:provided" -> "org.apache.maven:maven-repository-metadata:jar:3.8.1:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.8.1:provided" -> "org.apache.maven:maven-model-builder:jar:3.8.1:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.8.1:provided" -> "org.apache.maven:maven-resolver-provider:jar:3.8.1:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.8.1:provided" -> "org.apache.maven.resolver:maven-resolver-impl:jar:1.6.2:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.8.1:provided" -> "org.apache.maven.resolver:maven-resolver-api:jar:1.6.2:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.8.1:provided" -> "org.apache.maven.resolver:maven-resolver-spi:jar:1.6.2:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.8.1:provided" -> "org.apache.maven.resolver:maven-resolver-util:jar:1.6.2:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.8.1:provided" -> "org.apache.maven.shared:maven-shared-utils:jar:3.2.1:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.8.1:provided" -> "org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.3.4:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.8.1:provided" -> "com.google.inject:guice:jar:no_aop:4.2.1:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.8.1:provided" -> "javax.inject:javax.inject:jar:1:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.8.1:provided" -> "org.codehaus.plexus:plexus-component-annotations:jar:2.1.0:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.8.1:provided" -> "org.apache.commons:commons-lang3:jar:3.8.1:provided" ; 
+[INFO] 	"org.apache.maven:maven-settings-builder:jar:3.8.1:provided" -> "org.codehaus.plexus:plexus-interpolation:jar:1.25:provided" ; 
+[INFO] 	"org.apache.maven:maven-settings-builder:jar:3.8.1:provided" -> "org.sonatype.plexus:plexus-sec-dispatcher:jar:1.4:provided" ; 
+[INFO] 	"org.sonatype.plexus:plexus-sec-dispatcher:jar:1.4:provided" -> "org.sonatype.plexus:plexus-cipher:jar:1.4:provided" ; 
+[INFO] 	"org.apache.maven:maven-resolver-provider:jar:3.8.1:provided" -> "org.slf4j:slf4j-api:jar:2.0.7:provided" ; 
+[INFO] 	"org.apache.maven.shared:maven-shared-utils:jar:3.2.1:provided" -> "commons-io:commons-io:jar:2.5:provided" ; 
+[INFO] 	"com.google.inject:guice:jar:no_aop:4.2.1:provided" -> "aopalliance:aopalliance:jar:1.0:provided" ; 
+[INFO] 	"com.google.inject:guice:jar:no_aop:4.2.1:provided" -> "com.google.guava:guava:jar:25.1-android:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:25.1-android:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:25.1-android:provided" -> "org.checkerframework:checker-compat-qual:jar:2.0.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:25.1-android:provided" -> "com.google.errorprone:error_prone_annotations:jar:2.1.3:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:25.1-android:provided" -> "com.google.j2objc:j2objc-annotations:jar:1.1:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:25.1-android:provided" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.14:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------< org.eclipse.collections:eclipse-collections-api >-----------
+[INFO] Building Eclipse Collections API 12.0.0-SNAPSHOT                  [4/15]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from repo.eclipse.org: https://repo.eclipse.org/content/repositories/cbi-releases/org/eclipse/collections/eclipse-collections-code-generator-maven-plugin/12.0.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from repo.eclipse.org: https://repo.eclipse.org/content/repositories/cbi-releases/org/eclipse/collections/eclipse-collections-code-generator-maven-plugin/12.0.0-SNAPSHOT/eclipse-collections-code-generator-maven-plugin-12.0.0-SNAPSHOT.jar
+[WARNING] Failed to retrieve plugin descriptor for org.eclipse.collections:eclipse-collections-code-generator-maven-plugin:12.0.0-SNAPSHOT: Plugin org.eclipse.collections:eclipse-collections-code-generator-maven-plugin:12.0.0-SNAPSHOT or one of its dependencies could not be resolved: Could not find artifact org.eclipse.collections:eclipse-collections-code-generator-maven-plugin:jar:12.0.0-SNAPSHOT in repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/)
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ eclipse-collections-api ---
+[INFO] digraph "org.eclipse.collections:eclipse-collections-api:jar:12.0.0-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< org.eclipse.collections:eclipse-collections >-------------
+[INFO] Building Eclipse Collections Main Library 12.0.0-SNAPSHOT         [5/15]
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Failed to retrieve plugin descriptor for org.eclipse.collections:eclipse-collections-code-generator-maven-plugin:12.0.0-SNAPSHOT: Plugin org.eclipse.collections:eclipse-collections-code-generator-maven-plugin:12.0.0-SNAPSHOT or one of its dependencies could not be resolved: Failure to find org.eclipse.collections:eclipse-collections-code-generator-maven-plugin:jar:12.0.0-SNAPSHOT in https://repo.eclipse.org/content/repositories/cbi-releases/ was cached in the local repository, resolution will not be reattempted until the update interval of repo.eclipse.org has elapsed or updates are forced
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ eclipse-collections ---
+[INFO] digraph "org.eclipse.collections:eclipse-collections:jar:12.0.0-SNAPSHOT" { 
+[INFO] 	"org.eclipse.collections:eclipse-collections:jar:12.0.0-SNAPSHOT" -> "org.eclipse.collections:eclipse-collections-api:jar:12.0.0-SNAPSHOT:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------< org.eclipse.collections:eclipse-collections-testutils >--------
+[INFO] Building Eclipse Collections Test Utilities 12.0.0-SNAPSHOT       [6/15]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ eclipse-collections-testutils ---
+[INFO] digraph "org.eclipse.collections:eclipse-collections-testutils:jar:12.0.0-SNAPSHOT" { 
+[INFO] 	"org.eclipse.collections:eclipse-collections-testutils:jar:12.0.0-SNAPSHOT" -> "org.eclipse.collections:eclipse-collections-api:jar:12.0.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.eclipse.collections:eclipse-collections-testutils:jar:12.0.0-SNAPSHOT" -> "org.eclipse.collections:eclipse-collections:jar:12.0.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.eclipse.collections:eclipse-collections-testutils:jar:12.0.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:compile" -> "org.hamcrest:hamcrest-core:jar:1.3:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------< org.eclipse.collections:eclipse-collections-forkjoin >--------
+[INFO] Building Eclipse Collections Fork Join Utilities 12.0.0-SNAPSHOT  [7/15]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ eclipse-collections-forkjoin ---
+[INFO] digraph "org.eclipse.collections:eclipse-collections-forkjoin:jar:12.0.0-SNAPSHOT" { 
+[INFO] 	"org.eclipse.collections:eclipse-collections-forkjoin:jar:12.0.0-SNAPSHOT" -> "org.eclipse.collections:eclipse-collections-api:jar:12.0.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.eclipse.collections:eclipse-collections-forkjoin:jar:12.0.0-SNAPSHOT" -> "org.eclipse.collections:eclipse-collections:jar:12.0.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.eclipse.collections:eclipse-collections-forkjoin:jar:12.0.0-SNAPSHOT" -> "org.eclipse.collections:eclipse-collections-testutils:jar:12.0.0-SNAPSHOT:test" ; 
+[INFO] 	"org.eclipse.collections:eclipse-collections-forkjoin:jar:12.0.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.eclipse.collections:unit-tests >-----------------
+[INFO] Building Eclipse Collections Unit Test Suite 12.0.0-SNAPSHOT      [8/15]
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Failed to retrieve plugin descriptor for org.eclipse.collections:eclipse-collections-code-generator-maven-plugin:12.0.0-SNAPSHOT: Plugin org.eclipse.collections:eclipse-collections-code-generator-maven-plugin:12.0.0-SNAPSHOT or one of its dependencies could not be resolved: Failure to find org.eclipse.collections:eclipse-collections-code-generator-maven-plugin:jar:12.0.0-SNAPSHOT in https://repo.eclipse.org/content/repositories/cbi-releases/ was cached in the local repository, resolution will not be reattempted until the update interval of repo.eclipse.org has elapsed or updates are forced
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ unit-tests ---
+[INFO] digraph "org.eclipse.collections:unit-tests:jar:12.0.0-SNAPSHOT" { 
+[INFO] 	"org.eclipse.collections:unit-tests:jar:12.0.0-SNAPSHOT" -> "org.eclipse.collections:eclipse-collections-api:jar:12.0.0-SNAPSHOT:test" ; 
+[INFO] 	"org.eclipse.collections:unit-tests:jar:12.0.0-SNAPSHOT" -> "org.eclipse.collections:eclipse-collections:jar:12.0.0-SNAPSHOT:test" ; 
+[INFO] 	"org.eclipse.collections:unit-tests:jar:12.0.0-SNAPSHOT" -> "org.eclipse.collections:eclipse-collections-testutils:jar:12.0.0-SNAPSHOT:test" ; 
+[INFO] 	"org.eclipse.collections:unit-tests:jar:12.0.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.eclipse.collections:unit-tests:jar:12.0.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.7:test" ; 
+[INFO] 	"org.eclipse.collections:unit-tests:jar:12.0.0-SNAPSHOT" -> "org.slf4j:slf4j-nop:jar:2.0.7:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< org.eclipse.collections:serialization-tests >-------------
+[INFO] Building Eclipse Collections Serialization Test Suite 12.0.0-SNAPSHOT [9/15]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ serialization-tests ---
+[INFO] digraph "org.eclipse.collections:serialization-tests:jar:12.0.0-SNAPSHOT" { 
+[INFO] 	"org.eclipse.collections:serialization-tests:jar:12.0.0-SNAPSHOT" -> "org.eclipse.collections:eclipse-collections-api:jar:12.0.0-SNAPSHOT:test" ; 
+[INFO] 	"org.eclipse.collections:serialization-tests:jar:12.0.0-SNAPSHOT" -> "org.eclipse.collections:eclipse-collections:jar:12.0.0-SNAPSHOT:test" ; 
+[INFO] 	"org.eclipse.collections:serialization-tests:jar:12.0.0-SNAPSHOT" -> "org.eclipse.collections:eclipse-collections-testutils:jar:12.0.0-SNAPSHOT:test" ; 
+[INFO] 	"org.eclipse.collections:serialization-tests:jar:12.0.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.eclipse.collections:jcstress-tests >---------------
+[INFO] Building Eclipse Collections JCStress Test Suite 12.0.0-SNAPSHOT [10/15]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ jcstress-tests ---
+[INFO] digraph "org.eclipse.collections:jcstress-tests:jar:12.0.0-SNAPSHOT" { 
+[INFO] 	"org.eclipse.collections:jcstress-tests:jar:12.0.0-SNAPSHOT" -> "org.eclipse.collections:eclipse-collections:jar:12.0.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.eclipse.collections:jcstress-tests:jar:12.0.0-SNAPSHOT" -> "org.openjdk.jcstress:jcstress-core:jar:0.15:compile" ; 
+[INFO] 	"org.eclipse.collections:eclipse-collections:jar:12.0.0-SNAPSHOT:compile" -> "org.eclipse.collections:eclipse-collections-api:jar:12.0.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.openjdk.jcstress:jcstress-core:jar:0.15:compile" -> "net.sf.jopt-simple:jopt-simple:jar:4.6:compile" ; 
+[INFO] 	"org.openjdk.jcstress:jcstress-core:jar:0.15:compile" -> "net.java.dev.jna:jna:jar:5.8.0:compile" ; 
+[INFO] 	"org.openjdk.jcstress:jcstress-core:jar:0.15:compile" -> "net.java.dev.jna:jna-platform:jar:5.8.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< org.eclipse.collections:junit-trait-runner >-------------
+[INFO] Building Eclipse Collections Test Trait JUnit Runner 12.0.0-SNAPSHOT [11/15]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ junit-trait-runner ---
+[INFO] digraph "org.eclipse.collections:junit-trait-runner:jar:12.0.0-SNAPSHOT" { 
+[INFO] 	"org.eclipse.collections:junit-trait-runner:jar:12.0.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:compile" -> "org.hamcrest:hamcrest-core:jar:1.3:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< org.eclipse.collections:unit-tests-java8 >--------------
+[INFO] Building Eclipse Collections Java 8 Unit Test Suite 12.0.0-SNAPSHOT [12/15]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ unit-tests-java8 ---
+[INFO] digraph "org.eclipse.collections:unit-tests-java8:jar:12.0.0-SNAPSHOT" { 
+[INFO] 	"org.eclipse.collections:unit-tests-java8:jar:12.0.0-SNAPSHOT" -> "org.eclipse.collections:eclipse-collections-api:jar:12.0.0-SNAPSHOT:test" ; 
+[INFO] 	"org.eclipse.collections:unit-tests-java8:jar:12.0.0-SNAPSHOT" -> "org.eclipse.collections:eclipse-collections:jar:12.0.0-SNAPSHOT:test" ; 
+[INFO] 	"org.eclipse.collections:unit-tests-java8:jar:12.0.0-SNAPSHOT" -> "org.eclipse.collections:eclipse-collections-testutils:jar:12.0.0-SNAPSHOT:test" ; 
+[INFO] 	"org.eclipse.collections:unit-tests-java8:jar:12.0.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.eclipse.collections:unit-tests-java8:jar:12.0.0-SNAPSHOT" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.eclipse.collections:unit-tests-java8:jar:12.0.0-SNAPSHOT" -> "org.hamcrest:hamcrest-library:jar:1.3:test" ; 
+[INFO] 	"org.eclipse.collections:unit-tests-java8:jar:12.0.0-SNAPSHOT" -> "org.eclipse.collections:junit-trait-runner:jar:12.0.0-SNAPSHOT:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.eclipse.collections:test-coverage >----------------
+[INFO] Building Eclipse Collections Test Coverage Aggregation 12.0.0-SNAPSHOT [13/15]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ test-coverage ---
+[INFO] digraph "org.eclipse.collections:test-coverage:pom:12.0.0-SNAPSHOT" { 
+[INFO] 	"org.eclipse.collections:test-coverage:pom:12.0.0-SNAPSHOT" -> "org.eclipse.collections:eclipse-collections-api:jar:12.0.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.eclipse.collections:test-coverage:pom:12.0.0-SNAPSHOT" -> "org.eclipse.collections:eclipse-collections:jar:12.0.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.eclipse.collections:test-coverage:pom:12.0.0-SNAPSHOT" -> "org.eclipse.collections:eclipse-collections-testutils:jar:12.0.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.eclipse.collections:test-coverage:pom:12.0.0-SNAPSHOT" -> "org.eclipse.collections:unit-tests:jar:12.0.0-SNAPSHOT:test" ; 
+[INFO] 	"org.eclipse.collections:test-coverage:pom:12.0.0-SNAPSHOT" -> "org.eclipse.collections:unit-tests-java8:jar:12.0.0-SNAPSHOT:test" ; 
+[INFO] 	"org.eclipse.collections:eclipse-collections-testutils:jar:12.0.0-SNAPSHOT:compile" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.eclipse.collections:p2-repository >----------------
+[INFO] Building Eclipse Collections p2 Repository Build 12.0.0-SNAPSHOT [14/15]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ p2-repository ---
+[INFO] digraph "org.eclipse.collections:p2-repository:pom:12.0.0-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ----------< org.eclipse.collections:org.eclipse.collections >-----------
+[INFO] Building Eclipse Collections OSGi Bundle 12.0.0-SNAPSHOT         [15/15]
+[INFO] -----------------------[ eclipse-bundle-recipe ]------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ org.eclipse.collections ---
+[INFO] digraph "org.eclipse.collections:org.eclipse.collections:eclipse-bundle-recipe:12.0.0-SNAPSHOT" { 
+[INFO] 	"org.eclipse.collections:org.eclipse.collections:eclipse-bundle-recipe:12.0.0-SNAPSHOT" -> "org.eclipse.collections:eclipse-collections:jar:12.0.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.eclipse.collections:org.eclipse.collections:eclipse-bundle-recipe:12.0.0-SNAPSHOT" -> "org.eclipse.collections:eclipse-collections-api:jar:12.0.0-SNAPSHOT:compile" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Eclipse Collections Parent Project 12.0.0-SNAPSHOT:
+[INFO] 
+[INFO] Eclipse Collections Parent Project ................. SUCCESS [  2.187 s]
+[INFO] Eclipse Collections Code Generator ................. SUCCESS [  0.068 s]
+[INFO] Eclipse Collections Code Generator Maven Plugin .... SUCCESS [  0.443 s]
+[INFO] Eclipse Collections API ............................ SUCCESS [  3.782 s]
+[INFO] Eclipse Collections Main Library ................... SUCCESS [  0.078 s]
+[INFO] Eclipse Collections Test Utilities ................. SUCCESS [  0.090 s]
+[INFO] Eclipse Collections Fork Join Utilities ............ SUCCESS [  0.086 s]
+[INFO] Eclipse Collections Unit Test Suite ................ SUCCESS [  0.080 s]
+[INFO] Eclipse Collections Serialization Test Suite ....... SUCCESS [  0.073 s]
+[INFO] Eclipse Collections JCStress Test Suite ............ SUCCESS [  0.085 s]
+[INFO] Eclipse Collections Test Trait JUnit Runner ........ SUCCESS [  0.036 s]
+[INFO] Eclipse Collections Java 8 Unit Test Suite ......... SUCCESS [  0.115 s]
+[INFO] Eclipse Collections Test Coverage Aggregation ...... SUCCESS [  0.058 s]
+[INFO] Eclipse Collections p2 Repository Build ............ SUCCESS [  1.405 s]
+[INFO] Eclipse Collections OSGi Bundle .................... SUCCESS [  0.053 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  18.756 s
+[INFO] Finished at: 2023-12-28T09:02:53+01:00
+[INFO] ------------------------------------------------------------------------

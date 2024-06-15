@@ -1,0 +1,102 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] jvm-sandbox-repeater                                               [pom]
+[INFO] repeater-aide                                                      [jar]
+[INFO] repeater-plugin-api                                                [jar]
+[INFO] hessian-lite                                                       [jar]
+[INFO] repeater-plugin-core                                               [jar]
+[INFO] repeater-plugins                                                   [pom]
+[INFO] mybatis-plugin                                                     [jar]
+[INFO] ibatis-plugin                                                      [jar]
+[INFO] java-plugin                                                        [jar]
+[INFO] http-plugin                                                        [jar]
+[INFO] dubbo-plugin                                                       [jar]
+[INFO] redis-plugin                                                       [jar]
+[INFO] hibernate-plugin                                                   [jar]
+[INFO] spring-data-jpa-plugin                                             [jar]
+[INFO] socketio-plugin                                                    [jar]
+[INFO] apache-http-client-plugin                                          [jar]
+[INFO] caffeine-cache-plugin                                              [jar]
+[INFO] eh-cache-plugin                                                    [jar]
+[INFO] guava-cache-plugin                                                 [jar]
+[INFO] okhttp-plugin                                                      [jar]
+[INFO] repeater-module                                                    [jar]
+[INFO] repeater-client                                                    [jar]
+[INFO] repeater-console                                                   [pom]
+[INFO] repeater-console-common                                            [jar]
+[INFO] repeater-console-dal                                               [jar]
+[INFO] repeater-console-service                                           [jar]
+[INFO] repeater-console-start                                             [jar]
+[INFO] 
+[INFO] ------------< com.alibaba.jvm.sandbox:jvm-sandbox-repeater >------------
+[INFO] Building jvm-sandbox-repeater 1.0.0-SNAPSHOT                      [1/27]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ jvm-sandbox-repeater ---
+[INFO] digraph "com.alibaba.jvm.sandbox:jvm-sandbox-repeater:pom:1.0.0-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< com.alibaba.jvm.sandbox:repeater-aide >----------------
+[INFO] Building repeater-aide 1.0.0-SNAPSHOT                             [2/27]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ repeater-aide ---
+[INFO] digraph "com.alibaba.jvm.sandbox:repeater-aide:jar:1.0.0-SNAPSHOT" { 
+[INFO] 	"com.alibaba.jvm.sandbox:repeater-aide:jar:1.0.0-SNAPSHOT" -> "org.apache.commons:commons-lang3:jar:3.6:compile" ; 
+[INFO] 	"com.alibaba.jvm.sandbox:repeater-aide:jar:1.0.0-SNAPSHOT" -> "org.kohsuke.metainf-services:metainf-services:jar:1.8:compile" ; 
+[INFO] 	"com.alibaba.jvm.sandbox:repeater-aide:jar:1.0.0-SNAPSHOT" -> "org.testng:testng:jar:6.14.3:test" ; 
+[INFO] 	"org.testng:testng:jar:6.14.3:test" -> "com.beust:jcommander:jar:1.72:test" ; 
+[INFO] 	"org.testng:testng:jar:6.14.3:test" -> "org.apache-extras.beanshell:bsh:jar:2.0b6:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< com.alibaba.jvm.sandbox:repeater-plugin-api >-------------
+[INFO] Building repeater-plugin-api 1.0.0-SNAPSHOT                       [3/27]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for jvm-sandbox-repeater 1.0.0-SNAPSHOT:
+[INFO] 
+[INFO] jvm-sandbox-repeater ............................... SUCCESS [  5.506 s]
+[INFO] repeater-aide ...................................... SUCCESS [  0.421 s]
+[INFO] repeater-plugin-api ................................ FAILURE [  0.175 s]
+[INFO] hessian-lite ....................................... SKIPPED
+[INFO] repeater-plugin-core ............................... SKIPPED
+[INFO] repeater-plugins ................................... SKIPPED
+[INFO] mybatis-plugin ..................................... SKIPPED
+[INFO] ibatis-plugin ...................................... SKIPPED
+[INFO] java-plugin ........................................ SKIPPED
+[INFO] http-plugin ........................................ SKIPPED
+[INFO] dubbo-plugin ....................................... SKIPPED
+[INFO] redis-plugin ....................................... SKIPPED
+[INFO] hibernate-plugin ................................... SKIPPED
+[INFO] spring-data-jpa-plugin ............................. SKIPPED
+[INFO] socketio-plugin .................................... SKIPPED
+[INFO] apache-http-client-plugin .......................... SKIPPED
+[INFO] caffeine-cache-plugin .............................. SKIPPED
+[INFO] eh-cache-plugin .................................... SKIPPED
+[INFO] guava-cache-plugin ................................. SKIPPED
+[INFO] okhttp-plugin ...................................... SKIPPED
+[INFO] repeater-module .................................... SKIPPED
+[INFO] repeater-client .................................... SKIPPED
+[INFO] repeater-console ................................... SKIPPED
+[INFO] repeater-console-common ............................ SKIPPED
+[INFO] repeater-console-dal ............................... SKIPPED
+[INFO] repeater-console-service ........................... SKIPPED
+[INFO] repeater-console-start ............................. SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.724 s
+[INFO] Finished at: 2023-12-28T09:02:24+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project repeater-plugin-api: Could not resolve dependencies for project com.alibaba.jvm.sandbox:repeater-plugin-api:jar:1.0.0-SNAPSHOT: Could not find artifact com.alibaba.jvm.sandbox:repeater-aide:jar:1.0.0-SNAPSHOT -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :repeater-plugin-api

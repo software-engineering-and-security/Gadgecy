@@ -1,0 +1,463 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.apache.httpcomponents:httpclient:jar -> duplicate declaration of version ${httpclient.version} @ line 169, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Spring Web Services - BOM                                          [pom]
+[INFO] Spring Web Services                                                [pom]
+[INFO] spring-xml                                                         [jar]
+[INFO] spring-ws-core                                                     [jar]
+[INFO] spring-ws-security                                                 [jar]
+[INFO] spring-ws-support                                                  [jar]
+[INFO] spring-ws-test                                                     [jar]
+[INFO] Downloading from spring-snapshot: https://repo.spring.io/snapshot/com/gradle/gradle-enterprise-maven-extension/maven-metadata.xml
+[INFO] Downloading from spring-release: https://repo.spring.io/release/com/gradle/gradle-enterprise-maven-extension/maven-metadata.xml
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/com/gradle/gradle-enterprise-maven-extension/maven-metadata.xml
+[WARNING] Could not transfer metadata com.gradle:gradle-enterprise-maven-extension/maven-metadata.xml from/to spring-release (https://repo.spring.io/release): Authentication failed for https://repo.spring.io/release/com/gradle/gradle-enterprise-maven-extension/maven-metadata.xml 401 Unauthorized
+[INFO] 
+[INFO] ----------------< org.springframework.ws:spring-ws-bom >----------------
+[INFO] Building Spring Web Services - BOM 4.0.9-SNAPSHOT                  [1/7]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ spring-ws-bom ---
+[INFO] digraph "org.springframework.ws:spring-ws-bom:pom:4.0.9-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< org.springframework.ws:spring-ws >------------------
+[INFO] Building Spring Web Services 4.0.9-SNAPSHOT                        [2/7]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ spring-ws ---
+[INFO] digraph "org.springframework.ws:spring-ws:pom:4.0.9-SNAPSHOT" { 
+[INFO] 	"org.springframework.ws:spring-ws:pom:4.0.9-SNAPSHOT" -> "org.springframework:spring-core:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws:pom:4.0.9-SNAPSHOT" -> "com.sun.xml.messaging.saaj:saaj-impl:jar:2.0.1:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws:pom:4.0.9-SNAPSHOT" -> "org.jvnet.staxex:stax-ex:jar:2.0.1:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws:pom:4.0.9-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws:pom:4.0.9-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws:pom:4.0.9-SNAPSHOT" -> "org.easymock:easymock:jar:4.3:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws:pom:4.0.9-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.0.0:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws:pom:4.0.9-SNAPSHOT" -> "org.xmlunit:xmlunit-assertj:jar:2.9.0:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws:pom:4.0.9-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.9.0:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws:pom:4.0.9-SNAPSHOT" -> "com.fasterxml.woodstox:woodstox-core:jar:6.5.1:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.0.14:compile" -> "org.springframework:spring-jcl:jar:6.0.14:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.1:test" ; 
+[INFO] 	"org.easymock:easymock:jar:4.3:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "net.bytebuddy:byte-buddy:jar:1.11.19:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.11.19:test" ; 
+[INFO] 	"org.xmlunit:xmlunit-assertj:jar:2.9.0:test" -> "org.xmlunit:xmlunit-core:jar:2.9.0:test" ; 
+[INFO] 	"com.fasterxml.woodstox:woodstox-core:jar:6.5.1:test" -> "org.codehaus.woodstox:stax2-api:jar:4.2.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.springframework.ws:spring-xml >------------------
+[INFO] Building spring-xml 4.0.9-SNAPSHOT                                 [3/7]
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Failure to transfer com.gradle:gradle-enterprise-maven-extension/maven-metadata.xml from https://repo.spring.io/release was cached in the local repository, resolution will not be reattempted until the update interval of spring-release has elapsed or updates are forced. Original error: Could not transfer metadata com.gradle:gradle-enterprise-maven-extension/maven-metadata.xml from/to spring-release (https://repo.spring.io/release): Authentication failed for https://repo.spring.io/release/com/gradle/gradle-enterprise-maven-extension/maven-metadata.xml 401 Unauthorized
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ spring-xml ---
+[INFO] digraph "org.springframework.ws:spring-xml:jar:4.0.9-SNAPSHOT" { 
+[INFO] 	"org.springframework.ws:spring-xml:jar:4.0.9-SNAPSHOT" -> "org.springframework:spring-beans:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-xml:jar:4.0.9-SNAPSHOT" -> "org.springframework:spring-context:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-xml:jar:4.0.9-SNAPSHOT" -> "org.apache.ws.xmlschema:xmlschema-core:jar:2.2.2:compile" ; 
+[INFO] 	"org.springframework.ws:spring-xml:jar:4.0.9-SNAPSHOT" -> "jaxen:jaxen:jar:1.1.6:compile" ; 
+[INFO] 	"org.springframework.ws:spring-xml:jar:4.0.9-SNAPSHOT" -> "org.springframework:spring-core:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-xml:jar:4.0.9-SNAPSHOT" -> "com.sun.xml.messaging.saaj:saaj-impl:jar:2.0.1:compile" ; 
+[INFO] 	"org.springframework.ws:spring-xml:jar:4.0.9-SNAPSHOT" -> "org.jvnet.staxex:stax-ex:jar:2.0.1:compile" ; 
+[INFO] 	"org.springframework.ws:spring-xml:jar:4.0.9-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" ; 
+[INFO] 	"org.springframework.ws:spring-xml:jar:4.0.9-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" ; 
+[INFO] 	"org.springframework.ws:spring-xml:jar:4.0.9-SNAPSHOT" -> "org.easymock:easymock:jar:4.3:test" ; 
+[INFO] 	"org.springframework.ws:spring-xml:jar:4.0.9-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.0.0:test" ; 
+[INFO] 	"org.springframework.ws:spring-xml:jar:4.0.9-SNAPSHOT" -> "org.xmlunit:xmlunit-assertj:jar:2.9.0:test" ; 
+[INFO] 	"org.springframework.ws:spring-xml:jar:4.0.9-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.9.0:test" ; 
+[INFO] 	"org.springframework.ws:spring-xml:jar:4.0.9-SNAPSHOT" -> "com.fasterxml.woodstox:woodstox-core:jar:6.5.1:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.0.14:compile" -> "org.springframework:spring-aop:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.0.14:compile" -> "org.springframework:spring-expression:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.0.14:compile" -> "org.springframework:spring-jcl:jar:6.0.14:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.1:test" ; 
+[INFO] 	"org.easymock:easymock:jar:4.3:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "net.bytebuddy:byte-buddy:jar:1.11.19:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.11.19:test" ; 
+[INFO] 	"org.xmlunit:xmlunit-assertj:jar:2.9.0:test" -> "org.xmlunit:xmlunit-core:jar:2.9.0:test" ; 
+[INFO] 	"com.fasterxml.woodstox:woodstox-core:jar:6.5.1:test" -> "org.codehaus.woodstox:stax2-api:jar:4.2.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.springframework.ws:spring-ws-core >----------------
+[INFO] Building spring-ws-core 4.0.9-SNAPSHOT                             [4/7]
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Failure to transfer com.gradle:gradle-enterprise-maven-extension/maven-metadata.xml from https://repo.spring.io/release was cached in the local repository, resolution will not be reattempted until the update interval of spring-release has elapsed or updates are forced. Original error: Could not transfer metadata com.gradle:gradle-enterprise-maven-extension/maven-metadata.xml from/to spring-release (https://repo.spring.io/release): Authentication failed for https://repo.spring.io/release/com/gradle/gradle-enterprise-maven-extension/maven-metadata.xml 401 Unauthorized
+[INFO] Downloading from spring-snapshot: https://repo.spring.io/snapshot/org/springframework/ws/spring-xml/4.0.9-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/org/springframework/ws/spring-xml/4.0.9-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from spring-snapshot: https://repo.spring.io/snapshot/org/springframework/ws/spring-xml/4.0.9-SNAPSHOT/maven-metadata.xml (1.2 kB at 2.2 kB/s)
+[INFO] Downloading from spring-snapshot: https://repo.spring.io/snapshot/org/springframework/ws/spring-xml/4.0.9-SNAPSHOT/spring-xml-4.0.9-20231215.075457-7.jar
+[INFO] Downloaded from spring-snapshot: https://repo.spring.io/snapshot/org/springframework/ws/spring-xml/4.0.9-SNAPSHOT/spring-xml-4.0.9-20231215.075457-7.jar (74 kB at 128 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ spring-ws-core ---
+[INFO] digraph "org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" { 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "org.springframework.ws:spring-xml:jar:4.0.9-SNAPSHOT:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "org.springframework:spring-aop:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "org.springframework:spring-beans:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "org.springframework:spring-oxm:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "org.springframework:spring-web:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "org.springframework:spring-webmvc:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "jakarta.servlet:jakarta.servlet-api:jar:6.0.0:provided" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "jakarta.xml.soap:jakarta.xml.soap-api:jar:3.0.0:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "org.springframework:spring-test:jar:6.0.14:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "commons-io:commons-io:jar:2.11.0:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.0:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "org.glassfish.jaxb:jaxb-runtime:jar:4.0.1:runtime" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "org.jdom:jdom2:jar:2.0.6.1:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "dom4j:dom4j:jar:1.6.1:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "xom:xom:jar:1.3.7:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "org.apache.ws.xmlschema:xmlschema-core:jar:2.2.2:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "wsdl4j:wsdl4j:jar:1.6.3:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "org.apache.httpcomponents:httpclient:jar:4.5.3:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "commons-httpclient:commons-httpclient:jar:3.1:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "org.apache.httpcomponents.client5:httpclient5:jar:5.2.1:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "org.eclipse.jetty:jetty-server:jar:11.0.12:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "org.eclipse.jetty:jetty-servlet:jar:11.0.12:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "org.apache.logging.log4j:log4j-core:jar:2.19.0:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.6:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "org.aspectj:aspectjrt:jar:1.9.6:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "org.aspectj:aspectjweaver:jar:1.9.6:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "org.springframework.hateoas:spring-hateoas:jar:2.0.6:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "org.springframework:spring-webflux:jar:6.0.14:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "org.eclipse.angus:angus-mail:jar:1.0.0:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "org.springframework:spring-core:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "com.sun.xml.messaging.saaj:saaj-impl:jar:2.0.1:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "org.jvnet.staxex:stax-ex:jar:2.0.1:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "org.easymock:easymock:jar:4.3:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.0.0:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "org.xmlunit:xmlunit-assertj:jar:2.9.0:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.9.0:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT" -> "com.fasterxml.woodstox:woodstox-core:jar:6.5.1:test" ; 
+[INFO] 	"org.springframework.ws:spring-xml:jar:4.0.9-SNAPSHOT:compile" -> "org.springframework:spring-context:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework:spring-web:jar:6.0.14:compile" -> "io.micrometer:micrometer-observation:jar:1.10.13:compile" ; 
+[INFO] 	"io.micrometer:micrometer-observation:jar:1.10.13:compile" -> "io.micrometer:micrometer-commons:jar:1.10.13:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:6.0.14:compile" -> "org.springframework:spring-expression:jar:6.0.14:compile" ; 
+[INFO] 	"jakarta.xml.soap:jakarta.xml.soap-api:jar:3.0.0:compile" -> "jakarta.activation:jakarta.activation-api:jar:2.1.0:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:4.0.1:runtime" -> "org.glassfish.jaxb:jaxb-core:jar:4.0.1:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.1:runtime" -> "org.glassfish.jaxb:txw2:jar:4.0.1:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.1:runtime" -> "com.sun.istack:istack-commons-runtime:jar:4.1.1:runtime" ; 
+[INFO] 	"dom4j:dom4j:jar:1.6.1:compile" -> "xml-apis:xml-apis:jar:1.0.b2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.3:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.6:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.3:compile" -> "commons-codec:commons-codec:jar:1.9:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.1:compile" -> "org.apache.httpcomponents.core5:httpcore5:jar:5.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.1:compile" -> "org.apache.httpcomponents.core5:httpcore5-h2:jar:5.2:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:11.0.12:test" -> "org.eclipse.jetty.toolchain:jetty-jakarta-servlet-api:jar:5.0.2:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:11.0.12:test" -> "org.eclipse.jetty:jetty-http:jar:11.0.12:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:11.0.12:test" -> "org.eclipse.jetty:jetty-io:jar:11.0.12:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-http:jar:11.0.12:test" -> "org.eclipse.jetty:jetty-util:jar:11.0.12:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:11.0.12:test" -> "org.eclipse.jetty:jetty-security:jar:11.0.12:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-core:jar:2.19.0:test" -> "org.apache.logging.log4j:log4j-api:jar:2.19.0:test" ; 
+[INFO] 	"org.springframework.hateoas:spring-hateoas:jar:2.0.6:test" -> "org.springframework.plugin:spring-plugin-core:jar:3.0.0:test" ; 
+[INFO] 	"org.springframework.hateoas:spring-hateoas:jar:2.0.6:test" -> "com.jayway.jsonpath:json-path:jar:2.7.0:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.7.0:test" -> "net.minidev:json-smart:jar:2.4.7:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.7:test" -> "net.minidev:accessors-smart:jar:2.4.7:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.7:test" -> "org.ow2.asm:asm:jar:9.1:test" ; 
+[INFO] 	"org.springframework:spring-webflux:jar:6.0.14:test" -> "io.projectreactor:reactor-core:jar:3.5.12:test" ; 
+[INFO] 	"io.projectreactor:reactor-core:jar:3.5.12:test" -> "org.reactivestreams:reactive-streams:jar:1.0.4:test" ; 
+[INFO] 	"org.eclipse.angus:angus-mail:jar:1.0.0:test" -> "jakarta.mail:jakarta.mail-api:jar:2.1.0:test" ; 
+[INFO] 	"org.eclipse.angus:angus-mail:jar:1.0.0:test" -> "org.eclipse.angus:angus-activation:jar:1.0.0:runtime" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.0.14:compile" -> "org.springframework:spring-jcl:jar:6.0.14:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.1:test" ; 
+[INFO] 	"org.easymock:easymock:jar:4.3:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "net.bytebuddy:byte-buddy:jar:1.11.19:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.11.19:test" ; 
+[INFO] 	"org.xmlunit:xmlunit-assertj:jar:2.9.0:test" -> "org.xmlunit:xmlunit-core:jar:2.9.0:test" ; 
+[INFO] 	"com.fasterxml.woodstox:woodstox-core:jar:6.5.1:test" -> "org.codehaus.woodstox:stax2-api:jar:4.2.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< org.springframework.ws:spring-ws-security >--------------
+[INFO] Building spring-ws-security 4.0.9-SNAPSHOT                         [5/7]
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Failure to transfer com.gradle:gradle-enterprise-maven-extension/maven-metadata.xml from https://repo.spring.io/release was cached in the local repository, resolution will not be reattempted until the update interval of spring-release has elapsed or updates are forced. Original error: Could not transfer metadata com.gradle:gradle-enterprise-maven-extension/maven-metadata.xml from/to spring-release (https://repo.spring.io/release): Authentication failed for https://repo.spring.io/release/com/gradle/gradle-enterprise-maven-extension/maven-metadata.xml 401 Unauthorized
+[INFO] Downloading from spring-snapshot: https://repo.spring.io/snapshot/org/springframework/ws/spring-ws-core/4.0.9-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/org/springframework/ws/spring-ws-core/4.0.9-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from spring-snapshot: https://repo.spring.io/snapshot/org/springframework/ws/spring-ws-core/4.0.9-SNAPSHOT/maven-metadata.xml (1.2 kB at 4.6 kB/s)
+[INFO] Downloading from spring-snapshot: https://repo.spring.io/snapshot/org/springframework/ws/spring-ws-core/4.0.9-SNAPSHOT/spring-ws-core-4.0.9-20231215.075457-7.jar
+[INFO] Downloaded from spring-snapshot: https://repo.spring.io/snapshot/org/springframework/ws/spring-ws-core/4.0.9-SNAPSHOT/spring-ws-core-4.0.9-20231215.075457-7.jar (472 kB at 431 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ spring-ws-security ---
+[INFO] digraph "org.springframework.ws:spring-ws-security:jar:4.0.9-SNAPSHOT" { 
+[INFO] 	"org.springframework.ws:spring-ws-security:jar:4.0.9-SNAPSHOT" -> "org.springframework.ws:spring-xml:jar:4.0.9-SNAPSHOT:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-security:jar:4.0.9-SNAPSHOT" -> "org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-security:jar:4.0.9-SNAPSHOT" -> "org.springframework:spring-beans:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-security:jar:4.0.9-SNAPSHOT" -> "org.springframework:spring-tx:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-security:jar:4.0.9-SNAPSHOT" -> "org.springframework:spring-test:jar:6.0.14:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-security:jar:4.0.9-SNAPSHOT" -> "org.springframework.security:spring-security-core:jar:6.0.7:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-security:jar:4.0.9-SNAPSHOT" -> "net.sf.ehcache:ehcache:jar:2.10.9.2:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-security:jar:4.0.9-SNAPSHOT" -> "org.apache.wss4j:wss4j-ws-security-dom:jar:2.4.1:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-security:jar:4.0.9-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.6:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-security:jar:4.0.9-SNAPSHOT" -> "org.apache.santuario:xmlsec:jar:3.0.3:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-security:jar:4.0.9-SNAPSHOT" -> "com.sun.xml.messaging.saaj:saaj-impl:jar:2.0.1:provided" ; 
+[INFO] 	"org.springframework.ws:spring-ws-security:jar:4.0.9-SNAPSHOT" -> "org.jvnet.staxex:stax-ex:jar:2.0.1:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-security:jar:4.0.9-SNAPSHOT" -> "org.springframework:spring-core:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-security:jar:4.0.9-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-security:jar:4.0.9-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-security:jar:4.0.9-SNAPSHOT" -> "org.easymock:easymock:jar:4.3:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-security:jar:4.0.9-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.0.0:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-security:jar:4.0.9-SNAPSHOT" -> "org.xmlunit:xmlunit-assertj:jar:2.9.0:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-security:jar:4.0.9-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.9.0:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-security:jar:4.0.9-SNAPSHOT" -> "com.fasterxml.woodstox:woodstox-core:jar:6.5.1:test" ; 
+[INFO] 	"org.springframework.ws:spring-xml:jar:4.0.9-SNAPSHOT:compile" -> "org.springframework:spring-context:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT:compile" -> "org.springframework:spring-aop:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT:compile" -> "org.springframework:spring-oxm:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT:compile" -> "org.springframework:spring-web:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT:compile" -> "org.springframework:spring-webmvc:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT:compile" -> "jakarta.xml.soap:jakarta.xml.soap-api:jar:3.0.0:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.0:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT:compile" -> "org.glassfish.jaxb:jaxb-runtime:jar:4.0.1:runtime" ; 
+[INFO] 	"org.springframework:spring-web:jar:6.0.14:compile" -> "io.micrometer:micrometer-observation:jar:1.10.13:compile" ; 
+[INFO] 	"io.micrometer:micrometer-observation:jar:1.10.13:compile" -> "io.micrometer:micrometer-commons:jar:1.10.13:compile" ; 
+[INFO] 	"jakarta.xml.soap:jakarta.xml.soap-api:jar:3.0.0:compile" -> "jakarta.activation:jakarta.activation-api:jar:2.1.0:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:4.0.1:runtime" -> "org.glassfish.jaxb:jaxb-core:jar:4.0.1:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.1:runtime" -> "org.eclipse.angus:angus-activation:jar:1.0.0:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.1:runtime" -> "org.glassfish.jaxb:txw2:jar:4.0.1:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.1:runtime" -> "com.sun.istack:istack-commons-runtime:jar:4.1.1:runtime" ; 
+[INFO] 	"org.springframework.security:spring-security-core:jar:6.0.7:compile" -> "org.springframework.security:spring-security-crypto:jar:6.0.7:compile" ; 
+[INFO] 	"org.springframework.security:spring-security-core:jar:6.0.7:compile" -> "org.springframework:spring-expression:jar:6.0.14:compile" ; 
+[INFO] 	"org.apache.wss4j:wss4j-ws-security-dom:jar:2.4.1:compile" -> "org.apache.wss4j:wss4j-ws-security-common:jar:2.4.1:compile" ; 
+[INFO] 	"org.apache.wss4j:wss4j-ws-security-dom:jar:2.4.1:compile" -> "org.ehcache:ehcache:jar:3.9.6:runtime" ; 
+[INFO] 	"org.apache.wss4j:wss4j-ws-security-dom:jar:2.4.1:compile" -> "jakarta.xml.ws:jakarta.xml.ws-api:jar:2.3.3:compile" ; 
+[INFO] 	"org.apache.wss4j:wss4j-ws-security-common:jar:2.4.1:compile" -> "org.opensaml:opensaml-saml-impl:jar:3.4.6:compile" ; 
+[INFO] 	"org.apache.wss4j:wss4j-ws-security-common:jar:2.4.1:compile" -> "joda-time:joda-time:jar:2.10.10:compile" ; 
+[INFO] 	"org.apache.wss4j:wss4j-ws-security-common:jar:2.4.1:compile" -> "com.google.guava:guava:jar:30.1-jre:compile" ; 
+[INFO] 	"org.apache.wss4j:wss4j-ws-security-common:jar:2.4.1:compile" -> "org.opensaml:opensaml-xacml-impl:jar:3.4.6:compile" ; 
+[INFO] 	"org.apache.wss4j:wss4j-ws-security-common:jar:2.4.1:compile" -> "org.opensaml:opensaml-xacml-saml-impl:jar:3.4.6:compile" ; 
+[INFO] 	"org.apache.wss4j:wss4j-ws-security-common:jar:2.4.1:compile" -> "org.jasypt:jasypt:jar:1.9.3:compile" ; 
+[INFO] 	"org.opensaml:opensaml-saml-impl:jar:3.4.6:compile" -> "org.opensaml:opensaml-profile-api:jar:3.4.6:compile" ; 
+[INFO] 	"org.opensaml:opensaml-saml-impl:jar:3.4.6:compile" -> "org.opensaml:opensaml-saml-api:jar:3.4.6:compile" ; 
+[INFO] 	"org.opensaml:opensaml-saml-impl:jar:3.4.6:compile" -> "org.opensaml:opensaml-security-impl:jar:3.4.6:compile" ; 
+[INFO] 	"org.opensaml:opensaml-saml-impl:jar:3.4.6:compile" -> "org.opensaml:opensaml-xmlsec-impl:jar:3.4.6:compile" ; 
+[INFO] 	"org.opensaml:opensaml-saml-impl:jar:3.4.6:compile" -> "net.shibboleth.utilities:java-support:jar:7.5.2:compile" ; 
+[INFO] 	"org.opensaml:opensaml-profile-api:jar:3.4.6:compile" -> "org.opensaml:opensaml-core:jar:3.4.6:compile" ; 
+[INFO] 	"org.opensaml:opensaml-core:jar:3.4.6:compile" -> "io.dropwizard.metrics:metrics-core:jar:3.1.5:compile" ; 
+[INFO] 	"org.opensaml:opensaml-saml-api:jar:3.4.6:compile" -> "org.opensaml:opensaml-xmlsec-api:jar:3.4.6:compile" ; 
+[INFO] 	"org.opensaml:opensaml-saml-api:jar:3.4.6:compile" -> "org.opensaml:opensaml-soap-api:jar:3.4.6:compile" ; 
+[INFO] 	"org.opensaml:opensaml-security-impl:jar:3.4.6:compile" -> "org.opensaml:opensaml-security-api:jar:3.4.6:compile" ; 
+[INFO] 	"org.opensaml:opensaml-security-api:jar:3.4.6:compile" -> "org.bouncycastle:bcprov-jdk15on:jar:1.59:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"org.opensaml:opensaml-xacml-impl:jar:3.4.6:compile" -> "org.opensaml:opensaml-xacml-api:jar:3.4.6:compile" ; 
+[INFO] 	"org.opensaml:opensaml-xacml-saml-impl:jar:3.4.6:compile" -> "org.opensaml:opensaml-xacml-saml-api:jar:3.4.6:compile" ; 
+[INFO] 	"jakarta.xml.ws:jakarta.xml.ws-api:jar:2.3.3:compile" -> "jakarta.jws:jakarta.jws-api:jar:2.1.0:runtime" ; 
+[INFO] 	"org.apache.santuario:xmlsec:jar:3.0.3:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.0.14:compile" -> "org.springframework:spring-jcl:jar:6.0.14:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.1:test" ; 
+[INFO] 	"org.easymock:easymock:jar:4.3:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "net.bytebuddy:byte-buddy:jar:1.11.19:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.11.19:test" ; 
+[INFO] 	"org.xmlunit:xmlunit-assertj:jar:2.9.0:test" -> "org.xmlunit:xmlunit-core:jar:2.9.0:test" ; 
+[INFO] 	"com.fasterxml.woodstox:woodstox-core:jar:6.5.1:test" -> "org.codehaus.woodstox:stax2-api:jar:4.2.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< org.springframework.ws:spring-ws-support >--------------
+[INFO] Building spring-ws-support 4.0.9-SNAPSHOT                          [6/7]
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Failure to transfer com.gradle:gradle-enterprise-maven-extension/maven-metadata.xml from https://repo.spring.io/release was cached in the local repository, resolution will not be reattempted until the update interval of spring-release has elapsed or updates are forced. Original error: Could not transfer metadata com.gradle:gradle-enterprise-maven-extension/maven-metadata.xml from/to spring-release (https://repo.spring.io/release): Authentication failed for https://repo.spring.io/release/com/gradle/gradle-enterprise-maven-extension/maven-metadata.xml 401 Unauthorized
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jxmpp/jxmpp-core/maven-metadata.xml
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/org/jxmpp/jxmpp-core/maven-metadata.xml
+[INFO] Downloading from spring-snapshot: https://repo.spring.io/snapshot/org/jxmpp/jxmpp-core/maven-metadata.xml
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jxmpp/jxmpp-core/maven-metadata.xml (1.5 kB at 20 kB/s)
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/org/jxmpp/jxmpp-jid/maven-metadata.xml
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jxmpp/jxmpp-jid/maven-metadata.xml
+[INFO] Downloading from spring-snapshot: https://repo.spring.io/snapshot/org/jxmpp/jxmpp-jid/maven-metadata.xml
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jxmpp/jxmpp-jid/maven-metadata.xml (1.5 kB at 52 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/minidns/minidns-core/maven-metadata.xml
+[INFO] Downloading from spring-snapshot: https://repo.spring.io/snapshot/org/minidns/minidns-core/maven-metadata.xml
+[INFO] Downloading from spring-milestone: https://repo.spring.io/milestone/org/minidns/minidns-core/maven-metadata.xml
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/minidns/minidns-core/maven-metadata.xml (875 B at 30 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ spring-ws-support ---
+[INFO] digraph "org.springframework.ws:spring-ws-support:jar:4.0.9-SNAPSHOT" { 
+[INFO] 	"org.springframework.ws:spring-ws-support:jar:4.0.9-SNAPSHOT" -> "org.springframework.ws:spring-xml:jar:4.0.9-SNAPSHOT:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-support:jar:4.0.9-SNAPSHOT" -> "org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-support:jar:4.0.9-SNAPSHOT" -> "org.springframework:spring-beans:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-support:jar:4.0.9-SNAPSHOT" -> "org.springframework:spring-jms:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-support:jar:4.0.9-SNAPSHOT" -> "org.springframework:spring-test:jar:6.0.14:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-support:jar:4.0.9-SNAPSHOT" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-support:jar:4.0.9-SNAPSHOT" -> "jakarta.jms:jakarta.jms-api:jar:3.1.0:provided" ; 
+[INFO] 	"org.springframework.ws:spring-ws-support:jar:4.0.9-SNAPSHOT" -> "jakarta.mail:jakarta.mail-api:jar:2.1.0:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-support:jar:4.0.9-SNAPSHOT" -> "org.igniterealtime.smack:smack-tcp:jar:4.3.5:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-support:jar:4.0.9-SNAPSHOT" -> "org.igniterealtime.smack:smack-java7:jar:4.3.5:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-support:jar:4.0.9-SNAPSHOT" -> "org.igniterealtime.smack:smack-extensions:jar:4.3.5:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-support:jar:4.0.9-SNAPSHOT" -> "commons-httpclient:commons-httpclient:jar:3.1:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-support:jar:4.0.9-SNAPSHOT" -> "org.apache.activemq:artemis-jakarta-server:jar:2.28.0:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-support:jar:4.0.9-SNAPSHOT" -> "javax.json:javax.json-api:jar:1.1.4:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-support:jar:4.0.9-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.6:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-support:jar:4.0.9-SNAPSHOT" -> "com.icegreen:greenmail:jar:2.0.0-alpha-2:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-support:jar:4.0.9-SNAPSHOT" -> "com.icegreen:greenmail-junit5:jar:2.0.0-alpha-2:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-support:jar:4.0.9-SNAPSHOT" -> "com.icegreen:greenmail-spring:jar:2.0.0-alpha-2:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-support:jar:4.0.9-SNAPSHOT" -> "org.eclipse.angus:angus-mail:jar:1.0.0:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-support:jar:4.0.9-SNAPSHOT" -> "org.springframework:spring-core:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-support:jar:4.0.9-SNAPSHOT" -> "com.sun.xml.messaging.saaj:saaj-impl:jar:2.0.1:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-support:jar:4.0.9-SNAPSHOT" -> "org.jvnet.staxex:stax-ex:jar:2.0.1:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-support:jar:4.0.9-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-support:jar:4.0.9-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-support:jar:4.0.9-SNAPSHOT" -> "org.easymock:easymock:jar:4.3:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-support:jar:4.0.9-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.0.0:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-support:jar:4.0.9-SNAPSHOT" -> "org.xmlunit:xmlunit-assertj:jar:2.9.0:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-support:jar:4.0.9-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.9.0:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-support:jar:4.0.9-SNAPSHOT" -> "com.fasterxml.woodstox:woodstox-core:jar:6.5.1:test" ; 
+[INFO] 	"org.springframework.ws:spring-xml:jar:4.0.9-SNAPSHOT:compile" -> "org.springframework:spring-context:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.0.14:compile" -> "org.springframework:spring-expression:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT:compile" -> "org.springframework:spring-aop:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT:compile" -> "org.springframework:spring-oxm:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT:compile" -> "org.springframework:spring-web:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT:compile" -> "org.springframework:spring-webmvc:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT:compile" -> "jakarta.xml.soap:jakarta.xml.soap-api:jar:3.0.0:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.0:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT:compile" -> "org.glassfish.jaxb:jaxb-runtime:jar:4.0.1:runtime" ; 
+[INFO] 	"org.springframework:spring-web:jar:6.0.14:compile" -> "io.micrometer:micrometer-observation:jar:1.10.13:compile" ; 
+[INFO] 	"io.micrometer:micrometer-observation:jar:1.10.13:compile" -> "io.micrometer:micrometer-commons:jar:1.10.13:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:4.0.1:runtime" -> "org.glassfish.jaxb:jaxb-core:jar:4.0.1:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.1:runtime" -> "org.glassfish.jaxb:txw2:jar:4.0.1:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.1:runtime" -> "com.sun.istack:istack-commons-runtime:jar:4.1.1:runtime" ; 
+[INFO] 	"org.springframework:spring-jms:jar:6.0.14:compile" -> "org.springframework:spring-messaging:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework:spring-jms:jar:6.0.14:compile" -> "org.springframework:spring-tx:jar:6.0.14:compile" ; 
+[INFO] 	"jakarta.mail:jakarta.mail-api:jar:2.1.0:compile" -> "jakarta.activation:jakarta.activation-api:jar:2.1.0:compile" ; 
+[INFO] 	"org.igniterealtime.smack:smack-tcp:jar:4.3.5:compile" -> "org.igniterealtime.smack:smack-core:jar:4.3.5:compile" ; 
+[INFO] 	"org.igniterealtime.smack:smack-core:jar:4.3.5:compile" -> "xpp3:xpp3:jar:1.1.4c:compile" ; 
+[INFO] 	"org.igniterealtime.smack:smack-core:jar:4.3.5:compile" -> "org.jxmpp:jxmpp-core:jar:0.6.4:compile (version selected from constraint [0.6,0.6.999])" ; 
+[INFO] 	"org.igniterealtime.smack:smack-core:jar:4.3.5:compile" -> "org.jxmpp:jxmpp-jid:jar:0.6.4:compile (version selected from constraint [0.6,0.6.999])" ; 
+[INFO] 	"org.igniterealtime.smack:smack-core:jar:4.3.5:compile" -> "org.minidns:minidns-core:jar:0.3.4:compile (version selected from constraint [0.3,0.3.999])" ; 
+[INFO] 	"org.jxmpp:jxmpp-core:jar:0.6.4:compile (version selected from constraint [0.6,0.6.999])" -> "org.jxmpp:jxmpp-util-cache:jar:0.6.4:compile" ; 
+[INFO] 	"org.igniterealtime.smack:smack-java7:jar:4.3.5:compile" -> "org.igniterealtime.smack:smack-resolver-javax:jar:4.3.5:compile" ; 
+[INFO] 	"org.igniterealtime.smack:smack-java7:jar:4.3.5:compile" -> "org.igniterealtime.smack:smack-sasl-javax:jar:4.3.5:compile" ; 
+[INFO] 	"org.igniterealtime.smack:smack-extensions:jar:4.3.5:compile" -> "org.igniterealtime.smack:smack-im:jar:4.3.5:compile" ; 
+[INFO] 	"commons-httpclient:commons-httpclient:jar:3.1:test" -> "commons-codec:commons-codec:jar:1.2:test" ; 
+[INFO] 	"org.apache.activemq:artemis-jakarta-server:jar:2.28.0:test" -> "org.apache.activemq:artemis-core-client:jar:2.28.0:test" ; 
+[INFO] 	"org.apache.activemq:artemis-jakarta-server:jar:2.28.0:test" -> "org.apache.activemq:artemis-jakarta-client:jar:2.28.0:test" ; 
+[INFO] 	"org.apache.activemq:artemis-jakarta-server:jar:2.28.0:test" -> "org.apache.activemq:artemis-server:jar:2.28.0:test" ; 
+[INFO] 	"org.apache.activemq:artemis-jakarta-server:jar:2.28.0:test" -> "org.apache.activemq:artemis-journal:jar:2.28.0:test" ; 
+[INFO] 	"org.apache.activemq:artemis-jakarta-server:jar:2.28.0:test" -> "org.apache.activemq:artemis-commons:jar:2.28.0:test" ; 
+[INFO] 	"org.apache.activemq:artemis-jakarta-server:jar:2.28.0:test" -> "org.apache.activemq:artemis-jakarta-service-extensions:jar:2.28.0:test" ; 
+[INFO] 	"org.apache.activemq:artemis-jakarta-server:jar:2.28.0:test" -> "jakarta.transaction:jakarta.transaction-api:jar:2.0.1:test" ; 
+[INFO] 	"org.apache.activemq:artemis-core-client:jar:2.28.0:test" -> "org.jgroups:jgroups:jar:5.2.0.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-core-client:jar:2.28.0:test" -> "io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.86.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-core-client:jar:2.28.0:test" -> "io.netty:netty-transport-native-kqueue:jar:osx-x86_64:4.1.86.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-core-client:jar:2.28.0:test" -> "io.netty:netty-codec-http:jar:4.1.86.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-core-client:jar:2.28.0:test" -> "io.netty:netty-buffer:jar:4.1.86.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-core-client:jar:2.28.0:test" -> "io.netty:netty-transport:jar:4.1.86.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-core-client:jar:2.28.0:test" -> "io.netty:netty-handler:jar:4.1.86.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-core-client:jar:2.28.0:test" -> "io.netty:netty-handler-proxy:jar:4.1.86.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-core-client:jar:2.28.0:test" -> "io.netty:netty-codec:jar:4.1.86.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-core-client:jar:2.28.0:test" -> "io.netty:netty-codec-socks:jar:4.1.86.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-core-client:jar:2.28.0:test" -> "io.netty:netty-common:jar:4.1.86.Final:test" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.86.Final:test" -> "io.netty:netty-transport-native-unix-common:jar:4.1.86.Final:test" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.86.Final:test" -> "io.netty:netty-transport-classes-epoll:jar:4.1.86.Final:test" ; 
+[INFO] 	"io.netty:netty-transport-native-kqueue:jar:osx-x86_64:4.1.86.Final:test" -> "io.netty:netty-transport-classes-kqueue:jar:4.1.86.Final:test" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.86.Final:test" -> "io.netty:netty-resolver:jar:4.1.86.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-jakarta-client:jar:2.28.0:test" -> "org.apache.activemq:artemis-selector:jar:2.28.0:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.28.0:test" -> "com.google.guava:guava:jar:30.1-jre:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.28.0:test" -> "org.apache.activemq:artemis-jdbc-store:jar:2.28.0:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.28.0:test" -> "org.apache.activemq:artemis-quorum-api:jar:2.28.0:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.28.0:test" -> "org.apache.activemq:activemq-artemis-native:jar:2.0.0:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.28.0:test" -> "org.jctools:jctools-core:jar:2.1.2:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.28.0:test" -> "commons-beanutils:commons-beanutils:jar:1.9.4:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.28.0:test" -> "org.apache.commons:commons-configuration2:jar:2.8.0:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.28.0:test" -> "org.apache.commons:commons-text:jar:1.10.0:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.28.0:test" -> "io.micrometer:micrometer-core:jar:1.9.5:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.1-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"org.apache.activemq:artemis-jdbc-store:jar:2.28.0:test" -> "org.apache.commons:commons-dbcp2:jar:2.7.0:test" ; 
+[INFO] 	"org.apache.commons:commons-dbcp2:jar:2.7.0:test" -> "org.apache.commons:commons-pool2:jar:2.7.0:test" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:test" -> "commons-collections:commons-collections:jar:3.2.2:test" ; 
+[INFO] 	"org.apache.commons:commons-configuration2:jar:2.8.0:test" -> "org.apache.commons:commons-lang3:jar:3.12.0:test" ; 
+[INFO] 	"com.icegreen:greenmail:jar:2.0.0-alpha-2:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.eclipse.angus:angus-mail:jar:1.0.0:compile" -> "org.eclipse.angus:angus-activation:jar:1.0.0:runtime" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.0.14:compile" -> "org.springframework:spring-jcl:jar:6.0.14:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.1:test" ; 
+[INFO] 	"org.easymock:easymock:jar:4.3:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "net.bytebuddy:byte-buddy:jar:1.11.19:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.11.19:test" ; 
+[INFO] 	"org.xmlunit:xmlunit-assertj:jar:2.9.0:test" -> "org.xmlunit:xmlunit-core:jar:2.9.0:test" ; 
+[INFO] 	"com.fasterxml.woodstox:woodstox-core:jar:6.5.1:test" -> "org.codehaus.woodstox:stax2-api:jar:4.2.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.springframework.ws:spring-ws-test >----------------
+[INFO] Building spring-ws-test 4.0.9-SNAPSHOT                             [7/7]
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Failure to transfer com.gradle:gradle-enterprise-maven-extension/maven-metadata.xml from https://repo.spring.io/release was cached in the local repository, resolution will not be reattempted until the update interval of spring-release has elapsed or updates are forced. Original error: Could not transfer metadata com.gradle:gradle-enterprise-maven-extension/maven-metadata.xml from/to spring-release (https://repo.spring.io/release): Authentication failed for https://repo.spring.io/release/com/gradle/gradle-enterprise-maven-extension/maven-metadata.xml 401 Unauthorized
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ spring-ws-test ---
+[INFO] digraph "org.springframework.ws:spring-ws-test:jar:4.0.9-SNAPSHOT" { 
+[INFO] 	"org.springframework.ws:spring-ws-test:jar:4.0.9-SNAPSHOT" -> "org.springframework.ws:spring-xml:jar:4.0.9-SNAPSHOT:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-test:jar:4.0.9-SNAPSHOT" -> "org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-test:jar:4.0.9-SNAPSHOT" -> "org.springframework:spring-context:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-test:jar:4.0.9-SNAPSHOT" -> "xmlunit:xmlunit:jar:1.6:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-test:jar:4.0.9-SNAPSHOT" -> "org.xmlunit:xmlunit-core:jar:2.9.0:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-test:jar:4.0.9-SNAPSHOT" -> "org.springframework:spring-test:jar:6.0.14:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-test:jar:4.0.9-SNAPSHOT" -> "org.springframework:spring-core:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-test:jar:4.0.9-SNAPSHOT" -> "com.sun.xml.messaging.saaj:saaj-impl:jar:2.0.1:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-test:jar:4.0.9-SNAPSHOT" -> "org.jvnet.staxex:stax-ex:jar:2.0.1:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-test:jar:4.0.9-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-test:jar:4.0.9-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-test:jar:4.0.9-SNAPSHOT" -> "org.easymock:easymock:jar:4.3:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-test:jar:4.0.9-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.0.0:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-test:jar:4.0.9-SNAPSHOT" -> "org.xmlunit:xmlunit-assertj:jar:2.9.0:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-test:jar:4.0.9-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.9.0:test" ; 
+[INFO] 	"org.springframework.ws:spring-ws-test:jar:4.0.9-SNAPSHOT" -> "com.fasterxml.woodstox:woodstox-core:jar:6.5.1:test" ; 
+[INFO] 	"org.springframework.ws:spring-xml:jar:4.0.9-SNAPSHOT:compile" -> "org.springframework:spring-beans:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT:compile" -> "org.springframework:spring-aop:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT:compile" -> "org.springframework:spring-oxm:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT:compile" -> "org.springframework:spring-web:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT:compile" -> "org.springframework:spring-webmvc:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT:compile" -> "jakarta.xml.soap:jakarta.xml.soap-api:jar:3.0.0:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.0:compile" ; 
+[INFO] 	"org.springframework.ws:spring-ws-core:jar:4.0.9-SNAPSHOT:compile" -> "org.glassfish.jaxb:jaxb-runtime:jar:4.0.1:runtime" ; 
+[INFO] 	"org.springframework:spring-web:jar:6.0.14:compile" -> "io.micrometer:micrometer-observation:jar:1.10.13:compile" ; 
+[INFO] 	"io.micrometer:micrometer-observation:jar:1.10.13:compile" -> "io.micrometer:micrometer-commons:jar:1.10.13:compile" ; 
+[INFO] 	"jakarta.xml.soap:jakarta.xml.soap-api:jar:3.0.0:compile" -> "jakarta.activation:jakarta.activation-api:jar:2.1.0:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:4.0.1:runtime" -> "org.glassfish.jaxb:jaxb-core:jar:4.0.1:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.1:runtime" -> "org.eclipse.angus:angus-activation:jar:1.0.0:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.1:runtime" -> "org.glassfish.jaxb:txw2:jar:4.0.1:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.1:runtime" -> "com.sun.istack:istack-commons-runtime:jar:4.1.1:runtime" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.0.14:compile" -> "org.springframework:spring-expression:jar:6.0.14:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.0.14:compile" -> "org.springframework:spring-jcl:jar:6.0.14:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.1:test" ; 
+[INFO] 	"org.easymock:easymock:jar:4.3:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "net.bytebuddy:byte-buddy:jar:1.11.19:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.0.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.11.19:test" ; 
+[INFO] 	"com.fasterxml.woodstox:woodstox-core:jar:6.5.1:test" -> "org.codehaus.woodstox:stax2-api:jar:4.2.1:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Spring Web Services 4.0.9-SNAPSHOT:
+[INFO] 
+[INFO] Spring Web Services - BOM .......................... SUCCESS [  2.358 s]
+[INFO] Spring Web Services ................................ SUCCESS [  0.753 s]
+[INFO] spring-xml ......................................... SUCCESS [  0.119 s]
+[INFO] spring-ws-core ..................................... SUCCESS [  1.412 s]
+[INFO] spring-ws-security ................................. SUCCESS [  1.714 s]
+[INFO] spring-ws-support .................................. SUCCESS [  1.585 s]
+[INFO] spring-ws-test ..................................... SUCCESS [  0.024 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.430 s
+[INFO] Finished at: 2023-12-28T09:03:32+01:00
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,126 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Detecting the operating system and CPU architecture
+[INFO] ------------------------------------------------------------------------
+[INFO] os.detected.name: linux
+[INFO] os.detected.arch: x86_64
+[INFO] os.detected.bitness: 64
+[INFO] os.detected.version: 5.10
+[INFO] os.detected.version.major: 5
+[INFO] os.detected.version.minor: 10
+[INFO] os.detected.release: debian
+[INFO] os.detected.release.version: 11
+[INFO] os.detected.release.like.debian: true
+[INFO] os.detected.classifier: linux-x86_64
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Netty/Incubator/Transport/Parent/io_uring                          [pom]
+[INFO] Netty/Incubator/Transport/Classes/io_uring                         [jar]
+[INFO] Netty/Incubator/Transport/Native/io_uring                          [jar]
+[INFO] 
+[INFO] ----< io.netty.incubator:netty-incubator-transport-parent-io_uring >----
+[INFO] Building Netty/Incubator/Transport/Parent/io_uring 0.0.25.Final-SNAPSHOT [1/3]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ netty-incubator-transport-parent-io_uring ---
+[INFO] digraph "io.netty.incubator:netty-incubator-transport-parent-io_uring:pom:0.0.25.Final-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ---< io.netty.incubator:netty-incubator-transport-classes-io_uring >----
+[INFO] Building Netty/Incubator/Transport/Classes/io_uring 0.0.25.Final-SNAPSHOT [2/3]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ netty-incubator-transport-classes-io_uring ---
+[INFO] digraph "io.netty.incubator:netty-incubator-transport-classes-io_uring:jar:0.0.25.Final-SNAPSHOT" { 
+[INFO] 	"io.netty.incubator:netty-incubator-transport-classes-io_uring:jar:0.0.25.Final-SNAPSHOT" -> "io.netty:netty-common:jar:4.1.101.Final:compile" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-transport-classes-io_uring:jar:0.0.25.Final-SNAPSHOT" -> "io.netty:netty-buffer:jar:4.1.101.Final:compile" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-transport-classes-io_uring:jar:0.0.25.Final-SNAPSHOT" -> "io.netty:netty-transport:jar:4.1.101.Final:compile" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-transport-classes-io_uring:jar:0.0.25.Final-SNAPSHOT" -> "io.netty:netty-transport-native-unix-common:jar:4.1.101.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.101.Final:compile" -> "io.netty:netty-resolver:jar:4.1.101.Final:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----< io.netty.incubator:netty-incubator-transport-native-io_uring >----
+[INFO] Building Netty/Incubator/Transport/Native/io_uring 0.0.25.Final-SNAPSHOT [3/3]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/io/netty/incubator/netty-incubator-transport-classes-io_uring/0.0.25.Final-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/io/netty/incubator/netty-incubator-transport-classes-io_uring/0.0.25.Final-SNAPSHOT/maven-metadata.xml (1.3 kB at 729 B/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ netty-incubator-transport-native-io_uring ---
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/io/netty/incubator/netty-incubator-transport-classes-io_uring/0.0.25.Final-SNAPSHOT/netty-incubator-transport-classes-io_uring-0.0.25.Final-20231225.053439-7.jar
+[INFO] Downloaded from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/io/netty/incubator/netty-incubator-transport-classes-io_uring/0.0.25.Final-SNAPSHOT/netty-incubator-transport-classes-io_uring-0.0.25.Final-20231225.053439-7.jar (103 kB at 162 kB/s)
+[INFO] digraph "io.netty.incubator:netty-incubator-transport-native-io_uring:jar:0.0.25.Final-SNAPSHOT" { 
+[INFO] 	"io.netty.incubator:netty-incubator-transport-native-io_uring:jar:0.0.25.Final-SNAPSHOT" -> "io.netty.incubator:netty-incubator-transport-classes-io_uring:jar:0.0.25.Final-SNAPSHOT:compile" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-transport-native-io_uring:jar:0.0.25.Final-SNAPSHOT" -> "io.netty:netty-testsuite:jar:4.1.101.Final:test" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-transport-native-io_uring:jar:0.0.25.Final-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.0:test" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-transport-native-io_uring:jar:0.0.25.Final-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.0:test" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-transport-native-io_uring:jar:0.0.25.Final-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-params:jar:5.9.0:test" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-transport-native-io_uring:jar:0.0.25.Final-SNAPSHOT" -> "io.netty:netty-transport-native-unix-common-tests:jar:4.1.101.Final:test" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-transport-native-io_uring:jar:0.0.25.Final-SNAPSHOT" -> "io.netty:netty-transport-classes-epoll:jar:4.1.101.Final:test" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-transport-native-io_uring:jar:0.0.25.Final-SNAPSHOT" -> "io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:test" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-transport-native-io_uring:jar:0.0.25.Final-SNAPSHOT" -> "org.bouncycastle:bcpkix-jdk15on:jar:1.68:test" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-transport-native-io_uring:jar:0.0.25.Final-SNAPSHOT" -> "io.netty:netty-build-common:jar:30:test" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-transport-native-io_uring:jar:0.0.25.Final-SNAPSHOT" -> "io.netty:netty-transport-native-unix-common:jar:linux-x86_64:4.1.101.Final:compile (optional) " ; 
+[INFO] 	"io.netty.incubator:netty-incubator-transport-native-io_uring:jar:0.0.25.Final-SNAPSHOT" -> "io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.101.Final:test" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-transport-classes-io_uring:jar:0.0.25.Final-SNAPSHOT:compile" -> "io.netty:netty-common:jar:4.1.101.Final:compile" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-transport-classes-io_uring:jar:0.0.25.Final-SNAPSHOT:compile" -> "io.netty:netty-buffer:jar:4.1.101.Final:compile" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-transport-classes-io_uring:jar:0.0.25.Final-SNAPSHOT:compile" -> "io.netty:netty-transport:jar:4.1.101.Final:compile" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-transport-classes-io_uring:jar:0.0.25.Final-SNAPSHOT:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.101.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.101.Final:compile" -> "io.netty:netty-resolver:jar:4.1.101.Final:compile" ; 
+[INFO] 	"io.netty:netty-testsuite:jar:4.1.101.Final:test" -> "io.netty:netty-transport-sctp:jar:4.1.101.Final:test" ; 
+[INFO] 	"io.netty:netty-testsuite:jar:4.1.101.Final:test" -> "io.netty:netty-handler:jar:4.1.101.Final:test" ; 
+[INFO] 	"io.netty:netty-testsuite:jar:4.1.101.Final:test" -> "io.netty:netty-codec-http:jar:4.1.101.Final:test" ; 
+[INFO] 	"io.netty:netty-testsuite:jar:4.1.101.Final:test" -> "io.netty:netty-transport-udt:jar:4.1.101.Final:test" ; 
+[INFO] 	"io.netty:netty-testsuite:jar:4.1.101.Final:test" -> "org.tukaani:xz:jar:1.5:test" ; 
+[INFO] 	"io.netty:netty-testsuite:jar:4.1.101.Final:test" -> "org.hamcrest:hamcrest-library:jar:1.3:test" ; 
+[INFO] 	"io.netty:netty-testsuite:jar:4.1.101.Final:test" -> "org.assertj:assertj-core:jar:3.18.0:test" ; 
+[INFO] 	"io.netty:netty-testsuite:jar:4.1.101.Final:test" -> "org.mockito:mockito-core:jar:2.18.3:test" ; 
+[INFO] 	"io.netty:netty-testsuite:jar:4.1.101.Final:test" -> "ch.qos.logback:logback-classic:jar:1.2.3:test" ; 
+[INFO] 	"io.netty:netty-transport-sctp:jar:4.1.101.Final:test" -> "io.netty:netty-codec:jar:4.1.101.Final:test" ; 
+[INFO] 	"io.netty:netty-transport-udt:jar:4.1.101.Final:test" -> "com.barchart.udt:barchart-udt-bundle:jar:2.3.0:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-library:jar:1.3:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.18.3:test" -> "net.bytebuddy:byte-buddy:jar:1.8.5:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.18.3:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.8.5:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:2.18.3:test" -> "org.objenesis:objenesis:jar:2.6:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "ch.qos.logback:logback-core:jar:1.2.3:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:test" -> "org.slf4j:slf4j-api:jar:1.7.25:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.0:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.0:test" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:test" -> "io.netty:netty-tcnative-classes:jar:2.0.61.Final:test" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:test" -> "io.netty:netty-tcnative-boringssl-static:jar:linux-x86_64:2.0.61.Final:test" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:test" -> "io.netty:netty-tcnative-boringssl-static:jar:linux-aarch_64:2.0.61.Final:test" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:test" -> "io.netty:netty-tcnative-boringssl-static:jar:osx-x86_64:2.0.61.Final:test" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:test" -> "io.netty:netty-tcnative-boringssl-static:jar:osx-aarch_64:2.0.61.Final:test" ; 
+[INFO] 	"io.netty:netty-tcnative-boringssl-static:jar:2.0.61.Final:test" -> "io.netty:netty-tcnative-boringssl-static:jar:windows-x86_64:2.0.61.Final:test" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk15on:jar:1.68:test" -> "org.bouncycastle:bcprov-jdk15on:jar:1.68:test" ; 
+[INFO] 	"io.netty:netty-build-common:jar:30:test" -> "com.puppycrawl.tools:checkstyle:jar:8.29:test" ; 
+[INFO] 	"io.netty:netty-build-common:jar:30:test" -> "junit:junit:jar:4.13.1:test" ; 
+[INFO] 	"com.puppycrawl.tools:checkstyle:jar:8.29:test" -> "info.picocli:picocli:jar:4.1.4:test" ; 
+[INFO] 	"com.puppycrawl.tools:checkstyle:jar:8.29:test" -> "antlr:antlr:jar:2.7.7:test" ; 
+[INFO] 	"com.puppycrawl.tools:checkstyle:jar:8.29:test" -> "org.antlr:antlr4-runtime:jar:4.8-1:test" ; 
+[INFO] 	"com.puppycrawl.tools:checkstyle:jar:8.29:test" -> "commons-beanutils:commons-beanutils:jar:1.9.4:test" ; 
+[INFO] 	"com.puppycrawl.tools:checkstyle:jar:8.29:test" -> "com.google.guava:guava:jar:28.2-jre:test" ; 
+[INFO] 	"com.puppycrawl.tools:checkstyle:jar:8.29:test" -> "net.sf.saxon:Saxon-HE:jar:9.9.1-6:test" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:test" -> "commons-logging:commons-logging:jar:1.2:test" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:test" -> "commons-collections:commons-collections:jar:3.2.2:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.2-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.2-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.2-jre:test" -> "com.google.code.findbugs:jsr305:jar:3.0.2:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.2-jre:test" -> "org.checkerframework:checker-qual:jar:2.10.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.2-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.3.4:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.2-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Netty/Incubator/Transport/Parent/io_uring 0.0.25.Final-SNAPSHOT:
+[INFO] 
+[INFO] Netty/Incubator/Transport/Parent/io_uring .......... SUCCESS [  3.123 s]
+[INFO] Netty/Incubator/Transport/Classes/io_uring ......... SUCCESS [  0.210 s]
+[INFO] Netty/Incubator/Transport/Native/io_uring .......... SUCCESS [  4.704 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  11.595 s
+[INFO] Finished at: 2023-12-28T09:03:21+01:00
+[INFO] ------------------------------------------------------------------------

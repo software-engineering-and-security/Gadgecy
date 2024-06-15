@@ -1,0 +1,48 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] S2 Geometry for Java                                               [pom]
+[INFO] S2 Geometry Library for Java                                       [jar]
+[INFO] S2 Geometry Test Data Generator for Java                           [jar]
+[INFO] S2 Geometry Library Tests                                          [jar]
+[INFO] S2 Geometry Library Benchmarks                                     [jar]
+[INFO] 
+[INFO] ---------------< com.google.geometry:s2-geometry-parent >---------------
+[INFO] Building S2 Geometry for Java HEAD-SNAPSHOT                        [1/5]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ s2-geometry-parent ---
+[INFO] digraph "com.google.geometry:s2-geometry-parent:pom:HEAD-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< com.google.geometry:s2-geometry-library >---------------
+[INFO] Building S2 Geometry Library for Java HEAD-SNAPSHOT                [2/5]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/32.0-jre/guava-32.0-jre.pom
+[WARNING] The POM for com.google.guava:guava:jar:32.0-jre is missing, no dependency information available
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/32.0-jre/guava-32.0-jre.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for S2 Geometry for Java HEAD-SNAPSHOT:
+[INFO] 
+[INFO] S2 Geometry for Java ............................... SUCCESS [  4.214 s]
+[INFO] S2 Geometry Library for Java ....................... FAILURE [  2.403 s]
+[INFO] S2 Geometry Test Data Generator for Java ........... SKIPPED
+[INFO] S2 Geometry Library Tests .......................... SKIPPED
+[INFO] S2 Geometry Library Benchmarks ..................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.181 s
+[INFO] Finished at: 2023-12-28T09:02:48+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project s2-geometry-library: Could not resolve dependencies for project com.google.geometry:s2-geometry-library:jar:HEAD-SNAPSHOT: Could not find artifact com.google.guava:guava:jar:32.0-jre in central (https://repo.maven.apache.org/maven2) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :s2-geometry-library

@@ -1,0 +1,100 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Detecting the operating system and CPU architecture
+[INFO] ------------------------------------------------------------------------
+[INFO] os.detected.name: linux
+[INFO] os.detected.arch: x86_64
+[INFO] os.detected.bitness: 64
+[INFO] os.detected.version: 5.10
+[INFO] os.detected.version.major: 5
+[INFO] os.detected.version.minor: 10
+[INFO] os.detected.release: debian
+[INFO] os.detected.release.version: 11
+[INFO] os.detected.release.like.debian: true
+[INFO] os.detected.classifier: linux-x86_64
+[WARNING] The project com.google.truth:truth-parent:pom:HEAD-SNAPSHOT uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Truth (Parent)                                                     [pom]
+[INFO] Truth Core                                                         [jar]
+[INFO] Truth Extensions (Parent)                                          [pom]
+[INFO] Truth Extension for Java8                                          [jar]
+[INFO] Truth Extension for RE2J                                           [jar]
+[INFO] Truth Extension for Lite Protocol Buffers                          [jar]
+[INFO] Truth Extension for Protocol Buffers                               [jar]
+[INFO] 
+[INFO] -------------------< com.google.truth:truth-parent >--------------------
+[INFO] Building Truth (Parent) HEAD-SNAPSHOT                              [1/7]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ truth-parent ---
+[INFO] digraph "com.google.truth:truth-parent:pom:HEAD-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------------< com.google.truth:truth >-----------------------
+[INFO] Building Truth Core HEAD-SNAPSHOT                                  [2/7]
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The artifact com.google.gwt:gwt-user:jar:2.10.0 has been relocated to org.gwtproject:gwt-user:jar:2.10.0
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ truth ---
+[WARNING] The artifact com.google.gwt:gwt-user:jar:2.10.0 has been relocated to org.gwtproject:gwt-user:jar:2.10.0
+[INFO] digraph "com.google.truth:truth:jar:HEAD-SNAPSHOT" { 
+[INFO] 	"com.google.truth:truth:jar:HEAD-SNAPSHOT" -> "com.google.guava:guava:jar:32.1.3-android:compile" ; 
+[INFO] 	"com.google.truth:truth:jar:HEAD-SNAPSHOT" -> "org.checkerframework:checker-qual:jar:3.40.0:compile" ; 
+[INFO] 	"com.google.truth:truth:jar:HEAD-SNAPSHOT" -> "junit:junit:jar:4.13.2:compile" ; 
+[INFO] 	"com.google.truth:truth:jar:HEAD-SNAPSHOT" -> "org.gwtproject:gwt-user:jar:2.10.0:test" ; 
+[INFO] 	"com.google.truth:truth:jar:HEAD-SNAPSHOT" -> "com.google.auto.value:auto-value-annotations:jar:1.10.4:compile" ; 
+[INFO] 	"com.google.truth:truth:jar:HEAD-SNAPSHOT" -> "com.google.guava:guava-gwt:jar:32.1.3-jre:test" ; 
+[INFO] 	"com.google.truth:truth:jar:HEAD-SNAPSHOT" -> "com.google.guava:guava-testlib:jar:32.1.3-android:test" ; 
+[INFO] 	"com.google.truth:truth:jar:HEAD-SNAPSHOT" -> "com.google.errorprone:error_prone_annotations:jar:2.23.0:compile" ; 
+[INFO] 	"com.google.truth:truth:jar:HEAD-SNAPSHOT" -> "org.ow2.asm:asm:jar:9.6:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-android:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-android:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-android:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.3-android:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:compile" -> "org.hamcrest:hamcrest-core:jar:1.3:compile" ; 
+[INFO] 	"org.gwtproject:gwt-user:jar:2.10.0:test" -> "com.google.jsinterop:jsinterop-annotations:jar:2.0.0:test" ; 
+[INFO] 	"org.gwtproject:gwt-user:jar:2.10.0:test" -> "javax.validation:validation-api:jar:1.0.0.GA:test" ; 
+[INFO] 	"org.gwtproject:gwt-user:jar:2.10.0:test" -> "javax.validation:validation-api:jar:sources:1.0.0.GA:test" ; 
+[INFO] 	"org.gwtproject:gwt-user:jar:2.10.0:test" -> "javax.servlet:javax.servlet-api:jar:3.1.0:test" ; 
+[INFO] 	"org.gwtproject:gwt-user:jar:2.10.0:test" -> "org.w3c.css:sac:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------< com.google.truth.extensions:truth-extensions-parent >---------
+[INFO] Building Truth Extensions (Parent) HEAD-SNAPSHOT                   [3/7]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ truth-extensions-parent ---
+[INFO] digraph "com.google.truth.extensions:truth-extensions-parent:pom:HEAD-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ---------< com.google.truth.extensions:truth-java8-extension >----------
+[INFO] Building Truth Extension for Java8 HEAD-SNAPSHOT                   [4/7]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Truth (Parent) HEAD-SNAPSHOT:
+[INFO] 
+[INFO] Truth (Parent) ..................................... SUCCESS [  2.842 s]
+[INFO] Truth Core ......................................... SUCCESS [  0.575 s]
+[INFO] Truth Extensions (Parent) .......................... SUCCESS [  0.023 s]
+[INFO] Truth Extension for Java8 .......................... FAILURE [  0.016 s]
+[INFO] Truth Extension for RE2J ........................... SKIPPED
+[INFO] Truth Extension for Lite Protocol Buffers .......... SKIPPED
+[INFO] Truth Extension for Protocol Buffers ............... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.595 s
+[INFO] Finished at: 2023-12-28T09:02:47+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project truth-java8-extension: Could not resolve dependencies for project com.google.truth.extensions:truth-java8-extension:jar:HEAD-SNAPSHOT: Could not find artifact com.google.truth:truth:jar:HEAD-SNAPSHOT -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :truth-java8-extension

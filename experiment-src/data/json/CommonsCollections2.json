@@ -1,0 +1,227 @@
+{
+    "jdk-11.0.20+8": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-9.0.4": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-9": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk-11.0.16.1+1": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-10.0.2": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-11": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-13": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-9.0.1": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk8u332-b09": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-11.0.1": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk8u312-b07": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk-11.0.20.1+1": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk8u352-b08": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk8u322-b06": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-15": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk-11.0.14+9": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk-11.0.14.1+1": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk-11.0.18+10": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-15.0.1": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-11.0.2": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-14": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk8u302-b08": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-14.0.1": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-12": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk-11.0.21+9": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-15.0.2": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk8u372-b07": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk8u392-b08": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk8u342-b07": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk-11.0.12+7": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-12.0.1": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk-11.0.16+8": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-13.0.1": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-10.0.1": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-13.0.2": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk8u382-b05": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk8u362-b09": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-10": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk-11.0.17+8": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-14.0.2": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk-11.0.15+10": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "openjdk-jdk-12.0.2": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk-11.0.13+8": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk-11.0.19+7": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "jdk8u345-b01": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    }
+}

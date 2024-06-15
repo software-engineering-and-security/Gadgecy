@@ -1,0 +1,41 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------< org.springframework.retry:spring-retry >---------------
+[INFO] Building Spring Retry 2.0.5-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ spring-retry ---
+[INFO] digraph "org.springframework.retry:spring-retry:jar:2.0.5-SNAPSHOT" { 
+[INFO] 	"org.springframework.retry:spring-retry:jar:2.0.5-SNAPSHOT" -> "org.springframework:spring-context:jar:6.0.13:compile" ; 
+[INFO] 	"org.springframework.retry:spring-retry:jar:2.0.5-SNAPSHOT" -> "org.springframework:spring-core:jar:6.0.13:compile" ; 
+[INFO] 	"org.springframework.retry:spring-retry:jar:2.0.5-SNAPSHOT" -> "org.springframework:spring-test:jar:6.0.13:test" ; 
+[INFO] 	"org.springframework.retry:spring-retry:jar:2.0.5-SNAPSHOT" -> "org.springframework:spring-tx:jar:6.0.13:test" ; 
+[INFO] 	"org.springframework.retry:spring-retry:jar:2.0.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" ; 
+[INFO] 	"org.springframework.retry:spring-retry:jar:2.0.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.3:test" ; 
+[INFO] 	"org.springframework.retry:spring-retry:jar:2.0.5-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-params:jar:5.9.3:test" ; 
+[INFO] 	"org.springframework.retry:spring-retry:jar:2.0.5-SNAPSHOT" -> "org.junit.platform:junit-platform-launcher:jar:1.9.3:test" ; 
+[INFO] 	"org.springframework.retry:spring-retry:jar:2.0.5-SNAPSHOT" -> "org.apache.logging.log4j:log4j-core:jar:2.20.0:test" ; 
+[INFO] 	"org.springframework.retry:spring-retry:jar:2.0.5-SNAPSHOT" -> "org.apache.logging.log4j:log4j-jcl:jar:2.20.0:test" ; 
+[INFO] 	"org.springframework.retry:spring-retry:jar:2.0.5-SNAPSHOT" -> "org.aspectj:aspectjweaver:jar:1.9.20:test" ; 
+[INFO] 	"org.springframework.retry:spring-retry:jar:2.0.5-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"org.springframework.retry:spring-retry:jar:2.0.5-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.3.1:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.0.13:compile" -> "org.springframework:spring-aop:jar:6.0.13:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.0.13:compile" -> "org.springframework:spring-beans:jar:6.0.13:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.0.13:compile" -> "org.springframework:spring-expression:jar:6.0.13:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.0.13:compile" -> "org.springframework:spring-jcl:jar:6.0.13:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.3:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.3:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.3:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-core:jar:2.20.0:test" -> "org.apache.logging.log4j:log4j-api:jar:2.20.0:test" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-jcl:jar:2.20.0:test" -> "commons-logging:commons-logging:jar:1.2:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.12.21:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.3.1:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.4:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.3.1:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.588 s
+[INFO] Finished at: 2023-12-28T09:03:23+01:00
+[INFO] ------------------------------------------------------------------------

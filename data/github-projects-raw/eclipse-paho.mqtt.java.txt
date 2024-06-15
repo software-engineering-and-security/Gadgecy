@@ -1,0 +1,46 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 6 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 6 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[ERROR] Internal error: org.eclipse.tycho.core.osgitools.OsgiManifestParserException: Exception parsing OSGi MANIFEST /home/brunok/apache-ysoserial-vuln/pom/eclipse-paho.mqtt.java/org.eclipse.paho.client.mqttv3/META-INF/MANIFEST.MF: Manifest file not found -> [Help 1]
+org.apache.maven.InternalErrorException: Internal error: org.eclipse.tycho.core.osgitools.OsgiManifestParserException: Exception parsing OSGi MANIFEST /home/brunok/apache-ysoserial-vuln/pom/eclipse-paho.mqtt.java/org.eclipse.paho.client.mqttv3/META-INF/MANIFEST.MF: Manifest file not found
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:120)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:957)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:289)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:193)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:77)
+    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:568)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)
+Caused by: org.eclipse.tycho.core.osgitools.OsgiManifestParserException: Exception parsing OSGi MANIFEST /home/brunok/apache-ysoserial-vuln/pom/eclipse-paho.mqtt.java/org.eclipse.paho.client.mqttv3/META-INF/MANIFEST.MF: Manifest file not found
+    at org.eclipse.tycho.core.osgitools.DefaultBundleReader.loadManifestFromDirectory (DefaultBundleReader.java:93)
+    at org.eclipse.tycho.core.osgitools.DefaultBundleReader.doLoadManifest (DefaultBundleReader.java:60)
+    at org.eclipse.tycho.core.osgitools.DefaultBundleReader.loadManifest (DefaultBundleReader.java:51)
+    at org.eclipse.tycho.core.osgitools.OsgiBundleProject.readArtifactKey (OsgiBundleProject.java:147)
+    at org.eclipse.tycho.core.osgitools.OsgiBundleProject.setupProject (OsgiBundleProject.java:142)
+    at org.eclipse.tycho.core.resolver.DefaultTychoResolver.setupProject (DefaultTychoResolver.java:75)
+    at org.eclipse.tycho.core.maven.TychoMavenLifecycleParticipant.afterProjectsRead (TychoMavenLifecycleParticipant.java:90)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:264)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:192)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:105)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:957)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:289)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:193)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:77)
+    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:568)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/InternalErrorException

@@ -1,0 +1,205 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Activiti :: Parent                                                 [pom]
+[INFO] Activiti :: OWASP dependency-check configuration                   [pom]
+[INFO] Activiti :: API :: Parent                                          [pom]
+[INFO] Activiti :: API :: Dependencies BOM (Bill Of Materials)            [pom]
+[INFO] Activiti :: API :: Model Common                                    [jar]
+[INFO] Activiti :: API :: Runtime Common                                  [jar]
+[INFO] Activiti :: API :: Process Model API                               [jar]
+[INFO] Activiti :: API :: Process Runtime                                 [jar]
+[INFO] Activiti :: API :: Task Model                                      [jar]
+[INFO] Activiti :: API :: Task Runtime                                    [jar]
+[INFO] Activiti :: Core :: Common :: Parent                               [pom]
+[INFO] Activiti :: Core :: Common :: Dependencies BOM (Bill Of Materials) [pom]
+[INFO] Activiti :: Spring Identity                                        [jar]
+[INFO] Activiti :: Spring Security                                        [jar]
+[INFO] Activiti :: Spring Security Policies                               [jar]
+[INFO] Activiti :: Connector model                                        [jar]
+[INFO] Activiti :: Spring Connector                                       [jar]
+[INFO] Activiti :: Core :: Common :: Application                          [jar]
+[INFO] Activiti :: Spring Resource Finder                                 [jar]
+[INFO] Activiti :: Test                                                   [pom]
+[INFO] Activiti :: Test Assertions                                        [jar]
+[INFO] Activiti :: Test Local Runtime                                     [jar]
+[INFO] Activiti :: Project model                                          [jar]
+[INFO] Activiti :: Spring Project                                         [jar]
+[INFO] Activiti :: Common :: Util                                         [jar]
+[INFO] Activiti :: Expression Language Implementation for Jakarta EE      [jar]
+[INFO] Activiti :: Expression Language Support                            [jar]
+[INFO] Activiti :: Core :: Parent                                         [pom]
+[INFO] Activiti :: Dependencies BOM (Bill Of Materials)                   [pom]
+[INFO] Activiti :: Runtime API Parent                                     [pom]
+[INFO] Activiti :: API :: Common Model Implementation                     [jar]
+[INFO] Activiti :: BPMN Model                                             [jar]
+[INFO] Activiti :: Process Validation                                     [jar]
+[INFO] Activiti :: BPMN Layout                                            [jar]
+[INFO] Activiti :: BPMN Converter                                         [jar]
+[INFO] Activiti :: Engine                                                 [jar]
+[INFO] Activiti :: API :: Common Runtime Implementation                   [jar]
+[INFO] Activiti :: Spring                                                 [jar]
+[INFO] Activiti :: API :: Process Model Implementation                    [jar]
+[INFO] Activiti :: Spring Resource Loader                                 [jar]
+[INFO] Activiti :: Process Extensions                                     [jar]
+[INFO] Activiti :: API :: Process Runtime Implementation                  [jar]
+[INFO] Activiti :: API :: Task Model Implementation                       [jar]
+[INFO] Activiti :: API :: Task Runtime Implementation                     [jar]
+[INFO] Activiti :: Image Generator                                        [jar]
+[INFO] Activiti :: JSON Converter                                         [jar]
+[INFO] Activiti :: Application                                            [jar]
+[INFO] Activiti :: Spring Boot Starter                                    [jar]
+[INFO] Activiti :: Spring :: Conformance Tests Parent                     [pom]
+[INFO] Activiti :: Spring :: Conformance Util                             [jar]
+[INFO] Activiti :: Spring :: Conformance Set 0                            [jar]
+[INFO] Activiti :: Spring :: Conformance Set 1                            [jar]
+[INFO] Activiti :: Spring :: Conformance Set 2                            [jar]
+[INFO] Activiti :: Spring :: Conformance Set 3                            [jar]
+[INFO] Activiti :: Spring :: Conformance Set 4                            [jar]
+[INFO] Activiti :: Spring :: Conformance Set 5                            [jar]
+[INFO] Activiti :: Spring :: Conformance Variables                        [jar]
+[INFO] Activiti :: Spring :: Conformance Variables                        [jar]
+[INFO] Activiti :: BOM (Bill of Materials)                                [pom]
+[INFO] Activiti :: Examples :: Parent                                     [pom]
+[INFO] Activiti :: Examples :: API Basic Process and Tasks Example Bean   [jar]
+[INFO] Activiti :: Examples :: API Basic Process and Tasks Example No Bean [jar]
+[INFO] Activiti :: Examples :: API Basic Connector Example                [jar]
+[INFO] Activiti :: Examples :: API Basic Process Example                  [jar]
+[INFO] Activiti :: Examples :: API Basic Task Example                     [jar]
+[INFO] Activiti :: Examples :: API Spring Integration Examples            [jar]
+[INFO] Activiti :: Examples :: API Web Example                            [jar]
+[INFO] 
+[INFO] --------------------< org.activiti:activiti-parent >--------------------
+[INFO] Building Activiti :: Parent 8.2.0-SNAPSHOT                        [1/67]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ activiti-parent ---
+[INFO] digraph "org.activiti:activiti-parent:pom:8.2.0-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.activiti:activiti-dependency-check >---------------
+[INFO] Building Activiti :: OWASP dependency-check configuration 8.2.0-SNAPSHOT [2/67]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ activiti-dependency-check ---
+[INFO] digraph "org.activiti:activiti-dependency-check:pom:8.2.0-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< org.activiti:activiti-api >----------------------
+[INFO] Building Activiti :: API :: Parent 8.2.0-SNAPSHOT                 [3/67]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ activiti-api ---
+[INFO] digraph "org.activiti:activiti-api:pom:8.2.0-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.activiti:activiti-api-dependencies >---------------
+[INFO] Building Activiti :: API :: Dependencies BOM (Bill Of Materials) 8.2.0-SNAPSHOT [4/67]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ activiti-api-dependencies ---
+[INFO] digraph "org.activiti:activiti-api-dependencies:pom:8.2.0-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.activiti:activiti-api-model-shared >---------------
+[INFO] Building Activiti :: API :: Model Common 8.2.0-SNAPSHOT           [5/67]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ activiti-api-model-shared ---
+[INFO] digraph "org.activiti:activiti-api-model-shared:jar:8.2.0-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< org.activiti:activiti-api-runtime-shared >--------------
+[INFO] Building Activiti :: API :: Runtime Common 8.2.0-SNAPSHOT         [6/67]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from activiti-snapshots: https://artifacts.alfresco.com/nexus/content/repositories/activiti-snapshots/org/activiti/activiti-api-model-shared/8.2.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from activiti-releases: https://artifacts.alfresco.com/nexus/content/repositories/activiti-releases/org/activiti/activiti-api-model-shared/8.2.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from activiti-releases: https://artifacts.alfresco.com/nexus/content/repositories/activiti-releases/org/activiti/activiti-api-model-shared/8.2.0-SNAPSHOT/activiti-api-model-shared-8.2.0-SNAPSHOT.jar
+[INFO] Downloading from activiti-snapshots: https://artifacts.alfresco.com/nexus/content/repositories/activiti-snapshots/org/activiti/activiti-api-model-shared/8.2.0-SNAPSHOT/activiti-api-model-shared-8.2.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Activiti :: Parent 8.2.0-SNAPSHOT:
+[INFO] 
+[INFO] Activiti :: Parent ................................. SUCCESS [  2.174 s]
+[INFO] Activiti :: OWASP dependency-check configuration ... SUCCESS [  0.132 s]
+[INFO] Activiti :: API :: Parent .......................... SUCCESS [  0.051 s]
+[INFO] Activiti :: API :: Dependencies BOM (Bill Of Materials) SUCCESS [  0.042 s]
+[INFO] Activiti :: API :: Model Common .................... SUCCESS [  0.128 s]
+[INFO] Activiti :: API :: Runtime Common .................. FAILURE [  3.758 s]
+[INFO] Activiti :: API :: Process Model API ............... SKIPPED
+[INFO] Activiti :: API :: Process Runtime ................. SKIPPED
+[INFO] Activiti :: API :: Task Model ...................... SKIPPED
+[INFO] Activiti :: API :: Task Runtime .................... SKIPPED
+[INFO] Activiti :: Core :: Common :: Parent ............... SKIPPED
+[INFO] Activiti :: Core :: Common :: Dependencies BOM (Bill Of Materials) SKIPPED
+[INFO] Activiti :: Spring Identity ........................ SKIPPED
+[INFO] Activiti :: Spring Security ........................ SKIPPED
+[INFO] Activiti :: Spring Security Policies ............... SKIPPED
+[INFO] Activiti :: Connector model ........................ SKIPPED
+[INFO] Activiti :: Spring Connector ....................... SKIPPED
+[INFO] Activiti :: Core :: Common :: Application .......... SKIPPED
+[INFO] Activiti :: Spring Resource Finder ................. SKIPPED
+[INFO] Activiti :: Test ................................... SKIPPED
+[INFO] Activiti :: Test Assertions ........................ SKIPPED
+[INFO] Activiti :: Test Local Runtime ..................... SKIPPED
+[INFO] Activiti :: Project model .......................... SKIPPED
+[INFO] Activiti :: Spring Project ......................... SKIPPED
+[INFO] Activiti :: Common :: Util ......................... SKIPPED
+[INFO] Activiti :: Expression Language Implementation for Jakarta EE SKIPPED
+[INFO] Activiti :: Expression Language Support ............ SKIPPED
+[INFO] Activiti :: Core :: Parent ......................... SKIPPED
+[INFO] Activiti :: Dependencies BOM (Bill Of Materials) ... SKIPPED
+[INFO] Activiti :: Runtime API Parent ..................... SKIPPED
+[INFO] Activiti :: API :: Common Model Implementation ..... SKIPPED
+[INFO] Activiti :: BPMN Model ............................. SKIPPED
+[INFO] Activiti :: Process Validation ..................... SKIPPED
+[INFO] Activiti :: BPMN Layout ............................ SKIPPED
+[INFO] Activiti :: BPMN Converter ......................... SKIPPED
+[INFO] Activiti :: Engine ................................. SKIPPED
+[INFO] Activiti :: API :: Common Runtime Implementation ... SKIPPED
+[INFO] Activiti :: Spring ................................. SKIPPED
+[INFO] Activiti :: API :: Process Model Implementation .... SKIPPED
+[INFO] Activiti :: Spring Resource Loader ................. SKIPPED
+[INFO] Activiti :: Process Extensions ..................... SKIPPED
+[INFO] Activiti :: API :: Process Runtime Implementation .. SKIPPED
+[INFO] Activiti :: API :: Task Model Implementation ....... SKIPPED
+[INFO] Activiti :: API :: Task Runtime Implementation ..... SKIPPED
+[INFO] Activiti :: Image Generator ........................ SKIPPED
+[INFO] Activiti :: JSON Converter ......................... SKIPPED
+[INFO] Activiti :: Application ............................ SKIPPED
+[INFO] Activiti :: Spring Boot Starter .................... SKIPPED
+[INFO] Activiti :: Spring :: Conformance Tests Parent ..... SKIPPED
+[INFO] Activiti :: Spring :: Conformance Util ............. SKIPPED
+[INFO] Activiti :: Spring :: Conformance Set 0 ............ SKIPPED
+[INFO] Activiti :: Spring :: Conformance Set 1 ............ SKIPPED
+[INFO] Activiti :: Spring :: Conformance Set 2 ............ SKIPPED
+[INFO] Activiti :: Spring :: Conformance Set 3 ............ SKIPPED
+[INFO] Activiti :: Spring :: Conformance Set 4 ............ SKIPPED
+[INFO] Activiti :: Spring :: Conformance Set 5 ............ SKIPPED
+[INFO] Activiti :: Spring :: Conformance Variables ........ SKIPPED
+[INFO] Activiti :: Spring :: Conformance Variables ........ SKIPPED
+[INFO] Activiti :: BOM (Bill of Materials) ................ SKIPPED
+[INFO] Activiti :: Examples :: Parent ..................... SKIPPED
+[INFO] Activiti :: Examples :: API Basic Process and Tasks Example Bean SKIPPED
+[INFO] Activiti :: Examples :: API Basic Process and Tasks Example No Bean SKIPPED
+[INFO] Activiti :: Examples :: API Basic Connector Example  SKIPPED
+[INFO] Activiti :: Examples :: API Basic Process Example .. SKIPPED
+[INFO] Activiti :: Examples :: API Basic Task Example ..... SKIPPED
+[INFO] Activiti :: Examples :: API Spring Integration Examples SKIPPED
+[INFO] Activiti :: Examples :: API Web Example ............ SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  11.542 s
+[INFO] Finished at: 2023-12-28T09:02:25+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project activiti-api-runtime-shared: Could not resolve dependencies for project org.activiti:activiti-api-runtime-shared:jar:8.2.0-SNAPSHOT: Could not find artifact org.activiti:activiti-api-model-shared:jar:8.2.0-SNAPSHOT in activiti-releases (https://artifacts.alfresco.com/nexus/content/repositories/activiti-releases) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :activiti-api-runtime-shared

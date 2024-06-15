@@ -1,0 +1,187 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] fastFFI Parent                                                     [pom]
+[INFO] FFI                                                                [jar]
+[INFO] Annotation Processor                                               [jar]
+[INFO] LLVM                                                               [jar]
+[INFO] Binding Generator                                                  [jar]
+[INFO] LLVM4JNI Runtime                                                   [jar]
+[INFO] LLVM4JNI                                                           [jar]
+[INFO] Test                                                               [jar]
+[INFO] 
+[INFO] -----------------< com.alibaba.fastffi:fastffi-parent >-----------------
+[INFO] Building fastFFI Parent 0.1.2                                      [1/8]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ fastffi-parent ---
+[INFO] digraph "com.alibaba.fastffi:fastffi-parent:pom:0.1.2" { 
+[INFO] 	"com.alibaba.fastffi:fastffi-parent:pom:0.1.2" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< com.alibaba.fastffi:ffi >-----------------------
+[INFO] Building FFI 0.1.2                                                 [2/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ ffi ---
+[INFO] digraph "com.alibaba.fastffi:ffi:jar:0.1.2" { 
+[INFO] 	"com.alibaba.fastffi:ffi:jar:0.1.2" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< com.alibaba.fastffi:annotation-processor >--------------
+[INFO] Building Annotation Processor 0.1.2                                [3/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ annotation-processor ---
+[INFO] digraph "com.alibaba.fastffi:annotation-processor:jar:0.1.2" { 
+[INFO] 	"com.alibaba.fastffi:annotation-processor:jar:0.1.2" -> "com.alibaba.fastffi:ffi:jar:0.1.2:compile" ; 
+[INFO] 	"com.alibaba.fastffi:annotation-processor:jar:0.1.2" -> "com.squareup:javapoet:jar:1.13.0:compile" ; 
+[INFO] 	"com.alibaba.fastffi:annotation-processor:jar:0.1.2" -> "com.google.testing.compile:compile-testing:jar:0.19:test" ; 
+[INFO] 	"com.alibaba.fastffi:annotation-processor:jar:0.1.2" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.alibaba.fastffi:annotation-processor:jar:0.1.2" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"com.google.testing.compile:compile-testing:jar:0.19:test" -> "com.google.truth:truth:jar:1.1:test" ; 
+[INFO] 	"com.google.testing.compile:compile-testing:jar:0.19:test" -> "com.google.guava:guava:jar:30.0-jre:test" ; 
+[INFO] 	"com.google.testing.compile:compile-testing:jar:0.19:test" -> "com.google.auto.value:auto-value:jar:1.7.4:test" ; 
+[INFO] 	"com.google.testing.compile:compile-testing:jar:0.19:test" -> "com.google.auto:auto-common:jar:0.11:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.1:test" -> "org.checkerframework:checker-qual:jar:3.7.0:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.1:test" -> "com.google.auto.value:auto-value-annotations:jar:1.7.4:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.1:test" -> "com.google.errorprone:error_prone_annotations:jar:2.4.0:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.1:test" -> "org.ow2.asm:asm:jar:9.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:1.3:test" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< com.alibaba.fastffi:llvm >----------------------
+[INFO] Building LLVM 0.1.2                                                [4/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ llvm ---
+[INFO] digraph "com.alibaba.fastffi:llvm:jar:0.1.2" { 
+[INFO] 	"com.alibaba.fastffi:llvm:jar:0.1.2" -> "com.alibaba.fastffi:annotation-processor:jar:0.1.2:compile" ; 
+[INFO] 	"com.alibaba.fastffi:llvm:jar:0.1.2" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"com.alibaba.fastffi:annotation-processor:jar:0.1.2:compile" -> "com.alibaba.fastffi:ffi:jar:0.1.2:compile" ; 
+[INFO] 	"com.alibaba.fastffi:annotation-processor:jar:0.1.2:compile" -> "com.squareup:javapoet:jar:1.13.0:compile" ; 
+[INFO] 	"com.alibaba.fastffi:annotation-processor:jar:0.1.2:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< com.alibaba.fastffi:binding-generator >----------------
+[INFO] Building Binding Generator 0.1.2                                   [5/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ binding-generator ---
+[INFO] digraph "com.alibaba.fastffi:binding-generator:jar:0.1.2" { 
+[INFO] 	"com.alibaba.fastffi:binding-generator:jar:0.1.2" -> "com.alibaba.fastffi:llvm:jar:0.1.2:compile" ; 
+[INFO] 	"com.alibaba.fastffi:binding-generator:jar:0.1.2" -> "com.squareup:javapoet:jar:1.13.0:compile" ; 
+[INFO] 	"com.alibaba.fastffi:binding-generator:jar:0.1.2" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"com.alibaba.fastffi:llvm:jar:0.1.2:compile" -> "com.alibaba.fastffi:annotation-processor:jar:0.1.2:compile" ; 
+[INFO] 	"com.alibaba.fastffi:annotation-processor:jar:0.1.2:compile" -> "com.alibaba.fastffi:ffi:jar:0.1.2:compile" ; 
+[INFO] 	"com.alibaba.fastffi:annotation-processor:jar:0.1.2:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< com.alibaba.fastffi:llvm4jni-runtime >----------------
+[INFO] Building LLVM4JNI Runtime 0.1.2                                    [6/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ llvm4jni-runtime ---
+[INFO] digraph "com.alibaba.fastffi:llvm4jni-runtime:jar:0.1.2" { 
+[INFO] 	"com.alibaba.fastffi:llvm4jni-runtime:jar:0.1.2" -> "com.github.jnr:jnr-ffi:jar:2.2.12:compile" ; 
+[INFO] 	"com.alibaba.fastffi:llvm4jni-runtime:jar:0.1.2" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.12:compile" -> "com.github.jnr:jffi:jar:1.3.9:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.12:compile" -> "com.github.jnr:jffi:jar:native:1.3.9:runtime" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.12:compile" -> "org.ow2.asm:asm:jar:9.0:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.12:compile" -> "org.ow2.asm:asm-commons:jar:9.0:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.12:compile" -> "org.ow2.asm:asm-analysis:jar:9.0:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.12:compile" -> "org.ow2.asm:asm-tree:jar:9.0:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.12:compile" -> "org.ow2.asm:asm-util:jar:9.0:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.12:compile" -> "com.github.jnr:jnr-a64asm:jar:1.0.0:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.12:compile" -> "com.github.jnr:jnr-x86asm:jar:1.0.2:compile" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< com.alibaba.fastffi:llvm4jni >--------------------
+[INFO] Building LLVM4JNI 0.1.2                                            [7/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ llvm4jni ---
+[INFO] digraph "com.alibaba.fastffi:llvm4jni:jar:0.1.2" { 
+[INFO] 	"com.alibaba.fastffi:llvm4jni:jar:0.1.2" -> "com.alibaba.fastffi:annotation-processor:jar:0.1.2:compile" ; 
+[INFO] 	"com.alibaba.fastffi:llvm4jni:jar:0.1.2" -> "com.alibaba.fastffi:llvm:jar:0.1.2:compile" ; 
+[INFO] 	"com.alibaba.fastffi:llvm4jni:jar:0.1.2" -> "com.alibaba.fastffi:llvm4jni-runtime:jar:0.1.2:compile" ; 
+[INFO] 	"com.alibaba.fastffi:llvm4jni:jar:0.1.2" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"com.alibaba.fastffi:annotation-processor:jar:0.1.2:compile" -> "com.alibaba.fastffi:ffi:jar:0.1.2:compile" ; 
+[INFO] 	"com.alibaba.fastffi:annotation-processor:jar:0.1.2:compile" -> "com.squareup:javapoet:jar:1.13.0:compile" ; 
+[INFO] 	"com.alibaba.fastffi:annotation-processor:jar:0.1.2:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.alibaba.fastffi:llvm4jni-runtime:jar:0.1.2:compile" -> "com.github.jnr:jnr-ffi:jar:2.2.12:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.12:compile" -> "com.github.jnr:jffi:jar:1.3.9:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.12:compile" -> "com.github.jnr:jffi:jar:native:1.3.9:runtime" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.12:compile" -> "org.ow2.asm:asm:jar:9.0:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.12:compile" -> "org.ow2.asm:asm-commons:jar:9.0:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.12:compile" -> "org.ow2.asm:asm-analysis:jar:9.0:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.12:compile" -> "org.ow2.asm:asm-tree:jar:9.0:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.12:compile" -> "org.ow2.asm:asm-util:jar:9.0:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.12:compile" -> "com.github.jnr:jnr-a64asm:jar:1.0.0:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.12:compile" -> "com.github.jnr:jnr-x86asm:jar:1.0.2:compile" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< com.alibaba.fastffi:test >----------------------
+[INFO] Building Test 0.1.2                                                [8/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ test ---
+[INFO] digraph "com.alibaba.fastffi:test:jar:0.1.2" { 
+[INFO] 	"com.alibaba.fastffi:test:jar:0.1.2" -> "com.alibaba.fastffi:ffi:jar:0.1.2:compile" ; 
+[INFO] 	"com.alibaba.fastffi:test:jar:0.1.2" -> "com.alibaba.fastffi:annotation-processor:jar:0.1.2:compile" ; 
+[INFO] 	"com.alibaba.fastffi:test:jar:0.1.2" -> "com.alibaba.fastffi:llvm:jar:0.1.2:compile" ; 
+[INFO] 	"com.alibaba.fastffi:test:jar:0.1.2" -> "com.alibaba.fastffi:llvm4jni:jar:0.1.2:compile" ; 
+[INFO] 	"com.alibaba.fastffi:test:jar:0.1.2" -> "com.alibaba.fastffi:llvm4jni-runtime:jar:0.1.2:compile" ; 
+[INFO] 	"com.alibaba.fastffi:test:jar:0.1.2" -> "com.google.testing.compile:compile-testing:jar:0.19:test" ; 
+[INFO] 	"com.alibaba.fastffi:test:jar:0.1.2" -> "junit:junit:jar:4.12:test" ; 
+[INFO] 	"com.alibaba.fastffi:annotation-processor:jar:0.1.2:compile" -> "com.squareup:javapoet:jar:1.13.0:compile" ; 
+[INFO] 	"com.alibaba.fastffi:annotation-processor:jar:0.1.2:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.alibaba.fastffi:llvm4jni-runtime:jar:0.1.2:compile" -> "com.github.jnr:jnr-ffi:jar:2.2.12:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.12:compile" -> "com.github.jnr:jffi:jar:1.3.9:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.12:compile" -> "com.github.jnr:jffi:jar:native:1.3.9:runtime" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.12:compile" -> "org.ow2.asm:asm:jar:9.0:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.12:compile" -> "org.ow2.asm:asm-commons:jar:9.0:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.12:compile" -> "org.ow2.asm:asm-analysis:jar:9.0:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.12:compile" -> "org.ow2.asm:asm-tree:jar:9.0:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.12:compile" -> "org.ow2.asm:asm-util:jar:9.0:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.12:compile" -> "com.github.jnr:jnr-a64asm:jar:1.0.0:compile" ; 
+[INFO] 	"com.github.jnr:jnr-ffi:jar:2.2.12:compile" -> "com.github.jnr:jnr-x86asm:jar:1.0.2:compile" ; 
+[INFO] 	"com.google.testing.compile:compile-testing:jar:0.19:test" -> "com.google.truth:truth:jar:1.1:test" ; 
+[INFO] 	"com.google.testing.compile:compile-testing:jar:0.19:test" -> "com.google.guava:guava:jar:30.0-jre:test" ; 
+[INFO] 	"com.google.testing.compile:compile-testing:jar:0.19:test" -> "com.google.auto.value:auto-value:jar:1.7.4:test" ; 
+[INFO] 	"com.google.testing.compile:compile-testing:jar:0.19:test" -> "com.google.auto:auto-common:jar:0.11:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.1:test" -> "org.checkerframework:checker-qual:jar:3.7.0:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.1:test" -> "com.google.auto.value:auto-value-annotations:jar:1.7.4:test" ; 
+[INFO] 	"com.google.truth:truth:jar:1.1:test" -> "com.google.errorprone:error_prone_annotations:jar:2.4.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:30.0-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:1.3:test" ; 
+[INFO] 	"junit:junit:jar:4.12:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for fastFFI Parent 0.1.2:
+[INFO] 
+[INFO] fastFFI Parent ..................................... SUCCESS [  4.472 s]
+[INFO] FFI ................................................ SUCCESS [  0.381 s]
+[INFO] Annotation Processor ............................... SUCCESS [  0.240 s]
+[INFO] LLVM ............................................... SUCCESS [  0.071 s]
+[INFO] Binding Generator .................................. SUCCESS [  0.134 s]
+[INFO] LLVM4JNI Runtime ................................... SUCCESS [  0.153 s]
+[INFO] LLVM4JNI ........................................... SUCCESS [  0.029 s]
+[INFO] Test ............................................... SUCCESS [  0.078 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.189 s
+[INFO] Finished at: 2023-12-28T09:02:20+01:00
+[INFO] ------------------------------------------------------------------------

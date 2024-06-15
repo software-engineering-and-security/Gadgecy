@@ -1,0 +1,714 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Spring Batch                                                       [pom]
+[INFO] Spring Batch Infrastructure                                        [jar]
+[INFO] Spring Batch Core                                                  [jar]
+[INFO] Spring Batch Test                                                  [jar]
+[INFO] Spring Batch Integration                                           [jar]
+[INFO] Spring Batch Samples                                               [jar]
+[INFO] Spring Batch Docs                                                  [jar]
+[INFO] Spring Batch BOM                                                   [pom]
+[INFO] 
+[INFO] ---------------< org.springframework.batch:spring-batch >---------------
+[INFO] Building Spring Batch 5.1.1-SNAPSHOT                               [1/8]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ spring-batch ---
+[INFO] digraph "org.springframework.batch:spring-batch:pom:5.1.1-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] -------< org.springframework.batch:spring-batch-infrastructure >--------
+[INFO] Building Spring Batch Infrastructure 5.1.1-SNAPSHOT                [2/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ spring-batch-infrastructure ---
+[INFO] digraph "org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" { 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.springframework:spring-core:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.springframework.retry:spring-retry:jar:2.0.4:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.springframework:spring-context-support:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.springframework:spring-jdbc:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.springframework:spring-orm:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.springframework:spring-oxm:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.springframework:spring-jms:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.neo4j:neo4j-ogm-core:jar:4.0.8:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.springframework.kafka:spring-kafka:jar:3.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.springframework.amqp:spring-amqp:jar:3.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.apache.avro:avro:jar:1.11.3:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "com.google.code.gson:gson:jar:2.10.1:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.hibernate.orm:hibernate-core:jar:6.3.1.Final:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "jakarta.mail:jakarta.mail-api:jar:2.1.2:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "jakarta.jms:jakarta.jms-api:jar:3.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.springframework.data:spring-data-commons:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.springframework.data:spring-data-mongodb:jar:4.2.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.springframework.data:spring-data-jpa:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.springframework.data:spring-data-redis:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.mongodb:mongodb-driver-sync:jar:4.11.1:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.springframework.ldap:spring-ldap-core:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.springframework.ldap:spring-ldap-ldif-core:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "jakarta.validation:jakarta.validation-api:jar:3.0.2:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.hamcrest:hamcrest-library:jar:2.2:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.xmlunit:xmlunit-core:jar:2.9.1:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.xmlunit:xmlunit-matchers:jar:2.9.1:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.skyscreamer:jsonassert:jar:1.5.1:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "commons-io:commons-io:jar:2.15.0:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.apache.commons:commons-dbcp2:jar:2.11.0:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:2.0.9:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.hsqldb:hsqldb:jar:2.7.2:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "com.h2database:h2:jar:2.2.224:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.xerial:sqlite-jdbc:jar:3.44.0.0:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.apache.derby:derby:jar:10.16.1.1:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.apache.derby:derbytools:jar:10.16.1.1:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "com.thoughtworks.xstream:xstream:jar:1.4.20:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.apache.activemq:artemis-server:jar:2.31.2:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.apache.activemq:artemis-jakarta-client:jar:2.31.2:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "com.sun.xml.bind:jaxb-core:jar:4.0.4:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "com.sun.xml.bind:jaxb-impl:jar:4.0.4:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.springframework.kafka:spring-kafka-test:jar:3.1.0:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.springframework:spring-test:jar:6.1.0:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.mockito:mockito-junit-jupiter:jar:5.7.0:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.hibernate.validator:hibernate-validator:jar:8.0.1.Final:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "jakarta.el:jakarta.el-api:jar:5.0.1:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "com.fasterxml.woodstox:woodstox-core:jar:6.5.1:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.glassfish:jakarta.el:jar:4.0.2:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "org.eclipse.angus:angus-mail:jar:2.0.2:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.1.0:compile" -> "org.springframework:spring-jcl:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework:spring-context-support:jar:6.1.0:compile" -> "org.springframework:spring-beans:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework:spring-context-support:jar:6.1.0:compile" -> "org.springframework:spring-context:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework:spring-jdbc:jar:6.1.0:compile" -> "org.springframework:spring-tx:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework:spring-jms:jar:6.1.0:compile" -> "org.springframework:spring-messaging:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework:spring-jms:jar:6.1.0:compile" -> "io.micrometer:micrometer-observation:jar:1.12.0:compile" ; 
+[INFO] 	"io.micrometer:micrometer-observation:jar:1.12.0:compile" -> "io.micrometer:micrometer-commons:jar:1.12.0:compile" ; 
+[INFO] 	"org.neo4j:neo4j-ogm-core:jar:4.0.8:compile" -> "org.neo4j:neo4j-ogm-api:jar:4.0.8:compile" ; 
+[INFO] 	"org.neo4j:neo4j-ogm-core:jar:4.0.8:compile" -> "io.github.classgraph:classgraph:jar:4.8.162:compile" ; 
+[INFO] 	"org.springframework.kafka:spring-kafka:jar:3.1.0:compile" -> "org.apache.kafka:kafka-clients:jar:3.6.0:compile" ; 
+[INFO] 	"org.apache.kafka:kafka-clients:jar:3.6.0:compile" -> "com.github.luben:zstd-jni:jar:1.5.5-1:runtime" ; 
+[INFO] 	"org.apache.kafka:kafka-clients:jar:3.6.0:compile" -> "org.lz4:lz4-java:jar:1.8.0:runtime" ; 
+[INFO] 	"org.apache.kafka:kafka-clients:jar:3.6.0:compile" -> "org.xerial.snappy:snappy-java:jar:1.1.10.4:runtime" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.11.3:compile" -> "org.apache.commons:commons-compress:jar:1.22:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.3:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.3:compile" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.3.1.Final:compile" -> "jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.3.1.Final:compile" -> "org.jboss.logging:jboss-logging:jar:3.5.0.Final:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.3.1.Final:compile" -> "org.hibernate.common:hibernate-commons-annotations:jar:6.0.6.Final:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.3.1.Final:compile" -> "io.smallrye:jandex:jar:3.1.2:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.3.1.Final:compile" -> "com.fasterxml:classmate:jar:1.5.1:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.3.1.Final:compile" -> "net.bytebuddy:byte-buddy:jar:1.14.7:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.3.1.Final:compile" -> "org.glassfish.jaxb:jaxb-runtime:jar:4.0.2:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.3.1.Final:compile" -> "jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.3.1.Final:compile" -> "org.antlr:antlr4-runtime:jar:4.10.1:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:4.0.2:runtime" -> "org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" -> "org.glassfish.jaxb:txw2:jar:4.0.2:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" -> "com.sun.istack:istack-commons-runtime:jar:4.1.1:runtime" ; 
+[INFO] 	"jakarta.mail:jakarta.mail-api:jar:2.1.2:compile" -> "jakarta.activation:jakarta.activation-api:jar:2.1.2:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.2.0:compile" -> "org.springframework:spring-expression:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.2.0:compile" -> "org.mongodb:mongodb-driver-core:jar:4.11.1:compile" ; 
+[INFO] 	"org.mongodb:mongodb-driver-core:jar:4.11.1:compile" -> "org.mongodb:bson-record-codec:jar:4.11.1:runtime" ; 
+[INFO] 	"org.springframework.data:spring-data-jpa:jar:3.2.0:compile" -> "org.springframework:spring-aop:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-jpa:jar:3.2.0:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:2.0.0:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:3.2.0:compile" -> "org.springframework.data:spring-data-keyvalue:jar:3.2.0:compile" ; 
+[INFO] 	"org.mongodb:mongodb-driver-sync:jar:4.11.1:compile" -> "org.mongodb:bson:jar:4.11.1:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-library:jar:2.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.1:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO] 	"org.apache.commons:commons-dbcp2:jar:2.11.0:test" -> "org.apache.commons:commons-pool2:jar:2.12.0:test" ; 
+[INFO] 	"org.apache.commons:commons-dbcp2:jar:2.11.0:test" -> "commons-logging:commons-logging:jar:1.2:test" ; 
+[INFO] 	"org.slf4j:slf4j-simple:jar:2.0.9:test" -> "org.slf4j:slf4j-api:jar:2.0.9:compile" ; 
+[INFO] 	"org.apache.derby:derby:jar:10.16.1.1:test" -> "org.apache.derby:derbyshared:jar:10.16.1.1:test" ; 
+[INFO] 	"com.thoughtworks.xstream:xstream:jar:1.4.20:test" -> "io.github.x-stream:mxparser:jar:1.2.2:test" ; 
+[INFO] 	"io.github.x-stream:mxparser:jar:1.2.2:test" -> "xmlpull:xmlpull:jar:1.1.3.1:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.6:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "org.apache.activemq:artemis-commons:jar:2.31.2:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "org.apache.activemq:artemis-selector:jar:2.31.2:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "org.apache.activemq:artemis-journal:jar:2.31.2:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "org.apache.activemq:artemis-jdbc-store:jar:2.31.2:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "org.apache.activemq:artemis-core-client:jar:2.31.2:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "org.apache.activemq:artemis-quorum-api:jar:2.31.2:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "org.jctools:jctools-core:jar:2.1.2:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "io.netty:netty-buffer:jar:4.1.100.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "io.netty:netty-transport:jar:4.1.100.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "io.netty:netty-codec-http:jar:4.1.100.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "io.netty:netty-common:jar:4.1.100.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "io.netty:netty-handler:jar:4.1.100.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.100.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "io.netty:netty-transport-classes-epoll:jar:4.1.100.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "io.netty:netty-transport-native-kqueue:jar:osx-x86_64:4.1.100.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "io.netty:netty-transport-classes-kqueue:jar:4.1.100.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "io.netty:netty-codec:jar:4.1.100.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "commons-beanutils:commons-beanutils:jar:1.9.4:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "org.apache.commons:commons-lang3:jar:3.12.0:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "org.apache.commons:commons-configuration2:jar:2.9.0:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "commons-collections:commons-collections:jar:3.2.2:test" ; 
+[INFO] 	"org.apache.activemq:artemis-journal:jar:2.31.2:test" -> "org.apache.activemq:activemq-artemis-native:jar:2.0.0:test" ; 
+[INFO] 	"org.apache.activemq:artemis-core-client:jar:2.31.2:test" -> "org.jgroups:jgroups:jar:5.3.0.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-core-client:jar:2.31.2:test" -> "io.netty:netty-handler-proxy:jar:4.1.100.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-core-client:jar:2.31.2:test" -> "io.netty:netty-codec-socks:jar:4.1.100.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-core-client:jar:2.31.2:test" -> "io.netty:netty-resolver:jar:4.1.100.Final:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.100.Final:test" -> "io.netty:netty-transport-native-unix-common:jar:4.1.100.Final:test" ; 
+[INFO] 	"org.apache.commons:commons-configuration2:jar:2.9.0:test" -> "org.apache.commons:commons-text:jar:1.10.0:test" ; 
+[INFO] 	"com.sun.xml.bind:jaxb-core:jar:4.0.4:test" -> "org.eclipse.angus:angus-activation:jar:2.0.1:runtime" ; 
+[INFO] 	"org.springframework.kafka:spring-kafka-test:jar:3.1.0:test" -> "org.apache.zookeeper:zookeeper:jar:3.8.3:test" ; 
+[INFO] 	"org.springframework.kafka:spring-kafka-test:jar:3.1.0:test" -> "org.apache.kafka:kafka-clients:jar:test:3.6.0:test" ; 
+[INFO] 	"org.springframework.kafka:spring-kafka-test:jar:3.1.0:test" -> "org.apache.kafka:kafka-metadata:jar:3.6.0:test" ; 
+[INFO] 	"org.springframework.kafka:spring-kafka-test:jar:3.1.0:test" -> "org.apache.kafka:kafka-server-common:jar:3.6.0:test" ; 
+[INFO] 	"org.springframework.kafka:spring-kafka-test:jar:3.1.0:test" -> "org.apache.kafka:kafka-server-common:jar:test:3.6.0:test" ; 
+[INFO] 	"org.springframework.kafka:spring-kafka-test:jar:3.1.0:test" -> "org.apache.kafka:kafka-streams-test-utils:jar:3.6.0:test" ; 
+[INFO] 	"org.springframework.kafka:spring-kafka-test:jar:3.1.0:test" -> "org.apache.kafka:kafka_2.13:jar:3.6.0:test" ; 
+[INFO] 	"org.springframework.kafka:spring-kafka-test:jar:3.1.0:test" -> "org.apache.kafka:kafka_2.13:jar:test:3.6.0:test" ; 
+[INFO] 	"org.springframework.kafka:spring-kafka-test:jar:3.1.0:test" -> "org.junit.platform:junit-platform-launcher:jar:1.10.0:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:test" -> "org.apache.zookeeper:zookeeper-jute:jar:3.8.3:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:test" -> "org.apache.yetus:audience-annotations:jar:0.12.0:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:test" -> "io.netty:netty-transport-native-epoll:jar:4.1.94.Final:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:test" -> "ch.qos.logback:logback-core:jar:1.2.10:test" ; 
+[INFO] 	"org.apache.zookeeper:zookeeper:jar:3.8.3:test" -> "ch.qos.logback:logback-classic:jar:1.2.10:test" ; 
+[INFO] 	"org.apache.kafka:kafka-metadata:jar:3.6.0:test" -> "org.apache.kafka:kafka-raft:jar:3.6.0:test" ; 
+[INFO] 	"org.apache.kafka:kafka-metadata:jar:3.6.0:test" -> "com.yammer.metrics:metrics-core:jar:2.2.0:test" ; 
+[INFO] 	"org.apache.kafka:kafka-server-common:jar:3.6.0:test" -> "net.sf.jopt-simple:jopt-simple:jar:5.0.4:test" ; 
+[INFO] 	"org.apache.kafka:kafka-server-common:jar:3.6.0:test" -> "org.pcollections:pcollections:jar:4.0.1:test" ; 
+[INFO] 	"org.apache.kafka:kafka-streams-test-utils:jar:3.6.0:test" -> "org.apache.kafka:kafka-streams:jar:3.6.0:test" ; 
+[INFO] 	"org.apache.kafka:kafka-streams:jar:3.6.0:test" -> "org.rocksdb:rocksdbjni:jar:7.9.2:test" ; 
+[INFO] 	"org.apache.kafka:kafka_2.13:jar:3.6.0:test" -> "org.scala-lang:scala-library:jar:2.13.11:test" ; 
+[INFO] 	"org.apache.kafka:kafka_2.13:jar:3.6.0:test" -> "org.apache.kafka:kafka-group-coordinator:jar:3.6.0:test" ; 
+[INFO] 	"org.apache.kafka:kafka_2.13:jar:3.6.0:test" -> "org.apache.kafka:kafka-storage-api:jar:3.6.0:test" ; 
+[INFO] 	"org.apache.kafka:kafka_2.13:jar:3.6.0:test" -> "org.apache.kafka:kafka-tools-api:jar:3.6.0:test" ; 
+[INFO] 	"org.apache.kafka:kafka_2.13:jar:3.6.0:test" -> "org.apache.kafka:kafka-storage:jar:3.6.0:test" ; 
+[INFO] 	"org.apache.kafka:kafka_2.13:jar:3.6.0:test" -> "net.sourceforge.argparse4j:argparse4j:jar:0.7.0:test" ; 
+[INFO] 	"org.apache.kafka:kafka_2.13:jar:3.6.0:test" -> "commons-validator:commons-validator:jar:1.7:test" ; 
+[INFO] 	"org.apache.kafka:kafka_2.13:jar:3.6.0:test" -> "org.bitbucket.b_c:jose4j:jar:0.9.3:test" ; 
+[INFO] 	"org.apache.kafka:kafka_2.13:jar:3.6.0:test" -> "org.scala-lang.modules:scala-collection-compat_2.13:jar:2.10.0:test" ; 
+[INFO] 	"org.apache.kafka:kafka_2.13:jar:3.6.0:test" -> "org.scala-lang.modules:scala-java8-compat_2.13:jar:1.0.2:test" ; 
+[INFO] 	"org.apache.kafka:kafka_2.13:jar:3.6.0:test" -> "org.scala-lang:scala-reflect:jar:2.13.11:test" ; 
+[INFO] 	"org.apache.kafka:kafka_2.13:jar:3.6.0:test" -> "com.typesafe.scala-logging:scala-logging_2.13:jar:3.9.4:test" ; 
+[INFO] 	"org.apache.kafka:kafka_2.13:jar:3.6.0:test" -> "io.dropwizard.metrics:metrics-core:jar:4.1.12.1:test" ; 
+[INFO] 	"org.apache.kafka:kafka_2.13:jar:3.6.0:test" -> "commons-cli:commons-cli:jar:1.4:test" ; 
+[INFO] 	"commons-validator:commons-validator:jar:1.7:test" -> "commons-digester:commons-digester:jar:2.1:test" ; 
+[INFO] 	"org.mockito:mockito-junit-jupiter:jar:5.7.0:test" -> "org.mockito:mockito-core:jar:5.7.0:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.9:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"com.fasterxml.woodstox:woodstox-core:jar:6.5.1:test" -> "org.codehaus.woodstox:stax2-api:jar:4.2.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< org.springframework.batch:spring-batch-core >-------------
+[INFO] Building Spring Batch Core 5.1.1-SNAPSHOT                          [3/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from spring-snapshots: https://repo.spring.io/snapshot/org/springframework/batch/spring-batch-infrastructure/5.1.1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from spring-snapshots: https://repo.spring.io/snapshot/org/springframework/batch/spring-batch-infrastructure/5.1.1-SNAPSHOT/maven-metadata.xml (1.2 kB at 919 B/s)
+[INFO] Downloading from spring-snapshots: https://repo.spring.io/snapshot/org/springframework/batch/spring-batch-infrastructure/5.1.1-SNAPSHOT/spring-batch-infrastructure-5.1.1-20231213.125752-5.jar
+[INFO] Downloaded from spring-snapshots: https://repo.spring.io/snapshot/org/springframework/batch/spring-batch-infrastructure/5.1.1-SNAPSHOT/spring-batch-infrastructure-5.1.1-20231213.125752-5.jar (537 kB at 429 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ spring-batch-core ---
+[INFO] digraph "org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" { 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "org.springframework:spring-aop:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "org.springframework:spring-beans:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "org.springframework:spring-context:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "org.springframework:spring-tx:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "org.springframework:spring-jdbc:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "io.micrometer:micrometer-core:jar:1.12.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "io.micrometer:micrometer-observation:jar:1.12.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.15.3:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "org.aspectj:aspectjrt:jar:1.9.20.1:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "org.aspectj:aspectjweaver:jar:1.9.20.1:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "org.testcontainers:junit-jupiter:jar:1.19.3:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "org.hsqldb:hsqldb:jar:2.7.2:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "com.mysql:mysql-connector-j:jar:8.2.0:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "org.testcontainers:mysql:jar:1.19.3:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "org.mariadb.jdbc:mariadb-java-client:jar:3.3.0:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "org.testcontainers:mariadb:jar:1.19.3:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "org.postgresql:postgresql:jar:42.7.0:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "org.testcontainers:postgresql:jar:1.19.3:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "com.ibm.db2:jcc:jar:11.5.8.0:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "org.testcontainers:db2:jar:1.19.3:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "org.testcontainers:oracle-xe:jar:1.19.3:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "com.oracle.database.jdbc:ojdbc10:jar:19.21.0.0:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "org.testcontainers:mssqlserver:jar:1.19.3:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "com.microsoft.sqlserver:mssql-jdbc:jar:11.2.3.jre17:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "net.sourceforge.jtds:jtds:jar:1.3.1:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "org.xerial:sqlite-jdbc:jar:3.44.0.0:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "com.h2database:h2:jar:2.2.224:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "org.apache.derby:derby:jar:10.16.1.1:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "org.apache.derby:derbytools:jar:10.16.1.1:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "com.sap.cloud.db.jdbc:ngdbc:jar:2.18.13:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "commons-io:commons-io:jar:2.15.0:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "org.apache.commons:commons-dbcp2:jar:2.11.0:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "org.hamcrest:hamcrest-library:jar:2.2:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "org.springframework:spring-test:jar:6.1.0:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:2.0.9:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "org.mockito:mockito-junit-jupiter:jar:5.7.0:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "org.springframework.ldap:spring-ldap-core:jar:3.2.0:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "org.springframework.ldap:spring-ldap-ldif-core:jar:3.2.0:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "com.sun.xml.bind:jaxb-core:jar:4.0.4:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "com.sun.xml.bind:jaxb-impl:jar:4.0.4:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "jakarta.inject:jakarta.inject-api:jar:2.0.1:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "io.micrometer:micrometer-test:jar:1.12.0:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "io.micrometer:micrometer-tracing-integration-test:jar:1.2.0:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT:compile" -> "org.springframework:spring-core:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT:compile" -> "org.springframework.retry:spring-retry:jar:2.0.4:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.1.0:compile" -> "org.springframework:spring-jcl:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.0:compile" -> "org.springframework:spring-expression:jar:6.1.0:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.12.0:compile" -> "io.micrometer:micrometer-commons:jar:1.12.0:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.12.0:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:runtime" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.12.0:compile" -> "org.latencyutils:LatencyUtils:jar:2.0.3:runtime" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.3:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.3:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.testcontainers:junit-jupiter:jar:1.19.3:test" -> "org.testcontainers:testcontainers:jar:1.19.3:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "org.apache.commons:commons-compress:jar:1.24.0:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "com.github.docker-java:docker-java-api:jar:3.3.4:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" ; 
+[INFO] 	"org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" -> "org.jetbrains:annotations:jar:17.0.0:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" -> "com.github.docker-java:docker-java-transport:jar:3.3.4:test" ; 
+[INFO] 	"com.mysql:mysql-connector-j:jar:8.2.0:test" -> "com.google.protobuf:protobuf-java:jar:3.21.9:test" ; 
+[INFO] 	"org.testcontainers:mysql:jar:1.19.3:test" -> "org.testcontainers:jdbc:jar:1.19.3:test" ; 
+[INFO] 	"org.testcontainers:jdbc:jar:1.19.3:test" -> "org.testcontainers:database-commons:jar:1.19.3:test" ; 
+[INFO] 	"org.mariadb.jdbc:mariadb-java-client:jar:3.3.0:test" -> "com.github.waffle:waffle-jna:jar:3.3.0:test" ; 
+[INFO] 	"com.github.waffle:waffle-jna:jar:3.3.0:test" -> "net.java.dev.jna:jna:jar:5.13.0:test" ; 
+[INFO] 	"com.github.waffle:waffle-jna:jar:3.3.0:test" -> "net.java.dev.jna:jna-platform:jar:5.13.0:test" ; 
+[INFO] 	"com.github.waffle:waffle-jna:jar:3.3.0:test" -> "org.slf4j:jcl-over-slf4j:jar:2.0.7:test" ; 
+[INFO] 	"com.github.waffle:waffle-jna:jar:3.3.0:test" -> "com.github.ben-manes.caffeine:caffeine:jar:2.9.3:test" ; 
+[INFO] 	"com.github.ben-manes.caffeine:caffeine:jar:2.9.3:test" -> "com.google.errorprone:error_prone_annotations:jar:2.10.0:test" ; 
+[INFO] 	"org.postgresql:postgresql:jar:42.7.0:test" -> "org.checkerframework:checker-qual:jar:3.31.0:test" ; 
+[INFO] 	"org.xerial:sqlite-jdbc:jar:3.44.0.0:test" -> "org.slf4j:slf4j-api:jar:1.7.36:test" ; 
+[INFO] 	"org.apache.derby:derby:jar:10.16.1.1:test" -> "org.apache.derby:derbyshared:jar:10.16.1.1:test" ; 
+[INFO] 	"org.apache.commons:commons-dbcp2:jar:2.11.0:test" -> "org.apache.commons:commons-pool2:jar:2.12.0:test" ; 
+[INFO] 	"org.apache.commons:commons-dbcp2:jar:2.11.0:test" -> "commons-logging:commons-logging:jar:1.2:test" ; 
+[INFO] 	"org.apache.commons:commons-dbcp2:jar:2.11.0:test" -> "jakarta.transaction:jakarta.transaction-api:jar:1.3.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-library:jar:2.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.mockito:mockito-junit-jupiter:jar:5.7.0:test" -> "org.mockito:mockito-core:jar:5.7.0:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "net.bytebuddy:byte-buddy:jar:1.14.9:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.9:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:test" -> "jakarta.activation:jakarta.activation-api:jar:2.1.2:test" ; 
+[INFO] 	"com.sun.xml.bind:jaxb-core:jar:4.0.4:test" -> "org.eclipse.angus:angus-activation:jar:2.0.1:test" ; 
+[INFO] 	"io.micrometer:micrometer-test:jar:1.12.0:test" -> "io.micrometer:micrometer-observation-test:jar:1.12.0:test" ; 
+[INFO] 	"io.micrometer:micrometer-test:jar:1.12.0:test" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"io.micrometer:micrometer-test:jar:1.12.0:test" -> "ru.lanwen.wiremock:wiremock-junit5:jar:1.3.1:test" ; 
+[INFO] 	"io.micrometer:micrometer-test:jar:1.12.0:test" -> "com.github.tomakehurst:wiremock-jre8-standalone:jar:2.33.2:test" ; 
+[INFO] 	"io.micrometer:micrometer-test:jar:1.12.0:test" -> "org.awaitility:awaitility:jar:4.2.0:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.0:test" -> "io.micrometer:micrometer-tracing:jar:1.2.0:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.0:test" -> "io.micrometer:micrometer-tracing-test:jar:1.2.0:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.0:test" -> "io.micrometer:micrometer-tracing-reporter-wavefront:jar:1.2.0:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.0:test" -> "io.micrometer:micrometer-tracing-bridge-brave:jar:1.2.0:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.0:test" -> "io.zipkin.brave:brave:jar:5.16.0:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.0:test" -> "io.zipkin.brave:brave-context-slf4j:jar:5.16.0:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.0:test" -> "io.zipkin.brave:brave-instrumentation-http:jar:5.16.0:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.0:test" -> "io.zipkin.brave:brave-tests:jar:5.16.0:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.0:test" -> "io.zipkin.aws:brave-propagation-aws:jar:0.23.5:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.0:test" -> "io.zipkin.reporter2:zipkin-reporter-brave:jar:2.16.3:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.0:test" -> "io.micrometer:micrometer-tracing-bridge-otel:jar:1.2.0:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.0:test" -> "io.opentelemetry:opentelemetry-exporter-zipkin:jar:1.31.0:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.0:test" -> "io.opentelemetry:opentelemetry-sdk-trace:jar:1.31.0:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.0:test" -> "io.opentelemetry:opentelemetry-extension-trace-propagators:jar:1.31.0:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.0:test" -> "io.opentelemetry.instrumentation:opentelemetry-instrumentation-api-semconv:jar:1.31.0-alpha:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.0:test" -> "io.zipkin.zipkin2:zipkin:jar:2.23.2:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.0:test" -> "io.zipkin.reporter2:zipkin-reporter:jar:2.16.3:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.0:test" -> "io.zipkin.reporter2:zipkin-sender-urlconnection:jar:2.16.3:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.0:test" -> "io.zipkin.reporter2:zipkin-sender-kafka:jar:2.16.3:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.0:test" -> "io.zipkin.reporter2:zipkin-sender-activemq-client:jar:2.16.3:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.0:test" -> "io.zipkin.reporter2:zipkin-sender-amqp-client:jar:2.16.3:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-integration-test:jar:1.2.0:test" -> "com.wavefront:wavefront-internal-reporter-java:jar:1.7.16:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing:jar:1.2.0:test" -> "io.micrometer:context-propagation:jar:1.1.0:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing:jar:1.2.0:test" -> "aopalliance:aopalliance:jar:1.0:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-bridge-otel:jar:1.2.0:test" -> "io.opentelemetry:opentelemetry-api:jar:1.31.0:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-bridge-otel:jar:1.2.0:test" -> "io.opentelemetry.semconv:opentelemetry-semconv:jar:1.21.0-alpha:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-bridge-otel:jar:1.2.0:test" -> "io.opentelemetry:opentelemetry-sdk-common:jar:1.31.0:test" ; 
+[INFO] 	"io.micrometer:micrometer-tracing-bridge-otel:jar:1.2.0:test" -> "io.opentelemetry:opentelemetry-sdk:jar:1.31.0:test" ; 
+[INFO] 	"io.opentelemetry:opentelemetry-api:jar:1.31.0:test" -> "io.opentelemetry:opentelemetry-context:jar:1.31.0:test" ; 
+[INFO] 	"io.opentelemetry:opentelemetry-sdk:jar:1.31.0:test" -> "io.opentelemetry:opentelemetry-sdk-metrics:jar:1.31.0:test" ; 
+[INFO] 	"io.opentelemetry:opentelemetry-sdk:jar:1.31.0:test" -> "io.opentelemetry:opentelemetry-sdk-logs:jar:1.31.0:test" ; 
+[INFO] 	"io.opentelemetry:opentelemetry-sdk-logs:jar:1.31.0:test" -> "io.opentelemetry:opentelemetry-api-events:jar:1.31.0-alpha:test" ; 
+[INFO] 	"io.opentelemetry:opentelemetry-exporter-zipkin:jar:1.31.0:test" -> "io.opentelemetry:opentelemetry-exporter-common:jar:1.31.0:test" ; 
+[INFO] 	"io.opentelemetry:opentelemetry-exporter-zipkin:jar:1.31.0:test" -> "io.opentelemetry:opentelemetry-sdk-extension-autoconfigure-spi:jar:1.31.0:test" ; 
+[INFO] 	"io.opentelemetry:opentelemetry-exporter-zipkin:jar:1.31.0:test" -> "io.zipkin.reporter2:zipkin-sender-okhttp3:jar:2.16.3:test" ; 
+[INFO] 	"io.zipkin.reporter2:zipkin-sender-okhttp3:jar:2.16.3:test" -> "com.squareup.okhttp3:okhttp:jar:3.14.9:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:3.14.9:test" -> "com.squareup.okio:okio:jar:1.17.2:test" ; 
+[INFO] 	"io.opentelemetry.instrumentation:opentelemetry-instrumentation-api-semconv:jar:1.31.0-alpha:test" -> "io.opentelemetry.instrumentation:opentelemetry-instrumentation-api:jar:1.31.0:test" ; 
+[INFO] 	"io.opentelemetry.instrumentation:opentelemetry-instrumentation-api-semconv:jar:1.31.0-alpha:test" -> "io.opentelemetry:opentelemetry-extension-incubator:jar:1.31.0-alpha:test" ; 
+[INFO] 	"com.wavefront:wavefront-internal-reporter-java:jar:1.7.16:test" -> "com.wavefront:wavefront-sdk-java:jar:3.0.4:test" ; 
+[INFO] 	"com.wavefront:wavefront-sdk-java:jar:3.0.4:test" -> "com.tdunning:t-digest:jar:3.2:test" ; 
+[INFO] 	"com.wavefront:wavefront-sdk-java:jar:3.0.4:test" -> "com.google.guava:guava:jar:31.1-jre:test" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< org.springframework.batch:spring-batch-test >-------------
+[INFO] Building Spring Batch Test 5.1.1-SNAPSHOT                          [4/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from spring-snapshots: https://repo.spring.io/snapshot/org/springframework/batch/spring-batch-core/5.1.1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from spring-snapshots: https://repo.spring.io/snapshot/org/springframework/batch/spring-batch-core/5.1.1-SNAPSHOT/maven-metadata.xml (1.2 kB at 4.4 kB/s)
+[INFO] Downloading from spring-snapshots: https://repo.spring.io/snapshot/org/springframework/batch/spring-batch-core/5.1.1-SNAPSHOT/spring-batch-core-5.1.1-20231213.125752-5.jar
+[INFO] Downloaded from spring-snapshots: https://repo.spring.io/snapshot/org/springframework/batch/spring-batch-core/5.1.1-SNAPSHOT/spring-batch-core-5.1.1-20231213.125752-5.jar (678 kB at 577 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ spring-batch-test ---
+[INFO] digraph "org.springframework.batch:spring-batch-test:jar:5.1.1-SNAPSHOT" { 
+[INFO] 	"org.springframework.batch:spring-batch-test:jar:5.1.1-SNAPSHOT" -> "org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-test:jar:5.1.1-SNAPSHOT" -> "org.springframework:spring-jdbc:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-test:jar:5.1.1-SNAPSHOT" -> "org.springframework:spring-test:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-test:jar:5.1.1-SNAPSHOT" -> "org.aspectj:aspectjrt:jar:1.9.20.1:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-test:jar:5.1.1-SNAPSHOT" -> "org.aspectj:aspectjweaver:jar:1.9.20.1:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-test:jar:5.1.1-SNAPSHOT" -> "junit:junit:jar:4.13.2:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-test:jar:5.1.1-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-test:jar:5.1.1-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-test:jar:5.1.1-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-test:jar:5.1.1-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.7.0:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-test:jar:5.1.1-SNAPSHOT" -> "org.apache.commons:commons-dbcp2:jar:2.11.0:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-test:jar:5.1.1-SNAPSHOT" -> "org.hsqldb:hsqldb:jar:2.7.2:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-test:jar:5.1.1-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:2.0.9:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-test:jar:5.1.1-SNAPSHOT" -> "io.micrometer:micrometer-test:jar:1.12.0:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-test:jar:5.1.1-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT:compile" -> "org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT:compile" -> "org.springframework:spring-aop:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT:compile" -> "org.springframework:spring-beans:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT:compile" -> "org.springframework:spring-context:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT:compile" -> "org.springframework:spring-tx:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT:compile" -> "io.micrometer:micrometer-core:jar:1.12.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT:compile" -> "io.micrometer:micrometer-observation:jar:1.12.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT:compile" -> "org.springframework.retry:spring-retry:jar:2.0.4:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.0:compile" -> "org.springframework:spring-expression:jar:6.1.0:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.12.0:compile" -> "io.micrometer:micrometer-commons:jar:1.12.0:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.12.0:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:runtime" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.12.0:compile" -> "org.latencyutils:LatencyUtils:jar:2.0.3:runtime" ; 
+[INFO] 	"org.springframework:spring-jdbc:jar:6.1.0:compile" -> "org.springframework:spring-core:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.1.0:compile" -> "org.springframework:spring-jcl:jar:6.1.0:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:compile" -> "org.hamcrest:hamcrest-core:jar:1.3:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:compile" -> "org.opentest4j:opentest4j:jar:1.3.0:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:compile" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:compile" -> "org.apiguardian:apiguardian-api:jar:1.1.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "net.bytebuddy:byte-buddy:jar:1.14.9:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.9:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.apache.commons:commons-dbcp2:jar:2.11.0:test" -> "org.apache.commons:commons-pool2:jar:2.12.0:test" ; 
+[INFO] 	"org.apache.commons:commons-dbcp2:jar:2.11.0:test" -> "commons-logging:commons-logging:jar:1.2:test" ; 
+[INFO] 	"org.apache.commons:commons-dbcp2:jar:2.11.0:test" -> "jakarta.transaction:jakarta.transaction-api:jar:1.3.3:test" ; 
+[INFO] 	"org.slf4j:slf4j-simple:jar:2.0.9:test" -> "org.slf4j:slf4j-api:jar:2.0.9:test" ; 
+[INFO] 	"io.micrometer:micrometer-test:jar:1.12.0:test" -> "io.micrometer:micrometer-observation-test:jar:1.12.0:test" ; 
+[INFO] 	"io.micrometer:micrometer-test:jar:1.12.0:test" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"io.micrometer:micrometer-test:jar:1.12.0:test" -> "ru.lanwen.wiremock:wiremock-junit5:jar:1.3.1:test" ; 
+[INFO] 	"io.micrometer:micrometer-test:jar:1.12.0:test" -> "com.github.tomakehurst:wiremock-jre8-standalone:jar:2.33.2:test" ; 
+[INFO] 	"io.micrometer:micrometer-test:jar:1.12.0:test" -> "org.awaitility:awaitility:jar:4.2.0:test" ; 
+[INFO] 	"org.awaitility:awaitility:jar:4.2.0:test" -> "org.hamcrest:hamcrest:jar:2.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------< org.springframework.batch:spring-batch-integration >---------
+[INFO] Building Spring Batch Integration 5.1.1-SNAPSHOT                   [5/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from spring-snapshots: https://repo.spring.io/snapshot/org/springframework/batch/spring-batch-test/5.1.1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from spring-snapshots: https://repo.spring.io/snapshot/org/springframework/batch/spring-batch-test/5.1.1-SNAPSHOT/maven-metadata.xml (1.2 kB at 4.6 kB/s)
+[INFO] Downloading from spring-snapshots: https://repo.spring.io/snapshot/org/springframework/batch/spring-batch-test/5.1.1-SNAPSHOT/spring-batch-test-5.1.1-20231213.125752-5.jar
+[INFO] Downloaded from spring-snapshots: https://repo.spring.io/snapshot/org/springframework/batch/spring-batch-test/5.1.1-SNAPSHOT/spring-batch-test-5.1.1-20231213.125752-5.jar (34 kB at 90 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ spring-batch-integration ---
+[INFO] digraph "org.springframework.batch:spring-batch-integration:jar:5.1.1-SNAPSHOT" { 
+[INFO] 	"org.springframework.batch:spring-batch-integration:jar:5.1.1-SNAPSHOT" -> "org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-integration:jar:5.1.1-SNAPSHOT" -> "org.springframework.integration:spring-integration-core:jar:6.2.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-integration:jar:5.1.1-SNAPSHOT" -> "org.springframework:spring-messaging:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-integration:jar:5.1.1-SNAPSHOT" -> "org.springframework:spring-jms:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-integration:jar:5.1.1-SNAPSHOT" -> "org.springframework.integration:spring-integration-jms:jar:6.2.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-integration:jar:5.1.1-SNAPSHOT" -> "org.springframework.integration:spring-integration-jdbc:jar:6.2.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-integration:jar:5.1.1-SNAPSHOT" -> "jakarta.jms:jakarta.jms-api:jar:3.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-integration:jar:5.1.1-SNAPSHOT" -> "org.springframework.batch:spring-batch-test:jar:5.1.1-SNAPSHOT:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-integration:jar:5.1.1-SNAPSHOT" -> "org.springframework:spring-test:jar:6.1.0:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-integration:jar:5.1.1-SNAPSHOT" -> "org.springframework.integration:spring-integration-test:jar:6.2.0:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-integration:jar:5.1.1-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-integration:jar:5.1.1-SNAPSHOT" -> "org.apache.commons:commons-dbcp2:jar:2.11.0:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-integration:jar:5.1.1-SNAPSHOT" -> "org.hsqldb:hsqldb:jar:2.7.2:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-integration:jar:5.1.1-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.7.0:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-integration:jar:5.1.1-SNAPSHOT" -> "org.apache.activemq:artemis-server:jar:2.31.2:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-integration:jar:5.1.1-SNAPSHOT" -> "org.apache.activemq:artemis-jakarta-client:jar:2.31.2:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-integration:jar:5.1.1-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-integration:jar:5.1.1-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:2.0.9:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-integration:jar:5.1.1-SNAPSHOT" -> "org.aspectj:aspectjrt:jar:1.9.20.1:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-integration:jar:5.1.1-SNAPSHOT" -> "org.aspectj:aspectjweaver:jar:1.9.20.1:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-integration:jar:5.1.1-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT:compile" -> "org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT:compile" -> "org.springframework:spring-aop:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT:compile" -> "org.springframework:spring-beans:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT:compile" -> "org.springframework:spring-context:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT:compile" -> "org.springframework:spring-tx:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT:compile" -> "org.springframework:spring-jdbc:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT:compile" -> "io.micrometer:micrometer-core:jar:1.12.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT:compile" -> "io.micrometer:micrometer-observation:jar:1.12.0:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:6.1.0:compile" -> "org.springframework:spring-expression:jar:6.1.0:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.12.0:compile" -> "io.micrometer:micrometer-commons:jar:1.12.0:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.12.0:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:runtime" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.12.0:compile" -> "org.latencyutils:LatencyUtils:jar:2.0.3:runtime" ; 
+[INFO] 	"org.springframework.integration:spring-integration-core:jar:6.2.0:compile" -> "org.springframework.retry:spring-retry:jar:2.0.4:compile" ; 
+[INFO] 	"org.springframework.integration:spring-integration-core:jar:6.2.0:compile" -> "io.projectreactor:reactor-core:jar:3.6.0:compile" ; 
+[INFO] 	"io.projectreactor:reactor-core:jar:3.6.0:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.4:compile" ; 
+[INFO] 	"org.springframework:spring-messaging:jar:6.1.0:compile" -> "org.springframework:spring-core:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.1.0:compile" -> "org.springframework:spring-jcl:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.integration:spring-integration-test:jar:6.2.0:test" -> "org.springframework.integration:spring-integration-test-support:jar:6.2.0:test" ; 
+[INFO] 	"org.springframework.integration:spring-integration-test-support:jar:6.2.0:test" -> "org.hamcrest:hamcrest-library:jar:2.2:test" ; 
+[INFO] 	"org.springframework.integration:spring-integration-test-support:jar:6.2.0:test" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-library:jar:2.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.3:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:test" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.3:test" ; 
+[INFO] 	"org.apache.commons:commons-dbcp2:jar:2.11.0:test" -> "org.apache.commons:commons-pool2:jar:2.12.0:test" ; 
+[INFO] 	"org.apache.commons:commons-dbcp2:jar:2.11.0:test" -> "commons-logging:commons-logging:jar:1.2:test" ; 
+[INFO] 	"org.apache.commons:commons-dbcp2:jar:2.11.0:test" -> "jakarta.transaction:jakarta.transaction-api:jar:1.3.3:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "net.bytebuddy:byte-buddy:jar:1.14.9:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.9:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.6:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "org.apache.activemq:artemis-commons:jar:2.31.2:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "org.apache.activemq:artemis-selector:jar:2.31.2:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "org.apache.activemq:artemis-journal:jar:2.31.2:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "org.apache.activemq:artemis-jdbc-store:jar:2.31.2:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "org.apache.activemq:artemis-core-client:jar:2.31.2:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "org.apache.activemq:artemis-quorum-api:jar:2.31.2:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "org.jctools:jctools-core:jar:2.1.2:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "io.netty:netty-buffer:jar:4.1.100.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "io.netty:netty-transport:jar:4.1.100.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "io.netty:netty-codec-http:jar:4.1.100.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "io.netty:netty-common:jar:4.1.100.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "io.netty:netty-handler:jar:4.1.100.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.100.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "io.netty:netty-transport-classes-epoll:jar:4.1.100.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "io.netty:netty-transport-native-kqueue:jar:osx-x86_64:4.1.100.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "io.netty:netty-transport-classes-kqueue:jar:4.1.100.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "io.netty:netty-codec:jar:4.1.100.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "commons-beanutils:commons-beanutils:jar:1.9.4:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "org.apache.commons:commons-lang3:jar:3.12.0:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "org.apache.commons:commons-configuration2:jar:2.9.0:test" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:test" -> "commons-collections:commons-collections:jar:3.2.2:test" ; 
+[INFO] 	"org.apache.activemq:artemis-journal:jar:2.31.2:test" -> "org.apache.activemq:activemq-artemis-native:jar:2.0.0:test" ; 
+[INFO] 	"org.apache.activemq:artemis-core-client:jar:2.31.2:test" -> "org.jgroups:jgroups:jar:5.3.0.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-core-client:jar:2.31.2:test" -> "io.netty:netty-handler-proxy:jar:4.1.100.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-core-client:jar:2.31.2:test" -> "io.netty:netty-codec-socks:jar:4.1.100.Final:test" ; 
+[INFO] 	"org.apache.activemq:artemis-core-client:jar:2.31.2:test" -> "io.netty:netty-resolver:jar:4.1.100.Final:test" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.100.Final:test" -> "io.netty:netty-transport-native-unix-common:jar:4.1.100.Final:test" ; 
+[INFO] 	"org.apache.commons:commons-configuration2:jar:2.9.0:test" -> "org.apache.commons:commons-text:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.slf4j:slf4j-simple:jar:2.0.9:test" -> "org.slf4j:slf4j-api:jar:2.0.9:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------< org.springframework.batch:spring-batch-samples >-----------
+[INFO] Building Spring Batch Samples 5.1.1-SNAPSHOT                       [6/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from spring-snapshots: https://repo.spring.io/snapshot/org/springframework/batch/spring-batch-integration/5.1.1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from spring-snapshots: https://repo.spring.io/snapshot/org/springframework/batch/spring-batch-integration/5.1.1-SNAPSHOT/maven-metadata.xml (1.2 kB at 3.8 kB/s)
+[INFO] Downloading from spring-snapshots: https://repo.spring.io/snapshot/org/springframework/batch/spring-batch-integration/5.1.1-SNAPSHOT/spring-batch-integration-5.1.1-20231213.125752-5.jar
+[INFO] Downloaded from spring-snapshots: https://repo.spring.io/snapshot/org/springframework/batch/spring-batch-integration/5.1.1-SNAPSHOT/spring-batch-integration-5.1.1-20231213.125752-5.jar (82 kB at 213 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ spring-batch-samples ---
+[INFO] digraph "org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" { 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "org.springframework.batch:spring-batch-integration:jar:5.1.1-SNAPSHOT:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "org.springframework:spring-jdbc:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "org.springframework:spring-orm:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "org.springframework:spring-context-support:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "io.micrometer:micrometer-registry-prometheus:jar:1.12.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "commons-io:commons-io:jar:2.15.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "jakarta.mail:jakarta.mail-api:jar:2.1.2:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "org.aspectj:aspectjrt:jar:1.9.20.1:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "org.aspectj:aspectjweaver:jar:1.9.20.1:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "org.hibernate.orm:hibernate-core:jar:6.3.1.Final:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "org.apache.commons:commons-dbcp2:jar:2.11.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "jakarta.inject:jakarta.inject-api:jar:2.0.1:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "org.apache.activemq:artemis-jakarta-client:jar:2.31.2:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "org.apache.activemq:artemis-server:jar:2.31.2:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "org.springframework.data:spring-data-mongodb:jar:4.2.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "org.springframework.data:spring-data-jpa:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "org.springframework.amqp:spring-amqp:jar:3.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "org.springframework.amqp:spring-rabbit:jar:3.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "org.quartz-scheduler:quartz:jar:2.3.2:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "org.springframework.integration:spring-integration-jms:jar:6.2.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "jakarta.validation:jakarta.validation-api:jar:3.0.2:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "org.hibernate.validator:hibernate-validator:jar:8.0.1.Final:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "org.glassfish:jakarta.el:jar:4.0.2:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "org.mongodb:mongodb-driver-sync:jar:4.11.1:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "io.prometheus:simpleclient_pushgateway:jar:0.16.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:2.0.9:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "org.springframework:spring-oxm:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "com.thoughtworks.xstream:xstream:jar:1.4.20:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "org.springframework.batch:spring-batch-test:jar:5.1.1-SNAPSHOT:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "org.testcontainers:junit-jupiter:jar:1.19.3:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "org.testcontainers:rabbitmq:jar:1.19.3:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "org.hamcrest:hamcrest-library:jar:2.2:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.7.0:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "org.springframework:spring-test:jar:6.1.0:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "jakarta.el:jakarta.el-api:jar:5.0.1:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "org.hsqldb:hsqldb:jar:2.7.2:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "org.codehaus.groovy:groovy:jar:3.0.19:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "org.codehaus.groovy:groovy-ant:jar:3.0.19:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-samples:jar:5.1.1-SNAPSHOT" -> "com.google.code.gson:gson:jar:2.10.1:test" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT:compile" -> "org.springframework.batch:spring-batch-infrastructure:jar:5.1.1-SNAPSHOT:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT:compile" -> "org.springframework:spring-aop:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT:compile" -> "org.springframework:spring-beans:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT:compile" -> "org.springframework:spring-context:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT:compile" -> "org.springframework:spring-tx:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT:compile" -> "io.micrometer:micrometer-core:jar:1.12.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-core:jar:5.1.1-SNAPSHOT:compile" -> "io.micrometer:micrometer-observation:jar:1.12.0:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.12.0:compile" -> "io.micrometer:micrometer-commons:jar:1.12.0:compile" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.12.0:compile" -> "org.hdrhistogram:HdrHistogram:jar:2.1.12:runtime" ; 
+[INFO] 	"io.micrometer:micrometer-core:jar:1.12.0:compile" -> "org.latencyutils:LatencyUtils:jar:2.0.3:runtime" ; 
+[INFO] 	"org.springframework.batch:spring-batch-integration:jar:5.1.1-SNAPSHOT:compile" -> "org.springframework.integration:spring-integration-core:jar:6.2.0:compile" ; 
+[INFO] 	"org.springframework.batch:spring-batch-integration:jar:5.1.1-SNAPSHOT:compile" -> "org.springframework:spring-messaging:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.integration:spring-integration-core:jar:6.2.0:compile" -> "io.projectreactor:reactor-core:jar:3.6.0:compile" ; 
+[INFO] 	"io.projectreactor:reactor-core:jar:3.6.0:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.4:compile" ; 
+[INFO] 	"org.springframework:spring-jdbc:jar:6.1.0:compile" -> "org.springframework:spring-core:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:6.1.0:compile" -> "org.springframework:spring-jcl:jar:6.1.0:compile" ; 
+[INFO] 	"io.micrometer:micrometer-registry-prometheus:jar:1.12.0:compile" -> "io.prometheus:simpleclient_common:jar:0.16.0:compile" ; 
+[INFO] 	"jakarta.mail:jakarta.mail-api:jar:2.1.2:compile" -> "jakarta.activation:jakarta.activation-api:jar:2.1.2:compile" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.3.1.Final:compile" -> "jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.3.1.Final:compile" -> "jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.3.1.Final:compile" -> "org.jboss.logging:jboss-logging:jar:3.5.0.Final:compile" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.3.1.Final:compile" -> "org.hibernate.common:hibernate-commons-annotations:jar:6.0.6.Final:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.3.1.Final:compile" -> "io.smallrye:jandex:jar:3.1.2:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.3.1.Final:compile" -> "com.fasterxml:classmate:jar:1.5.1:compile" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.3.1.Final:compile" -> "net.bytebuddy:byte-buddy:jar:1.14.7:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.3.1.Final:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.0:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.3.1.Final:compile" -> "org.glassfish.jaxb:jaxb-runtime:jar:4.0.2:runtime" ; 
+[INFO] 	"org.hibernate.orm:hibernate-core:jar:6.3.1.Final:compile" -> "org.antlr:antlr4-runtime:jar:4.10.1:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:4.0.2:runtime" -> "org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" -> "org.eclipse.angus:angus-activation:jar:2.0.0:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" -> "org.glassfish.jaxb:txw2:jar:4.0.2:runtime" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-core:jar:4.0.2:runtime" -> "com.sun.istack:istack-commons-runtime:jar:4.1.1:runtime" ; 
+[INFO] 	"org.apache.commons:commons-dbcp2:jar:2.11.0:compile" -> "org.apache.commons:commons-pool2:jar:2.12.0:compile" ; 
+[INFO] 	"org.apache.commons:commons-dbcp2:jar:2.11.0:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.activemq:artemis-jakarta-client:jar:2.31.2:compile" -> "org.apache.activemq:artemis-core-client:jar:2.31.2:compile" ; 
+[INFO] 	"org.apache.activemq:artemis-jakarta-client:jar:2.31.2:compile" -> "org.apache.activemq:artemis-commons:jar:2.31.2:compile" ; 
+[INFO] 	"org.apache.activemq:artemis-jakarta-client:jar:2.31.2:compile" -> "org.apache.activemq:artemis-selector:jar:2.31.2:compile" ; 
+[INFO] 	"org.apache.activemq:artemis-jakarta-client:jar:2.31.2:compile" -> "jakarta.jms:jakarta.jms-api:jar:3.1.0:compile" ; 
+[INFO] 	"org.apache.activemq:artemis-core-client:jar:2.31.2:compile" -> "org.jgroups:jgroups:jar:5.3.0.Final:compile" ; 
+[INFO] 	"org.apache.activemq:artemis-core-client:jar:2.31.2:compile" -> "io.netty:netty-handler-proxy:jar:4.1.100.Final:compile" ; 
+[INFO] 	"org.apache.activemq:artemis-core-client:jar:2.31.2:compile" -> "io.netty:netty-codec-socks:jar:4.1.100.Final:compile" ; 
+[INFO] 	"org.apache.activemq:artemis-core-client:jar:2.31.2:compile" -> "io.netty:netty-resolver:jar:4.1.100.Final:compile" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:compile" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.6:compile" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:compile" -> "org.apache.activemq:artemis-journal:jar:2.31.2:compile" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:compile" -> "org.apache.activemq:artemis-jdbc-store:jar:2.31.2:compile" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:compile" -> "org.apache.activemq:artemis-quorum-api:jar:2.31.2:compile" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:compile" -> "org.jctools:jctools-core:jar:2.1.2:compile" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:compile" -> "io.netty:netty-buffer:jar:4.1.100.Final:compile" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:compile" -> "io.netty:netty-transport:jar:4.1.100.Final:compile" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:compile" -> "io.netty:netty-codec-http:jar:4.1.100.Final:compile" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:compile" -> "io.netty:netty-common:jar:4.1.100.Final:compile" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:compile" -> "io.netty:netty-handler:jar:4.1.100.Final:compile" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:compile" -> "io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.100.Final:compile" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:compile" -> "io.netty:netty-transport-classes-epoll:jar:4.1.100.Final:compile" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:compile" -> "io.netty:netty-transport-native-kqueue:jar:osx-x86_64:4.1.100.Final:compile" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:compile" -> "io.netty:netty-transport-classes-kqueue:jar:4.1.100.Final:compile" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:compile" -> "io.netty:netty-codec:jar:4.1.100.Final:compile" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:compile" -> "commons-beanutils:commons-beanutils:jar:1.9.4:compile" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:compile" -> "org.apache.commons:commons-configuration2:jar:2.9.0:compile" ; 
+[INFO] 	"org.apache.activemq:artemis-server:jar:2.31.2:compile" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"org.apache.activemq:artemis-journal:jar:2.31.2:compile" -> "org.apache.activemq:activemq-artemis-native:jar:2.0.0:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.100.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.100.Final:compile" ; 
+[INFO] 	"org.apache.commons:commons-configuration2:jar:2.9.0:compile" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.2.0:compile" -> "org.springframework:spring-expression:jar:6.1.0:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.2.0:compile" -> "org.springframework.data:spring-data-commons:jar:3.2.0:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.2.0:compile" -> "org.mongodb:mongodb-driver-core:jar:4.11.1:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-mongodb:jar:4.2.0:compile" -> "org.slf4j:slf4j-api:jar:2.0.2:compile" ; 
+[INFO] 	"org.mongodb:mongodb-driver-core:jar:4.11.1:compile" -> "org.mongodb:bson-record-codec:jar:4.11.1:runtime" ; 
+[INFO] 	"org.springframework.data:spring-data-jpa:jar:3.2.0:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:2.0.0:compile" ; 
+[INFO] 	"org.springframework.amqp:spring-amqp:jar:3.1.0:compile" -> "org.springframework.retry:spring-retry:jar:2.0.4:compile" ; 
+[INFO] 	"org.springframework.amqp:spring-rabbit:jar:3.1.0:compile" -> "com.rabbitmq:amqp-client:jar:5.19.0:compile" ; 
+[INFO] 	"org.quartz-scheduler:quartz:jar:2.3.2:compile" -> "com.mchange:c3p0:jar:0.9.5.4:compile" ; 
+[INFO] 	"org.quartz-scheduler:quartz:jar:2.3.2:compile" -> "com.mchange:mchange-commons-java:jar:0.2.15:compile" ; 
+[INFO] 	"org.quartz-scheduler:quartz:jar:2.3.2:compile" -> "com.zaxxer:HikariCP-java7:jar:2.4.13:compile" ; 
+[INFO] 	"org.springframework.integration:spring-integration-jms:jar:6.2.0:compile" -> "org.springframework:spring-jms:jar:6.1.0:compile" ; 
+[INFO] 	"org.mongodb:mongodb-driver-sync:jar:4.11.1:compile" -> "org.mongodb:bson:jar:4.11.1:compile" ; 
+[INFO] 	"io.prometheus:simpleclient_pushgateway:jar:0.16.0:compile" -> "io.prometheus:simpleclient:jar:0.16.0:compile" ; 
+[INFO] 	"io.prometheus:simpleclient:jar:0.16.0:compile" -> "io.prometheus:simpleclient_tracer_otel:jar:0.16.0:compile" ; 
+[INFO] 	"io.prometheus:simpleclient:jar:0.16.0:compile" -> "io.prometheus:simpleclient_tracer_otel_agent:jar:0.16.0:compile" ; 
+[INFO] 	"io.prometheus:simpleclient_tracer_otel:jar:0.16.0:compile" -> "io.prometheus:simpleclient_tracer_common:jar:0.16.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.3:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.3:compile" ; 
+[INFO] 	"com.thoughtworks.xstream:xstream:jar:1.4.20:compile" -> "io.github.x-stream:mxparser:jar:1.2.2:compile" ; 
+[INFO] 	"io.github.x-stream:mxparser:jar:1.2.2:compile" -> "xmlpull:xmlpull:jar:1.1.3.1:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.testcontainers:junit-jupiter:jar:1.19.3:test" -> "org.testcontainers:testcontainers:jar:1.19.3:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "org.apache.commons:commons-compress:jar:1.24.0:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "com.github.docker-java:docker-java-api:jar:3.3.4:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.19.3:test" -> "com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" ; 
+[INFO] 	"org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" -> "org.jetbrains:annotations:jar:17.0.0:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" -> "com.github.docker-java:docker-java-transport:jar:3.3.4:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test" -> "net.java.dev.jna:jna:jar:5.13.0:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-library:jar:2.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.9:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.7.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.codehaus.groovy:groovy-ant:jar:3.0.19:test" -> "org.apache.ant:ant:jar:1.10.12:test" ; 
+[INFO] 	"org.codehaus.groovy:groovy-ant:jar:3.0.19:test" -> "org.apache.ant:ant-junit:jar:1.10.12:test" ; 
+[INFO] 	"org.codehaus.groovy:groovy-ant:jar:3.0.19:test" -> "org.apache.ant:ant-launcher:jar:1.10.12:test" ; 
+[INFO] 	"org.codehaus.groovy:groovy-ant:jar:3.0.19:test" -> "org.apache.ant:ant-antlr:jar:1.10.12:test" ; 
+[INFO] 	"org.codehaus.groovy:groovy-ant:jar:3.0.19:test" -> "org.codehaus.groovy:groovy-groovydoc:jar:3.0.19:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< org.springframework.batch:spring-batch-docs >-------------
+[INFO] Building Spring Batch Docs 5.1.1-SNAPSHOT                          [7/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ spring-batch-docs ---
+[INFO] digraph "org.springframework.batch:spring-batch-docs:jar:5.1.1-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< org.springframework.batch:spring-batch-bom >-------------
+[INFO] Building Spring Batch BOM 5.1.1-SNAPSHOT                           [8/8]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ spring-batch-bom ---
+[INFO] digraph "org.springframework.batch:spring-batch-bom:pom:5.1.1-SNAPSHOT" { 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Spring Batch 5.1.1-SNAPSHOT:
+[INFO] 
+[INFO] Spring Batch ....................................... SUCCESS [  2.655 s]
+[INFO] Spring Batch Infrastructure ........................ SUCCESS [  2.878 s]
+[INFO] Spring Batch Core .................................. SUCCESS [  3.861 s]
+[INFO] Spring Batch Test .................................. SUCCESS [  1.510 s]
+[INFO] Spring Batch Integration ........................... SUCCESS [  0.701 s]
+[INFO] Spring Batch Samples ............................... SUCCESS [  0.801 s]
+[INFO] Spring Batch Docs .................................. SUCCESS [  0.110 s]
+[INFO] Spring Batch BOM ................................... SUCCESS [  0.002 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.157 s
+[INFO] Finished at: 2023-12-28T09:03:31+01:00
+[INFO] ------------------------------------------------------------------------

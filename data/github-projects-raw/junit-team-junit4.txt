@@ -1,0 +1,18 @@
+[INFO] Scanning for projects...
+[WARNING] The project junit:junit:jar:4.13.3-SNAPSHOT uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[INFO] 
+[INFO] ----------------------------< junit:junit >-----------------------------
+[INFO] Building JUnit 4.13.3-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ junit ---
+[INFO] digraph "junit:junit:jar:4.13.3-SNAPSHOT" { 
+[INFO] 	"junit:junit:jar:4.13.3-SNAPSHOT" -> "org.hamcrest:hamcrest-core:jar:1.3:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.3-SNAPSHOT" -> "org.hamcrest:hamcrest-library:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.437 s
+[INFO] Finished at: 2023-12-28T09:03:10+01:00
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,15 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------< io.quarkus.platform:quarkus-platform-config >-------------
+[INFO] Building Quarkus Platform - Configuration pom 999-SNAPSHOT
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ quarkus-platform-config ---
+[INFO] digraph "io.quarkus.platform:quarkus-platform-config:pom:999-SNAPSHOT" { 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.558 s
+[INFO] Finished at: 2023-12-28T09:03:22+01:00
+[INFO] ------------------------------------------------------------------------

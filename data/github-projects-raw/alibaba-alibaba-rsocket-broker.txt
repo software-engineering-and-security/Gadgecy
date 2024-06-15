@@ -1,0 +1,122 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Detecting the operating system and CPU architecture
+[INFO] ------------------------------------------------------------------------
+[INFO] os.detected.name: linux
+[INFO] os.detected.arch: x86_64
+[INFO] os.detected.bitness: 64
+[INFO] os.detected.version: 5.10
+[INFO] os.detected.version.major: 5
+[INFO] os.detected.version.minor: 10
+[INFO] os.detected.release: debian
+[INFO] os.detected.release.version: 11
+[INFO] os.detected.release.like.debian: true
+[INFO] os.detected.classifier: linux-x86_64
+[WARNING] The project com.alibaba.rsocket:alibaba-rsocket-broker-parent:pom:1.1.6-SNAPSHOT uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Alibaba RSocket Broker Parent                                      [pom]
+[INFO] alibaba-rsocket-service-common                                     [jar]
+[INFO] Alibaba RSocket Core                                               [jar]
+[INFO] Alibaba RSocket Spring Boot Starter                                [jar]
+[INFO] Alibaba RSocket Broker Spring Boot Starter                         [jar]
+[INFO] Alibaba RSocket Broker Server                                      [jar]
+[INFO] Alibaba RSocket Broker for Spring Cloud Registry                   [jar]
+[INFO] Alibaba RSocket Broker for Spring Cloud Config                     [jar]
+[INFO] Alibaba RSocket Broker Gateway for HTTP                            [jar]
+[INFO] Alibaba RSocket Broker Gateway for gRPC                            [jar]
+[INFO] Alibaba RSocket Broker Example Parent                              [pom]
+[INFO] user-service-api                                                   [jar]
+[INFO] user-service-spring-boot-starter                                   [jar]
+[INFO] rsocket-requester                                                  [jar]
+[INFO] RSocket Responder                                                  [jar]
+[INFO] rsocket-cloud-function                                             [jar]
+[INFO] 
+[INFO] ---------< com.alibaba.rsocket:alibaba-rsocket-broker-parent >----------
+[INFO] Building Alibaba RSocket Broker Parent 1.1.6-SNAPSHOT             [1/16]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ alibaba-rsocket-broker-parent ---
+[INFO] digraph "com.alibaba.rsocket:alibaba-rsocket-broker-parent:pom:1.1.6-SNAPSHOT" { 
+[INFO] 	"com.alibaba.rsocket:alibaba-rsocket-broker-parent:pom:1.1.6-SNAPSHOT" -> "org.jetbrains:annotations:jar:24.1.0:compile" ; 
+[INFO] 	"com.alibaba.rsocket:alibaba-rsocket-broker-parent:pom:1.1.6-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"com.alibaba.rsocket:alibaba-rsocket-broker-parent:pom:1.1.6-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.14.10:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------< com.alibaba.rsocket:alibaba-rsocket-service-common >---------
+[INFO] Building alibaba-rsocket-service-common 1.1.6-SNAPSHOT            [2/16]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ alibaba-rsocket-service-common ---
+[INFO] digraph "com.alibaba.rsocket:alibaba-rsocket-service-common:jar:1.1.6-SNAPSHOT" { 
+[INFO] 	"com.alibaba.rsocket:alibaba-rsocket-service-common:jar:1.1.6-SNAPSHOT" -> "io.projectreactor:reactor-core:jar:3.4.34:compile" ; 
+[INFO] 	"com.alibaba.rsocket:alibaba-rsocket-service-common:jar:1.1.6-SNAPSHOT" -> "io.netty:netty-buffer:jar:4.1.101.Final:compile" ; 
+[INFO] 	"com.alibaba.rsocket:alibaba-rsocket-service-common:jar:1.1.6-SNAPSHOT" -> "org.springframework:spring-context:jar:5.3.31:compile" ; 
+[INFO] 	"com.alibaba.rsocket:alibaba-rsocket-service-common:jar:1.1.6-SNAPSHOT" -> "org.springframework:spring-messaging:jar:5.3.31:compile" ; 
+[INFO] 	"com.alibaba.rsocket:alibaba-rsocket-service-common:jar:1.1.6-SNAPSHOT" -> "org.jetbrains:annotations:jar:24.1.0:compile" ; 
+[INFO] 	"com.alibaba.rsocket:alibaba-rsocket-service-common:jar:1.1.6-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.1:test" ; 
+[INFO] 	"com.alibaba.rsocket:alibaba-rsocket-service-common:jar:1.1.6-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"io.projectreactor:reactor-core:jar:3.4.34:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.4:compile" ; 
+[INFO] 	"io.netty:netty-buffer:jar:4.1.101.Final:compile" -> "io.netty:netty-common:jar:4.1.101.Final:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.31:compile" -> "org.springframework:spring-aop:jar:5.3.31:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.31:compile" -> "org.springframework:spring-beans:jar:5.3.31:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.31:compile" -> "org.springframework:spring-core:jar:5.3.31:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.31:compile" -> "org.springframework:spring-expression:jar:5.3.31:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.31:compile" -> "org.springframework:spring-jcl:jar:5.3.31:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.14.10:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< com.alibaba.rsocket:alibaba-rsocket-core >--------------
+[INFO] Building Alibaba RSocket Core 1.1.6-SNAPSHOT                      [3/16]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] Alibaba RSocket Broker Parent 1.1.6-SNAPSHOT ....... SUCCESS [  2.889 s]
+[INFO] alibaba-rsocket-service-common 1.1.6-SNAPSHOT ...... SUCCESS [  0.295 s]
+[INFO] Alibaba RSocket Core 1.1.6-SNAPSHOT ................ FAILURE [  0.762 s]
+[INFO] Alibaba RSocket Spring Boot Starter 1.1.6-SNAPSHOT . SKIPPED
+[INFO] Alibaba RSocket Broker Spring Boot Starter 1.1.6-SNAPSHOT SKIPPED
+[INFO] Alibaba RSocket Broker Server 1.1.6-SNAPSHOT ....... SKIPPED
+[INFO] Alibaba RSocket Broker for Spring Cloud Registry 1.1.6-SNAPSHOT SKIPPED
+[INFO] Alibaba RSocket Broker for Spring Cloud Config 1.1.6-SNAPSHOT SKIPPED
+[INFO] Alibaba RSocket Broker Gateway for HTTP 1.1.6-SNAPSHOT SKIPPED
+[INFO] Alibaba RSocket Broker Gateway for gRPC 1.1.6-SNAPSHOT SKIPPED
+[INFO] Alibaba RSocket Broker Example Parent 1.0.0-SNAPSHOT SKIPPED
+[INFO] user-service-api 1.0.0-SNAPSHOT .................... SKIPPED
+[INFO] user-service-spring-boot-starter 1.0.0-SNAPSHOT .... SKIPPED
+[INFO] rsocket-requester 1.0.0-SNAPSHOT ................... SKIPPED
+[INFO] RSocket Responder 1.0.0-SNAPSHOT ................... SKIPPED
+[INFO] rsocket-cloud-function 1.0.0-SNAPSHOT .............. SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.741 s
+[INFO] Finished at: 2023-12-28T09:02:20+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project alibaba-rsocket-core: Could not resolve dependencies for project com.alibaba.rsocket:alibaba-rsocket-core:jar:1.1.6-SNAPSHOT: Could not find artifact com.alibaba.rsocket:alibaba-rsocket-service-common:jar:1.1.6-SNAPSHOT -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :alibaba-rsocket-core

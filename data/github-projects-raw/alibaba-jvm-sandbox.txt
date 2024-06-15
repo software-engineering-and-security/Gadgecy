@@ -1,0 +1,114 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba.jvm.sandbox:sandbox-core:jar:1.4.0
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-surefire-plugin is missing. @ line 54, column 21
+[WARNING] 'dependencies.dependency.systemPath' for com.sun:tools:jar refers to a non-existing file /usr/lib/jvm/java-17-openjdk-amd64/../lib/tools.jar. Please verify that you run Maven using a JDK and not just a JRE. @ line 80, column 25
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] sandbox 1.4.0                                                      [pom]
+[INFO] sandbox-agent 1.4.0                                                [jar]
+[INFO] sandbox-common-api 1.4.0                                           [jar]
+[INFO] sandbox-api 1.4.0                                                  [jar]
+[INFO] sandbox-provider-api 1.4.0                                         [jar]
+[INFO] sandbox-spy 1.4.0                                                  [jar]
+[INFO] sandbox-core 1.4.0                                                 [jar]
+[INFO] sandbox-module-starter 1.4.0                                       [pom]
+[INFO] sandbox-mgr-module 1.4.0                                           [jar]
+[INFO] sandbox-mgr-provider 1.4.0                                         [jar]
+[INFO] sandbox-debug-module 1.4.0                                         [jar]
+[INFO] 
+[INFO] ------------------< com.alibaba.jvm.sandbox:sandbox >-------------------
+[INFO] Building sandbox 1.4.0 1.4.0                                      [1/11]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sandbox ---
+[INFO] digraph "com.alibaba.jvm.sandbox:sandbox:pom:1.4.0" { 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< com.alibaba.jvm.sandbox:sandbox-agent >----------------
+[INFO] Building sandbox-agent 1.4.0 1.4.0                                [2/11]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sandbox-agent ---
+[INFO] digraph "com.alibaba.jvm.sandbox:sandbox-agent:jar:1.4.0" { 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< com.alibaba.jvm.sandbox:sandbox-common-api >-------------
+[INFO] Building sandbox-common-api 1.4.0 1.4.0                           [3/11]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sandbox-common-api ---
+[INFO] digraph "com.alibaba.jvm.sandbox:sandbox-common-api:jar:1.4.0" { 
+[INFO] 	"com.alibaba.jvm.sandbox:sandbox-common-api:jar:1.4.0" -> "javax.annotation:javax.annotation-api:jar:1.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< com.alibaba.jvm.sandbox:sandbox-api >-----------------
+[INFO] Building sandbox-api 1.4.0 1.4.0                                  [4/11]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sandbox-api ---
+[INFO] digraph "com.alibaba.jvm.sandbox:sandbox-api:jar:1.4.0" { 
+[INFO] 	"com.alibaba.jvm.sandbox:sandbox-api:jar:1.4.0" -> "junit:junit:jar:4.9:test" ; 
+[INFO] 	"com.alibaba.jvm.sandbox:sandbox-api:jar:1.4.0" -> "com.alibaba.jvm.sandbox:sandbox-common-api:jar:1.4.0:compile" ; 
+[INFO] 	"com.alibaba.jvm.sandbox:sandbox-api:jar:1.4.0" -> "javax.servlet:javax.servlet-api:jar:3.0.1:compile" ; 
+[INFO] 	"junit:junit:jar:4.9:test" -> "org.hamcrest:hamcrest-core:jar:1.1:test" ; 
+[INFO] 	"com.alibaba.jvm.sandbox:sandbox-common-api:jar:1.4.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< com.alibaba.jvm.sandbox:sandbox-provider-api >------------
+[INFO] Building sandbox-provider-api 1.4.0 1.4.0                         [5/11]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sandbox-provider-api ---
+[INFO] digraph "com.alibaba.jvm.sandbox:sandbox-provider-api:jar:1.4.0" { 
+[INFO] 	"com.alibaba.jvm.sandbox:sandbox-provider-api:jar:1.4.0" -> "com.alibaba.jvm.sandbox:sandbox-common-api:jar:1.4.0:compile" ; 
+[INFO] 	"com.alibaba.jvm.sandbox:sandbox-common-api:jar:1.4.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< com.alibaba.jvm.sandbox:sandbox-spy >-----------------
+[INFO] Building sandbox-spy 1.4.0 1.4.0                                  [6/11]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sandbox-spy ---
+[INFO] digraph "com.alibaba.jvm.sandbox:sandbox-spy:jar:1.4.0" { 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< com.alibaba.jvm.sandbox:sandbox-core >----------------
+[INFO] Building sandbox-core 1.4.0 1.4.0                                 [7/11]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for sandbox 1.4.0 1.4.0:
+[INFO] 
+[INFO] sandbox 1.4.0 ...................................... SUCCESS [  2.348 s]
+[INFO] sandbox-agent 1.4.0 ................................ SUCCESS [  0.099 s]
+[INFO] sandbox-common-api 1.4.0 ........................... SUCCESS [  0.031 s]
+[INFO] sandbox-api 1.4.0 .................................. SUCCESS [  0.120 s]
+[INFO] sandbox-provider-api 1.4.0 ......................... SUCCESS [  0.043 s]
+[INFO] sandbox-spy 1.4.0 .................................. SUCCESS [  0.043 s]
+[INFO] sandbox-core 1.4.0 ................................. FAILURE [  0.479 s]
+[INFO] sandbox-module-starter 1.4.0 ....................... SKIPPED
+[INFO] sandbox-mgr-module 1.4.0 ........................... SKIPPED
+[INFO] sandbox-mgr-provider 1.4.0 ......................... SKIPPED
+[INFO] sandbox-debug-module 1.4.0 ......................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.679 s
+[INFO] Finished at: 2023-12-28T09:02:17+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project sandbox-core: Could not resolve dependencies for project com.alibaba.jvm.sandbox:sandbox-core:jar:1.4.0: Could not find artifact com.sun:tools:jar:1.8 at specified path /usr/lib/jvm/java-17-openjdk-amd64/../lib/tools.jar -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :sandbox-core

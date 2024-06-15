@@ -1,0 +1,232 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] testable-parent                                                    [pom]
+[INFO] testable-processor                                                 [jar]
+[INFO] testable-core                                                      [jar]
+[INFO] testable-agent                                                     [jar]
+[INFO] testable-all                                                       [jar]
+[INFO] testable-maven-plugin                                     [maven-plugin]
+[INFO] java-demo                                                          [jar]
+[INFO] kotlin-demo                                                        [jar]
+[INFO] spock-demo                                                         [jar]
+[INFO] demos                                                              [pom]
+[INFO] testable-aggregate                                                 [pom]
+[INFO] 
+[INFO] ----------------< com.alibaba.testable:testable-parent >----------------
+[INFO] Building testable-parent 0.7.9                                    [1/11]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ testable-parent ---
+[INFO] digraph "com.alibaba.testable:testable-parent:pom:0.7.9" { 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< com.alibaba.testable:testable-processor >---------------
+[INFO] Building testable-processor 0.7.9                                 [2/11]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ testable-processor ---
+[INFO] digraph "com.alibaba.testable:testable-processor:jar:0.7.9" { 
+[INFO] 	"com.alibaba.testable:testable-processor:jar:0.7.9" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< com.alibaba.testable:testable-core >-----------------
+[INFO] Building testable-core 0.7.9                                      [3/11]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ testable-core ---
+[INFO] digraph "com.alibaba.testable:testable-core:jar:0.7.9" { 
+[INFO] 	"com.alibaba.testable:testable-core:jar:0.7.9" -> "com.alibaba:transmittable-thread-local:jar:2.14.2:compile" ; 
+[INFO] 	"com.alibaba.testable:testable-core:jar:0.7.9" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< com.alibaba.testable:testable-agent >-----------------
+[INFO] Building testable-agent 0.7.9                                     [4/11]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ testable-agent ---
+[INFO] digraph "com.alibaba.testable:testable-agent:jar:0.7.9" { 
+[INFO] 	"com.alibaba.testable:testable-agent:jar:0.7.9" -> "org.ow2.asm:asm-tree:jar:9.3:compile" ; 
+[INFO] 	"com.alibaba.testable:testable-agent:jar:0.7.9" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" ; 
+[INFO] 	"com.alibaba.testable:testable-agent:jar:0.7.9" -> "com.alibaba.testable:testable-core:jar:0.7.9:provided" ; 
+[INFO] 	"org.ow2.asm:asm-tree:jar:9.3:compile" -> "org.ow2.asm:asm:jar:9.3:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"com.alibaba.testable:testable-core:jar:0.7.9:provided" -> "com.alibaba:transmittable-thread-local:jar:2.14.2:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< com.alibaba.testable:testable-all >------------------
+[INFO] Building testable-all 0.7.9                                       [5/11]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ testable-all ---
+[INFO] digraph "com.alibaba.testable:testable-all:jar:0.7.9" { 
+[INFO] 	"com.alibaba.testable:testable-all:jar:0.7.9" -> "com.alibaba.testable:testable-processor:jar:0.7.9:compile" ; 
+[INFO] 	"com.alibaba.testable:testable-all:jar:0.7.9" -> "com.alibaba.testable:testable-core:jar:0.7.9:compile" ; 
+[INFO] 	"com.alibaba.testable:testable-all:jar:0.7.9" -> "com.alibaba.testable:testable-agent:jar:0.7.9:compile" ; 
+[INFO] 	"com.alibaba.testable:testable-core:jar:0.7.9:compile" -> "com.alibaba:transmittable-thread-local:jar:2.14.2:compile" ; 
+[INFO] 	"com.alibaba.testable:testable-agent:jar:0.7.9:compile" -> "org.ow2.asm:asm-tree:jar:9.3:compile" ; 
+[INFO] 	"org.ow2.asm:asm-tree:jar:9.3:compile" -> "org.ow2.asm:asm:jar:9.3:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< com.alibaba.testable:testable-maven-plugin >-------------
+[INFO] Building testable-maven-plugin 0.7.9                              [6/11]
+[INFO] ----------------------------[ maven-plugin ]----------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ testable-maven-plugin ---
+[INFO] digraph "com.alibaba.testable:testable-maven-plugin:maven-plugin:0.7.9" { 
+[INFO] 	"com.alibaba.testable:testable-maven-plugin:maven-plugin:0.7.9" -> "org.apache.maven:maven-plugin-api:jar:3.6.3:compile" ; 
+[INFO] 	"com.alibaba.testable:testable-maven-plugin:maven-plugin:0.7.9" -> "org.apache.maven:maven-core:jar:3.6.3:compile" ; 
+[INFO] 	"com.alibaba.testable:testable-maven-plugin:maven-plugin:0.7.9" -> "org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.6.0:provided" ; 
+[INFO] 	"com.alibaba.testable:testable-maven-plugin:maven-plugin:0.7.9" -> "com.alibaba.testable:testable-agent:jar:0.7.9:compile" ; 
+[INFO] 	"org.apache.maven:maven-plugin-api:jar:3.6.3:compile" -> "org.apache.maven:maven-model:jar:3.6.3:compile" ; 
+[INFO] 	"org.apache.maven:maven-plugin-api:jar:3.6.3:compile" -> "org.apache.maven:maven-artifact:jar:3.6.3:compile" ; 
+[INFO] 	"org.apache.maven:maven-plugin-api:jar:3.6.3:compile" -> "org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.3.4:compile" ; 
+[INFO] 	"org.apache.maven:maven-plugin-api:jar:3.6.3:compile" -> "org.codehaus.plexus:plexus-utils:jar:3.2.1:compile" ; 
+[INFO] 	"org.apache.maven:maven-plugin-api:jar:3.6.3:compile" -> "org.codehaus.plexus:plexus-classworlds:jar:2.6.0:compile" ; 
+[INFO] 	"org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.3.4:compile" -> "javax.enterprise:cdi-api:jar:1.0:compile" ; 
+[INFO] 	"javax.enterprise:cdi-api:jar:1.0:compile" -> "javax.annotation:jsr250-api:jar:1.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.6.3:compile" -> "org.apache.maven:maven-settings:jar:3.6.3:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.6.3:compile" -> "org.apache.maven:maven-settings-builder:jar:3.6.3:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.6.3:compile" -> "org.apache.maven:maven-builder-support:jar:3.6.3:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.6.3:compile" -> "org.apache.maven:maven-repository-metadata:jar:3.6.3:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.6.3:compile" -> "org.apache.maven:maven-model-builder:jar:3.6.3:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.6.3:compile" -> "org.apache.maven:maven-resolver-provider:jar:3.6.3:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.6.3:compile" -> "org.apache.maven.resolver:maven-resolver-impl:jar:1.4.1:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.6.3:compile" -> "org.apache.maven.resolver:maven-resolver-api:jar:1.4.1:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.6.3:compile" -> "org.apache.maven.resolver:maven-resolver-spi:jar:1.4.1:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.6.3:compile" -> "org.apache.maven.resolver:maven-resolver-util:jar:1.4.1:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.6.3:compile" -> "org.apache.maven.shared:maven-shared-utils:jar:3.2.1:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.6.3:compile" -> "org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.3.4:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.6.3:compile" -> "com.google.inject:guice:jar:no_aop:4.2.1:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.6.3:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.6.3:compile" -> "org.codehaus.plexus:plexus-component-annotations:jar:2.1.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.6.3:compile" -> "org.apache.commons:commons-lang3:jar:3.8.1:compile" ; 
+[INFO] 	"org.apache.maven:maven-settings-builder:jar:3.6.3:compile" -> "org.codehaus.plexus:plexus-interpolation:jar:1.25:compile" ; 
+[INFO] 	"org.apache.maven:maven-settings-builder:jar:3.6.3:compile" -> "org.sonatype.plexus:plexus-sec-dispatcher:jar:1.4:compile" ; 
+[INFO] 	"org.sonatype.plexus:plexus-sec-dispatcher:jar:1.4:compile" -> "org.sonatype.plexus:plexus-cipher:jar:1.4:compile" ; 
+[INFO] 	"org.apache.maven:maven-resolver-provider:jar:3.6.3:compile" -> "org.slf4j:slf4j-api:jar:1.7.29:compile" ; 
+[INFO] 	"org.apache.maven.shared:maven-shared-utils:jar:3.2.1:compile" -> "commons-io:commons-io:jar:2.5:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:no_aop:4.2.1:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:no_aop:4.2.1:compile" -> "com.google.guava:guava:jar:25.1-android:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:25.1-android:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:25.1-android:compile" -> "org.checkerframework:checker-compat-qual:jar:2.0.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:25.1-android:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.1.3:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:25.1-android:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:25.1-android:compile" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.14:compile" ; 
+[INFO] 	"com.alibaba.testable:testable-agent:jar:0.7.9:compile" -> "org.ow2.asm:asm-tree:jar:9.3:compile" ; 
+[INFO] 	"org.ow2.asm:asm-tree:jar:9.3:compile" -> "org.ow2.asm:asm:jar:9.3:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< com.alibaba.testable:java-demo >-------------------
+[INFO] Building java-demo 1.0.0-SNAPSHOT                                 [7/11]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ java-demo ---
+[INFO] digraph "com.alibaba.testable:java-demo:jar:1.0.0-SNAPSHOT" { 
+[INFO] 	"com.alibaba.testable:java-demo:jar:1.0.0-SNAPSHOT" -> "com.alibaba.testable:testable-all:jar:0.7.9:test" ; 
+[INFO] 	"com.alibaba.testable:java-demo:jar:1.0.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" ; 
+[INFO] 	"com.alibaba.testable:testable-all:jar:0.7.9:test" -> "com.alibaba.testable:testable-processor:jar:0.7.9:test" ; 
+[INFO] 	"com.alibaba.testable:testable-all:jar:0.7.9:test" -> "com.alibaba.testable:testable-core:jar:0.7.9:test" ; 
+[INFO] 	"com.alibaba.testable:testable-all:jar:0.7.9:test" -> "com.alibaba.testable:testable-agent:jar:0.7.9:test" ; 
+[INFO] 	"com.alibaba.testable:testable-core:jar:0.7.9:test" -> "com.alibaba:transmittable-thread-local:jar:2.14.2:test" ; 
+[INFO] 	"com.alibaba.testable:testable-agent:jar:0.7.9:test" -> "org.ow2.asm:asm-tree:jar:9.3:test" ; 
+[INFO] 	"org.ow2.asm:asm-tree:jar:9.3:test" -> "org.ow2.asm:asm:jar:9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< com.alibaba.testable:kotlin-demo >------------------
+[INFO] Building kotlin-demo 1.0.0-SNAPSHOT                               [8/11]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ kotlin-demo ---
+[INFO] digraph "com.alibaba.testable:kotlin-demo:jar:1.0.0-SNAPSHOT" { 
+[INFO] 	"com.alibaba.testable:kotlin-demo:jar:1.0.0-SNAPSHOT" -> "org.jetbrains.kotlin:kotlin-reflect:jar:1.3.72:compile" ; 
+[INFO] 	"com.alibaba.testable:kotlin-demo:jar:1.0.0-SNAPSHOT" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.3.72:compile" ; 
+[INFO] 	"com.alibaba.testable:kotlin-demo:jar:1.0.0-SNAPSHOT" -> "com.alibaba.testable:testable-all:jar:0.7.9:test" ; 
+[INFO] 	"com.alibaba.testable:kotlin-demo:jar:1.0.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-reflect:jar:1.3.72:compile" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.3.72:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.3.72:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.3.72:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.3.72:compile" -> "org.jetbrains:annotations:jar:13.0:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.3.72:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.3.72:compile" ; 
+[INFO] 	"com.alibaba.testable:testable-all:jar:0.7.9:test" -> "com.alibaba.testable:testable-processor:jar:0.7.9:test" ; 
+[INFO] 	"com.alibaba.testable:testable-all:jar:0.7.9:test" -> "com.alibaba.testable:testable-core:jar:0.7.9:test" ; 
+[INFO] 	"com.alibaba.testable:testable-all:jar:0.7.9:test" -> "com.alibaba.testable:testable-agent:jar:0.7.9:test" ; 
+[INFO] 	"com.alibaba.testable:testable-core:jar:0.7.9:test" -> "com.alibaba:transmittable-thread-local:jar:2.14.2:test" ; 
+[INFO] 	"com.alibaba.testable:testable-agent:jar:0.7.9:test" -> "org.ow2.asm:asm-tree:jar:9.3:test" ; 
+[INFO] 	"org.ow2.asm:asm-tree:jar:9.3:test" -> "org.ow2.asm:asm:jar:9.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< com.alibaba.testable:spock-demo >-------------------
+[INFO] Building spock-demo 1.0.0-SNAPSHOT                                [9/11]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ spock-demo ---
+[INFO] digraph "com.alibaba.testable:spock-demo:jar:1.0.0-SNAPSHOT" { 
+[INFO] 	"com.alibaba.testable:spock-demo:jar:1.0.0-SNAPSHOT" -> "org.codehaus.groovy:groovy:jar:3.0.7:compile" ; 
+[INFO] 	"com.alibaba.testable:spock-demo:jar:1.0.0-SNAPSHOT" -> "org.spockframework:spock-core:jar:2.0-M5-groovy-3.0:test" ; 
+[INFO] 	"com.alibaba.testable:spock-demo:jar:1.0.0-SNAPSHOT" -> "org.spockframework:spock-junit4:jar:2.0-M5-groovy-3.0:test" ; 
+[INFO] 	"com.alibaba.testable:spock-demo:jar:1.0.0-SNAPSHOT" -> "com.alibaba.testable:testable-all:jar:0.7.9:test" ; 
+[INFO] 	"org.spockframework:spock-core:jar:2.0-M5-groovy-3.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.7.1:test" ; 
+[INFO] 	"org.spockframework:spock-core:jar:2.0-M5-groovy-3.0:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.7.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.7.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.7.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.7.1:test" ; 
+[INFO] 	"org.spockframework:spock-junit4:jar:2.0-M5-groovy-3.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"com.alibaba.testable:testable-all:jar:0.7.9:test" -> "com.alibaba.testable:testable-processor:jar:0.7.9:test" ; 
+[INFO] 	"com.alibaba.testable:testable-all:jar:0.7.9:test" -> "com.alibaba.testable:testable-core:jar:0.7.9:test" ; 
+[INFO] 	"com.alibaba.testable:testable-all:jar:0.7.9:test" -> "com.alibaba.testable:testable-agent:jar:0.7.9:test" ; 
+[INFO] 	"com.alibaba.testable:testable-core:jar:0.7.9:test" -> "com.alibaba:transmittable-thread-local:jar:2.14.2:test" ; 
+[INFO] 	"com.alibaba.testable:testable-agent:jar:0.7.9:test" -> "org.ow2.asm:asm-tree:jar:9.3:test" ; 
+[INFO] 	"org.ow2.asm:asm-tree:jar:9.3:test" -> "org.ow2.asm:asm:jar:9.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< com.alibaba.testable:demo >----------------------
+[INFO] Building demos 1.0.0-SNAPSHOT                                    [10/11]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ demo ---
+[INFO] digraph "com.alibaba.testable:demo:pom:1.0.0-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< com.alibaba.testable:testable-aggregate >---------------
+[INFO] Building testable-aggregate 1.0.0-SNAPSHOT                       [11/11]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ testable-aggregate ---
+[INFO] digraph "com.alibaba.testable:testable-aggregate:pom:1.0.0-SNAPSHOT" { 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] testable-parent 0.7.9 .............................. SUCCESS [  5.561 s]
+[INFO] testable-processor 0.7.9 ........................... SUCCESS [  0.454 s]
+[INFO] testable-core 0.7.9 ................................ SUCCESS [  0.181 s]
+[INFO] testable-agent 0.7.9 ............................... SUCCESS [  0.258 s]
+[INFO] testable-all 0.7.9 ................................. SUCCESS [  0.176 s]
+[INFO] testable-maven-plugin 0.7.9 ........................ SUCCESS [  1.370 s]
+[INFO] java-demo 1.0.0-SNAPSHOT ........................... SUCCESS [  0.196 s]
+[INFO] kotlin-demo 1.0.0-SNAPSHOT ......................... SUCCESS [  0.201 s]
+[INFO] spock-demo 1.0.0-SNAPSHOT .......................... SUCCESS [  0.281 s]
+[INFO] demos 1.0.0-SNAPSHOT ............................... SUCCESS [  0.036 s]
+[INFO] testable-aggregate 1.0.0-SNAPSHOT .................. SUCCESS [  0.074 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.945 s
+[INFO] Finished at: 2023-12-28T09:02:25+01:00
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,122 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Detecting the operating system and CPU architecture
+[INFO] ------------------------------------------------------------------------
+[INFO] os.detected.name: linux
+[INFO] os.detected.arch: x86_64
+[INFO] os.detected.bitness: 64
+[INFO] os.detected.version: 5.10
+[INFO] os.detected.version.major: 5
+[INFO] os.detected.version.minor: 10
+[INFO] os.detected.release: debian
+[INFO] os.detected.release.version: 11
+[INFO] os.detected.release.like.debian: true
+[INFO] os.detected.classifier: linux-x86_64
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Netty/Incubator/Codec/Parent/Quic                                  [pom]
+[INFO] Netty/Incubator/Codec/Classes/Quic                                 [jar]
+[INFO] Netty/Incubator/Codec/Native/Quic                                  [jar]
+[INFO] Netty/Testsuite/NativeImage                                        [jar]
+[INFO] 
+[INFO] --------< io.netty.incubator:netty-incubator-codec-parent-quic >--------
+[INFO] Building Netty/Incubator/Codec/Parent/Quic 0.0.55.Final-SNAPSHOT   [1/4]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ netty-incubator-codec-parent-quic ---
+[INFO] digraph "io.netty.incubator:netty-incubator-codec-parent-quic:pom:0.0.55.Final-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] -------< io.netty.incubator:netty-incubator-codec-classes-quic >--------
+[INFO] Building Netty/Incubator/Codec/Classes/Quic 0.0.55.Final-SNAPSHOT  [2/4]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ netty-incubator-codec-classes-quic ---
+[INFO] digraph "io.netty.incubator:netty-incubator-codec-classes-quic:jar:0.0.55.Final-SNAPSHOT" { 
+[INFO] 	"io.netty.incubator:netty-incubator-codec-classes-quic:jar:0.0.55.Final-SNAPSHOT" -> "io.netty:netty-common:jar:4.1.101.Final:compile" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-codec-classes-quic:jar:0.0.55.Final-SNAPSHOT" -> "io.netty:netty-buffer:jar:4.1.101.Final:compile" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-codec-classes-quic:jar:0.0.55.Final-SNAPSHOT" -> "io.netty:netty-codec:jar:4.1.101.Final:compile" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-codec-classes-quic:jar:0.0.55.Final-SNAPSHOT" -> "io.netty:netty-handler:jar:4.1.101.Final:compile" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-codec-classes-quic:jar:0.0.55.Final-SNAPSHOT" -> "io.netty:netty-transport:jar:4.1.101.Final:compile" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-codec-classes-quic:jar:0.0.55.Final-SNAPSHOT" -> "io.netty:netty-transport-classes-epoll:jar:4.1.101.Final:compile (optional) " ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.101.Final:compile" -> "io.netty:netty-resolver:jar:4.1.101.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.101.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.101.Final:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------< io.netty.incubator:netty-incubator-codec-native-quic >--------
+[INFO] Building Netty/Incubator/Codec/Native/Quic 0.0.55.Final-SNAPSHOT   [3/4]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/io/netty/incubator/netty-incubator-codec-classes-quic/0.0.55.Final-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/io/netty/incubator/netty-incubator-codec-classes-quic/0.0.55.Final-SNAPSHOT/maven-metadata.xml (1.0 kB at 675 B/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ netty-incubator-codec-native-quic ---
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/io/netty/incubator/netty-incubator-codec-classes-quic/0.0.55.Final-SNAPSHOT/netty-incubator-codec-classes-quic-0.0.55.Final-20231213.124153-7.jar
+[INFO] Downloaded from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/io/netty/incubator/netty-incubator-codec-classes-quic/0.0.55.Final-SNAPSHOT/netty-incubator-codec-classes-quic-0.0.55.Final-20231213.124153-7.jar (227 kB at 264 kB/s)
+[INFO] digraph "io.netty.incubator:netty-incubator-codec-native-quic:jar:0.0.55.Final-SNAPSHOT" { 
+[INFO] 	"io.netty.incubator:netty-incubator-codec-native-quic:jar:0.0.55.Final-SNAPSHOT" -> "io.netty:netty-jni-util:jar:sources:0.0.9.Final:compile (optional) " ; 
+[INFO] 	"io.netty.incubator:netty-incubator-codec-native-quic:jar:0.0.55.Final-SNAPSHOT" -> "io.netty.incubator:netty-incubator-codec-classes-quic:jar:0.0.55.Final-SNAPSHOT:compile" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-codec-native-quic:jar:0.0.55.Final-SNAPSHOT" -> "io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.101.Final:test" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-codec-native-quic:jar:0.0.55.Final-SNAPSHOT" -> "io.netty:netty-transport-native-epoll:jar:linux-aarch_64:4.1.101.Final:test" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-codec-native-quic:jar:0.0.55.Final-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.0:test" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-codec-native-quic:jar:0.0.55.Final-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.0:test" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-codec-native-quic:jar:0.0.55.Final-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-params:jar:5.9.0:test" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-codec-native-quic:jar:0.0.55.Final-SNAPSHOT" -> "org.hamcrest:hamcrest-library:jar:1.3:test" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-codec-native-quic:jar:0.0.55.Final-SNAPSHOT" -> "io.netty:netty-build-common:jar:31:test" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-codec-native-quic:jar:0.0.55.Final-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.3.12:test" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-codec-native-quic:jar:0.0.55.Final-SNAPSHOT" -> "org.bouncycastle:bcpkix-jdk15on:jar:1.70:test" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-codec-native-quic:jar:0.0.55.Final-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.20.2:test" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-codec-classes-quic:jar:0.0.55.Final-SNAPSHOT:compile" -> "io.netty:netty-common:jar:4.1.101.Final:compile" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-codec-classes-quic:jar:0.0.55.Final-SNAPSHOT:compile" -> "io.netty:netty-buffer:jar:4.1.101.Final:compile" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-codec-classes-quic:jar:0.0.55.Final-SNAPSHOT:compile" -> "io.netty:netty-codec:jar:4.1.101.Final:compile" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-codec-classes-quic:jar:0.0.55.Final-SNAPSHOT:compile" -> "io.netty:netty-handler:jar:4.1.101.Final:compile" ; 
+[INFO] 	"io.netty.incubator:netty-incubator-codec-classes-quic:jar:0.0.55.Final-SNAPSHOT:compile" -> "io.netty:netty-transport:jar:4.1.101.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.101.Final:compile" -> "io.netty:netty-resolver:jar:4.1.101.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.101.Final:test" -> "io.netty:netty-transport-native-unix-common:jar:4.1.101.Final:compile" ; 
+[INFO] 	"io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.101.Final:test" -> "io.netty:netty-transport-classes-epoll:jar:4.1.101.Final:compile (optional) " ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.0:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.0:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-library:jar:1.3:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"io.netty:netty-build-common:jar:31:test" -> "com.puppycrawl.tools:checkstyle:jar:8.29:test" ; 
+[INFO] 	"com.puppycrawl.tools:checkstyle:jar:8.29:test" -> "info.picocli:picocli:jar:4.1.4:test" ; 
+[INFO] 	"com.puppycrawl.tools:checkstyle:jar:8.29:test" -> "antlr:antlr:jar:2.7.7:test" ; 
+[INFO] 	"com.puppycrawl.tools:checkstyle:jar:8.29:test" -> "org.antlr:antlr4-runtime:jar:4.8-1:test" ; 
+[INFO] 	"com.puppycrawl.tools:checkstyle:jar:8.29:test" -> "commons-beanutils:commons-beanutils:jar:1.9.4:test" ; 
+[INFO] 	"com.puppycrawl.tools:checkstyle:jar:8.29:test" -> "com.google.guava:guava:jar:28.2-jre:test" ; 
+[INFO] 	"com.puppycrawl.tools:checkstyle:jar:8.29:test" -> "net.sf.saxon:Saxon-HE:jar:9.9.1-6:test" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:test" -> "commons-logging:commons-logging:jar:1.2:test" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:test" -> "commons-collections:commons-collections:jar:3.2.2:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.2-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.2-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.2-jre:test" -> "com.google.code.findbugs:jsr305:jar:3.0.2:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.2-jre:test" -> "org.checkerframework:checker-qual:jar:2.10.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.2-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.3.4:test" ; 
+[INFO] 	"com.google.guava:guava:jar:28.2-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:1.3:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.3.12:test" -> "ch.qos.logback:logback-core:jar:1.3.12:test" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.3.12:test" -> "org.slf4j:slf4j-api:jar:2.0.7:test" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk15on:jar:1.70:test" -> "org.bouncycastle:bcprov-jdk15on:jar:1.70:test" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk15on:jar:1.70:test" -> "org.bouncycastle:bcutil-jdk15on:jar:1.70:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --< io.netty.incubator:netty-incubator-codec-quic-testsuite-native-image >--
+[INFO] Building Netty/Testsuite/NativeImage 0.0.55.Final-SNAPSHOT         [4/4]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ netty-incubator-codec-quic-testsuite-native-image ---
+[INFO] digraph "io.netty.incubator:netty-incubator-codec-quic-testsuite-native-image:jar:0.0.55.Final-SNAPSHOT" { 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Netty/Incubator/Codec/Parent/Quic 0.0.55.Final-SNAPSHOT:
+[INFO] 
+[INFO] Netty/Incubator/Codec/Parent/Quic .................. SUCCESS [  2.042 s]
+[INFO] Netty/Incubator/Codec/Classes/Quic ................. SUCCESS [  0.273 s]
+[INFO] Netty/Incubator/Codec/Native/Quic .................. SUCCESS [  5.152 s]
+[INFO] Netty/Testsuite/NativeImage ........................ SUCCESS [  0.013 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.629 s
+[INFO] Finished at: 2023-12-28T09:03:25+01:00
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,113 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Detecting the operating system and CPU architecture
+[INFO] ------------------------------------------------------------------------
+[INFO] os.detected.name: linux
+[INFO] os.detected.arch: x86_64
+[INFO] os.detected.version: 5.10
+[INFO] os.detected.version.major: 5
+[INFO] os.detected.version.minor: 10
+[INFO] os.detected.release: debian
+[INFO] os.detected.release.version: 11
+[INFO] os.detected.release.like.debian: true
+[INFO] os.detected.classifier: linux-x86_64
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] arthas-all                                                         [pom]
+[INFO] web-ui                                                             [pom]
+[INFO] math-game                                                          [jar]
+[INFO] arthas-common                                                      [jar]
+[INFO] arthas-spy                                                         [jar]
+[INFO] arthas-vmtool                                                      [jar]
+[INFO] arthas-tunnel-common                                               [jar]
+[INFO] arthas-tunnel-client                                               [jar]
+[INFO] arthas-memorycompiler                                              [jar]
+[INFO] arthas-core                                                        [jar]
+[INFO] arthas-agent                                                       [jar]
+[INFO] arthas-client                                                      [jar]
+[INFO] arthas-boot                                                        [jar]
+[INFO] arthas-agent-attach                                                [jar]
+[INFO] arthas-site                                                        [jar]
+[INFO] arthas-packaging                                                   [jar]
+[INFO] arthas-spring-boot-starter                                         [jar]
+[INFO] arthas-tunnel-server                                               [jar]
+[INFO] arthas-testcase                                                    [jar]
+[INFO] arthas-grpc-web-proxy                                              [jar]
+[INFO] 
+[INFO] --------------------< com.taobao.arthas:arthas-all >--------------------
+[INFO] Building arthas-all 4.0.0-SNAPSHOT                                [1/20]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ arthas-all ---
+[INFO] digraph "com.taobao.arthas:arthas-all:pom:4.0.0-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< com.taobao.arthas:web-ui >----------------------
+[INFO] Building web-ui 4.0.0-SNAPSHOT                                    [2/20]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ web-ui ---
+[INFO] digraph "com.taobao.arthas:web-ui:pom:4.0.0-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< com.taobao.arthas:math-game >---------------------
+[INFO] Building math-game 4.0.0-SNAPSHOT                                 [3/20]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ math-game ---
+[INFO] digraph "com.taobao.arthas:math-game:jar:4.0.0-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< com.taobao.arthas:arthas-common >-------------------
+[INFO] Building arthas-common 4.0.0-SNAPSHOT                             [4/20]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ arthas-common ---
+[INFO] digraph "com.taobao.arthas:arthas-common:jar:4.0.0-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< com.taobao.arthas:arthas-spy >--------------------
+[INFO] Building arthas-spy 4.0.0-SNAPSHOT                                [5/20]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/taobao/arthas/arthas-common/4.0.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/com/taobao/arthas/arthas-common/4.0.0-SNAPSHOT/arthas-common-4.0.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for arthas-all 4.0.0-SNAPSHOT:
+[INFO] 
+[INFO] arthas-all ......................................... SUCCESS [  3.235 s]
+[INFO] web-ui ............................................. SUCCESS [  0.153 s]
+[INFO] math-game .......................................... SUCCESS [  0.168 s]
+[INFO] arthas-common ...................................... SUCCESS [  0.036 s]
+[INFO] arthas-spy ......................................... FAILURE [  4.321 s]
+[INFO] arthas-vmtool ...................................... SKIPPED
+[INFO] arthas-tunnel-common ............................... SKIPPED
+[INFO] arthas-tunnel-client ............................... SKIPPED
+[INFO] arthas-memorycompiler .............................. SKIPPED
+[INFO] arthas-core ........................................ SKIPPED
+[INFO] arthas-agent ....................................... SKIPPED
+[INFO] arthas-client ...................................... SKIPPED
+[INFO] arthas-boot ........................................ SKIPPED
+[INFO] arthas-agent-attach ................................ SKIPPED
+[INFO] arthas-site ........................................ SKIPPED
+[INFO] arthas-packaging ................................... SKIPPED
+[INFO] arthas-spring-boot-starter ......................... SKIPPED
+[INFO] arthas-tunnel-server ............................... SKIPPED
+[INFO] arthas-testcase .................................... SKIPPED
+[INFO] arthas-grpc-web-proxy .............................. SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.413 s
+[INFO] Finished at: 2023-12-28T09:02:25+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project arthas-spy: Could not resolve dependencies for project com.taobao.arthas:arthas-spy:jar:4.0.0-SNAPSHOT: Could not find artifact com.taobao.arthas:arthas-common:jar:4.0.0-SNAPSHOT in sonatype-nexus-snapshots (https://oss.sonatype.org/content/repositories/snapshots) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :arthas-spy

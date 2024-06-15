@@ -1,0 +1,18 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.taobao:tprofiler >------------------------
+[INFO] Building profile 1.0.1
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ tprofiler ---
+[INFO] digraph "com.taobao:tprofiler:jar:1.0.1" { 
+[INFO] 	"com.taobao:tprofiler:jar:1.0.1" -> "asm:asm:jar:3.3.1:compile" ; 
+[INFO] 	"com.taobao:tprofiler:jar:1.0.1" -> "junit:junit:jar:4.11:test" ; 
+[INFO] 	"junit:junit:jar:4.11:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.348 s
+[INFO] Finished at: 2023-12-28T09:02:22+01:00
+[INFO] ------------------------------------------------------------------------

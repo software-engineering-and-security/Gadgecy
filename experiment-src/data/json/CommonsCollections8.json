@@ -1,0 +1,67 @@
+{
+    "temurin-jdk-11.0.16.1+1": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk-11.0.12+7": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk-11.0.21+9": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk-11.0.13+8": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk-11.0.15+10": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk-11.0.14.1+1": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk-11.0.20.1+1": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk-11.0.16+8": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk-11.0.17+8": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk-11.0.20+8": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk-11.0.18+10": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk-11.0.19+7": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    },
+    "temurin-jdk-11.0.14+9": {
+        "commons-collections": [
+            "4-4.0"
+        ]
+    }
+}

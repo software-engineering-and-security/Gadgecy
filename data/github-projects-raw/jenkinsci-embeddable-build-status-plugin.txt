@@ -1,0 +1,163 @@
+[INFO] Scanning for projects...
+[WARNING] The POM for org.jenkins-ci.tools:maven-hpi-plugin:jar:3.50 is missing, no dependency information available
+[WARNING] Failed to build parent project for org.jenkins-ci.plugins:embeddable-build-status:hpi:999999-SNAPSHOT
+[INFO] 
+[INFO] -----------< org.jenkins-ci.plugins:embeddable-build-status >-----------
+[INFO] Building Embeddable Build Status Plugin 999999-SNAPSHOT
+[INFO] --------------------------------[ hpi ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.1:tree (default-cli) @ embeddable-build-status ---
+[INFO] digraph "org.jenkins-ci.plugins:embeddable-build-status:hpi:999999-SNAPSHOT" { 
+[INFO] 	"org.jenkins-ci.plugins:embeddable-build-status:hpi:999999-SNAPSHOT" -> "io.jenkins.plugins:ionicons-api:jar:56.v1b_1c8c49374e:compile" ; 
+[INFO] 	"org.jenkins-ci.plugins:embeddable-build-status:hpi:999999-SNAPSHOT" -> "org.jenkins-ci.plugins:script-security:jar:1294.v99333c047434:compile" ; 
+[INFO] 	"org.jenkins-ci.plugins:embeddable-build-status:hpi:999999-SNAPSHOT" -> "org.jenkins-ci.plugins.workflow:workflow-step-api:jar:639.v6eca_cd8c04a_a_:compile" ; 
+[INFO] 	"org.jenkins-ci.plugins:embeddable-build-status:hpi:999999-SNAPSHOT" -> "org.mockito:mockito-core:jar:5.6.0:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:embeddable-build-status:hpi:999999-SNAPSHOT" -> "org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" ; 
+[INFO] 	"org.jenkins-ci.plugins:embeddable-build-status:hpi:999999-SNAPSHOT" -> "org.jenkins-ci.main:jenkins-war:executable-war:2.401.3:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:embeddable-build-status:hpi:999999-SNAPSHOT" -> "jakarta.servlet:jakarta.servlet-api:jar:4.0.4:provided" ; 
+[INFO] 	"org.jenkins-ci.plugins:embeddable-build-status:hpi:999999-SNAPSHOT" -> "commons-logging:commons-logging:jar:1.2:provided" ; 
+[INFO] 	"org.jenkins-ci.plugins:embeddable-build-status:hpi:999999-SNAPSHOT" -> "org.jenkins-ci.main:jenkins-test-harness:jar:2099.vc95b_86578f37:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:embeddable-build-status:hpi:999999-SNAPSHOT" -> "org.jenkins-ci:test-annotations:jar:1.4:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:embeddable-build-status:hpi:999999-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:embeddable-build-status:hpi:999999-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.jenkins-ci.plugins:script-security:jar:1294.v99333c047434:compile" -> "org.kohsuke:groovy-sandbox:jar:1.33:compile" ; 
+[INFO] 	"org.jenkins-ci.plugins:script-security:jar:1294.v99333c047434:compile" -> "io.jenkins.plugins:caffeine-api:jar:3.1.8-133.v17b_1ff2e0599:compile" ; 
+[INFO] 	"io.jenkins.plugins:caffeine-api:jar:3.1.8-133.v17b_1ff2e0599:compile" -> "com.github.ben-manes.caffeine:caffeine:jar:3.1.8:compile" ; 
+[INFO] 	"org.jenkins-ci.plugins.workflow:workflow-step-api:jar:639.v6eca_cd8c04a_a_:compile" -> "org.jenkins-ci.plugins:structs:jar:325.vcb_307d2a_2782:compile" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.6.0:test" -> "net.bytebuddy:byte-buddy:jar:1.14.8:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.6.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.14.8:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:5.6.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.jenkins-ci.main:cli:jar:2.401.3:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.jenkins-ci.main:remoting:jar:3107.v665000b_51092:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "args4j:args4j:jar:2.33:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "com.github.spotbugs:spotbugs-annotations:jar:4.7.3:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "com.google.guava:guava:jar:31.1-jre:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "com.google.inject:guice:jar:6.0.0:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "com.infradna.tool:bridge-method-annotation:jar:1.26:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "com.jcraft:jzlib:jar:1.1.3-kohsuke-1:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "com.sun.solaris:embedded_su4j:jar:1.1:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "com.sun.xml.txw2:txw2:jar:20110809:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "com.thoughtworks.xstream:xstream:jar:1.4.20:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "commons-beanutils:commons-beanutils:jar:1.9.4:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "commons-codec:commons-codec:jar:1.15:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "commons-collections:commons-collections:jar:3.2.2:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "commons-fileupload:commons-fileupload:jar:1.5:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "commons-io:commons-io:jar:2.11.0:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "commons-jelly:commons-jelly-tags-fmt:jar:1.0:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "commons-jelly:commons-jelly-tags-xml:jar:1.1:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "commons-lang:commons-lang:jar:2.6:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "io.jenkins.stapler:jenkins-stapler-support:jar:1.1:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:jar:1.2.7:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "jaxen:jaxen:jar:2.0.0:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "jline:jline:jar:2.14.6:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "net.java.dev.jna:jna:jar:5.13.0:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "net.java.sezpoz:sezpoz:jar:1.13:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "net.jcip:jcip-annotations:jar:1.0:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "net.sf.kxml:kxml2:jar:2.3.0:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.antlr:antlr4-runtime:jar:4.12.0:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.apache.ant:ant:jar:1.10.13:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.apache.commons:commons-compress:jar:1.23.0:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.codehaus.groovy:groovy-all:jar:2.4.21:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.connectbot.jbcrypt:jbcrypt:jar:1.0.0:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.fusesource.jansi:jansi:jar:1.11:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.jenkins-ci:annotation-indexer:jar:1.17:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.jenkins-ci:commons-jexl:jar:1.1-jenkins-20111212:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.jenkins-ci:crypto-util:jar:1.8:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.jenkins-ci:memory-monitor:jar:1.12:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.jenkins-ci:symbol-annotation:jar:1.24:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.jenkins-ci:task-reactor:jar:1.8:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.jenkins-ci:version-number:jar:1.11:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.jenkins-ci.main:websocket-spi:jar:2.401.3:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.jfree:jfreechart:jar:1.0.19:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.jvnet.hudson:commons-jelly-tags-define:jar:1.1-jenkins-20230124:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.jvnet.localizer:localizer:jar:1.31:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.jvnet.robust-http-client:robust-http-client:jar:1.2:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.jvnet.winp:winp:jar:1.30:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.kohsuke:access-modifier-annotation:jar:1.31:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.kohsuke:windows-package-checker:jar:1.2:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.kohsuke.jinterop:j-interop:jar:2.0.8-kohsuke-1:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.kohsuke.stapler:json-lib:jar:2.4-jenkins-3:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.kohsuke.stapler:stapler:jar:1777.v7c6fe6d54a_0c:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.kohsuke.stapler:stapler-adjunct-codemirror:jar:1.3:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.kohsuke.stapler:stapler-adjunct-timeline:jar:1.5:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.kohsuke.stapler:stapler-groovy:jar:1777.v7c6fe6d54a_0c:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.ow2.asm:asm:jar:9.5:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.ow2.asm:asm-analysis:jar:9.5:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.ow2.asm:asm-commons:jar:9.5:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.ow2.asm:asm-tree:jar:9.5:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.ow2.asm:asm-util:jar:9.5:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.slf4j:jcl-over-slf4j:jar:2.0.7:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.slf4j:log4j-over-slf4j:jar:2.0.7:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "org.springframework.security:spring-security-web:jar:5.8.2:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-core:jar:2.401.3:provided" -> "xpp3:xpp3:jar:1.1.4c:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.guava:failureaccess:jar:1.0.1:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:provided" -> "com.google.code.findbugs:jsr305:jar:3.0.1:provided" ; 
+[INFO] 	"com.google.inject:guice:jar:6.0.0:provided" -> "javax.inject:javax.inject:jar:1:provided" ; 
+[INFO] 	"com.google.inject:guice:jar:6.0.0:provided" -> "jakarta.inject:jakarta.inject-api:jar:2.0.1:provided" ; 
+[INFO] 	"com.sun.xml.txw2:txw2:jar:20110809:provided" -> "relaxngDatatype:relaxngDatatype:jar:20020414:provided" ; 
+[INFO] 	"com.thoughtworks.xstream:xstream:jar:1.4.20:provided" -> "io.github.x-stream:mxparser:jar:1.2.2:provided" ; 
+[INFO] 	"org.apache.ant:ant:jar:1.10.13:provided" -> "org.apache.ant:ant-launcher:jar:1.10.13:provided" ; 
+[INFO] 	"org.jfree:jfreechart:jar:1.0.19:provided" -> "org.jfree:jcommon:jar:1.0.23:provided" ; 
+[INFO] 	"org.jvnet.hudson:commons-jelly-tags-define:jar:1.1-jenkins-20230124:provided" -> "org.jenkins-ci:commons-jelly:jar:1.1-jenkins-20230124:provided" ; 
+[INFO] 	"org.kohsuke.jinterop:j-interop:jar:2.0.8-kohsuke-1:provided" -> "org.kohsuke.jinterop:j-interopdeps:jar:2.0.8-kohsuke-1:provided" ; 
+[INFO] 	"org.kohsuke.jinterop:j-interopdeps:jar:2.0.8-kohsuke-1:provided" -> "org.samba.jcifs:jcifs:jar:1.3.18-kohsuke-1:provided" ; 
+[INFO] 	"org.kohsuke.stapler:json-lib:jar:2.4-jenkins-3:provided" -> "net.sf.ezmorph:ezmorph:jar:1.0.6:provided" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:1777.v7c6fe6d54a_0c:provided" -> "commons-discovery:commons-discovery:jar:0.5:provided" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:1777.v7c6fe6d54a_0c:provided" -> "jakarta.annotation:jakarta.annotation-api:jar:2.1.1:provided" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:1777.v7c6fe6d54a_0c:provided" -> "javax.annotation:javax.annotation-api:jar:1.3.2:provided" ; 
+[INFO] 	"org.kohsuke.stapler:stapler:jar:1777.v7c6fe6d54a_0c:provided" -> "org.jvnet:tiger-types:jar:2.2:provided" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-groovy:jar:1777.v7c6fe6d54a_0c:provided" -> "org.kohsuke.stapler:stapler-jelly:jar:1777.v7c6fe6d54a_0c:provided" ; 
+[INFO] 	"org.kohsuke.stapler:stapler-jelly:jar:1777.v7c6fe6d54a_0c:provided" -> "org.dom4j:dom4j:jar:2.1.4:provided" ; 
+[INFO] 	"org.slf4j:jcl-over-slf4j:jar:2.0.7:provided" -> "org.slf4j:slf4j-api:jar:2.0.7:provided" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.2:provided" -> "org.springframework.security:spring-security-core:jar:5.8.2:provided" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.2:provided" -> "org.springframework:spring-core:jar:5.3.27:provided" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.2:provided" -> "org.springframework:spring-aop:jar:5.3.27:provided" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.2:provided" -> "org.springframework:spring-beans:jar:5.3.27:provided" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.2:provided" -> "org.springframework:spring-context:jar:5.3.27:provided" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.2:provided" -> "org.springframework:spring-expression:jar:5.3.27:provided" ; 
+[INFO] 	"org.springframework.security:spring-security-web:jar:5.8.2:provided" -> "org.springframework:spring-web:jar:5.3.27:provided" ; 
+[INFO] 	"org.springframework.security:spring-security-core:jar:5.8.2:provided" -> "org.springframework.security:spring-security-crypto:jar:5.8.2:provided" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-war:executable-war:2.401.3:test" -> "org.jenkins-ci.main:websocket-jetty10:jar:2.401.3:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-war:executable-war:2.401.3:test" -> "org.jenkins-ci.main:websocket-jetty9:jar:2.401.3:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-war:executable-war:2.401.3:test" -> "org.slf4j:slf4j-jdk14:jar:2.0.7:test" ; 
+[INFO] 	"org.jenkins-ci.main:websocket-jetty10:jar:2.401.3:test" -> "org.kohsuke.metainf-services:metainf-services:jar:1.9:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test-harness:jar:2099.vc95b_86578f37:test" -> "io.jenkins.lib:support-log-formatter:jar:1.2:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test-harness:jar:2099.vc95b_86578f37:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test-harness:jar:2099.vc95b_86578f37:test" -> "org.eclipse.jetty:jetty-security:jar:10.0.17:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test-harness:jar:2099.vc95b_86578f37:test" -> "org.eclipse.jetty:jetty-webapp:jar:10.0.17:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test-harness:jar:2099.vc95b_86578f37:test" -> "org.eclipse.jetty.websocket:websocket-jetty-server:jar:10.0.17:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test-harness:jar:2099.vc95b_86578f37:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test-harness:jar:2099.vc95b_86578f37:test" -> "org.jenkins-ci.main:jenkins-test-harness-htmlunit:jar:158.v7f737a_0dea_b_b_:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test-harness:jar:2099.vc95b_86578f37:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test-harness:jar:2099.vc95b_86578f37:test" -> "org.netbeans.modules:org-netbeans-insane:jar:RELEASE190:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test-harness:jar:2099.vc95b_86578f37:test" -> "org.openjdk.jmh:jmh-core:jar:1.37:test" ; 
+[INFO] 	"org.jenkins-ci.main:jenkins-test-harness:jar:2099.vc95b_86578f37:test" -> "org.openjdk.jmh:jmh-generator-annprocess:jar:1.37:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-security:jar:10.0.17:test" -> "org.eclipse.jetty:jetty-server:jar:10.0.17:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:10.0.17:test" -> "org.eclipse.jetty:jetty-http:jar:10.0.17:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:10.0.17:test" -> "org.eclipse.jetty:jetty-io:jar:10.0.17:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-webapp:jar:10.0.17:test" -> "org.eclipse.jetty:jetty-servlet:jar:10.0.17:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-webapp:jar:10.0.17:test" -> "org.eclipse.jetty:jetty-xml:jar:10.0.17:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-xml:jar:10.0.17:test" -> "org.eclipse.jetty:jetty-util:jar:10.0.17:test" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-jetty-server:jar:10.0.17:test" -> "org.eclipse.jetty.websocket:websocket-jetty-api:jar:10.0.17:test" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-jetty-server:jar:10.0.17:test" -> "org.eclipse.jetty.websocket:websocket-jetty-common:jar:10.0.17:test" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-jetty-server:jar:10.0.17:test" -> "org.eclipse.jetty.websocket:websocket-servlet:jar:10.0.17:test" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-jetty-server:jar:10.0.17:test" -> "org.eclipse.jetty.toolchain:jetty-servlet-api:jar:4.0.6:test" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-jetty-common:jar:10.0.17:test" -> "org.eclipse.jetty.websocket:websocket-core-common:jar:10.0.17:test" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-servlet:jar:10.0.17:test" -> "org.eclipse.jetty.websocket:websocket-core-server:jar:10.0.17:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"org.openjdk.jmh:jmh-core:jar:1.37:test" -> "net.sf.jopt-simple:jopt-simple:jar:5.0.4:test" ; 
+[INFO] 	"org.openjdk.jmh:jmh-core:jar:1.37:test" -> "org.apache.commons:commons-math3:jar:3.6.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  14.142 s
+[INFO] Finished at: 2023-12-28T09:03:03+01:00
+[INFO] ------------------------------------------------------------------------

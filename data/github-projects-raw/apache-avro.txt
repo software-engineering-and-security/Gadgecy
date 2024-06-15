@@ -1,0 +1,1150 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Apache Avro Toplevel                                               [pom]
+[INFO] Apache Avro Java                                                   [pom]
+[INFO] Apache Avro                                                     [bundle]
+[INFO] Apache Avro Android Compatibility                                  [jar]
+[INFO] Apache Avro IDL                                                 [bundle]
+[INFO] Apache Avro Compiler                                            [bundle]
+[INFO] Apache Avro Maven Plugin                                  [maven-plugin]
+[INFO] Apache Avro IPC                                                 [bundle]
+[INFO] Apache Avro IPC Jetty                                           [bundle]
+[INFO] Apache Avro IPC Netty                                           [bundle]
+[INFO] Trevni Java                                                        [pom]
+[INFO] Trevni Java Core                                                   [jar]
+[INFO] Apache Avro Mapred API                                          [bundle]
+[INFO] Trevni Java Avro                                                   [jar]
+[INFO] Trevni Specification                                               [pom]
+[INFO] Apache Avro Tools                                                  [jar]
+[INFO] Apache Avro Protobuf Compatibility                              [bundle]
+[INFO] Apache Avro Thrift Compatibility                                [bundle]
+[INFO] Apache Avro Maven Archetypes                                       [pom]
+[INFO] Apache Avro Maven Service Archetype                    [maven-archetype]
+[INFO] Apache Avro gRPC                                                [bundle]
+[INFO] Avro Integration Tests                                             [pom]
+[INFO] Apache Avro Codegen Test dependencies                              [jar]
+[INFO] Apache Avro Codegen Test                                           [jar]
+[INFO] Apache Avro Performance Test Suite                                 [jar]
+[INFO] 
+[INFO] -------------------< org.apache.avro:avro-toplevel >--------------------
+[INFO] Building Apache Avro Toplevel 1.12.0-SNAPSHOT                     [1/25]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ avro-toplevel ---
+[INFO] digraph "org.apache.avro:avro-toplevel:pom:1.12.0-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< org.apache.avro:avro-parent >---------------------
+[INFO] Building Apache Avro Java 1.12.0-SNAPSHOT                         [2/25]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ avro-parent ---
+[INFO] digraph "org.apache.avro:avro-parent:pom:1.12.0-SNAPSHOT" { 
+[INFO] 	"org.apache.avro:avro-parent:pom:1.12.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-parent:pom:1.12.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-parent:pom:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.avro:avro-parent:pom:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------------< org.apache.avro:avro >------------------------
+[INFO] Building Apache Avro 1.12.0-SNAPSHOT                              [3/25]
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ avro ---
+[INFO] digraph "org.apache.avro:avro:bundle:1.12.0-SNAPSHOT" { 
+[INFO] 	"org.apache.avro:avro:bundle:1.12.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro:bundle:1.12.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro:bundle:1.12.0-SNAPSHOT" -> "org.apache.commons:commons-compress:jar:1.24.0:compile" ; 
+[INFO] 	"org.apache.avro:avro:bundle:1.12.0-SNAPSHOT" -> "org.xerial.snappy:snappy-java:jar:1.1.10.5:compile" ; 
+[INFO] 	"org.apache.avro:avro:bundle:1.12.0-SNAPSHOT" -> "org.tukaani:xz:jar:1.9:compile" ; 
+[INFO] 	"org.apache.avro:avro:bundle:1.12.0-SNAPSHOT" -> "com.github.luben:zstd-jni:jar:1.5.5-6:compile" ; 
+[INFO] 	"org.apache.avro:avro:bundle:1.12.0-SNAPSHOT" -> "org.hamcrest:hamcrest-library:jar:2.2:test" ; 
+[INFO] 	"org.apache.avro:avro:bundle:1.12.0-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.11.0:test" ; 
+[INFO] 	"org.apache.avro:avro:bundle:1.12.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro:bundle:1.12.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro:bundle:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.avro:avro:bundle:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.3:compile" ; 
+[INFO] 	"org.hamcrest:hamcrest-library:jar:2.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "net.bytebuddy:byte-buddy:jar:1.12.19:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.19:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< org.apache.avro:avro-android >--------------------
+[INFO] Building Apache Avro Android Compatibility 1.12.0-SNAPSHOT        [4/25]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/avro/avro/1.12.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/snapshots/org/apache/avro/avro/1.12.0-SNAPSHOT/maven-metadata.xml (1.4 kB at 827 B/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ avro-android ---
+[INFO] digraph "org.apache.avro:avro-android:jar:1.12.0-SNAPSHOT" { 
+[INFO] 	"org.apache.avro:avro-android:jar:1.12.0-SNAPSHOT" -> "org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-android:jar:1.12.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro-android:jar:1.12.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro-android:jar:1.12.0-SNAPSHOT" -> "org.apache.commons:commons-compress:jar:1.24.0:compile" ; 
+[INFO] 	"org.apache.avro:avro-android:jar:1.12.0-SNAPSHOT" -> "org.xerial.snappy:snappy-java:jar:1.1.10.5:compile" ; 
+[INFO] 	"org.apache.avro:avro-android:jar:1.12.0-SNAPSHOT" -> "org.tukaani:xz:jar:1.9:compile" ; 
+[INFO] 	"org.apache.avro:avro-android:jar:1.12.0-SNAPSHOT" -> "com.github.luben:zstd-jni:jar:1.5.5-6:compile" ; 
+[INFO] 	"org.apache.avro:avro-android:jar:1.12.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-android:jar:1.12.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-android:jar:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.avro:avro-android:jar:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.3:compile" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< org.apache.avro:avro-idl >----------------------
+[INFO] Building Apache Avro IDL 1.12.0-SNAPSHOT                          [5/25]
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ avro-idl ---
+[INFO] digraph "org.apache.avro:avro-idl:bundle:1.12.0-SNAPSHOT" { 
+[INFO] 	"org.apache.avro:avro-idl:bundle:1.12.0-SNAPSHOT" -> "org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-idl:bundle:1.12.0-SNAPSHOT" -> "org.antlr:antlr4-runtime:jar:4.9.3:compile" ; 
+[INFO] 	"org.apache.avro:avro-idl:bundle:1.12.0-SNAPSHOT" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"org.apache.avro:avro-idl:bundle:1.12.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro-idl:bundle:1.12.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-idl:bundle:1.12.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-idl:bundle:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.avro:avro-idl:bundle:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" -> "org.apache.commons:commons-compress:jar:1.24.0:compile" ; 
+[INFO] 	"org.apache.commons:commons-text:jar:1.10.0:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.3:compile" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< org.apache.avro:avro-compiler >--------------------
+[INFO] Building Apache Avro Compiler 1.12.0-SNAPSHOT                     [6/25]
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ avro-compiler ---
+[INFO] digraph "org.apache.avro:avro-compiler:bundle:1.12.0-SNAPSHOT" { 
+[INFO] 	"org.apache.avro:avro-compiler:bundle:1.12.0-SNAPSHOT" -> "org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-compiler:bundle:1.12.0-SNAPSHOT" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"org.apache.avro:avro-compiler:bundle:1.12.0-SNAPSHOT" -> "org.apache.velocity:velocity-engine-core:jar:2.3:compile" ; 
+[INFO] 	"org.apache.avro:avro-compiler:bundle:1.12.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro-compiler:bundle:1.12.0-SNAPSHOT" -> "org.apache.ant:ant:jar:1.10.14:provided" ; 
+[INFO] 	"org.apache.avro:avro-compiler:bundle:1.12.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-compiler:bundle:1.12.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-compiler:bundle:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.avro:avro-compiler:bundle:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" -> "org.apache.commons:commons-compress:jar:1.24.0:compile" ; 
+[INFO] 	"org.apache.commons:commons-text:jar:1.10.0:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.ant:ant:jar:1.10.14:provided" -> "org.apache.ant:ant-launcher:jar:1.10.14:provided" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.apache.avro:avro-maven-plugin >------------------
+[INFO] Building Apache Avro Maven Plugin 1.12.0-SNAPSHOT                 [7/25]
+[INFO] ----------------------------[ maven-plugin ]----------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/avro/avro-idl/1.12.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/snapshots/org/apache/avro/avro-idl/1.12.0-SNAPSHOT/maven-metadata.xml (1.7 kB at 581 B/s)
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/avro/avro-compiler/1.12.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/snapshots/org/apache/avro/avro-compiler/1.12.0-SNAPSHOT/maven-metadata.xml (1.7 kB at 204 B/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ avro-maven-plugin ---
+[INFO] digraph "org.apache.avro:avro-maven-plugin:maven-plugin:1.12.0-SNAPSHOT" { 
+[INFO] 	"org.apache.avro:avro-maven-plugin:maven-plugin:1.12.0-SNAPSHOT" -> "org.apache.maven:maven-core:jar:3.3.9:provided" ; 
+[INFO] 	"org.apache.avro:avro-maven-plugin:maven-plugin:1.12.0-SNAPSHOT" -> "org.codehaus.plexus:plexus-utils:jar:3.5.1:provided" ; 
+[INFO] 	"org.apache.avro:avro-maven-plugin:maven-plugin:1.12.0-SNAPSHOT" -> "org.apache.maven.shared:file-management:jar:3.1.0:compile" ; 
+[INFO] 	"org.apache.avro:avro-maven-plugin:maven-plugin:1.12.0-SNAPSHOT" -> "org.apache.avro:avro-idl:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-maven-plugin:maven-plugin:1.12.0-SNAPSHOT" -> "org.apache.avro:avro-compiler:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-maven-plugin:maven-plugin:1.12.0-SNAPSHOT" -> "org.apache.maven:maven-compat:jar:3.3.9:test" ; 
+[INFO] 	"org.apache.avro:avro-maven-plugin:maven-plugin:1.12.0-SNAPSHOT" -> "org.apache.maven.plugin-testing:maven-plugin-testing-tools:jar:3.3.0:test" ; 
+[INFO] 	"org.apache.avro:avro-maven-plugin:maven-plugin:1.12.0-SNAPSHOT" -> "org.apache.maven.plugin-testing:maven-plugin-testing-harness:jar:3.3.0:test" ; 
+[INFO] 	"org.apache.avro:avro-maven-plugin:maven-plugin:1.12.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-maven-plugin:maven-plugin:1.12.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-maven-plugin:maven-plugin:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.avro:avro-maven-plugin:maven-plugin:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.3.9:provided" -> "org.apache.maven:maven-model:jar:3.3.9:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.3.9:provided" -> "org.apache.maven:maven-settings:jar:3.3.9:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.3.9:provided" -> "org.apache.maven:maven-settings-builder:jar:3.3.9:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.3.9:provided" -> "org.apache.maven:maven-repository-metadata:jar:3.3.9:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.3.9:provided" -> "org.apache.maven:maven-artifact:jar:3.3.9:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.3.9:provided" -> "org.apache.maven:maven-plugin-api:jar:3.3.9:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.3.9:provided" -> "org.apache.maven:maven-model-builder:jar:3.3.9:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.3.9:provided" -> "org.apache.maven:maven-aether-provider:jar:3.3.9:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.3.9:provided" -> "org.eclipse.aether:aether-impl:jar:1.0.2.v20150114:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.3.9:provided" -> "org.eclipse.aether:aether-api:jar:1.0.2.v20150114:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.3.9:provided" -> "org.eclipse.aether:aether-util:jar:1.0.2.v20150114:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.3.9:provided" -> "org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.3.2:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.3.9:provided" -> "com.google.inject:guice:jar:no_aop:4.0:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.3.9:provided" -> "org.codehaus.plexus:plexus-interpolation:jar:1.21:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.3.9:provided" -> "org.codehaus.plexus:plexus-classworlds:jar:2.5.2:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.3.9:provided" -> "org.codehaus.plexus:plexus-component-annotations:jar:1.6:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.3.9:provided" -> "org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3:provided" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.3.9:provided" -> "org.apache.commons:commons-lang3:jar:3.4:compile" ; 
+[INFO] 	"org.apache.maven:maven-settings-builder:jar:3.3.9:provided" -> "org.apache.maven:maven-builder-support:jar:3.3.9:provided" ; 
+[INFO] 	"org.apache.maven:maven-model-builder:jar:3.3.9:provided" -> "com.google.guava:guava:jar:18.0:provided" ; 
+[INFO] 	"org.apache.maven:maven-aether-provider:jar:3.3.9:provided" -> "org.eclipse.aether:aether-spi:jar:1.0.2.v20150114:provided" ; 
+[INFO] 	"org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.3.2:provided" -> "javax.enterprise:cdi-api:jar:1.0:provided" ; 
+[INFO] 	"org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.3.2:provided" -> "org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.3.2:provided" ; 
+[INFO] 	"javax.enterprise:cdi-api:jar:1.0:provided" -> "javax.annotation:jsr250-api:jar:1.0:provided" ; 
+[INFO] 	"com.google.inject:guice:jar:no_aop:4.0:provided" -> "javax.inject:javax.inject:jar:1:provided" ; 
+[INFO] 	"com.google.inject:guice:jar:no_aop:4.0:provided" -> "aopalliance:aopalliance:jar:1.0:provided" ; 
+[INFO] 	"org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3:provided" -> "org.sonatype.plexus:plexus-cipher:jar:1.4:provided" ; 
+[INFO] 	"org.apache.maven.shared:file-management:jar:3.1.0:compile" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"org.apache.avro:avro-idl:jar:1.12.0-SNAPSHOT:compile" -> "org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-idl:jar:1.12.0-SNAPSHOT:compile" -> "org.antlr:antlr4-runtime:jar:4.9.3:compile" ; 
+[INFO] 	"org.apache.avro:avro-idl:jar:1.12.0-SNAPSHOT:compile" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"org.apache.avro:avro-idl:jar:1.12.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" -> "org.apache.commons:commons-compress:jar:1.24.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro-compiler:jar:1.12.0-SNAPSHOT:compile" -> "org.apache.velocity:velocity-engine-core:jar:2.3:compile" ; 
+[INFO] 	"org.apache.maven:maven-compat:jar:3.3.9:test" -> "org.apache.maven.wagon:wagon-provider-api:jar:2.10:test" ; 
+[INFO] 	"org.apache.maven.plugin-testing:maven-plugin-testing-tools:jar:3.3.0:test" -> "org.apache.maven.shared:maven-invoker:jar:2.0.11:test" ; 
+[INFO] 	"org.apache.maven.plugin-testing:maven-plugin-testing-harness:jar:3.3.0:test" -> "org.codehaus.plexus:plexus-archiver:jar:2.2:test" ; 
+[INFO] 	"org.codehaus.plexus:plexus-archiver:jar:2.2:test" -> "org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:test" ; 
+[INFO] 	"org.codehaus.plexus:plexus-archiver:jar:2.2:test" -> "org.codehaus.plexus:plexus-io:jar:2.0.4:test" ; 
+[INFO] 	"org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:test" -> "classworlds:classworlds:jar:1.1-alpha-2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------------< org.apache.avro:avro-ipc >----------------------
+[INFO] Building Apache Avro IPC 1.12.0-SNAPSHOT                          [8/25]
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/avro/avro-maven-plugin/1.12.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/snapshots/org/apache/avro/avro-maven-plugin/1.12.0-SNAPSHOT/maven-metadata.xml (1.4 kB at 18 kB/s)
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/avro/avro-maven-plugin/1.12.0-SNAPSHOT/avro-maven-plugin-1.12.0-20231221.100647-229.jar
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/snapshots/org/apache/avro/avro-maven-plugin/1.12.0-SNAPSHOT/avro-maven-plugin-1.12.0-20231221.100647-229.jar (39 kB at 75 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ avro-ipc ---
+[INFO] digraph "org.apache.avro:avro-ipc:bundle:1.12.0-SNAPSHOT" { 
+[INFO] 	"org.apache.avro:avro-ipc:bundle:1.12.0-SNAPSHOT" -> "org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc:bundle:1.12.0-SNAPSHOT" -> "org.apache.avro:avro:test-jar:tests:1.12.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.avro:avro-ipc:bundle:1.12.0-SNAPSHOT" -> "org.apache.avro:avro-compiler:jar:1.12.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.avro:avro-ipc:bundle:1.12.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc:bundle:1.12.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc:bundle:1.12.0-SNAPSHOT" -> "org.apache.velocity:velocity-engine-core:jar:2.3:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc:bundle:1.12.0-SNAPSHOT" -> "javax.servlet:javax.servlet-api:jar:4.0.1:provided" ; 
+[INFO] 	"org.apache.avro:avro-ipc:bundle:1.12.0-SNAPSHOT" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc:bundle:1.12.0-SNAPSHOT" -> "org.xerial.snappy:snappy-java:jar:1.1.10.5:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc:bundle:1.12.0-SNAPSHOT" -> "org.tukaani:xz:jar:1.9:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc:bundle:1.12.0-SNAPSHOT" -> "com.github.luben:zstd-jni:jar:1.5.5-6:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc:bundle:1.12.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-ipc:bundle:1.12.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-ipc:bundle:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc:bundle:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" -> "org.apache.commons:commons-compress:jar:1.24.0:compile" ; 
+[INFO] 	"org.apache.avro:avro-compiler:jar:1.12.0-SNAPSHOT:test" -> "org.apache.commons:commons-text:jar:1.10.0:test" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.velocity:velocity-engine-core:jar:2.3:compile" -> "org.apache.commons:commons-lang3:jar:3.11:compile" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< org.apache.avro:avro-ipc-jetty >-------------------
+[INFO] Building Apache Avro IPC Jetty 1.12.0-SNAPSHOT                    [9/25]
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/avro/avro-ipc/1.12.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/snapshots/org/apache/avro/avro-ipc/1.12.0-SNAPSHOT/maven-metadata.xml (1.4 kB at 18 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ avro-ipc-jetty ---
+[INFO] digraph "org.apache.avro:avro-ipc-jetty:bundle:1.12.0-SNAPSHOT" { 
+[INFO] 	"org.apache.avro:avro-ipc-jetty:bundle:1.12.0-SNAPSHOT" -> "org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc-jetty:bundle:1.12.0-SNAPSHOT" -> "org.apache.avro:avro-ipc:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc-jetty:bundle:1.12.0-SNAPSHOT" -> "org.apache.avro:avro:test-jar:tests:1.12.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.avro:avro-ipc-jetty:bundle:1.12.0-SNAPSHOT" -> "org.apache.avro:avro-ipc:test-jar:tests:1.12.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.avro:avro-ipc-jetty:bundle:1.12.0-SNAPSHOT" -> "org.apache.avro:avro-compiler:jar:1.12.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.avro:avro-ipc-jetty:bundle:1.12.0-SNAPSHOT" -> "org.eclipse.jetty:jetty-server:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc-jetty:bundle:1.12.0-SNAPSHOT" -> "org.eclipse.jetty:jetty-servlet:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc-jetty:bundle:1.12.0-SNAPSHOT" -> "org.eclipse.jetty:jetty-util:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc-jetty:bundle:1.12.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-ipc-jetty:bundle:1.12.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-ipc-jetty:bundle:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc-jetty:bundle:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" -> "org.apache.commons:commons-compress:jar:1.24.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc:jar:1.12.0-SNAPSHOT:compile" -> "org.apache.velocity:velocity-engine-core:jar:2.3:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc:jar:1.12.0-SNAPSHOT:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc:jar:1.12.0-SNAPSHOT:compile" -> "org.xerial.snappy:snappy-java:jar:1.1.10.5:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc:jar:1.12.0-SNAPSHOT:compile" -> "org.tukaani:xz:jar:1.9:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc:jar:1.12.0-SNAPSHOT:compile" -> "com.github.luben:zstd-jni:jar:1.5.5-6:compile" ; 
+[INFO] 	"org.apache.velocity:velocity-engine-core:jar:2.3:compile" -> "org.apache.commons:commons-lang3:jar:3.11:compile" ; 
+[INFO] 	"org.apache.avro:avro-compiler:jar:1.12.0-SNAPSHOT:test" -> "org.apache.commons:commons-text:jar:1.10.0:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.52.v20230823:compile" -> "javax.servlet:javax.servlet-api:jar:4.0.1:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.52.v20230823:compile" -> "org.eclipse.jetty:jetty-http:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.52.v20230823:compile" -> "org.eclipse.jetty:jetty-io:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.52.v20230823:compile" -> "org.eclipse.jetty:jetty-security:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.52.v20230823:compile" -> "org.eclipse.jetty:jetty-util-ajax:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< org.apache.avro:avro-ipc-netty >-------------------
+[INFO] Building Apache Avro IPC Netty 1.12.0-SNAPSHOT                   [10/25]
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ avro-ipc-netty ---
+[INFO] digraph "org.apache.avro:avro-ipc-netty:bundle:1.12.0-SNAPSHOT" { 
+[INFO] 	"org.apache.avro:avro-ipc-netty:bundle:1.12.0-SNAPSHOT" -> "org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc-netty:bundle:1.12.0-SNAPSHOT" -> "org.apache.avro:avro-ipc:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc-netty:bundle:1.12.0-SNAPSHOT" -> "org.apache.avro:avro:test-jar:tests:1.12.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.avro:avro-ipc-netty:bundle:1.12.0-SNAPSHOT" -> "org.apache.avro:avro-ipc:test-jar:tests:1.12.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.avro:avro-ipc-netty:bundle:1.12.0-SNAPSHOT" -> "org.apache.avro:avro-compiler:jar:1.12.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.avro:avro-ipc-netty:bundle:1.12.0-SNAPSHOT" -> "io.netty:netty-buffer:jar:4.1.99.Final:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc-netty:bundle:1.12.0-SNAPSHOT" -> "io.netty:netty-handler:jar:4.1.99.Final:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc-netty:bundle:1.12.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-ipc-netty:bundle:1.12.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-ipc-netty:bundle:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc-netty:bundle:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" -> "org.apache.commons:commons-compress:jar:1.24.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc:jar:1.12.0-SNAPSHOT:compile" -> "org.apache.velocity:velocity-engine-core:jar:2.3:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc:jar:1.12.0-SNAPSHOT:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc:jar:1.12.0-SNAPSHOT:compile" -> "org.xerial.snappy:snappy-java:jar:1.1.10.5:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc:jar:1.12.0-SNAPSHOT:compile" -> "org.tukaani:xz:jar:1.9:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc:jar:1.12.0-SNAPSHOT:compile" -> "com.github.luben:zstd-jni:jar:1.5.5-6:compile" ; 
+[INFO] 	"org.apache.velocity:velocity-engine-core:jar:2.3:compile" -> "org.apache.commons:commons-lang3:jar:3.11:compile" ; 
+[INFO] 	"org.apache.avro:avro-compiler:jar:1.12.0-SNAPSHOT:test" -> "org.apache.commons:commons-text:jar:1.10.0:test" ; 
+[INFO] 	"io.netty:netty-buffer:jar:4.1.99.Final:compile" -> "io.netty:netty-common:jar:4.1.99.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.99.Final:compile" -> "io.netty:netty-resolver:jar:4.1.99.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.99.Final:compile" -> "io.netty:netty-transport:jar:4.1.99.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.99.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.99.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.99.Final:compile" -> "io.netty:netty-codec:jar:4.1.99.Final:compile" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< org.apache.avro:trevni-java >---------------------
+[INFO] Building Trevni Java 1.12.0-SNAPSHOT                             [11/25]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ trevni-java ---
+[INFO] digraph "org.apache.avro:trevni-java:pom:1.12.0-SNAPSHOT" { 
+[INFO] 	"org.apache.avro:trevni-java:pom:1.12.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:trevni-java:pom:1.12.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:trevni-java:pom:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.avro:trevni-java:pom:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< org.apache.avro:trevni-core >---------------------
+[INFO] Building Trevni Java Core 1.12.0-SNAPSHOT                        [12/25]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ trevni-core ---
+[INFO] digraph "org.apache.avro:trevni-core:jar:1.12.0-SNAPSHOT" { 
+[INFO] 	"org.apache.avro:trevni-core:jar:1.12.0-SNAPSHOT" -> "org.xerial.snappy:snappy-java:jar:1.1.10.5:compile" ; 
+[INFO] 	"org.apache.avro:trevni-core:jar:1.12.0-SNAPSHOT" -> "org.apache.commons:commons-compress:jar:1.24.0:compile" ; 
+[INFO] 	"org.apache.avro:trevni-core:jar:1.12.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:trevni-core:jar:1.12.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:trevni-core:jar:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.avro:trevni-core:jar:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< org.apache.avro:avro-mapred >---------------------
+[INFO] Building Apache Avro Mapred API 1.12.0-SNAPSHOT                  [13/25]
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/avro/avro-ipc-jetty/1.12.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/snapshots/org/apache/avro/avro-ipc-jetty/1.12.0-SNAPSHOT/maven-metadata.xml (1.4 kB at 16 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ avro-mapred ---
+[INFO] digraph "org.apache.avro:avro-mapred:bundle:1.12.0-SNAPSHOT" { 
+[INFO] 	"org.apache.avro:avro-mapred:bundle:1.12.0-SNAPSHOT" -> "org.apache.avro:avro-ipc:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-mapred:bundle:1.12.0-SNAPSHOT" -> "org.apache.avro:avro-ipc-jetty:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-mapred:bundle:1.12.0-SNAPSHOT" -> "org.apache.avro:avro-ipc:jar:tests:1.12.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.avro:avro-mapred:bundle:1.12.0-SNAPSHOT" -> "org.apache.avro:avro:test-jar:tests:1.12.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.avro:avro-mapred:bundle:1.12.0-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.11.0:test" ; 
+[INFO] 	"org.apache.avro:avro-mapred:bundle:1.12.0-SNAPSHOT" -> "org.hamcrest:hamcrest-library:jar:2.2:test" ; 
+[INFO] 	"org.apache.avro:avro-mapred:bundle:1.12.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro-mapred:bundle:1.12.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.avro:avro-mapred:bundle:1.12.0-SNAPSHOT" -> "org.xerial.snappy:snappy-java:jar:1.1.10.5:test" ; 
+[INFO] 	"org.apache.avro:avro-mapred:bundle:1.12.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-mapred:bundle:1.12.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-mapred:bundle:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.avro:avro-mapred:bundle:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"org.apache.avro:avro-ipc:jar:1.12.0-SNAPSHOT:compile" -> "org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc:jar:1.12.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc:jar:1.12.0-SNAPSHOT:compile" -> "org.apache.velocity:velocity-engine-core:jar:2.3:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc:jar:1.12.0-SNAPSHOT:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc:jar:1.12.0-SNAPSHOT:compile" -> "org.tukaani:xz:jar:1.9:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc:jar:1.12.0-SNAPSHOT:compile" -> "com.github.luben:zstd-jni:jar:1.5.5-6:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.velocity:velocity-engine-core:jar:2.3:compile" -> "org.apache.commons:commons-lang3:jar:3.11:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc-jetty:jar:1.12.0-SNAPSHOT:compile" -> "org.eclipse.jetty:jetty-server:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc-jetty:jar:1.12.0-SNAPSHOT:compile" -> "org.eclipse.jetty:jetty-servlet:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc-jetty:jar:1.12.0-SNAPSHOT:compile" -> "org.eclipse.jetty:jetty-util:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.52.v20230823:compile" -> "javax.servlet:javax.servlet-api:jar:4.0.1:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.52.v20230823:compile" -> "org.eclipse.jetty:jetty-http:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.52.v20230823:compile" -> "org.eclipse.jetty:jetty-io:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.52.v20230823:compile" -> "org.eclipse.jetty:jetty-security:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.52.v20230823:compile" -> "org.eclipse.jetty:jetty-util-ajax:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.apache.avro:avro:test-jar:tests:1.12.0-SNAPSHOT:test" -> "org.apache.commons:commons-compress:jar:1.24.0:compile" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "net.bytebuddy:byte-buddy:jar:1.12.19:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.19:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.11.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-library:jar:2.2:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-common:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-hdfs-client:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-yarn-api:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-yarn-client:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-annotations:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.hadoop.thirdparty:hadoop-shaded-protobuf_3_7:jar:1.1.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.hadoop.thirdparty:hadoop-shaded-guava:jar:1.1.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.google.guava:guava:jar:27.0-jre:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-cli:commons-cli:jar:1.2:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.commons:commons-math3:jar:3.1.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-codec:commons-codec:jar:1.15:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-io:commons-io:jar:2.8.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-net:commons-net:jar:3.9.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-collections:commons-collections:jar:3.2.2:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "jakarta.activation:jakarta.activation-api:jar:1.2.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.eclipse.jetty:jetty-webapp:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "javax.servlet.jsp:jsp-api:jar:2.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.sun.jersey:jersey-servlet:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-logging:commons-logging:jar:1.1.3:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "ch.qos.reload4j:reload4j:jar:1.2.22:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-beanutils:commons-beanutils:jar:1.9.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.commons:commons-configuration2:jar:2.8.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.commons:commons-text:jar:1.10.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.slf4j:slf4j-reload4j:jar:1.7.36:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.google.re2j:re2j:jar:1.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.google.protobuf:protobuf-java:jar:2.5.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.google.code.gson:gson:jar:2.9.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.curator:curator-client:jar:4.2.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.curator:curator-recipes:jar:4.2.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.kerby:kerb-core:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.codehaus.woodstox:stax2-api:jar:4.2.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.fasterxml.woodstox:woodstox-core:jar:5.4.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "dnsjava:dnsjava:jar:2.1.7:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:27.0-jre:provided" -> "com.google.guava:failureaccess:jar:1.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:27.0-jre:provided" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:27.0-jre:provided" -> "org.checkerframework:checker-qual:jar:2.5.2:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:27.0-jre:provided" -> "com.google.j2objc:j2objc-annotations:jar:1.1:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:27.0-jre:provided" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.17:provided" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:provided" -> "org.apache.httpcomponents:httpcore:jar:4.4.13:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-webapp:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-xml:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" -> "com.nimbusds:nimbus-jose-jwt:jar:9.8.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" -> "net.minidev:json-smart:jar:2.4.7:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" -> "org.apache.curator:curator-framework:jar:4.2.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" -> "org.apache.kerby:kerb-simplekdc:jar:1.0.1:provided" ; 
+[INFO] 	"com.nimbusds:nimbus-jose-jwt:jar:9.8.1:provided" -> "com.github.stephenc.jcip:jcip-annotations:jar:1.0-1:provided" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.7:provided" -> "net.minidev:accessors-smart:jar:2.4.7:provided" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.7:provided" -> "org.ow2.asm:asm:jar:9.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-simplekdc:jar:1.0.1:provided" -> "org.apache.kerby:kerb-client:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-simplekdc:jar:1.0.1:provided" -> "org.apache.kerby:kerb-admin:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:provided" -> "org.apache.kerby:kerby-config:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:provided" -> "org.apache.kerby:kerb-common:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:provided" -> "org.apache.kerby:kerb-util:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:provided" -> "org.apache.kerby:token-provider:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-common:jar:1.0.1:provided" -> "org.apache.kerby:kerb-crypto:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-admin:jar:1.0.1:provided" -> "org.apache.kerby:kerb-server:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-admin:jar:1.0.1:provided" -> "org.apache.kerby:kerby-xdr:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-server:jar:1.0.1:provided" -> "org.apache.kerby:kerb-identity:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-core:jar:1.0.1:provided" -> "org.apache.kerby:kerby-pkix:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerby-pkix:jar:1.0.1:provided" -> "org.apache.kerby:kerby-asn1:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerby-pkix:jar:1.0.1:provided" -> "org.apache.kerby:kerby-util:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-api:jar:3.3.5:provided" -> "javax.xml.bind:jaxb-api:jar:2.2.11:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-client:jar:3.3.5:provided" -> "org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-client:jar:3.3.5:provided" -> "org.jline:jline:jar:3.9.0:provided" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-client:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty.websocket:websocket-common:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-common:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty.websocket:websocket-api:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.sun.jersey:jersey-core:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.sun.jersey:jersey-client:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.15.3:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.15.3:provided" ; 
+[INFO] 	"com.sun.jersey:jersey-core:jar:1.19.4:provided" -> "javax.ws.rs:jsr311-api:jar:1.1.1:provided" ; 
+[INFO] 	"com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.15.3:provided" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:provided" ; 
+[INFO] 	"com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.15.3:provided" -> "com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:jar:2.15.3:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-mapreduce-client-common:jar:3.3.5:provided" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< org.apache.avro:trevni-avro >---------------------
+[INFO] Building Trevni Java Avro 1.12.0-SNAPSHOT                        [14/25]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/avro/trevni-core/1.12.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/snapshots/org/apache/avro/trevni-core/1.12.0-SNAPSHOT/maven-metadata.xml (1.4 kB at 4.9 kB/s)
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/avro/avro-mapred/1.12.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/snapshots/org/apache/avro/avro-mapred/1.12.0-SNAPSHOT/maven-metadata.xml (1.4 kB at 13 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ trevni-avro ---
+[INFO] digraph "org.apache.avro:trevni-avro:jar:1.12.0-SNAPSHOT" { 
+[INFO] 	"org.apache.avro:trevni-avro:jar:1.12.0-SNAPSHOT" -> "org.apache.avro:trevni-core:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:trevni-avro:jar:1.12.0-SNAPSHOT" -> "org.apache.avro:trevni-core:jar:tests:1.12.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.avro:trevni-avro:jar:1.12.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.avro:trevni-avro:jar:1.12.0-SNAPSHOT" -> "org.apache.avro:avro-mapred:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:trevni-avro:jar:1.12.0-SNAPSHOT" -> "org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:trevni-avro:jar:1.12.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:trevni-avro:jar:1.12.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:trevni-avro:jar:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.avro:trevni-avro:jar:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"org.apache.avro:trevni-core:jar:1.12.0-SNAPSHOT:compile" -> "org.xerial.snappy:snappy-java:jar:1.1.10.5:compile" ; 
+[INFO] 	"org.apache.avro:trevni-core:jar:1.12.0-SNAPSHOT:compile" -> "org.apache.commons:commons-compress:jar:1.24.0:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-common:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-hdfs-client:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-yarn-api:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-yarn-client:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-annotations:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.hadoop.thirdparty:hadoop-shaded-protobuf_3_7:jar:1.1.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.hadoop.thirdparty:hadoop-shaded-guava:jar:1.1.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.google.guava:guava:jar:27.0-jre:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-cli:commons-cli:jar:1.2:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.commons:commons-math3:jar:3.1.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-codec:commons-codec:jar:1.15:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-io:commons-io:jar:2.8.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-net:commons-net:jar:3.9.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-collections:commons-collections:jar:3.2.2:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "jakarta.activation:jakarta.activation-api:jar:1.2.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.eclipse.jetty:jetty-servlet:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.eclipse.jetty:jetty-webapp:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "javax.servlet.jsp:jsp-api:jar:2.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.sun.jersey:jersey-servlet:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-logging:commons-logging:jar:1.1.3:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "ch.qos.reload4j:reload4j:jar:1.2.22:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "commons-beanutils:commons-beanutils:jar:1.9.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.commons:commons-configuration2:jar:2.8.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.commons:commons-text:jar:1.10.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.slf4j:slf4j-reload4j:jar:1.7.36:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.google.re2j:re2j:jar:1.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.google.protobuf:protobuf-java:jar:2.5.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.google.code.gson:gson:jar:2.9.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.curator:curator-client:jar:4.2.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.curator:curator-recipes:jar:4.2.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.apache.kerby:kerb-core:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "org.codehaus.woodstox:stax2-api:jar:4.2.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "com.fasterxml.woodstox:woodstox-core:jar:5.4.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:provided" -> "dnsjava:dnsjava:jar:2.1.7:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:27.0-jre:provided" -> "com.google.guava:failureaccess:jar:1.0:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:27.0-jre:provided" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:27.0-jre:provided" -> "org.checkerframework:checker-qual:jar:2.5.2:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:27.0-jre:provided" -> "com.google.j2objc:j2objc-annotations:jar:1.1:provided" ; 
+[INFO] 	"com.google.guava:guava:jar:27.0-jre:provided" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.17:provided" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:provided" -> "org.apache.httpcomponents:httpcore:jar:4.4.13:provided" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.52.v20230823:compile" -> "org.eclipse.jetty:jetty-security:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.52.v20230823:compile" -> "org.eclipse.jetty:jetty-util-ajax:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-webapp:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-xml:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" -> "com.nimbusds:nimbus-jose-jwt:jar:9.8.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" -> "net.minidev:json-smart:jar:2.4.7:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" -> "org.apache.curator:curator-framework:jar:4.2.0:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:provided" -> "org.apache.kerby:kerb-simplekdc:jar:1.0.1:provided" ; 
+[INFO] 	"com.nimbusds:nimbus-jose-jwt:jar:9.8.1:provided" -> "com.github.stephenc.jcip:jcip-annotations:jar:1.0-1:provided" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.7:provided" -> "net.minidev:accessors-smart:jar:2.4.7:provided" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.7:provided" -> "org.ow2.asm:asm:jar:9.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-simplekdc:jar:1.0.1:provided" -> "org.apache.kerby:kerb-client:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-simplekdc:jar:1.0.1:provided" -> "org.apache.kerby:kerb-admin:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:provided" -> "org.apache.kerby:kerby-config:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:provided" -> "org.apache.kerby:kerb-common:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:provided" -> "org.apache.kerby:kerb-util:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:provided" -> "org.apache.kerby:token-provider:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-common:jar:1.0.1:provided" -> "org.apache.kerby:kerb-crypto:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-admin:jar:1.0.1:provided" -> "org.apache.kerby:kerb-server:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-admin:jar:1.0.1:provided" -> "org.apache.kerby:kerby-xdr:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-server:jar:1.0.1:provided" -> "org.apache.kerby:kerb-identity:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerb-core:jar:1.0.1:provided" -> "org.apache.kerby:kerby-pkix:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerby-pkix:jar:1.0.1:provided" -> "org.apache.kerby:kerby-asn1:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.kerby:kerby-pkix:jar:1.0.1:provided" -> "org.apache.kerby:kerby-util:jar:1.0.1:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-hdfs-client:jar:3.3.5:provided" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-api:jar:3.3.5:provided" -> "javax.xml.bind:jaxb-api:jar:2.2.11:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-client:jar:3.3.5:provided" -> "org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-client:jar:3.3.5:provided" -> "org.jline:jline:jar:3.9.0:provided" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-client:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty:jetty-io:jar:9.4.48.v20220622:compile" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty.websocket:websocket-common:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-common:jar:9.4.48.v20220622:provided" -> "org.eclipse.jetty.websocket:websocket-api:jar:9.4.48.v20220622:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "javax.servlet:javax.servlet-api:jar:4.0.1:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.sun.jersey:jersey-core:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.sun.jersey:jersey-client:jar:1.19.4:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.15.3:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:provided" -> "com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.15.3:provided" ; 
+[INFO] 	"com.sun.jersey:jersey-core:jar:1.19.4:provided" -> "javax.ws.rs:jsr311-api:jar:1.1.1:provided" ; 
+[INFO] 	"com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.15.3:provided" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:provided" ; 
+[INFO] 	"com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.15.3:provided" -> "com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:jar:2.15.3:provided" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:3.3.5:provided" -> "org.apache.hadoop:hadoop-mapreduce-client-common:jar:3.3.5:provided" ; 
+[INFO] 	"org.apache.avro:avro-mapred:jar:1.12.0-SNAPSHOT:compile" -> "org.apache.avro:avro-ipc:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-mapred:jar:1.12.0-SNAPSHOT:compile" -> "org.apache.avro:avro-ipc-jetty:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-mapred:jar:1.12.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc:jar:1.12.0-SNAPSHOT:compile" -> "org.apache.velocity:velocity-engine-core:jar:2.3:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc:jar:1.12.0-SNAPSHOT:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc:jar:1.12.0-SNAPSHOT:compile" -> "org.tukaani:xz:jar:1.9:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc:jar:1.12.0-SNAPSHOT:compile" -> "com.github.luben:zstd-jni:jar:1.5.5-6:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc-jetty:jar:1.12.0-SNAPSHOT:compile" -> "org.eclipse.jetty:jetty-server:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc-jetty:jar:1.12.0-SNAPSHOT:compile" -> "org.eclipse.jetty:jetty-util:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.52.v20230823:compile" -> "org.eclipse.jetty:jetty-http:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< org.apache.avro:trevni-doc >---------------------
+[INFO] Building Trevni Specification 1.12.0-SNAPSHOT                    [15/25]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ trevni-doc ---
+[INFO] digraph "org.apache.avro:trevni-doc:pom:1.12.0-SNAPSHOT" { 
+[INFO] 	"org.apache.avro:trevni-doc:pom:1.12.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:trevni-doc:pom:1.12.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:trevni-doc:pom:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.avro:trevni-doc:pom:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< org.apache.avro:avro-tools >---------------------
+[INFO] Building Apache Avro Tools 1.12.0-SNAPSHOT                       [16/25]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/avro/trevni-avro/1.12.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/snapshots/org/apache/avro/trevni-avro/1.12.0-SNAPSHOT/maven-metadata.xml (1.4 kB at 15 kB/s)
+[WARNING] The artifact org.slf4j:slf4j-log4j12:jar:1.7.36 has been relocated to org.slf4j:slf4j-reload4j:jar:1.7.36
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ avro-tools ---
+[WARNING] The artifact org.slf4j:slf4j-log4j12:jar:1.7.36 has been relocated to org.slf4j:slf4j-reload4j:jar:1.7.36
+[INFO] digraph "org.apache.avro:avro-tools:jar:1.12.0-SNAPSHOT" { 
+[INFO] 	"org.apache.avro:avro-tools:jar:1.12.0-SNAPSHOT" -> "org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-tools:jar:1.12.0-SNAPSHOT" -> "org.apache.avro:avro:jar:tests:1.12.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.avro:avro-tools:jar:1.12.0-SNAPSHOT" -> "org.apache.avro:avro-idl:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-tools:jar:1.12.0-SNAPSHOT" -> "org.apache.avro:avro-compiler:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-tools:jar:1.12.0-SNAPSHOT" -> "org.apache.avro:avro-ipc:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-tools:jar:1.12.0-SNAPSHOT" -> "org.apache.avro:avro-mapred:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-tools:jar:1.12.0-SNAPSHOT" -> "org.xerial.snappy:snappy-java:jar:1.1.10.5:compile" ; 
+[INFO] 	"org.apache.avro:avro-tools:jar:1.12.0-SNAPSHOT" -> "org.tukaani:xz:jar:1.9:compile" ; 
+[INFO] 	"org.apache.avro:avro-tools:jar:1.12.0-SNAPSHOT" -> "com.github.luben:zstd-jni:jar:1.5.5-6:compile" ; 
+[INFO] 	"org.apache.avro:avro-tools:jar:1.12.0-SNAPSHOT" -> "org.apache.avro:avro-mapred:test-jar:tests:1.12.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.avro:avro-tools:jar:1.12.0-SNAPSHOT" -> "commons-cli:commons-cli:jar:1.5.0:compile" ; 
+[INFO] 	"org.apache.avro:avro-tools:jar:1.12.0-SNAPSHOT" -> "org.apache.avro:trevni-core:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-tools:jar:1.12.0-SNAPSHOT" -> "org.apache.avro:trevni-avro:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-tools:jar:1.12.0-SNAPSHOT" -> "org.apache.avro:trevni-core:jar:tests:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-tools:jar:1.12.0-SNAPSHOT" -> "org.apache.avro:trevni-avro:jar:tests:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-tools:jar:1.12.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro-tools:jar:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-reload4j:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.avro:avro-tools:jar:1.12.0-SNAPSHOT" -> "ch.qos.reload4j:reload4j:jar:1.2.25:compile" ; 
+[INFO] 	"org.apache.avro:avro-tools:jar:1.12.0-SNAPSHOT" -> "org.apache.hadoop:hadoop-client:jar:3.3.5:compile" ; 
+[INFO] 	"org.apache.avro:avro-tools:jar:1.12.0-SNAPSHOT" -> "net.sf.jopt-simple:jopt-simple:jar:5.0.4:compile" ; 
+[INFO] 	"org.apache.avro:avro-tools:jar:1.12.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-tools:jar:1.12.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-tools:jar:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.avro:avro-tools:jar:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" -> "org.apache.commons:commons-compress:jar:1.24.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro-idl:jar:1.12.0-SNAPSHOT:compile" -> "org.antlr:antlr4-runtime:jar:4.9.3:compile" ; 
+[INFO] 	"org.apache.avro:avro-idl:jar:1.12.0-SNAPSHOT:compile" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"org.apache.commons:commons-text:jar:1.10.0:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.avro:avro-compiler:jar:1.12.0-SNAPSHOT:compile" -> "org.apache.velocity:velocity-engine-core:jar:2.3:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc:jar:1.12.0-SNAPSHOT:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.apache.avro:avro-mapred:jar:1.12.0-SNAPSHOT:compile" -> "org.apache.avro:avro-ipc-jetty:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc-jetty:jar:1.12.0-SNAPSHOT:compile" -> "org.eclipse.jetty:jetty-server:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc-jetty:jar:1.12.0-SNAPSHOT:compile" -> "org.eclipse.jetty:jetty-servlet:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.apache.avro:avro-ipc-jetty:jar:1.12.0-SNAPSHOT:compile" -> "org.eclipse.jetty:jetty-util:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.52.v20230823:compile" -> "javax.servlet:javax.servlet-api:jar:4.0.1:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.52.v20230823:compile" -> "org.eclipse.jetty:jetty-http:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.52.v20230823:compile" -> "org.eclipse.jetty:jetty-io:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.52.v20230823:compile" -> "org.eclipse.jetty:jetty-security:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.52.v20230823:compile" -> "org.eclipse.jetty:jetty-util-ajax:jar:9.4.52.v20230823:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:compile" -> "org.apache.hadoop:hadoop-common:jar:3.3.5:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:compile" -> "org.apache.hadoop:hadoop-hdfs-client:jar:3.3.5:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:compile" -> "org.apache.hadoop:hadoop-yarn-api:jar:3.3.5:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:compile" -> "org.apache.hadoop:hadoop-yarn-client:jar:3.3.5:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:compile" -> "org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:compile" -> "org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:3.3.5:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-client:jar:3.3.5:compile" -> "org.apache.hadoop:hadoop-annotations:jar:3.3.5:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "org.apache.hadoop.thirdparty:hadoop-shaded-protobuf_3_7:jar:1.1.1:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "org.apache.hadoop.thirdparty:hadoop-shaded-guava:jar:1.1.1:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "com.google.guava:guava:jar:27.0-jre:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "org.apache.commons:commons-math3:jar:3.1.1:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "commons-io:commons-io:jar:2.8.0:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "commons-net:commons-net:jar:3.9.0:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "jakarta.activation:jakarta.activation-api:jar:1.2.1:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "org.eclipse.jetty:jetty-webapp:jar:9.4.48.v20220622:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "javax.servlet.jsp:jsp-api:jar:2.1:runtime" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "com.sun.jersey:jersey-servlet:jar:1.19.4:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "commons-logging:commons-logging:jar:1.1.3:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "commons-beanutils:commons-beanutils:jar:1.9.4:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "org.apache.commons:commons-configuration2:jar:2.8.0:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "com.google.re2j:re2j:jar:1.1:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "com.google.protobuf:protobuf-java:jar:2.5.0:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "com.google.code.gson:gson:jar:2.9.0:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "org.apache.hadoop:hadoop-auth:jar:3.3.5:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "org.apache.kerby:kerb-core:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "org.codehaus.woodstox:stax2-api:jar:4.2.1:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "com.fasterxml.woodstox:woodstox-core:jar:5.4.0:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-common:jar:3.3.5:compile" -> "dnsjava:dnsjava:jar:2.1.7:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:27.0-jre:compile" -> "com.google.guava:failureaccess:jar:1.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:27.0-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:27.0-jre:compile" -> "org.checkerframework:checker-qual:jar:2.5.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:27.0-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:27.0-jre:compile" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.17:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.13:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-webapp:jar:9.4.48.v20220622:compile" -> "org.eclipse.jetty:jetty-xml:jar:9.4.48.v20220622:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:compile" -> "com.nimbusds:nimbus-jose-jwt:jar:9.8.1:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:compile" -> "net.minidev:json-smart:jar:2.4.7:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-auth:jar:3.3.5:compile" -> "org.apache.kerby:kerb-simplekdc:jar:1.0.1:compile" ; 
+[INFO] 	"com.nimbusds:nimbus-jose-jwt:jar:9.8.1:compile" -> "com.github.stephenc.jcip:jcip-annotations:jar:1.0-1:compile" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.7:compile" -> "net.minidev:accessors-smart:jar:2.4.7:compile" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:2.4.7:compile" -> "org.ow2.asm:asm:jar:9.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-simplekdc:jar:1.0.1:compile" -> "org.apache.kerby:kerb-client:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-simplekdc:jar:1.0.1:compile" -> "org.apache.kerby:kerb-admin:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:compile" -> "org.apache.kerby:kerby-config:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:compile" -> "org.apache.kerby:kerb-common:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:compile" -> "org.apache.kerby:kerb-util:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-client:jar:1.0.1:compile" -> "org.apache.kerby:token-provider:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-common:jar:1.0.1:compile" -> "org.apache.kerby:kerb-crypto:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-admin:jar:1.0.1:compile" -> "org.apache.kerby:kerb-server:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-admin:jar:1.0.1:compile" -> "org.apache.kerby:kerby-xdr:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-server:jar:1.0.1:compile" -> "org.apache.kerby:kerb-identity:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerb-core:jar:1.0.1:compile" -> "org.apache.kerby:kerby-pkix:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerby-pkix:jar:1.0.1:compile" -> "org.apache.kerby:kerby-asn1:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.kerby:kerby-pkix:jar:1.0.1:compile" -> "org.apache.kerby:kerby-util:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-api:jar:3.3.5:compile" -> "javax.xml.bind:jaxb-api:jar:2.2.11:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-client:jar:3.3.5:compile" -> "org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-client:jar:3.3.5:compile" -> "org.jline:jline:jar:3.9.0:compile" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:compile" -> "org.eclipse.jetty:jetty-client:jar:9.4.48.v20220622:compile" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-client:jar:9.4.48.v20220622:compile" -> "org.eclipse.jetty.websocket:websocket-common:jar:9.4.48.v20220622:compile" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-common:jar:9.4.48.v20220622:compile" -> "org.eclipse.jetty.websocket:websocket-api:jar:9.4.48.v20220622:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-core:jar:3.3.5:compile" -> "org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:compile" -> "com.sun.jersey:jersey-core:jar:1.19.4:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:compile" -> "com.sun.jersey:jersey-client:jar:1.19.4:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:compile" -> "com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-yarn-common:jar:3.3.5:compile" -> "com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.15.3:compile" ; 
+[INFO] 	"com.sun.jersey:jersey-core:jar:1.19.4:compile" -> "javax.ws.rs:jsr311-api:jar:1.1.1:compile" ; 
+[INFO] 	"com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.15.3:compile" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" ; 
+[INFO] 	"com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.15.3:compile" -> "com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:3.3.5:compile" -> "org.apache.hadoop:hadoop-mapreduce-client-common:jar:3.3.5:compile" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< org.apache.avro:avro-protobuf >--------------------
+[INFO] Building Apache Avro Protobuf Compatibility 1.12.0-SNAPSHOT      [17/25]
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ avro-protobuf ---
+[INFO] digraph "org.apache.avro:avro-protobuf:bundle:1.12.0-SNAPSHOT" { 
+[INFO] 	"org.apache.avro:avro-protobuf:bundle:1.12.0-SNAPSHOT" -> "org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-protobuf:bundle:1.12.0-SNAPSHOT" -> "com.google.protobuf:protobuf-java:jar:3.24.4:compile" ; 
+[INFO] 	"org.apache.avro:avro-protobuf:bundle:1.12.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro-protobuf:bundle:1.12.0-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro-protobuf:bundle:1.12.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-protobuf:bundle:1.12.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-protobuf:bundle:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.avro:avro-protobuf:bundle:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" -> "org.apache.commons:commons-compress:jar:1.24.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.3:compile" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< org.apache.avro:avro-thrift >---------------------
+[INFO] Building Apache Avro Thrift Compatibility 1.12.0-SNAPSHOT        [18/25]
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ avro-thrift ---
+[INFO] digraph "org.apache.avro:avro-thrift:bundle:1.12.0-SNAPSHOT" { 
+[INFO] 	"org.apache.avro:avro-thrift:bundle:1.12.0-SNAPSHOT" -> "org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-thrift:bundle:1.12.0-SNAPSHOT" -> "org.apache.thrift:libthrift:jar:0.16.0:compile" ; 
+[INFO] 	"org.apache.avro:avro-thrift:bundle:1.12.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-thrift:bundle:1.12.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-thrift:bundle:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.avro:avro-thrift:bundle:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" -> "org.apache.commons:commons-compress:jar:1.24.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "org.apache.httpcomponents:httpclient:jar:4.5.13:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "org.apache.httpcomponents:httpcore:jar:4.4.15:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.apache.thrift:libthrift:jar:0.16.0:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents:httpclient:jar:4.5.13:compile" -> "commons-codec:commons-codec:jar:1.11:compile" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.apache.avro:avro-archetypes-parent >---------------
+[INFO] Building Apache Avro Maven Archetypes 1.12.0-SNAPSHOT            [19/25]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ avro-archetypes-parent ---
+[INFO] digraph "org.apache.avro:avro-archetypes-parent:pom:1.12.0-SNAPSHOT" { 
+[INFO] 	"org.apache.avro:avro-archetypes-parent:pom:1.12.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-archetypes-parent:pom:1.12.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-archetypes-parent:pom:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.avro:avro-archetypes-parent:pom:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.apache.avro:avro-service-archetype >---------------
+[INFO] Building Apache Avro Maven Service Archetype 1.12.0-SNAPSHOT     [20/25]
+[INFO] --------------------------[ maven-archetype ]---------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ avro-service-archetype ---
+[INFO] digraph "org.apache.avro:avro-service-archetype:maven-archetype:1.12.0-SNAPSHOT" { 
+[INFO] 	"org.apache.avro:avro-service-archetype:maven-archetype:1.12.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-service-archetype:maven-archetype:1.12.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-service-archetype:maven-archetype:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.avro:avro-service-archetype:maven-archetype:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< org.apache.avro:avro-grpc >----------------------
+[INFO] Building Apache Avro gRPC 1.12.0-SNAPSHOT                        [21/25]
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ avro-grpc ---
+[INFO] digraph "org.apache.avro:avro-grpc:bundle:1.12.0-SNAPSHOT" { 
+[INFO] 	"org.apache.avro:avro-grpc:bundle:1.12.0-SNAPSHOT" -> "io.grpc:grpc-core:jar:1.59.0:compile" ; 
+[INFO] 	"org.apache.avro:avro-grpc:bundle:1.12.0-SNAPSHOT" -> "io.grpc:grpc-stub:jar:1.59.0:compile" ; 
+[INFO] 	"org.apache.avro:avro-grpc:bundle:1.12.0-SNAPSHOT" -> "io.grpc:grpc-netty:jar:1.59.0:test" ; 
+[INFO] 	"org.apache.avro:avro-grpc:bundle:1.12.0-SNAPSHOT" -> "org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-grpc:bundle:1.12.0-SNAPSHOT" -> "org.apache.avro:avro-ipc:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-grpc:bundle:1.12.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-grpc:bundle:1.12.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-grpc:bundle:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.avro:avro-grpc:bundle:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.59.0:compile" -> "io.grpc:grpc-api:jar:1.59.0:compile" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.59.0:compile" -> "com.google.code.gson:gson:jar:2.10.1:runtime" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.59.0:compile" -> "com.google.android:annotations:jar:4.1.1.4:runtime" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.59.0:compile" -> "org.codehaus.mojo:animal-sniffer-annotations:jar:1.23:runtime" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.59.0:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.20.0:compile" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.59.0:compile" -> "com.google.guava:guava:jar:32.0.1-android:compile" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.59.0:compile" -> "io.perfmark:perfmark-api:jar:0.26.0:runtime" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.59.0:compile" -> "io.grpc:grpc-context:jar:1.59.0:runtime" ; 
+[INFO] 	"io.grpc:grpc-core:jar:1.59.0:compile" -> "io.grpc:grpc-util:jar:1.59.0:runtime" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-android:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-android:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-android:compile" -> "org.checkerframework:checker-qual:jar:3.33.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.0.1-android:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"io.grpc:grpc-netty:jar:1.59.0:test" -> "io.netty:netty-codec-http2:jar:4.1.97.Final:test" ; 
+[INFO] 	"io.grpc:grpc-netty:jar:1.59.0:test" -> "io.netty:netty-handler-proxy:jar:4.1.97.Final:test" ; 
+[INFO] 	"io.grpc:grpc-netty:jar:1.59.0:test" -> "io.netty:netty-transport-native-unix-common:jar:4.1.97.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.97.Final:test" -> "io.netty:netty-common:jar:4.1.97.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.97.Final:test" -> "io.netty:netty-buffer:jar:4.1.97.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.97.Final:test" -> "io.netty:netty-transport:jar:4.1.97.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.97.Final:test" -> "io.netty:netty-codec:jar:4.1.97.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.97.Final:test" -> "io.netty:netty-handler:jar:4.1.97.Final:test" ; 
+[INFO] 	"io.netty:netty-codec-http2:jar:4.1.97.Final:test" -> "io.netty:netty-codec-http:jar:4.1.97.Final:test" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.97.Final:test" -> "io.netty:netty-resolver:jar:4.1.97.Final:test" ; 
+[INFO] 	"io.netty:netty-handler-proxy:jar:4.1.97.Final:test" -> "io.netty:netty-codec-socks:jar:4.1.97.Final:test" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" -> "org.apache.commons:commons-compress:jar:1.24.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.3:compile" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.apache.avro:avro-integration-test >----------------
+[INFO] Building Avro Integration Tests 1.12.0-SNAPSHOT                  [22/25]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ avro-integration-test ---
+[INFO] digraph "org.apache.avro:avro-integration-test:pom:1.12.0-SNAPSHOT" { 
+[INFO] 	"org.apache.avro:avro-integration-test:pom:1.12.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-integration-test:pom:1.12.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-integration-test:pom:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.avro:avro-integration-test:pom:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< org.apache.avro:avro-test-custom-conversions >------------
+[INFO] Building Apache Avro Codegen Test dependencies 1.12.0-SNAPSHOT   [23/25]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ avro-test-custom-conversions ---
+[INFO] digraph "org.apache.avro:avro-test-custom-conversions:jar:1.12.0-SNAPSHOT" { 
+[INFO] 	"org.apache.avro:avro-test-custom-conversions:jar:1.12.0-SNAPSHOT" -> "org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-test-custom-conversions:jar:1.12.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-test-custom-conversions:jar:1.12.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-test-custom-conversions:jar:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.avro:avro-test-custom-conversions:jar:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" -> "org.apache.commons:commons-compress:jar:1.24.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.3:compile" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.apache.avro:avro-codegen-test >------------------
+[INFO] Building Apache Avro Codegen Test 1.12.0-SNAPSHOT                [24/25]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/avro/avro-test-custom-conversions/1.12.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/snapshots/org/apache/avro/avro-test-custom-conversions/1.12.0-SNAPSHOT/maven-metadata.xml (1.5 kB at 708 B/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ avro-codegen-test ---
+[INFO] digraph "org.apache.avro:avro-codegen-test:jar:1.12.0-SNAPSHOT" { 
+[INFO] 	"org.apache.avro:avro-codegen-test:jar:1.12.0-SNAPSHOT" -> "org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-codegen-test:jar:1.12.0-SNAPSHOT" -> "org.apache.avro:avro-compiler:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-codegen-test:jar:1.12.0-SNAPSHOT" -> "org.apache.avro:avro-test-custom-conversions:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-codegen-test:jar:1.12.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-codegen-test:jar:1.12.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-codegen-test:jar:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.avro:avro-codegen-test:jar:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" -> "org.apache.commons:commons-compress:jar:1.24.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro-compiler:jar:1.12.0-SNAPSHOT:compile" -> "org.apache.commons:commons-text:jar:1.10.0:compile" ; 
+[INFO] 	"org.apache.avro:avro-compiler:jar:1.12.0-SNAPSHOT:compile" -> "org.apache.velocity:velocity-engine-core:jar:2.3:compile" ; 
+[INFO] 	"org.apache.commons:commons-text:jar:1.10.0:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< org.apache.avro:avro-perf >----------------------
+[INFO] Building Apache Avro Performance Test Suite 1.12.0-SNAPSHOT      [25/25]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.4.0:tree (default-cli) @ avro-perf ---
+[INFO] digraph "org.apache.avro:avro-perf:jar:1.12.0-SNAPSHOT" { 
+[INFO] 	"org.apache.avro:avro-perf:jar:1.12.0-SNAPSHOT" -> "org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.avro:avro-perf:jar:1.12.0-SNAPSHOT" -> "org.openjdk.jmh:jmh-core:jar:1.37:compile" ; 
+[INFO] 	"org.apache.avro:avro-perf:jar:1.12.0-SNAPSHOT" -> "org.openjdk.jmh:jmh-generator-annprocess:jar:1.37:compile" ; 
+[INFO] 	"org.apache.avro:avro-perf:jar:1.12.0-SNAPSHOT" -> "commons-cli:commons-cli:jar:1.5.0:compile" ; 
+[INFO] 	"org.apache.avro:avro-perf:jar:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.avro:avro-perf:jar:1.12.0-SNAPSHOT" -> "org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-perf:jar:1.12.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.10.0:test" ; 
+[INFO] 	"org.apache.avro:avro-perf:jar:1.12.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" ; 
+[INFO] 	"org.apache.avro:avro:jar:1.12.0-SNAPSHOT:compile" -> "org.apache.commons:commons-compress:jar:1.24.0:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.15.3:compile" ; 
+[INFO] 	"org.openjdk.jmh:jmh-core:jar:1.37:compile" -> "net.sf.jopt-simple:jopt-simple:jar:5.0.4:compile" ; 
+[INFO] 	"org.openjdk.jmh:jmh-core:jar:1.37:compile" -> "org.apache.commons:commons-math3:jar:3.6.1:compile" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.10.0:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.junit.vintage:junit-vintage-engine:jar:5.10.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.opentest4j:opentest4j:jar:1.3.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.10.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.10.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.10.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.10.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.10.0:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Apache Avro Toplevel 1.12.0-SNAPSHOT:
+[INFO] 
+[INFO] Apache Avro Toplevel ............................... SUCCESS [  2.886 s]
+[INFO] Apache Avro Java ................................... SUCCESS [  1.851 s]
+[INFO] Apache Avro ........................................ SUCCESS [  0.392 s]
+[INFO] Apache Avro Android Compatibility .................. SUCCESS [  3.771 s]
+[INFO] Apache Avro IDL .................................... SUCCESS [  0.277 s]
+[INFO] Apache Avro Compiler ............................... SUCCESS [  0.240 s]
+[INFO] Apache Avro Maven Plugin ........................... SUCCESS [ 11.541 s]
+[INFO] Apache Avro IPC .................................... SUCCESS [  0.724 s]
+[INFO] Apache Avro IPC Jetty .............................. SUCCESS [  0.251 s]
+[INFO] Apache Avro IPC Netty .............................. SUCCESS [  0.264 s]
+[INFO] Trevni Java ........................................ SUCCESS [  0.016 s]
+[INFO] Trevni Java Core ................................... SUCCESS [  0.073 s]
+[INFO] Apache Avro Mapred API ............................. SUCCESS [  1.951 s]
+[INFO] Trevni Java Avro ................................... SUCCESS [  0.685 s]
+[INFO] Trevni Specification ............................... SUCCESS [  0.032 s]
+[INFO] Apache Avro Tools .................................. SUCCESS [  0.515 s]
+[INFO] Apache Avro Protobuf Compatibility ................. SUCCESS [  0.164 s]
+[INFO] Apache Avro Thrift Compatibility ................... SUCCESS [  0.145 s]
+[INFO] Apache Avro Maven Archetypes ....................... SUCCESS [  1.801 s]
+[INFO] Apache Avro Maven Service Archetype ................ SUCCESS [  0.043 s]
+[INFO] Apache Avro gRPC ................................... SUCCESS [  0.387 s]
+[INFO] Avro Integration Tests ............................. SUCCESS [  0.039 s]
+[INFO] Apache Avro Codegen Test dependencies .............. SUCCESS [  0.063 s]
+[INFO] Apache Avro Codegen Test ........................... SUCCESS [  2.165 s]
+[INFO] Apache Avro Performance Test Suite ................. SUCCESS [  0.066 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  42.543 s
+[INFO] Finished at: 2023-12-28T09:02:57+01:00
+[INFO] ------------------------------------------------------------------------

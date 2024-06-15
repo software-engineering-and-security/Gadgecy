@@ -1,0 +1,145 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Detecting the operating system and CPU architecture
+[INFO] ------------------------------------------------------------------------
+[INFO] os.detected.name: linux
+[INFO] os.detected.arch: x86_64
+[INFO] os.detected.version: 5.10
+[INFO] os.detected.version.major: 5
+[INFO] os.detected.version.minor: 10
+[INFO] os.detected.release: debian
+[INFO] os.detected.release.version: 11
+[INFO] os.detected.release.like.debian: true
+[INFO] os.detected.classifier: linux-x86_64
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] TBMQ                                                               [pom]
+[INFO] TBMQ Commons                                                       [pom]
+[INFO] TBMQ Common Data                                                   [jar]
+[INFO] TBMQ Common Utils                                                  [jar]
+[INFO] TBMQ Queue components                                              [jar]
+[INFO] TBMQ Common DAO API                                                [jar]
+[INFO] TBMQ Stats                                                         [jar]
+[INFO] TBMQ Actor components                                              [jar]
+[INFO] TBMQ Common Cache                                                  [jar]
+[INFO] TBMQ DAO Layer                                                     [jar]
+[INFO] TBMQ Server UI                                                     [jar]
+[INFO] TBMQ Application                                                   [jar]
+[INFO] TBMQ Docker Configuration                                          [pom]
+[INFO] TBMQ Black Box Tests                                               [jar]
+[INFO] TBMQ Application Docker                                            [pom]
+[INFO] TBMQ Docker Images                                                 [pom]
+[INFO] 
+[INFO] --------------< org.thingsboard.mqtt-broker:mqtt-broker >---------------
+[INFO] Building TBMQ 1.2.1-SNAPSHOT                                      [1/16]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ mqtt-broker ---
+[INFO] digraph "org.thingsboard.mqtt-broker:mqtt-broker:pom:1.2.1-SNAPSHOT" { 
+[INFO] 	"org.thingsboard.mqtt-broker:mqtt-broker:pom:1.2.1-SNAPSHOT" -> "org.projectlombok:lombok:jar:1.18.26:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.thingsboard.mqtt-broker:common >-----------------
+[INFO] Building TBMQ Commons 1.2.1-SNAPSHOT                              [2/16]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ common ---
+[INFO] digraph "org.thingsboard.mqtt-broker:common:pom:1.2.1-SNAPSHOT" { 
+[INFO] 	"org.thingsboard.mqtt-broker:common:pom:1.2.1-SNAPSHOT" -> "org.projectlombok:lombok:jar:1.18.26:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< org.thingsboard.mqtt-broker.common:data >---------------
+[INFO] Building TBMQ Common Data 1.2.1-SNAPSHOT                          [3/16]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ data ---
+[INFO] digraph "org.thingsboard.mqtt-broker.common:data:jar:1.2.1-SNAPSHOT" { 
+[INFO] 	"org.thingsboard.mqtt-broker.common:data:jar:1.2.1-SNAPSHOT" -> "javax.validation:validation-api:jar:2.0.1.Final:compile" ; 
+[INFO] 	"org.thingsboard.mqtt-broker.common:data:jar:1.2.1-SNAPSHOT" -> "org.owasp.antisamy:antisamy:jar:1.7.2:compile" ; 
+[INFO] 	"org.thingsboard.mqtt-broker.common:data:jar:1.2.1-SNAPSHOT" -> "io.netty:netty-codec-mqtt:jar:4.1.94.Final:provided" ; 
+[INFO] 	"org.thingsboard.mqtt-broker.common:data:jar:1.2.1-SNAPSHOT" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4:compile" ; 
+[INFO] 	"org.thingsboard.mqtt-broker.common:data:jar:1.2.1-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.32:compile" ; 
+[INFO] 	"org.thingsboard.mqtt-broker.common:data:jar:1.2.1-SNAPSHOT" -> "org.slf4j:log4j-over-slf4j:jar:1.7.32:compile" ; 
+[INFO] 	"org.thingsboard.mqtt-broker.common:data:jar:1.2.1-SNAPSHOT" -> "ch.qos.logback:logback-core:jar:1.2.10:compile" ; 
+[INFO] 	"org.thingsboard.mqtt-broker.common:data:jar:1.2.1-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.2.10:compile" ; 
+[INFO] 	"org.thingsboard.mqtt-broker.common:data:jar:1.2.1-SNAPSHOT" -> "com.google.guava:guava:jar:31.1-jre:compile" ; 
+[INFO] 	"org.thingsboard.mqtt-broker.common:data:jar:1.2.1-SNAPSHOT" -> "org.apache.commons:commons-lang3:jar:3.4:compile" ; 
+[INFO] 	"org.thingsboard.mqtt-broker.common:data:jar:1.2.1-SNAPSHOT" -> "org.springframework:spring-core:jar:5.3.26:compile" ; 
+[INFO] 	"org.thingsboard.mqtt-broker.common:data:jar:1.2.1-SNAPSHOT" -> "org.projectlombok:lombok:jar:1.18.26:provided" ; 
+[INFO] 	"org.owasp.antisamy:antisamy:jar:1.7.2:compile" -> "net.sourceforge.htmlunit:neko-htmlunit:jar:2.66.0:compile" ; 
+[INFO] 	"org.owasp.antisamy:antisamy:jar:1.7.2:compile" -> "org.apache.httpcomponents.client5:httpclient5:jar:5.2:compile" ; 
+[INFO] 	"org.owasp.antisamy:antisamy:jar:1.7.2:compile" -> "org.apache.httpcomponents.core5:httpcore5:jar:5.2:compile" ; 
+[INFO] 	"org.owasp.antisamy:antisamy:jar:1.7.2:compile" -> "org.apache.xmlgraphics:batik-css:jar:1.16:compile" ; 
+[INFO] 	"org.owasp.antisamy:antisamy:jar:1.7.2:compile" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"org.owasp.antisamy:antisamy:jar:1.7.2:compile" -> "xerces:xercesImpl:jar:2.12.2:compile" ; 
+[INFO] 	"org.owasp.antisamy:antisamy:jar:1.7.2:compile" -> "xml-apis:xml-apis:jar:1.4.01:compile" ; 
+[INFO] 	"org.owasp.antisamy:antisamy:jar:1.7.2:compile" -> "xml-apis:xml-apis-ext:jar:1.3.04:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2:compile" -> "org.apache.httpcomponents.core5:httpcore5-h2:jar:5.2:compile" ; 
+[INFO] 	"org.apache.xmlgraphics:batik-css:jar:1.16:compile" -> "org.apache.xmlgraphics:batik-shared-resources:jar:1.16:compile" ; 
+[INFO] 	"org.apache.xmlgraphics:batik-css:jar:1.16:compile" -> "org.apache.xmlgraphics:batik-util:jar:1.16:compile" ; 
+[INFO] 	"org.apache.xmlgraphics:batik-css:jar:1.16:compile" -> "org.apache.xmlgraphics:xmlgraphics-commons:jar:2.7:compile" ; 
+[INFO] 	"org.apache.xmlgraphics:batik-util:jar:1.16:compile" -> "org.apache.xmlgraphics:batik-constants:jar:1.16:compile" ; 
+[INFO] 	"org.apache.xmlgraphics:batik-util:jar:1.16:compile" -> "org.apache.xmlgraphics:batik-i18n:jar:1.16:compile" ; 
+[INFO] 	"io.netty:netty-codec-mqtt:jar:4.1.94.Final:provided" -> "io.netty:netty-common:jar:4.1.94.Final:provided" ; 
+[INFO] 	"io.netty:netty-codec-mqtt:jar:4.1.94.Final:provided" -> "io.netty:netty-buffer:jar:4.1.94.Final:provided" ; 
+[INFO] 	"io.netty:netty-codec-mqtt:jar:4.1.94.Final:provided" -> "io.netty:netty-transport:jar:4.1.94.Final:provided" ; 
+[INFO] 	"io.netty:netty-codec-mqtt:jar:4.1.94.Final:provided" -> "io.netty:netty-codec:jar:4.1.94.Final:provided" ; 
+[INFO] 	"io.netty:netty-transport:jar:4.1.94.Final:provided" -> "io.netty:netty-resolver:jar:4.1.94.Final:provided" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.13.4:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.12.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.11.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:31.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:1.3:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.26:compile" -> "org.springframework:spring-jcl:jar:5.3.26:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< org.thingsboard.mqtt-broker.common:util >---------------
+[INFO] Building TBMQ Common Utils 1.2.1-SNAPSHOT                         [4/16]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from typesafe: https://repo.typesafe.com/typesafe/releases/org/thingsboard/mqtt-broker/common/data/1.2.1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from spring-snapshots: https://repo.spring.io/snapshot/org/thingsboard/mqtt-broker/common/data/1.2.1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from central: https://repo1.maven.org/maven2/org/thingsboard/mqtt-broker/common/data/1.2.1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from sonatype: https://oss.sonatype.org/content/groups/public/org/thingsboard/mqtt-broker/common/data/1.2.1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from central: https://repo1.maven.org/maven2/org/thingsboard/mqtt-broker/common/data/1.2.1-SNAPSHOT/data-1.2.1-SNAPSHOT.jar
+[INFO] Downloading from spring-snapshots: https://repo.spring.io/snapshot/org/thingsboard/mqtt-broker/common/data/1.2.1-SNAPSHOT/data-1.2.1-SNAPSHOT.jar
+[INFO] Downloading from typesafe: https://repo.typesafe.com/typesafe/releases/org/thingsboard/mqtt-broker/common/data/1.2.1-SNAPSHOT/data-1.2.1-SNAPSHOT.jar
+[INFO] Downloading from sonatype: https://oss.sonatype.org/content/groups/public/org/thingsboard/mqtt-broker/common/data/1.2.1-SNAPSHOT/data-1.2.1-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for TBMQ 1.2.1-SNAPSHOT:
+[INFO] 
+[INFO] TBMQ ............................................... SUCCESS [  1.880 s]
+[INFO] TBMQ Commons ....................................... SUCCESS [  0.017 s]
+[INFO] TBMQ Common Data ................................... SUCCESS [  0.372 s]
+[INFO] TBMQ Common Utils .................................. FAILURE [  3.380 s]
+[INFO] TBMQ Queue components .............................. SKIPPED
+[INFO] TBMQ Common DAO API ................................ SKIPPED
+[INFO] TBMQ Stats ......................................... SKIPPED
+[INFO] TBMQ Actor components .............................. SKIPPED
+[INFO] TBMQ Common Cache .................................. SKIPPED
+[INFO] TBMQ DAO Layer ..................................... SKIPPED
+[INFO] TBMQ Server UI ..................................... SKIPPED
+[INFO] TBMQ Application ................................... SKIPPED
+[INFO] TBMQ Docker Configuration .......................... SKIPPED
+[INFO] TBMQ Black Box Tests ............................... SKIPPED
+[INFO] TBMQ Application Docker ............................ SKIPPED
+[INFO] TBMQ Docker Images ................................. SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.354 s
+[INFO] Finished at: 2023-12-28T09:03:30+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project util: Could not resolve dependencies for project org.thingsboard.mqtt-broker.common:util:jar:1.2.1-SNAPSHOT: Could not find artifact org.thingsboard.mqtt-broker.common:data:jar:1.2.1-SNAPSHOT in central (https://repo1.maven.org/maven2/) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :util

@@ -1,0 +1,513 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Detecting the operating system and CPU architecture
+[INFO] ------------------------------------------------------------------------
+[INFO] os.detected.name: linux
+[INFO] os.detected.arch: x86_64
+[INFO] os.detected.version: 5.10
+[INFO] os.detected.version.major: 5
+[INFO] os.detected.version.minor: 10
+[INFO] os.detected.release: debian
+[INFO] os.detected.release.version: 11
+[INFO] os.detected.release.like.debian: true
+[INFO] os.detected.classifier: linux-x86_64
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Apache Ratis                                                       [pom]
+[INFO] Apache Ratis Documentation                                         [jar]
+[INFO] Apache Ratis Protocols                                             [jar]
+[INFO] Apache Ratis Common                                                [jar]
+[INFO] Apache Ratis Client                                                [jar]
+[INFO] Apache Ratis Server API                                            [jar]
+[INFO] Apache Ratis Metrics API                                           [jar]
+[INFO] Apache Ratis Metrics Default Implementation                        [jar]
+[INFO] Apache Ratis Server                                                [jar]
+[INFO] Apache Ratis - Resource Bundle                                     [jar]
+[INFO] Apache Ratis gRPC Support                                          [jar]
+[INFO] Apache Ratis Netty Support                                         [jar]
+[INFO] Apache Ratis Shell                                                 [jar]
+[INFO] Apache Ratis Test                                                  [jar]
+[INFO] Apache Ratis Tools                                                 [jar]
+[INFO] Apache Ratis Examples                                              [jar]
+[INFO] Apache Ratis Replicated Map                                        [jar]
+[INFO] Apache Ratis Metrics Dropwizard 3 Implementation                   [jar]
+[INFO] Apache Ratis Project Assembly                                      [pom]
+[INFO] 
+[INFO] -----------------------< org.apache.ratis:ratis >-----------------------
+[INFO] Building Apache Ratis 3.1.0-SNAPSHOT                              [1/19]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.2.0:tree (default-cli) @ ratis ---
+[INFO] digraph "org.apache.ratis:ratis:pom:3.1.0-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< org.apache.ratis:ratis-docs >---------------------
+[INFO] Building Apache Ratis Documentation 3.1.0-SNAPSHOT                [2/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.2.0:tree (default-cli) @ ratis-docs ---
+[INFO] digraph "org.apache.ratis:ratis-docs:jar:3.1.0-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< org.apache.ratis:ratis-proto >--------------------
+[INFO] Building Apache Ratis Protocols 3.1.0-SNAPSHOT                    [3/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.2.0:tree (default-cli) @ ratis-proto ---
+[INFO] digraph "org.apache.ratis:ratis-proto:jar:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.ratis:ratis-proto:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-thirdparty-misc:jar:1.0.5:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-proto:jar:3.1.0-SNAPSHOT" -> "org.apache.tomcat:annotations-api:jar:6.0.53:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< org.apache.ratis:ratis-common >--------------------
+[INFO] Building Apache Ratis Common 3.1.0-SNAPSHOT                       [4/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-proto/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-proto/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.2.0:tree (default-cli) @ ratis-common ---
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-proto/3.1.0-SNAPSHOT/ratis-proto-3.1.0-SNAPSHOT.jar
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-proto/3.1.0-SNAPSHOT/ratis-proto-3.1.0-SNAPSHOT.jar
+[INFO] digraph "org.apache.ratis:ratis-common:jar:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.ratis:ratis-common:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-thirdparty-misc:jar:1.0.5:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-common:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-proto:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-common:jar:3.1.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.7:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-common:jar:3.1.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.apache.ratis:ratis-common:jar:3.1.0-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.2.1:provided (optional) " ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:4.2.1:provided (optional) " -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided (optional) " ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< org.apache.ratis:ratis-client >--------------------
+[INFO] Building Apache Ratis Client 3.1.0-SNAPSHOT                       [5/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-common/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-common/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.2.0:tree (default-cli) @ ratis-client ---
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-common/3.1.0-SNAPSHOT/ratis-common-3.1.0-SNAPSHOT.jar
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-common/3.1.0-SNAPSHOT/ratis-common-3.1.0-SNAPSHOT.jar
+[INFO] digraph "org.apache.ratis:ratis-client:jar:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.ratis:ratis-client:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-thirdparty-misc:jar:1.0.5:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-client:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-proto:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-client:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-common:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-client:jar:3.1.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.7:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.apache.ratis:ratis-server-api >------------------
+[INFO] Building Apache Ratis Server API 3.1.0-SNAPSHOT                   [6/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-client/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-client/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.2.0:tree (default-cli) @ ratis-server-api ---
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-client/3.1.0-SNAPSHOT/ratis-client-3.1.0-SNAPSHOT.jar
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-client/3.1.0-SNAPSHOT/ratis-client-3.1.0-SNAPSHOT.jar
+[INFO] digraph "org.apache.ratis:ratis-server-api:jar:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.ratis:ratis-server-api:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-thirdparty-misc:jar:1.0.5:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-server-api:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-proto:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-server-api:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-common:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-server-api:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-client:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-server-api:jar:3.1.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.7:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-server-api:jar:3.1.0-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.2.1:provided (optional) " ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:4.2.1:provided (optional) " -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided (optional) " ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.apache.ratis:ratis-metrics-api >-----------------
+[INFO] Building Apache Ratis Metrics API 3.1.0-SNAPSHOT                  [7/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.2.0:tree (default-cli) @ ratis-metrics-api ---
+[INFO] digraph "org.apache.ratis:ratis-metrics-api:jar:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.ratis:ratis-metrics-api:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-common:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-metrics-api:jar:3.1.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.7:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-common:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.ratis:ratis-thirdparty-misc:jar:1.0.5:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-common:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.ratis:ratis-proto:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.apache.ratis:ratis-metrics-default >---------------
+[INFO] Building Apache Ratis Metrics Default Implementation 3.1.0-SNAPSHOT [8/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-metrics-api/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-metrics-api/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.2.0:tree (default-cli) @ ratis-metrics-default ---
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-metrics-api/3.1.0-SNAPSHOT/ratis-metrics-api-3.1.0-SNAPSHOT.jar
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-common/3.1.0-SNAPSHOT/ratis-common-3.1.0-SNAPSHOT-tests.jar
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-metrics-api/3.1.0-SNAPSHOT/ratis-metrics-api-3.1.0-SNAPSHOT.jar
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-common/3.1.0-SNAPSHOT/ratis-common-3.1.0-SNAPSHOT-tests.jar
+[INFO] digraph "org.apache.ratis:ratis-metrics-default:jar:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.ratis:ratis-metrics-default:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-metrics-api:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-metrics-default:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-proto:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-metrics-default:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-common:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-metrics-default:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-common:test-jar:tests:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-metrics-default:jar:3.1.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.7:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-metrics-default:jar:3.1.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.apache.ratis:ratis-metrics-default:jar:3.1.0-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.3.1:test" ; 
+[INFO] 	"org.apache.ratis:ratis-proto:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.ratis:ratis-thirdparty-misc:jar:1.0.5:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.3.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.7:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.3.1:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.7:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.3.1:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------------< org.apache.ratis:ratis-server >--------------------
+[INFO] Building Apache Ratis Server 3.1.0-SNAPSHOT                       [9/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-server-api/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-server-api/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-metrics-default/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-metrics-default/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.2.0:tree (default-cli) @ ratis-server ---
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-client/3.1.0-SNAPSHOT/ratis-client-3.1.0-SNAPSHOT-tests.jar
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-server-api/3.1.0-SNAPSHOT/ratis-server-api-3.1.0-SNAPSHOT.jar
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-metrics-default/3.1.0-SNAPSHOT/ratis-metrics-default-3.1.0-SNAPSHOT.jar
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-client/3.1.0-SNAPSHOT/ratis-client-3.1.0-SNAPSHOT-tests.jar
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-metrics-default/3.1.0-SNAPSHOT/ratis-metrics-default-3.1.0-SNAPSHOT.jar
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-server-api/3.1.0-SNAPSHOT/ratis-server-api-3.1.0-SNAPSHOT.jar
+[INFO] digraph "org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-thirdparty-misc:jar:1.0.5:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-proto:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-common:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-common:test-jar:tests:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-client:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-client:test-jar:tests:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-server-api:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.7:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.3.1:test" ; 
+[INFO] 	"org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-metrics-api:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-metrics-default:jar:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.2.1:provided (optional) " ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.3.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.7:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.3.1:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.7:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.3.1:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:4.2.1:provided (optional) " -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided (optional) " ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.apache.ratis:ratis-resource-bundle >---------------
+[INFO] Building Apache Ratis - Resource Bundle 3.1.0-SNAPSHOT           [10/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.2.0:tree (default-cli) @ ratis-resource-bundle ---
+[INFO] digraph "org.apache.ratis:ratis-resource-bundle:jar:3.1.0-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< org.apache.ratis:ratis-grpc >---------------------
+[INFO] Building Apache Ratis gRPC Support 3.1.0-SNAPSHOT                [11/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-server/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-server/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.2.0:tree (default-cli) @ ratis-grpc ---
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-server/3.1.0-SNAPSHOT/ratis-server-3.1.0-SNAPSHOT.jar
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-server/3.1.0-SNAPSHOT/ratis-server-3.1.0-SNAPSHOT-tests.jar
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-server/3.1.0-SNAPSHOT/ratis-server-3.1.0-SNAPSHOT.jar
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-server/3.1.0-SNAPSHOT/ratis-server-3.1.0-SNAPSHOT-tests.jar
+[INFO] digraph "org.apache.ratis:ratis-grpc:jar:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.ratis:ratis-grpc:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-thirdparty-misc:jar:1.0.5:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-grpc:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-proto:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-grpc:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-common:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-grpc:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-common:test-jar:tests:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-grpc:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-client:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-grpc:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-client:test-jar:tests:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-grpc:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT:provided" ; 
+[INFO] 	"org.apache.ratis:ratis-grpc:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-server:test-jar:tests:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-grpc:jar:3.1.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.7:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-grpc:jar:3.1.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.apache.ratis:ratis-grpc:jar:3.1.0-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.3.1:test" ; 
+[INFO] 	"org.apache.ratis:ratis-grpc:jar:3.1.0-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.2.1:provided (optional) " ; 
+[INFO] 	"org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT:provided" -> "org.apache.ratis:ratis-server-api:jar:3.1.0-SNAPSHOT:provided" ; 
+[INFO] 	"org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT:provided" -> "org.apache.ratis:ratis-metrics-api:jar:3.1.0-SNAPSHOT:provided" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.3.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.7:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.3.1:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.7:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.3.1:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:4.2.1:provided (optional) " -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided (optional) " ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< org.apache.ratis:ratis-netty >--------------------
+[INFO] Building Apache Ratis Netty Support 3.1.0-SNAPSHOT               [12/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.2.0:tree (default-cli) @ ratis-netty ---
+[INFO] digraph "org.apache.ratis:ratis-netty:jar:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.ratis:ratis-netty:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-thirdparty-misc:jar:1.0.5:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-netty:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-proto:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-netty:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-common:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-netty:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-common:test-jar:tests:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-netty:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-client:jar:3.1.0-SNAPSHOT:provided" ; 
+[INFO] 	"org.apache.ratis:ratis-netty:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-client:test-jar:tests:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-netty:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT:provided" ; 
+[INFO] 	"org.apache.ratis:ratis-netty:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-server:test-jar:tests:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-netty:jar:3.1.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.7:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-netty:jar:3.1.0-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.2.1:provided (optional) " ; 
+[INFO] 	"org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT:provided" -> "org.apache.ratis:ratis-server-api:jar:3.1.0-SNAPSHOT:provided" ; 
+[INFO] 	"org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT:provided" -> "org.apache.ratis:ratis-metrics-api:jar:3.1.0-SNAPSHOT:provided" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:4.2.1:provided (optional) " -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided (optional) " ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< org.apache.ratis:ratis-shell >--------------------
+[INFO] Building Apache Ratis Shell 3.1.0-SNAPSHOT                       [13/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.2.0:tree (default-cli) @ ratis-shell ---
+[INFO] digraph "org.apache.ratis:ratis-shell:jar:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.ratis:ratis-shell:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-client:jar:3.1.0-SNAPSHOT:provided" ; 
+[INFO] 	"org.apache.ratis:ratis-shell:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-common:jar:3.1.0-SNAPSHOT:provided" ; 
+[INFO] 	"org.apache.ratis:ratis-shell:jar:3.1.0-SNAPSHOT" -> "commons-cli:commons-cli:jar:1.5.0:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-shell:jar:3.1.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.7:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-shell:jar:3.1.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:2.0.7:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-client:jar:3.1.0-SNAPSHOT:provided" -> "org.apache.ratis:ratis-thirdparty-misc:jar:1.0.5:provided" ; 
+[INFO] 	"org.apache.ratis:ratis-client:jar:3.1.0-SNAPSHOT:provided" -> "org.apache.ratis:ratis-proto:jar:3.1.0-SNAPSHOT:provided" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< org.apache.ratis:ratis-test >---------------------
+[INFO] Building Apache Ratis Test 3.1.0-SNAPSHOT                        [14/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-netty/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-netty/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-grpc/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-grpc/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-shell/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-shell/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.2.0:tree (default-cli) @ ratis-test ---
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-netty/3.1.0-SNAPSHOT/ratis-netty-3.1.0-SNAPSHOT.jar
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-netty/3.1.0-SNAPSHOT/ratis-netty-3.1.0-SNAPSHOT-tests.jar
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-grpc/3.1.0-SNAPSHOT/ratis-grpc-3.1.0-SNAPSHOT.jar
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-grpc/3.1.0-SNAPSHOT/ratis-grpc-3.1.0-SNAPSHOT-tests.jar
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-shell/3.1.0-SNAPSHOT/ratis-shell-3.1.0-SNAPSHOT.jar
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-netty/3.1.0-SNAPSHOT/ratis-netty-3.1.0-SNAPSHOT.jar
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-netty/3.1.0-SNAPSHOT/ratis-netty-3.1.0-SNAPSHOT-tests.jar
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-grpc/3.1.0-SNAPSHOT/ratis-grpc-3.1.0-SNAPSHOT.jar
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-grpc/3.1.0-SNAPSHOT/ratis-grpc-3.1.0-SNAPSHOT-tests.jar
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-shell/3.1.0-SNAPSHOT/ratis-shell-3.1.0-SNAPSHOT.jar
+[INFO] digraph "org.apache.ratis:ratis-test:jar:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.ratis:ratis-test:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-common:jar:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-test:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-common:test-jar:tests:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-test:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-client:jar:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-test:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-test:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-server:test-jar:tests:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-test:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-metrics-default:jar:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-test:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-netty:jar:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-test:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-netty:test-jar:tests:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-test:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-grpc:jar:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-test:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-grpc:test-jar:tests:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-test:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-shell:jar:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-test:jar:3.1.0-SNAPSHOT" -> "org.reflections:reflections:jar:0.10.2:test" ; 
+[INFO] 	"org.apache.ratis:ratis-test:jar:3.1.0-SNAPSHOT" -> "org.bouncycastle:bcprov-jdk18on:jar:1.76:test" ; 
+[INFO] 	"org.apache.ratis:ratis-test:jar:3.1.0-SNAPSHOT" -> "org.bouncycastle:bcpkix-jdk18on:jar:1.76:test" ; 
+[INFO] 	"org.apache.ratis:ratis-test:jar:3.1.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.7:test" ; 
+[INFO] 	"org.apache.ratis:ratis-test:jar:3.1.0-SNAPSHOT" -> "org.slf4j:slf4j-reload4j:jar:2.0.7:test" ; 
+[INFO] 	"org.apache.ratis:ratis-test:jar:3.1.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.apache.ratis:ratis-test:jar:3.1.0-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.3.1:test" ; 
+[INFO] 	"org.apache.ratis:ratis-common:jar:3.1.0-SNAPSHOT:test" -> "org.apache.ratis:ratis-thirdparty-misc:jar:1.0.5:test" ; 
+[INFO] 	"org.apache.ratis:ratis-common:jar:3.1.0-SNAPSHOT:test" -> "org.apache.ratis:ratis-proto:jar:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT:test" -> "org.apache.ratis:ratis-server-api:jar:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT:test" -> "org.apache.ratis:ratis-metrics-api:jar:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-shell:jar:3.1.0-SNAPSHOT:test" -> "commons-cli:commons-cli:jar:1.5.0:test" ; 
+[INFO] 	"org.reflections:reflections:jar:0.10.2:test" -> "org.javassist:javassist:jar:3.28.0-GA:test" ; 
+[INFO] 	"org.reflections:reflections:jar:0.10.2:test" -> "com.google.code.findbugs:jsr305:jar:3.0.2:test" ; 
+[INFO] 	"org.bouncycastle:bcpkix-jdk18on:jar:1.76:test" -> "org.bouncycastle:bcutil-jdk18on:jar:1.76:test" ; 
+[INFO] 	"org.slf4j:slf4j-reload4j:jar:2.0.7:test" -> "ch.qos.reload4j:reload4j:jar:1.2.22:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.3.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.7:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.3.1:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.7:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.3.1:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< org.apache.ratis:ratis-tools >--------------------
+[INFO] Building Apache Ratis Tools 3.1.0-SNAPSHOT                       [15/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.2.0:tree (default-cli) @ ratis-tools ---
+[INFO] digraph "org.apache.ratis:ratis-tools:jar:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.ratis:ratis-tools:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-tools:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-proto:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-tools:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-common:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.ratis:ratis-thirdparty-misc:jar:1.0.5:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.ratis:ratis-client:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.ratis:ratis-server-api:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT:compile" -> "org.slf4j:slf4j-api:jar:2.0.7:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.ratis:ratis-metrics-api:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< org.apache.ratis:ratis-examples >-------------------
+[INFO] Building Apache Ratis Examples 3.1.0-SNAPSHOT                    [16/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-tools/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-tools/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-test/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-test/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.2.0:tree (default-cli) @ ratis-examples ---
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-test/3.1.0-SNAPSHOT/ratis-test-3.1.0-SNAPSHOT-tests.jar
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-tools/3.1.0-SNAPSHOT/ratis-tools-3.1.0-SNAPSHOT.jar
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-tools/3.1.0-SNAPSHOT/ratis-tools-3.1.0-SNAPSHOT.jar
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-test/3.1.0-SNAPSHOT/ratis-test-3.1.0-SNAPSHOT-tests.jar
+[INFO] digraph "org.apache.ratis:ratis-examples:jar:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.ratis:ratis-examples:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-thirdparty-misc:jar:1.0.5:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-examples:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-proto:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-examples:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-tools:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-examples:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-common:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-examples:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-common:test-jar:tests:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-examples:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-client:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-examples:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-examples:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-server:test-jar:tests:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-examples:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-metrics-default:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-examples:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-grpc:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-examples:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-grpc:test-jar:tests:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-examples:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-netty:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-examples:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-netty:test-jar:tests:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-examples:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-test:test-jar:tests:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-examples:jar:3.1.0-SNAPSHOT" -> "com.beust:jcommander:jar:1.82:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-examples:jar:3.1.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.7:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-examples:jar:3.1.0-SNAPSHOT" -> "org.slf4j:slf4j-reload4j:jar:2.0.7:runtime" ; 
+[INFO] 	"org.apache.ratis:ratis-examples:jar:3.1.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.apache.ratis:ratis-examples:jar:3.1.0-SNAPSHOT" -> "com.github.spotbugs:spotbugs-annotations:jar:4.2.1:provided (optional) " ; 
+[INFO] 	"org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.ratis:ratis-server-api:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.ratis:ratis-metrics-api:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.slf4j:slf4j-reload4j:jar:2.0.7:runtime" -> "ch.qos.reload4j:reload4j:jar:1.2.22:runtime" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:4.2.1:provided (optional) " -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided (optional) " ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.apache.ratis:ratis-replicated-map >----------------
+[INFO] Building Apache Ratis Replicated Map 3.1.0-SNAPSHOT              [17/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.2.0:tree (default-cli) @ ratis-replicated-map ---
+[INFO] digraph "org.apache.ratis:ratis-replicated-map:jar:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.ratis:ratis-replicated-map:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-thirdparty-misc:jar:1.0.5:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-replicated-map:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-proto:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-replicated-map:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-common:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-replicated-map:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-common:test-jar:tests:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-replicated-map:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-client:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-replicated-map:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-client:test-jar:tests:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-replicated-map:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-replicated-map:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-server:test-jar:tests:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-replicated-map:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-grpc:jar:3.1.0-SNAPSHOT:provided" ; 
+[INFO] 	"org.apache.ratis:ratis-replicated-map:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-grpc:test-jar:tests:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-replicated-map:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-netty:jar:3.1.0-SNAPSHOT:provided" ; 
+[INFO] 	"org.apache.ratis:ratis-replicated-map:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-netty:test-jar:tests:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-replicated-map:jar:3.1.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.7:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.ratis:ratis-server-api:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.ratis:ratis-metrics-api:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< org.apache.ratis:ratis-metrics-dropwizard3 >-------------
+[INFO] Building Apache Ratis Metrics Dropwizard 3 Implementation 3.1.0-SNAPSHOT [18/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.2.0:tree (default-cli) @ ratis-metrics-dropwizard3 ---
+[INFO] digraph "org.apache.ratis:ratis-metrics-dropwizard3:jar:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.ratis:ratis-metrics-dropwizard3:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-metrics-api:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-metrics-dropwizard3:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-proto:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-metrics-dropwizard3:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-common:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-metrics-dropwizard3:jar:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-common:test-jar:tests:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-metrics-dropwizard3:jar:3.1.0-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.7:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-metrics-dropwizard3:jar:3.1.0-SNAPSHOT" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.apache.ratis:ratis-metrics-dropwizard3:jar:3.1.0-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.3.1:test" ; 
+[INFO] 	"org.apache.ratis:ratis-metrics-dropwizard3:jar:3.1.0-SNAPSHOT" -> "io.dropwizard.metrics:metrics-core:jar:3.2.5:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-metrics-dropwizard3:jar:3.1.0-SNAPSHOT" -> "io.dropwizard.metrics:metrics-jvm:jar:3.2.5:compile (optional) " ; 
+[INFO] 	"org.apache.ratis:ratis-metrics-dropwizard3:jar:3.1.0-SNAPSHOT" -> "io.dropwizard.metrics:metrics-ganglia:jar:3.2.5:compile (optional) " ; 
+[INFO] 	"org.apache.ratis:ratis-proto:jar:3.1.0-SNAPSHOT:compile" -> "org.apache.ratis:ratis-thirdparty-misc:jar:1.0.5:compile" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.3.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.7:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.3.1:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.7:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.3.1:test" -> "org.objenesis:objenesis:jar:3.2:test" ; 
+[INFO] 	"io.dropwizard.metrics:metrics-ganglia:jar:3.2.5:compile (optional) " -> "info.ganglia.gmetric4j:gmetric4j:jar:1.0.7:compile (optional) " ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< org.apache.ratis:ratis-assembly >-------------------
+[INFO] Building Apache Ratis Project Assembly 3.1.0-SNAPSHOT            [19/19]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-resource-bundle/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-resource-bundle/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-docs/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-docs/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-examples/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-examples/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-replicated-map/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-replicated-map/3.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.2.0:tree (default-cli) @ ratis-assembly ---
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-resource-bundle/3.1.0-SNAPSHOT/ratis-resource-bundle-3.1.0-SNAPSHOT.jar
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-docs/3.1.0-SNAPSHOT/ratis-docs-3.1.0-SNAPSHOT.jar
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-test/3.1.0-SNAPSHOT/ratis-test-3.1.0-SNAPSHOT.jar
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-examples/3.1.0-SNAPSHOT/ratis-examples-3.1.0-SNAPSHOT.jar
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-examples/3.1.0-SNAPSHOT/ratis-examples-3.1.0-SNAPSHOT-tests.jar
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-replicated-map/3.1.0-SNAPSHOT/ratis-replicated-map-3.1.0-SNAPSHOT.jar
+[INFO] Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/ratis/ratis-replicated-map/3.1.0-SNAPSHOT/ratis-replicated-map-3.1.0-SNAPSHOT-tests.jar
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-resource-bundle/3.1.0-SNAPSHOT/ratis-resource-bundle-3.1.0-SNAPSHOT.jar
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-docs/3.1.0-SNAPSHOT/ratis-docs-3.1.0-SNAPSHOT.jar
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-test/3.1.0-SNAPSHOT/ratis-test-3.1.0-SNAPSHOT.jar
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-examples/3.1.0-SNAPSHOT/ratis-examples-3.1.0-SNAPSHOT.jar
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-examples/3.1.0-SNAPSHOT/ratis-examples-3.1.0-SNAPSHOT-tests.jar
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-replicated-map/3.1.0-SNAPSHOT/ratis-replicated-map-3.1.0-SNAPSHOT.jar
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/ratis/ratis-replicated-map/3.1.0-SNAPSHOT/ratis-replicated-map-3.1.0-SNAPSHOT-tests.jar
+[INFO] digraph "org.apache.ratis:ratis-assembly:pom:3.1.0-SNAPSHOT" { 
+[INFO] 	"org.apache.ratis:ratis-assembly:pom:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-thirdparty-misc:jar:1.0.5:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-assembly:pom:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-resource-bundle:jar:3.1.0-SNAPSHOT:compile (optional) " ; 
+[INFO] 	"org.apache.ratis:ratis-assembly:pom:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-docs:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-assembly:pom:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-proto:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-assembly:pom:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-common:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-assembly:pom:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-common:test-jar:tests:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-assembly:pom:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-client:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-assembly:pom:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-client:test-jar:tests:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-assembly:pom:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-server-api:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-assembly:pom:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-server:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-assembly:pom:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-server:test-jar:tests:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-assembly:pom:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-grpc:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-assembly:pom:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-grpc:test-jar:tests:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-assembly:pom:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-netty:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-assembly:pom:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-netty:test-jar:tests:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-assembly:pom:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-test:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-assembly:pom:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-test:test-jar:tests:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-assembly:pom:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-examples:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-assembly:pom:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-examples:test-jar:tests:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-assembly:pom:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-replicated-map:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-assembly:pom:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-replicated-map:test-jar:tests:3.1.0-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.ratis:ratis-assembly:pom:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-metrics-api:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-assembly:pom:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-metrics-default:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-assembly:pom:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-tools:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-assembly:pom:3.1.0-SNAPSHOT" -> "org.apache.ratis:ratis-shell:jar:3.1.0-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-common:jar:3.1.0-SNAPSHOT:compile" -> "org.slf4j:slf4j-api:jar:2.0.7:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-examples:jar:3.1.0-SNAPSHOT:compile" -> "com.beust:jcommander:jar:1.82:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-examples:jar:3.1.0-SNAPSHOT:compile" -> "org.slf4j:slf4j-reload4j:jar:2.0.7:test" ; 
+[INFO] 	"org.slf4j:slf4j-reload4j:jar:2.0.7:test" -> "ch.qos.reload4j:reload4j:jar:1.2.22:test" ; 
+[INFO] 	"org.apache.ratis:ratis-shell:jar:3.1.0-SNAPSHOT:compile" -> "commons-cli:commons-cli:jar:1.5.0:compile" ; 
+[INFO] 	"org.apache.ratis:ratis-shell:jar:3.1.0-SNAPSHOT:compile" -> "org.slf4j:slf4j-simple:jar:2.0.7:compile" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Apache Ratis 3.1.0-SNAPSHOT:
+[INFO] 
+[INFO] Apache Ratis ....................................... SUCCESS [  3.549 s]
+[INFO] Apache Ratis Documentation ......................... SUCCESS [  0.126 s]
+[INFO] Apache Ratis Protocols ............................. SUCCESS [  0.174 s]
+[INFO] Apache Ratis Common ................................ SUCCESS [  3.302 s]
+[INFO] Apache Ratis Client ................................ SUCCESS [  0.510 s]
+[INFO] Apache Ratis Server API ............................ SUCCESS [  0.520 s]
+[INFO] Apache Ratis Metrics API ........................... SUCCESS [  0.063 s]
+[INFO] Apache Ratis Metrics Default Implementation ........ SUCCESS [  0.852 s]
+[INFO] Apache Ratis Server ................................ SUCCESS [  0.969 s]
+[INFO] Apache Ratis - Resource Bundle ..................... SUCCESS [  0.041 s]
+[INFO] Apache Ratis gRPC Support .......................... SUCCESS [  0.671 s]
+[INFO] Apache Ratis Netty Support ......................... SUCCESS [  0.081 s]
+[INFO] Apache Ratis Shell ................................. SUCCESS [  0.138 s]
+[INFO] Apache Ratis Test .................................. SUCCESS [  1.296 s]
+[INFO] Apache Ratis Tools ................................. SUCCESS [  0.070 s]
+[INFO] Apache Ratis Examples .............................. SUCCESS [  1.236 s]
+[INFO] Apache Ratis Replicated Map ........................ SUCCESS [  0.127 s]
+[INFO] Apache Ratis Metrics Dropwizard 3 Implementation ... SUCCESS [  0.147 s]
+[INFO] Apache Ratis Project Assembly ...................... SUCCESS [  1.537 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  24.384 s
+[INFO] Finished at: 2023-12-28T09:02:40+01:00
+[INFO] ------------------------------------------------------------------------

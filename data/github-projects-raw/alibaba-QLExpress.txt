@@ -1,0 +1,37 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.alibaba:QLExpress:jar:3.3.2
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 204, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] 
+[INFO] -----------------------< com.alibaba:QLExpress >------------------------
+[INFO] Building QLExpress 3.3.2
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ QLExpress ---
+[INFO] digraph "com.alibaba:QLExpress:jar:3.3.2" { 
+[INFO] 	"com.alibaba:QLExpress:jar:3.3.2" -> "commons-beanutils:commons-beanutils:jar:1.9.4:compile" ; 
+[INFO] 	"com.alibaba:QLExpress:jar:3.3.2" -> "commons-lang:commons-lang:jar:2.4:compile" ; 
+[INFO] 	"com.alibaba:QLExpress:jar:3.3.2" -> "junit:junit:jar:4.4:test" ; 
+[INFO] 	"com.alibaba:QLExpress:jar:3.3.2" -> "org.unitils:unitils:jar:2.3:test" ; 
+[INFO] 	"com.alibaba:QLExpress:jar:3.3.2" -> "org.springframework:spring:jar:2.5.6:test" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:compile" -> "commons-logging:commons-logging:jar:1.2:compile" ; 
+[INFO] 	"commons-beanutils:commons-beanutils:jar:1.9.4:compile" -> "commons-collections:commons-collections:jar:3.2.2:compile" ; 
+[INFO] 	"org.unitils:unitils:jar:2.3:test" -> "commons-dbcp:commons-dbcp:jar:1.2.2:test" ; 
+[INFO] 	"org.unitils:unitils:jar:2.3:test" -> "ognl:ognl:jar:2.6.9:test" ; 
+[INFO] 	"org.unitils:unitils:jar:2.3:test" -> "ant:ant:jar:1.6.5:test" ; 
+[INFO] 	"commons-dbcp:commons-dbcp:jar:1.2.2:test" -> "commons-pool:commons-pool:jar:1.3:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.459 s
+[INFO] Finished at: 2023-12-28T09:02:19+01:00
+[INFO] ------------------------------------------------------------------------

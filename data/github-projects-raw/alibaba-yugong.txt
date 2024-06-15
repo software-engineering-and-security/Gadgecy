@@ -1,0 +1,51 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.taobao.yugong:yugong:jar:1.0.4-SNAPSHOT
+[WARNING] 'build.plugins.plugin.(groupId:artifactId)' must be unique but found duplicate declaration of plugin org.apache.maven.plugins:maven-surefire-plugin @ line 276, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 254, column 21
+[WARNING] 'build.plugins.plugin.version' for org.codehaus.mojo:exec-maven-plugin is missing. @ line 408, column 29
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-source-plugin is missing. @ line 233, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-javadoc-plugin is missing. @ line 245, column 21
+[WARNING] 'dependencies.dependency.systemPath' for com.oracle:ojdbc14:jar refers to a non-existing file /home/brunok/Gadgecy/lib/ojdbc14-10.2.0.3.0.jar @ line 166, column 25
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ----------------------< com.taobao.yugong:yugong >----------------------
+[INFO] Building yugong module for 1.0.4-SNAPSHOT 1.0.4-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from central: http://repo1.maven.org/maven2/com/alibaba/fastjson/1.2.8/fastjson-1.2.8.pom
+[INFO] Downloading from java.net: http://download.java.net/maven/2/com/alibaba/fastjson/1.2.8/fastjson-1.2.8.pom
+[INFO] Downloading from central: http://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.35/mysql-connector-java-5.1.35.pom
+[INFO] Downloading from java.net: http://download.java.net/maven/2/mysql/mysql-connector-java/5.1.35/mysql-connector-java-5.1.35.pom
+[INFO] Downloading from central: http://repo1.maven.org/maven2/com/microsoft/sqlserver/mssql-jdbc/6.1.0.jre8/mssql-jdbc-6.1.0.jre8.pom
+[INFO] Downloading from java.net: http://download.java.net/maven/2/com/microsoft/sqlserver/mssql-jdbc/6.1.0.jre8/mssql-jdbc-6.1.0.jre8.pom
+[INFO] Downloading from central: http://repo1.maven.org/maven2/com/alibaba/druid/1.0.17/druid-1.0.17.pom
+[INFO] Downloading from java.net: http://download.java.net/maven/2/com/alibaba/druid/1.0.17/druid-1.0.17.pom
+[INFO] Downloading from central: http://repo1.maven.org/maven2/commons-configuration/commons-configuration/1.9/commons-configuration-1.9.pom
+[INFO] Downloading from java.net: http://download.java.net/maven/2/commons-configuration/commons-configuration/1.9/commons-configuration-1.9.pom
+[INFO] Downloading from central: http://repo1.maven.org/maven2/ch/qos/logback/logback-core/1.0.6/logback-core-1.0.6.pom
+[INFO] Downloading from java.net: http://download.java.net/maven/2/ch/qos/logback/logback-core/1.0.6/logback-core-1.0.6.pom
+[INFO] Downloading from central: http://repo1.maven.org/maven2/ch/qos/logback/logback-classic/1.0.6/logback-classic-1.0.6.pom
+[INFO] Downloading from java.net: http://download.java.net/maven/2/ch/qos/logback/logback-classic/1.0.6/logback-classic-1.0.6.pom
+[INFO] Downloading from central: http://repo1.maven.org/maven2/org/slf4j/jcl-over-slf4j/1.6.0/jcl-over-slf4j-1.6.0.pom
+[INFO] Downloading from java.net: http://download.java.net/maven/2/org/slf4j/jcl-over-slf4j/1.6.0/jcl-over-slf4j-1.6.0.pom
+[INFO] Downloading from central: http://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.6.0/slf4j-api-1.6.0.pom
+[INFO] Downloading from java.net: http://download.java.net/maven/2/org/slf4j/slf4j-api/1.6.0/slf4j-api-1.6.0.pom
+[INFO] Downloading from central: http://repo1.maven.org/maven2/com/googlecode/disruptor/disruptor/2.10.4/disruptor-2.10.4.pom
+[INFO] Downloading from java.net: http://download.java.net/maven/2/com/googlecode/disruptor/disruptor/2.10.4/disruptor-2.10.4.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  29.983 s
+[INFO] Finished at: 2023-12-28T09:02:44+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project yugong: Could not resolve dependencies for project com.taobao.yugong:yugong:jar:1.0.4-SNAPSHOT: Failed to collect dependencies at com.alibaba:fastjson:jar:1.2.8: Failed to read artifact descriptor for com.alibaba:fastjson:jar:1.2.8: Could not transfer artifact com.alibaba:fastjson:pom:1.2.8 from/to central (http://repo1.maven.org/maven2): Transfer failed for http://repo1.maven.org/maven2/com/alibaba/fastjson/1.2.8/fastjson-1.2.8.pom 501 HTTPS Required -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException

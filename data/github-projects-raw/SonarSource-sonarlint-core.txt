@@ -1,0 +1,1044 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.sonarsource.sonarlint.core:sonarlint-analysis-engine:jar:9.6-SNAPSHOT
+[WARNING] 'dependencyManagement.dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.awaitility:awaitility:jar -> duplicate declaration of version 4.2.0 @ org.sonarsource.sonarlint.core:sonarlint-core-parent:9.6-SNAPSHOT, /home/brunok/apache-ysoserial-vuln/pom/SonarSource-sonarlint-core/pom.xml, line 134, column 19
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.sonarsource.sonarlint.core:sonarlint-core-parent:pom:9.6-SNAPSHOT
+[WARNING] 'dependencyManagement.dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.awaitility:awaitility:jar -> duplicate declaration of version 4.2.0 @ line 134, column 19
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] SonarLint Core                                                     [pom]
+[INFO] SonarLint Core - Commons                                           [jar]
+[INFO] SonarLint Plugin API                                               [jar]
+[INFO] SonarLint Core - SLF4J log adaptor                                 [jar]
+[INFO] SonarLint Core - Plugin Commons                                    [jar]
+[INFO] SonarLint Core - Analysis Engine                                   [jar]
+[INFO] SonarLint Core - HTTP                                              [jar]
+[INFO] SonarLint Core - Client API                                        [jar]
+[INFO] SonarLint Core - Server API                                        [jar]
+[INFO] SonarLint Core - Version Control System                            [jar]
+[INFO] SonarLint Core - Telemetry                                         [jar]
+[INFO] SonarLint Issue Tracking                                           [jar]
+[INFO] SonarLint Core - Rule Extractor                                    [jar]
+[INFO] SonarLint Core - Server Connection                                 [jar]
+[INFO] SonarLint Core - Implementation                                    [jar]
+[INFO] SonarLint Core - Medium Tests                                      [jar]
+[INFO] SonarLint Core - OSGi bundle                                    [bundle]
+[INFO] SonarLint Core - Rule Extractor - CLI                              [jar]
+[INFO] SonarLint Coverage Reports Aggregator                              [jar]
+[INFO] 
+[INFO] --------< org.sonarsource.sonarlint.core:sonarlint-core-parent >--------
+[INFO] Building SonarLint Core 9.6-SNAPSHOT                              [1/19]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ sonarlint-core-parent ---
+[INFO] digraph "org.sonarsource.sonarlint.core:sonarlint-core-parent:pom:9.6-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ----------< org.sonarsource.sonarlint.core:sonarlint-commons >----------
+[INFO] Building SonarLint Core - Commons 9.6-SNAPSHOT                    [2/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ sonarlint-commons ---
+[INFO] digraph "org.sonarsource.sonarlint.core:sonarlint-commons:jar:9.6-SNAPSHOT" { 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-commons:jar:9.6-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-commons:jar:9.6-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-commons:jar:9.6-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.23.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-commons:jar:9.6-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.9.0:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-commons:jar:9.6-SNAPSHOT" -> "com.squareup.okhttp3:mockwebserver3:jar:5.0.0-alpha.10:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.23.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.16:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"com.squareup.okhttp3:mockwebserver3:jar:5.0.0-alpha.10:test" -> "com.squareup.okhttp3:okhttp-jvm:jar:5.0.0-alpha.10:test" ; 
+[INFO] 	"com.squareup.okhttp3:mockwebserver3:jar:5.0.0-alpha.10:test" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.6.21:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp-jvm:jar:5.0.0-alpha.10:test" -> "com.squareup.okio:okio-jvm:jar:3.2.0:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp-jvm:jar:5.0.0-alpha.10:test" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.6.21:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp-jvm:jar:5.0.0-alpha.10:test" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.6.21:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.6.21:test" -> "org.jetbrains:annotations:jar:13.0:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.6.21:test" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.6.21:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------< org.sonarsource.sonarlint.core:sonarlint-plugin-api >---------
+[INFO] Building SonarLint Plugin API 9.6-SNAPSHOT                        [3/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ sonarlint-plugin-api ---
+[INFO] digraph "org.sonarsource.sonarlint.core:sonarlint-plugin-api:jar:9.6-SNAPSHOT" { 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-api:jar:9.6-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-api:jar:9.6-SNAPSHOT" -> "org.sonarsource.api.plugin:sonar-plugin-api:jar:10.1.0.809:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------< org.sonarsource.sonarlint.core:sonarlint-slf4j-sonar-log >------
+[INFO] Building SonarLint Core - SLF4J log adaptor 9.6-SNAPSHOT          [4/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ sonarlint-slf4j-sonar-log ---
+[INFO] digraph "org.sonarsource.sonarlint.core:sonarlint-slf4j-sonar-log:jar:9.6-SNAPSHOT" { 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-slf4j-sonar-log:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-commons:jar:9.6-SNAPSHOT:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------< org.sonarsource.sonarlint.core:sonarlint-plugin-commons >-------
+[INFO] Building SonarLint Core - Plugin Commons 9.6-SNAPSHOT             [5/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ sonarlint-plugin-commons ---
+[INFO] digraph "org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT" { 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-commons:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-plugin-api:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT" -> "org.sonarsource.api.plugin:sonar-plugin-api:jar:10.1.0.809:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT" -> "org.springframework:spring-context:jar:5.3.27:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT" -> "org.codehaus.sonar:sonar-classloader:jar:1.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-slf4j-sonar-log:jar:9.6-SNAPSHOT:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.23.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.9.0:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT" -> "commons-codec:commons-codec:jar:1.15:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT" -> "javax.annotation:javax.annotation-api:jar:1.3.2:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-commons:test-jar:tests:9.6-SNAPSHOT:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-aop:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-beans:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-core:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-expression:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.27:compile" -> "org.springframework:spring-jcl:jar:5.3.27:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.23.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.16:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------< org.sonarsource.sonarlint.core:sonarlint-analysis-engine >------
+[INFO] Building SonarLint Core - Analysis Engine 9.6-SNAPSHOT            [6/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ sonarlint-analysis-engine ---
+[INFO] digraph "org.sonarsource.sonarlint.core:sonarlint-analysis-engine:jar:9.6-SNAPSHOT" { 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-analysis-engine:jar:9.6-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-analysis-engine:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-analysis-engine:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-commons:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-analysis-engine:jar:9.6-SNAPSHOT" -> "org.apache.commons:commons-csv:jar:1.10.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-analysis-engine:jar:9.6-SNAPSHOT" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-analysis-engine:jar:9.6-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-analysis-engine:jar:9.6-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-params:jar:5.9.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-analysis-engine:jar:9.6-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.23.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-analysis-engine:jar:9.6-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.9.0:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-analysis-engine:jar:9.6-SNAPSHOT" -> "org.mockito:mockito-junit-jupiter:jar:4.9.0:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-analysis-engine:jar:9.6-SNAPSHOT" -> "org.awaitility:awaitility:jar:4.2.0:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-analysis-engine:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-commons:test-jar:tests:9.6-SNAPSHOT:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.sonarlint.core:sonarlint-plugin-api:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.api.plugin:sonar-plugin-api:jar:10.1.0.809:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" -> "org.springframework:spring-context:jar:5.3.27:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" -> "org.codehaus.sonar:sonar-classloader:jar:1.0:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-aop:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-beans:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-core:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-expression:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.27:compile" -> "org.springframework:spring-jcl:jar:5.3.27:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.23.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.16:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"org.awaitility:awaitility:jar:4.2.0:test" -> "org.hamcrest:hamcrest:jar:2.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------< org.sonarsource.sonarlint.core:sonarlint-http >------------
+[INFO] Building SonarLint Core - HTTP 9.6-SNAPSHOT                       [7/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ sonarlint-http ---
+[INFO] digraph "org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT" { 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-commons:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT" -> "org.apache.httpcomponents.client5:httpclient5:jar:5.2.1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT" -> "io.github.hakky54:sslcontext-kickstart:jar:8.1.6:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT" -> "com.google.guava:guava:jar:32.1.1-jre:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.23.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.9.0:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT" -> "com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-commons:test-jar:tests:9.6-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.1:compile" -> "org.apache.httpcomponents.core5:httpcore5:jar:5.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.1:compile" -> "org.apache.httpcomponents.core5:httpcore5-h2:jar:5.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.33.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.18.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.23.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.16:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-server:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-servlet:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-servlets:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-webapp:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-proxy:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty.http2:http2-server:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-alpn-server:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-alpn-java-server:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-alpn-openjdk8-server:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-alpn-java-client:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-alpn-openjdk8-client:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.xmlunit:xmlunit-core:jar:2.9.0:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.xmlunit:xmlunit-legacy:jar:2.9.0:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.xmlunit:xmlunit-placeholders:jar:2.9.0:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "net.javacrumbs.json-unit:json-unit-core:jar:2.36.0:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "com.jayway.jsonpath:json-path:jar:2.7.0:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.ow2.asm:asm:jar:9.4:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "net.sf.jopt-simple:jopt-simple:jar:5.0.4:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.apache.commons:commons-lang3:jar:3.12.0:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "com.github.jknack:handlebars:jar:4.3.1:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "com.github.jknack:handlebars-helpers:jar:4.3.1:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "commons-fileupload:commons-fileupload:jar:1.4:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "commons-io:commons-io:jar:2.11.0:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.slf4j:slf4j-api:jar:1.7.36:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.49.v20220914:test" -> "javax.servlet:javax.servlet-api:jar:3.1.0:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-http:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-io:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-security:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-util-ajax:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-continuation:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-util:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-webapp:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-xml:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-proxy:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-client:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty.http2:http2-server:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty.http2:http2-common:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty.http2:http2-common:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty.http2:http2-hpack:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-alpn-java-client:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-alpn-client:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.xmlunit:xmlunit-core:jar:2.9.0:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:test" ; 
+[INFO] 	"net.javacrumbs.json-unit:json-unit-core:jar:2.36.0:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.7.0:test" -> "net.minidev:json-smart:jar:2.4.7:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.7:test" -> "net.minidev:accessors-smart:jar:2.4.7:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------< org.sonarsource.sonarlint.core:sonarlint-client-api >---------
+[INFO] Building SonarLint Core - Client API 9.6-SNAPSHOT                 [8/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ sonarlint-client-api ---
+[INFO] digraph "org.sonarsource.sonarlint.core:sonarlint-client-api:jar:9.6-SNAPSHOT" { 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-client-api:jar:9.6-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-client-api:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-client-api:jar:9.6-SNAPSHOT" -> "org.eclipse.lsp4j:org.eclipse.lsp4j.jsonrpc:jar:0.19.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-client-api:jar:9.6-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-client-api:jar:9.6-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.23.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-client-api:jar:9.6-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.9.0:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-client-api:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-commons:test-jar:tests:9.6-SNAPSHOT:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.sonarlint.core:sonarlint-commons:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT:compile" -> "org.apache.httpcomponents.client5:httpclient5:jar:5.2.1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT:compile" -> "io.github.hakky54:sslcontext-kickstart:jar:8.1.6:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT:compile" -> "com.google.guava:guava:jar:32.1.1-jre:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.1:compile" -> "org.apache.httpcomponents.core5:httpcore5:jar:5.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.1:compile" -> "org.apache.httpcomponents.core5:httpcore5-h2:jar:5.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.33.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.18.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"org.eclipse.lsp4j:org.eclipse.lsp4j.jsonrpc:jar:0.19.0:compile" -> "com.google.code.gson:gson:jar:2.10:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.23.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.16:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------< org.sonarsource.sonarlint.core:sonarlint-server-api >---------
+[INFO] Building SonarLint Core - Server API 9.6-SNAPSHOT                 [9/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ sonarlint-server-api ---
+[INFO] digraph "org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT" { 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT" -> "com.google.guava:guava:jar:32.1.1-jre:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-commons:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT" -> "com.google.code.gson:gson:jar:2.10:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT" -> "com.google.protobuf:protobuf-java:jar:3.25.1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarqube:sonar-scanner-protocol:jar:7.9:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT" -> "com.squareup.okhttp3:okhttp:jar:5.0.0-alpha.10:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT" -> "com.squareup.okhttp3:mockwebserver3:jar:5.0.0-alpha.10:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.23.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.9.0:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT" -> "uk.org.webcompere:system-stubs-jupiter:jar:2.0.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT" -> "org.awaitility:awaitility:jar:4.2.0:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-params:jar:5.9.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-commons:test-jar:tests:9.6-SNAPSHOT:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.33.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.18.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT:compile" -> "org.apache.httpcomponents.client5:httpclient5:jar:5.2.1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT:compile" -> "io.github.hakky54:sslcontext-kickstart:jar:8.1.6:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.1:compile" -> "org.apache.httpcomponents.core5:httpcore5:jar:5.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.1:compile" -> "org.apache.httpcomponents.core5:httpcore5-h2:jar:5.2:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:5.0.0-alpha.10:test" -> "com.squareup.okhttp3:okhttp-jvm:jar:5.0.0-alpha.10:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp-jvm:jar:5.0.0-alpha.10:test" -> "com.squareup.okio:okio-jvm:jar:3.2.0:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp-jvm:jar:5.0.0-alpha.10:test" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.6.21:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp-jvm:jar:5.0.0-alpha.10:test" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.6.21:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.6.21:test" -> "org.jetbrains:annotations:jar:13.0:test" ; 
+[INFO] 	"com.squareup.okhttp3:mockwebserver3:jar:5.0.0-alpha.10:test" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.6.21:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.6.21:test" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.6.21:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.23.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.16:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"uk.org.webcompere:system-stubs-jupiter:jar:2.0.1:test" -> "uk.org.webcompere:system-stubs-core:jar:2.0.1:test" ; 
+[INFO] 	"uk.org.webcompere:system-stubs-jupiter:jar:2.0.1:test" -> "org.mockito:mockito-inline:jar:3.12.4:test" ; 
+[INFO] 	"org.awaitility:awaitility:jar:4.2.0:test" -> "org.hamcrest:hamcrest:jar:2.1:test" ; 
+[INFO] 	"org.slf4j:slf4j-simple:jar:1.7.36:test" -> "org.slf4j:slf4j-api:jar:1.7.36:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< org.sonarsource.sonarlint.core:sonarlint-vcs >------------
+[INFO] Building SonarLint Core - Version Control System 9.6-SNAPSHOT    [10/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ sonarlint-vcs ---
+[INFO] digraph "org.sonarsource.sonarlint.core:sonarlint-vcs:jar:9.6-SNAPSHOT" { 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-vcs:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-commons:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-vcs:jar:9.6-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-vcs:jar:9.6-SNAPSHOT" -> "org.eclipse.jgit:org.eclipse.jgit:jar:6.0.0.202111291000-r:provided" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-vcs:jar:9.6-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-vcs:jar:9.6-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.23.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-vcs:jar:9.6-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.9.0:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-vcs:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-commons:test-jar:tests:9.6-SNAPSHOT:test" ; 
+[INFO] 	"org.eclipse.jgit:org.eclipse.jgit:jar:6.0.0.202111291000-r:provided" -> "com.googlecode.javaewah:JavaEWAH:jar:1.1.13:provided" ; 
+[INFO] 	"org.eclipse.jgit:org.eclipse.jgit:jar:6.0.0.202111291000-r:provided" -> "org.slf4j:slf4j-api:jar:1.7.30:provided" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.23.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.16:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------< org.sonarsource.sonarlint.core:sonarlint-telemetry >---------
+[INFO] Building SonarLint Core - Telemetry 9.6-SNAPSHOT                 [11/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ sonarlint-telemetry ---
+[INFO] digraph "org.sonarsource.sonarlint.core:sonarlint-telemetry:jar:9.6-SNAPSHOT" { 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-telemetry:jar:9.6-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-telemetry:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-commons:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-telemetry:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-telemetry:jar:9.6-SNAPSHOT" -> "com.google.code.gson:gson:jar:2.10:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-telemetry:jar:9.6-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-telemetry:jar:9.6-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.23.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-telemetry:jar:9.6-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.9.0:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-telemetry:jar:9.6-SNAPSHOT" -> "com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-telemetry:jar:9.6-SNAPSHOT" -> "uk.org.webcompere:system-stubs-jupiter:jar:2.0.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-telemetry:jar:9.6-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-telemetry:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-commons:test-jar:tests:9.6-SNAPSHOT:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT:compile" -> "org.apache.httpcomponents.client5:httpclient5:jar:5.2.1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT:compile" -> "io.github.hakky54:sslcontext-kickstart:jar:8.1.6:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT:compile" -> "com.google.guava:guava:jar:32.1.1-jre:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.1:compile" -> "org.apache.httpcomponents.core5:httpcore5:jar:5.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.1:compile" -> "org.apache.httpcomponents.core5:httpcore5-h2:jar:5.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.33.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.18.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.23.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.16:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-server:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-servlet:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-servlets:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-webapp:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-proxy:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty.http2:http2-server:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-alpn-server:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-alpn-java-server:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-alpn-openjdk8-server:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-alpn-java-client:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-alpn-openjdk8-client:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.xmlunit:xmlunit-core:jar:2.9.0:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.xmlunit:xmlunit-legacy:jar:2.9.0:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.xmlunit:xmlunit-placeholders:jar:2.9.0:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "net.javacrumbs.json-unit:json-unit-core:jar:2.36.0:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "com.jayway.jsonpath:json-path:jar:2.7.0:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.ow2.asm:asm:jar:9.4:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "net.sf.jopt-simple:jopt-simple:jar:5.0.4:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.apache.commons:commons-lang3:jar:3.12.0:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "com.github.jknack:handlebars:jar:4.3.1:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "com.github.jknack:handlebars-helpers:jar:4.3.1:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "commons-fileupload:commons-fileupload:jar:1.4:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "commons-io:commons-io:jar:2.11.0:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.slf4j:slf4j-api:jar:1.7.36:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.49.v20220914:test" -> "javax.servlet:javax.servlet-api:jar:3.1.0:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-http:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-io:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-security:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-util-ajax:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-continuation:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-util:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-webapp:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-xml:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-proxy:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-client:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty.http2:http2-server:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty.http2:http2-common:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty.http2:http2-common:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty.http2:http2-hpack:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-alpn-java-client:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-alpn-client:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.xmlunit:xmlunit-core:jar:2.9.0:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:test" ; 
+[INFO] 	"net.javacrumbs.json-unit:json-unit-core:jar:2.36.0:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.7.0:test" -> "net.minidev:json-smart:jar:2.4.7:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.7:test" -> "net.minidev:accessors-smart:jar:2.4.7:test" ; 
+[INFO] 	"uk.org.webcompere:system-stubs-jupiter:jar:2.0.1:test" -> "uk.org.webcompere:system-stubs-core:jar:2.0.1:test" ; 
+[INFO] 	"uk.org.webcompere:system-stubs-jupiter:jar:2.0.1:test" -> "org.mockito:mockito-inline:jar:3.12.4:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------< org.sonarsource.sonarlint.core:sonarlint-issue-tracking >-------
+[INFO] Building SonarLint Issue Tracking 9.6-SNAPSHOT                   [12/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ sonarlint-issue-tracking ---
+[INFO] digraph "org.sonarsource.sonarlint.core:sonarlint-issue-tracking:jar:9.6-SNAPSHOT" { 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-issue-tracking:jar:9.6-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-issue-tracking:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-commons:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-issue-tracking:jar:9.6-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-issue-tracking:jar:9.6-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.23.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-issue-tracking:jar:9.6-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.9.0:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-issue-tracking:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-commons:test-jar:tests:9.6-SNAPSHOT:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.23.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.16:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ------< org.sonarsource.sonarlint.core:sonarlint-rule-extractor >-------
+[INFO] Building SonarLint Core - Rule Extractor 9.6-SNAPSHOT            [13/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ sonarlint-rule-extractor ---
+[INFO] digraph "org.sonarsource.sonarlint.core:sonarlint-rule-extractor:jar:9.6-SNAPSHOT" { 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-rule-extractor:jar:9.6-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-rule-extractor:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-rule-extractor:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-commons:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-rule-extractor:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarqube:sonar-markdown:jar:9.4.0.54424:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-rule-extractor:jar:9.6-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-rule-extractor:jar:9.6-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.23.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-rule-extractor:jar:9.6-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.9.0:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-rule-extractor:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-commons:test-jar:tests:9.6-SNAPSHOT:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.sonarlint.core:sonarlint-plugin-api:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.api.plugin:sonar-plugin-api:jar:10.1.0.809:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" -> "org.springframework:spring-context:jar:5.3.27:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" -> "org.codehaus.sonar:sonar-classloader:jar:1.0:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-aop:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-beans:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-core:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-expression:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.27:compile" -> "org.springframework:spring-jcl:jar:5.3.27:compile" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-markdown:jar:9.4.0.54424:compile" -> "commons-lang:commons-lang:jar:2.6:compile" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-markdown:jar:9.4.0.54424:compile" -> "org.codehaus.sonar:sonar-channel:jar:4.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.23.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.16:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----< org.sonarsource.sonarlint.core:sonarlint-server-connection >-----
+[INFO] Building SonarLint Core - Server Connection 9.6-SNAPSHOT         [14/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ sonarlint-server-connection ---
+[INFO] digraph "org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT" { 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT" -> "org.apache.commons:commons-compress:jar:1.24.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-commons:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT" -> "com.google.protobuf:protobuf-java:jar:3.25.1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT" -> "org.jetbrains.xodus:xodus-entity-store:jar:2.0.1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT" -> "org.jetbrains.xodus:xodus-environment:jar:2.0.1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT" -> "org.jetbrains.xodus:xodus-vfs:jar:2.0.1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT" -> "com.squareup.okhttp3:okhttp:jar:5.0.0-alpha.10:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.23.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.9.0:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT" -> "uk.org.webcompere:system-stubs-jupiter:jar:2.0.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT" -> "com.squareup.okhttp3:mockwebserver3:jar:5.0.0-alpha.10:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-params:jar:5.9.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-commons:test-jar:tests:9.6-SNAPSHOT:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT:compile" -> "com.google.guava:guava:jar:32.1.1-jre:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT:compile" -> "com.google.code.gson:gson:jar:2.10:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.sonarqube:sonar-scanner-protocol:jar:7.9:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.33.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.18.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT:compile" -> "org.apache.httpcomponents.client5:httpclient5:jar:5.2.1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT:compile" -> "io.github.hakky54:sslcontext-kickstart:jar:8.1.6:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.1:compile" -> "org.apache.httpcomponents.core5:httpcore5:jar:5.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.1:compile" -> "org.apache.httpcomponents.core5:httpcore5-h2:jar:5.2:compile" ; 
+[INFO] 	"org.jetbrains.xodus:xodus-entity-store:jar:2.0.1:compile" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.6.21:compile" ; 
+[INFO] 	"org.jetbrains.xodus:xodus-entity-store:jar:2.0.1:compile" -> "io.github.microutils:kotlin-logging:jar:1.7.9:runtime" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.6.21:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.6.21:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.6.21:compile" -> "org.jetbrains:annotations:jar:13.0:compile" ; 
+[INFO] 	"org.jetbrains.xodus:xodus-environment:jar:2.0.1:compile" -> "org.jetbrains.xodus:xodus-compress:jar:2.0.1:compile" ; 
+[INFO] 	"org.jetbrains.xodus:xodus-compress:jar:2.0.1:compile" -> "org.jetbrains.xodus:xodus-openAPI:jar:2.0.1:compile" ; 
+[INFO] 	"org.jetbrains.xodus:xodus-openAPI:jar:2.0.1:compile" -> "org.jetbrains.xodus:xodus-utils:jar:2.0.1:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:5.0.0-alpha.10:test" -> "com.squareup.okhttp3:okhttp-jvm:jar:5.0.0-alpha.10:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp-jvm:jar:5.0.0-alpha.10:test" -> "com.squareup.okio:okio-jvm:jar:3.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.23.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.16:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"uk.org.webcompere:system-stubs-jupiter:jar:2.0.1:test" -> "uk.org.webcompere:system-stubs-core:jar:2.0.1:test" ; 
+[INFO] 	"uk.org.webcompere:system-stubs-jupiter:jar:2.0.1:test" -> "org.mockito:mockito-inline:jar:3.12.4:test" ; 
+[INFO] 	"com.squareup.okhttp3:mockwebserver3:jar:5.0.0-alpha.10:test" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.6.21:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.6.21:test" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.6.21:test" ; 
+[INFO] 	"org.slf4j:slf4j-simple:jar:1.7.36:test" -> "org.slf4j:slf4j-api:jar:1.7.36:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------< org.sonarsource.sonarlint.core:sonarlint-core >------------
+[INFO] Building SonarLint Core - Implementation 9.6-SNAPSHOT            [15/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ sonarlint-core ---
+[INFO] digraph "org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" { 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-commons:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-vcs:jar:9.6-SNAPSHOT:runtime" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-telemetry:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-issue-tracking:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-rule-extractor:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-analysis-engine:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-client-api:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" -> "com.google.protobuf:protobuf-java:jar:3.25.1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" -> "com.google.guava:guava:jar:32.1.1-jre:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" -> "org.apache.httpcomponents.client5:httpclient5:jar:5.2.1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" -> "org.apache.httpcomponents.core5:httpcore5:jar:5.2:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" -> "com.squareup.okhttp3:okhttp:jar:5.0.0-alpha.10:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" -> "com.squareup.okhttp3:mockwebserver3:jar:5.0.0-alpha.10:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" -> "com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-params:jar:5.9.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.23.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.9.0:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" -> "uk.org.webcompere:system-stubs-jupiter:jar:2.0.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" -> "org.awaitility:awaitility:jar:4.2.0:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-commons:test-jar:tests:9.6-SNAPSHOT:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT:compile" -> "com.google.code.gson:gson:jar:2.10:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.sonarqube:sonar-scanner-protocol:jar:7.9:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.sonarlint.core:sonarlint-plugin-api:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.api.plugin:sonar-plugin-api:jar:10.1.0.809:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" -> "org.springframework:spring-context:jar:5.3.27:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" -> "org.codehaus.sonar:sonar-classloader:jar:1.0:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-aop:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-beans:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-core:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-expression:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.27:compile" -> "org.springframework:spring-jcl:jar:5.3.27:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-rule-extractor:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.sonarqube:sonar-markdown:jar:9.4.0.54424:compile" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-markdown:jar:9.4.0.54424:compile" -> "commons-lang:commons-lang:jar:2.6:compile" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-markdown:jar:9.4.0.54424:compile" -> "org.codehaus.sonar:sonar-channel:jar:4.2:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-analysis-engine:jar:9.6-SNAPSHOT:compile" -> "org.apache.commons:commons-csv:jar:1.10.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT:compile" -> "org.apache.commons:commons-compress:jar:1.24.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT:compile" -> "org.jetbrains.xodus:xodus-entity-store:jar:2.0.1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT:compile" -> "org.jetbrains.xodus:xodus-environment:jar:2.0.1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT:compile" -> "org.jetbrains.xodus:xodus-vfs:jar:2.0.1:compile" ; 
+[INFO] 	"org.jetbrains.xodus:xodus-entity-store:jar:2.0.1:compile" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.6.21:compile" ; 
+[INFO] 	"org.jetbrains.xodus:xodus-entity-store:jar:2.0.1:compile" -> "io.github.microutils:kotlin-logging:jar:1.7.9:runtime" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.6.21:compile" -> "org.jetbrains:annotations:jar:13.0:compile" ; 
+[INFO] 	"org.jetbrains.xodus:xodus-environment:jar:2.0.1:compile" -> "org.jetbrains.xodus:xodus-compress:jar:2.0.1:compile" ; 
+[INFO] 	"org.jetbrains.xodus:xodus-compress:jar:2.0.1:compile" -> "org.jetbrains.xodus:xodus-openAPI:jar:2.0.1:compile" ; 
+[INFO] 	"org.jetbrains.xodus:xodus-openAPI:jar:2.0.1:compile" -> "org.jetbrains.xodus:xodus-utils:jar:2.0.1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-client-api:jar:9.6-SNAPSHOT:compile" -> "org.eclipse.lsp4j:org.eclipse.lsp4j.jsonrpc:jar:0.19.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT:compile" -> "io.github.hakky54:sslcontext-kickstart:jar:8.1.6:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.33.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.18.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.1:compile" -> "org.apache.httpcomponents.core5:httpcore5-h2:jar:5.2:compile" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp:jar:5.0.0-alpha.10:test" -> "com.squareup.okhttp3:okhttp-jvm:jar:5.0.0-alpha.10:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp-jvm:jar:5.0.0-alpha.10:test" -> "com.squareup.okio:okio-jvm:jar:3.2.0:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp-jvm:jar:5.0.0-alpha.10:test" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.6.21:compile" ; 
+[INFO] 	"com.squareup.okhttp3:mockwebserver3:jar:5.0.0-alpha.10:test" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.6.21:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.6.21:test" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.6.21:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-server:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-servlet:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-servlets:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-webapp:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-proxy:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty.http2:http2-server:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-alpn-server:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-alpn-java-server:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-alpn-openjdk8-server:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-alpn-java-client:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-alpn-openjdk8-client:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.xmlunit:xmlunit-core:jar:2.9.0:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.xmlunit:xmlunit-legacy:jar:2.9.0:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.xmlunit:xmlunit-placeholders:jar:2.9.0:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "net.javacrumbs.json-unit:json-unit-core:jar:2.36.0:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "com.jayway.jsonpath:json-path:jar:2.7.0:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.ow2.asm:asm:jar:9.4:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "net.sf.jopt-simple:jopt-simple:jar:5.0.4:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "com.github.jknack:handlebars:jar:4.3.1:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "com.github.jknack:handlebars-helpers:jar:4.3.1:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "commons-fileupload:commons-fileupload:jar:1.4:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.slf4j:slf4j-api:jar:1.7.36:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.49.v20220914:test" -> "javax.servlet:javax.servlet-api:jar:3.1.0:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-http:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-io:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-security:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-util-ajax:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-continuation:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-util:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-webapp:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-xml:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-proxy:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-client:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty.http2:http2-server:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty.http2:http2-common:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty.http2:http2-common:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty.http2:http2-hpack:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-alpn-java-client:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-alpn-client:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.xmlunit:xmlunit-core:jar:2.9.0:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:test" ; 
+[INFO] 	"net.javacrumbs.json-unit:json-unit-core:jar:2.36.0:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.7.0:test" -> "net.minidev:json-smart:jar:2.4.7:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.7:test" -> "net.minidev:accessors-smart:jar:2.4.7:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-params:jar:5.9.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-params:jar:5.9.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.23.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.16:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"uk.org.webcompere:system-stubs-jupiter:jar:2.0.1:test" -> "uk.org.webcompere:system-stubs-core:jar:2.0.1:test" ; 
+[INFO] 	"uk.org.webcompere:system-stubs-jupiter:jar:2.0.1:test" -> "org.mockito:mockito-inline:jar:3.12.4:test" ; 
+[INFO] 	"org.awaitility:awaitility:jar:4.2.0:test" -> "org.hamcrest:hamcrest:jar:2.1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------< org.sonarsource.sonarlint.core:sonarlint-medium-tests >--------
+[INFO] Building SonarLint Core - Medium Tests 9.6-SNAPSHOT              [16/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ sonarlint-medium-tests ---
+[INFO] digraph "org.sonarsource.sonarlint.core:sonarlint-medium-tests:jar:9.6-SNAPSHOT" { 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-medium-tests:jar:9.6-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-medium-tests:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-medium-tests:jar:9.6-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:2.0.7:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-medium-tests:jar:9.6-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-medium-tests:jar:9.6-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.23.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-medium-tests:jar:9.6-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.9.0:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-medium-tests:jar:9.6-SNAPSHOT" -> "com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-medium-tests:jar:9.6-SNAPSHOT" -> "com.squareup.okhttp3:mockwebserver3:jar:5.0.0-alpha.10:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-medium-tests:jar:9.6-SNAPSHOT" -> "org.awaitility:awaitility:jar:4.2.0:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-medium-tests:jar:9.6-SNAPSHOT" -> "javax.websocket:javax.websocket-api:jar:1.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-medium-tests:jar:9.6-SNAPSHOT" -> "org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.12:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-medium-tests:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-commons:test-jar:tests:9.6-SNAPSHOT:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:test" -> "javax.inject:javax.inject:jar:1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:test" -> "javax.annotation:javax.annotation-api:jar:1.3.2:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:test" -> "org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:test" -> "org.sonarsource.sonarlint.core:sonarlint-commons:jar:9.6-SNAPSHOT:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:test" -> "org.sonarsource.sonarlint.core:sonarlint-vcs:jar:9.6-SNAPSHOT:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:test" -> "org.sonarsource.sonarlint.core:sonarlint-telemetry:jar:9.6-SNAPSHOT:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:test" -> "org.sonarsource.sonarlint.core:sonarlint-issue-tracking:jar:9.6-SNAPSHOT:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:test" -> "org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:test" -> "org.sonarsource.sonarlint.core:sonarlint-rule-extractor:jar:9.6-SNAPSHOT:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:test" -> "org.sonarsource.sonarlint.core:sonarlint-analysis-engine:jar:9.6-SNAPSHOT:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:test" -> "org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:test" -> "org.sonarsource.sonarlint.core:sonarlint-client-api:jar:9.6-SNAPSHOT:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:test" -> "org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:test" -> "commons-io:commons-io:jar:2.11.0:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:test" -> "org.apache.commons:commons-lang3:jar:3.12.0:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:test" -> "commons-codec:commons-codec:jar:1.15:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:test" -> "com.google.protobuf:protobuf-java:jar:3.25.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:test" -> "com.google.guava:guava:jar:32.1.1-jre:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:test" -> "org.apache.httpcomponents.client5:httpclient5:jar:5.2.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:test" -> "org.apache.httpcomponents.core5:httpcore5:jar:5.2:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT:test" -> "com.google.code.gson:gson:jar:2.10:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT:test" -> "org.sonarsource.sonarqube:sonar-scanner-protocol:jar:7.9:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:test" -> "org.sonarsource.sonarlint.core:sonarlint-plugin-api:jar:9.6-SNAPSHOT:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:test" -> "org.sonarsource.api.plugin:sonar-plugin-api:jar:10.1.0.809:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:test" -> "org.springframework:spring-context:jar:5.3.27:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:test" -> "org.codehaus.sonar:sonar-classloader:jar:1.0:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:test" -> "org.springframework:spring-aop:jar:5.3.27:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:test" -> "org.springframework:spring-beans:jar:5.3.27:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:test" -> "org.springframework:spring-core:jar:5.3.27:test" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:test" -> "org.springframework:spring-expression:jar:5.3.27:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.27:test" -> "org.springframework:spring-jcl:jar:5.3.27:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-rule-extractor:jar:9.6-SNAPSHOT:test" -> "org.sonarsource.sonarqube:sonar-markdown:jar:9.4.0.54424:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-markdown:jar:9.4.0.54424:test" -> "commons-lang:commons-lang:jar:2.6:test" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-markdown:jar:9.4.0.54424:test" -> "org.codehaus.sonar:sonar-channel:jar:4.2:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-analysis-engine:jar:9.6-SNAPSHOT:test" -> "org.apache.commons:commons-csv:jar:1.10.0:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT:test" -> "org.apache.commons:commons-compress:jar:1.24.0:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT:test" -> "org.jetbrains.xodus:xodus-entity-store:jar:2.0.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT:test" -> "org.jetbrains.xodus:xodus-environment:jar:2.0.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT:test" -> "org.jetbrains.xodus:xodus-vfs:jar:2.0.1:test" ; 
+[INFO] 	"org.jetbrains.xodus:xodus-entity-store:jar:2.0.1:test" -> "io.github.microutils:kotlin-logging:jar:1.7.9:test" ; 
+[INFO] 	"org.jetbrains.xodus:xodus-environment:jar:2.0.1:test" -> "org.jetbrains.xodus:xodus-compress:jar:2.0.1:test" ; 
+[INFO] 	"org.jetbrains.xodus:xodus-compress:jar:2.0.1:test" -> "org.jetbrains.xodus:xodus-openAPI:jar:2.0.1:test" ; 
+[INFO] 	"org.jetbrains.xodus:xodus-openAPI:jar:2.0.1:test" -> "org.jetbrains.xodus:xodus-utils:jar:2.0.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-client-api:jar:9.6-SNAPSHOT:test" -> "org.eclipse.lsp4j:org.eclipse.lsp4j.jsonrpc:jar:0.19.0:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT:test" -> "io.github.hakky54:sslcontext-kickstart:jar:8.1.6:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:test" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:test" -> "org.checkerframework:checker-qual:jar:3.33.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:test" -> "com.google.errorprone:error_prone_annotations:jar:2.18.0:test" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:test" -> "com.google.j2objc:j2objc-annotations:jar:2.8:test" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.1:test" -> "org.apache.httpcomponents.core5:httpcore5-h2:jar:5.2:test" ; 
+[INFO] 	"org.slf4j:slf4j-simple:jar:2.0.7:test" -> "org.slf4j:slf4j-api:jar:2.0.7:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.23.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.10:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.16:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-server:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-servlet:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-servlets:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-webapp:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-proxy:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty.http2:http2-server:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-alpn-server:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-alpn-java-server:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-alpn-openjdk8-server:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-alpn-java-client:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.eclipse.jetty:jetty-alpn-openjdk8-client:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "com.fasterxml.jackson.core:jackson-core:jar:2.13.4:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.xmlunit:xmlunit-core:jar:2.9.0:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.xmlunit:xmlunit-legacy:jar:2.9.0:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.xmlunit:xmlunit-placeholders:jar:2.9.0:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "net.javacrumbs.json-unit:json-unit-core:jar:2.36.0:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "com.jayway.jsonpath:json-path:jar:2.7.0:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "org.ow2.asm:asm:jar:9.4:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "net.sf.jopt-simple:jopt-simple:jar:5.0.4:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "com.github.jknack:handlebars:jar:4.3.1:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "com.github.jknack:handlebars-helpers:jar:4.3.1:test" ; 
+[INFO] 	"com.github.tomakehurst:wiremock-jre8:jar:2.35.0:test" -> "commons-fileupload:commons-fileupload:jar:1.4:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.49.v20220914:test" -> "javax.servlet:javax.servlet-api:jar:3.1.0:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-http:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-io:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-security:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-util-ajax:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-continuation:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlets:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-util:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-webapp:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-xml:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-proxy:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-client:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty.http2:http2-server:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty.http2:http2-common:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty.http2:http2-common:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty.http2:http2-hpack:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.eclipse.jetty:jetty-alpn-java-client:jar:9.4.49.v20220914:test" -> "org.eclipse.jetty:jetty-alpn-client:jar:9.4.49.v20220914:test" ; 
+[INFO] 	"org.xmlunit:xmlunit-core:jar:2.9.0:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:test" ; 
+[INFO] 	"net.javacrumbs.json-unit:json-unit-core:jar:2.36.0:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.7.0:test" -> "net.minidev:json-smart:jar:2.4.7:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.4.7:test" -> "net.minidev:accessors-smart:jar:2.4.7:test" ; 
+[INFO] 	"com.squareup.okhttp3:mockwebserver3:jar:5.0.0-alpha.10:test" -> "com.squareup.okhttp3:okhttp-jvm:jar:5.0.0-alpha.10:test" ; 
+[INFO] 	"com.squareup.okhttp3:mockwebserver3:jar:5.0.0-alpha.10:test" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.6.21:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp-jvm:jar:5.0.0-alpha.10:test" -> "com.squareup.okio:okio-jvm:jar:3.2.0:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp-jvm:jar:5.0.0-alpha.10:test" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.6.21:test" ; 
+[INFO] 	"com.squareup.okhttp3:okhttp-jvm:jar:5.0.0-alpha.10:test" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.6.21:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.6.21:test" -> "org.jetbrains:annotations:jar:13.0:test" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.6.21:test" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.6.21:test" ; 
+[INFO] 	"org.awaitility:awaitility:jar:4.2.0:test" -> "org.hamcrest:hamcrest:jar:2.1:test" ; 
+[INFO] 	"org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.12:test" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.12:test" ; 
+[INFO] 	"org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.12:test" -> "org.apache.tomcat:tomcat-annotations-api:jar:10.1.12:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------< org.sonarsource.sonarlint.core:sonarlint-core-osgi >---------
+[INFO] Building SonarLint Core - OSGi bundle 9.6-SNAPSHOT               [17/19]
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ sonarlint-core-osgi ---
+[INFO] digraph "org.sonarsource.sonarlint.core:sonarlint-core-osgi:bundle:9.6-SNAPSHOT" { 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core-osgi:bundle:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core-osgi:bundle:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-core:jar:sources:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.sonarlint.core:sonarlint-commons:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.sonarlint.core:sonarlint-vcs:jar:9.6-SNAPSHOT:runtime" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.sonarlint.core:sonarlint-telemetry:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.sonarlint.core:sonarlint-issue-tracking:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.sonarlint.core:sonarlint-rule-extractor:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.sonarlint.core:sonarlint-analysis-engine:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.sonarlint.core:sonarlint-client-api:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:compile" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:compile" -> "com.google.protobuf:protobuf-java:jar:3.25.1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:compile" -> "com.google.guava:guava:jar:32.1.1-jre:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:compile" -> "org.apache.httpcomponents.client5:httpclient5:jar:5.2.1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:compile" -> "org.apache.httpcomponents.core5:httpcore5:jar:5.2:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT:compile" -> "com.google.code.gson:gson:jar:2.10:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.sonarqube:sonar-scanner-protocol:jar:7.9:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.sonarlint.core:sonarlint-plugin-api:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.api.plugin:sonar-plugin-api:jar:10.1.0.809:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" -> "org.springframework:spring-context:jar:5.3.27:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" -> "org.codehaus.sonar:sonar-classloader:jar:1.0:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-aop:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-beans:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-core:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-expression:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.27:compile" -> "org.springframework:spring-jcl:jar:5.3.27:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-rule-extractor:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.sonarqube:sonar-markdown:jar:9.4.0.54424:compile" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-markdown:jar:9.4.0.54424:compile" -> "commons-lang:commons-lang:jar:2.6:compile" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-markdown:jar:9.4.0.54424:compile" -> "org.codehaus.sonar:sonar-channel:jar:4.2:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-analysis-engine:jar:9.6-SNAPSHOT:compile" -> "org.apache.commons:commons-csv:jar:1.10.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT:compile" -> "org.apache.commons:commons-compress:jar:1.24.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT:compile" -> "org.jetbrains.xodus:xodus-entity-store:jar:2.0.1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT:compile" -> "org.jetbrains.xodus:xodus-environment:jar:2.0.1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT:compile" -> "org.jetbrains.xodus:xodus-vfs:jar:2.0.1:compile" ; 
+[INFO] 	"org.jetbrains.xodus:xodus-entity-store:jar:2.0.1:compile" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.6.21:compile" ; 
+[INFO] 	"org.jetbrains.xodus:xodus-entity-store:jar:2.0.1:compile" -> "io.github.microutils:kotlin-logging:jar:1.7.9:runtime" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.6.21:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.6.21:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.6.21:compile" -> "org.jetbrains:annotations:jar:13.0:compile" ; 
+[INFO] 	"org.jetbrains.xodus:xodus-environment:jar:2.0.1:compile" -> "org.jetbrains.xodus:xodus-compress:jar:2.0.1:compile" ; 
+[INFO] 	"org.jetbrains.xodus:xodus-compress:jar:2.0.1:compile" -> "org.jetbrains.xodus:xodus-openAPI:jar:2.0.1:compile" ; 
+[INFO] 	"org.jetbrains.xodus:xodus-openAPI:jar:2.0.1:compile" -> "org.jetbrains.xodus:xodus-utils:jar:2.0.1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-client-api:jar:9.6-SNAPSHOT:compile" -> "org.eclipse.lsp4j:org.eclipse.lsp4j.jsonrpc:jar:0.19.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT:compile" -> "io.github.hakky54:sslcontext-kickstart:jar:8.1.6:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.33.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.18.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.1:compile" -> "org.apache.httpcomponents.core5:httpcore5-h2:jar:5.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----< org.sonarsource.sonarlint.core:sonarlint-rule-extractor-cli >-----
+[INFO] Building SonarLint Core - Rule Extractor - CLI 9.6-SNAPSHOT      [18/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ sonarlint-rule-extractor-cli ---
+[INFO] digraph "org.sonarsource.sonarlint.core:sonarlint-rule-extractor-cli:jar:9.6-SNAPSHOT" { 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-rule-extractor-cli:jar:9.6-SNAPSHOT" -> "com.google.code.findbugs:jsr305:jar:3.0.2:provided" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-rule-extractor-cli:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-rule-extractor:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-rule-extractor-cli:jar:9.6-SNAPSHOT" -> "info.picocli:picocli:jar:4.7.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-rule-extractor-cli:jar:9.6-SNAPSHOT" -> "com.google.code.gson:gson:jar:2.10:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-rule-extractor-cli:jar:9.6-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-rule-extractor-cli:jar:9.6-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.23.1:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-rule-extractor-cli:jar:9.6-SNAPSHOT" -> "net.javacrumbs.json-unit:json-unit-assertj:jar:2.36.0:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-rule-extractor-cli:jar:9.6-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:2.0.5:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-rule-extractor-cli:jar:9.6-SNAPSHOT" -> "org.mockito:mockito-core:jar:4.9.0:test" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-rule-extractor:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-rule-extractor:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.sonarlint.core:sonarlint-commons:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-rule-extractor:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.sonarqube:sonar-markdown:jar:9.4.0.54424:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.sonarlint.core:sonarlint-plugin-api:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.api.plugin:sonar-plugin-api:jar:10.1.0.809:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" -> "org.springframework:spring-context:jar:5.3.27:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" -> "org.codehaus.sonar:sonar-classloader:jar:1.0:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-aop:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-beans:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-core:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-expression:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.27:compile" -> "org.springframework:spring-jcl:jar:5.3.27:compile" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-markdown:jar:9.4.0.54424:compile" -> "commons-lang:commons-lang:jar:2.6:compile" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-markdown:jar:9.4.0.54424:compile" -> "org.codehaus.sonar:sonar-channel:jar:4.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.platform:junit-platform-engine:jar:1.9.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.23.1:test" -> "net.bytebuddy:byte-buddy:jar:1.12.10:test" ; 
+[INFO] 	"net.javacrumbs.json-unit:json-unit-assertj:jar:2.36.0:test" -> "net.javacrumbs.json-unit:json-unit-core:jar:2.36.0:test" ; 
+[INFO] 	"net.javacrumbs.json-unit:json-unit-assertj:jar:2.36.0:test" -> "net.javacrumbs.json-unit:json-unit-json-path:jar:2.36.0:test" ; 
+[INFO] 	"net.javacrumbs.json-unit:json-unit-core:jar:2.36.0:test" -> "org.hamcrest:hamcrest-core:jar:2.2:test" ; 
+[INFO] 	"org.hamcrest:hamcrest-core:jar:2.2:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"net.javacrumbs.json-unit:json-unit-json-path:jar:2.36.0:test" -> "com.jayway.jsonpath:json-path:jar:2.4.0:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.4.0:test" -> "net.minidev:json-smart:jar:2.3:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.3:test" -> "net.minidev:accessors-smart:jar:1.2:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:1.2:test" -> "org.ow2.asm:asm:jar:5.0.4:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.12.16:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:4.9.0:test" -> "org.objenesis:objenesis:jar:3.3:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----< org.sonarsource.sonarlint.core:sonarlint-report-aggregate >------
+[INFO] Building SonarLint Coverage Reports Aggregator 9.6-SNAPSHOT      [19/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ sonarlint-report-aggregate ---
+[INFO] digraph "org.sonarsource.sonarlint.core:sonarlint-report-aggregate:jar:9.6-SNAPSHOT" { 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-report-aggregate:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-commons:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-report-aggregate:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-analysis-engine:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-report-aggregate:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-rule-extractor:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-report-aggregate:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-rule-extractor-cli:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-report-aggregate:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-issue-tracking:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-report-aggregate:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-report-aggregate:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-report-aggregate:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-report-aggregate:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-plugin-api:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-report-aggregate:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-telemetry:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-report-aggregate:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-vcs:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-report-aggregate:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-report-aggregate:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-client-api:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-report-aggregate:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-report-aggregate:jar:9.6-SNAPSHOT" -> "org.sonarsource.sonarlint.core:sonarlint-medium-tests:jar:9.6-SNAPSHOT:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-analysis-engine:jar:9.6-SNAPSHOT:compile" -> "org.apache.commons:commons-csv:jar:1.10.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-analysis-engine:jar:9.6-SNAPSHOT:compile" -> "commons-codec:commons-codec:jar:1.15:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-rule-extractor:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.sonarqube:sonar-markdown:jar:9.4.0.54424:compile" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-markdown:jar:9.4.0.54424:compile" -> "commons-lang:commons-lang:jar:2.6:compile" ; 
+[INFO] 	"org.sonarsource.sonarqube:sonar-markdown:jar:9.4.0.54424:compile" -> "org.codehaus.sonar:sonar-channel:jar:4.2:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-rule-extractor-cli:jar:9.6-SNAPSHOT:compile" -> "info.picocli:picocli:jar:4.7.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-rule-extractor-cli:jar:9.6-SNAPSHOT:compile" -> "com.google.code.gson:gson:jar:2.10:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT:compile" -> "com.google.guava:guava:jar:32.1.1-jre:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT:compile" -> "com.google.protobuf:protobuf-java:jar:3.25.1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-api:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.sonarqube:sonar-scanner-protocol:jar:7.9:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "org.checkerframework:checker-qual:jar:3.33.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.errorprone:error_prone_annotations:jar:2.18.0:compile" ; 
+[INFO] 	"com.google.guava:guava:jar:32.1.1-jre:compile" -> "com.google.j2objc:j2objc-annotations:jar:2.8:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" -> "org.sonarsource.api.plugin:sonar-plugin-api:jar:10.1.0.809:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" -> "org.springframework:spring-context:jar:5.3.27:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-plugin-commons:jar:9.6-SNAPSHOT:compile" -> "org.codehaus.sonar:sonar-classloader:jar:1.0:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-aop:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-beans:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-core:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.27:compile" -> "org.springframework:spring-expression:jar:5.3.27:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.27:compile" -> "org.springframework:spring-jcl:jar:5.3.27:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:compile" -> "org.apache.httpcomponents.client5:httpclient5:jar:5.2.1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-core:jar:9.6-SNAPSHOT:compile" -> "org.apache.httpcomponents.core5:httpcore5:jar:5.2:compile" ; 
+[INFO] 	"org.apache.httpcomponents.client5:httpclient5:jar:5.2.1:compile" -> "org.apache.httpcomponents.core5:httpcore5-h2:jar:5.2:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT:compile" -> "org.apache.commons:commons-compress:jar:1.24.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT:compile" -> "org.jetbrains.xodus:xodus-entity-store:jar:2.0.1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT:compile" -> "org.jetbrains.xodus:xodus-environment:jar:2.0.1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-server-connection:jar:9.6-SNAPSHOT:compile" -> "org.jetbrains.xodus:xodus-vfs:jar:2.0.1:compile" ; 
+[INFO] 	"org.jetbrains.xodus:xodus-entity-store:jar:2.0.1:compile" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.6.21:compile" ; 
+[INFO] 	"org.jetbrains.xodus:xodus-entity-store:jar:2.0.1:compile" -> "io.github.microutils:kotlin-logging:jar:1.7.9:runtime" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.6.21:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.6.21:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.6.21:compile" -> "org.jetbrains:annotations:jar:13.0:compile" ; 
+[INFO] 	"org.jetbrains.xodus:xodus-environment:jar:2.0.1:compile" -> "org.jetbrains.xodus:xodus-compress:jar:2.0.1:compile" ; 
+[INFO] 	"org.jetbrains.xodus:xodus-compress:jar:2.0.1:compile" -> "org.jetbrains.xodus:xodus-openAPI:jar:2.0.1:compile" ; 
+[INFO] 	"org.jetbrains.xodus:xodus-openAPI:jar:2.0.1:compile" -> "org.jetbrains.xodus:xodus-utils:jar:2.0.1:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-client-api:jar:9.6-SNAPSHOT:compile" -> "org.eclipse.lsp4j:org.eclipse.lsp4j.jsonrpc:jar:0.19.0:compile" ; 
+[INFO] 	"org.sonarsource.sonarlint.core:sonarlint-http:jar:9.6-SNAPSHOT:compile" -> "io.github.hakky54:sslcontext-kickstart:jar:8.1.6:compile" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for SonarLint Core 9.6-SNAPSHOT:
+[INFO] 
+[INFO] SonarLint Core ..................................... SUCCESS [  2.272 s]
+[INFO] SonarLint Core - Commons ........................... SUCCESS [  0.282 s]
+[INFO] SonarLint Plugin API ............................... SUCCESS [  0.071 s]
+[INFO] SonarLint Core - SLF4J log adaptor ................. SUCCESS [  0.061 s]
+[INFO] SonarLint Core - Plugin Commons .................... SUCCESS [  0.153 s]
+[INFO] SonarLint Core - Analysis Engine ................... SUCCESS [  0.165 s]
+[INFO] SonarLint Core - HTTP .............................. SUCCESS [  0.656 s]
+[INFO] SonarLint Core - Client API ........................ SUCCESS [  0.119 s]
+[INFO] SonarLint Core - Server API ........................ SUCCESS [  0.174 s]
+[INFO] SonarLint Core - Version Control System ............ SUCCESS [  0.096 s]
+[INFO] SonarLint Core - Telemetry ......................... SUCCESS [  0.133 s]
+[INFO] SonarLint Issue Tracking ........................... SUCCESS [  0.039 s]
+[INFO] SonarLint Core - Rule Extractor .................... SUCCESS [  0.101 s]
+[INFO] SonarLint Core - Server Connection ................. SUCCESS [  0.145 s]
+[INFO] SonarLint Core - Implementation .................... SUCCESS [  0.220 s]
+[INFO] SonarLint Core - Medium Tests ...................... SUCCESS [  0.212 s]
+[INFO] SonarLint Core - OSGi bundle ....................... SUCCESS [  0.627 s]
+[INFO] SonarLint Core - Rule Extractor - CLI .............. SUCCESS [  0.126 s]
+[INFO] SonarLint Coverage Reports Aggregator .............. SUCCESS [  0.152 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.681 s
+[INFO] Finished at: 2023-12-28T09:03:26+01:00
+[INFO] ------------------------------------------------------------------------

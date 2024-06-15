@@ -1,0 +1,31 @@
+[INFO] Scanning for projects...
+[INFO] Downloading from oss-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/elasticsearch/elasticsearch-plugin/2.0.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from oss-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/elasticsearch/elasticsearch-plugin/2.0.0-SNAPSHOT/maven-metadata.xml (618 B at 375 B/s)
+[INFO] Downloading from oss-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/elasticsearch/elasticsearch-parent/2.0.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from oss-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/elasticsearch/elasticsearch-parent/2.0.0-SNAPSHOT/maven-metadata.xml (618 B at 2.1 kB/s)
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/elasticsearch/elasticsearch-plugin/2.0.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/elasticsearch/elasticsearch-plugin/2.0.0-SNAPSHOT/maven-metadata.xml (618 B at 2.1 kB/s)
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/elasticsearch/elasticsearch-parent/2.0.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/elasticsearch/elasticsearch-parent/2.0.0-SNAPSHOT/maven-metadata.xml (618 B at 2.2 kB/s)
+[INFO] 
+[INFO] -----------< org.elasticsearch:elasticsearch-river-rabbitmq >-----------
+[INFO] Building Elasticsearch RabbitMQ River plugin 3.0.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from oss-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/elasticsearch/elasticsearch/3.0.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/elasticsearch/elasticsearch/3.0.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from oss-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/elasticsearch/elasticsearch/3.0.0-SNAPSHOT/maven-metadata.xml (1.2 kB at 4.6 kB/s)
+[INFO] Downloaded from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/elasticsearch/elasticsearch/3.0.0-SNAPSHOT/maven-metadata.xml (1.2 kB at 2.3 kB/s)
+[INFO] Downloading from oss-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/elasticsearch/elasticsearch/3.0.0-SNAPSHOT/elasticsearch-3.0.0-SNAPSHOT-tests.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.799 s
+[INFO] Finished at: 2023-12-28T09:02:43+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project elasticsearch-river-rabbitmq: Could not resolve dependencies for project org.elasticsearch:elasticsearch-river-rabbitmq:jar:3.0.0-SNAPSHOT: Could not find artifact org.elasticsearch:elasticsearch:jar:tests:3.0.0-SNAPSHOT in oss-snapshots (https://oss.sonatype.org/content/repositories/snapshots/) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException

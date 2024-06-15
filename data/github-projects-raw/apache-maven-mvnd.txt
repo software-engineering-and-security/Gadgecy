@@ -1,0 +1,762 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Maven Daemon - Parent                                              [pom]
+[INFO] Maven Daemon - Documentation Maven Plugin                 [maven-plugin]
+[INFO] Maven Daemon - Native Library                                      [jar]
+[INFO] Maven Daemon - Agent                                               [jar]
+[INFO] Maven Daemon - Helper Agent                                        [jar]
+[INFO] Maven Daemon - Common                                              [jar]
+[INFO] Maven Daemon - Logging                                             [jar]
+[INFO] Maven Daemon - Client                                              [jar]
+[INFO] Maven Daemon - Daemon                                              [jar]
+[INFO] Maven Daemon - Daemon 3.9.x specifics                              [jar]
+[INFO] Maven Daemon - Daemon 4.0.x specifics                              [jar]
+[INFO] Maven Daemon - Distribution for 3.9.x                              [pom]
+[INFO] Maven Daemon - Distribution for 4.0.x                              [pom]
+[INFO] Maven Daemon - Integration Tests                                   [jar]
+[INFO] 
+[INFO] --------------------< org.apache.maven.daemon:mvnd >--------------------
+[INFO] Building Maven Daemon - Parent 1.0-m9-SNAPSHOT                    [1/14]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ mvnd ---
+[INFO] digraph "org.apache.maven.daemon:mvnd:pom:1.0-m9-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ----------< org.apache.maven.daemon:mvnd-build-maven-plugin >-----------
+[INFO] Building Maven Daemon - Documentation Maven Plugin 1.0-m9-SNAPSHOT [2/14]
+[INFO] ----------------------------[ maven-plugin ]----------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ mvnd-build-maven-plugin ---
+[INFO] digraph "org.apache.maven.daemon:mvnd-build-maven-plugin:maven-plugin:1.0-m9-SNAPSHOT" { 
+[INFO] 	"org.apache.maven.daemon:mvnd-build-maven-plugin:maven-plugin:1.0-m9-SNAPSHOT" -> "org.apache.maven:maven-plugin-api:jar:3.9.0:provided" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-build-maven-plugin:maven-plugin:1.0-m9-SNAPSHOT" -> "org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.9.0:provided" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-build-maven-plugin:maven-plugin:1.0-m9-SNAPSHOT" -> "org.jboss.forge.roaster:roaster-jdt:jar:2.28.0.Final:compile" ; 
+[INFO] 	"org.apache.maven:maven-plugin-api:jar:3.9.0:provided" -> "org.apache.maven:maven-model:jar:3.9.0:provided" ; 
+[INFO] 	"org.apache.maven:maven-plugin-api:jar:3.9.0:provided" -> "org.apache.maven:maven-artifact:jar:3.9.0:provided" ; 
+[INFO] 	"org.apache.maven:maven-plugin-api:jar:3.9.0:provided" -> "org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.9.0.M2:provided" ; 
+[INFO] 	"org.apache.maven:maven-plugin-api:jar:3.9.0:provided" -> "org.codehaus.plexus:plexus-utils:jar:4.0.0:provided" ; 
+[INFO] 	"org.apache.maven:maven-plugin-api:jar:3.9.0:provided" -> "org.codehaus.plexus:plexus-classworlds:jar:2.6.0:provided" ; 
+[INFO] 	"org.apache.maven:maven-artifact:jar:3.9.0:provided" -> "org.apache.commons:commons-lang3:jar:3.8.1:provided" ; 
+[INFO] 	"org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.9.0.M2:provided" -> "javax.annotation:javax.annotation-api:jar:1.2:provided" ; 
+[INFO] 	"org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.9.0.M2:provided" -> "org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.9.0.M2:provided" ; 
+[INFO] 	"org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.9.0.M2:provided" -> "org.codehaus.plexus:plexus-component-annotations:jar:2.1.0:provided" ; 
+[INFO] 	"org.jboss.forge.roaster:roaster-jdt:jar:2.28.0.Final:compile" -> "org.jboss.forge.roaster:roaster-api:jar:2.28.0.Final:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< org.apache.maven.daemon:mvnd-native >-----------------
+[INFO] Building Maven Daemon - Native Library 1.0-m9-SNAPSHOT            [3/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ mvnd-native ---
+[INFO] digraph "org.apache.maven.daemon:mvnd-native:jar:1.0-m9-SNAPSHOT" { 
+[INFO] 	"org.apache.maven.daemon:mvnd-native:jar:1.0-m9-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.7.0:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-native:jar:1.0-m9-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.0:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-native:jar:1.0-m9-SNAPSHOT" -> "info.picocli:picocli-codegen:jar:4.5.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-params:jar:5.7.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"info.picocli:picocli-codegen:jar:4.5.2:test" -> "info.picocli:picocli:jar:4.5.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< org.apache.maven.daemon:mvnd-agent >-----------------
+[INFO] Building Maven Daemon - Agent 1.0-m9-SNAPSHOT                     [4/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ mvnd-agent ---
+[INFO] digraph "org.apache.maven.daemon:mvnd-agent:jar:1.0-m9-SNAPSHOT" { 
+[INFO] 	"org.apache.maven.daemon:mvnd-agent:jar:1.0-m9-SNAPSHOT" -> "org.javassist:javassist:jar:3.29.2-GA:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< org.apache.maven.daemon:mvnd-helper-agent >--------------
+[INFO] Building Maven Daemon - Helper Agent 1.0-m9-SNAPSHOT              [5/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ mvnd-helper-agent ---
+[INFO] digraph "org.apache.maven.daemon:mvnd-helper-agent:jar:1.0-m9-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< org.apache.maven.daemon:mvnd-common >-----------------
+[INFO] Building Maven Daemon - Common 1.0-m9-SNAPSHOT                    [6/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/maven/daemon/mvnd-build-maven-plugin/1.0-m9-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/maven/daemon/mvnd-build-maven-plugin/1.0-m9-SNAPSHOT/mvnd-build-maven-plugin-1.0-m9-SNAPSHOT.jar
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.daemon:mvnd-build-maven-plugin:1.0-m9-SNAPSHOT: Plugin org.apache.maven.daemon:mvnd-build-maven-plugin:1.0-m9-SNAPSHOT or one of its dependencies could not be resolved: Could not find artifact org.apache.maven.daemon:mvnd-build-maven-plugin:jar:1.0-m9-SNAPSHOT in apache.snapshots (https://repository.apache.org/snapshots)
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ mvnd-common ---
+[INFO] digraph "org.apache.maven.daemon:mvnd-common:jar:1.0-m9-SNAPSHOT" { 
+[INFO] 	"org.apache.maven.daemon:mvnd-common:jar:1.0-m9-SNAPSHOT" -> "org.jline:jline-terminal:jar:3.24.0:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-common:jar:1.0-m9-SNAPSHOT" -> "org.jline:jline-terminal-jansi:jar:3.24.0:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-common:jar:1.0-m9-SNAPSHOT" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-common:jar:1.0-m9-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.9.2:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-common:jar:1.0-m9-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.36:test" ; 
+[INFO] 	"org.jline:jline-terminal:jar:3.24.0:compile" -> "org.jline:jline-native:jar:3.24.0:compile" ; 
+[INFO] 	"org.jline:jline-terminal-jansi:jar:3.24.0:compile" -> "org.fusesource.jansi:jansi:jar:2.4.0:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.2:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.9.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.2:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< org.apache.maven.daemon:mvnd-logging >----------------
+[INFO] Building Maven Daemon - Logging 1.0-m9-SNAPSHOT                   [7/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ mvnd-logging ---
+[INFO] digraph "org.apache.maven.daemon:mvnd-logging:jar:1.0-m9-SNAPSHOT" { 
+[INFO] 	"org.apache.maven.daemon:mvnd-logging:jar:1.0-m9-SNAPSHOT" -> "org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-logging:jar:1.0-m9-SNAPSHOT" -> "org.apache.maven.shared:maven-shared-utils:jar:3.4.2:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-logging:jar:1.0-m9-SNAPSHOT" -> "org.slf4j:log4j-over-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-logging:jar:1.0-m9-SNAPSHOT" -> "org.slf4j:jcl-over-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-logging:jar:1.0-m9-SNAPSHOT" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-settings:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-settings-builder:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-toolchain-builder:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-plugin-api:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-model:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-model-builder:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-builder-support:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven.resolver:maven-resolver-api:jar:1.9.16:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven.resolver:maven-resolver-util:jar:1.9.16:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-slf4j-wrapper:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "com.google.inject:guice:jar:classes:5.1.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "com.google.guava:guava:jar:32.0.1-jre:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.codehaus.plexus:plexus-classworlds:jar:2.6.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.9.0.M2:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.codehaus.plexus:plexus-sec-dispatcher:jar:2.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.codehaus.plexus:plexus-cipher:jar:2.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.codehaus.plexus:plexus-interpolation:jar:1.26:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "commons-cli:commons-cli:jar:1.5.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-settings:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-settings:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-settings:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-xml-impl:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-settings:jar:4.0.0-alpha-8:compile" -> "org.codehaus.plexus:plexus-xml:jar:4.0.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-settings:jar:4.0.0-alpha-8:compile" -> "com.fasterxml.woodstox:woodstox-core:jar:6.5.1:compile" ; 
+[INFO] 	"org.apache.maven:maven-api-settings:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-xml:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"com.fasterxml.woodstox:woodstox-core:jar:6.5.1:compile" -> "org.codehaus.woodstox:stax2-api:jar:4.2.1:compile" ; 
+[INFO] 	"org.apache.maven:maven-toolchain-builder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-toolchain-model:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-toolchain-model:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-toolchain:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-repository-metadata:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-artifact:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-resolver-provider:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-core:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-spi:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven.resolver:maven-resolver-impl:jar:1.9.16:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven.resolver:maven-resolver-spi:jar:1.9.16:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.eclipse.sisu:org.eclipse.sisu.inject:jar:no_asm:0.9.0.M2:compile" ; 
+[INFO] 	"org.apache.maven:maven-resolver-provider:jar:4.0.0-alpha-8:compile" -> "org.ow2.asm:asm:jar:9.5:compile" ; 
+[INFO] 	"org.apache.maven:maven-api-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-meta:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven.resolver:maven-resolver-impl:jar:1.9.16:compile" -> "org.apache.maven.resolver:maven-resolver-named-locks:jar:1.9.16:compile" ; 
+[INFO] 	"org.apache.maven:maven-model:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-model:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:classes:5.1.0:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.9.0.M2:compile" -> "org.codehaus.plexus:plexus-component-annotations:jar:2.1.0:compile" ; 
+[INFO] 	"org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.9.0.M2:compile" -> "org.codehaus.plexus:plexus-utils:jar:4.0.0:compile" ; 
+[INFO] 	"org.apache.maven.shared:maven-shared-utils:jar:3.4.2:compile" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< org.apache.maven.daemon:mvnd-client >-----------------
+[INFO] Building Maven Daemon - Client 1.0-m9-SNAPSHOT                    [8/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/maven/daemon/mvnd-common/1.0-m9-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/maven/daemon/mvnd-logging/1.0-m9-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ mvnd-client ---
+[INFO] digraph "org.apache.maven.daemon:mvnd-client:jar:1.0-m9-SNAPSHOT" { 
+[INFO] 	"org.apache.maven.daemon:mvnd-client:jar:1.0-m9-SNAPSHOT" -> "org.apache.maven.daemon:mvnd-common:jar:1.0-m9-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-client:jar:1.0-m9-SNAPSHOT" -> "org.apache.maven.daemon:mvnd-logging:jar:1.0-m9-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-client:jar:1.0-m9-SNAPSHOT" -> "org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-client:jar:1.0-m9-SNAPSHOT" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-client:jar:1.0-m9-SNAPSHOT" -> "org.graalvm.nativeimage:svm:jar:22.3.1:provided" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-client:jar:1.0-m9-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.9.2:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-client:jar:1.0-m9-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-common:jar:1.0-m9-SNAPSHOT:compile" -> "org.jline:jline-terminal:jar:3.24.0:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-common:jar:1.0-m9-SNAPSHOT:compile" -> "org.jline:jline-terminal-jansi:jar:3.24.0:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-common:jar:1.0-m9-SNAPSHOT:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.jline:jline-terminal:jar:3.24.0:compile" -> "org.jline:jline-native:jar:3.24.0:compile" ; 
+[INFO] 	"org.jline:jline-terminal-jansi:jar:3.24.0:compile" -> "org.fusesource.jansi:jansi:jar:2.4.0:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-logging:jar:1.0-m9-SNAPSHOT:compile" -> "org.apache.maven.shared:maven-shared-utils:jar:3.4.2:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-logging:jar:1.0-m9-SNAPSHOT:compile" -> "org.slf4j:log4j-over-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-logging:jar:1.0-m9-SNAPSHOT:compile" -> "org.slf4j:jcl-over-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.maven.shared:maven-shared-utils:jar:3.4.2:compile" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-settings:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-settings-builder:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-toolchain-builder:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-plugin-api:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-model:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-model-builder:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-builder-support:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven.resolver:maven-resolver-api:jar:1.9.16:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven.resolver:maven-resolver-util:jar:1.9.16:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-slf4j-wrapper:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "com.google.inject:guice:jar:classes:5.1.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "com.google.guava:guava:jar:32.0.1-jre:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.codehaus.plexus:plexus-classworlds:jar:2.6.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.9.0.M2:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.codehaus.plexus:plexus-sec-dispatcher:jar:2.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.codehaus.plexus:plexus-cipher:jar:2.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.codehaus.plexus:plexus-interpolation:jar:1.26:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "commons-cli:commons-cli:jar:1.5.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-settings:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-settings:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-settings:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-xml-impl:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-settings:jar:4.0.0-alpha-8:compile" -> "org.codehaus.plexus:plexus-xml:jar:4.0.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-settings:jar:4.0.0-alpha-8:compile" -> "com.fasterxml.woodstox:woodstox-core:jar:6.5.1:compile" ; 
+[INFO] 	"org.apache.maven:maven-api-settings:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-xml:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"com.fasterxml.woodstox:woodstox-core:jar:6.5.1:compile" -> "org.codehaus.woodstox:stax2-api:jar:4.2.1:compile" ; 
+[INFO] 	"org.apache.maven:maven-toolchain-builder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-toolchain-model:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-toolchain-model:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-toolchain:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-repository-metadata:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-artifact:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-resolver-provider:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-core:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-spi:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven.resolver:maven-resolver-impl:jar:1.9.16:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven.resolver:maven-resolver-spi:jar:1.9.16:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.eclipse.sisu:org.eclipse.sisu.inject:jar:no_asm:0.9.0.M2:compile" ; 
+[INFO] 	"org.apache.maven:maven-resolver-provider:jar:4.0.0-alpha-8:compile" -> "org.ow2.asm:asm:jar:9.5:compile" ; 
+[INFO] 	"org.apache.maven:maven-api-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-meta:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven.resolver:maven-resolver-impl:jar:1.9.16:compile" -> "org.apache.maven.resolver:maven-resolver-named-locks:jar:1.9.16:compile" ; 
+[INFO] 	"org.apache.maven:maven-model:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-model:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:classes:5.1.0:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.9.0.M2:compile" -> "org.codehaus.plexus:plexus-component-annotations:jar:2.1.0:compile" ; 
+[INFO] 	"org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.9.0.M2:compile" -> "org.codehaus.plexus:plexus-utils:jar:4.0.0:compile" ; 
+[INFO] 	"org.graalvm.nativeimage:svm:jar:22.3.1:provided" -> "org.graalvm.sdk:graal-sdk:jar:22.3.1:provided" ; 
+[INFO] 	"org.graalvm.nativeimage:svm:jar:22.3.1:provided" -> "org.graalvm.nativeimage:objectfile:jar:22.3.1:provided" ; 
+[INFO] 	"org.graalvm.nativeimage:svm:jar:22.3.1:provided" -> "org.graalvm.nativeimage:pointsto:jar:22.3.1:provided" ; 
+[INFO] 	"org.graalvm.nativeimage:svm:jar:22.3.1:provided" -> "org.graalvm.compiler:compiler:jar:22.3.1:provided" ; 
+[INFO] 	"org.graalvm.nativeimage:svm:jar:22.3.1:provided" -> "org.graalvm.nativeimage:native-image-base:jar:22.3.1:provided" ; 
+[INFO] 	"org.graalvm.compiler:compiler:jar:22.3.1:provided" -> "org.graalvm.truffle:truffle-api:jar:22.3.1:provided" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.2:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.9.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.2:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.2:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.12.21:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< org.apache.maven.daemon:mvnd-daemon >-----------------
+[INFO] Building Maven Daemon - Daemon 1.0-m9-SNAPSHOT                    [9/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/maven/daemon/mvnd-native/1.0-m9-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ mvnd-daemon ---
+[INFO] digraph "org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT" { 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT" -> "org.apache.maven.daemon:mvnd-common:jar:1.0-m9-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT" -> "org.apache.maven.daemon:mvnd-native:jar:1.0-m9-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT" -> "org.apache.maven.daemon:mvnd-logging:jar:1.0-m9-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT" -> "org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT" -> "org.codehaus.plexus:plexus-interactivity-api:jar:1.0:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT" -> "io.takari.maven:takari-smart-builder:jar:0.6.4:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT" -> "org.slf4j:log4j-over-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT" -> "org.slf4j:jcl-over-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT" -> "org.jline:jline-terminal:jar:3.24.0:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT" -> "org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.9.0.M2:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.9.2:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-common:jar:1.0-m9-SNAPSHOT:compile" -> "org.jline:jline-terminal-jansi:jar:3.24.0:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-common:jar:1.0-m9-SNAPSHOT:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.jline:jline-terminal-jansi:jar:3.24.0:compile" -> "org.fusesource.jansi:jansi:jar:2.4.0:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-logging:jar:1.0-m9-SNAPSHOT:compile" -> "org.apache.maven.shared:maven-shared-utils:jar:3.4.2:compile" ; 
+[INFO] 	"org.apache.maven.shared:maven-shared-utils:jar:3.4.2:compile" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-settings:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-settings-builder:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-toolchain-builder:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-plugin-api:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-model:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-model-builder:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-builder-support:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven.resolver:maven-resolver-api:jar:1.9.16:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven.resolver:maven-resolver-util:jar:1.9.16:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-slf4j-wrapper:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "com.google.inject:guice:jar:classes:5.1.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "com.google.guava:guava:jar:32.0.1-jre:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.codehaus.plexus:plexus-classworlds:jar:2.6.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.9.0.M2:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.codehaus.plexus:plexus-sec-dispatcher:jar:2.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.codehaus.plexus:plexus-cipher:jar:2.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.codehaus.plexus:plexus-interpolation:jar:1.26:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "commons-cli:commons-cli:jar:1.5.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-settings:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-settings:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-settings:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-xml-impl:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-settings:jar:4.0.0-alpha-8:compile" -> "org.codehaus.plexus:plexus-xml:jar:4.0.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-settings:jar:4.0.0-alpha-8:compile" -> "com.fasterxml.woodstox:woodstox-core:jar:6.5.1:compile" ; 
+[INFO] 	"org.apache.maven:maven-api-settings:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-xml:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"com.fasterxml.woodstox:woodstox-core:jar:6.5.1:compile" -> "org.codehaus.woodstox:stax2-api:jar:4.2.1:compile" ; 
+[INFO] 	"org.apache.maven:maven-toolchain-builder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-toolchain-model:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-toolchain-model:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-toolchain:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-repository-metadata:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-artifact:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-resolver-provider:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-core:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-spi:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven.resolver:maven-resolver-impl:jar:1.9.16:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven.resolver:maven-resolver-spi:jar:1.9.16:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.eclipse.sisu:org.eclipse.sisu.inject:jar:no_asm:0.9.0.M2:compile" ; 
+[INFO] 	"org.apache.maven:maven-resolver-provider:jar:4.0.0-alpha-8:compile" -> "org.ow2.asm:asm:jar:9.5:compile" ; 
+[INFO] 	"org.apache.maven:maven-api-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-meta:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven.resolver:maven-resolver-impl:jar:1.9.16:compile" -> "org.apache.maven.resolver:maven-resolver-named-locks:jar:1.9.16:compile" ; 
+[INFO] 	"org.apache.maven:maven-model:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-model:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:classes:5.1.0:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.9.0.M2:compile" -> "org.codehaus.plexus:plexus-component-annotations:jar:2.1.0:compile" ; 
+[INFO] 	"org.codehaus.plexus:plexus-interactivity-api:jar:1.0:compile" -> "org.codehaus.plexus:plexus-utils:jar:4.0.0:compile" ; 
+[INFO] 	"org.codehaus.plexus:plexus-interactivity-api:jar:1.0:compile" -> "org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile" ; 
+[INFO] 	"org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile" -> "classworlds:classworlds:jar:1.1-alpha-2:compile" ; 
+[INFO] 	"org.jline:jline-terminal:jar:3.24.0:compile" -> "org.jline:jline-native:jar:3.24.0:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.2:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.9.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.2:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.2:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< org.apache.maven.daemon:mvnd-daemon-m39 >---------------
+[INFO] Building Maven Daemon - Daemon 3.9.x specifics 1.0-m9-SNAPSHOT   [10/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/maven/daemon/mvnd-daemon/1.0-m9-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ mvnd-daemon-m39 ---
+[INFO] digraph "org.apache.maven.daemon:mvnd-daemon-m39:jar:1.0-m9-SNAPSHOT" { 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon-m39:jar:1.0-m9-SNAPSHOT" -> "org.apache.maven:maven-core:jar:3.9.5:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon-m39:jar:1.0-m9-SNAPSHOT" -> "org.apache.maven:maven-embedder:jar:3.9.5:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon-m39:jar:1.0-m9-SNAPSHOT" -> "org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "org.apache.maven:maven-model:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "org.apache.maven:maven-settings:jar:3.9.5:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "org.apache.maven:maven-settings-builder:jar:3.9.5:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "org.apache.maven:maven-builder-support:jar:3.9.5:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "org.apache.maven:maven-repository-metadata:jar:3.9.5:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "org.apache.maven:maven-artifact:jar:3.9.5:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "org.apache.maven:maven-plugin-api:jar:3.9.5:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "org.apache.maven:maven-model-builder:jar:3.9.5:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "org.apache.maven:maven-resolver-provider:jar:3.9.5:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "org.apache.maven.resolver:maven-resolver-impl:jar:1.9.16:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "org.apache.maven.resolver:maven-resolver-api:jar:1.9.16:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "org.apache.maven.resolver:maven-resolver-spi:jar:1.9.16:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "org.apache.maven.resolver:maven-resolver-util:jar:1.9.16:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "org.apache.maven.shared:maven-shared-utils:jar:3.4.2:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.9.0.M2:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.9.0.M2:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "com.google.inject:guice:jar:5.1.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "com.google.guava:guava:jar:32.0.1-jre:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "org.codehaus.plexus:plexus-utils:jar:4.0.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "org.codehaus.plexus:plexus-classworlds:jar:2.7.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "org.codehaus.plexus:plexus-interpolation:jar:1.26:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "org.codehaus.plexus:plexus-component-annotations:jar:2.1.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.maven:maven-model:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-model:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-model:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-xml-impl:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-model:jar:4.0.0-alpha-8:compile" -> "org.codehaus.plexus:plexus-xml:jar:4.0.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-model:jar:4.0.0-alpha-8:compile" -> "com.fasterxml.woodstox:woodstox-core:jar:6.5.1:compile" ; 
+[INFO] 	"org.apache.maven:maven-api-model:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-xml:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-api-xml:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-meta:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"com.fasterxml.woodstox:woodstox-core:jar:6.5.1:compile" -> "org.codehaus.woodstox:stax2-api:jar:4.2.1:compile" ; 
+[INFO] 	"org.apache.maven.resolver:maven-resolver-impl:jar:1.9.16:compile" -> "org.apache.maven.resolver:maven-resolver-named-locks:jar:1.9.16:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:5.1.0:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:3.9.5:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:3.9.5:compile" -> "org.codehaus.plexus:plexus-sec-dispatcher:jar:2.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:3.9.5:compile" -> "org.codehaus.plexus:plexus-cipher:jar:2.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:3.9.5:compile" -> "commons-cli:commons-cli:jar:1.5.0:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "org.apache.maven.daemon:mvnd-common:jar:1.0-m9-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "org.apache.maven.daemon:mvnd-native:jar:1.0-m9-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "org.apache.maven.daemon:mvnd-logging:jar:1.0-m9-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "org.codehaus.plexus:plexus-interactivity-api:jar:1.0:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "io.takari.maven:takari-smart-builder:jar:0.6.4:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "org.slf4j:log4j-over-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "org.slf4j:jcl-over-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "org.jline:jline-terminal:jar:3.24.0:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-common:jar:1.0-m9-SNAPSHOT:compile" -> "org.jline:jline-terminal-jansi:jar:3.24.0:compile" ; 
+[INFO] 	"org.jline:jline-terminal-jansi:jar:3.24.0:compile" -> "org.fusesource.jansi:jansi:jar:2.4.0:compile" ; 
+[INFO] 	"org.codehaus.plexus:plexus-interactivity-api:jar:1.0:compile" -> "org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile" ; 
+[INFO] 	"org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile" -> "classworlds:classworlds:jar:1.1-alpha-2:compile" ; 
+[INFO] 	"org.jline:jline-terminal:jar:3.24.0:compile" -> "org.jline:jline-native:jar:3.24.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< org.apache.maven.daemon:mvnd-daemon-m40 >---------------
+[INFO] Building Maven Daemon - Daemon 4.0.x specifics 1.0-m9-SNAPSHOT   [11/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ mvnd-daemon-m40 ---
+[INFO] digraph "org.apache.maven.daemon:mvnd-daemon-m40:jar:1.0-m9-SNAPSHOT" { 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon-m40:jar:1.0-m9-SNAPSHOT" -> "org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon-m40:jar:1.0-m9-SNAPSHOT" -> "org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon-m40:jar:1.0-m9-SNAPSHOT" -> "org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-model:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-settings:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-settings-builder:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-toolchain-model:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-toolchain-builder:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-repository-metadata:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-artifact:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-plugin-api:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-model-builder:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-resolver-provider:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-core:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-spi:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven.resolver:maven-resolver-impl:jar:1.9.16:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven.resolver:maven-resolver-api:jar:1.9.16:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven.resolver:maven-resolver-spi:jar:1.9.16:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven.resolver:maven-resolver-util:jar:1.9.16:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.9.0.M2:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.eclipse.sisu:org.eclipse.sisu.inject:jar:no_asm:0.9.0.M2:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "com.google.inject:guice:jar:classes:5.1.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "com.google.guava:guava:jar:32.0.1-jre:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.codehaus.plexus:plexus-classworlds:jar:2.6.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.maven:maven-model:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-model:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-model:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-xml-impl:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-model:jar:4.0.0-alpha-8:compile" -> "org.codehaus.plexus:plexus-xml:jar:4.0.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-model:jar:4.0.0-alpha-8:compile" -> "com.fasterxml.woodstox:woodstox-core:jar:6.5.1:compile" ; 
+[INFO] 	"org.apache.maven:maven-api-model:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-xml:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"com.fasterxml.woodstox:woodstox-core:jar:6.5.1:compile" -> "org.codehaus.woodstox:stax2-api:jar:4.2.1:compile" ; 
+[INFO] 	"org.apache.maven:maven-settings:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-settings:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-toolchain-model:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-toolchain:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-resolver-provider:jar:4.0.0-alpha-8:compile" -> "org.ow2.asm:asm:jar:9.5:compile" ; 
+[INFO] 	"org.apache.maven:maven-api-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-meta:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven.resolver:maven-resolver-impl:jar:1.9.16:compile" -> "org.apache.maven.resolver:maven-resolver-named-locks:jar:1.9.16:compile" ; 
+[INFO] 	"org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.9.0.M2:compile" -> "org.codehaus.plexus:plexus-component-annotations:jar:2.1.0:compile" ; 
+[INFO] 	"org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.9.0.M2:compile" -> "org.codehaus.plexus:plexus-utils:jar:4.0.0:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:classes:5.1.0:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-builder-support:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-slf4j-wrapper:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.codehaus.plexus:plexus-sec-dispatcher:jar:2.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.codehaus.plexus:plexus-cipher:jar:2.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.codehaus.plexus:plexus-interpolation:jar:1.26:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "commons-cli:commons-cli:jar:1.5.0:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "org.apache.maven.daemon:mvnd-common:jar:1.0-m9-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "org.apache.maven.daemon:mvnd-native:jar:1.0-m9-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "org.apache.maven.daemon:mvnd-logging:jar:1.0-m9-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "org.codehaus.plexus:plexus-interactivity-api:jar:1.0:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "io.takari.maven:takari-smart-builder:jar:0.6.4:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "org.slf4j:log4j-over-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "org.slf4j:jcl-over-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "org.jline:jline-terminal:jar:3.24.0:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.9.0.M2:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-common:jar:1.0-m9-SNAPSHOT:compile" -> "org.jline:jline-terminal-jansi:jar:3.24.0:compile" ; 
+[INFO] 	"org.jline:jline-terminal-jansi:jar:3.24.0:compile" -> "org.fusesource.jansi:jansi:jar:2.4.0:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-logging:jar:1.0-m9-SNAPSHOT:compile" -> "org.apache.maven.shared:maven-shared-utils:jar:3.4.2:compile" ; 
+[INFO] 	"org.apache.maven.shared:maven-shared-utils:jar:3.4.2:compile" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"org.codehaus.plexus:plexus-interactivity-api:jar:1.0:compile" -> "org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile" ; 
+[INFO] 	"org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile" -> "classworlds:classworlds:jar:1.1-alpha-2:compile" ; 
+[INFO] 	"org.jline:jline-terminal:jar:3.24.0:compile" -> "org.jline:jline-native:jar:3.24.0:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.apache.maven.daemon:mvnd-dist-m39 >----------------
+[INFO] Building Maven Daemon - Distribution for 3.9.x 1.0-m9-SNAPSHOT   [12/14]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/maven/daemon/mvnd-agent/1.0-m9-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/maven/daemon/mvnd-helper-agent/1.0-m9-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/maven/daemon/mvnd-client/1.0-m9-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/maven/daemon/mvnd-daemon-m39/1.0-m9-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ mvnd-dist-m39 ---
+[INFO] digraph "org.apache.maven.daemon:mvnd-dist-m39:pom:1.0-m9-SNAPSHOT" { 
+[INFO] 	"org.apache.maven.daemon:mvnd-dist-m39:pom:1.0-m9-SNAPSHOT" -> "org.apache.maven.daemon:mvnd-agent:jar:1.0-m9-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-dist-m39:pom:1.0-m9-SNAPSHOT" -> "org.apache.maven.daemon:mvnd-helper-agent:jar:1.0-m9-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-dist-m39:pom:1.0-m9-SNAPSHOT" -> "org.apache.maven.daemon:mvnd-client:jar:1.0-m9-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-dist-m39:pom:1.0-m9-SNAPSHOT" -> "org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-dist-m39:pom:1.0-m9-SNAPSHOT" -> "org.apache.maven.daemon:mvnd-daemon-m39:jar:1.0-m9-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-agent:jar:1.0-m9-SNAPSHOT:compile" -> "org.javassist:javassist:jar:3.29.2-GA:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-client:jar:1.0-m9-SNAPSHOT:compile" -> "org.apache.maven.daemon:mvnd-common:jar:1.0-m9-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-client:jar:1.0-m9-SNAPSHOT:compile" -> "org.apache.maven.daemon:mvnd-logging:jar:1.0-m9-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-client:jar:1.0-m9-SNAPSHOT:compile" -> "org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-client:jar:1.0-m9-SNAPSHOT:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-common:jar:1.0-m9-SNAPSHOT:compile" -> "org.jline:jline-terminal-jansi:jar:3.24.0:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-common:jar:1.0-m9-SNAPSHOT:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.jline:jline-terminal-jansi:jar:3.24.0:compile" -> "org.fusesource.jansi:jansi:jar:2.4.0:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-logging:jar:1.0-m9-SNAPSHOT:compile" -> "org.apache.maven.shared:maven-shared-utils:jar:3.4.2:compile" ; 
+[INFO] 	"org.apache.maven.shared:maven-shared-utils:jar:3.4.2:compile" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-settings:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-settings-builder:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-toolchain-builder:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-plugin-api:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-model:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-model-builder:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-builder-support:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven.resolver:maven-resolver-api:jar:1.9.16:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven.resolver:maven-resolver-util:jar:1.9.16:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-slf4j-wrapper:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "com.google.inject:guice:jar:classes:5.1.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "com.google.guava:guava:jar:32.0.1-jre:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.codehaus.plexus:plexus-classworlds:jar:2.6.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.9.0.M2:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.codehaus.plexus:plexus-sec-dispatcher:jar:2.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.codehaus.plexus:plexus-cipher:jar:2.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.codehaus.plexus:plexus-interpolation:jar:1.26:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "commons-cli:commons-cli:jar:1.5.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-settings:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-settings:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-settings:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-xml-impl:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-settings:jar:4.0.0-alpha-8:compile" -> "org.codehaus.plexus:plexus-xml:jar:4.0.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-settings:jar:4.0.0-alpha-8:compile" -> "com.fasterxml.woodstox:woodstox-core:jar:6.5.1:compile" ; 
+[INFO] 	"org.apache.maven:maven-api-settings:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-xml:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"com.fasterxml.woodstox:woodstox-core:jar:6.5.1:compile" -> "org.codehaus.woodstox:stax2-api:jar:4.2.1:compile" ; 
+[INFO] 	"org.apache.maven:maven-toolchain-builder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-toolchain-model:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-toolchain-model:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-toolchain:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-model:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-model:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-model-builder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-core:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-model-builder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-spi:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-model-builder:jar:4.0.0-alpha-8:compile" -> "org.eclipse.sisu:org.eclipse.sisu.inject:jar:no_asm:0.9.0.M2:compile" ; 
+[INFO] 	"org.apache.maven:maven-api-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-meta:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:classes:5.1.0:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "org.apache.maven.daemon:mvnd-native:jar:1.0-m9-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "org.codehaus.plexus:plexus-interactivity-api:jar:1.0:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "io.takari.maven:takari-smart-builder:jar:0.6.4:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "org.slf4j:log4j-over-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "org.slf4j:jcl-over-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "org.jline:jline-terminal:jar:3.24.0:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.9.0.M2:compile" ; 
+[INFO] 	"org.codehaus.plexus:plexus-interactivity-api:jar:1.0:compile" -> "org.codehaus.plexus:plexus-utils:jar:4.0.0:compile" ; 
+[INFO] 	"org.codehaus.plexus:plexus-interactivity-api:jar:1.0:compile" -> "org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile" ; 
+[INFO] 	"org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile" -> "classworlds:classworlds:jar:1.1-alpha-2:compile" ; 
+[INFO] 	"org.jline:jline-terminal:jar:3.24.0:compile" -> "org.jline:jline-native:jar:3.24.0:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon-m39:jar:1.0-m9-SNAPSHOT:compile" -> "org.apache.maven:maven-core:jar:3.9.5:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "org.apache.maven:maven-repository-metadata:jar:3.9.5:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "org.apache.maven:maven-artifact:jar:3.9.5:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "org.apache.maven:maven-resolver-provider:jar:3.9.5:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "org.apache.maven.resolver:maven-resolver-impl:jar:1.9.16:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "org.apache.maven.resolver:maven-resolver-spi:jar:1.9.16:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "com.google.inject:guice:jar:5.1.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "org.codehaus.plexus:plexus-component-annotations:jar:2.1.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:compile" -> "org.apache.commons:commons-lang3:jar:3.12.0:compile" ; 
+[INFO] 	"org.apache.maven.resolver:maven-resolver-impl:jar:1.9.16:compile" -> "org.apache.maven.resolver:maven-resolver-named-locks:jar:1.9.16:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< org.apache.maven.daemon:mvnd-dist-m40 >----------------
+[INFO] Building Maven Daemon - Distribution for 4.0.x 1.0-m9-SNAPSHOT   [13/14]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/snapshots/org/apache/maven/daemon/mvnd-daemon-m40/1.0-m9-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ mvnd-dist-m40 ---
+[INFO] digraph "org.apache.maven.daemon:mvnd-dist-m40:pom:1.0-m9-SNAPSHOT" { 
+[INFO] 	"org.apache.maven.daemon:mvnd-dist-m40:pom:1.0-m9-SNAPSHOT" -> "org.apache.maven.daemon:mvnd-agent:jar:1.0-m9-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-dist-m40:pom:1.0-m9-SNAPSHOT" -> "org.apache.maven.daemon:mvnd-helper-agent:jar:1.0-m9-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-dist-m40:pom:1.0-m9-SNAPSHOT" -> "org.apache.maven.daemon:mvnd-client:jar:1.0-m9-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-dist-m40:pom:1.0-m9-SNAPSHOT" -> "org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-dist-m40:pom:1.0-m9-SNAPSHOT" -> "org.apache.maven.daemon:mvnd-daemon-m40:jar:1.0-m9-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-agent:jar:1.0-m9-SNAPSHOT:compile" -> "org.javassist:javassist:jar:3.29.2-GA:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-client:jar:1.0-m9-SNAPSHOT:compile" -> "org.apache.maven.daemon:mvnd-common:jar:1.0-m9-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-client:jar:1.0-m9-SNAPSHOT:compile" -> "org.apache.maven.daemon:mvnd-logging:jar:1.0-m9-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-client:jar:1.0-m9-SNAPSHOT:compile" -> "org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-client:jar:1.0-m9-SNAPSHOT:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-common:jar:1.0-m9-SNAPSHOT:compile" -> "org.jline:jline-terminal-jansi:jar:3.24.0:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-common:jar:1.0-m9-SNAPSHOT:compile" -> "org.slf4j:slf4j-api:jar:1.7.36:compile" ; 
+[INFO] 	"org.jline:jline-terminal-jansi:jar:3.24.0:compile" -> "org.fusesource.jansi:jansi:jar:2.4.0:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-logging:jar:1.0-m9-SNAPSHOT:compile" -> "org.apache.maven.shared:maven-shared-utils:jar:3.4.2:compile" ; 
+[INFO] 	"org.apache.maven.shared:maven-shared-utils:jar:3.4.2:compile" -> "commons-io:commons-io:jar:2.11.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-settings:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-settings-builder:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-toolchain-builder:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-plugin-api:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-model:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-model-builder:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-builder-support:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven.resolver:maven-resolver-api:jar:1.9.16:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven.resolver:maven-resolver-util:jar:1.9.16:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-slf4j-wrapper:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "com.google.inject:guice:jar:classes:5.1.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "com.google.guava:guava:jar:32.0.1-jre:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "com.google.guava:failureaccess:jar:1.0.1:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.codehaus.plexus:plexus-classworlds:jar:2.6.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.9.0.M2:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.codehaus.plexus:plexus-sec-dispatcher:jar:2.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.codehaus.plexus:plexus-cipher:jar:2.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "org.codehaus.plexus:plexus-interpolation:jar:1.26:compile" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:compile" -> "commons-cli:commons-cli:jar:1.5.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-settings:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-settings:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-settings:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-xml-impl:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-settings:jar:4.0.0-alpha-8:compile" -> "org.codehaus.plexus:plexus-xml:jar:4.0.0:compile" ; 
+[INFO] 	"org.apache.maven:maven-settings:jar:4.0.0-alpha-8:compile" -> "com.fasterxml.woodstox:woodstox-core:jar:6.5.1:compile" ; 
+[INFO] 	"org.apache.maven:maven-api-settings:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-xml:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"com.fasterxml.woodstox:woodstox-core:jar:6.5.1:compile" -> "org.codehaus.woodstox:stax2-api:jar:4.2.1:compile" ; 
+[INFO] 	"org.apache.maven:maven-model:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-model:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"com.google.inject:guice:jar:classes:5.1.0:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+[INFO] 	"org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.9.0.M2:compile" -> "org.codehaus.plexus:plexus-component-annotations:jar:2.1.0:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "org.apache.maven.daemon:mvnd-native:jar:1.0-m9-SNAPSHOT:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "org.codehaus.plexus:plexus-interactivity-api:jar:1.0:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "io.takari.maven:takari-smart-builder:jar:0.6.4:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "org.slf4j:log4j-over-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "org.slf4j:jcl-over-slf4j:jar:1.7.36:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "org.jline:jline-terminal:jar:3.24.0:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:compile" -> "org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.9.0.M2:compile" ; 
+[INFO] 	"org.codehaus.plexus:plexus-interactivity-api:jar:1.0:compile" -> "org.codehaus.plexus:plexus-utils:jar:4.0.0:compile" ; 
+[INFO] 	"org.codehaus.plexus:plexus-interactivity-api:jar:1.0:compile" -> "org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile" ; 
+[INFO] 	"org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile" -> "classworlds:classworlds:jar:1.1-alpha-2:compile" ; 
+[INFO] 	"org.jline:jline-terminal:jar:3.24.0:compile" -> "org.jline:jline-native:jar:3.24.0:compile" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon-m40:jar:1.0-m9-SNAPSHOT:compile" -> "org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-toolchain-model:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-repository-metadata:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-artifact:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-resolver-provider:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-core:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-spi:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven.resolver:maven-resolver-impl:jar:1.9.16:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven.resolver:maven-resolver-spi:jar:1.9.16:compile" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:4.0.0-alpha-8:compile" -> "org.eclipse.sisu:org.eclipse.sisu.inject:jar:no_asm:0.9.0.M2:compile" ; 
+[INFO] 	"org.apache.maven:maven-toolchain-model:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-toolchain:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven:maven-resolver-provider:jar:4.0.0-alpha-8:compile" -> "org.ow2.asm:asm:jar:9.5:compile" ; 
+[INFO] 	"org.apache.maven:maven-api-core:jar:4.0.0-alpha-8:compile" -> "org.apache.maven:maven-api-meta:jar:4.0.0-alpha-8:compile" ; 
+[INFO] 	"org.apache.maven.resolver:maven-resolver-impl:jar:1.9.16:compile" -> "org.apache.maven.resolver:maven-resolver-named-locks:jar:1.9.16:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------< org.apache.maven.daemon:mvnd-integration-tests >-----------
+[INFO] Building Maven Daemon - Integration Tests 1.0-m9-SNAPSHOT        [14/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.6.0:tree (default-cli) @ mvnd-integration-tests ---
+[INFO] digraph "org.apache.maven.daemon:mvnd-integration-tests:jar:1.0-m9-SNAPSHOT" { 
+[INFO] 	"org.apache.maven.daemon:mvnd-integration-tests:jar:1.0-m9-SNAPSHOT" -> "jakarta.inject:jakarta.inject-api:jar:1.0:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-integration-tests:jar:1.0-m9-SNAPSHOT" -> "org.assertj:assertj-core:jar:3.24.2:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-integration-tests:jar:1.0-m9-SNAPSHOT" -> "org.apache.maven.daemon:mvnd-dist-m39:pom:1.0-m9-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-integration-tests:jar:1.0-m9-SNAPSHOT" -> "org.apache.maven.daemon:mvnd-dist-m40:pom:1.0-m9-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-integration-tests:jar:1.0-m9-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter:jar:5.9.2:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-integration-tests:jar:1.0-m9-SNAPSHOT" -> "org.apache.maven:maven-model:jar:4.0.0-alpha-8:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-integration-tests:jar:1.0-m9-SNAPSHOT" -> "org.apache.commons:commons-compress:jar:1.23.0:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-integration-tests:jar:1.0-m9-SNAPSHOT" -> "org.testcontainers:testcontainers:jar:1.18.1:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-integration-tests:jar:1.0-m9-SNAPSHOT" -> "org.testcontainers:junit-jupiter:jar:1.18.1:test" ; 
+[INFO] 	"org.assertj:assertj-core:jar:3.24.2:test" -> "net.bytebuddy:byte-buddy:jar:1.12.21:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-dist-m39:pom:1.0-m9-SNAPSHOT:test" -> "org.apache.maven.daemon:mvnd-agent:jar:1.0-m9-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-dist-m39:pom:1.0-m9-SNAPSHOT:test" -> "org.apache.maven.daemon:mvnd-helper-agent:jar:1.0-m9-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-dist-m39:pom:1.0-m9-SNAPSHOT:test" -> "org.apache.maven.daemon:mvnd-client:jar:1.0-m9-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-dist-m39:pom:1.0-m9-SNAPSHOT:test" -> "org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-dist-m39:pom:1.0-m9-SNAPSHOT:test" -> "org.apache.maven.daemon:mvnd-daemon-m39:jar:1.0-m9-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-agent:jar:1.0-m9-SNAPSHOT:test" -> "org.javassist:javassist:jar:3.29.2-GA:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-client:jar:1.0-m9-SNAPSHOT:test" -> "org.apache.maven.daemon:mvnd-common:jar:1.0-m9-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-client:jar:1.0-m9-SNAPSHOT:test" -> "org.apache.maven.daemon:mvnd-logging:jar:1.0-m9-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-client:jar:1.0-m9-SNAPSHOT:test" -> "org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-client:jar:1.0-m9-SNAPSHOT:test" -> "org.slf4j:jul-to-slf4j:jar:1.7.36:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-common:jar:1.0-m9-SNAPSHOT:test" -> "org.jline:jline-terminal-jansi:jar:3.24.0:test" ; 
+[INFO] 	"org.jline:jline-terminal-jansi:jar:3.24.0:test" -> "org.fusesource.jansi:jansi:jar:2.4.0:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-logging:jar:1.0-m9-SNAPSHOT:test" -> "org.apache.maven.shared:maven-shared-utils:jar:3.4.2:test" ; 
+[INFO] 	"org.apache.maven.shared:maven-shared-utils:jar:3.4.2:test" -> "commons-io:commons-io:jar:2.11.0:test" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:test" -> "org.apache.maven:maven-settings:jar:4.0.0-alpha-8:test" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:test" -> "org.apache.maven:maven-settings-builder:jar:4.0.0-alpha-8:test" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:test" -> "org.apache.maven:maven-toolchain-builder:jar:4.0.0-alpha-8:test" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:test" -> "org.apache.maven:maven-plugin-api:jar:4.0.0-alpha-8:test" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:test" -> "org.apache.maven:maven-model-builder:jar:4.0.0-alpha-8:test" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:test" -> "org.apache.maven:maven-builder-support:jar:4.0.0-alpha-8:test" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:test" -> "org.apache.maven.resolver:maven-resolver-api:jar:1.9.16:test" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:test" -> "org.apache.maven.resolver:maven-resolver-util:jar:1.9.16:test" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:test" -> "org.apache.maven:maven-slf4j-wrapper:jar:4.0.0-alpha-8:test" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:test" -> "com.google.inject:guice:jar:classes:5.1.0:test" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:test" -> "com.google.guava:guava:jar:32.0.1-jre:test" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:test" -> "com.google.guava:failureaccess:jar:1.0.1:test" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:test" -> "javax.inject:javax.inject:jar:1:test" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:test" -> "javax.annotation:javax.annotation-api:jar:1.3.2:test" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:test" -> "org.codehaus.plexus:plexus-classworlds:jar:2.6.0:test" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:test" -> "org.codehaus.plexus:plexus-sec-dispatcher:jar:2.0:test" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:test" -> "org.codehaus.plexus:plexus-cipher:jar:2.0:test" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:test" -> "org.codehaus.plexus:plexus-interpolation:jar:1.26:test" ; 
+[INFO] 	"org.apache.maven:maven-embedder:jar:4.0.0-alpha-8:test" -> "commons-cli:commons-cli:jar:1.5.0:test" ; 
+[INFO] 	"org.apache.maven:maven-settings:jar:4.0.0-alpha-8:test" -> "org.apache.maven:maven-api-settings:jar:4.0.0-alpha-8:test" ; 
+[INFO] 	"org.apache.maven:maven-toolchain-builder:jar:4.0.0-alpha-8:test" -> "org.apache.maven:maven-toolchain-model:jar:4.0.0-alpha-8:test" ; 
+[INFO] 	"org.apache.maven:maven-toolchain-model:jar:4.0.0-alpha-8:test" -> "org.apache.maven:maven-api-toolchain:jar:4.0.0-alpha-8:test" ; 
+[INFO] 	"org.apache.maven:maven-model-builder:jar:4.0.0-alpha-8:test" -> "org.apache.maven:maven-api-core:jar:4.0.0-alpha-8:test" ; 
+[INFO] 	"org.apache.maven:maven-model-builder:jar:4.0.0-alpha-8:test" -> "org.apache.maven:maven-api-spi:jar:4.0.0-alpha-8:test" ; 
+[INFO] 	"org.apache.maven:maven-model-builder:jar:4.0.0-alpha-8:test" -> "org.eclipse.sisu:org.eclipse.sisu.inject:jar:no_asm:0.9.0.M2:test" ; 
+[INFO] 	"com.google.inject:guice:jar:classes:5.1.0:test" -> "aopalliance:aopalliance:jar:1.0:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:test" -> "org.apache.maven.daemon:mvnd-native:jar:1.0-m9-SNAPSHOT:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:test" -> "org.codehaus.plexus:plexus-interactivity-api:jar:1.0:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:test" -> "io.takari.maven:takari-smart-builder:jar:0.6.4:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:test" -> "org.slf4j:log4j-over-slf4j:jar:1.7.36:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:test" -> "org.slf4j:jcl-over-slf4j:jar:1.7.36:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:test" -> "org.jline:jline-terminal:jar:3.24.0:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon:jar:1.0-m9-SNAPSHOT:test" -> "org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.9.0.M2:test" ; 
+[INFO] 	"org.codehaus.plexus:plexus-interactivity-api:jar:1.0:test" -> "org.codehaus.plexus:plexus-utils:jar:4.0.0:test" ; 
+[INFO] 	"org.codehaus.plexus:plexus-interactivity-api:jar:1.0:test" -> "org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:test" ; 
+[INFO] 	"org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:test" -> "classworlds:classworlds:jar:1.1-alpha-2:test" ; 
+[INFO] 	"org.jline:jline-terminal:jar:3.24.0:test" -> "org.jline:jline-native:jar:3.24.0:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-daemon-m39:jar:1.0-m9-SNAPSHOT:test" -> "org.apache.maven:maven-core:jar:3.9.5:test" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:test" -> "org.apache.maven:maven-repository-metadata:jar:3.9.5:test" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:test" -> "org.apache.maven:maven-artifact:jar:3.9.5:test" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:test" -> "org.apache.maven:maven-resolver-provider:jar:3.9.5:test" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:test" -> "org.apache.maven.resolver:maven-resolver-impl:jar:1.9.16:test" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:test" -> "org.apache.maven.resolver:maven-resolver-spi:jar:1.9.16:test" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:test" -> "com.google.inject:guice:jar:5.1.0:test" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:test" -> "org.codehaus.plexus:plexus-component-annotations:jar:2.1.0:test" ; 
+[INFO] 	"org.apache.maven:maven-core:jar:3.9.5:test" -> "org.apache.commons:commons-lang3:jar:3.12.0:test" ; 
+[INFO] 	"org.apache.maven.resolver:maven-resolver-impl:jar:1.9.16:test" -> "org.apache.maven.resolver:maven-resolver-named-locks:jar:1.9.16:test" ; 
+[INFO] 	"org.apache.maven.daemon:mvnd-dist-m40:pom:1.0-m9-SNAPSHOT:test" -> "org.apache.maven.daemon:mvnd-daemon-m40:jar:1.0-m9-SNAPSHOT:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.2:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.9.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.2:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.9.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.9.2:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.9.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.2:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.2:test" -> "org.junit.platform:junit-platform-commons:jar:1.9.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.9.2:test" -> "org.apiguardian:apiguardian-api:jar:1.1.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.9.2:test" -> "org.junit.platform:junit-platform-engine:jar:1.9.2:test" ; 
+[INFO] 	"org.apache.maven:maven-model:jar:4.0.0-alpha-8:test" -> "org.apache.maven:maven-api-model:jar:4.0.0-alpha-8:test" ; 
+[INFO] 	"org.apache.maven:maven-model:jar:4.0.0-alpha-8:test" -> "org.apache.maven:maven-xml-impl:jar:4.0.0-alpha-8:test" ; 
+[INFO] 	"org.apache.maven:maven-model:jar:4.0.0-alpha-8:test" -> "org.codehaus.plexus:plexus-xml:jar:4.0.0:test" ; 
+[INFO] 	"org.apache.maven:maven-model:jar:4.0.0-alpha-8:test" -> "com.fasterxml.woodstox:woodstox-core:jar:6.5.1:test" ; 
+[INFO] 	"org.apache.maven:maven-api-model:jar:4.0.0-alpha-8:test" -> "org.apache.maven:maven-api-xml:jar:4.0.0-alpha-8:test" ; 
+[INFO] 	"org.apache.maven:maven-api-xml:jar:4.0.0-alpha-8:test" -> "org.apache.maven:maven-api-meta:jar:4.0.0-alpha-8:test" ; 
+[INFO] 	"org.apache.maven:maven-xml-impl:jar:4.0.0-alpha-8:test" -> "org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.9.0.M2:test" ; 
+[INFO] 	"org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.9.0.M2:test" -> "javax.enterprise:cdi-api:jar:1.2:test" ; 
+[INFO] 	"com.fasterxml.woodstox:woodstox-core:jar:6.5.1:test" -> "org.codehaus.woodstox:stax2-api:jar:4.2.1:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.18.1:test" -> "junit:junit:jar:4.13.2:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.18.1:test" -> "org.slf4j:slf4j-api:jar:1.7.36:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.18.1:test" -> "org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.18.1:test" -> "com.github.docker-java:docker-java-api:jar:3.3.0:test" ; 
+[INFO] 	"org.testcontainers:testcontainers:jar:1.18.1:test" -> "com.github.docker-java:docker-java-transport-zerodep:jar:3.3.0:test" ; 
+[INFO] 	"junit:junit:jar:4.13.2:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+[INFO] 	"org.rnorth.duct-tape:duct-tape:jar:1.0.8:test" -> "org.jetbrains:annotations:jar:17.0.0:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-api:jar:3.3.0:test" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.10.3:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.0:test" -> "com.github.docker-java:docker-java-transport:jar:3.3.0:test" ; 
+[INFO] 	"com.github.docker-java:docker-java-transport-zerodep:jar:3.3.0:test" -> "net.java.dev.jna:jna:jar:5.12.1:test" ; 
+[INFO]  } 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Maven Daemon - Parent 1.0-m9-SNAPSHOT:
+[INFO] 
+[INFO] Maven Daemon - Parent .............................. SUCCESS [  6.956 s]
+[INFO] Maven Daemon - Documentation Maven Plugin .......... SUCCESS [  0.503 s]
+[INFO] Maven Daemon - Native Library ...................... SUCCESS [  0.396 s]
+[INFO] Maven Daemon - Agent ............................... SUCCESS [  0.112 s]
+[INFO] Maven Daemon - Helper Agent ........................ SUCCESS [  0.078 s]
+[INFO] Maven Daemon - Common .............................. SUCCESS [  3.977 s]
+[INFO] Maven Daemon - Logging ............................. SUCCESS [  1.126 s]
+[INFO] Maven Daemon - Client .............................. SUCCESS [  0.913 s]
+[INFO] Maven Daemon - Daemon .............................. SUCCESS [  0.501 s]
+[INFO] Maven Daemon - Daemon 3.9.x specifics .............. SUCCESS [  0.616 s]
+[INFO] Maven Daemon - Daemon 4.0.x specifics .............. SUCCESS [  0.242 s]
+[INFO] Maven Daemon - Distribution for 3.9.x .............. SUCCESS [  0.850 s]
+[INFO] Maven Daemon - Distribution for 4.0.x .............. SUCCESS [  0.486 s]
+[INFO] Maven Daemon - Integration Tests ................... SUCCESS [  0.682 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  21.254 s
+[INFO] Finished at: 2023-12-28T09:02:36+01:00
+[INFO] ------------------------------------------------------------------------

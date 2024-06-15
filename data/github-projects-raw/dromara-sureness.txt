@@ -1,0 +1,882 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.usthe.sureness:ktor-sureness:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-surefire-plugin is missing. @ line 64, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.usthe.sureness:spring-boot-starter-sureness:jar:1.0.8
+[WARNING] 'version' contains an expression but should be a constant. @ com.usthe.sureness:spring-boot-starter-sureness:${sureness.version}, /home/brunok/apache-ysoserial-vuln/pom/dromara-sureness/support/spring-boot-starter-sureness/pom.xml, line 8, column 14
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] sureness                                                           [jar]
+[INFO] sureness                                                           [pom]
+[INFO] sureness-sample-bootstarp                                          [jar]
+[INFO] sureness-sample-tom                                                [jar]
+[INFO] samples                                                            [pom]
+[INFO] ktor-sureness                                                      [jar]
+[INFO] javalin-sureness                                                   [jar]
+[INFO] quarkus-sureness                                                   [jar]
+[INFO] spring-webflux-sureness                                            [jar]
+[INFO] sureness-session                                                   [jar]
+[INFO] sureness-redis-session                                             [jar]
+[INFO] micronaut-sureness                                                 [jar]
+[INFO] jfinal-sureness                                                    [jar]
+[INFO] solon-sureness                                                     [jar]
+[INFO] solon-plugin-sureness                                              [jar]
+[INFO] solon-plugin-sureness-demo                                         [jar]
+[INFO] spring-gateway-sureness                                            [jar]
+[INFO] zuul-sureness                                                      [jar]
+[INFO] spring-boot-starter-sureness                                       [jar]
+[INFO] sureness-spring-boot-starter-example                               [jar]
+[INFO] micro-profile-sureness                                             [war]
+[INFO] support                                                            [pom]
+[INFO] 
+[INFO] ------------------< com.usthe.sureness:sureness-core >------------------
+[INFO] Building sureness 1.0.8                                           [1/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sureness-core ---
+[INFO] digraph "com.usthe.sureness:sureness-core:jar:1.0.8" { 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8" -> "javax.servlet:javax.servlet-api:jar:3.1.0:provided" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8" -> "javax.ws.rs:javax.ws.rs-api:jar:2.1.1:provided" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8" -> "org.springframework:spring-web:jar:5.1.5.RELEASE:provided" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8" -> "org.slf4j:slf4j-api:jar:1.7.21:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8" -> "javax.xml.bind:jaxb-api:jar:2.3.0:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8" -> "io.jsonwebtoken:jjwt-api:jar:0.11.2:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8" -> "io.jsonwebtoken:jjwt-impl:jar:0.11.2:runtime" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8" -> "io.jsonwebtoken:jjwt-jackson:jar:0.11.2:runtime" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8" -> "org.yaml:snakeyaml:jar:1.26:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8" -> "org.easymock:easymock:jar:4.0.2:test" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8" -> "org.junit.jupiter:junit-jupiter:jar:5.7.0:test" ; 
+[INFO] 	"org.springframework:spring-web:jar:5.1.5.RELEASE:provided" -> "org.springframework:spring-beans:jar:5.1.5.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-web:jar:5.1.5.RELEASE:provided" -> "org.springframework:spring-core:jar:5.1.5.RELEASE:provided" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.1.5.RELEASE:provided" -> "org.springframework:spring-jcl:jar:5.1.5.RELEASE:provided" ; 
+[INFO] 	"io.jsonwebtoken:jjwt-jackson:jar:0.11.2:runtime" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.9.10.4:runtime" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.9.10.4:runtime" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.9.10:runtime" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.9.10.4:runtime" -> "com.fasterxml.jackson.core:jackson-core:jar:2.9.10:runtime" ; 
+[INFO] 	"org.easymock:easymock:jar:4.0.2:test" -> "org.objenesis:objenesis:jar:3.0.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.0:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.0:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.0:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.0:test" -> "org.junit.platform:junit-platform-commons:jar:1.7.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.7.0:test" -> "org.junit.platform:junit-platform-engine:jar:1.7.0:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------------< com.usthe.sureness:sureness >---------------------
+[INFO] Building sureness 1.0.0-SNAPSHOT                                  [2/22]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sureness ---
+[INFO] digraph "com.usthe.sureness:sureness:pom:1.0.0-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ------------< com.usthe.sureness:sureness-sample-bootstarp >------------
+[INFO] Building sureness-sample-bootstarp 1.0.0-SNAPSHOT                 [3/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sureness-sample-bootstarp ---
+[INFO] digraph "com.usthe.sureness:sureness-sample-bootstarp:jar:1.0.0-SNAPSHOT" { 
+[INFO] 	"com.usthe.sureness:sureness-sample-bootstarp:jar:1.0.0-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-web:jar:2.4.5:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-sample-bootstarp:jar:1.0.0-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-websocket:jar:2.4.5:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-sample-bootstarp:jar:1.0.0-SNAPSHOT" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.4.5:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-sample-bootstarp:jar:1.0.0-SNAPSHOT" -> "com.usthe.sureness:sureness-core:jar:1.0.8:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-sample-bootstarp:jar:1.0.0-SNAPSHOT" -> "io.springfox:springfox-swagger2:jar:2.6.1:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-sample-bootstarp:jar:1.0.0-SNAPSHOT" -> "io.springfox:springfox-swagger-ui:jar:2.6.1:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-sample-bootstarp:jar:1.0.0-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.4.5:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.4.5:compile" -> "org.springframework.boot:spring-boot-starter-json:jar:2.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.4.5:compile" -> "org.springframework.boot:spring-boot-starter-tomcat:jar:2.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.4.5:compile" -> "org.springframework:spring-web:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.4.5:compile" -> "org.springframework:spring-webmvc:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.4.5:compile" -> "org.springframework.boot:spring-boot:jar:2.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.4.5:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.4.5:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.4.5:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.4.5:compile" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.4.5:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.13.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.4.5:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.30:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.13.3:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.13.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.4.5:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.4.5:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.11.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.4.5:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.11.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.4.5:compile" -> "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.11.4:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.11.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.4.5:compile" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.45:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.4.5:compile" -> "org.glassfish:jakarta.el:jar:3.0.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.4.5:compile" -> "org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.45:compile" ; 
+[INFO] 	"org.springframework:spring-web:jar:5.3.6:compile" -> "org.springframework:spring-beans:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.6:compile" -> "org.springframework:spring-aop:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.6:compile" -> "org.springframework:spring-context:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.6:compile" -> "org.springframework:spring-expression:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-websocket:jar:2.4.5:compile" -> "org.springframework:spring-messaging:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-websocket:jar:2.4.5:compile" -> "org.springframework:spring-websocket:jar:5.3.6:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "org.slf4j:slf4j-api:jar:1.7.21:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "javax.xml.bind:jaxb-api:jar:2.3.0:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-api:jar:0.11.2:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-impl:jar:0.11.2:runtime" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-jackson:jar:0.11.2:runtime" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "org.yaml:snakeyaml:jar:1.27:compile" ; 
+[INFO] 	"io.springfox:springfox-swagger2:jar:2.6.1:compile" -> "io.swagger:swagger-annotations:jar:1.5.10:compile" ; 
+[INFO] 	"io.springfox:springfox-swagger2:jar:2.6.1:compile" -> "io.swagger:swagger-models:jar:1.5.10:compile" ; 
+[INFO] 	"io.springfox:springfox-swagger2:jar:2.6.1:compile" -> "io.springfox:springfox-spi:jar:2.6.1:compile" ; 
+[INFO] 	"io.springfox:springfox-swagger2:jar:2.6.1:compile" -> "io.springfox:springfox-schema:jar:2.6.1:compile" ; 
+[INFO] 	"io.springfox:springfox-swagger2:jar:2.6.1:compile" -> "io.springfox:springfox-swagger-common:jar:2.6.1:compile" ; 
+[INFO] 	"io.springfox:springfox-swagger2:jar:2.6.1:compile" -> "io.springfox:springfox-spring-web:jar:2.6.1:compile" ; 
+[INFO] 	"io.springfox:springfox-swagger2:jar:2.6.1:compile" -> "com.google.guava:guava:jar:18.0:compile" ; 
+[INFO] 	"io.springfox:springfox-swagger2:jar:2.6.1:compile" -> "com.fasterxml:classmate:jar:1.5.1:compile" ; 
+[INFO] 	"io.springfox:springfox-swagger2:jar:2.6.1:compile" -> "org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE:compile" ; 
+[INFO] 	"io.springfox:springfox-swagger2:jar:2.6.1:compile" -> "org.springframework.plugin:spring-plugin-metadata:jar:1.2.0.RELEASE:compile" ; 
+[INFO] 	"io.springfox:springfox-swagger2:jar:2.6.1:compile" -> "org.mapstruct:mapstruct:jar:1.0.0.Final:compile" ; 
+[INFO] 	"io.swagger:swagger-models:jar:1.5.10:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.11.4:compile" ; 
+[INFO] 	"io.springfox:springfox-spi:jar:2.6.1:compile" -> "io.springfox:springfox-core:jar:2.6.1:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.springframework.boot:spring-boot-test:jar:2.4.5:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.4.5:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "com.jayway.jsonpath:json-path:jar:2.4.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.assertj:assertj-core:jar:3.18.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.junit.jupiter:junit-jupiter:jar:5.7.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.mockito:mockito-core:jar:3.6.28:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.mockito:mockito-junit-jupiter:jar:3.6.28:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.skyscreamer:jsonassert:jar:1.5.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.springframework:spring-core:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.springframework:spring-test:jar:5.3.6:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.xmlunit:xmlunit-core:jar:2.7.0:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.4.0:test" -> "net.minidev:json-smart:jar:2.3:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.3:test" -> "net.minidev:accessors-smart:jar:1.2:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:1.2:test" -> "org.ow2.asm:asm:jar:5.0.4:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.7.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.7.1:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.6.28:test" -> "net.bytebuddy:byte-buddy:jar:1.10.22:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.6.28:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.10.22:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.6.28:test" -> "org.objenesis:objenesis:jar:3.1:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.0:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.6:compile" -> "org.springframework:spring-jcl:jar:5.3.6:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< com.usthe.sureness:sureness-sample-tom >---------------
+[INFO] Building sureness-sample-tom 1.0.0-SNAPSHOT                       [4/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sureness-sample-tom ---
+[INFO] digraph "com.usthe.sureness:sureness-sample-tom:jar:1.0.0-SNAPSHOT" { 
+[INFO] 	"com.usthe.sureness:sureness-sample-tom:jar:1.0.0-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-web:jar:2.4.5:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-sample-tom:jar:1.0.0-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-websocket:jar:2.4.5:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-sample-tom:jar:1.0.0-SNAPSHOT" -> "org.springframework.boot:spring-boot-configuration-processor:jar:2.4.5:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-sample-tom:jar:1.0.0-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-data-jpa:jar:2.4.5:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-sample-tom:jar:1.0.0-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-validation:jar:2.4.5:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-sample-tom:jar:1.0.0-SNAPSHOT" -> "mysql:mysql-connector-java:jar:8.0.16:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-sample-tom:jar:1.0.0-SNAPSHOT" -> "com.usthe.sureness:sureness-core:jar:1.0.8:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-sample-tom:jar:1.0.0-SNAPSHOT" -> "org.projectlombok:lombok:jar:1.18.6:provided" ; 
+[INFO] 	"com.usthe.sureness:sureness-sample-tom:jar:1.0.0-SNAPSHOT" -> "com.github.ulisesbocchio:jasypt-spring-boot-starter:jar:2.1.2:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-sample-tom:jar:1.0.0-SNAPSHOT" -> "javax.xml.bind:jaxb-api:jar:2.3.0:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-sample-tom:jar:1.0.0-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.4.5:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.4.5:compile" -> "org.springframework.boot:spring-boot-starter-json:jar:2.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.4.5:compile" -> "org.springframework.boot:spring-boot-starter-tomcat:jar:2.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.4.5:compile" -> "org.springframework:spring-web:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.4.5:compile" -> "org.springframework:spring-webmvc:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.4.5:compile" -> "org.springframework.boot:spring-boot:jar:2.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.4.5:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.4.5:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.4.5:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.4.5:compile" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.4.5:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.13.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.4.5:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.30:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.13.3:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.13.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.4.5:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.4.5:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.11.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.4.5:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.11.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.4.5:compile" -> "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.11.4:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.11.4:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.11.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.4.5:compile" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.45:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.4.5:compile" -> "org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.45:compile" ; 
+[INFO] 	"org.springframework:spring-web:jar:5.3.6:compile" -> "org.springframework:spring-beans:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.6:compile" -> "org.springframework:spring-aop:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.6:compile" -> "org.springframework:spring-context:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.6:compile" -> "org.springframework:spring-expression:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-websocket:jar:2.4.5:compile" -> "org.springframework:spring-messaging:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-websocket:jar:2.4.5:compile" -> "org.springframework:spring-websocket:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.4.5:compile" -> "org.springframework.boot:spring-boot-starter-aop:jar:2.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.4.5:compile" -> "org.springframework.boot:spring-boot-starter-jdbc:jar:2.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.4.5:compile" -> "jakarta.transaction:jakarta.transaction-api:jar:1.3.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.4.5:compile" -> "jakarta.persistence:jakarta.persistence-api:jar:2.2.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.4.5:compile" -> "org.hibernate:hibernate-core:jar:5.4.30.Final:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.4.5:compile" -> "org.springframework.data:spring-data-jpa:jar:2.4.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.4.5:compile" -> "org.springframework:spring-aspects:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-aop:jar:2.4.5:compile" -> "org.aspectj:aspectjweaver:jar:1.9.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:2.4.5:compile" -> "com.zaxxer:HikariCP:jar:3.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-jdbc:jar:2.4.5:compile" -> "org.springframework:spring-jdbc:jar:5.3.6:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.4.30.Final:compile" -> "org.jboss.logging:jboss-logging:jar:3.4.1.Final:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.4.30.Final:compile" -> "org.javassist:javassist:jar:3.27.0-GA:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.4.30.Final:compile" -> "net.bytebuddy:byte-buddy:jar:1.10.22:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.4.30.Final:compile" -> "antlr:antlr:jar:2.7.7:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.4.30.Final:compile" -> "org.jboss:jandex:jar:2.2.3.Final:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.4.30.Final:compile" -> "com.fasterxml:classmate:jar:1.5.1:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.4.30.Final:compile" -> "org.dom4j:dom4j:jar:2.1.3:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.4.30.Final:compile" -> "org.hibernate.common:hibernate-commons-annotations:jar:5.1.2.Final:compile" ; 
+[INFO] 	"org.hibernate:hibernate-core:jar:5.4.30.Final:compile" -> "org.glassfish.jaxb:jaxb-runtime:jar:2.3.4:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.4:compile" -> "org.glassfish.jaxb:txw2:jar:2.3.4:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.4:compile" -> "com.sun.istack:istack-commons-runtime:jar:3.0.12:compile" ; 
+[INFO] 	"org.glassfish.jaxb:jaxb-runtime:jar:2.3.4:compile" -> "com.sun.activation:jakarta.activation:jar:1.2.2:runtime" ; 
+[INFO] 	"org.springframework.data:spring-data-jpa:jar:2.4.8:compile" -> "org.springframework.data:spring-data-commons:jar:2.4.8:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-jpa:jar:2.4.8:compile" -> "org.springframework:spring-orm:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-jpa:jar:2.4.8:compile" -> "org.springframework:spring-tx:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-validation:jar:2.4.5:compile" -> "org.glassfish:jakarta.el:jar:3.0.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-validation:jar:2.4.5:compile" -> "org.hibernate.validator:hibernate-validator:jar:6.1.7.Final:compile" ; 
+[INFO] 	"org.hibernate.validator:hibernate-validator:jar:6.1.7.Final:compile" -> "jakarta.validation:jakarta.validation-api:jar:2.0.2:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "org.slf4j:slf4j-api:jar:1.7.21:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-api:jar:0.11.2:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-impl:jar:0.11.2:runtime" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-jackson:jar:0.11.2:runtime" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "org.yaml:snakeyaml:jar:1.27:compile" ; 
+[INFO] 	"com.github.ulisesbocchio:jasypt-spring-boot-starter:jar:2.1.2:compile" -> "com.github.ulisesbocchio:jasypt-spring-boot:jar:2.1.2:compile" ; 
+[INFO] 	"com.github.ulisesbocchio:jasypt-spring-boot:jar:2.1.2:compile" -> "org.jasypt:jasypt:jar:1.9.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.springframework.boot:spring-boot-test:jar:2.4.5:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.4.5:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "com.jayway.jsonpath:json-path:jar:2.4.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.assertj:assertj-core:jar:3.18.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.junit.jupiter:junit-jupiter:jar:5.7.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.mockito:mockito-core:jar:3.6.28:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.mockito:mockito-junit-jupiter:jar:3.6.28:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.skyscreamer:jsonassert:jar:1.5.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.springframework:spring-core:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.springframework:spring-test:jar:5.3.6:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.xmlunit:xmlunit-core:jar:2.7.0:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.4.0:test" -> "net.minidev:json-smart:jar:2.3:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.3:test" -> "net.minidev:accessors-smart:jar:1.2:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:1.2:test" -> "org.ow2.asm:asm:jar:5.0.4:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:compile" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.7.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.7.1:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.6.28:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.10.22:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.6.28:test" -> "org.objenesis:objenesis:jar:3.1:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.0:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.6:compile" -> "org.springframework:spring-jcl:jar:5.3.6:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------------< com.usthe.sureness:samples >---------------------
+[INFO] Building samples 1.0.0-SNAPSHOT                                   [5/22]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ samples ---
+[INFO] digraph "com.usthe.sureness:samples:pom:1.0.0-SNAPSHOT" { 
+[INFO]  } 
+[INFO] 
+[INFO] ------------------< com.usthe.sureness:ktor-sureness >------------------
+[INFO] Building ktor-sureness 1.0.0-SNAPSHOT                             [6/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ ktor-sureness ---
+[INFO] digraph "com.usthe.sureness:ktor-sureness:jar:1.0.0-SNAPSHOT" { 
+[INFO] 	"com.usthe.sureness:ktor-sureness:jar:1.0.0-SNAPSHOT" -> "com.usthe.sureness:sureness-core:jar:1.0.8:compile" ; 
+[INFO] 	"com.usthe.sureness:ktor-sureness:jar:1.0.0-SNAPSHOT" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.3.70:compile" ; 
+[INFO] 	"com.usthe.sureness:ktor-sureness:jar:1.0.0-SNAPSHOT" -> "io.ktor:ktor-server-tomcat:jar:1.3.2:compile" ; 
+[INFO] 	"com.usthe.sureness:ktor-sureness:jar:1.0.0-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.2.1:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "org.slf4j:slf4j-api:jar:1.7.21:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "javax.xml.bind:jaxb-api:jar:2.3.0:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-api:jar:0.11.2:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-impl:jar:0.11.2:runtime" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-jackson:jar:0.11.2:runtime" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "org.yaml:snakeyaml:jar:1.27:compile" ; 
+[INFO] 	"io.jsonwebtoken:jjwt-jackson:jar:0.11.2:runtime" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:runtime" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:runtime" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.11.4:runtime" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:runtime" -> "com.fasterxml.jackson.core:jackson-core:jar:2.11.4:runtime" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.3.70:compile" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.4.32:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.3.70:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.4.32:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.4.32:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.4.32:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.4.32:compile" -> "org.jetbrains:annotations:jar:13.0:compile" ; 
+[INFO] 	"io.ktor:ktor-server-tomcat:jar:1.3.2:compile" -> "org.jetbrains.kotlinx:atomicfu:jar:0.14.2:compile" ; 
+[INFO] 	"io.ktor:ktor-server-tomcat:jar:1.3.2:compile" -> "org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:jar:1.4.3:compile" ; 
+[INFO] 	"io.ktor:ktor-server-tomcat:jar:1.3.2:compile" -> "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:1.4.3:compile" ; 
+[INFO] 	"io.ktor:ktor-server-tomcat:jar:1.3.2:compile" -> "io.ktor:ktor-server-host-common:jar:1.3.2:compile" ; 
+[INFO] 	"io.ktor:ktor-server-tomcat:jar:1.3.2:compile" -> "io.ktor:ktor-server-servlet:jar:1.3.2:compile" ; 
+[INFO] 	"io.ktor:ktor-server-tomcat:jar:1.3.2:compile" -> "org.apache.tomcat:tomcat-catalina:jar:9.0.29:compile" ; 
+[INFO] 	"io.ktor:ktor-server-tomcat:jar:1.3.2:compile" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.45:compile" ; 
+[INFO] 	"org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:jar:1.4.3:compile" -> "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:1.4.3:compile" ; 
+[INFO] 	"io.ktor:ktor-server-host-common:jar:1.3.2:compile" -> "io.ktor:ktor-server-core:jar:1.3.2:compile" ; 
+[INFO] 	"io.ktor:ktor-server-host-common:jar:1.3.2:compile" -> "io.ktor:ktor-http-cio-jvm:jar:1.3.2:compile" ; 
+[INFO] 	"io.ktor:ktor-server-core:jar:1.3.2:compile" -> "io.ktor:ktor-utils-jvm:jar:1.3.2:compile" ; 
+[INFO] 	"io.ktor:ktor-server-core:jar:1.3.2:compile" -> "io.ktor:ktor-http-jvm:jar:1.3.2:compile" ; 
+[INFO] 	"io.ktor:ktor-server-core:jar:1.3.2:compile" -> "com.typesafe:config:jar:1.3.1:compile" ; 
+[INFO] 	"io.ktor:ktor-server-core:jar:1.3.2:compile" -> "org.jetbrains.kotlin:kotlin-reflect:jar:1.4.32:compile" ; 
+[INFO] 	"io.ktor:ktor-utils-jvm:jar:1.3.2:compile" -> "io.ktor:ktor-io-jvm:jar:1.3.2:compile" ; 
+[INFO] 	"io.ktor:ktor-http-cio-jvm:jar:1.3.2:compile" -> "io.ktor:ktor-network:jar:1.3.2:compile" ; 
+[INFO] 	"io.ktor:ktor-http-cio-jvm:jar:1.3.2:compile" -> "org.jetbrains.kotlinx:kotlinx-coroutines-core-common:jar:1.3.4:compile" ; 
+[INFO] 	"org.apache.tomcat:tomcat-catalina:jar:9.0.29:compile" -> "org.apache.tomcat:tomcat-servlet-api:jar:9.0.29:compile" ; 
+[INFO] 	"org.apache.tomcat:tomcat-catalina:jar:9.0.29:compile" -> "org.apache.tomcat:tomcat-jsp-api:jar:9.0.45:compile" ; 
+[INFO] 	"org.apache.tomcat:tomcat-catalina:jar:9.0.29:compile" -> "org.apache.tomcat:tomcat-juli:jar:9.0.29:compile" ; 
+[INFO] 	"org.apache.tomcat:tomcat-catalina:jar:9.0.29:compile" -> "org.apache.tomcat:tomcat-annotations-api:jar:9.0.45:compile" ; 
+[INFO] 	"org.apache.tomcat:tomcat-catalina:jar:9.0.29:compile" -> "org.apache.tomcat:tomcat-api:jar:9.0.29:compile" ; 
+[INFO] 	"org.apache.tomcat:tomcat-catalina:jar:9.0.29:compile" -> "org.apache.tomcat:tomcat-jni:jar:9.0.29:compile" ; 
+[INFO] 	"org.apache.tomcat:tomcat-catalina:jar:9.0.29:compile" -> "org.apache.tomcat:tomcat-coyote:jar:9.0.29:compile" ; 
+[INFO] 	"org.apache.tomcat:tomcat-catalina:jar:9.0.29:compile" -> "org.apache.tomcat:tomcat-util:jar:9.0.29:compile" ; 
+[INFO] 	"org.apache.tomcat:tomcat-catalina:jar:9.0.29:compile" -> "org.apache.tomcat:tomcat-util-scan:jar:9.0.29:compile" ; 
+[INFO] 	"org.apache.tomcat:tomcat-catalina:jar:9.0.29:compile" -> "org.apache.tomcat:tomcat-jaspic-api:jar:9.0.29:compile" ; 
+[INFO] 	"org.apache.tomcat:tomcat-jsp-api:jar:9.0.45:compile" -> "org.apache.tomcat:tomcat-el-api:jar:9.0.45:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.1:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< com.usthe.sureness:javalin-sureness >-----------------
+[INFO] Building javalin-sureness 1.0.0-SNAPSHOT                          [7/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ javalin-sureness ---
+[INFO] digraph "com.usthe.sureness:javalin-sureness:jar:1.0.0-SNAPSHOT" { 
+[INFO] 	"com.usthe.sureness:javalin-sureness:jar:1.0.0-SNAPSHOT" -> "io.javalin:javalin:jar:3.13.6:compile" ; 
+[INFO] 	"com.usthe.sureness:javalin-sureness:jar:1.0.0-SNAPSHOT" -> "com.usthe.sureness:sureness-core:jar:1.0.8:compile" ; 
+[INFO] 	"com.usthe.sureness:javalin-sureness:jar:1.0.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.30:compile" ; 
+[INFO] 	"io.javalin:javalin:jar:3.13.6:compile" -> "org.slf4j:slf4j-api:jar:1.7.21:compile" ; 
+[INFO] 	"io.javalin:javalin:jar:3.13.6:compile" -> "org.eclipse.jetty:jetty-server:jar:9.4.39.v20210325:compile" ; 
+[INFO] 	"io.javalin:javalin:jar:3.13.6:compile" -> "org.eclipse.jetty:jetty-webapp:jar:9.4.39.v20210325:compile" ; 
+[INFO] 	"io.javalin:javalin:jar:3.13.6:compile" -> "org.eclipse.jetty.websocket:websocket-server:jar:9.4.39.v20210325:compile" ; 
+[INFO] 	"io.javalin:javalin:jar:3.13.6:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.4.32:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.39.v20210325:compile" -> "javax.servlet:javax.servlet-api:jar:4.0.1:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.39.v20210325:compile" -> "org.eclipse.jetty:jetty-http:jar:9.4.39.v20210325:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-server:jar:9.4.39.v20210325:compile" -> "org.eclipse.jetty:jetty-io:jar:9.4.39.v20210325:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-http:jar:9.4.39.v20210325:compile" -> "org.eclipse.jetty:jetty-util:jar:9.4.39.v20210325:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-webapp:jar:9.4.39.v20210325:compile" -> "org.eclipse.jetty:jetty-xml:jar:9.4.39.v20210325:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-webapp:jar:9.4.39.v20210325:compile" -> "org.eclipse.jetty:jetty-servlet:jar:9.4.39.v20210325:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.39.v20210325:compile" -> "org.eclipse.jetty:jetty-security:jar:9.4.39.v20210325:compile" ; 
+[INFO] 	"org.eclipse.jetty:jetty-servlet:jar:9.4.39.v20210325:compile" -> "org.eclipse.jetty:jetty-util-ajax:jar:9.4.39.v20210325:compile" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-server:jar:9.4.39.v20210325:compile" -> "org.eclipse.jetty.websocket:websocket-common:jar:9.4.39.v20210325:compile" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-server:jar:9.4.39.v20210325:compile" -> "org.eclipse.jetty.websocket:websocket-client:jar:9.4.39.v20210325:compile" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-server:jar:9.4.39.v20210325:compile" -> "org.eclipse.jetty.websocket:websocket-servlet:jar:9.4.39.v20210325:compile" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-common:jar:9.4.39.v20210325:compile" -> "org.eclipse.jetty.websocket:websocket-api:jar:9.4.39.v20210325:compile" ; 
+[INFO] 	"org.eclipse.jetty.websocket:websocket-client:jar:9.4.39.v20210325:compile" -> "org.eclipse.jetty:jetty-client:jar:9.4.39.v20210325:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.4.32:compile" -> "org.jetbrains.kotlin:kotlin-stdlib:jar:1.4.32:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.4.32:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.4.32:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.4.32:compile" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.4.32:compile" ; 
+[INFO] 	"org.jetbrains.kotlin:kotlin-stdlib:jar:1.4.32:compile" -> "org.jetbrains:annotations:jar:13.0:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "javax.xml.bind:jaxb-api:jar:2.3.0:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-api:jar:0.11.2:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-impl:jar:0.11.2:runtime" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-jackson:jar:0.11.2:runtime" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "org.yaml:snakeyaml:jar:1.27:compile" ; 
+[INFO] 	"io.jsonwebtoken:jjwt-jackson:jar:0.11.2:runtime" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:runtime" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:runtime" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.11.4:runtime" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:runtime" -> "com.fasterxml.jackson.core:jackson-core:jar:2.11.4:runtime" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< com.usthe.sureness:quarkus-sureness >-----------------
+[INFO] Building quarkus-sureness 1.0.0-SNAPSHOT                          [8/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ quarkus-sureness ---
+[INFO] digraph "com.usthe.sureness:quarkus-sureness:jar:1.0.0-SNAPSHOT" { 
+[INFO] 	"com.usthe.sureness:quarkus-sureness:jar:1.0.0-SNAPSHOT" -> "com.usthe.sureness:sureness-core:jar:1.0.8:compile" ; 
+[INFO] 	"com.usthe.sureness:quarkus-sureness:jar:1.0.0-SNAPSHOT" -> "io.quarkus:quarkus-resteasy:jar:1.8.0.Final:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "org.slf4j:slf4j-api:jar:1.7.21:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "javax.xml.bind:jaxb-api:jar:2.3.0:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-api:jar:0.11.2:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-impl:jar:0.11.2:runtime" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-jackson:jar:0.11.2:runtime" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "org.yaml:snakeyaml:jar:1.26:compile" ; 
+[INFO] 	"io.jsonwebtoken:jjwt-jackson:jar:0.11.2:runtime" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.11.2:runtime" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.11.2:runtime" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.11.2:runtime" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.11.2:runtime" -> "com.fasterxml.jackson.core:jackson-core:jar:2.11.2:compile" ; 
+[INFO] 	"io.quarkus:quarkus-resteasy:jar:1.8.0.Final:compile" -> "io.quarkus:quarkus-vertx-http:jar:1.8.0.Final:compile" ; 
+[INFO] 	"io.quarkus:quarkus-resteasy:jar:1.8.0.Final:compile" -> "io.quarkus:quarkus-resteasy-server-common:jar:1.8.0.Final:compile" ; 
+[INFO] 	"io.quarkus:quarkus-vertx-http:jar:1.8.0.Final:compile" -> "io.quarkus:quarkus-core:jar:1.8.0.Final:compile" ; 
+[INFO] 	"io.quarkus:quarkus-vertx-http:jar:1.8.0.Final:compile" -> "io.quarkus:quarkus-security-runtime-spi:jar:1.8.0.Final:compile" ; 
+[INFO] 	"io.quarkus:quarkus-vertx-http:jar:1.8.0.Final:compile" -> "io.quarkus:quarkus-development-mode-spi:jar:1.8.0.Final:compile" ; 
+[INFO] 	"io.quarkus:quarkus-vertx-http:jar:1.8.0.Final:compile" -> "io.quarkus.security:quarkus-security:jar:1.1.2.Final:compile" ; 
+[INFO] 	"io.quarkus:quarkus-vertx-http:jar:1.8.0.Final:compile" -> "jakarta.enterprise:jakarta.enterprise.cdi-api:jar:2.0.2:compile" ; 
+[INFO] 	"io.quarkus:quarkus-vertx-http:jar:1.8.0.Final:compile" -> "io.quarkus:quarkus-vertx-core:jar:1.8.0.Final:compile" ; 
+[INFO] 	"io.quarkus:quarkus-vertx-http:jar:1.8.0.Final:compile" -> "io.vertx:vertx-web:jar:3.9.2:compile" ; 
+[INFO] 	"io.quarkus:quarkus-core:jar:1.8.0.Final:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"io.quarkus:quarkus-core:jar:1.8.0.Final:compile" -> "jakarta.inject:jakarta.inject-api:jar:1.0:compile" ; 
+[INFO] 	"io.quarkus:quarkus-core:jar:1.8.0.Final:compile" -> "io.quarkus:quarkus-ide-launcher:jar:1.8.0.Final:compile" ; 
+[INFO] 	"io.quarkus:quarkus-core:jar:1.8.0.Final:compile" -> "io.smallrye.config:smallrye-config:jar:1.8.6:compile" ; 
+[INFO] 	"io.quarkus:quarkus-core:jar:1.8.0.Final:compile" -> "org.jboss.logging:jboss-logging:jar:3.3.2.Final:compile" ; 
+[INFO] 	"io.quarkus:quarkus-core:jar:1.8.0.Final:compile" -> "org.jboss.logmanager:jboss-logmanager-embedded:jar:1.0.4:compile" ; 
+[INFO] 	"io.quarkus:quarkus-core:jar:1.8.0.Final:compile" -> "org.jboss.logging:jboss-logging-annotations:jar:2.1.0.Final:compile" ; 
+[INFO] 	"io.quarkus:quarkus-core:jar:1.8.0.Final:compile" -> "org.jboss.threads:jboss-threads:jar:3.1.1.Final:compile" ; 
+[INFO] 	"io.quarkus:quarkus-core:jar:1.8.0.Final:compile" -> "org.jboss.slf4j:slf4j-jboss-logging:jar:1.2.0.Final:compile" ; 
+[INFO] 	"io.quarkus:quarkus-core:jar:1.8.0.Final:compile" -> "org.graalvm.sdk:graal-sdk:jar:20.2.0:compile" ; 
+[INFO] 	"io.quarkus:quarkus-core:jar:1.8.0.Final:compile" -> "org.wildfly.common:wildfly-common:jar:1.5.4.Final-format-001:compile" ; 
+[INFO] 	"io.quarkus:quarkus-core:jar:1.8.0.Final:compile" -> "io.quarkus:quarkus-bootstrap-runner:jar:1.8.0.Final:compile" ; 
+[INFO] 	"io.smallrye.config:smallrye-config:jar:1.8.6:compile" -> "io.smallrye.common:smallrye-common-annotation:jar:1.3.0:compile" ; 
+[INFO] 	"io.smallrye.config:smallrye-config:jar:1.8.6:compile" -> "io.smallrye.config:smallrye-config-common:jar:1.8.6:compile" ; 
+[INFO] 	"io.smallrye.config:smallrye-config:jar:1.8.6:compile" -> "io.smallrye.common:smallrye-common-expression:jar:1.1.0:compile" ; 
+[INFO] 	"io.smallrye.config:smallrye-config:jar:1.8.6:compile" -> "io.smallrye.common:smallrye-common-constraint:jar:1.1.0:compile" ; 
+[INFO] 	"io.smallrye.common:smallrye-common-expression:jar:1.1.0:compile" -> "io.smallrye.common:smallrye-common-function:jar:1.1.0:compile" ; 
+[INFO] 	"io.quarkus.security:quarkus-security:jar:1.1.2.Final:compile" -> "io.smallrye.reactive:mutiny:jar:0.7.0:compile" ; 
+[INFO] 	"io.smallrye.reactive:mutiny:jar:0.7.0:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.3:compile" ; 
+[INFO] 	"jakarta.enterprise:jakarta.enterprise.cdi-api:jar:2.0.2:compile" -> "jakarta.el:jakarta.el-api:jar:3.0.3:compile" ; 
+[INFO] 	"jakarta.enterprise:jakarta.enterprise.cdi-api:jar:2.0.2:compile" -> "jakarta.interceptor:jakarta.interceptor-api:jar:1.2.5:compile" ; 
+[INFO] 	"io.quarkus:quarkus-vertx-core:jar:1.8.0.Final:compile" -> "io.quarkus:quarkus-netty:jar:1.8.0.Final:compile" ; 
+[INFO] 	"io.quarkus:quarkus-vertx-core:jar:1.8.0.Final:compile" -> "io.vertx:vertx-core:jar:3.9.2:compile" ; 
+[INFO] 	"io.quarkus:quarkus-netty:jar:1.8.0.Final:compile" -> "io.netty:netty-codec:jar:4.1.49.Final:compile" ; 
+[INFO] 	"io.quarkus:quarkus-netty:jar:1.8.0.Final:compile" -> "io.netty:netty-handler:jar:4.1.49.Final:compile" ; 
+[INFO] 	"io.vertx:vertx-core:jar:3.9.2:compile" -> "io.netty:netty-common:jar:4.1.49.Final:compile" ; 
+[INFO] 	"io.vertx:vertx-core:jar:3.9.2:compile" -> "io.netty:netty-buffer:jar:4.1.49.Final:compile" ; 
+[INFO] 	"io.vertx:vertx-core:jar:3.9.2:compile" -> "io.netty:netty-transport:jar:4.1.49.Final:compile" ; 
+[INFO] 	"io.vertx:vertx-core:jar:3.9.2:compile" -> "io.netty:netty-handler-proxy:jar:4.1.49.Final:compile" ; 
+[INFO] 	"io.vertx:vertx-core:jar:3.9.2:compile" -> "io.netty:netty-codec-http:jar:4.1.49.Final:compile" ; 
+[INFO] 	"io.vertx:vertx-core:jar:3.9.2:compile" -> "io.netty:netty-codec-http2:jar:4.1.49.Final:compile" ; 
+[INFO] 	"io.vertx:vertx-core:jar:3.9.2:compile" -> "io.netty:netty-resolver:jar:4.1.49.Final:compile" ; 
+[INFO] 	"io.vertx:vertx-core:jar:3.9.2:compile" -> "io.netty:netty-resolver-dns:jar:4.1.49.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler-proxy:jar:4.1.49.Final:compile" -> "io.netty:netty-codec-socks:jar:4.1.49.Final:compile" ; 
+[INFO] 	"io.netty:netty-resolver-dns:jar:4.1.49.Final:compile" -> "io.netty:netty-codec-dns:jar:4.1.49.Final:compile" ; 
+[INFO] 	"io.vertx:vertx-web:jar:3.9.2:compile" -> "io.vertx:vertx-web-common:jar:3.9.2:compile" ; 
+[INFO] 	"io.vertx:vertx-web:jar:3.9.2:compile" -> "io.vertx:vertx-auth-common:jar:3.9.2:compile" ; 
+[INFO] 	"io.vertx:vertx-web:jar:3.9.2:compile" -> "io.vertx:vertx-bridge-common:jar:3.9.2:compile" ; 
+[INFO] 	"io.quarkus:quarkus-resteasy-server-common:jar:1.8.0.Final:compile" -> "io.quarkus:quarkus-arc:jar:1.8.0.Final:compile" ; 
+[INFO] 	"io.quarkus:quarkus-resteasy-server-common:jar:1.8.0.Final:compile" -> "io.quarkus:quarkus-resteasy-common:jar:1.8.0.Final:compile" ; 
+[INFO] 	"io.quarkus:quarkus-resteasy-server-common:jar:1.8.0.Final:compile" -> "jakarta.validation:jakarta.validation-api:jar:2.0.2:compile" ; 
+[INFO] 	"io.quarkus:quarkus-arc:jar:1.8.0.Final:compile" -> "io.quarkus.arc:arc:jar:1.8.0.Final:compile" ; 
+[INFO] 	"io.quarkus:quarkus-arc:jar:1.8.0.Final:compile" -> "org.eclipse.microprofile.context-propagation:microprofile-context-propagation-api:jar:1.0.1:compile" ; 
+[INFO] 	"io.quarkus.arc:arc:jar:1.8.0.Final:compile" -> "jakarta.transaction:jakarta.transaction-api:jar:1.3.3:compile" ; 
+[INFO] 	"io.quarkus:quarkus-resteasy-common:jar:1.8.0.Final:compile" -> "org.jboss.resteasy:resteasy-core:jar:4.5.6.Final:compile" ; 
+[INFO] 	"io.quarkus:quarkus-resteasy-common:jar:1.8.0.Final:compile" -> "com.sun.activation:jakarta.activation:jar:1.2.1:compile" ; 
+[INFO] 	"org.jboss.resteasy:resteasy-core:jar:4.5.6.Final:compile" -> "org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec:jar:2.0.1.Final:compile" ; 
+[INFO] 	"org.jboss.resteasy:resteasy-core:jar:4.5.6.Final:compile" -> "org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec:jar:2.0.0.Final:compile" ; 
+[INFO] 	"org.jboss.resteasy:resteasy-core:jar:4.5.6.Final:compile" -> "org.jboss.resteasy:resteasy-core-spi:jar:4.5.6.Final:compile" ; 
+[INFO] 	"org.jboss.resteasy:resteasy-core:jar:4.5.6.Final:compile" -> "com.ibm.async:asyncutil:jar:0.1.0:compile" ; 
+[INFO] 	"org.jboss.resteasy:resteasy-core:jar:4.5.6.Final:compile" -> "org.eclipse.microprofile.config:microprofile-config-api:jar:1.4:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< com.usthe.sureness:spring-webflux-sureness >-------------
+[INFO] Building spring-webflux-sureness 1.0.0-SNAPSHOT                   [9/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ spring-webflux-sureness ---
+[INFO] digraph "com.usthe.sureness:spring-webflux-sureness:jar:1.0.0-SNAPSHOT" { 
+[INFO] 	"com.usthe.sureness:spring-webflux-sureness:jar:1.0.0-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-webflux:jar:2.4.5:compile" ; 
+[INFO] 	"com.usthe.sureness:spring-webflux-sureness:jar:1.0.0-SNAPSHOT" -> "com.usthe.sureness:sureness-core:jar:1.0.8:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-webflux:jar:2.4.5:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-webflux:jar:2.4.5:compile" -> "org.springframework.boot:spring-boot-starter-json:jar:2.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-webflux:jar:2.4.5:compile" -> "org.springframework.boot:spring-boot-starter-reactor-netty:jar:2.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-webflux:jar:2.4.5:compile" -> "org.springframework:spring-web:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-webflux:jar:2.4.5:compile" -> "org.springframework:spring-webflux:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.4.5:compile" -> "org.springframework.boot:spring-boot:jar:2.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.4.5:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.4.5:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.4.5:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.4.5:compile" -> "org.springframework:spring-core:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot:jar:2.4.5:compile" -> "org.springframework:spring-context:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.6:compile" -> "org.springframework:spring-aop:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework:spring-context:jar:5.3.6:compile" -> "org.springframework:spring-expression:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.4.5:compile" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.4.5:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.13.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.4.5:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.30:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.13.3:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.13.3:compile" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.6:compile" -> "org.springframework:spring-jcl:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.4.5:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.4.5:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.11.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.4.5:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.11.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.4.5:compile" -> "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.11.4:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.11.4:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.11.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-reactor-netty:jar:2.4.5:compile" -> "io.projectreactor.netty:reactor-netty-http:jar:1.0.6:compile" ; 
+[INFO] 	"io.projectreactor.netty:reactor-netty-http:jar:1.0.6:compile" -> "io.netty:netty-codec-http:jar:4.1.63.Final:compile" ; 
+[INFO] 	"io.projectreactor.netty:reactor-netty-http:jar:1.0.6:compile" -> "io.netty:netty-codec-http2:jar:4.1.63.Final:compile" ; 
+[INFO] 	"io.projectreactor.netty:reactor-netty-http:jar:1.0.6:compile" -> "io.netty:netty-resolver-dns:jar:4.1.63.Final:compile" ; 
+[INFO] 	"io.projectreactor.netty:reactor-netty-http:jar:1.0.6:compile" -> "io.netty:netty-resolver-dns-native-macos:jar:osx-x86_64:4.1.63.Final:compile" ; 
+[INFO] 	"io.projectreactor.netty:reactor-netty-http:jar:1.0.6:compile" -> "io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.63.Final:compile" ; 
+[INFO] 	"io.projectreactor.netty:reactor-netty-http:jar:1.0.6:compile" -> "io.projectreactor.netty:reactor-netty-core:jar:1.0.6:compile" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.63.Final:compile" -> "io.netty:netty-common:jar:4.1.63.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.63.Final:compile" -> "io.netty:netty-buffer:jar:4.1.63.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.63.Final:compile" -> "io.netty:netty-transport:jar:4.1.63.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.63.Final:compile" -> "io.netty:netty-codec:jar:4.1.63.Final:compile" ; 
+[INFO] 	"io.netty:netty-codec-http:jar:4.1.63.Final:compile" -> "io.netty:netty-handler:jar:4.1.63.Final:compile" ; 
+[INFO] 	"io.netty:netty-resolver-dns:jar:4.1.63.Final:compile" -> "io.netty:netty-resolver:jar:4.1.63.Final:compile" ; 
+[INFO] 	"io.netty:netty-resolver-dns:jar:4.1.63.Final:compile" -> "io.netty:netty-codec-dns:jar:4.1.63.Final:compile" ; 
+[INFO] 	"io.netty:netty-resolver-dns-native-macos:jar:osx-x86_64:4.1.63.Final:compile" -> "io.netty:netty-transport-native-unix-common:jar:4.1.63.Final:compile" ; 
+[INFO] 	"io.projectreactor.netty:reactor-netty-core:jar:1.0.6:compile" -> "io.netty:netty-handler-proxy:jar:4.1.63.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler-proxy:jar:4.1.63.Final:compile" -> "io.netty:netty-codec-socks:jar:4.1.63.Final:compile" ; 
+[INFO] 	"org.springframework:spring-web:jar:5.3.6:compile" -> "org.springframework:spring-beans:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework:spring-webflux:jar:5.3.6:compile" -> "io.projectreactor:reactor-core:jar:3.4.5:compile" ; 
+[INFO] 	"io.projectreactor:reactor-core:jar:3.4.5:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.3:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "org.slf4j:slf4j-api:jar:1.7.21:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "javax.xml.bind:jaxb-api:jar:2.3.0:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-api:jar:0.11.2:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-impl:jar:0.11.2:runtime" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-jackson:jar:0.11.2:runtime" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "org.yaml:snakeyaml:jar:1.27:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ----------------< com.usthe.sureness:sureness-session >-----------------
+[INFO] Building sureness-session 1.0.0-SNAPSHOT                         [10/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sureness-session ---
+[INFO] digraph "com.usthe.sureness:sureness-session:jar:1.0.0-SNAPSHOT" { 
+[INFO] 	"com.usthe.sureness:sureness-session:jar:1.0.0-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-web:jar:2.4.5:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-session:jar:1.0.0-SNAPSHOT" -> "com.usthe.sureness:sureness-core:jar:1.0.8:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-session:jar:1.0.0-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.4.5:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.4.5:compile" -> "org.springframework.boot:spring-boot-starter-json:jar:2.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.4.5:compile" -> "org.springframework.boot:spring-boot-starter-tomcat:jar:2.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.4.5:compile" -> "org.springframework:spring-web:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.4.5:compile" -> "org.springframework:spring-webmvc:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.4.5:compile" -> "org.springframework.boot:spring-boot:jar:2.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.4.5:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.4.5:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.4.5:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.4.5:compile" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.4.5:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.13.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.4.5:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.30:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.13.3:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.13.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.4.5:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.4.5:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.11.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.4.5:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.11.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.4.5:compile" -> "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.11.4:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.11.4:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.11.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.4.5:compile" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.45:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.4.5:compile" -> "org.glassfish:jakarta.el:jar:3.0.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.4.5:compile" -> "org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.45:compile" ; 
+[INFO] 	"org.springframework:spring-web:jar:5.3.6:compile" -> "org.springframework:spring-beans:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.6:compile" -> "org.springframework:spring-aop:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.6:compile" -> "org.springframework:spring-context:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.6:compile" -> "org.springframework:spring-expression:jar:5.3.6:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "org.slf4j:slf4j-api:jar:1.7.21:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "javax.xml.bind:jaxb-api:jar:2.3.0:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-api:jar:0.11.2:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-impl:jar:0.11.2:runtime" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-jackson:jar:0.11.2:runtime" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "org.yaml:snakeyaml:jar:1.27:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.springframework.boot:spring-boot-test:jar:2.4.5:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.4.5:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "com.jayway.jsonpath:json-path:jar:2.4.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.assertj:assertj-core:jar:3.18.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.junit.jupiter:junit-jupiter:jar:5.7.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.mockito:mockito-core:jar:3.6.28:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.mockito:mockito-junit-jupiter:jar:3.6.28:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.skyscreamer:jsonassert:jar:1.5.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.springframework:spring-core:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.springframework:spring-test:jar:5.3.6:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.xmlunit:xmlunit-core:jar:2.7.0:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.4.0:test" -> "net.minidev:json-smart:jar:2.3:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.3:test" -> "net.minidev:accessors-smart:jar:1.2:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:1.2:test" -> "org.ow2.asm:asm:jar:5.0.4:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.7.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.7.1:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.6.28:test" -> "net.bytebuddy:byte-buddy:jar:1.10.22:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.6.28:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.10.22:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.6.28:test" -> "org.objenesis:objenesis:jar:3.1:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.0:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO] 	"org.springframework:spring-core:jar:5.3.6:compile" -> "org.springframework:spring-jcl:jar:5.3.6:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -------------< com.usthe.sureness:sureness-redis-session >--------------
+[INFO] Building sureness-redis-session 1.0.0-SNAPSHOT                   [11/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ sureness-redis-session ---
+[INFO] digraph "com.usthe.sureness:sureness-redis-session:jar:1.0.0-SNAPSHOT" { 
+[INFO] 	"com.usthe.sureness:sureness-redis-session:jar:1.0.0-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-web:jar:2.4.5:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-redis-session:jar:1.0.0-SNAPSHOT" -> "org.springframework.session:spring-session-data-redis:jar:2.4.3:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-redis-session:jar:1.0.0-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-data-redis:jar:2.4.5:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-redis-session:jar:1.0.0-SNAPSHOT" -> "com.usthe.sureness:sureness-core:jar:1.0.8:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-redis-session:jar:1.0.0-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.4.5:compile" -> "org.springframework.boot:spring-boot-starter:jar:2.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.4.5:compile" -> "org.springframework.boot:spring-boot-starter-json:jar:2.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.4.5:compile" -> "org.springframework.boot:spring-boot-starter-tomcat:jar:2.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.4.5:compile" -> "org.springframework:spring-web:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-web:jar:2.4.5:compile" -> "org.springframework:spring-webmvc:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.4.5:compile" -> "org.springframework.boot:spring-boot:jar:2.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.4.5:compile" -> "org.springframework.boot:spring-boot-autoconfigure:jar:2.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.4.5:compile" -> "org.springframework.boot:spring-boot-starter-logging:jar:2.4.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter:jar:2.4.5:compile" -> "jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.4.5:compile" -> "ch.qos.logback:logback-classic:jar:1.2.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.4.5:compile" -> "org.apache.logging.log4j:log4j-to-slf4j:jar:2.13.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-logging:jar:2.4.5:compile" -> "org.slf4j:jul-to-slf4j:jar:1.7.30:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:compile" -> "ch.qos.logback:logback-core:jar:1.2.3:compile" ; 
+[INFO] 	"org.apache.logging.log4j:log4j-to-slf4j:jar:2.13.3:compile" -> "org.apache.logging.log4j:log4j-api:jar:2.13.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.4.5:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.4.5:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.11.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.4.5:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.11.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-json:jar:2.4.5:compile" -> "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.11.4:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.11.4:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.11.4:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.4.5:compile" -> "org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.45:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.4.5:compile" -> "org.glassfish:jakarta.el:jar:3.0.3:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-tomcat:jar:2.4.5:compile" -> "org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.45:compile" ; 
+[INFO] 	"org.springframework:spring-web:jar:5.3.6:compile" -> "org.springframework:spring-beans:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.6:compile" -> "org.springframework:spring-aop:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.6:compile" -> "org.springframework:spring-context:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework:spring-webmvc:jar:5.3.6:compile" -> "org.springframework:spring-expression:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework.session:spring-session-data-redis:jar:2.4.3:compile" -> "org.springframework.data:spring-data-redis:jar:2.4.8:compile" ; 
+[INFO] 	"org.springframework.session:spring-session-data-redis:jar:2.4.3:compile" -> "org.springframework.session:spring-session-core:jar:2.4.3:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.4.8:compile" -> "org.springframework.data:spring-data-keyvalue:jar:2.4.8:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.4.8:compile" -> "org.springframework:spring-tx:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.4.8:compile" -> "org.springframework:spring-oxm:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-redis:jar:2.4.8:compile" -> "org.springframework:spring-context-support:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework.data:spring-data-keyvalue:jar:2.4.8:compile" -> "org.springframework.data:spring-data-commons:jar:2.4.8:compile" ; 
+[INFO] 	"org.springframework.session:spring-session-core:jar:2.4.3:compile" -> "org.springframework:spring-jcl:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-data-redis:jar:2.4.5:compile" -> "io.lettuce:lettuce-core:jar:6.0.4.RELEASE:compile" ; 
+[INFO] 	"io.lettuce:lettuce-core:jar:6.0.4.RELEASE:compile" -> "io.netty:netty-common:jar:4.1.63.Final:compile" ; 
+[INFO] 	"io.lettuce:lettuce-core:jar:6.0.4.RELEASE:compile" -> "io.netty:netty-handler:jar:4.1.63.Final:compile" ; 
+[INFO] 	"io.lettuce:lettuce-core:jar:6.0.4.RELEASE:compile" -> "io.netty:netty-transport:jar:4.1.63.Final:compile" ; 
+[INFO] 	"io.lettuce:lettuce-core:jar:6.0.4.RELEASE:compile" -> "io.projectreactor:reactor-core:jar:3.4.5:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.63.Final:compile" -> "io.netty:netty-resolver:jar:4.1.63.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.63.Final:compile" -> "io.netty:netty-buffer:jar:4.1.63.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.63.Final:compile" -> "io.netty:netty-codec:jar:4.1.63.Final:compile" ; 
+[INFO] 	"io.projectreactor:reactor-core:jar:3.4.5:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.3:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "org.slf4j:slf4j-api:jar:1.7.21:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "javax.xml.bind:jaxb-api:jar:2.3.0:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-api:jar:0.11.2:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-impl:jar:0.11.2:runtime" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-jackson:jar:0.11.2:runtime" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "org.yaml:snakeyaml:jar:1.27:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.springframework.boot:spring-boot-test:jar:2.4.5:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar:2.4.5:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "com.jayway.jsonpath:json-path:jar:2.4.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.assertj:assertj-core:jar:3.18.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.hamcrest:hamcrest:jar:2.2:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.junit.jupiter:junit-jupiter:jar:5.7.1:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.mockito:mockito-core:jar:3.6.28:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.mockito:mockito-junit-jupiter:jar:3.6.28:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.skyscreamer:jsonassert:jar:1.5.0:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.springframework:spring-core:jar:5.3.6:compile" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.springframework:spring-test:jar:5.3.6:test" ; 
+[INFO] 	"org.springframework.boot:spring-boot-starter-test:jar:2.4.5:test" -> "org.xmlunit:xmlunit-core:jar:2.7.0:test" ; 
+[INFO] 	"com.jayway.jsonpath:json-path:jar:2.4.0:test" -> "net.minidev:json-smart:jar:2.3:test" ; 
+[INFO] 	"net.minidev:json-smart:jar:2.3:test" -> "net.minidev:accessors-smart:jar:1.2:test" ; 
+[INFO] 	"net.minidev:accessors-smart:jar:1.2:test" -> "org.ow2.asm:asm:jar:5.0.4:test" ; 
+[INFO] 	"jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test" -> "jakarta.activation:jakarta.activation-api:jar:1.2.2:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-params:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter:jar:5.7.1:test" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.7.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.7.1:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.6.28:test" -> "net.bytebuddy:byte-buddy:jar:1.10.22:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.6.28:test" -> "net.bytebuddy:byte-buddy-agent:jar:1.10.22:test" ; 
+[INFO] 	"org.mockito:mockito-core:jar:3.6.28:test" -> "org.objenesis:objenesis:jar:3.1:test" ; 
+[INFO] 	"org.skyscreamer:jsonassert:jar:1.5.0:test" -> "com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test" ; 
+[INFO]  } 
+[INFO] 
+[INFO] ---------------< com.usthe.sureness:micronaut-sureness >----------------
+[INFO] Building micronaut-sureness 1.0.0-SNAPSHOT                       [12/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ micronaut-sureness ---
+[INFO] digraph "com.usthe.sureness:micronaut-sureness:jar:1.0.0-SNAPSHOT" { 
+[INFO] 	"com.usthe.sureness:micronaut-sureness:jar:1.0.0-SNAPSHOT" -> "com.usthe.sureness:sureness-core:jar:1.0.8:compile" ; 
+[INFO] 	"com.usthe.sureness:micronaut-sureness:jar:1.0.0-SNAPSHOT" -> "io.micronaut:micronaut-inject:jar:2.4.4:compile" ; 
+[INFO] 	"com.usthe.sureness:micronaut-sureness:jar:1.0.0-SNAPSHOT" -> "io.micronaut:micronaut-validation:jar:2.4.4:compile" ; 
+[INFO] 	"com.usthe.sureness:micronaut-sureness:jar:1.0.0-SNAPSHOT" -> "ch.qos.logback:logback-classic:jar:1.2.3:runtime" ; 
+[INFO] 	"com.usthe.sureness:micronaut-sureness:jar:1.0.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" ; 
+[INFO] 	"com.usthe.sureness:micronaut-sureness:jar:1.0.0-SNAPSHOT" -> "org.junit.jupiter:junit-jupiter-engine:jar:5.7.1:test" ; 
+[INFO] 	"com.usthe.sureness:micronaut-sureness:jar:1.0.0-SNAPSHOT" -> "io.micronaut.test:micronaut-test-junit5:jar:2.3.3:test" ; 
+[INFO] 	"com.usthe.sureness:micronaut-sureness:jar:1.0.0-SNAPSHOT" -> "io.micronaut:micronaut-http-client:jar:2.4.4:compile" ; 
+[INFO] 	"com.usthe.sureness:micronaut-sureness:jar:1.0.0-SNAPSHOT" -> "io.micronaut:micronaut-http-server-netty:jar:2.4.4:compile" ; 
+[INFO] 	"com.usthe.sureness:micronaut-sureness:jar:1.0.0-SNAPSHOT" -> "io.micronaut:micronaut-runtime:jar:2.4.4:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "org.slf4j:slf4j-api:jar:1.7.21:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "javax.xml.bind:jaxb-api:jar:2.3.0:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-api:jar:0.11.2:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-impl:jar:0.11.2:runtime" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-jackson:jar:0.11.2:runtime" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "org.yaml:snakeyaml:jar:1.26:compile" ; 
+[INFO] 	"io.micronaut:micronaut-inject:jar:2.4.4:compile" -> "javax.annotation:javax.annotation-api:jar:1.3.2:compile" ; 
+[INFO] 	"io.micronaut:micronaut-inject:jar:2.4.4:compile" -> "javax.inject:javax.inject:jar:1:compile" ; 
+[INFO] 	"io.micronaut:micronaut-inject:jar:2.4.4:compile" -> "io.micronaut:micronaut-core:jar:2.4.4:compile" ; 
+[INFO] 	"io.micronaut:micronaut-core:jar:2.4.4:compile" -> "com.github.spotbugs:spotbugs-annotations:jar:4.0.3:compile" ; 
+[INFO] 	"com.github.spotbugs:spotbugs-annotations:jar:4.0.3:compile" -> "com.google.code.findbugs:jsr305:jar:3.0.2:compile" ; 
+[INFO] 	"io.micronaut:micronaut-validation:jar:2.4.4:compile" -> "io.micronaut:micronaut-core-reactive:jar:2.4.4:compile" ; 
+[INFO] 	"io.micronaut:micronaut-validation:jar:2.4.4:compile" -> "javax.validation:validation-api:jar:2.0.1.Final:compile" ; 
+[INFO] 	"io.micronaut:micronaut-core-reactive:jar:2.4.4:compile" -> "org.reactivestreams:reactive-streams:jar:1.0.3:compile" ; 
+[INFO] 	"ch.qos.logback:logback-classic:jar:1.2.3:runtime" -> "ch.qos.logback:logback-core:jar:1.2.3:runtime" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.apiguardian:apiguardian-api:jar:1.1.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.opentest4j:opentest4j:jar:1.2.0:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-api:jar:5.7.1:test" -> "org.junit.platform:junit-platform-commons:jar:1.7.1:test" ; 
+[INFO] 	"org.junit.jupiter:junit-jupiter-engine:jar:5.7.1:test" -> "org.junit.platform:junit-platform-engine:jar:1.7.1:test" ; 
+[INFO] 	"io.micronaut.test:micronaut-test-junit5:jar:2.3.3:test" -> "io.micronaut.test:micronaut-test-core:jar:2.3.3:test" ; 
+[INFO] 	"io.micronaut:micronaut-http-client:jar:2.4.4:compile" -> "io.reactivex.rxjava2:rxjava:jar:2.2.10:compile" ; 
+[INFO] 	"io.micronaut:micronaut-http-client:jar:2.4.4:compile" -> "io.micronaut:micronaut-http-client-core:jar:2.4.4:compile" ; 
+[INFO] 	"io.micronaut:micronaut-http-client:jar:2.4.4:compile" -> "io.micronaut:micronaut-websocket:jar:2.4.4:compile" ; 
+[INFO] 	"io.micronaut:micronaut-http-client:jar:2.4.4:compile" -> "io.micronaut:micronaut-http-netty:jar:2.4.4:compile" ; 
+[INFO] 	"io.micronaut:micronaut-http-client:jar:2.4.4:compile" -> "io.netty:netty-handler-proxy:jar:4.1.59.Final:compile" ; 
+[INFO] 	"io.micronaut:micronaut-http-netty:jar:2.4.4:compile" -> "io.micronaut:micronaut-buffer-netty:jar:2.4.4:compile" ; 
+[INFO] 	"io.micronaut:micronaut-http-netty:jar:2.4.4:compile" -> "io.netty:netty-handler:jar:4.1.59.Final:compile" ; 
+[INFO] 	"io.micronaut:micronaut-http-netty:jar:2.4.4:compile" -> "io.netty:netty-codec-http2:jar:4.1.59.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler:jar:4.1.59.Final:compile" -> "io.netty:netty-resolver:jar:4.1.59.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler-proxy:jar:4.1.59.Final:compile" -> "io.netty:netty-common:jar:4.1.59.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler-proxy:jar:4.1.59.Final:compile" -> "io.netty:netty-buffer:jar:4.1.59.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler-proxy:jar:4.1.59.Final:compile" -> "io.netty:netty-transport:jar:4.1.59.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler-proxy:jar:4.1.59.Final:compile" -> "io.netty:netty-codec:jar:4.1.59.Final:compile" ; 
+[INFO] 	"io.netty:netty-handler-proxy:jar:4.1.59.Final:compile" -> "io.netty:netty-codec-socks:jar:4.1.59.Final:compile" ; 
+[INFO] 	"io.micronaut:micronaut-http-server-netty:jar:2.4.4:compile" -> "io.micronaut:micronaut-http-server:jar:2.4.4:compile" ; 
+[INFO] 	"io.micronaut:micronaut-http-server-netty:jar:2.4.4:compile" -> "io.netty:netty-codec-http:jar:4.1.59.Final:compile" ; 
+[INFO] 	"io.micronaut:micronaut-http-server:jar:2.4.4:compile" -> "io.micronaut:micronaut-router:jar:2.4.4:compile" ; 
+[INFO] 	"io.micronaut:micronaut-runtime:jar:2.4.4:compile" -> "io.micronaut:micronaut-http:jar:2.4.4:compile" ; 
+[INFO] 	"io.micronaut:micronaut-runtime:jar:2.4.4:compile" -> "io.micronaut:micronaut-aop:jar:2.4.4:compile" ; 
+[INFO] 	"io.micronaut:micronaut-runtime:jar:2.4.4:compile" -> "io.micronaut:micronaut-context:jar:2.4.4:compile" ; 
+[INFO] 	"io.micronaut:micronaut-runtime:jar:2.4.4:compile" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.12.2:compile" ; 
+[INFO] 	"io.micronaut:micronaut-runtime:jar:2.4.4:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.12.2:compile" ; 
+[INFO] 	"io.micronaut:micronaut-runtime:jar:2.4.4:compile" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.12.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.12.2:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.12.2:compile" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.12.2:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.12.2:compile" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< com.usthe.sureness:jfinal-sureness >-----------------
+[INFO] Building jfinal-sureness 1.0.0-SNAPSHOT                          [13/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ jfinal-sureness ---
+[INFO] digraph "com.usthe.sureness:jfinal-sureness:jar:1.0.0-SNAPSHOT" { 
+[INFO] 	"com.usthe.sureness:jfinal-sureness:jar:1.0.0-SNAPSHOT" -> "com.jfinal:jfinal-undertow:jar:2.5:compile" ; 
+[INFO] 	"com.usthe.sureness:jfinal-sureness:jar:1.0.0-SNAPSHOT" -> "com.jfinal:jfinal:jar:4.9.11:compile" ; 
+[INFO] 	"com.usthe.sureness:jfinal-sureness:jar:1.0.0-SNAPSHOT" -> "com.usthe.sureness:sureness-core:jar:1.0.8:compile" ; 
+[INFO] 	"com.jfinal:jfinal-undertow:jar:2.5:compile" -> "io.undertow:undertow-core:jar:2.2.7.Final:compile" ; 
+[INFO] 	"com.jfinal:jfinal-undertow:jar:2.5:compile" -> "io.undertow:undertow-servlet:jar:2.2.7.Final:compile" ; 
+[INFO] 	"com.jfinal:jfinal-undertow:jar:2.5:compile" -> "javax.servlet:javax.servlet-api:jar:4.0.1:compile" ; 
+[INFO] 	"io.undertow:undertow-core:jar:2.2.7.Final:compile" -> "org.jboss.logging:jboss-logging:jar:3.4.1.Final:compile" ; 
+[INFO] 	"io.undertow:undertow-core:jar:2.2.7.Final:compile" -> "org.jboss.xnio:xnio-api:jar:3.8.0.Final:compile" ; 
+[INFO] 	"io.undertow:undertow-core:jar:2.2.7.Final:compile" -> "org.jboss.xnio:xnio-nio:jar:3.8.0.Final:runtime" ; 
+[INFO] 	"io.undertow:undertow-core:jar:2.2.7.Final:compile" -> "org.jboss.threads:jboss-threads:jar:3.1.0.Final:compile" ; 
+[INFO] 	"org.jboss.xnio:xnio-api:jar:3.8.0.Final:compile" -> "org.wildfly.common:wildfly-common:jar:1.5.2.Final:compile" ; 
+[INFO] 	"org.jboss.xnio:xnio-api:jar:3.8.0.Final:compile" -> "org.wildfly.client:wildfly-client-config:jar:1.0.1.Final:compile" ; 
+[INFO] 	"io.undertow:undertow-servlet:jar:2.2.7.Final:compile" -> "org.jboss.spec.javax.annotation:jboss-annotations-api_1.3_spec:jar:2.0.1.Final:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "org.slf4j:slf4j-api:jar:1.7.21:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "javax.xml.bind:jaxb-api:jar:2.3.0:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-api:jar:0.11.2:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-impl:jar:0.11.2:runtime" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-jackson:jar:0.11.2:runtime" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "org.yaml:snakeyaml:jar:1.27:compile" ; 
+[INFO] 	"io.jsonwebtoken:jjwt-jackson:jar:0.11.2:runtime" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:runtime" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:runtime" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.11.4:runtime" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:runtime" -> "com.fasterxml.jackson.core:jackson-core:jar:2.11.4:runtime" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------------< com.usthe.sureness:solon-sureness >------------------
+[INFO] Building solon-sureness 1.0.0-SNAPSHOT                           [14/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ solon-sureness ---
+[INFO] digraph "com.usthe.sureness:solon-sureness:jar:1.0.0-SNAPSHOT" { 
+[INFO] 	"com.usthe.sureness:solon-sureness:jar:1.0.0-SNAPSHOT" -> "org.noear:solon-web:jar:1.6.1:compile" ; 
+[INFO] 	"com.usthe.sureness:solon-sureness:jar:1.0.0-SNAPSHOT" -> "org.noear:solon.extend.properties.yaml:jar:1.6.1:compile" ; 
+[INFO] 	"com.usthe.sureness:solon-sureness:jar:1.0.0-SNAPSHOT" -> "com.usthe.sureness:sureness-core:jar:1.0.8:compile" ; 
+[INFO] 	"com.usthe.sureness:solon-sureness:jar:1.0.0-SNAPSHOT" -> "org.slf4j:slf4j-simple:jar:1.7.30:compile" ; 
+[INFO] 	"org.noear:solon-web:jar:1.6.1:compile" -> "org.noear:solon-api:jar:1.6.1:compile" ; 
+[INFO] 	"org.noear:solon-web:jar:1.6.1:compile" -> "org.noear:solon.extend.sessionstate.local:jar:1.6.1:compile" ; 
+[INFO] 	"org.noear:solon-web:jar:1.6.1:compile" -> "org.noear:solon.view.freemarker:jar:1.6.1:compile" ; 
+[INFO] 	"org.noear:solon-api:jar:1.6.1:compile" -> "org.noear:solon-lib:jar:1.6.1:compile" ; 
+[INFO] 	"org.noear:solon-api:jar:1.6.1:compile" -> "org.noear:solon.boot.jlhttp:jar:1.6.1:compile" ; 
+[INFO] 	"org.noear:solon-api:jar:1.6.1:compile" -> "org.noear:solon.extend.staticfiles:jar:1.6.1:compile" ; 
+[INFO] 	"org.noear:solon-lib:jar:1.6.1:compile" -> "org.noear:solon.data:jar:1.6.1:compile" ; 
+[INFO] 	"org.noear:solon-lib:jar:1.6.1:compile" -> "org.noear:solon.cache:jar:1.6.1:compile" ; 
+[INFO] 	"org.noear:solon-lib:jar:1.6.1:compile" -> "org.noear:solon.extend.aspect:jar:1.6.1:compile" ; 
+[INFO] 	"org.noear:solon-lib:jar:1.6.1:compile" -> "org.noear:solon.validation:jar:1.6.1:compile" ; 
+[INFO] 	"org.noear:solon-lib:jar:1.6.1:compile" -> "org.noear:solon.serialization.snack3:jar:1.6.1:compile" ; 
+[INFO] 	"org.noear:solon.extend.aspect:jar:1.6.1:compile" -> "org.ow2.asm:asm:jar:9.2:compile" ; 
+[INFO] 	"org.noear:solon.serialization.snack3:jar:1.6.1:compile" -> "org.noear:solon.serialization:jar:1.6.1:compile" ; 
+[INFO] 	"org.noear:solon.view.freemarker:jar:1.6.1:compile" -> "org.freemarker:freemarker:jar:2.3.31:compile" ; 
+[INFO] 	"org.noear:solon.extend.properties.yaml:jar:1.6.1:compile" -> "org.noear:solon:jar:1.6.1:compile" ; 
+[INFO] 	"org.noear:solon.extend.properties.yaml:jar:1.6.1:compile" -> "org.yaml:snakeyaml:jar:1.27:compile" ; 
+[INFO] 	"org.noear:solon.extend.properties.yaml:jar:1.6.1:compile" -> "org.noear:snack3:jar:3.2.0:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "org.slf4j:slf4j-api:jar:1.7.21:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "javax.xml.bind:jaxb-api:jar:2.3.0:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-api:jar:0.11.2:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-impl:jar:0.11.2:runtime" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-jackson:jar:0.11.2:runtime" ; 
+[INFO] 	"io.jsonwebtoken:jjwt-jackson:jar:0.11.2:runtime" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:runtime" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:runtime" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.11.4:runtime" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:runtime" -> "com.fasterxml.jackson.core:jackson-core:jar:2.11.4:runtime" ; 
+[INFO]  } 
+[INFO] 
+[INFO] --------------< com.usthe.sureness:solon-plugin-sureness >--------------
+[INFO] Building solon-plugin-sureness 1.0.0-SNAPSHOT                    [15/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ solon-plugin-sureness ---
+[INFO] digraph "com.usthe.sureness:solon-plugin-sureness:jar:1.0.0-SNAPSHOT" { 
+[INFO] 	"com.usthe.sureness:solon-plugin-sureness:jar:1.0.0-SNAPSHOT" -> "org.noear:solon:jar:1.6.1:compile" ; 
+[INFO] 	"com.usthe.sureness:solon-plugin-sureness:jar:1.0.0-SNAPSHOT" -> "org.noear:solon.extend.properties.yaml:jar:1.6.1:compile" ; 
+[INFO] 	"com.usthe.sureness:solon-plugin-sureness:jar:1.0.0-SNAPSHOT" -> "com.usthe.sureness:sureness-core:jar:1.0.8:compile" ; 
+[INFO] 	"org.noear:solon.extend.properties.yaml:jar:1.6.1:compile" -> "org.yaml:snakeyaml:jar:1.27:compile" ; 
+[INFO] 	"org.noear:solon.extend.properties.yaml:jar:1.6.1:compile" -> "org.noear:snack3:jar:3.2.0:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "org.slf4j:slf4j-api:jar:1.7.21:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "javax.xml.bind:jaxb-api:jar:2.3.0:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-api:jar:0.11.2:compile" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-impl:jar:0.11.2:runtime" ; 
+[INFO] 	"com.usthe.sureness:sureness-core:jar:1.0.8:compile" -> "io.jsonwebtoken:jjwt-jackson:jar:0.11.2:runtime" ; 
+[INFO] 	"io.jsonwebtoken:jjwt-jackson:jar:0.11.2:runtime" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:runtime" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:runtime" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.11.4:runtime" ; 
+[INFO] 	"com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:runtime" -> "com.fasterxml.jackson.core:jackson-core:jar:2.11.4:runtime" ; 
+[INFO]  } 
+[INFO] 
+[INFO] -----------< com.usthe.sureness:solon-plugin-sureness-demo >------------
+[INFO] Building solon-plugin-sureness-demo 1.0.0-SNAPSHOT               [16/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] sureness 1.0.8 ..................................... SUCCESS [  3.316 s]
+[INFO] sureness 1.0.0-SNAPSHOT ............................ SUCCESS [  0.041 s]
+[INFO] sureness-sample-bootstarp 1.0.0-SNAPSHOT ........... SUCCESS [  1.124 s]
+[INFO] sureness-sample-tom 1.0.0-SNAPSHOT ................. SUCCESS [  1.321 s]
+[INFO] samples 1.0.0-SNAPSHOT ............................. SUCCESS [  0.074 s]
+[INFO] ktor-sureness 1.0.0-SNAPSHOT ....................... SUCCESS [  0.148 s]
+[INFO] javalin-sureness 1.0.0-SNAPSHOT .................... SUCCESS [  0.329 s]
+[INFO] quarkus-sureness 1.0.0-SNAPSHOT .................... SUCCESS [  0.932 s]
+[INFO] spring-webflux-sureness 1.0.0-SNAPSHOT ............. SUCCESS [  0.318 s]
+[INFO] sureness-session 1.0.0-SNAPSHOT .................... SUCCESS [  0.221 s]
+[INFO] sureness-redis-session 1.0.0-SNAPSHOT .............. SUCCESS [  0.141 s]
+[INFO] micronaut-sureness 1.0.0-SNAPSHOT .................. SUCCESS [  0.118 s]
+[INFO] jfinal-sureness 1.0.0-SNAPSHOT ..................... SUCCESS [  0.066 s]
+[INFO] solon-sureness 1.0.0-SNAPSHOT ...................... SUCCESS [  0.063 s]
+[INFO] solon-plugin-sureness 1.0.0-SNAPSHOT ............... SUCCESS [  0.083 s]
+[INFO] solon-plugin-sureness-demo 1.0.0-SNAPSHOT .......... FAILURE [  0.066 s]
+[INFO] spring-gateway-sureness 1.0.0-SNAPSHOT ............. SKIPPED
+[INFO] zuul-sureness 1.0.0-SNAPSHOT ....................... SKIPPED
+[INFO] spring-boot-starter-sureness 1.0.8 ................. SKIPPED
+[INFO] sureness-spring-boot-starter-example 1.0.0-SNAPSHOT  SKIPPED
+[INFO] micro-profile-sureness 1.0.0-SNAPSHOT .............. SKIPPED
+[INFO] support 1.0.0-SNAPSHOT ............................. SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  13.365 s
+[INFO] Finished at: 2023-12-28T09:02:47+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project solon-plugin-sureness-demo: Could not resolve dependencies for project com.usthe.sureness:solon-plugin-sureness-demo:jar:1.0.0-SNAPSHOT: Could not find artifact com.usthe.sureness:solon-plugin-sureness:jar:1.0.0-SNAPSHOT -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :solon-plugin-sureness-demo

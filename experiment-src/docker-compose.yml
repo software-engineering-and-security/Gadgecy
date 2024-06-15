@@ -1,0 +1,9 @@
+version : '3'
+services : 
+    poc_app:
+        image : tomcat:7.0.57-jre8
+        ports:
+          - 8080:8080
+        volumes:
+          - ./output/jsf:/usr/local/tomcat/webapps/jsf
+          - ./output/proof_jsf:/tmp
